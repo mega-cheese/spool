@@ -83,7 +83,19 @@ def classify_memory(
     return candidate
 
 
-def build_memory_state_debug(candidates: list[MemoryObject], *, input_file: str | None = None) -> dict[str, Any]:
+def build_memory_state_debug(
+    candidates: list[MemoryObject],
+    *,
+    input_file: str | None = None,
+    review_actions: list[dict[str, Any]] | None = None,
+) -> dict[str, Any]:
+    latest_actions = {}
+    for action in review_actions or []:
+        memory_id = str(action.get("memory_id") or "")
+        if not memory_id:
+            continue
+        if memory_id not in latest_actions or str(action.get("created_at") or "") >= str(latest_actions[memory_id].get("created_at") or ""):
+            latest_actions[memory_id] = action
     return {
         "metadata": {
             "input_file": input_file,
@@ -98,9 +110,12 @@ def build_memory_state_debug(candidates: list[MemoryObject], *, input_file: str 
                 "type": item.type,
                 "title": item.title,
                 "review_state": item.review_state,
+                "status": item.status,
                 "evidence_state": item.evidence_state,
                 "memory_quality_score": round(float(item.memory_quality_score), 3),
                 "reason_codes": list(item.review_reason_codes),
+                "latest_review_action": (latest_actions.get(item.memory_id) or {}).get("action"),
+                "latest_review_action_at": (latest_actions.get(item.memory_id) or {}).get("created_at"),
                 "source_quote": item.quote,
             }
             for item in candidates

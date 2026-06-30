@@ -1,0 +1,29 @@
+{
+  "run_id": "v081_manual_meeting12",
+  "input_file": "/Users/admin/Downloads/Meeting #12_ September 30th, 2025.pdf",
+  "pipeline": "candidates-shadow",
+  "mode": "heuristic",
+  "created_at": "2026-06-30T22:44:19.188816+00:00",
+  "artifacts": {
+    "decisions": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/decisions.json",
+    "normalized_events_debug": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/normalized_events_debug.json",
+    "source_bundles_debug": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/source_bundles_debug.json",
+    "candidates_debug": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/candidates_debug.json",
+    "state_resolution_debug": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/state_resolution_debug.json",
+    "conflicts_debug": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/conflicts_debug.json",
+    "meeting_metadata": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/meeting_metadata.json",
+    "clean_memory": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/clean_memory.json",
+    "action_items": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/action_items.json",
+    "open_questions": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/open_questions.json",
+    "document_memory_debug": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/document_memory_debug.json",
+    "block_classification_debug": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/block_classification_debug.json",
+    "review_queue": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/review_queue.json",
+    "candidate_memory": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/candidate_memory.json",
+    "approved_memory": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/approved_memory.json",
+    "rejected_memory": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/rejected_memory.json",
+    "review_actions": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/review_actions.json",
+    "memory_state_debug": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/memory_state_debug.json",
+    "review_queue_md": "outputs/manual_v081_meeting12/runs/v081_manual_meeting12/review_queue.md",
+    "raw_decisions": null
+  }
+}

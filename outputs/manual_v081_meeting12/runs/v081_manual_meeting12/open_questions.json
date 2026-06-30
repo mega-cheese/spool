@@ -1,0 +1,11 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/Meeting #12_ September 30th, 2025.pdf",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "classification": "meeting_minutes",
+    "generated_at": "2026-06-30T22:44:19.103627+00:00",
+    "open_question_count": 0
+  },
+  "open_questions": []
+}

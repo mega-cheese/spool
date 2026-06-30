@@ -216,7 +216,22 @@ review_actions.json
 memory_state_debug.json
 ```
 
-`approved_memory.json` and `rejected_memory.json` are local JSON stores for v0.8.0. They may be empty until a human or explicit review action approves/rejects candidates.
+`approved_memory.json` and `rejected_memory.json` are local JSON stores. They may be empty until a human or explicit review action approves/rejects candidates.
+
+## Review Actions
+
+Use `review_memory.py` to apply review actions to a run folder without Streamlit or a database:
+
+```bash
+venv/bin/python review_memory.py --run-dir outputs/runs/<run_id> --memory-id mem_123 --action approve --reviewer Owen
+venv/bin/python review_memory.py --run-dir outputs/runs/<run_id> --memory-id mem_123 --action reject --reason "False positive"
+venv/bin/python review_memory.py --run-dir outputs/runs/<run_id> --memory-id mem_123 --action edit --patch '{"title":"Owen should reach out to schools","owner_names":["Owen"]}'
+venv/bin/python review_memory.py --run-dir outputs/runs/<run_id> --memory-id mem_123 --action mark_resolved --reason "Confirmed in follow-up notes"
+```
+
+Review actions update `candidate_memory.json`, `approved_memory.json`, `rejected_memory.json`, and `memory_state_debug.json`. They append to `review_actions.json` as an audit history rather than overwriting it.
+
+Action items are represented as commitments in candidate/approved memory. Spool is not a todo tracker: commitment statuses are company-memory states such as `unresolved`, `resolved`, `superseded`, `stale`, and `unknown`.
 
 ## Batch Scenario Verification
 

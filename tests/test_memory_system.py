@@ -158,7 +158,7 @@ class MemorySystemTest(unittest.TestCase):
         edited = edit_memory(candidate, {"title": "Send the customer update."}, reviewer="system", action_log=action_log)
 
         self.assertEqual(approved.review_state, "approved")
-        self.assertEqual(approved.status, "approved")
+        self.assertEqual(approved.status, "unresolved")
         self.assertEqual(rejected.review_state, "rejected")
         self.assertEqual(rejected.metadata["rejection_reason"], "not company memory")
         self.assertEqual(edited.title, "Send the customer update.")

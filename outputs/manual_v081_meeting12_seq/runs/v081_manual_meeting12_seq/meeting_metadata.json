@@ -1,0 +1,12 @@
+{
+  "input_file": "/Users/admin/Downloads/Meeting #12_ September 30th, 2025.pdf",
+  "mode": "heuristic",
+  "pipeline": "candidates-shadow",
+  "classification": "meeting_minutes",
+  "generated_at": "2026-06-30T22:44:51.000854+00:00",
+  "meeting_date": "2025-09-30",
+  "location": "www.wpga.ca/lhaider",
+  "present": [],
+  "absent": [],
+  "source_event_count": 10
+}
