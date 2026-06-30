@@ -1,0 +1,26 @@
+{
+  "run_id": "ui_new_vendor_selection_20260630_075256",
+  "input_file": "data/new_vendor_selection.json",
+  "mode": "llm",
+  "pipeline": "candidates-shadow",
+  "model": "gpt-4.1-mini",
+  "source_type": "slack",
+  "created_at": "2026-06-30T07:53:10.707202+00:00",
+  "artifacts": {
+    "decisions": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/decisions.json",
+    "raw_decisions": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/raw_decisions.json",
+    "normalized_events_debug": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/normalized_events_debug.json",
+    "source_bundles_debug": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/source_bundles_debug.json",
+    "candidates_debug": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/candidates_debug.json",
+    "state_resolution_debug": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/state_resolution_debug.json",
+    "conflicts_debug": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/conflicts_debug.json",
+    "meeting_metadata": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/meeting_metadata.json",
+    "clean_memory": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/clean_memory.json",
+    "action_items": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/action_items.json",
+    "open_questions": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/open_questions.json",
+    "document_memory_debug": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/document_memory_debug.json",
+    "review_queue": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/review_queue.json",
+    "review_queue_md": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/review_queue.md",
+    "run_metadata": "outputs/ui_runs/ui_new_vendor_selection_20260630_075256/run_metadata.json"
+  }
+}

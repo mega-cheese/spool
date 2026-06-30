@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/Training Meeting Notes .pdf",
+    "candidate_count": 7,
+    "approved_count": 0,
+    "needs_review_count": 2,
+    "rejected_count": 0
+  },
+  "items": [
+    {
+      "memory_id": "mem_549632d68756",
+      "type": "commitment",
+      "title": "Record the training session.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "Tasks Corina: Record the training session"
+    },
+    {
+      "memory_id": "mem_6d555ae9ce9a",
+      "type": "commitment",
+      "title": "Reorganize script.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "Tasks Corina: Reorganize script"
+    },
+    {
+      "memory_id": "mem_9b71af4097c0",
+      "type": "commitment",
+      "title": "Open the Kahoot.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "Tasks Leanna: Open the Kahoot"
+    },
+    {
+      "memory_id": "mem_9f423a5d89ad",
+      "type": "commitment",
+      "title": "The entire backup crew. If someone does not send a link/example/question in the chat please do it for them. (Wait 10-30 seconds to see if they are in the process of doing so or has forgotten.).",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "Tasks Leanna: The entire backup crew. If someone does not send a link/example/question in the chat please do it for them. (Wait 10-30 seconds to see if they are in the process of doing so or has forgotten.)"
+    },
+    {
+      "memory_id": "mem_b533e6ecaca6",
+      "type": "commitment",
+      "title": "Take attendance.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "Tasks Amanda: Take attendance."
+    },
+    {
+      "memory_id": "mem_407c1b571603",
+      "type": "commitment",
+      "title": "Do a debrief of the training session after it is over/the next day.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.84,
+      "reason_codes": [
+        "weak_task_parse",
+        "coverage_warning"
+      ],
+      "source_quote": "Overview We will do a debrief of the training session after it is over/the next day."
+    },
+    {
+      "memory_id": "mem_2c65f71e5ae4",
+      "type": "context",
+      "title": "Task table may have been under-extracted",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.79,
+      "reason_codes": [
+        "extraction_warning",
+        "coverage_warning"
+      ],
+      "source_quote": "Script: Have Corina shorten the script\n         Slideshow: Have Angela design the slide and match it to the script\n         Kahoot/Icebreaker/Mini Discussions: Have Leanna make a 7-10 question kahoot (or find\n         one online). Review the icebreakers on the slideshow, and change them how you see fit.\n         Add notes for mini discussions: what is the question, and when during the meeting?\n         Breakout Rooms (TENTATIVE): Who has never peer tutored and can’t answer\n         questions?\n         Feedback Form: Have Amanda shorten the feedback form.\n         We will do a debrief of the training session after it is over/the next day."
+    }
+  ]
+}

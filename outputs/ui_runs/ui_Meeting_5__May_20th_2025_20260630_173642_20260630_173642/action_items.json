@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_5__May_20th_2025_20260630_173642.pdf",
+    "mode": "llm",
+    "pipeline": "candidates-shadow",
+    "classification": "meeting_minutes",
+    "generated_at": "2026-06-30T17:36:43.862802+00:00",
+    "action_item_count": 2
+  },
+  "action_items": [
+    {
+      "object_id": "memory_30ca5687564e",
+      "type": "action_item",
+      "title": "Touch on social media etiquette.",
+      "summary": "Need should touch on social media etiquette.",
+      "owner_names": [
+        "Need"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_dfc0cceebce2664c_section_2"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_2",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_173642.pdf",
+          "section_heading": "1.   SECRETARIAT BIOS - EVANGELINE",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_dfc0cceebce2664c#section-2",
+          "page": 1,
+          "url": null,
+          "quote": "1. SECRETARIAT BIOS - EVANGELINE i. Need to touch on social media etiquette"
+        }
+      ],
+      "quote": "1. SECRETARIAT BIOS - EVANGELINE i. Need to touch on social media etiquette",
+      "confidence": 0.8,
+      "block_id": "block_a3d731453fd4"
+    },
+    {
+      "object_id": "memory_0e9ac1e0bc8d",
+      "type": "action_item",
+      "title": "Email update?",
+      "summary": "Owen should email update?",
+      "owner_names": [
+        "Owen"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_dfc0cceebce2664c_section_3"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_3",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_173642.pdf",
+          "section_heading": "3.   Registration Links for UBC VYMUN - Mrs. Haider",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_dfc0cceebce2664c#section-3",
+          "page": 1,
+          "url": null,
+          "quote": "3. Registration Links for UBC VYMUN - Mrs. Haider 4. Owen - email update?"
+        }
+      ],
+      "quote": "3. Registration Links for UBC VYMUN - Mrs. Haider 4. Owen - email update?",
+      "confidence": 0.8,
+      "block_id": "block_afe2cfc399d6"
+    }
+  ]
+}

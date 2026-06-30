@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "input_file": "data/new_vendor_selection.json",
+    "mode": "llm",
+    "pipeline": "candidates-shadow",
+    "classification": "unknown",
+    "generated_at": "2026-06-30T07:53:10.671157+00:00",
+    "meeting_date": null,
+    "location": null,
+    "present": [],
+    "absent": [],
+    "confirmed_memory_count": 0,
+    "action_item_count": 0,
+    "open_question_count": 0,
+    "review_item_count": 0
+  },
+  "confirmed_memory": [],
+  "action_items": [],
+  "open_questions": [],
+  "review_items": []
+}

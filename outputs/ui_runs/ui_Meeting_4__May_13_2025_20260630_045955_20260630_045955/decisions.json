@@ -1,0 +1,666 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_4__May_13_2025_20260630_045955.pdf",
+    "decision_count": 8,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-4.1-mini",
+    "verified": true,
+    "generated_at": "2026-06-30T05:00:05.179273+00:00",
+    "raw_validation_issue_count": 0,
+    "clean_validation_issue_count": 0,
+    "removed_claim_count": 5,
+    "repair_count": 3,
+    "postprocessing_change_count": 8
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_95c741950940",
+      "decision": "\"The Room Where It Happens\" is confirmed as the theme to put on the website.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.95,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "\"The Room Where It Happens\" is confirmed as the theme to put on the website.",
+          "support_level": "direct",
+          "confidence": 0.95,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-2",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "2. Committee List 4. Conﬁrm theme to put on website",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List 4. Conﬁrm theme to put on website",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List 4. Conﬁrm theme to put on website",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List 4. Conﬁrm theme to put on website",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_d03c509c8472",
+      "decision": "VYMUN Jr. should have three committees: general, specialized, and crisis.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.9,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "VYMUN Jr. should have three committees: general, specialized, and crisis.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-2",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "2. Committee List b. 3 committees: general, specialized and crisis",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List b. 3 committees: general, specialized and crisis",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List b. 3 committees: general, specialized and crisis",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List b. 3 committees: general, specialized and crisis",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_f5bfc8d9f785",
+      "decision": "The sports committee director is Cameron Stanger and the chair is John Huang.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "The sports committee director is Cameron Stanger and the chair is John Huang.",
+          "support_level": "direct",
+          "confidence": 0.86,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-2",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "2. Committee List v. Director is Cameron Stanger (Chair: John Huang)",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List v. Director is Cameron Stanger (Chair: John Huang)",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List v. Director is Cameron Stanger (Chair: John Huang)",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List v. Director is Cameron Stanger (Chair: John Huang)",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_484959bb40ea",
+      "decision": "Junior registration is 65.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.92,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Junior registration is 65.",
+          "support_level": "direct",
+          "confidence": 0.92,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-7",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "9. Go through materials left from last year i. 65 for junior",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year i. 65 for junior",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year i. 65 for junior",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year i. 65 for junior",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_fda9b82cf268",
+      "decision": "Regular registration is 165.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.9,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Regular registration is 165.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-7",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "9. Go through materials left from last year iii. This year 165 (early 150) for regular",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year iii. This year 165 (early 150) for regular",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year iii. This year 165 (early 150) for regular",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year iii. This year 165 (early 150) for regular",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_c3486916941c",
+      "decision": "Early registration is 150.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.9,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Early registration is 150.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-7",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "9. Go through materials left from last year ii. Last year 150 (early was 135) at regular",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year ii. Last year 150 (early was 135) at regular",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year ii. Last year 150 (early was 135) at regular",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year ii. Last year 150 (early was 135) at regular",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_be96bbe1d67b",
+      "decision": "Mrs. Haider's sister is redesigning the logo for this year with the same colour scheme jazzed up.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.88,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Mrs. Haider's sister is redesigning the logo for this year with the same colour scheme jazzed up.",
+          "support_level": "direct",
+          "confidence": 0.88,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-6",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "Document a. Mrs Haider’s sister is redesigning logo for this year - done next week",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Document a. Mrs Haider’s sister is redesigning logo for this year - done next week",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Document a. Mrs Haider’s sister is redesigning logo for this year - done next week",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Document a. Mrs Haider’s sister is redesigning logo for this year - done next week",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_008cee7eb9fb",
+      "decision": "Order more catering than last year.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.84,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Order more catering than last year.",
+          "support_level": "direct",
+          "confidence": 0.84,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-6",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "Document b. Order more than last year",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Document b. Order more than last year",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Document b. Order more than last year",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Document b. Order more than last year",
+          "url": null
+        }
+      ]
+    }
+  ]
+}

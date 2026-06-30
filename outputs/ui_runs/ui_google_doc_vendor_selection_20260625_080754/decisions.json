@@ -1,0 +1,197 @@
+{
+  "metadata": {
+    "input_file": "data/google_doc_vendor_selection.json",
+    "decision_count": 1,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-4.1-mini",
+    "verified": true,
+    "generated_at": "2026-06-25T08:08:04.111185+00:00",
+    "raw_validation_issue_count": 0,
+    "clean_validation_issue_count": 0,
+    "removed_claim_count": 0,
+    "repair_count": 0,
+    "postprocessing_change_count": 0
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_0ee58ff3cf",
+      "decision": "Use LaunchDarkly for feature flags.",
+      "date": null,
+      "owner": "Priya Shah",
+      "owner_role": "Staff Engineer",
+      "participants": [
+        "Priya Shah"
+      ],
+      "status": "confirmed",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "LaunchDarkly supports audit requirements and the SDK is already tested in staging.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source": {
+            "source_type": "google_doc",
+            "workspace": "AcmeAI",
+            "channel": "Feature Flag Vendor Decision",
+            "channel_id": "doc_architecture_decision_001",
+            "thread_ts": "doc_architecture_decision_001",
+            "message_ts": "doc_architecture_decision_001#section-3",
+            "speaker": "Priya Shah",
+            "speaker_role": "Staff Engineer",
+            "quote": "LaunchDarkly supports audit requirements and the SDK is already tested in staging.",
+            "url": "https://docs.google.com/document/d/fake-doc-id"
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [
+        {
+          "claim": "Higher monthly spend is the accepted tradeoff.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source": {
+            "source_type": "google_doc",
+            "workspace": "AcmeAI",
+            "channel": "Feature Flag Vendor Decision",
+            "channel_id": "doc_architecture_decision_001",
+            "thread_ts": "doc_architecture_decision_001",
+            "message_ts": "doc_architecture_decision_001#section-5",
+            "speaker": "Priya Shah",
+            "speaker_role": "Staff Engineer",
+            "quote": "The tradeoff with LaunchDarkly is higher monthly spend.",
+            "url": "https://docs.google.com/document/d/fake-doc-id"
+          }
+        }
+      ],
+      "timelines": [
+        {
+          "claim": "Implementation can finish in about eight business days.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source": {
+            "source_type": "google_doc",
+            "workspace": "AcmeAI",
+            "channel": "Feature Flag Vendor Decision",
+            "channel_id": "doc_architecture_decision_001",
+            "thread_ts": "doc_architecture_decision_001",
+            "message_ts": "doc_architecture_decision_001#section-6",
+            "speaker": "Priya Shah",
+            "speaker_role": "Staff Engineer",
+            "quote": "Implementation can finish in about eight business days.",
+            "url": "https://docs.google.com/document/d/fake-doc-id"
+          }
+        }
+      ],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": "Review flag hygiene after 45 days.",
+      "decision_sources": [
+        {
+          "source_type": "google_doc",
+          "workspace": "AcmeAI",
+          "channel": "Feature Flag Vendor Decision",
+          "channel_id": "doc_architecture_decision_001",
+          "thread_ts": "doc_architecture_decision_001",
+          "message_ts": "doc_architecture_decision_001#section-1",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "Final decision: use LaunchDarkly for feature flags.",
+          "url": "https://docs.google.com/document/d/fake-doc-id"
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "google_doc",
+          "workspace": "AcmeAI",
+          "channel": "Feature Flag Vendor Decision",
+          "channel_id": "doc_architecture_decision_001",
+          "thread_ts": "doc_architecture_decision_001",
+          "message_ts": "doc_architecture_decision_001#section-3",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "LaunchDarkly supports audit requirements and the SDK is already tested in staging.",
+          "url": "https://docs.google.com/document/d/fake-doc-id"
+        },
+        {
+          "source_type": "google_doc",
+          "workspace": "AcmeAI",
+          "channel": "Feature Flag Vendor Decision",
+          "channel_id": "doc_architecture_decision_001",
+          "thread_ts": "doc_architecture_decision_001",
+          "message_ts": "doc_architecture_decision_001#section-5",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "The tradeoff with LaunchDarkly is higher monthly spend.",
+          "url": "https://docs.google.com/document/d/fake-doc-id"
+        },
+        {
+          "source_type": "google_doc",
+          "workspace": "AcmeAI",
+          "channel": "Feature Flag Vendor Decision",
+          "channel_id": "doc_architecture_decision_001",
+          "thread_ts": "doc_architecture_decision_001",
+          "message_ts": "doc_architecture_decision_001#section-6",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "Implementation can finish in about eight business days.",
+          "url": "https://docs.google.com/document/d/fake-doc-id"
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "google_doc",
+          "workspace": "AcmeAI",
+          "channel": "Feature Flag Vendor Decision",
+          "channel_id": "doc_architecture_decision_001",
+          "thread_ts": "doc_architecture_decision_001",
+          "message_ts": "doc_architecture_decision_001#section-1",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "Final decision: use LaunchDarkly for feature flags.",
+          "url": "https://docs.google.com/document/d/fake-doc-id"
+        },
+        {
+          "source_type": "google_doc",
+          "workspace": "AcmeAI",
+          "channel": "Feature Flag Vendor Decision",
+          "channel_id": "doc_architecture_decision_001",
+          "thread_ts": "doc_architecture_decision_001",
+          "message_ts": "doc_architecture_decision_001#section-3",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "LaunchDarkly supports audit requirements and the SDK is already tested in staging.",
+          "url": "https://docs.google.com/document/d/fake-doc-id"
+        },
+        {
+          "source_type": "google_doc",
+          "workspace": "AcmeAI",
+          "channel": "Feature Flag Vendor Decision",
+          "channel_id": "doc_architecture_decision_001",
+          "thread_ts": "doc_architecture_decision_001",
+          "message_ts": "doc_architecture_decision_001#section-5",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "The tradeoff with LaunchDarkly is higher monthly spend.",
+          "url": "https://docs.google.com/document/d/fake-doc-id"
+        },
+        {
+          "source_type": "google_doc",
+          "workspace": "AcmeAI",
+          "channel": "Feature Flag Vendor Decision",
+          "channel_id": "doc_architecture_decision_001",
+          "thread_ts": "doc_architecture_decision_001",
+          "message_ts": "doc_architecture_decision_001#section-6",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "Implementation can finish in about eight business days.",
+          "url": "https://docs.google.com/document/d/fake-doc-id"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+[
+  {
+    "bundle_id": "document_local_upload_file_72a564d2471ef35f",
+    "bundle_type": "document",
+    "source_types": [
+      "uploaded_document"
+    ],
+    "root_id": "file_72a564d2471ef35f",
+    "title": "Meeting_1__April_15th_2025_20260629_054028.docx",
+    "time_range": {
+      "start": null,
+      "end": "2026-06-29T05:40:28.756938+00:00"
+    },
+    "events": [
+      {
+        "event_id": "uploaded_document_file_72a564d2471ef35f_section_1",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_72a564d2471ef35f#section-1",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_72a564d2471ef35f",
+          "name": "Meeting_1__April_15th_2025_20260629_054028.docx"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_72a564d2471ef35f",
+          "section_heading": "Document"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-29T05:40:28.756938+00:00",
+        "content": {
+          "text": "April 15th, 2025\nGlass Room\n\nPresent: Ann, Elliot, Quinton, Mrs. Haider, Owen, Ms. Boland, James, Frankie, Hugo\nAbsent: Evangeline, Sheree\n\nWelcome! Congrats!\nShared what everyone’s excited about for VYMUN 2025!\nTheme for VYMUN Sr. and Jr?\nMetamorphosis/Change - Quinton\nA new chapter/horizons - Mrs Haider\nVYMUN new generation - Mrs Boland\nFight for democracy - Mrs Boland\nVoice/Positive Discussion/Productive Discourse - Mrs Haider\nThe Room where it happens/presence\nContribution - Ann\nFinancials (Mrs. Haider)\nLarger budget this year - may influence price for delegates\nWe do not buy anything ourselves, go through Mrs Boland/Mrs Haider\nLet them know if you have ideas\nSecretariat Roles & Job Descriptions.\nSecretariat Job Descriptions VYMUN 2025\nFeedback/questions about roles and responsibilities\nWeekly Zoom meeting schedule\nDefinitely Not: Friday(Haider and Boland), Monday (Frankie), Thursday (Quinton)\nTuesday at 7PM\nBackup: Thursday at 7PM\nStart April 28th\nConference: (24th - 26th)\nExplore starting earlier on Friday (start at 10-11AM - Sec set up in morning)\nStaff hiring:\nProcess\nJames has old form, Ann has old poster\nPut in DAs\nOne application for both Sr and Jr\nOpen Jr up to younger applicants for Chair/AD positions\nExperienced MUNers\nWrite on form more info about Jr and Sr so they are more educated to make a decision\nDeadlines\nMay 2nd - Application Deadline\nAdvertising: Email to MUN club, DA’s, The Howl\n\n\nTo be Discussed Next TIme:\nMedia:\nWebsite\nInstagram\nAction Items:\nJames Wang Edit the staff application form, put onto DA/Howl\nInclude USG of Crisis and Media (Rest of crisis/media can be separate)\nFrances NakhudaPoll/email teachers if they would be willing to start at 12:00pm/welcome email\nHugo ChungEvangeline Zixuan Linmeet + talk about vymun jr vision (e.g. staffing)\nSlide deck to present to Junior School before the end of the school year\nZi Kun MengBrainstorming ideas\n\n\nChanges:\nSome committees may need three topics"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_72a564d2471ef35f#section-1",
+          "quote": "April 15th, 2025\nGlass Room\n\nPresent: Ann, Elliot, Quinton, Mrs. Haider, Owen, Ms. Boland, James, Frankie, Hugo\nAbsent: Evangeline, Sheree\n\nWelcome! Congrats!\nShared what everyone’s excited about for VYMUN 2025!\nTheme for VYMUN Sr. and Jr?\nMetamorphosis/Change - Quinton\nA new chapter/horizons - Mrs Haider\nVYMUN new generation - Mrs Boland\nFight for democracy - Mrs Boland\nVoice/Positive Discussion/Productive Discourse - Mrs Haider\nThe Room where it happens/presence\nContribution - Ann\nFinancials (Mrs. Haider)\nLarger budget this year - may influence price for delegates\nWe do not buy anything ourselves, go through Mrs Boland/Mrs Haider\nLet them know if you have ideas\nSecretariat Roles & Job Descriptions.\nSecretariat Job Descriptions VYMUN 2025\nFeedback/questions about roles and responsibilities\nWeekly Zoom meeting schedule\nDefinitely Not: Friday(Haider and Boland), Monday (Frankie), Thursday (Quinton)\nTuesday at 7PM\nBackup: Thursday at 7PM\nStart April 28th\nConference: (24th - 26th)\nExplore starting earlier on Friday (start at 10-11AM - Sec set up in morning)\nStaff hiring:\nProcess\nJames has old form, Ann has old poster\nPut in DAs\nOne application for both Sr and Jr\nOpen Jr up to younger applicants for Chair/AD positions\nExperienced MUNers\nWrite on form more info about Jr and Sr so they are more educated to make a decision\nDeadlines\nMay 2nd - Application Deadline\nAdvertising: Email to MUN club, DA’s, The Howl\n\n\nTo be Discussed Next TIme:\nMedia:\nWebsite\nInstagram\nAction Items:\nJames Wang Edit the staff application form, put onto DA/Howl\nInclude USG of Crisis and Media (Rest of crisis/media can be separate)\nFrances NakhudaPoll/email teachers if they would be willing to start at 12:00pm/welcome email\nHugo ChungEvangeline Zixuan Linmeet + talk about vymun jr vision (e.g. staffing)\nSlide deck to present to Junior School before the end of the school year\nZi Kun MengBrainstorming ideas\n\n\nChanges:\nSome committees may need three topics",
+          "workspace": "local_upload",
+          "document_id": "file_72a564d2471ef35f",
+          "document_title": "Meeting_1__April_15th_2025_20260629_054028.docx",
+          "section_heading": "Document"
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "Document",
+            "text": "April 15th, 2025\nGlass Room\n\nPresent: Ann, Elliot, Quinton, Mrs. Haider, Owen, Ms. Boland, James, Frankie, Hugo\nAbsent: Evangeline, Sheree\n\nWelcome! Congrats!\nShared what everyone’s excited about for VYMUN 2025!\nTheme for VYMUN Sr. and Jr?\nMetamorphosis/Change - Quinton\nA new chapter/horizons - Mrs Haider\nVYMUN new generation - Mrs Boland\nFight for democracy - Mrs Boland\nVoice/Positive Discussion/Productive Discourse - Mrs Haider\nThe Room where it happens/presence\nContribution - Ann\nFinancials (Mrs. Haider)\nLarger budget this year - may influence price for delegates\nWe do not buy anything ourselves, go through Mrs Boland/Mrs Haider\nLet them know if you have ideas\nSecretariat Roles & Job Descriptions.\nSecretariat Job Descriptions VYMUN 2025\nFeedback/questions about roles and responsibilities\nWeekly Zoom meeting schedule\nDefinitely Not: Friday(Haider and Boland), Monday (Frankie), Thursday (Quinton)\nTuesday at 7PM\nBackup: Thursday at 7PM\nStart April 28th\nConference: (24th - 26th)\nExplore starting earlier on Friday (start at 10-11AM - Sec set up in morning)\nStaff hiring:\nProcess\nJames has old form, Ann has old poster\nPut in DAs\nOne application for both Sr and Jr\nOpen Jr up to younger applicants for Chair/AD positions\nExperienced MUNers\nWrite on form more info about Jr and Sr so they are more educated to make a decision\nDeadlines\nMay 2nd - Application Deadline\nAdvertising: Email to MUN club, DA’s, The Howl\n\n\nTo be Discussed Next TIme:\nMedia:\nWebsite\nInstagram\nAction Items:\nJames Wang Edit the staff application form, put onto DA/Howl\nInclude USG of Crisis and Media (Rest of crisis/media can be separate)\nFrances NakhudaPoll/email teachers if they would be willing to start at 12:00pm/welcome email\nHugo ChungEvangeline Zixuan Linmeet + talk about vymun jr vision (e.g. staffing)\nSlide deck to present to Junior School before the end of the school year\nZi Kun MengBrainstorming ideas\n\n\nChanges:\nSome committees may need three topics"
+          },
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_72a564d2471ef35f",
+            "title": "Meeting_1__April_15th_2025_20260629_054028.docx",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_054028.docx",
+            "updated_at": "2026-06-29T05:40:28.756938+00:00"
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "workspace": "AcmeAI",
+  "sources": [
+    {
+      "source_type": "slack",
+      "messages": [
+        {
+          "channel": "platform",
+          "channel_id": "C_PLATFORM",
+          "thread_ts": "1791030000.000100",
+          "ts": "1791030000.000100",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "text": "For feature flags, I recommend choosing LaunchDarkly over ConfigCat. LaunchDarkly already supports our audit requirements and the SDK is already tested in staging."
+        },
+        {
+          "channel": "platform",
+          "channel_id": "C_PLATFORM",
+          "thread_ts": "1791030000.000100",
+          "ts": "1791030060.000200",
+          "speaker": "Tom Garcia",
+          "speaker_role": "Infrastructure Engineer",
+          "text": "ConfigCat is cheaper by about 22%, but the migration would take longer because we need to rebuild the flag evaluation wrapper. The tradeoff with LaunchDarkly is higher monthly spend."
+        },
+        {
+          "channel": "platform",
+          "channel_id": "C_PLATFORM",
+          "thread_ts": "1791030000.000100",
+          "ts": "1791030180.000400",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "text": "Assuming finance approves the higher monthly spend, implementation can finish in about eight business days. If flag cleanup is still messy after rollout, we can revisit the vendor choice after 45 days."
+        },
+        {
+          "channel": "platform",
+          "channel_id": "C_PLATFORM",
+          "thread_ts": "1791030000.000100",
+          "ts": "1791030240.000500",
+          "speaker": "Hannah Lee",
+          "speaker_role": "Director of Engineering",
+          "text": "Approved: choose LaunchDarkly for feature flags now. Priya owns implementation, and we will review flag hygiene after 45 days."
+        }
+      ]
+    },
+    {
+      "source_type": "google_doc",
+      "doc_id": "doc_architecture_decision_001",
+      "title": "Feature Flag Vendor Decision",
+      "created_at": "2026-10-03T13:00:00Z",
+      "updated_at": "2026-10-03T13:20:00Z",
+      "author": "Priya Shah",
+      "author_role": "Staff Engineer",
+      "url": "https://docs.google.com/document/d/fake-doc-id",
+      "sections": [
+        {
+          "heading": "Decision",
+          "text": "Final decision: use LaunchDarkly for feature flags."
+        },
+        {
+          "heading": "Rationale",
+          "text": "LaunchDarkly supports audit requirements and the SDK is already tested in staging."
+        },
+        {
+          "heading": "Rejected Alternatives",
+          "text": "ConfigCat was cheaper, but migration would take longer because we would need to rebuild the flag evaluation wrapper."
+        },
+        {
+          "heading": "Tradeoff",
+          "text": "The tradeoff with LaunchDarkly is higher monthly spend."
+        },
+        {
+          "heading": "Timeline",
+          "text": "Implementation can finish in about eight business days."
+        }
+      ]
+    }
+  ]
+}

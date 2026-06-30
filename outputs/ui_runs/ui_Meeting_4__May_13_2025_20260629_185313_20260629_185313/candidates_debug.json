@@ -1,0 +1,51 @@
+[
+  {
+    "candidate_id": "candidate_dec_1a3fe62eda",
+    "proposed_action": "Confirm theme to put on website: 'The Room Where It Happens'",
+    "normalized_action": "confirm theme put on website room where it happens",
+    "state": "confirmed",
+    "confidence": 0.86,
+    "source_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_2"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_2"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "The theme 'The Room Where It Happens' is confirmed to put on the website.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_2"
+        ],
+        "support_level": "direct",
+        "confidence": 1.0,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_2"
+        ],
+        "confidence": 0.86,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_2"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  }
+]

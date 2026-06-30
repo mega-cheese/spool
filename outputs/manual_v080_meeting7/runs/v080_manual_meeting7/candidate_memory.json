@@ -1,0 +1,1020 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/Meeting #7_ August 26th, 2025.pdf",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "generated_at": "2026-06-30T22:11:56.980193+00:00",
+    "candidate_count": 23
+  },
+  "candidates": [
+    {
+      "memory_id": "mem_181794f161e9",
+      "source_object_id": "memory_294fca7b91bf",
+      "type": "commitment",
+      "title": "Award descriptions post on website.",
+      "summary": "Ann should award descriptions post on website.",
+      "owner_names": [
+        "Ann"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_15"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_15",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "To-do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-15",
+          "page": 3,
+          "url": null,
+          "quote": "To-do Award descriptions post on website (Ann)"
+        }
+      ],
+      "quote": "To-do Award descriptions post on website (Ann)",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_faf453eef182",
+      "source_object_id": "memory_5b70f292e1b7",
+      "type": "commitment",
+      "title": "How are awards determined.",
+      "summary": "JBo Rubrics should how are awards determined.",
+      "owner_names": [
+        "JBo Rubrics"
+      ],
+      "status": "rejected",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_15"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_15",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "To-do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-15",
+          "page": 3,
+          "url": null,
+          "quote": "To-do JBo Rubrics - How are awards determined"
+        }
+      ],
+      "quote": "To-do JBo Rubrics - How are awards determined",
+      "evidence_state": "supported",
+      "review_state": "rejected",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "suspicious_owner",
+        "weak_task_parse",
+        "ugly_parser_text"
+      ],
+      "memory_quality_score": 0.76
+    },
+    {
+      "memory_id": "mem_a74e45d59008",
+      "source_object_id": "memory_ab3f23e966a0",
+      "type": "commitment",
+      "title": "Update instagram for recruitment.",
+      "summary": "Frankie should update instagram for recruitment.",
+      "owner_names": [
+        "Frankie"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_15"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_15",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "To-do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-15",
+          "page": 3,
+          "url": null,
+          "quote": "To-do Frankie to update instagram for recruitment"
+        }
+      ],
+      "quote": "To-do Frankie to update instagram for recruitment",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_20adbd404fec",
+      "source_object_id": "memory_49cd30ca2b26",
+      "type": "commitment",
+      "title": "Write Howl article.",
+      "summary": "Sheree should write Howl article.",
+      "owner_names": [
+        "Sheree"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_15"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_15",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "To-do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-15",
+          "page": 3,
+          "url": null,
+          "quote": "To-do Sheree to write Howl article"
+        }
+      ],
+      "quote": "To-do Sheree to write Howl article",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_453598bf64b6",
+      "source_object_id": "memory_8ad608f96bb2",
+      "type": "commitment",
+      "title": "Start reaching out about chaperones.",
+      "summary": "Elliott should start reaching out about chaperones.",
+      "owner_names": [
+        "Elliott"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_15"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_15",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "To-do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-15",
+          "page": 3,
+          "url": null,
+          "quote": "To-do Elliott to start reaching out about chaperones"
+        }
+      ],
+      "quote": "To-do Elliott to start reaching out about chaperones",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_bc65074186da",
+      "source_object_id": "memory_e5161ff82652",
+      "type": "commitment",
+      "title": "Start planning JS training sessions.",
+      "summary": "Evangeline should start planning JS training sessions.",
+      "owner_names": [
+        "Evangeline"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_15"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_15",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "To-do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-15",
+          "page": 3,
+          "url": null,
+          "quote": "To-do Evangeline to start planning JS training sessions"
+        }
+      ],
+      "quote": "To-do Evangeline to start planning JS training sessions",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_a57e01a388ed",
+      "source_object_id": "memory_66bb1b8fcf16",
+      "type": "commitment",
+      "title": "Follow up with directors who are behind.",
+      "summary": "James should follow up with directors who are behind.",
+      "owner_names": [
+        "James"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_15"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_15",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "To-do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-15",
+          "page": 3,
+          "url": null,
+          "quote": "To-do James to follow up with directors who are behind"
+        }
+      ],
+      "quote": "To-do James to follow up with directors who are behind",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_676bfc790acf",
+      "source_object_id": "memory_020225f1611e",
+      "type": "commitment",
+      "title": "Send backgrounders to teachers before publishing for final review.",
+      "summary": "Hugo should send backgrounders to teachers before publishing for final review.",
+      "owner_names": [
+        "Hugo"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_15"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_15",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "To-do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-15",
+          "page": 3,
+          "url": null,
+          "quote": "To-do Hugo to send backgrounders to teachers before publishing for ﬁnal review"
+        }
+      ],
+      "quote": "To-do Hugo to send backgrounders to teachers before publishing for ﬁnal review",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_fde7ac3fa05b",
+      "source_object_id": "memory_306c38e45426",
+      "type": "commitment",
+      "title": "Start ordering materials (incl awards).",
+      "summary": "Elliott should start ordering materials (incl awards).",
+      "owner_names": [
+        "Elliott"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_15"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_15",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "To-do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-15",
+          "page": 3,
+          "url": null,
+          "quote": "To-do Elliott to start ordering materials (incl awards)"
+        }
+      ],
+      "quote": "To-do Elliott to start ordering materials (incl awards)",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_a9b117bb18ec",
+      "source_object_id": "memory_010d6589e91c",
+      "type": "commitment",
+      "title": "Think about awards for speech contest.",
+      "summary": "Sheree should think about awards for speech contest.",
+      "owner_names": [
+        "Sheree"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_15"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_15",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "To-do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-15",
+          "page": 3,
+          "url": null,
+          "quote": "To-do Sheree will think about awards for speech contest"
+        }
+      ],
+      "quote": "To-do Sheree will think about awards for speech contest",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_bf8f2fbd5621",
+      "source_object_id": "memory_1289c38bd5e3",
+      "type": "commitment",
+      "title": "Owen and Frankie to follow up with St John’s Ravens Court.",
+      "summary": "Wednesday should owen and Frankie to follow up with St John’s Ravens Court.",
+      "owner_names": [
+        "Wednesday"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_15"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_15",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "To-do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-15",
+          "page": 3,
+          "url": null,
+          "quote": "To-do Owen and Frankie to follow up with St John’s Ravens Court - Wednesday"
+        }
+      ],
+      "quote": "To-do Owen and Frankie to follow up with St John’s Ravens Court - Wednesday",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_beffb15f77b3",
+      "source_object_id": "memory_2e1a801bcc96",
+      "type": "commitment",
+      "title": "Contact Mr Mac about media.",
+      "summary": "Owen should contact Mr Mac about media.",
+      "owner_names": [
+        "Owen"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_15"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_15",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "To-do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-15",
+          "page": 3,
+          "url": null,
+          "quote": "To-do Owen contact Mr Mac about media"
+        }
+      ],
+      "quote": "To-do Owen contact Mr Mac about media",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_ee4b3a89c0a2",
+      "source_object_id": "memory_a849d47496c5",
+      "type": "commitment",
+      "title": "Can talk to Reid about swimming conﬂict (get a list to prepare).",
+      "summary": "Sheree should can talk to Reid about swimming conﬂict (get a list to prepare).",
+      "owner_names": [
+        "Sheree"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_15"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_15",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "To-do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-15",
+          "page": 3,
+          "url": null,
+          "quote": "To-do Sheree can talk to Reid about swimming conﬂict (get a list to prepare)"
+        }
+      ],
+      "quote": "To-do Sheree can talk to Reid about swimming conﬂict (get a list to prepare)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_2da33af66435",
+      "source_object_id": "memory_5e1923b6a3a8",
+      "type": "commitment",
+      "title": "JS staff.",
+      "summary": "Talk should jS staff.",
+      "owner_names": [
+        "Talk"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_3"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_3",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "3.   VYMUN Junior Training & Connections",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-3",
+          "page": 1,
+          "url": null,
+          "quote": "3. VYMUN Junior Training & Connections iv. Talk to JS staﬀ"
+        }
+      ],
+      "quote": "3. VYMUN Junior Training & Connections iv. Talk to JS staﬀ",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse",
+        "coverage_warning"
+      ],
+      "memory_quality_score": 0.84
+    },
+    {
+      "memory_id": "mem_fb95cc813e04",
+      "source_object_id": "memory_d418c952c811",
+      "type": "commitment",
+      "title": "Send them to the teachers for review before publishing on.",
+      "summary": "Hugo should send them to the teachers for review before publishing on.",
+      "owner_names": [
+        "Hugo"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_4"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "4.   Background guides updates (James)",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-4",
+          "page": 1,
+          "url": null,
+          "quote": "4. Background guides updates (James) i. Hugo to send them to the teachers for review before publishing on"
+        }
+      ],
+      "quote": "4. Background guides updates (James) i. Hugo to send them to the teachers for review before publishing on",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_9831b7d5f788",
+      "source_object_id": "memory_3736cb02f918",
+      "type": "commitment",
+      "title": "Finalize w/ caterers.",
+      "summary": "Elliott should finalize w/ caterers.",
+      "owner_names": [
+        "Elliott"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "7.  Delegate social catering (Elliott)",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-6",
+          "page": 2,
+          "url": null,
+          "quote": "7. Delegate social catering (Elliott) a. Elliott to ﬁnalize w/ caterers"
+        }
+      ],
+      "quote": "7. Delegate social catering (Elliott) a. Elliott to ﬁnalize w/ caterers",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_9a3f090684ab",
+      "source_object_id": "memory_7fed64cfed40",
+      "type": "commitment",
+      "title": "Avoid gavel hunters.",
+      "summary": "Attempting should avoid gavel hunters.",
+      "owner_names": [
+        "Attempting"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "8.  Awards need to be ordered (Elliott)",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-7",
+          "page": 2,
+          "url": null,
+          "quote": "8. Awards need to be ordered (Elliott) b. Attempting to avoid gavel hunters"
+        }
+      ],
+      "quote": "8. Awards need to be ordered (Elliott) b. Attempting to avoid gavel hunters",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_69cf5d7a7695",
+      "source_object_id": "memory_c35588ab210c",
+      "type": "commitment",
+      "title": "Follow up with the Major.",
+      "summary": "Frankie should follow up with the Major.",
+      "owner_names": [
+        "Frankie"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "9.  Keynote speaker updates (Frankie)",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "9. Keynote speaker updates (Frankie) c. Frankie to follow up with the Major"
+        }
+      ],
+      "quote": "9. Keynote speaker updates (Frankie) c. Frankie to follow up with the Major",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_54932fe735bf",
+      "source_object_id": "memory_488b8bde495e",
+      "type": "commitment",
+      "title": "Find contacts in schools (Owen’s stalking).",
+      "summary": "Hard should find contacts in schools (Owen’s stalking).",
+      "owner_names": [
+        "Hard"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_9"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_9",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "10. Hotels (Owen)",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-9",
+          "page": 2,
+          "url": null,
+          "quote": "10. Hotels (Owen) ii. Hard to ﬁnd contacts in schools (Owen’s stalking)"
+        }
+      ],
+      "quote": "10. Hotels (Owen) ii. Hard to ﬁnd contacts in schools (Owen’s stalking)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_999074eb9ad3",
+      "source_object_id": "memory_a19f07e3784e",
+      "type": "commitment",
+      "title": "Follow up.",
+      "summary": "Owen and Frankie should follow up.",
+      "owner_names": [
+        "Owen",
+        "Frankie"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_9"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_9",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "10. Hotels (Owen)",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-9",
+          "page": 2,
+          "url": null,
+          "quote": "10. Hotels (Owen) 2. Follow up (Owen and Frankie)"
+        }
+      ],
+      "quote": "10. Hotels (Owen) 2. Follow up (Owen and Frankie)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_3179bde718ed",
+      "source_object_id": "memory_2f8b049f1167",
+      "type": "commitment",
+      "title": "Connect w/ Mr Mac.",
+      "summary": "Owen should connect w/ Mr Mac.",
+      "owner_names": [
+        "Owen"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_12"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_12",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "12.  Special projects (Quinton)",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-12",
+          "page": 3,
+          "url": null,
+          "quote": "12. Special projects (Quinton) h. Connect w/ Mr Mac (Owen)"
+        }
+      ],
+      "quote": "12. Special projects (Quinton) h. Connect w/ Mr Mac (Owen)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_c8977339bc5f",
+      "source_object_id": "memory_17e6272c6ea3",
+      "type": "open_question",
+      "title": "Media items, including website and Instagram, are to be discussed next time.",
+      "summary": "Media items, including website and Instagram, are to be discussed next time.",
+      "owner_names": [],
+      "status": "unresolved",
+      "confidence": 0.86,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_1"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_1",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Document August 26th, 2025 1. Registration Updates- Master Reg. Doc Here. a. VYMUN- UBC: 76 external delegates i. 100 spots left for UBC (not incl staﬀ) ii. Poster with QR code for Display Wall b. VYMUN Junior: 39",
+          "locator": "file_9cf77b848dc74377#section-1",
+          "page": 1,
+          "url": null
+        }
+      ],
+      "quote": "Document August 26th, 2025 1. Registration Updates- Master Reg. Doc Here. a. VYMUN- UBC: 76 external delegates i. 100 spots left for UBC (not incl staﬀ) ii. Poster with QR code for Display Wall b. VYMUN Junior: 39",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "open_question",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_b901b281cabd",
+      "source_object_id": "extraction_warning",
+      "type": "context",
+      "title": "Task table may have been under-extracted",
+      "summary": "Document appears to contain a task table, but many likely task rows were not extracted.",
+      "owner_names": [],
+      "status": "needs_review",
+      "confidence": 0.0,
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_3"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_3",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "3.   VYMUN Junior Training & Connections",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_9cf77b848dc74377#section-3",
+          "page": 1,
+          "url": null,
+          "quote": "a.   Reminder: We sent this welcome back letter in June\n             b.   Plan for training & support leading up to the conference?\n             c.   Update 2024 September/October letter- send when backgrounders and\n                  assignments are done.\n             d.   Contact Mr. Lee to begin asking for chaperone support. - reach out to Ms. A.\n                  Shaw as a possible chaperone\n                     i.    Elliott\n             e.   Sessions with registered Junior School delegates to prep them\n                     i.    Also evening sessions to work on topic paragraphs\n                    ii.    Parents could come in\n                    iii.   Evangeline plan 2 in-person, 2 online sessions\n                    iv.    Talk to JS staﬀ"
+        }
+      ],
+      "quote": "a.   Reminder: We sent this welcome back letter in June\n             b.   Plan for training & support leading up to the conference?\n             c.   Update 2024 September/October letter- send when backgrounders and\n                  assignments are done.\n             d.   Contact Mr. Lee to begin asking for chaperone support. - reach out to Ms. A.\n                  Shaw as a possible chaperone\n                     i.    Elliott\n             e.   Sessions with registered Junior School delegates to prep them\n                     i.    Also evening sessions to work on topic paragraphs\n                    ii.    Parents could come in\n                    iii.   Evangeline plan 2 in-person, 2 online sessions\n                    iv.    Talk to JS staﬀ",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.980193+00:00",
+      "updated_at": "2026-06-30T22:11:56.980193+00:00",
+      "metadata": {
+        "source_kind": "review_queue",
+        "reason": "extraction_warning",
+        "severity": "high"
+      },
+      "review_reason_codes": [
+        "extraction_warning",
+        "coverage_warning"
+      ],
+      "memory_quality_score": 0.79
+    }
+  ]
+}

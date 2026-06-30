@@ -1,0 +1,251 @@
+{
+  "metadata": {
+    "input_file": "data/new_pricing_change.json",
+    "decision_count": 1,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-5.4-mini",
+    "verified": true,
+    "generated_at": "2026-06-24T19:38:42.036381+00:00",
+    "raw_validation_issue_count": 2,
+    "clean_validation_issue_count": 0,
+    "removed_claim_count": 2,
+    "repair_count": 2,
+    "postprocessing_change_count": 4
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_e6b95db2f9",
+      "decision": "Move Team pricing to $59 for new customers starting 2026-09-01, and grandfather existing Team customers for 4 months.",
+      "date": "2026-10-03",
+      "owner": "Nina Patel",
+      "owner_role": "Head of Growth",
+      "participants": [
+        "Nina Patel",
+        "Marco Silva",
+        "Aisha Rahman"
+      ],
+      "status": "confirmed",
+      "confidence": 0.86,
+      "effective_date": "2026-09-01",
+      "reasoning": [
+        {
+          "claim": "Expansion revenue is strong.",
+          "support_level": "direct",
+          "confidence": 0.93,
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "go-to-market",
+            "channel_id": "C_GTM",
+            "thread_ts": "1791020000.000100",
+            "message_ts": "1791020000.000100",
+            "speaker": "Nina Patel",
+            "speaker_role": "Head of Growth",
+            "quote": "Proposal: move the Team plan from $49 to $59 next month. Expansion revenue is strong, but onboarding time per Team account is higher than we modeled.",
+            "url": null
+          }
+        },
+        {
+          "claim": "Onboarding time per Team account is higher than modeled.",
+          "support_level": "direct",
+          "confidence": 0.95,
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "go-to-market",
+            "channel_id": "C_GTM",
+            "thread_ts": "1791020000.000100",
+            "message_ts": "1791020000.000100",
+            "speaker": "Nina Patel",
+            "speaker_role": "Head of Growth",
+            "quote": "Proposal: move the Team plan from $49 to $59 next month. Expansion revenue is strong, but onboarding time per Team account is higher than we modeled.",
+            "url": null
+          }
+        },
+        {
+          "claim": "Team gross margin is below target once implementation support is included.",
+          "support_level": "direct",
+          "confidence": 0.97,
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "go-to-market",
+            "channel_id": "C_GTM",
+            "thread_ts": "1791020000.000100",
+            "message_ts": "1791020060.000200",
+            "speaker": "Marco Silva",
+            "speaker_role": "Finance Lead",
+            "quote": "I support the increase. At $49, Team gross margin is below target once implementation support is included. The tradeoff is we may lose some very small teams.",
+            "url": null
+          }
+        }
+      ],
+      "objections": [
+        {
+          "claim": "Current Team customers could be surprised.",
+          "support_level": "direct",
+          "confidence": 0.96,
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "go-to-market",
+            "channel_id": "C_GTM",
+            "thread_ts": "1791020000.000100",
+            "message_ts": "1791020120.000300",
+            "speaker": "Aisha Rahman",
+            "speaker_role": "Customer Success Manager",
+            "quote": "I'm worried about surprising current Team customers. Assuming we grandfather existing Team customers for 4 months, CS can handle the messaging.",
+            "url": null
+          }
+        }
+      ],
+      "assumptions": [
+        {
+          "claim": "Existing Team customers will be grandfathered for 4 months.",
+          "support_level": "direct",
+          "confidence": 0.95,
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "go-to-market",
+            "channel_id": "C_GTM",
+            "thread_ts": "1791020000.000100",
+            "message_ts": "1791020120.000300",
+            "speaker": "Aisha Rahman",
+            "speaker_role": "Customer Success Manager",
+            "quote": "I'm worried about surprising current Team customers. Assuming we grandfather existing Team customers for 4 months, CS can handle the messaging.",
+            "url": null
+          }
+        }
+      ],
+      "risks": [],
+      "tradeoffs": [
+        {
+          "claim": "Losing some very small teams is the accepted tradeoff.",
+          "support_level": "direct",
+          "confidence": 0.92,
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "go-to-market",
+            "channel_id": "C_GTM",
+            "thread_ts": "1791020000.000100",
+            "message_ts": "1791020060.000200",
+            "speaker": "Marco Silva",
+            "speaker_role": "Finance Lead",
+            "quote": "I support the increase. At $49, Team gross margin is below target once implementation support is included. The tradeoff is we may lose some very small teams.",
+            "url": null
+          }
+        }
+      ],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": "After the first renewal cycle.",
+      "decision_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "go-to-market",
+          "channel_id": "C_GTM",
+          "thread_ts": "1791020000.000100",
+          "message_ts": "1791020180.000400",
+          "speaker": "Nina Patel",
+          "speaker_role": "Head of Growth",
+          "quote": "Final decision: move Team pricing to $59 for new customers starting 2026-09-01, grandfather existing Team customers for 4 months, and review churn after the first renewal cycle.",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "go-to-market",
+          "channel_id": "C_GTM",
+          "thread_ts": "1791020000.000100",
+          "message_ts": "1791020000.000100",
+          "speaker": "Nina Patel",
+          "speaker_role": "Head of Growth",
+          "quote": "Proposal: move the Team plan from $49 to $59 next month. Expansion revenue is strong, but onboarding time per Team account is higher than we modeled.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "go-to-market",
+          "channel_id": "C_GTM",
+          "thread_ts": "1791020000.000100",
+          "message_ts": "1791020060.000200",
+          "speaker": "Marco Silva",
+          "speaker_role": "Finance Lead",
+          "quote": "I support the increase. At $49, Team gross margin is below target once implementation support is included. The tradeoff is we may lose some very small teams.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "go-to-market",
+          "channel_id": "C_GTM",
+          "thread_ts": "1791020000.000100",
+          "message_ts": "1791020120.000300",
+          "speaker": "Aisha Rahman",
+          "speaker_role": "Customer Success Manager",
+          "quote": "I'm worried about surprising current Team customers. Assuming we grandfather existing Team customers for 4 months, CS can handle the messaging.",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "go-to-market",
+          "channel_id": "C_GTM",
+          "thread_ts": "1791020000.000100",
+          "message_ts": "1791020180.000400",
+          "speaker": "Nina Patel",
+          "speaker_role": "Head of Growth",
+          "quote": "Final decision: move Team pricing to $59 for new customers starting 2026-09-01, grandfather existing Team customers for 4 months, and review churn after the first renewal cycle.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "go-to-market",
+          "channel_id": "C_GTM",
+          "thread_ts": "1791020000.000100",
+          "message_ts": "1791020000.000100",
+          "speaker": "Nina Patel",
+          "speaker_role": "Head of Growth",
+          "quote": "Proposal: move the Team plan from $49 to $59 next month. Expansion revenue is strong, but onboarding time per Team account is higher than we modeled.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "go-to-market",
+          "channel_id": "C_GTM",
+          "thread_ts": "1791020000.000100",
+          "message_ts": "1791020060.000200",
+          "speaker": "Marco Silva",
+          "speaker_role": "Finance Lead",
+          "quote": "I support the increase. At $49, Team gross margin is below target once implementation support is included. The tradeoff is we may lose some very small teams.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "go-to-market",
+          "channel_id": "C_GTM",
+          "thread_ts": "1791020000.000100",
+          "message_ts": "1791020120.000300",
+          "speaker": "Aisha Rahman",
+          "speaker_role": "Customer Success Manager",
+          "quote": "I'm worried about surprising current Team customers. Assuming we grandfather existing Team customers for 4 months, CS can handle the messaging.",
+          "url": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "input_file": "data/original_fake.json",
+  "mode": "llm",
+  "pipeline": "candidates-shadow",
+  "classification": "unknown",
+  "generated_at": "2026-06-30T17:35:39.807948+00:00",
+  "meeting_date": null,
+  "location": null,
+  "present": [],
+  "absent": [],
+  "source_event_count": 10
+}

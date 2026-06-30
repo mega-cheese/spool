@@ -1,0 +1,2484 @@
+[
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_1",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-1",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "Document"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "August 26th, 2025\n\n    1.   Registration Updates- Master Reg. Doc Here.\n             a.   VYMUN- UBC: 76 external delegates\n                     i.    100 spots left for UBC (not incl staﬀ)\n                    ii.    Poster with QR code for Display Wall\n\n             b.   VYMUN Junior: 39"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-1",
+      "quote": "August 26th, 2025\n\n    1.   Registration Updates- Master Reg. Doc Here.\n             a.   VYMUN- UBC: 76 external delegates\n                     i.    100 spots left for UBC (not incl staﬀ)\n                    ii.    Poster with QR code for Display Wall\n\n             b.   VYMUN Junior: 39",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "Document",
+      "page": 1
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "Document",
+        "text": "August 26th, 2025\n\n    1.   Registration Updates- Master Reg. Doc Here.\n             a.   VYMUN- UBC: 76 external delegates\n                     i.    100 spots left for UBC (not incl staﬀ)\n                    ii.    Poster with QR code for Display Wall\n\n             b.   VYMUN Junior: 39",
+        "lines": [
+          {
+            "text": "August 26th, 2025",
+            "indent": 0,
+            "bullet_marker": null,
+            "body": "August 26th, 2025",
+            "checkbox": false
+          },
+          {
+            "text": "1.   Registration Updates- Master Reg. Doc Here.",
+            "indent": 4,
+            "bullet_marker": "1.",
+            "body": "Registration Updates- Master Reg. Doc Here.",
+            "checkbox": false
+          },
+          {
+            "text": "a.   VYMUN- UBC: 76 external delegates",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "VYMUN- UBC: 76 external delegates",
+            "checkbox": false
+          },
+          {
+            "text": "i.    100 spots left for UBC (not incl staﬀ)",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "100 spots left for UBC (not incl staﬀ)",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    Poster with QR code for Display Wall",
+            "indent": 20,
+            "bullet_marker": "ii.",
+            "body": "Poster with QR code for Display Wall",
+            "checkbox": false
+          },
+          {
+            "text": "b.   VYMUN Junior: 39",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "VYMUN Junior: 39",
+            "checkbox": false
+          }
+        ],
+        "page": 1
+      },
+      "lines": [
+        {
+          "text": "August 26th, 2025",
+          "indent": 0,
+          "bullet_marker": null,
+          "body": "August 26th, 2025",
+          "checkbox": false
+        },
+        {
+          "text": "1.   Registration Updates- Master Reg. Doc Here.",
+          "indent": 4,
+          "bullet_marker": "1.",
+          "body": "Registration Updates- Master Reg. Doc Here.",
+          "checkbox": false
+        },
+        {
+          "text": "a.   VYMUN- UBC: 76 external delegates",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "VYMUN- UBC: 76 external delegates",
+          "checkbox": false
+        },
+        {
+          "text": "i.    100 spots left for UBC (not incl staﬀ)",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "100 spots left for UBC (not incl staﬀ)",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    Poster with QR code for Display Wall",
+          "indent": 20,
+          "bullet_marker": "ii.",
+          "body": "Poster with QR code for Display Wall",
+          "checkbox": false
+        },
+        {
+          "text": "b.   VYMUN Junior: 39",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "VYMUN Junior: 39",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_2",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-2",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "2.   Registration plans for return to school"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "a.   VYMUN Reg Action Plan for WPGA delegates?\n                     i.    Article in The Howl? (Ms. Macmillan) - Sheree\n                    ii.    Instagram - Frankie (Also on student life)\n                    iii.   Last year - 40 WPGA (So 60-65 left for other schools)"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-2",
+      "quote": "a.   VYMUN Reg Action Plan for WPGA delegates?\n                     i.    Article in The Howl? (Ms. Macmillan) - Sheree\n                    ii.    Instagram - Frankie (Also on student life)\n                    iii.   Last year - 40 WPGA (So 60-65 left for other schools)",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "2.   Registration plans for return to school",
+      "page": 1
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "2.   Registration plans for return to school",
+        "text": "a.   VYMUN Reg Action Plan for WPGA delegates?\n                     i.    Article in The Howl? (Ms. Macmillan) - Sheree\n                    ii.    Instagram - Frankie (Also on student life)\n                    iii.   Last year - 40 WPGA (So 60-65 left for other schools)",
+        "lines": [
+          {
+            "text": "a.   VYMUN Reg Action Plan for WPGA delegates?",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "VYMUN Reg Action Plan for WPGA delegates?",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Article in The Howl? (Ms. Macmillan) - Sheree",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Article in The Howl? (Ms. Macmillan) - Sheree",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    Instagram - Frankie (Also on student life)",
+            "indent": 20,
+            "bullet_marker": "ii.",
+            "body": "Instagram - Frankie (Also on student life)",
+            "checkbox": false
+          },
+          {
+            "text": "iii.   Last year - 40 WPGA (So 60-65 left for other schools)",
+            "indent": 20,
+            "bullet_marker": "iii.",
+            "body": "Last year - 40 WPGA (So 60-65 left for other schools)",
+            "checkbox": false
+          }
+        ],
+        "page": 1
+      },
+      "lines": [
+        {
+          "text": "a.   VYMUN Reg Action Plan for WPGA delegates?",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "VYMUN Reg Action Plan for WPGA delegates?",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Article in The Howl? (Ms. Macmillan) - Sheree",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Article in The Howl? (Ms. Macmillan) - Sheree",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    Instagram - Frankie (Also on student life)",
+          "indent": 20,
+          "bullet_marker": "ii.",
+          "body": "Instagram - Frankie (Also on student life)",
+          "checkbox": false
+        },
+        {
+          "text": "iii.   Last year - 40 WPGA (So 60-65 left for other schools)",
+          "indent": 20,
+          "bullet_marker": "iii.",
+          "body": "Last year - 40 WPGA (So 60-65 left for other schools)",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_3",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-3",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "3.   VYMUN Junior Training & Connections"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "a.   Reminder: We sent this welcome back letter in June\n             b.   Plan for training & support leading up to the conference?\n             c.   Update 2024 September/October letter- send when backgrounders and\n                  assignments are done.\n             d.   Contact Mr. Lee to begin asking for chaperone support. - reach out to Ms. A.\n                  Shaw as a possible chaperone\n                     i.    Elliott\n             e.   Sessions with registered Junior School delegates to prep them\n                     i.    Also evening sessions to work on topic paragraphs\n                    ii.    Parents could come in\n                    iii.   Evangeline plan 2 in-person, 2 online sessions\n                    iv.    Talk to JS staﬀ"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-3",
+      "quote": "a.   Reminder: We sent this welcome back letter in June\n             b.   Plan for training & support leading up to the conference?\n             c.   Update 2024 September/October letter- send when backgrounders and\n                  assignments are done.\n             d.   Contact Mr. Lee to begin asking for chaperone support. - reach out to Ms. A.\n                  Shaw as a possible chaperone\n                     i.    Elliott\n             e.   Sessions with registered Junior School delegates to prep them\n                     i.    Also evening sessions to work on topic paragraphs\n                    ii.    Parents could come in\n                    iii.   Evangeline plan 2 in-person, 2 online sessions\n                    iv.    Talk to JS staﬀ",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "3.   VYMUN Junior Training & Connections",
+      "page": 1
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "3.   VYMUN Junior Training & Connections",
+        "text": "a.   Reminder: We sent this welcome back letter in June\n             b.   Plan for training & support leading up to the conference?\n             c.   Update 2024 September/October letter- send when backgrounders and\n                  assignments are done.\n             d.   Contact Mr. Lee to begin asking for chaperone support. - reach out to Ms. A.\n                  Shaw as a possible chaperone\n                     i.    Elliott\n             e.   Sessions with registered Junior School delegates to prep them\n                     i.    Also evening sessions to work on topic paragraphs\n                    ii.    Parents could come in\n                    iii.   Evangeline plan 2 in-person, 2 online sessions\n                    iv.    Talk to JS staﬀ",
+        "lines": [
+          {
+            "text": "a.   Reminder: We sent this welcome back letter in June",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Reminder: We sent this welcome back letter in June",
+            "checkbox": false
+          },
+          {
+            "text": "b.   Plan for training & support leading up to the conference?",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "Plan for training & support leading up to the conference?",
+            "checkbox": false
+          },
+          {
+            "text": "c.   Update 2024 September/October letter- send when backgrounders and",
+            "indent": 13,
+            "bullet_marker": "c.",
+            "body": "Update 2024 September/October letter- send when backgrounders and",
+            "checkbox": false
+          },
+          {
+            "text": "assignments are done.",
+            "indent": 18,
+            "bullet_marker": null,
+            "body": "assignments are done.",
+            "checkbox": false
+          },
+          {
+            "text": "d.   Contact Mr. Lee to begin asking for chaperone support. - reach out to Ms. A.",
+            "indent": 13,
+            "bullet_marker": "d.",
+            "body": "Contact Mr. Lee to begin asking for chaperone support. - reach out to Ms. A.",
+            "checkbox": false
+          },
+          {
+            "text": "Shaw as a possible chaperone",
+            "indent": 18,
+            "bullet_marker": null,
+            "body": "Shaw as a possible chaperone",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Elliott",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Elliott",
+            "checkbox": false
+          },
+          {
+            "text": "e.   Sessions with registered Junior School delegates to prep them",
+            "indent": 13,
+            "bullet_marker": "e.",
+            "body": "Sessions with registered Junior School delegates to prep them",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Also evening sessions to work on topic paragraphs",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Also evening sessions to work on topic paragraphs",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    Parents could come in",
+            "indent": 20,
+            "bullet_marker": "ii.",
+            "body": "Parents could come in",
+            "checkbox": false
+          },
+          {
+            "text": "iii.   Evangeline plan 2 in-person, 2 online sessions",
+            "indent": 20,
+            "bullet_marker": "iii.",
+            "body": "Evangeline plan 2 in-person, 2 online sessions",
+            "checkbox": false
+          },
+          {
+            "text": "iv.    Talk to JS staﬀ",
+            "indent": 20,
+            "bullet_marker": "iv.",
+            "body": "Talk to JS staﬀ",
+            "checkbox": false
+          }
+        ],
+        "page": 1
+      },
+      "lines": [
+        {
+          "text": "a.   Reminder: We sent this welcome back letter in June",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Reminder: We sent this welcome back letter in June",
+          "checkbox": false
+        },
+        {
+          "text": "b.   Plan for training & support leading up to the conference?",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "Plan for training & support leading up to the conference?",
+          "checkbox": false
+        },
+        {
+          "text": "c.   Update 2024 September/October letter- send when backgrounders and",
+          "indent": 13,
+          "bullet_marker": "c.",
+          "body": "Update 2024 September/October letter- send when backgrounders and",
+          "checkbox": false
+        },
+        {
+          "text": "assignments are done.",
+          "indent": 18,
+          "bullet_marker": null,
+          "body": "assignments are done.",
+          "checkbox": false
+        },
+        {
+          "text": "d.   Contact Mr. Lee to begin asking for chaperone support. - reach out to Ms. A.",
+          "indent": 13,
+          "bullet_marker": "d.",
+          "body": "Contact Mr. Lee to begin asking for chaperone support. - reach out to Ms. A.",
+          "checkbox": false
+        },
+        {
+          "text": "Shaw as a possible chaperone",
+          "indent": 18,
+          "bullet_marker": null,
+          "body": "Shaw as a possible chaperone",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Elliott",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Elliott",
+          "checkbox": false
+        },
+        {
+          "text": "e.   Sessions with registered Junior School delegates to prep them",
+          "indent": 13,
+          "bullet_marker": "e.",
+          "body": "Sessions with registered Junior School delegates to prep them",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Also evening sessions to work on topic paragraphs",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Also evening sessions to work on topic paragraphs",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    Parents could come in",
+          "indent": 20,
+          "bullet_marker": "ii.",
+          "body": "Parents could come in",
+          "checkbox": false
+        },
+        {
+          "text": "iii.   Evangeline plan 2 in-person, 2 online sessions",
+          "indent": 20,
+          "bullet_marker": "iii.",
+          "body": "Evangeline plan 2 in-person, 2 online sessions",
+          "checkbox": false
+        },
+        {
+          "text": "iv.    Talk to JS staﬀ",
+          "indent": 20,
+          "bullet_marker": "iv.",
+          "body": "Talk to JS staﬀ",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_4",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-4",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "4.   Background guides updates (James)"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "a.   Master sheet tracking each committee’s progress?\n             b.   Some people are behind (4-5)\n                     i.    UNSC, FIFA and FCC (both guides incomplete)\n                    ii.    HOC, UNHRC (one guide incomplete)\n                    iii.   Email them about status with Mrs Boland included (tomorrow?)\n             c.   Otherwise on schedule\n             d.   Post online start of september\n                     i.    Don’t have to be at once\n             e.   Junior backgrounders will be done by this week most likely\n                     i.    Hugo to send them to the teachers for review before publishing on\n                           the website\n    5.   Staﬀ training?\n             a.   What dates & spaces need to be booked?\n             b.   Plan around school activities to maximize attendance\n             c.   Send out dates ahead of time to reduce conﬂicts\n             d.   Mention pizza"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-4",
+      "quote": "a.   Master sheet tracking each committee’s progress?\n             b.   Some people are behind (4-5)\n                     i.    UNSC, FIFA and FCC (both guides incomplete)\n                    ii.    HOC, UNHRC (one guide incomplete)\n                    iii.   Email them about status with Mrs Boland included (tomorrow?)\n             c.   Otherwise on schedule\n             d.   Post online start of september\n                     i.    Don’t have to be at once\n             e.   Junior backgrounders will be done by this week most likely\n                     i.    Hugo to send them to the teachers for review before publishing on\n                           the website\n    5.   Staﬀ training?\n             a.   What dates & spaces need to be booked?\n             b.   Plan around school activities to maximize attendance\n             c.   Send out dates ahead of time to reduce conﬂicts\n             d.   Mention pizza",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "4.   Background guides updates (James)",
+      "page": 1
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "4.   Background guides updates (James)",
+        "text": "a.   Master sheet tracking each committee’s progress?\n             b.   Some people are behind (4-5)\n                     i.    UNSC, FIFA and FCC (both guides incomplete)\n                    ii.    HOC, UNHRC (one guide incomplete)\n                    iii.   Email them about status with Mrs Boland included (tomorrow?)\n             c.   Otherwise on schedule\n             d.   Post online start of september\n                     i.    Don’t have to be at once\n             e.   Junior backgrounders will be done by this week most likely\n                     i.    Hugo to send them to the teachers for review before publishing on\n                           the website\n    5.   Staﬀ training?\n             a.   What dates & spaces need to be booked?\n             b.   Plan around school activities to maximize attendance\n             c.   Send out dates ahead of time to reduce conﬂicts\n             d.   Mention pizza",
+        "lines": [
+          {
+            "text": "a.   Master sheet tracking each committee’s progress?",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Master sheet tracking each committee’s progress?",
+            "checkbox": false
+          },
+          {
+            "text": "b.   Some people are behind (4-5)",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "Some people are behind (4-5)",
+            "checkbox": false
+          },
+          {
+            "text": "i.    UNSC, FIFA and FCC (both guides incomplete)",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "UNSC, FIFA and FCC (both guides incomplete)",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    HOC, UNHRC (one guide incomplete)",
+            "indent": 20,
+            "bullet_marker": "ii.",
+            "body": "HOC, UNHRC (one guide incomplete)",
+            "checkbox": false
+          },
+          {
+            "text": "iii.   Email them about status with Mrs Boland included (tomorrow?)",
+            "indent": 20,
+            "bullet_marker": "iii.",
+            "body": "Email them about status with Mrs Boland included (tomorrow?)",
+            "checkbox": false
+          },
+          {
+            "text": "c.   Otherwise on schedule",
+            "indent": 13,
+            "bullet_marker": "c.",
+            "body": "Otherwise on schedule",
+            "checkbox": false
+          },
+          {
+            "text": "d.   Post online start of september",
+            "indent": 13,
+            "bullet_marker": "d.",
+            "body": "Post online start of september",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Don’t have to be at once",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Don’t have to be at once",
+            "checkbox": false
+          },
+          {
+            "text": "e.   Junior backgrounders will be done by this week most likely",
+            "indent": 13,
+            "bullet_marker": "e.",
+            "body": "Junior backgrounders will be done by this week most likely",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Hugo to send them to the teachers for review before publishing on",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Hugo to send them to the teachers for review before publishing on",
+            "checkbox": false
+          },
+          {
+            "text": "the website",
+            "indent": 27,
+            "bullet_marker": null,
+            "body": "the website",
+            "checkbox": false
+          },
+          {
+            "text": "5.   Staﬀ training?",
+            "indent": 4,
+            "bullet_marker": "5.",
+            "body": "Staﬀ training?",
+            "checkbox": false
+          },
+          {
+            "text": "a.   What dates & spaces need to be booked?",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "What dates & spaces need to be booked?",
+            "checkbox": false
+          },
+          {
+            "text": "b.   Plan around school activities to maximize attendance",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "Plan around school activities to maximize attendance",
+            "checkbox": false
+          },
+          {
+            "text": "c.   Send out dates ahead of time to reduce conﬂicts",
+            "indent": 13,
+            "bullet_marker": "c.",
+            "body": "Send out dates ahead of time to reduce conﬂicts",
+            "checkbox": false
+          },
+          {
+            "text": "d.   Mention pizza",
+            "indent": 13,
+            "bullet_marker": "d.",
+            "body": "Mention pizza",
+            "checkbox": false
+          }
+        ],
+        "page": 1
+      },
+      "lines": [
+        {
+          "text": "a.   Master sheet tracking each committee’s progress?",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Master sheet tracking each committee’s progress?",
+          "checkbox": false
+        },
+        {
+          "text": "b.   Some people are behind (4-5)",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "Some people are behind (4-5)",
+          "checkbox": false
+        },
+        {
+          "text": "i.    UNSC, FIFA and FCC (both guides incomplete)",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "UNSC, FIFA and FCC (both guides incomplete)",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    HOC, UNHRC (one guide incomplete)",
+          "indent": 20,
+          "bullet_marker": "ii.",
+          "body": "HOC, UNHRC (one guide incomplete)",
+          "checkbox": false
+        },
+        {
+          "text": "iii.   Email them about status with Mrs Boland included (tomorrow?)",
+          "indent": 20,
+          "bullet_marker": "iii.",
+          "body": "Email them about status with Mrs Boland included (tomorrow?)",
+          "checkbox": false
+        },
+        {
+          "text": "c.   Otherwise on schedule",
+          "indent": 13,
+          "bullet_marker": "c.",
+          "body": "Otherwise on schedule",
+          "checkbox": false
+        },
+        {
+          "text": "d.   Post online start of september",
+          "indent": 13,
+          "bullet_marker": "d.",
+          "body": "Post online start of september",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Don’t have to be at once",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Don’t have to be at once",
+          "checkbox": false
+        },
+        {
+          "text": "e.   Junior backgrounders will be done by this week most likely",
+          "indent": 13,
+          "bullet_marker": "e.",
+          "body": "Junior backgrounders will be done by this week most likely",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Hugo to send them to the teachers for review before publishing on",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Hugo to send them to the teachers for review before publishing on",
+          "checkbox": false
+        },
+        {
+          "text": "the website",
+          "indent": 27,
+          "bullet_marker": null,
+          "body": "the website",
+          "checkbox": false
+        },
+        {
+          "text": "5.   Staﬀ training?",
+          "indent": 4,
+          "bullet_marker": "5.",
+          "body": "Staﬀ training?",
+          "checkbox": false
+        },
+        {
+          "text": "a.   What dates & spaces need to be booked?",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "What dates & spaces need to be booked?",
+          "checkbox": false
+        },
+        {
+          "text": "b.   Plan around school activities to maximize attendance",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "Plan around school activities to maximize attendance",
+          "checkbox": false
+        },
+        {
+          "text": "c.   Send out dates ahead of time to reduce conﬂicts",
+          "indent": 13,
+          "bullet_marker": "c.",
+          "body": "Send out dates ahead of time to reduce conﬂicts",
+          "checkbox": false
+        },
+        {
+          "text": "d.   Mention pizza",
+          "indent": 13,
+          "bullet_marker": "d.",
+          "body": "Mention pizza",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_5",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-5",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "6.  Ordering materials (Elliott)"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "a.  Logo redesign? Mrs. Haider contacted graphic designer at WPGA for help.\n                i.    Owen did a count at the end of the year last year\n                ii.   Include laminated schedules (one per ﬂoor?)\n                           1.  Get extra popsicle stands from alumni centre\n         b.  What do we already have?"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-5",
+      "quote": "a.  Logo redesign? Mrs. Haider contacted graphic designer at WPGA for help.\n                i.    Owen did a count at the end of the year last year\n                ii.   Include laminated schedules (one per ﬂoor?)\n                           1.  Get extra popsicle stands from alumni centre\n         b.  What do we already have?",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "6.  Ordering materials (Elliott)",
+      "page": 2
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "6.  Ordering materials (Elliott)",
+        "text": "a.  Logo redesign? Mrs. Haider contacted graphic designer at WPGA for help.\n                i.    Owen did a count at the end of the year last year\n                ii.   Include laminated schedules (one per ﬂoor?)\n                           1.  Get extra popsicle stands from alumni centre\n         b.  What do we already have?",
+        "lines": [
+          {
+            "text": "a.  Logo redesign? Mrs. Haider contacted graphic designer at WPGA for help.",
+            "indent": 9,
+            "bullet_marker": "a.",
+            "body": "Logo redesign? Mrs. Haider contacted graphic designer at WPGA for help.",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Owen did a count at the end of the year last year",
+            "indent": 16,
+            "bullet_marker": "i.",
+            "body": "Owen did a count at the end of the year last year",
+            "checkbox": false
+          },
+          {
+            "text": "ii.   Include laminated schedules (one per ﬂoor?)",
+            "indent": 16,
+            "bullet_marker": "ii.",
+            "body": "Include laminated schedules (one per ﬂoor?)",
+            "checkbox": false
+          },
+          {
+            "text": "1.  Get extra popsicle stands from alumni centre",
+            "indent": 27,
+            "bullet_marker": "1.",
+            "body": "Get extra popsicle stands from alumni centre",
+            "checkbox": false
+          },
+          {
+            "text": "b.  What do we already have?",
+            "indent": 9,
+            "bullet_marker": "b.",
+            "body": "What do we already have?",
+            "checkbox": false
+          }
+        ],
+        "page": 2
+      },
+      "lines": [
+        {
+          "text": "a.  Logo redesign? Mrs. Haider contacted graphic designer at WPGA for help.",
+          "indent": 9,
+          "bullet_marker": "a.",
+          "body": "Logo redesign? Mrs. Haider contacted graphic designer at WPGA for help.",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Owen did a count at the end of the year last year",
+          "indent": 16,
+          "bullet_marker": "i.",
+          "body": "Owen did a count at the end of the year last year",
+          "checkbox": false
+        },
+        {
+          "text": "ii.   Include laminated schedules (one per ﬂoor?)",
+          "indent": 16,
+          "bullet_marker": "ii.",
+          "body": "Include laminated schedules (one per ﬂoor?)",
+          "checkbox": false
+        },
+        {
+          "text": "1.  Get extra popsicle stands from alumni centre",
+          "indent": 27,
+          "bullet_marker": "1.",
+          "body": "Get extra popsicle stands from alumni centre",
+          "checkbox": false
+        },
+        {
+          "text": "b.  What do we already have?",
+          "indent": 9,
+          "bullet_marker": "b.",
+          "body": "What do we already have?",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_6",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-6",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "7.  Delegate social catering (Elliott)"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "a.  Elliott to ﬁnalize w/ caterers\n         b.  Potentially get decorations according to the theme?\n         c.  Kahoot last year went ok\n                i.    20th anniversary themed one\n                ii.   Prizes for top 3"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-6",
+      "quote": "a.  Elliott to ﬁnalize w/ caterers\n         b.  Potentially get decorations according to the theme?\n         c.  Kahoot last year went ok\n                i.    20th anniversary themed one\n                ii.   Prizes for top 3",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "7.  Delegate social catering (Elliott)",
+      "page": 2
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "7.  Delegate social catering (Elliott)",
+        "text": "a.  Elliott to ﬁnalize w/ caterers\n         b.  Potentially get decorations according to the theme?\n         c.  Kahoot last year went ok\n                i.    20th anniversary themed one\n                ii.   Prizes for top 3",
+        "lines": [
+          {
+            "text": "a.  Elliott to ﬁnalize w/ caterers",
+            "indent": 9,
+            "bullet_marker": "a.",
+            "body": "Elliott to ﬁnalize w/ caterers",
+            "checkbox": false
+          },
+          {
+            "text": "b.  Potentially get decorations according to the theme?",
+            "indent": 9,
+            "bullet_marker": "b.",
+            "body": "Potentially get decorations according to the theme?",
+            "checkbox": false
+          },
+          {
+            "text": "c.  Kahoot last year went ok",
+            "indent": 9,
+            "bullet_marker": "c.",
+            "body": "Kahoot last year went ok",
+            "checkbox": false
+          },
+          {
+            "text": "i.    20th anniversary themed one",
+            "indent": 16,
+            "bullet_marker": "i.",
+            "body": "20th anniversary themed one",
+            "checkbox": false
+          },
+          {
+            "text": "ii.   Prizes for top 3",
+            "indent": 16,
+            "bullet_marker": "ii.",
+            "body": "Prizes for top 3",
+            "checkbox": false
+          }
+        ],
+        "page": 2
+      },
+      "lines": [
+        {
+          "text": "a.  Elliott to ﬁnalize w/ caterers",
+          "indent": 9,
+          "bullet_marker": "a.",
+          "body": "Elliott to ﬁnalize w/ caterers",
+          "checkbox": false
+        },
+        {
+          "text": "b.  Potentially get decorations according to the theme?",
+          "indent": 9,
+          "bullet_marker": "b.",
+          "body": "Potentially get decorations according to the theme?",
+          "checkbox": false
+        },
+        {
+          "text": "c.  Kahoot last year went ok",
+          "indent": 9,
+          "bullet_marker": "c.",
+          "body": "Kahoot last year went ok",
+          "checkbox": false
+        },
+        {
+          "text": "i.    20th anniversary themed one",
+          "indent": 16,
+          "bullet_marker": "i.",
+          "body": "20th anniversary themed one",
+          "checkbox": false
+        },
+        {
+          "text": "ii.   Prizes for top 3",
+          "indent": 16,
+          "bullet_marker": "ii.",
+          "body": "Prizes for top 3",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_7",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-7",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "8.  Awards need to be ordered (Elliott)"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "a.  Special awards for 20th anniversary\n         b.  Attempting to avoid gavel hunters\n         c.  Be inclusive with who we name awards after\n         d.  Lester B Pearson for peacemaker award\n                i.    Can be Canada heavy\n         e.  Position paper for John Humphrey\n         f.  Tracy Lee award for ﬁrst time delegate\n                i.    Founder of debate and MUN at WPGA (created VYMUN)\n         g.  No saying the awards don’t deﬁne us etc\n         h.  No inside jokes in director speeches\n         i.  Award for speech contest - Sheree to decide what’s best\n                i.    Maybe something more useful"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-7",
+      "quote": "a.  Special awards for 20th anniversary\n         b.  Attempting to avoid gavel hunters\n         c.  Be inclusive with who we name awards after\n         d.  Lester B Pearson for peacemaker award\n                i.    Can be Canada heavy\n         e.  Position paper for John Humphrey\n         f.  Tracy Lee award for ﬁrst time delegate\n                i.    Founder of debate and MUN at WPGA (created VYMUN)\n         g.  No saying the awards don’t deﬁne us etc\n         h.  No inside jokes in director speeches\n         i.  Award for speech contest - Sheree to decide what’s best\n                i.    Maybe something more useful",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "8.  Awards need to be ordered (Elliott)",
+      "page": 2
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "8.  Awards need to be ordered (Elliott)",
+        "text": "a.  Special awards for 20th anniversary\n         b.  Attempting to avoid gavel hunters\n         c.  Be inclusive with who we name awards after\n         d.  Lester B Pearson for peacemaker award\n                i.    Can be Canada heavy\n         e.  Position paper for John Humphrey\n         f.  Tracy Lee award for ﬁrst time delegate\n                i.    Founder of debate and MUN at WPGA (created VYMUN)\n         g.  No saying the awards don’t deﬁne us etc\n         h.  No inside jokes in director speeches\n         i.  Award for speech contest - Sheree to decide what’s best\n                i.    Maybe something more useful",
+        "lines": [
+          {
+            "text": "a.  Special awards for 20th anniversary",
+            "indent": 9,
+            "bullet_marker": "a.",
+            "body": "Special awards for 20th anniversary",
+            "checkbox": false
+          },
+          {
+            "text": "b.  Attempting to avoid gavel hunters",
+            "indent": 9,
+            "bullet_marker": "b.",
+            "body": "Attempting to avoid gavel hunters",
+            "checkbox": false
+          },
+          {
+            "text": "c.  Be inclusive with who we name awards after",
+            "indent": 9,
+            "bullet_marker": "c.",
+            "body": "Be inclusive with who we name awards after",
+            "checkbox": false
+          },
+          {
+            "text": "d.  Lester B Pearson for peacemaker award",
+            "indent": 9,
+            "bullet_marker": "d.",
+            "body": "Lester B Pearson for peacemaker award",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Can be Canada heavy",
+            "indent": 16,
+            "bullet_marker": "i.",
+            "body": "Can be Canada heavy",
+            "checkbox": false
+          },
+          {
+            "text": "e.  Position paper for John Humphrey",
+            "indent": 9,
+            "bullet_marker": "e.",
+            "body": "Position paper for John Humphrey",
+            "checkbox": false
+          },
+          {
+            "text": "f.  Tracy Lee award for ﬁrst time delegate",
+            "indent": 9,
+            "bullet_marker": "f.",
+            "body": "Tracy Lee award for ﬁrst time delegate",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Founder of debate and MUN at WPGA (created VYMUN)",
+            "indent": 16,
+            "bullet_marker": "i.",
+            "body": "Founder of debate and MUN at WPGA (created VYMUN)",
+            "checkbox": false
+          },
+          {
+            "text": "g.  No saying the awards don’t deﬁne us etc",
+            "indent": 9,
+            "bullet_marker": "g.",
+            "body": "No saying the awards don’t deﬁne us etc",
+            "checkbox": false
+          },
+          {
+            "text": "h.  No inside jokes in director speeches",
+            "indent": 9,
+            "bullet_marker": "h.",
+            "body": "No inside jokes in director speeches",
+            "checkbox": false
+          },
+          {
+            "text": "i.  Award for speech contest - Sheree to decide what’s best",
+            "indent": 9,
+            "bullet_marker": "i.",
+            "body": "Award for speech contest - Sheree to decide what’s best",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Maybe something more useful",
+            "indent": 16,
+            "bullet_marker": "i.",
+            "body": "Maybe something more useful",
+            "checkbox": false
+          }
+        ],
+        "page": 2
+      },
+      "lines": [
+        {
+          "text": "a.  Special awards for 20th anniversary",
+          "indent": 9,
+          "bullet_marker": "a.",
+          "body": "Special awards for 20th anniversary",
+          "checkbox": false
+        },
+        {
+          "text": "b.  Attempting to avoid gavel hunters",
+          "indent": 9,
+          "bullet_marker": "b.",
+          "body": "Attempting to avoid gavel hunters",
+          "checkbox": false
+        },
+        {
+          "text": "c.  Be inclusive with who we name awards after",
+          "indent": 9,
+          "bullet_marker": "c.",
+          "body": "Be inclusive with who we name awards after",
+          "checkbox": false
+        },
+        {
+          "text": "d.  Lester B Pearson for peacemaker award",
+          "indent": 9,
+          "bullet_marker": "d.",
+          "body": "Lester B Pearson for peacemaker award",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Can be Canada heavy",
+          "indent": 16,
+          "bullet_marker": "i.",
+          "body": "Can be Canada heavy",
+          "checkbox": false
+        },
+        {
+          "text": "e.  Position paper for John Humphrey",
+          "indent": 9,
+          "bullet_marker": "e.",
+          "body": "Position paper for John Humphrey",
+          "checkbox": false
+        },
+        {
+          "text": "f.  Tracy Lee award for ﬁrst time delegate",
+          "indent": 9,
+          "bullet_marker": "f.",
+          "body": "Tracy Lee award for ﬁrst time delegate",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Founder of debate and MUN at WPGA (created VYMUN)",
+          "indent": 16,
+          "bullet_marker": "i.",
+          "body": "Founder of debate and MUN at WPGA (created VYMUN)",
+          "checkbox": false
+        },
+        {
+          "text": "g.  No saying the awards don’t deﬁne us etc",
+          "indent": 9,
+          "bullet_marker": "g.",
+          "body": "No saying the awards don’t deﬁne us etc",
+          "checkbox": false
+        },
+        {
+          "text": "h.  No inside jokes in director speeches",
+          "indent": 9,
+          "bullet_marker": "h.",
+          "body": "No inside jokes in director speeches",
+          "checkbox": false
+        },
+        {
+          "text": "i.  Award for speech contest - Sheree to decide what’s best",
+          "indent": 9,
+          "bullet_marker": "i.",
+          "body": "Award for speech contest - Sheree to decide what’s best",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Maybe something more useful",
+          "indent": 16,
+          "bullet_marker": "i.",
+          "body": "Maybe something more useful",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_8",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-8",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "9.  Keynote speaker updates (Frankie)"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "a.  Have one of our students do a welcome, not land acknowledgement\n                i.    Alumni?\n         b.  Special guest invitations: Tracey Lee (founder of VYMUN), Sean Husband\n             (ﬁrst VYMUN Sec Gen; seanhusband@gmail.com)\n         c.  Frankie to follow up with the Major\n         d.  Susan Point print - See Mr. Anthony"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-8",
+      "quote": "a.  Have one of our students do a welcome, not land acknowledgement\n                i.    Alumni?\n         b.  Special guest invitations: Tracey Lee (founder of VYMUN), Sean Husband\n             (ﬁrst VYMUN Sec Gen; seanhusband@gmail.com)\n         c.  Frankie to follow up with the Major\n         d.  Susan Point print - See Mr. Anthony",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "9.  Keynote speaker updates (Frankie)",
+      "page": 2
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "9.  Keynote speaker updates (Frankie)",
+        "text": "a.  Have one of our students do a welcome, not land acknowledgement\n                i.    Alumni?\n         b.  Special guest invitations: Tracey Lee (founder of VYMUN), Sean Husband\n             (ﬁrst VYMUN Sec Gen; seanhusband@gmail.com)\n         c.  Frankie to follow up with the Major\n         d.  Susan Point print - See Mr. Anthony",
+        "lines": [
+          {
+            "text": "a.  Have one of our students do a welcome, not land acknowledgement",
+            "indent": 9,
+            "bullet_marker": "a.",
+            "body": "Have one of our students do a welcome, not land acknowledgement",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Alumni?",
+            "indent": 16,
+            "bullet_marker": "i.",
+            "body": "Alumni?",
+            "checkbox": false
+          },
+          {
+            "text": "b.  Special guest invitations: Tracey Lee (founder of VYMUN), Sean Husband",
+            "indent": 9,
+            "bullet_marker": "b.",
+            "body": "Special guest invitations: Tracey Lee (founder of VYMUN), Sean Husband",
+            "checkbox": false
+          },
+          {
+            "text": "(ﬁrst VYMUN Sec Gen; seanhusband@gmail.com)",
+            "indent": 13,
+            "bullet_marker": null,
+            "body": "(ﬁrst VYMUN Sec Gen; seanhusband@gmail.com)",
+            "checkbox": false
+          },
+          {
+            "text": "c.  Frankie to follow up with the Major",
+            "indent": 9,
+            "bullet_marker": "c.",
+            "body": "Frankie to follow up with the Major",
+            "checkbox": false
+          },
+          {
+            "text": "d.  Susan Point print - See Mr. Anthony",
+            "indent": 9,
+            "bullet_marker": "d.",
+            "body": "Susan Point print - See Mr. Anthony",
+            "checkbox": false
+          }
+        ],
+        "page": 2
+      },
+      "lines": [
+        {
+          "text": "a.  Have one of our students do a welcome, not land acknowledgement",
+          "indent": 9,
+          "bullet_marker": "a.",
+          "body": "Have one of our students do a welcome, not land acknowledgement",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Alumni?",
+          "indent": 16,
+          "bullet_marker": "i.",
+          "body": "Alumni?",
+          "checkbox": false
+        },
+        {
+          "text": "b.  Special guest invitations: Tracey Lee (founder of VYMUN), Sean Husband",
+          "indent": 9,
+          "bullet_marker": "b.",
+          "body": "Special guest invitations: Tracey Lee (founder of VYMUN), Sean Husband",
+          "checkbox": false
+        },
+        {
+          "text": "(ﬁrst VYMUN Sec Gen; seanhusband@gmail.com)",
+          "indent": 13,
+          "bullet_marker": null,
+          "body": "(ﬁrst VYMUN Sec Gen; seanhusband@gmail.com)",
+          "checkbox": false
+        },
+        {
+          "text": "c.  Frankie to follow up with the Major",
+          "indent": 9,
+          "bullet_marker": "c.",
+          "body": "Frankie to follow up with the Major",
+          "checkbox": false
+        },
+        {
+          "text": "d.  Susan Point print - See Mr. Anthony",
+          "indent": 9,
+          "bullet_marker": "d.",
+          "body": "Susan Point print - See Mr. Anthony",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_9",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-9",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "10. Hotels (Owen)"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "a.  Any updates on schools\n                i.    Reached out but summer meant no replies\n                ii.   Hard to ﬁnd contacts in schools (Owen’s stalking)\n               iii.   St John’s Raven Court school sounded keen in the spring\n                           1.  Work out diﬀ ﬁnancial arrangement\n                           2.  Follow up (Owen and Frankie)\n         b.  Contacts in Kelowna? Vancouver Island?"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-9",
+      "quote": "a.  Any updates on schools\n                i.    Reached out but summer meant no replies\n                ii.   Hard to ﬁnd contacts in schools (Owen’s stalking)\n               iii.   St John’s Raven Court school sounded keen in the spring\n                           1.  Work out diﬀ ﬁnancial arrangement\n                           2.  Follow up (Owen and Frankie)\n         b.  Contacts in Kelowna? Vancouver Island?",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "10. Hotels (Owen)",
+      "page": 2
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "10. Hotels (Owen)",
+        "text": "a.  Any updates on schools\n                i.    Reached out but summer meant no replies\n                ii.   Hard to ﬁnd contacts in schools (Owen’s stalking)\n               iii.   St John’s Raven Court school sounded keen in the spring\n                           1.  Work out diﬀ ﬁnancial arrangement\n                           2.  Follow up (Owen and Frankie)\n         b.  Contacts in Kelowna? Vancouver Island?",
+        "lines": [
+          {
+            "text": "a.  Any updates on schools",
+            "indent": 9,
+            "bullet_marker": "a.",
+            "body": "Any updates on schools",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Reached out but summer meant no replies",
+            "indent": 16,
+            "bullet_marker": "i.",
+            "body": "Reached out but summer meant no replies",
+            "checkbox": false
+          },
+          {
+            "text": "ii.   Hard to ﬁnd contacts in schools (Owen’s stalking)",
+            "indent": 16,
+            "bullet_marker": "ii.",
+            "body": "Hard to ﬁnd contacts in schools (Owen’s stalking)",
+            "checkbox": false
+          },
+          {
+            "text": "iii.   St John’s Raven Court school sounded keen in the spring",
+            "indent": 15,
+            "bullet_marker": "iii.",
+            "body": "St John’s Raven Court school sounded keen in the spring",
+            "checkbox": false
+          },
+          {
+            "text": "1.  Work out diﬀ ﬁnancial arrangement",
+            "indent": 27,
+            "bullet_marker": "1.",
+            "body": "Work out diﬀ ﬁnancial arrangement",
+            "checkbox": false
+          },
+          {
+            "text": "2.  Follow up (Owen and Frankie)",
+            "indent": 27,
+            "bullet_marker": "2.",
+            "body": "Follow up (Owen and Frankie)",
+            "checkbox": false
+          },
+          {
+            "text": "b.  Contacts in Kelowna? Vancouver Island?",
+            "indent": 9,
+            "bullet_marker": "b.",
+            "body": "Contacts in Kelowna? Vancouver Island?",
+            "checkbox": false
+          }
+        ],
+        "page": 2
+      },
+      "lines": [
+        {
+          "text": "a.  Any updates on schools",
+          "indent": 9,
+          "bullet_marker": "a.",
+          "body": "Any updates on schools",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Reached out but summer meant no replies",
+          "indent": 16,
+          "bullet_marker": "i.",
+          "body": "Reached out but summer meant no replies",
+          "checkbox": false
+        },
+        {
+          "text": "ii.   Hard to ﬁnd contacts in schools (Owen’s stalking)",
+          "indent": 16,
+          "bullet_marker": "ii.",
+          "body": "Hard to ﬁnd contacts in schools (Owen’s stalking)",
+          "checkbox": false
+        },
+        {
+          "text": "iii.   St John’s Raven Court school sounded keen in the spring",
+          "indent": 15,
+          "bullet_marker": "iii.",
+          "body": "St John’s Raven Court school sounded keen in the spring",
+          "checkbox": false
+        },
+        {
+          "text": "1.  Work out diﬀ ﬁnancial arrangement",
+          "indent": 27,
+          "bullet_marker": "1.",
+          "body": "Work out diﬀ ﬁnancial arrangement",
+          "checkbox": false
+        },
+        {
+          "text": "2.  Follow up (Owen and Frankie)",
+          "indent": 27,
+          "bullet_marker": "2.",
+          "body": "Follow up (Owen and Frankie)",
+          "checkbox": false
+        },
+        {
+          "text": "b.  Contacts in Kelowna? Vancouver Island?",
+          "indent": 9,
+          "bullet_marker": "b.",
+          "body": "Contacts in Kelowna? Vancouver Island?",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_10",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-10",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "11. Speech contest (Sheree)"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "a.  2 winners - selected on the second day\n         b.  Speeches under 2 min - give at ceremony to highlight 20th anniversary\n         c.  Overnight competition"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-10",
+      "quote": "a.  2 winners - selected on the second day\n         b.  Speeches under 2 min - give at ceremony to highlight 20th anniversary\n         c.  Overnight competition",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "11. Speech contest (Sheree)",
+      "page": 2
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "11. Speech contest (Sheree)",
+        "text": "a.  2 winners - selected on the second day\n         b.  Speeches under 2 min - give at ceremony to highlight 20th anniversary\n         c.  Overnight competition",
+        "lines": [
+          {
+            "text": "a.  2 winners - selected on the second day",
+            "indent": 9,
+            "bullet_marker": "a.",
+            "body": "2 winners - selected on the second day",
+            "checkbox": false
+          },
+          {
+            "text": "b.  Speeches under 2 min - give at ceremony to highlight 20th anniversary",
+            "indent": 9,
+            "bullet_marker": "b.",
+            "body": "Speeches under 2 min - give at ceremony to highlight 20th anniversary",
+            "checkbox": false
+          },
+          {
+            "text": "c.  Overnight competition",
+            "indent": 9,
+            "bullet_marker": "c.",
+            "body": "Overnight competition",
+            "checkbox": false
+          }
+        ],
+        "page": 2
+      },
+      "lines": [
+        {
+          "text": "a.  2 winners - selected on the second day",
+          "indent": 9,
+          "bullet_marker": "a.",
+          "body": "2 winners - selected on the second day",
+          "checkbox": false
+        },
+        {
+          "text": "b.  Speeches under 2 min - give at ceremony to highlight 20th anniversary",
+          "indent": 9,
+          "bullet_marker": "b.",
+          "body": "Speeches under 2 min - give at ceremony to highlight 20th anniversary",
+          "checkbox": false
+        },
+        {
+          "text": "c.  Overnight competition",
+          "indent": 9,
+          "bullet_marker": "c.",
+          "body": "Overnight competition",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_11",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-11",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "Document"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "d.   Google form (release during opening ceremony?)\n             e.   OR release during committee session\n             f.   Current prompts:\n                     i.    How does representing another individual in Model UN shape our\n                           voice?\n                    ii.    Why do the voices raised in MUN today matter for the world\n                           tomorrow? (editable)\n             g.   Award for this: certiﬁcate and something speech related (mini microphone?)\n                     i.    Tracy Lee Award?"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-11",
+      "quote": "d.   Google form (release during opening ceremony?)\n             e.   OR release during committee session\n             f.   Current prompts:\n                     i.    How does representing another individual in Model UN shape our\n                           voice?\n                    ii.    Why do the voices raised in MUN today matter for the world\n                           tomorrow? (editable)\n             g.   Award for this: certiﬁcate and something speech related (mini microphone?)\n                     i.    Tracy Lee Award?",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "Document",
+      "page": 3
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "Document",
+        "text": "d.   Google form (release during opening ceremony?)\n             e.   OR release during committee session\n             f.   Current prompts:\n                     i.    How does representing another individual in Model UN shape our\n                           voice?\n                    ii.    Why do the voices raised in MUN today matter for the world\n                           tomorrow? (editable)\n             g.   Award for this: certiﬁcate and something speech related (mini microphone?)\n                     i.    Tracy Lee Award?",
+        "lines": [
+          {
+            "text": "d.   Google form (release during opening ceremony?)",
+            "indent": 0,
+            "bullet_marker": "d.",
+            "body": "Google form (release during opening ceremony?)",
+            "checkbox": false
+          },
+          {
+            "text": "e.   OR release during committee session",
+            "indent": 13,
+            "bullet_marker": "e.",
+            "body": "OR release during committee session",
+            "checkbox": false
+          },
+          {
+            "text": "f.   Current prompts:",
+            "indent": 13,
+            "bullet_marker": "f.",
+            "body": "Current prompts:",
+            "checkbox": false
+          },
+          {
+            "text": "i.    How does representing another individual in Model UN shape our",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "How does representing another individual in Model UN shape our",
+            "checkbox": false
+          },
+          {
+            "text": "voice?",
+            "indent": 27,
+            "bullet_marker": null,
+            "body": "voice?",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    Why do the voices raised in MUN today matter for the world",
+            "indent": 20,
+            "bullet_marker": "ii.",
+            "body": "Why do the voices raised in MUN today matter for the world",
+            "checkbox": false
+          },
+          {
+            "text": "tomorrow? (editable)",
+            "indent": 27,
+            "bullet_marker": null,
+            "body": "tomorrow? (editable)",
+            "checkbox": false
+          },
+          {
+            "text": "g.   Award for this: certiﬁcate and something speech related (mini microphone?)",
+            "indent": 13,
+            "bullet_marker": "g.",
+            "body": "Award for this: certiﬁcate and something speech related (mini microphone?)",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Tracy Lee Award?",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Tracy Lee Award?",
+            "checkbox": false
+          }
+        ],
+        "page": 3
+      },
+      "lines": [
+        {
+          "text": "d.   Google form (release during opening ceremony?)",
+          "indent": 0,
+          "bullet_marker": "d.",
+          "body": "Google form (release during opening ceremony?)",
+          "checkbox": false
+        },
+        {
+          "text": "e.   OR release during committee session",
+          "indent": 13,
+          "bullet_marker": "e.",
+          "body": "OR release during committee session",
+          "checkbox": false
+        },
+        {
+          "text": "f.   Current prompts:",
+          "indent": 13,
+          "bullet_marker": "f.",
+          "body": "Current prompts:",
+          "checkbox": false
+        },
+        {
+          "text": "i.    How does representing another individual in Model UN shape our",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "How does representing another individual in Model UN shape our",
+          "checkbox": false
+        },
+        {
+          "text": "voice?",
+          "indent": 27,
+          "bullet_marker": null,
+          "body": "voice?",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    Why do the voices raised in MUN today matter for the world",
+          "indent": 20,
+          "bullet_marker": "ii.",
+          "body": "Why do the voices raised in MUN today matter for the world",
+          "checkbox": false
+        },
+        {
+          "text": "tomorrow? (editable)",
+          "indent": 27,
+          "bullet_marker": null,
+          "body": "tomorrow? (editable)",
+          "checkbox": false
+        },
+        {
+          "text": "g.   Award for this: certiﬁcate and something speech related (mini microphone?)",
+          "indent": 13,
+          "bullet_marker": "g.",
+          "body": "Award for this: certiﬁcate and something speech related (mini microphone?)",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Tracy Lee Award?",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Tracy Lee Award?",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_12",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-12",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "12.  Special projects (Quinton)"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "a.   Previous SGs\n             b.   Any other ideas?\n             c.   Alumni have given feedback\n             d.   From this room to that one to celebrate history\n             e.   SGs on TV in school and where they are now\n             f.   Opening ceremony make the video a combination of old SGs saying hello\n                     i.    Or anyone\n                    ii.    “Welcome to VYMUN 2025”\n             g.   Director of Media: Ivan Wang\n             h.   Connect w/ Mr Mac (Owen)"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-12",
+      "quote": "a.   Previous SGs\n             b.   Any other ideas?\n             c.   Alumni have given feedback\n             d.   From this room to that one to celebrate history\n             e.   SGs on TV in school and where they are now\n             f.   Opening ceremony make the video a combination of old SGs saying hello\n                     i.    Or anyone\n                    ii.    “Welcome to VYMUN 2025”\n             g.   Director of Media: Ivan Wang\n             h.   Connect w/ Mr Mac (Owen)",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "12.  Special projects (Quinton)",
+      "page": 3
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "12.  Special projects (Quinton)",
+        "text": "a.   Previous SGs\n             b.   Any other ideas?\n             c.   Alumni have given feedback\n             d.   From this room to that one to celebrate history\n             e.   SGs on TV in school and where they are now\n             f.   Opening ceremony make the video a combination of old SGs saying hello\n                     i.    Or anyone\n                    ii.    “Welcome to VYMUN 2025”\n             g.   Director of Media: Ivan Wang\n             h.   Connect w/ Mr Mac (Owen)",
+        "lines": [
+          {
+            "text": "a.   Previous SGs",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Previous SGs",
+            "checkbox": false
+          },
+          {
+            "text": "b.   Any other ideas?",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "Any other ideas?",
+            "checkbox": false
+          },
+          {
+            "text": "c.   Alumni have given feedback",
+            "indent": 13,
+            "bullet_marker": "c.",
+            "body": "Alumni have given feedback",
+            "checkbox": false
+          },
+          {
+            "text": "d.   From this room to that one to celebrate history",
+            "indent": 13,
+            "bullet_marker": "d.",
+            "body": "From this room to that one to celebrate history",
+            "checkbox": false
+          },
+          {
+            "text": "e.   SGs on TV in school and where they are now",
+            "indent": 13,
+            "bullet_marker": "e.",
+            "body": "SGs on TV in school and where they are now",
+            "checkbox": false
+          },
+          {
+            "text": "f.   Opening ceremony make the video a combination of old SGs saying hello",
+            "indent": 13,
+            "bullet_marker": "f.",
+            "body": "Opening ceremony make the video a combination of old SGs saying hello",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Or anyone",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Or anyone",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    “Welcome to VYMUN 2025”",
+            "indent": 20,
+            "bullet_marker": "ii.",
+            "body": "“Welcome to VYMUN 2025”",
+            "checkbox": false
+          },
+          {
+            "text": "g.   Director of Media: Ivan Wang",
+            "indent": 13,
+            "bullet_marker": "g.",
+            "body": "Director of Media: Ivan Wang",
+            "checkbox": false
+          },
+          {
+            "text": "h.   Connect w/ Mr Mac (Owen)",
+            "indent": 13,
+            "bullet_marker": "h.",
+            "body": "Connect w/ Mr Mac (Owen)",
+            "checkbox": false
+          }
+        ],
+        "page": 3
+      },
+      "lines": [
+        {
+          "text": "a.   Previous SGs",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Previous SGs",
+          "checkbox": false
+        },
+        {
+          "text": "b.   Any other ideas?",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "Any other ideas?",
+          "checkbox": false
+        },
+        {
+          "text": "c.   Alumni have given feedback",
+          "indent": 13,
+          "bullet_marker": "c.",
+          "body": "Alumni have given feedback",
+          "checkbox": false
+        },
+        {
+          "text": "d.   From this room to that one to celebrate history",
+          "indent": 13,
+          "bullet_marker": "d.",
+          "body": "From this room to that one to celebrate history",
+          "checkbox": false
+        },
+        {
+          "text": "e.   SGs on TV in school and where they are now",
+          "indent": 13,
+          "bullet_marker": "e.",
+          "body": "SGs on TV in school and where they are now",
+          "checkbox": false
+        },
+        {
+          "text": "f.   Opening ceremony make the video a combination of old SGs saying hello",
+          "indent": 13,
+          "bullet_marker": "f.",
+          "body": "Opening ceremony make the video a combination of old SGs saying hello",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Or anyone",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Or anyone",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    “Welcome to VYMUN 2025”",
+          "indent": 20,
+          "bullet_marker": "ii.",
+          "body": "“Welcome to VYMUN 2025”",
+          "checkbox": false
+        },
+        {
+          "text": "g.   Director of Media: Ivan Wang",
+          "indent": 13,
+          "bullet_marker": "g.",
+          "body": "Director of Media: Ivan Wang",
+          "checkbox": false
+        },
+        {
+          "text": "h.   Connect w/ Mr Mac (Owen)",
+          "indent": 13,
+          "bullet_marker": "h.",
+          "body": "Connect w/ Mr Mac (Owen)",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_13",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-13",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "13.  School was gifted a print by Susan Point (allowed to print and frame it)"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "a.   Present for guest speakers?\n    14.  Swimming conﬂict\n             a.   Potentially organize a ride - Owen"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-13",
+      "quote": "a.   Present for guest speakers?\n    14.  Swimming conﬂict\n             a.   Potentially organize a ride - Owen",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "13.  School was gifted a print by Susan Point (allowed to print and frame it)",
+      "page": 3
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "13.  School was gifted a print by Susan Point (allowed to print and frame it)",
+        "text": "a.   Present for guest speakers?\n    14.  Swimming conﬂict\n             a.   Potentially organize a ride - Owen",
+        "lines": [
+          {
+            "text": "a.   Present for guest speakers?",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Present for guest speakers?",
+            "checkbox": false
+          },
+          {
+            "text": "14.  Swimming conﬂict",
+            "indent": 4,
+            "bullet_marker": "14.",
+            "body": "Swimming conﬂict",
+            "checkbox": false
+          },
+          {
+            "text": "a.   Potentially organize a ride - Owen",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Potentially organize a ride - Owen",
+            "checkbox": false
+          }
+        ],
+        "page": 3
+      },
+      "lines": [
+        {
+          "text": "a.   Present for guest speakers?",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Present for guest speakers?",
+          "checkbox": false
+        },
+        {
+          "text": "14.  Swimming conﬂict",
+          "indent": 4,
+          "bullet_marker": "14.",
+          "body": "Swimming conﬂict",
+          "checkbox": false
+        },
+        {
+          "text": "a.   Potentially organize a ride - Owen",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Potentially organize a ride - Owen",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_14",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-14",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "15.  Finalize schedule - Ann and Elliott"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "16.  Anything else?"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-14",
+      "quote": "16.  Anything else?",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "15.  Finalize schedule - Ann and Elliott",
+      "page": 3
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "15.  Finalize schedule - Ann and Elliott",
+        "text": "16.  Anything else?",
+        "lines": [
+          {
+            "text": "16.  Anything else?",
+            "indent": 4,
+            "bullet_marker": "16.",
+            "body": "Anything else?",
+            "checkbox": false
+          }
+        ],
+        "page": 3
+      },
+      "lines": [
+        {
+          "text": "16.  Anything else?",
+          "indent": 4,
+          "bullet_marker": "16.",
+          "body": "Anything else?",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9cf77b848dc74377_section_15",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9cf77b848dc74377#section-15",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9cf77b848dc74377",
+      "name": "Meeting_7__August_26th_2025_20260630_201828.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9cf77b848dc74377",
+      "section_heading": "To-do"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-30T20:18:28.908933+00:00",
+    "content": {
+      "text": "Award descriptions post on website (Ann)\n         JBo Renaming the Awards Suggestions\n         JBo Rubrics - How are awards determined\n         Frankie to update instagram for recruitment\n         Sheree to write Howl article\n         Elliott to start reaching out about chaperones\n         Evangeline to start planning JS training sessions\n         James to follow up with directors who are behind\n         Hugo to send backgrounders to teachers before publishing for ﬁnal review\n         Elliott to start ordering materials (incl awards)\n         Sheree will think about awards for speech contest\n         Owen and Frankie to follow up with St John’s Ravens Court - Wednesday\n         Owen contact Mr Mac about media\n         Sheree can talk to Reid about swimming conﬂict (get a list to prepare)"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9cf77b848dc74377#section-15",
+      "quote": "Award descriptions post on website (Ann)\n         JBo Renaming the Awards Suggestions\n         JBo Rubrics - How are awards determined\n         Frankie to update instagram for recruitment\n         Sheree to write Howl article\n         Elliott to start reaching out about chaperones\n         Evangeline to start planning JS training sessions\n         James to follow up with directors who are behind\n         Hugo to send backgrounders to teachers before publishing for ﬁnal review\n         Elliott to start ordering materials (incl awards)\n         Sheree will think about awards for speech contest\n         Owen and Frankie to follow up with St John’s Ravens Court - Wednesday\n         Owen contact Mr Mac about media\n         Sheree can talk to Reid about swimming conﬂict (get a list to prepare)",
+      "workspace": "local_upload",
+      "document_id": "file_9cf77b848dc74377",
+      "document_title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+      "section_heading": "To-do",
+      "page": 3
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "To-do",
+        "text": "Award descriptions post on website (Ann)\n         JBo Renaming the Awards Suggestions\n         JBo Rubrics - How are awards determined\n         Frankie to update instagram for recruitment\n         Sheree to write Howl article\n         Elliott to start reaching out about chaperones\n         Evangeline to start planning JS training sessions\n         James to follow up with directors who are behind\n         Hugo to send backgrounders to teachers before publishing for ﬁnal review\n         Elliott to start ordering materials (incl awards)\n         Sheree will think about awards for speech contest\n         Owen and Frankie to follow up with St John’s Ravens Court - Wednesday\n         Owen contact Mr Mac about media\n         Sheree can talk to Reid about swimming conﬂict (get a list to prepare)",
+        "lines": [
+          {
+            "text": "Award descriptions post on website (Ann)",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Award descriptions post on website (Ann)",
+            "checkbox": false
+          },
+          {
+            "text": "JBo Renaming the Awards Suggestions",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "JBo Renaming the Awards Suggestions",
+            "checkbox": false
+          },
+          {
+            "text": "JBo Rubrics - How are awards determined",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "JBo Rubrics - How are awards determined",
+            "checkbox": false
+          },
+          {
+            "text": "Frankie to update instagram for recruitment",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Frankie to update instagram for recruitment",
+            "checkbox": false
+          },
+          {
+            "text": "Sheree to write Howl article",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Sheree to write Howl article",
+            "checkbox": false
+          },
+          {
+            "text": "Elliott to start reaching out about chaperones",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Elliott to start reaching out about chaperones",
+            "checkbox": false
+          },
+          {
+            "text": "Evangeline to start planning JS training sessions",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Evangeline to start planning JS training sessions",
+            "checkbox": false
+          },
+          {
+            "text": "James to follow up with directors who are behind",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "James to follow up with directors who are behind",
+            "checkbox": false
+          },
+          {
+            "text": "Hugo to send backgrounders to teachers before publishing for ﬁnal review",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Hugo to send backgrounders to teachers before publishing for ﬁnal review",
+            "checkbox": false
+          },
+          {
+            "text": "Elliott to start ordering materials (incl awards)",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Elliott to start ordering materials (incl awards)",
+            "checkbox": false
+          },
+          {
+            "text": "Sheree will think about awards for speech contest",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Sheree will think about awards for speech contest",
+            "checkbox": false
+          },
+          {
+            "text": "Owen and Frankie to follow up with St John’s Ravens Court - Wednesday",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Owen and Frankie to follow up with St John’s Ravens Court - Wednesday",
+            "checkbox": false
+          },
+          {
+            "text": "Owen contact Mr Mac about media",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Owen contact Mr Mac about media",
+            "checkbox": false
+          },
+          {
+            "text": "Sheree can talk to Reid about swimming conﬂict (get a list to prepare)",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Sheree can talk to Reid about swimming conﬂict (get a list to prepare)",
+            "checkbox": false
+          }
+        ],
+        "page": 3
+      },
+      "lines": [
+        {
+          "text": "Award descriptions post on website (Ann)",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Award descriptions post on website (Ann)",
+          "checkbox": false
+        },
+        {
+          "text": "JBo Renaming the Awards Suggestions",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "JBo Renaming the Awards Suggestions",
+          "checkbox": false
+        },
+        {
+          "text": "JBo Rubrics - How are awards determined",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "JBo Rubrics - How are awards determined",
+          "checkbox": false
+        },
+        {
+          "text": "Frankie to update instagram for recruitment",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Frankie to update instagram for recruitment",
+          "checkbox": false
+        },
+        {
+          "text": "Sheree to write Howl article",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Sheree to write Howl article",
+          "checkbox": false
+        },
+        {
+          "text": "Elliott to start reaching out about chaperones",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Elliott to start reaching out about chaperones",
+          "checkbox": false
+        },
+        {
+          "text": "Evangeline to start planning JS training sessions",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Evangeline to start planning JS training sessions",
+          "checkbox": false
+        },
+        {
+          "text": "James to follow up with directors who are behind",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "James to follow up with directors who are behind",
+          "checkbox": false
+        },
+        {
+          "text": "Hugo to send backgrounders to teachers before publishing for ﬁnal review",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Hugo to send backgrounders to teachers before publishing for ﬁnal review",
+          "checkbox": false
+        },
+        {
+          "text": "Elliott to start ordering materials (incl awards)",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Elliott to start ordering materials (incl awards)",
+          "checkbox": false
+        },
+        {
+          "text": "Sheree will think about awards for speech contest",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Sheree will think about awards for speech contest",
+          "checkbox": false
+        },
+        {
+          "text": "Owen and Frankie to follow up with St John’s Ravens Court - Wednesday",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Owen and Frankie to follow up with St John’s Ravens Court - Wednesday",
+          "checkbox": false
+        },
+        {
+          "text": "Owen contact Mr Mac about media",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Owen contact Mr Mac about media",
+          "checkbox": false
+        },
+        {
+          "text": "Sheree can talk to Reid about swimming conﬂict (get a list to prepare)",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Sheree can talk to Reid about swimming conﬂict (get a list to prepare)",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9cf77b848dc74377",
+        "title": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+        "updated_at": "2026-06-30T20:18:28.908933+00:00"
+      }
+    }
+  }
+]

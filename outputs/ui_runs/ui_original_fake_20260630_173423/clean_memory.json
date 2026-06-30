@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "input_file": "data/original_fake.json",
+    "mode": "llm",
+    "pipeline": "candidates-shadow",
+    "classification": "unknown",
+    "generated_at": "2026-06-30T17:34:38.362541+00:00",
+    "meeting_date": null,
+    "location": null,
+    "present": [],
+    "absent": [],
+    "source_event_count": 10,
+    "confirmed_memory_count": 0,
+    "action_item_count": 0,
+    "open_question_count": 0,
+    "review_item_count": 0
+  },
+  "confirmed_memory": [],
+  "action_items": [],
+  "open_questions": [],
+  "review_items": []
+}

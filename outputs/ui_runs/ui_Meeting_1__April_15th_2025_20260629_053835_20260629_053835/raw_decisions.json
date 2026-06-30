@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_053835.pdf",
+    "decision_count": 0,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-4.1-mini",
+    "verified": true,
+    "generated_at": "2026-06-29T05:38:36.578863+00:00",
+    "validation_issue_count": 0,
+    "validation_issues": [],
+    "raw_validation_issue_count": 0
+  },
+  "decisions": []
+}

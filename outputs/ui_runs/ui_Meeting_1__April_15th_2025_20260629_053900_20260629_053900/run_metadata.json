@@ -1,0 +1,21 @@
+{
+  "run_id": "ui_Meeting_1__April_15th_2025_20260629_053900_20260629_053900",
+  "input_file": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_053900.pdf",
+  "mode": "llm",
+  "pipeline": "candidates-shadow",
+  "model": "gpt-4.1-mini",
+  "source_type": "uploaded_document",
+  "created_at": "2026-06-29T05:39:01.954396+00:00",
+  "artifacts": {
+    "decisions": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_053900_20260629_053900/decisions.json",
+    "raw_decisions": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_053900_20260629_053900/raw_decisions.json",
+    "normalized_events_debug": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_053900_20260629_053900/normalized_events_debug.json",
+    "source_bundles_debug": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_053900_20260629_053900/source_bundles_debug.json",
+    "candidates_debug": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_053900_20260629_053900/candidates_debug.json",
+    "state_resolution_debug": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_053900_20260629_053900/state_resolution_debug.json",
+    "conflicts_debug": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_053900_20260629_053900/conflicts_debug.json",
+    "review_queue": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_053900_20260629_053900/review_queue.json",
+    "review_queue_md": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_053900_20260629_053900/review_queue.md",
+    "run_metadata": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_053900_20260629_053900/run_metadata.json"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/Meeting #5_ May 20th, 2025.pdf",
+    "decision_count": 0,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "heuristic",
+    "model": null,
+    "verified": true,
+    "generated_at": "2026-06-30T22:11:56.781514+00:00",
+    "clean_validation_issue_count": 0
+  },
+  "decisions": []
+}

@@ -1,0 +1,1583 @@
+[
+  {
+    "bundle_id": "document_local_upload_file_b0bf803730892707",
+    "bundle_type": "document",
+    "source_types": [
+      "uploaded_document"
+    ],
+    "root_id": "file_b0bf803730892707",
+    "title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+    "time_range": {
+      "start": null,
+      "end": "2026-06-30T07:54:34.943408+00:00"
+    },
+    "events": [
+      {
+        "event_id": "uploaded_document_file_b0bf803730892707_section_1",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b0bf803730892707#section-1",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b0bf803730892707",
+          "name": "Meeting_12__September_30th_2025_20260630_075434.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b0bf803730892707",
+          "section_heading": "Document"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:54:34.943408+00:00",
+        "content": {
+          "text": "September 30th, 2025\nwww.wpga.ca/lhaider\n7pm"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b0bf803730892707#section-1",
+          "quote": "September 30th, 2025\nwww.wpga.ca/lhaider\n7pm",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+          "section_heading": "Document",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "Document",
+            "text": "September 30th, 2025\nwww.wpga.ca/lhaider\n7pm",
+            "lines": [
+              {
+                "text": "September 30th, 2025",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "September 30th, 2025",
+                "checkbox": false
+              },
+              {
+                "text": "www.wpga.ca/lhaider",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "www.wpga.ca/lhaider",
+                "checkbox": false
+              },
+              {
+                "text": "7pm",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "7pm",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "September 30th, 2025",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "September 30th, 2025",
+              "checkbox": false
+            },
+            {
+              "text": "www.wpga.ca/lhaider",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "www.wpga.ca/lhaider",
+              "checkbox": false
+            },
+            {
+              "text": "7pm",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "7pm",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b0bf803730892707",
+            "title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "updated_at": "2026-06-30T07:54:34.943408+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b0bf803730892707_section_2",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b0bf803730892707#section-2",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b0bf803730892707",
+          "name": "Meeting_12__September_30th_2025_20260630_075434.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b0bf803730892707",
+          "section_heading": "1.  Registration assignments finalize & send out"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:54:34.943408+00:00",
+        "content": {
+          "text": "2.  UBC: (Elliott)\n             a.  Have we filled out the Event Information Form?\n             b.  Has the Oct 6 8:30 walkthrough been confirmed?\n             c.  Floor plan confirm: Drafted DG email; double check with the floor plan map"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b0bf803730892707#section-2",
+          "quote": "2.  UBC: (Elliott)\n             a.  Have we filled out the Event Information Form?\n             b.  Has the Oct 6 8:30 walkthrough been confirmed?\n             c.  Floor plan confirm: Drafted DG email; double check with the floor plan map",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+          "section_heading": "1.  Registration assignments finalize & send out",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "1.  Registration assignments finalize & send out",
+            "text": "2.  UBC: (Elliott)\n             a.  Have we filled out the Event Information Form?\n             b.  Has the Oct 6 8:30 walkthrough been confirmed?\n             c.  Floor plan confirm: Drafted DG email; double check with the floor plan map",
+            "lines": [
+              {
+                "text": "2.  UBC: (Elliott)",
+                "indent": 4,
+                "bullet_marker": "2.",
+                "body": "UBC: (Elliott)",
+                "checkbox": false
+              },
+              {
+                "text": "a.  Have we filled out the Event Information Form?",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "Have we filled out the Event Information Form?",
+                "checkbox": false
+              },
+              {
+                "text": "b.  Has the Oct 6 8:30 walkthrough been confirmed?",
+                "indent": 13,
+                "bullet_marker": "b.",
+                "body": "Has the Oct 6 8:30 walkthrough been confirmed?",
+                "checkbox": false
+              },
+              {
+                "text": "c.  Floor plan confirm: Drafted DG email; double check with the floor plan map",
+                "indent": 13,
+                "bullet_marker": "c.",
+                "body": "Floor plan confirm: Drafted DG email; double check with the floor plan map",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "2.  UBC: (Elliott)",
+              "indent": 4,
+              "bullet_marker": "2.",
+              "body": "UBC: (Elliott)",
+              "checkbox": false
+            },
+            {
+              "text": "a.  Have we filled out the Event Information Form?",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "Have we filled out the Event Information Form?",
+              "checkbox": false
+            },
+            {
+              "text": "b.  Has the Oct 6 8:30 walkthrough been confirmed?",
+              "indent": 13,
+              "bullet_marker": "b.",
+              "body": "Has the Oct 6 8:30 walkthrough been confirmed?",
+              "checkbox": false
+            },
+            {
+              "text": "c.  Floor plan confirm: Drafted DG email; double check with the floor plan map",
+              "indent": 13,
+              "bullet_marker": "c.",
+              "body": "Floor plan confirm: Drafted DG email; double check with the floor plan map",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b0bf803730892707",
+            "title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "updated_at": "2026-06-30T07:54:34.943408+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b0bf803730892707_section_3",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b0bf803730892707#section-3",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b0bf803730892707",
+          "name": "Meeting_12__September_30th_2025_20260630_075434.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b0bf803730892707",
+          "section_heading": "3.  Supplies"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:54:34.943408+00:00",
+        "content": {
+          "text": "a.  Pens on their way\n             b.  Printing? Awards? Do we need to arrange pick up?"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b0bf803730892707#section-3",
+          "quote": "a.  Pens on their way\n             b.  Printing? Awards? Do we need to arrange pick up?",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+          "section_heading": "3.  Supplies",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "3.  Supplies",
+            "text": "a.  Pens on their way\n             b.  Printing? Awards? Do we need to arrange pick up?",
+            "lines": [
+              {
+                "text": "a.  Pens on their way",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "Pens on their way",
+                "checkbox": false
+              },
+              {
+                "text": "b.  Printing? Awards? Do we need to arrange pick up?",
+                "indent": 13,
+                "bullet_marker": "b.",
+                "body": "Printing? Awards? Do we need to arrange pick up?",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "a.  Pens on their way",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "Pens on their way",
+              "checkbox": false
+            },
+            {
+              "text": "b.  Printing? Awards? Do we need to arrange pick up?",
+              "indent": 13,
+              "bullet_marker": "b.",
+              "body": "Printing? Awards? Do we need to arrange pick up?",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b0bf803730892707",
+            "title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "updated_at": "2026-06-30T07:54:34.943408+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b0bf803730892707_section_4",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b0bf803730892707#section-4",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b0bf803730892707",
+          "name": "Meeting_12__September_30th_2025_20260630_075434.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b0bf803730892707",
+          "section_heading": "4.  Invite Mr. Anthony to Opening Ceremony (Mr. Parker coming to closing)-"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:54:34.943408+00:00",
+        "content": {
+          "text": "confirm both of these things.\n    5.  SJR: 18 students coming from Winnipeg!\n             a.  Owen and Dr. Boland are taking charge of this group.\n             b.  Friendly debate the night before. If secretariat members are available for a\n                 couple of hours after school on the Thursday, this would be a great team\n                 building activity.\n                    i.    3:30-6pm"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b0bf803730892707#section-4",
+          "quote": "confirm both of these things.\n    5.  SJR: 18 students coming from Winnipeg!\n             a.  Owen and Dr. Boland are taking charge of this group.\n             b.  Friendly debate the night before. If secretariat members are available for a\n                 couple of hours after school on the Thursday, this would be a great team\n                 building activity.\n                    i.    3:30-6pm",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+          "section_heading": "4.  Invite Mr. Anthony to Opening Ceremony (Mr. Parker coming to closing)-",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "4.  Invite Mr. Anthony to Opening Ceremony (Mr. Parker coming to closing)-",
+            "text": "confirm both of these things.\n    5.  SJR: 18 students coming from Winnipeg!\n             a.  Owen and Dr. Boland are taking charge of this group.\n             b.  Friendly debate the night before. If secretariat members are available for a\n                 couple of hours after school on the Thursday, this would be a great team\n                 building activity.\n                    i.    3:30-6pm",
+            "lines": [
+              {
+                "text": "confirm both of these things.",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "confirm both of these things.",
+                "checkbox": false
+              },
+              {
+                "text": "5.  SJR: 18 students coming from Winnipeg!",
+                "indent": 4,
+                "bullet_marker": "5.",
+                "body": "SJR: 18 students coming from Winnipeg!",
+                "checkbox": false
+              },
+              {
+                "text": "a.  Owen and Dr. Boland are taking charge of this group.",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "Owen and Dr. Boland are taking charge of this group.",
+                "checkbox": false
+              },
+              {
+                "text": "b.  Friendly debate the night before. If secretariat members are available for a",
+                "indent": 13,
+                "bullet_marker": "b.",
+                "body": "Friendly debate the night before. If secretariat members are available for a",
+                "checkbox": false
+              },
+              {
+                "text": "couple of hours after school on the Thursday, this would be a great team",
+                "indent": 17,
+                "bullet_marker": null,
+                "body": "couple of hours after school on the Thursday, this would be a great team",
+                "checkbox": false
+              },
+              {
+                "text": "building activity.",
+                "indent": 17,
+                "bullet_marker": null,
+                "body": "building activity.",
+                "checkbox": false
+              },
+              {
+                "text": "i.    3:30-6pm",
+                "indent": 20,
+                "bullet_marker": "i.",
+                "body": "3:30-6pm",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "confirm both of these things.",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "confirm both of these things.",
+              "checkbox": false
+            },
+            {
+              "text": "5.  SJR: 18 students coming from Winnipeg!",
+              "indent": 4,
+              "bullet_marker": "5.",
+              "body": "SJR: 18 students coming from Winnipeg!",
+              "checkbox": false
+            },
+            {
+              "text": "a.  Owen and Dr. Boland are taking charge of this group.",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "Owen and Dr. Boland are taking charge of this group.",
+              "checkbox": false
+            },
+            {
+              "text": "b.  Friendly debate the night before. If secretariat members are available for a",
+              "indent": 13,
+              "bullet_marker": "b.",
+              "body": "Friendly debate the night before. If secretariat members are available for a",
+              "checkbox": false
+            },
+            {
+              "text": "couple of hours after school on the Thursday, this would be a great team",
+              "indent": 17,
+              "bullet_marker": null,
+              "body": "couple of hours after school on the Thursday, this would be a great team",
+              "checkbox": false
+            },
+            {
+              "text": "building activity.",
+              "indent": 17,
+              "bullet_marker": null,
+              "body": "building activity.",
+              "checkbox": false
+            },
+            {
+              "text": "i.    3:30-6pm",
+              "indent": 20,
+              "bullet_marker": "i.",
+              "body": "3:30-6pm",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b0bf803730892707",
+            "title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "updated_at": "2026-06-30T07:54:34.943408+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b0bf803730892707_section_5",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b0bf803730892707#section-5",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b0bf803730892707",
+          "name": "Meeting_12__September_30th_2025_20260630_075434.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b0bf803730892707",
+          "section_heading": "6.  VYMUN Junior"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:54:34.943408+00:00",
+        "content": {
+          "text": "a.  Food? Shopping list?\n             b.  Adjust info session from October 13th.\n             c.  Guest speaker?\n             d.  Speeches for opening and closing\n             e.  Staff training? Can we meet during a lunch period?\n             f.  We also need to assemble Jr. swag bags and print off extra backgrounders."
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b0bf803730892707#section-5",
+          "quote": "a.  Food? Shopping list?\n             b.  Adjust info session from October 13th.\n             c.  Guest speaker?\n             d.  Speeches for opening and closing\n             e.  Staff training? Can we meet during a lunch period?\n             f.  We also need to assemble Jr. swag bags and print off extra backgrounders.",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+          "section_heading": "6.  VYMUN Junior",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "6.  VYMUN Junior",
+            "text": "a.  Food? Shopping list?\n             b.  Adjust info session from October 13th.\n             c.  Guest speaker?\n             d.  Speeches for opening and closing\n             e.  Staff training? Can we meet during a lunch period?\n             f.  We also need to assemble Jr. swag bags and print off extra backgrounders.",
+            "lines": [
+              {
+                "text": "a.  Food? Shopping list?",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "Food? Shopping list?",
+                "checkbox": false
+              },
+              {
+                "text": "b.  Adjust info session from October 13th.",
+                "indent": 13,
+                "bullet_marker": "b.",
+                "body": "Adjust info session from October 13th.",
+                "checkbox": false
+              },
+              {
+                "text": "c.  Guest speaker?",
+                "indent": 13,
+                "bullet_marker": "c.",
+                "body": "Guest speaker?",
+                "checkbox": false
+              },
+              {
+                "text": "d.  Speeches for opening and closing",
+                "indent": 13,
+                "bullet_marker": "d.",
+                "body": "Speeches for opening and closing",
+                "checkbox": false
+              },
+              {
+                "text": "e.  Staff training? Can we meet during a lunch period?",
+                "indent": 13,
+                "bullet_marker": "e.",
+                "body": "Staff training? Can we meet during a lunch period?",
+                "checkbox": false
+              },
+              {
+                "text": "f.  We also need to assemble Jr. swag bags and print off extra backgrounders.",
+                "indent": 13,
+                "bullet_marker": "f.",
+                "body": "We also need to assemble Jr. swag bags and print off extra backgrounders.",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "a.  Food? Shopping list?",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "Food? Shopping list?",
+              "checkbox": false
+            },
+            {
+              "text": "b.  Adjust info session from October 13th.",
+              "indent": 13,
+              "bullet_marker": "b.",
+              "body": "Adjust info session from October 13th.",
+              "checkbox": false
+            },
+            {
+              "text": "c.  Guest speaker?",
+              "indent": 13,
+              "bullet_marker": "c.",
+              "body": "Guest speaker?",
+              "checkbox": false
+            },
+            {
+              "text": "d.  Speeches for opening and closing",
+              "indent": 13,
+              "bullet_marker": "d.",
+              "body": "Speeches for opening and closing",
+              "checkbox": false
+            },
+            {
+              "text": "e.  Staff training? Can we meet during a lunch period?",
+              "indent": 13,
+              "bullet_marker": "e.",
+              "body": "Staff training? Can we meet during a lunch period?",
+              "checkbox": false
+            },
+            {
+              "text": "f.  We also need to assemble Jr. swag bags and print off extra backgrounders.",
+              "indent": 13,
+              "bullet_marker": "f.",
+              "body": "We also need to assemble Jr. swag bags and print off extra backgrounders.",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b0bf803730892707",
+            "title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "updated_at": "2026-06-30T07:54:34.943408+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b0bf803730892707_section_6",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b0bf803730892707#section-6",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b0bf803730892707",
+          "name": "Meeting_12__September_30th_2025_20260630_075434.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b0bf803730892707",
+          "section_heading": "7.  Write opening & Closing Ceremony Speeches"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:54:34.943408+00:00",
+        "content": {
+          "text": "a.  Chargé, DG, SG\n    8.  Make a slideshow of past SGs and quotes to cycle through on TVs?\n             a.  Feedback from alumni here\n    9.  Staff- James to send a list to Mrs. Haider for risk management forms.\n    10. Delegate resources post on Instagram & change instagram pfp"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b0bf803730892707#section-6",
+          "quote": "a.  Chargé, DG, SG\n    8.  Make a slideshow of past SGs and quotes to cycle through on TVs?\n             a.  Feedback from alumni here\n    9.  Staff- James to send a list to Mrs. Haider for risk management forms.\n    10. Delegate resources post on Instagram & change instagram pfp",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+          "section_heading": "7.  Write opening & Closing Ceremony Speeches",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "7.  Write opening & Closing Ceremony Speeches",
+            "text": "a.  Chargé, DG, SG\n    8.  Make a slideshow of past SGs and quotes to cycle through on TVs?\n             a.  Feedback from alumni here\n    9.  Staff- James to send a list to Mrs. Haider for risk management forms.\n    10. Delegate resources post on Instagram & change instagram pfp",
+            "lines": [
+              {
+                "text": "a.  Chargé, DG, SG",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "Chargé, DG, SG",
+                "checkbox": false
+              },
+              {
+                "text": "8.  Make a slideshow of past SGs and quotes to cycle through on TVs?",
+                "indent": 4,
+                "bullet_marker": "8.",
+                "body": "Make a slideshow of past SGs and quotes to cycle through on TVs?",
+                "checkbox": false
+              },
+              {
+                "text": "a.  Feedback from alumni here",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "Feedback from alumni here",
+                "checkbox": false
+              },
+              {
+                "text": "9.  Staff- James to send a list to Mrs. Haider for risk management forms.",
+                "indent": 4,
+                "bullet_marker": "9.",
+                "body": "Staff- James to send a list to Mrs. Haider for risk management forms.",
+                "checkbox": false
+              },
+              {
+                "text": "10. Delegate resources post on Instagram & change instagram pfp",
+                "indent": 4,
+                "bullet_marker": "10.",
+                "body": "Delegate resources post on Instagram & change instagram pfp",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "a.  Chargé, DG, SG",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "Chargé, DG, SG",
+              "checkbox": false
+            },
+            {
+              "text": "8.  Make a slideshow of past SGs and quotes to cycle through on TVs?",
+              "indent": 4,
+              "bullet_marker": "8.",
+              "body": "Make a slideshow of past SGs and quotes to cycle through on TVs?",
+              "checkbox": false
+            },
+            {
+              "text": "a.  Feedback from alumni here",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "Feedback from alumni here",
+              "checkbox": false
+            },
+            {
+              "text": "9.  Staff- James to send a list to Mrs. Haider for risk management forms.",
+              "indent": 4,
+              "bullet_marker": "9.",
+              "body": "Staff- James to send a list to Mrs. Haider for risk management forms.",
+              "checkbox": false
+            },
+            {
+              "text": "10. Delegate resources post on Instagram & change instagram pfp",
+              "indent": 4,
+              "bullet_marker": "10.",
+              "body": "Delegate resources post on Instagram & change instagram pfp",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b0bf803730892707",
+            "title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "updated_at": "2026-06-30T07:54:34.943408+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b0bf803730892707_section_7",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b0bf803730892707#section-7",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b0bf803730892707",
+          "name": "Meeting_12__September_30th_2025_20260630_075434.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b0bf803730892707",
+          "section_heading": "Document"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:54:34.943408+00:00",
+        "content": {
+          "text": "a."
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b0bf803730892707#section-7",
+          "quote": "a.",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+          "section_heading": "Document",
+          "page": 2
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "Document",
+            "text": "a.",
+            "lines": [
+              {
+                "text": "a.",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "a.",
+                "checkbox": false
+              }
+            ],
+            "page": 2
+          },
+          "lines": [
+            {
+              "text": "a.",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "a.",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b0bf803730892707",
+            "title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "updated_at": "2026-06-30T07:54:34.943408+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b0bf803730892707_section_8",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b0bf803730892707#section-8",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b0bf803730892707",
+          "name": "Meeting_12__September_30th_2025_20260630_075434.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b0bf803730892707",
+          "section_heading": "11. WPGA Chaperone Conversations"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:54:34.943408+00:00",
+        "content": {
+          "text": "a.  Follow up email with Yapp? (Chaperone email list)\n             b.  Sign up sheet Find your people\n\nTo-Do list (New)\n        See who on the Sec team can come on the Thursday before the conference for\n        friendly debate (Ann)\n        Send message out to MUN club abt Thursday friendly debate (Sheree/Mrs. Haider)\n        Order Pizza Jr. (Evangeline & Hugo)\n        Staff training - get the VYMUN Jr. WPGA delegates to come up to the Sr. school as\n        well\n        Two times for packing Jr. swag bags & printing (Global studies?, lunch, afterschool -\n        Evangeline & Hugo)\n        James send staff names to Mrs. Haider for risk management forms\n        Yapp to external chaperones (Frankie)\n        Find your people for WPGA chaperones\n            VYMUN 2025 WPGA Chaperone Sign-Up                   (EVERYONE!)\n        Announcements/displays in the jr. school for vymun jr (Evangeline & Hugo)\n        VYMUN UBC on Sr. School TVs (something creative with the theme/new logo) -\n        Elliott or Owen\n\nTo-Do list (Copied from last week)\n        Assign WPGA delegates Jr (Hugo & Evangeline)\n        Assign WPGA delegates UBC (Frankie)\n        Ask Mr. McCauley abt cameras for VYMUN (Ann)\n        Thank you gifts for chaperones list (Frankie)\n        Share Yapp with chaperones (Ann)\n        Email maintenance abt tables (Owen)\n        Gift list for chaperones (Frankie & James)\n        Find teacher chaperone (Everyone)"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b0bf803730892707#section-8",
+          "quote": "a.  Follow up email with Yapp? (Chaperone email list)\n             b.  Sign up sheet Find your people\n\nTo-Do list (New)\n        See who on the Sec team can come on the Thursday before the conference for\n        friendly debate (Ann)\n        Send message out to MUN club abt Thursday friendly debate (Sheree/Mrs. Haider)\n        Order Pizza Jr. (Evangeline & Hugo)\n        Staff training - get the VYMUN Jr. WPGA delegates to come up to the Sr. school as\n        well\n        Two times for packing Jr. swag bags & printing (Global studies?, lunch, afterschool -\n        Evangeline & Hugo)\n        James send staff names to Mrs. Haider for risk management forms\n        Yapp to external chaperones (Frankie)\n        Find your people for WPGA chaperones\n            VYMUN 2025 WPGA Chaperone Sign-Up                   (EVERYONE!)\n        Announcements/displays in the jr. school for vymun jr (Evangeline & Hugo)\n        VYMUN UBC on Sr. School TVs (something creative with the theme/new logo) -\n        Elliott or Owen\n\nTo-Do list (Copied from last week)\n        Assign WPGA delegates Jr (Hugo & Evangeline)\n        Assign WPGA delegates UBC (Frankie)\n        Ask Mr. McCauley abt cameras for VYMUN (Ann)\n        Thank you gifts for chaperones list (Frankie)\n        Share Yapp with chaperones (Ann)\n        Email maintenance abt tables (Owen)\n        Gift list for chaperones (Frankie & James)\n        Find teacher chaperone (Everyone)",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "page": 2
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "11. WPGA Chaperone Conversations",
+            "text": "a.  Follow up email with Yapp? (Chaperone email list)\n             b.  Sign up sheet Find your people\n\nTo-Do list (New)\n        See who on the Sec team can come on the Thursday before the conference for\n        friendly debate (Ann)\n        Send message out to MUN club abt Thursday friendly debate (Sheree/Mrs. Haider)\n        Order Pizza Jr. (Evangeline & Hugo)\n        Staff training - get the VYMUN Jr. WPGA delegates to come up to the Sr. school as\n        well\n        Two times for packing Jr. swag bags & printing (Global studies?, lunch, afterschool -\n        Evangeline & Hugo)\n        James send staff names to Mrs. Haider for risk management forms\n        Yapp to external chaperones (Frankie)\n        Find your people for WPGA chaperones\n            VYMUN 2025 WPGA Chaperone Sign-Up                   (EVERYONE!)\n        Announcements/displays in the jr. school for vymun jr (Evangeline & Hugo)\n        VYMUN UBC on Sr. School TVs (something creative with the theme/new logo) -\n        Elliott or Owen\n\nTo-Do list (Copied from last week)\n        Assign WPGA delegates Jr (Hugo & Evangeline)\n        Assign WPGA delegates UBC (Frankie)\n        Ask Mr. McCauley abt cameras for VYMUN (Ann)\n        Thank you gifts for chaperones list (Frankie)\n        Share Yapp with chaperones (Ann)\n        Email maintenance abt tables (Owen)\n        Gift list for chaperones (Frankie & James)\n        Find teacher chaperone (Everyone)",
+            "lines": [
+              {
+                "text": "a.  Follow up email with Yapp? (Chaperone email list)",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "Follow up email with Yapp? (Chaperone email list)",
+                "checkbox": false
+              },
+              {
+                "text": "b.  Sign up sheet Find your people",
+                "indent": 13,
+                "bullet_marker": "b.",
+                "body": "Sign up sheet Find your people",
+                "checkbox": false
+              },
+              {
+                "text": "To-Do list (New)",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "To-Do list (New)",
+                "checkbox": false
+              },
+              {
+                "text": "See who on the Sec team can come on the Thursday before the conference for",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "See who on the Sec team can come on the Thursday before the conference for",
+                "checkbox": false
+              },
+              {
+                "text": "friendly debate (Ann)",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "friendly debate (Ann)",
+                "checkbox": false
+              },
+              {
+                "text": "Send message out to MUN club abt Thursday friendly debate (Sheree/Mrs. Haider)",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Send message out to MUN club abt Thursday friendly debate (Sheree/Mrs. Haider)",
+                "checkbox": false
+              },
+              {
+                "text": "Order Pizza Jr. (Evangeline & Hugo)",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Order Pizza Jr. (Evangeline & Hugo)",
+                "checkbox": false
+              },
+              {
+                "text": "Staff training - get the VYMUN Jr. WPGA delegates to come up to the Sr. school as",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Staff training - get the VYMUN Jr. WPGA delegates to come up to the Sr. school as",
+                "checkbox": false
+              },
+              {
+                "text": "well",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "well",
+                "checkbox": false
+              },
+              {
+                "text": "Two times for packing Jr. swag bags & printing (Global studies?, lunch, afterschool -",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Two times for packing Jr. swag bags & printing (Global studies?, lunch, afterschool -",
+                "checkbox": false
+              },
+              {
+                "text": "Evangeline & Hugo)",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Evangeline & Hugo)",
+                "checkbox": false
+              },
+              {
+                "text": "James send staff names to Mrs. Haider for risk management forms",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "James send staff names to Mrs. Haider for risk management forms",
+                "checkbox": false
+              },
+              {
+                "text": "Yapp to external chaperones (Frankie)",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Yapp to external chaperones (Frankie)",
+                "checkbox": false
+              },
+              {
+                "text": "Find your people for WPGA chaperones",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Find your people for WPGA chaperones",
+                "checkbox": false
+              },
+              {
+                "text": "VYMUN 2025 WPGA Chaperone Sign-Up                   (EVERYONE!)",
+                "indent": 12,
+                "bullet_marker": null,
+                "body": "VYMUN 2025 WPGA Chaperone Sign-Up                   (EVERYONE!)",
+                "checkbox": false
+              },
+              {
+                "text": "Announcements/displays in the jr. school for vymun jr (Evangeline & Hugo)",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Announcements/displays in the jr. school for vymun jr (Evangeline & Hugo)",
+                "checkbox": false
+              },
+              {
+                "text": "VYMUN UBC on Sr. School TVs (something creative with the theme/new logo) -",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "VYMUN UBC on Sr. School TVs (something creative with the theme/new logo) -",
+                "checkbox": false
+              },
+              {
+                "text": "Elliott or Owen",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Elliott or Owen",
+                "checkbox": false
+              },
+              {
+                "text": "To-Do list (Copied from last week)",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "To-Do list (Copied from last week)",
+                "checkbox": false
+              },
+              {
+                "text": "Assign WPGA delegates Jr (Hugo & Evangeline)",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Assign WPGA delegates Jr (Hugo & Evangeline)",
+                "checkbox": false
+              },
+              {
+                "text": "Assign WPGA delegates UBC (Frankie)",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Assign WPGA delegates UBC (Frankie)",
+                "checkbox": false
+              },
+              {
+                "text": "Ask Mr. McCauley abt cameras for VYMUN (Ann)",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Ask Mr. McCauley abt cameras for VYMUN (Ann)",
+                "checkbox": false
+              },
+              {
+                "text": "Thank you gifts for chaperones list (Frankie)",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Thank you gifts for chaperones list (Frankie)",
+                "checkbox": false
+              },
+              {
+                "text": "Share Yapp with chaperones (Ann)",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Share Yapp with chaperones (Ann)",
+                "checkbox": false
+              },
+              {
+                "text": "Email maintenance abt tables (Owen)",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Email maintenance abt tables (Owen)",
+                "checkbox": false
+              },
+              {
+                "text": "Gift list for chaperones (Frankie & James)",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Gift list for chaperones (Frankie & James)",
+                "checkbox": false
+              },
+              {
+                "text": "Find teacher chaperone (Everyone)",
+                "indent": 8,
+                "bullet_marker": null,
+                "body": "Find teacher chaperone (Everyone)",
+                "checkbox": false
+              }
+            ],
+            "page": 2
+          },
+          "lines": [
+            {
+              "text": "a.  Follow up email with Yapp? (Chaperone email list)",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "Follow up email with Yapp? (Chaperone email list)",
+              "checkbox": false
+            },
+            {
+              "text": "b.  Sign up sheet Find your people",
+              "indent": 13,
+              "bullet_marker": "b.",
+              "body": "Sign up sheet Find your people",
+              "checkbox": false
+            },
+            {
+              "text": "To-Do list (New)",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "To-Do list (New)",
+              "checkbox": false
+            },
+            {
+              "text": "See who on the Sec team can come on the Thursday before the conference for",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "See who on the Sec team can come on the Thursday before the conference for",
+              "checkbox": false
+            },
+            {
+              "text": "friendly debate (Ann)",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "friendly debate (Ann)",
+              "checkbox": false
+            },
+            {
+              "text": "Send message out to MUN club abt Thursday friendly debate (Sheree/Mrs. Haider)",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Send message out to MUN club abt Thursday friendly debate (Sheree/Mrs. Haider)",
+              "checkbox": false
+            },
+            {
+              "text": "Order Pizza Jr. (Evangeline & Hugo)",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Order Pizza Jr. (Evangeline & Hugo)",
+              "checkbox": false
+            },
+            {
+              "text": "Staff training - get the VYMUN Jr. WPGA delegates to come up to the Sr. school as",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Staff training - get the VYMUN Jr. WPGA delegates to come up to the Sr. school as",
+              "checkbox": false
+            },
+            {
+              "text": "well",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "well",
+              "checkbox": false
+            },
+            {
+              "text": "Two times for packing Jr. swag bags & printing (Global studies?, lunch, afterschool -",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Two times for packing Jr. swag bags & printing (Global studies?, lunch, afterschool -",
+              "checkbox": false
+            },
+            {
+              "text": "Evangeline & Hugo)",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Evangeline & Hugo)",
+              "checkbox": false
+            },
+            {
+              "text": "James send staff names to Mrs. Haider for risk management forms",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "James send staff names to Mrs. Haider for risk management forms",
+              "checkbox": false
+            },
+            {
+              "text": "Yapp to external chaperones (Frankie)",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Yapp to external chaperones (Frankie)",
+              "checkbox": false
+            },
+            {
+              "text": "Find your people for WPGA chaperones",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Find your people for WPGA chaperones",
+              "checkbox": false
+            },
+            {
+              "text": "VYMUN 2025 WPGA Chaperone Sign-Up                   (EVERYONE!)",
+              "indent": 12,
+              "bullet_marker": null,
+              "body": "VYMUN 2025 WPGA Chaperone Sign-Up                   (EVERYONE!)",
+              "checkbox": false
+            },
+            {
+              "text": "Announcements/displays in the jr. school for vymun jr (Evangeline & Hugo)",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Announcements/displays in the jr. school for vymun jr (Evangeline & Hugo)",
+              "checkbox": false
+            },
+            {
+              "text": "VYMUN UBC on Sr. School TVs (something creative with the theme/new logo) -",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "VYMUN UBC on Sr. School TVs (something creative with the theme/new logo) -",
+              "checkbox": false
+            },
+            {
+              "text": "Elliott or Owen",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Elliott or Owen",
+              "checkbox": false
+            },
+            {
+              "text": "To-Do list (Copied from last week)",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "To-Do list (Copied from last week)",
+              "checkbox": false
+            },
+            {
+              "text": "Assign WPGA delegates Jr (Hugo & Evangeline)",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Assign WPGA delegates Jr (Hugo & Evangeline)",
+              "checkbox": false
+            },
+            {
+              "text": "Assign WPGA delegates UBC (Frankie)",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Assign WPGA delegates UBC (Frankie)",
+              "checkbox": false
+            },
+            {
+              "text": "Ask Mr. McCauley abt cameras for VYMUN (Ann)",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Ask Mr. McCauley abt cameras for VYMUN (Ann)",
+              "checkbox": false
+            },
+            {
+              "text": "Thank you gifts for chaperones list (Frankie)",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Thank you gifts for chaperones list (Frankie)",
+              "checkbox": false
+            },
+            {
+              "text": "Share Yapp with chaperones (Ann)",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Share Yapp with chaperones (Ann)",
+              "checkbox": false
+            },
+            {
+              "text": "Email maintenance abt tables (Owen)",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Email maintenance abt tables (Owen)",
+              "checkbox": false
+            },
+            {
+              "text": "Gift list for chaperones (Frankie & James)",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Gift list for chaperones (Frankie & James)",
+              "checkbox": false
+            },
+            {
+              "text": "Find teacher chaperone (Everyone)",
+              "indent": 8,
+              "bullet_marker": null,
+              "body": "Find teacher chaperone (Everyone)",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b0bf803730892707",
+            "title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "updated_at": "2026-06-30T07:54:34.943408+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b0bf803730892707_section_9",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b0bf803730892707#section-9",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b0bf803730892707",
+          "name": "Meeting_12__September_30th_2025_20260630_075434.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b0bf803730892707",
+          "section_heading": "Document"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:54:34.943408+00:00",
+        "content": {
+          "text": "Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices\n per person and delivery for 11:45am (Evangeline & Hugo)\n          11.99/Pizza (They said thats the most they can do?)\n          16 cheese\n          16 pepperoni\n          6 hawaiian\n          Gluten Free/Dairy Free\n          Only vegetables\n          $478 dollars 40 cents\n          Evangeline - Name on order"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b0bf803730892707#section-9",
+          "quote": "Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices\n per person and delivery for 11:45am (Evangeline & Hugo)\n          11.99/Pizza (They said thats the most they can do?)\n          16 cheese\n          16 pepperoni\n          6 hawaiian\n          Gluten Free/Dairy Free\n          Only vegetables\n          $478 dollars 40 cents\n          Evangeline - Name on order",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+          "section_heading": "Document",
+          "page": 3
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "Document",
+            "text": "Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices\n per person and delivery for 11:45am (Evangeline & Hugo)\n          11.99/Pizza (They said thats the most they can do?)\n          16 cheese\n          16 pepperoni\n          6 hawaiian\n          Gluten Free/Dairy Free\n          Only vegetables\n          $478 dollars 40 cents\n          Evangeline - Name on order",
+            "lines": [
+              {
+                "text": "Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices",
+                "checkbox": false
+              },
+              {
+                "text": "per person and delivery for 11:45am (Evangeline & Hugo)",
+                "indent": 1,
+                "bullet_marker": null,
+                "body": "per person and delivery for 11:45am (Evangeline & Hugo)",
+                "checkbox": false
+              },
+              {
+                "text": "11.99/Pizza (They said thats the most they can do?)",
+                "indent": 10,
+                "bullet_marker": null,
+                "body": "11.99/Pizza (They said thats the most they can do?)",
+                "checkbox": false
+              },
+              {
+                "text": "16 cheese",
+                "indent": 10,
+                "bullet_marker": null,
+                "body": "16 cheese",
+                "checkbox": false
+              },
+              {
+                "text": "16 pepperoni",
+                "indent": 10,
+                "bullet_marker": null,
+                "body": "16 pepperoni",
+                "checkbox": false
+              },
+              {
+                "text": "6 hawaiian",
+                "indent": 10,
+                "bullet_marker": null,
+                "body": "6 hawaiian",
+                "checkbox": false
+              },
+              {
+                "text": "Gluten Free/Dairy Free",
+                "indent": 10,
+                "bullet_marker": null,
+                "body": "Gluten Free/Dairy Free",
+                "checkbox": false
+              },
+              {
+                "text": "Only vegetables",
+                "indent": 10,
+                "bullet_marker": null,
+                "body": "Only vegetables",
+                "checkbox": false
+              },
+              {
+                "text": "$478 dollars 40 cents",
+                "indent": 10,
+                "bullet_marker": null,
+                "body": "$478 dollars 40 cents",
+                "checkbox": false
+              },
+              {
+                "text": "Evangeline - Name on order",
+                "indent": 10,
+                "bullet_marker": null,
+                "body": "Evangeline - Name on order",
+                "checkbox": false
+              }
+            ],
+            "page": 3
+          },
+          "lines": [
+            {
+              "text": "Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices",
+              "checkbox": false
+            },
+            {
+              "text": "per person and delivery for 11:45am (Evangeline & Hugo)",
+              "indent": 1,
+              "bullet_marker": null,
+              "body": "per person and delivery for 11:45am (Evangeline & Hugo)",
+              "checkbox": false
+            },
+            {
+              "text": "11.99/Pizza (They said thats the most they can do?)",
+              "indent": 10,
+              "bullet_marker": null,
+              "body": "11.99/Pizza (They said thats the most they can do?)",
+              "checkbox": false
+            },
+            {
+              "text": "16 cheese",
+              "indent": 10,
+              "bullet_marker": null,
+              "body": "16 cheese",
+              "checkbox": false
+            },
+            {
+              "text": "16 pepperoni",
+              "indent": 10,
+              "bullet_marker": null,
+              "body": "16 pepperoni",
+              "checkbox": false
+            },
+            {
+              "text": "6 hawaiian",
+              "indent": 10,
+              "bullet_marker": null,
+              "body": "6 hawaiian",
+              "checkbox": false
+            },
+            {
+              "text": "Gluten Free/Dairy Free",
+              "indent": 10,
+              "bullet_marker": null,
+              "body": "Gluten Free/Dairy Free",
+              "checkbox": false
+            },
+            {
+              "text": "Only vegetables",
+              "indent": 10,
+              "bullet_marker": null,
+              "body": "Only vegetables",
+              "checkbox": false
+            },
+            {
+              "text": "$478 dollars 40 cents",
+              "indent": 10,
+              "bullet_marker": null,
+              "body": "$478 dollars 40 cents",
+              "checkbox": false
+            },
+            {
+              "text": "Evangeline - Name on order",
+              "indent": 10,
+              "bullet_marker": null,
+              "body": "Evangeline - Name on order",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b0bf803730892707",
+            "title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "updated_at": "2026-06-30T07:54:34.943408+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b0bf803730892707_section_10",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b0bf803730892707#section-10",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b0bf803730892707",
+          "name": "Meeting_12__September_30th_2025_20260630_075434.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b0bf803730892707",
+          "section_heading": "Connect with Chef Stacey to organize ice cream bar for the afternoon"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:54:34.943408+00:00",
+        "content": {
+          "text": "skaloff@wpga.ca (Evangeline & Hugo)\n Follow up with Mulgrave and Kenneth Gordon Maplewood (Evangeline & Hugo)\n Invitation to Tracey Lee (Closing Ceremony) Frankie\n Invitation to Mr. Anthony (Closing Ceremony) Frankie"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b0bf803730892707#section-10",
+          "quote": "skaloff@wpga.ca (Evangeline & Hugo)\n Follow up with Mulgrave and Kenneth Gordon Maplewood (Evangeline & Hugo)\n Invitation to Tracey Lee (Closing Ceremony) Frankie\n Invitation to Mr. Anthony (Closing Ceremony) Frankie",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+          "section_heading": "Connect with Chef Stacey to organize ice cream bar for the afternoon",
+          "page": 3
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "Connect with Chef Stacey to organize ice cream bar for the afternoon",
+            "text": "skaloff@wpga.ca (Evangeline & Hugo)\n Follow up with Mulgrave and Kenneth Gordon Maplewood (Evangeline & Hugo)\n Invitation to Tracey Lee (Closing Ceremony) Frankie\n Invitation to Mr. Anthony (Closing Ceremony) Frankie",
+            "lines": [
+              {
+                "text": "skaloff@wpga.ca (Evangeline & Hugo)",
+                "indent": 1,
+                "bullet_marker": null,
+                "body": "skaloff@wpga.ca (Evangeline & Hugo)",
+                "checkbox": false
+              },
+              {
+                "text": "Follow up with Mulgrave and Kenneth Gordon Maplewood (Evangeline & Hugo)",
+                "indent": 1,
+                "bullet_marker": null,
+                "body": "Follow up with Mulgrave and Kenneth Gordon Maplewood (Evangeline & Hugo)",
+                "checkbox": false
+              },
+              {
+                "text": "Invitation to Tracey Lee (Closing Ceremony) Frankie",
+                "indent": 1,
+                "bullet_marker": null,
+                "body": "Invitation to Tracey Lee (Closing Ceremony) Frankie",
+                "checkbox": false
+              },
+              {
+                "text": "Invitation to Mr. Anthony (Closing Ceremony) Frankie",
+                "indent": 1,
+                "bullet_marker": null,
+                "body": "Invitation to Mr. Anthony (Closing Ceremony) Frankie",
+                "checkbox": false
+              }
+            ],
+            "page": 3
+          },
+          "lines": [
+            {
+              "text": "skaloff@wpga.ca (Evangeline & Hugo)",
+              "indent": 1,
+              "bullet_marker": null,
+              "body": "skaloff@wpga.ca (Evangeline & Hugo)",
+              "checkbox": false
+            },
+            {
+              "text": "Follow up with Mulgrave and Kenneth Gordon Maplewood (Evangeline & Hugo)",
+              "indent": 1,
+              "bullet_marker": null,
+              "body": "Follow up with Mulgrave and Kenneth Gordon Maplewood (Evangeline & Hugo)",
+              "checkbox": false
+            },
+            {
+              "text": "Invitation to Tracey Lee (Closing Ceremony) Frankie",
+              "indent": 1,
+              "bullet_marker": null,
+              "body": "Invitation to Tracey Lee (Closing Ceremony) Frankie",
+              "checkbox": false
+            },
+            {
+              "text": "Invitation to Mr. Anthony (Closing Ceremony) Frankie",
+              "indent": 1,
+              "bullet_marker": null,
+              "body": "Invitation to Mr. Anthony (Closing Ceremony) Frankie",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b0bf803730892707",
+            "title": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "updated_at": "2026-06-30T07:54:34.943408+00:00"
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,721 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_4__May_13_2025_20260630_045955.pdf",
+    "mode": "llm",
+    "pipeline": "candidates-shadow",
+    "classification": "meeting_minutes",
+    "generated_at": "2026-06-30T05:00:05.117617+00:00",
+    "action_item_count": 21
+  },
+  "action_items": [
+    {
+      "object_id": "memory_609b58a3b9c5",
+      "type": "action_item",
+      "title": "Start sending out director acceptances.",
+      "summary": "James should start sending out director acceptances.",
+      "owner_names": [
+        "James"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_1"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_1",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Document b. James to start sending out director acceptances",
+          "locator": "file_9389a0b35cf38f8a#section-1",
+          "page": 1,
+          "url": null
+        }
+      ],
+      "quote": "Document b. James to start sending out director acceptances",
+      "confidence": 0.84
+    },
+    {
+      "object_id": "memory_e19ff96ea5af",
+      "type": "action_item",
+      "title": "Finish sec bios by Thursday.",
+      "summary": "Frankie, James, Owen, Quinton, and Evangeline should finish sec bios by Thursday.",
+      "owner_names": [
+        "Frankie",
+        "James",
+        "Owen",
+        "Quinton",
+        "Evangeline"
+      ],
+      "due_date": "2025-05-15",
+      "date": "2025-05-15",
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_3"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_3",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "5.   Sec bios",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "5. Sec bios a. Finish by Thursday!!! (so that the website can be updated all at once) i. Frankie, James, Owen, Quinton, Evangeline",
+          "locator": "file_9389a0b35cf38f8a#section-3",
+          "page": 1,
+          "url": null
+        }
+      ],
+      "quote": "5. Sec bios a. Finish by Thursday!!! (so that the website can be updated all at once) i. Frankie, James, Owen, Quinton, Evangeline",
+      "confidence": 0.84
+    },
+    {
+      "object_id": "memory_979c73f360d8",
+      "type": "action_item",
+      "title": "Get a rough list of what to order for catering.",
+      "summary": "Elliott should get a rough list of what to order for catering.",
+      "owner_names": [
+        "Elliott"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_5",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "7.   Delegate social contact catering (Nest)",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "7. Delegate social contact catering (Nest) a. Elliott - get a rough list of what to order",
+          "locator": "file_9389a0b35cf38f8a#section-5",
+          "page": 1,
+          "url": null
+        }
+      ],
+      "quote": "7. Delegate social contact catering (Nest) a. Elliott - get a rough list of what to order",
+      "confidence": 0.84
+    },
+    {
+      "object_id": "memory_3bb5cb56dfff",
+      "type": "action_item",
+      "title": "Look through materials left from last year.",
+      "summary": "Owen should look through materials left from last year.",
+      "owner_names": [
+        "Owen"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "9.  Go through materials left from last year",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "9. Go through materials left from last year a. Owen look on his own time",
+          "locator": "file_9389a0b35cf38f8a#section-7",
+          "page": 2,
+          "url": null
+        }
+      ],
+      "quote": "9. Go through materials left from last year a. Owen look on his own time",
+      "confidence": 0.84
+    },
+    {
+      "object_id": "memory_9b7cd5af4f70",
+      "type": "action_item",
+      "title": "Write a letter to parents by the end of the week.",
+      "summary": "Mrs. Haider should write a letter to parents by the end of the week.",
+      "owner_names": [
+        "Mrs. Haider"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "9.  Go through materials left from last year",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "9. Go through materials left from last year i. Mrs Haider will do a letter to parents by the end of the week",
+          "locator": "file_9389a0b35cf38f8a#section-7",
+          "page": 2,
+          "url": null
+        }
+      ],
+      "quote": "9. Go through materials left from last year i. Mrs Haider will do a letter to parents by the end of the week",
+      "confidence": 0.84
+    },
+    {
+      "object_id": "memory_b6f3c70eea9c",
+      "type": "action_item",
+      "title": "Send follow-up to the Winnipeg school.",
+      "summary": "Owen should send follow-up to the Winnipeg school.",
+      "owner_names": [
+        "Owen"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "9.  Go through materials left from last year",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "9. Go through materials left from last year ii. Owen to send follow up (very excited to have you, help with hotels",
+          "locator": "file_9389a0b35cf38f8a#section-7",
+          "page": 2,
+          "url": null
+        }
+      ],
+      "quote": "9. Go through materials left from last year ii. Owen to send follow up (very excited to have you, help with hotels",
+      "confidence": 0.84
+    },
+    {
+      "object_id": "memory_e5066bac9c7d",
+      "type": "action_item",
+      "title": "Try to get hotels cheaper.",
+      "summary": "Mrs. Haider should try to get hotels cheaper.",
+      "owner_names": [
+        "Mrs. Haider"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "9.  Go through materials left from last year",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "9. Go through materials left from last year 2. Mrs Haider try to get hotels cheaper",
+          "locator": "file_9389a0b35cf38f8a#section-7",
+          "page": 2,
+          "url": null
+        }
+      ],
+      "quote": "9. Go through materials left from last year 2. Mrs Haider try to get hotels cheaper",
+      "confidence": 0.84
+    },
+    {
+      "object_id": "memory_b43d23aec753",
+      "type": "action_item",
+      "title": "Reach out to island schools.",
+      "summary": "The team should reach out to island schools.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "9.  Go through materials left from last year",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "9. Go through materials left from last year iii. Reach out to island schools - questions about registration go to",
+          "locator": "file_9389a0b35cf38f8a#section-7",
+          "page": 2,
+          "url": null
+        }
+      ],
+      "quote": "9. Go through materials left from last year iii. Reach out to island schools - questions about registration go to",
+      "confidence": 0.84
+    },
+    {
+      "object_id": "memory_202a73f19dca",
+      "type": "action_item",
+      "title": "Look through pin options and vote.",
+      "summary": "The team should look through pin options and vote.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "9.  Go through materials left from last year",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "9. Go through materials left from last year a. Owen look on his own time",
+          "locator": "file_9389a0b35cf38f8a#section-7",
+          "page": 2,
+          "url": null
+        }
+      ],
+      "quote": "9. Go through materials left from last year a. Owen look on his own time",
+      "confidence": 0.84
+    },
+    {
+      "object_id": "memory_76188e661a4e",
+      "type": "action_item",
+      "title": "Consider a guest speaker for junior.",
+      "summary": "Hugo and Evangeline should consider a guest speaker for junior.",
+      "owner_names": [
+        "Hugo",
+        "Evangeline"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Document i. Guest speaker for junior",
+          "locator": "file_9389a0b35cf38f8a#section-8",
+          "page": 3,
+          "url": null
+        }
+      ],
+      "quote": "Document i. Guest speaker for junior",
+      "confidence": 0.84
+    },
+    {
+      "object_id": "memory_7dc1196a49c5",
+      "type": "action_item",
+      "title": "Put the registration link on the website before the end of the long weekend.",
+      "summary": "The team should put the registration link on the website before the end of the long weekend.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Document j. Registration link up before end of long weekend on website",
+          "locator": "file_9389a0b35cf38f8a#section-8",
+          "page": 3,
+          "url": null
+        }
+      ],
+      "quote": "Document j. Registration link up before end of long weekend on website",
+      "confidence": 0.84
+    },
+    {
+      "object_id": "memory_faa7c8e9a76f",
+      "type": "action_item",
+      "title": "Meet at lunch on Tuesday instead of that night.",
+      "summary": "The team should meet at lunch on Tuesday instead of that night.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "To-Do List",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "To-Do List Ann to ﬁnish website as much as possible by next week (picture dependent) Meet at lunch on Tuesday instead of that night",
+          "locator": "file_9389a0b35cf38f8a#section-10",
+          "page": 3,
+          "url": null
+        }
+      ],
+      "quote": "To-Do List Ann to ﬁnish website as much as possible by next week (picture dependent) Meet at lunch on Tuesday instead of that night",
+      "confidence": 0.84
+    },
+    {
+      "object_id": "memory_045b42d4a57b",
+      "type": "action_item",
+      "title": "Send out director acceptances once interviews are done.",
+      "summary": "James should send out director acceptances once interviews are done.",
+      "owner_names": [
+        "James"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "To-Do List",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "To-Do List James: send out director acceptances once interviews are done",
+          "locator": "file_9389a0b35cf38f8a#section-10",
+          "page": 3,
+          "url": null
+        }
+      ],
+      "quote": "To-Do List James: send out director acceptances once interviews are done",
+      "confidence": 0.78
+    },
+    {
+      "object_id": "memory_6671315bbef9",
+      "type": "action_item",
+      "title": "Meet tomorrow recess at basketball court - attempt #1.",
+      "summary": "The team should meet tomorrow recess at basketball court - attempt #1.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "To-Do List",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "To-Do List Sec Bios (Frankie, James, Owen, Quinton, Evangeline) - Thursday May 15 Meet tomorrow recess at basketball court - attempt #1",
+          "locator": "file_9389a0b35cf38f8a#section-10",
+          "page": 3,
+          "url": null
+        }
+      ],
+      "quote": "To-Do List Sec Bios (Frankie, James, Owen, Quinton, Evangeline) - Thursday May 15 Meet tomorrow recess at basketball court - attempt #1",
+      "confidence": 0.78
+    },
+    {
+      "object_id": "memory_804a12af801f",
+      "type": "action_item",
+      "title": "Get a list of what to order.",
+      "summary": "Elliott should get a list of what to order.",
+      "owner_names": [
+        "Elliott"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "To-Do List",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "To-Do List Elliott: get a list of what to order",
+          "locator": "file_9389a0b35cf38f8a#section-10",
+          "page": 3,
+          "url": null
+        }
+      ],
+      "quote": "To-Do List Elliott: get a list of what to order",
+      "confidence": 0.78
+    },
+    {
+      "object_id": "memory_122a765ae352",
+      "type": "action_item",
+      "title": "Look through old materials.",
+      "summary": "Owen should look through old materials.",
+      "owner_names": [
+        "Owen"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "To-Do List",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "To-Do List Owen to look through old materials",
+          "locator": "file_9389a0b35cf38f8a#section-10",
+          "page": 3,
+          "url": null
+        }
+      ],
+      "quote": "To-Do List Owen to look through old materials",
+      "confidence": 0.78
+    },
+    {
+      "object_id": "memory_f88e64e39428",
+      "type": "action_item",
+      "title": "Go to the rest of the homerooms (2A Thursday).",
+      "summary": "Ann and Hugo should go to the rest of the homerooms (2A Thursday).",
+      "owner_names": [
+        "Ann",
+        "Hugo"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "To-Do List",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "To-Do List Ann and Hugo to go to the rest of the homerooms (2A Thursday)",
+          "locator": "file_9389a0b35cf38f8a#section-10",
+          "page": 3,
+          "url": null
+        }
+      ],
+      "quote": "To-Do List Ann and Hugo to go to the rest of the homerooms (2A Thursday)",
+      "confidence": 0.78
+    },
+    {
+      "object_id": "memory_750b9eacc091",
+      "type": "action_item",
+      "title": "Look at pin options.",
+      "summary": "The team should look at pin options.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "To-Do List",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "To-Do List Ann and Hugo to go to the rest of the homerooms (2A Thursday) Everyone to look at pin options",
+          "locator": "file_9389a0b35cf38f8a#section-10",
+          "page": 3,
+          "url": null
+        }
+      ],
+      "quote": "To-Do List Ann and Hugo to go to the rest of the homerooms (2A Thursday) Everyone to look at pin options",
+      "confidence": 0.78
+    },
+    {
+      "object_id": "memory_877a1c94ec19",
+      "type": "action_item",
+      "title": "Consider guest speaker for junior.",
+      "summary": "Hugo and Evangeline should consider guest speaker for junior.",
+      "owner_names": [
+        "Hugo",
+        "Evangeline"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "To-Do List",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "To-Do List Hugo and Evangeline to consider guest speaker for junior",
+          "locator": "file_9389a0b35cf38f8a#section-10",
+          "page": 3,
+          "url": null
+        }
+      ],
+      "quote": "To-Do List Hugo and Evangeline to consider guest speaker for junior",
+      "confidence": 0.78
+    },
+    {
+      "object_id": "memory_e2f403f51620",
+      "type": "action_item",
+      "title": "Finish website as much as possible by next week (picture dependent).",
+      "summary": "Ann should finish website as much as possible by next week (picture dependent).",
+      "owner_names": [
+        "Ann"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "To-Do List",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "To-Do List Ann to ﬁnish website as much as possible by next week (picture dependent)",
+          "locator": "file_9389a0b35cf38f8a#section-10",
+          "page": 3,
+          "url": null
+        }
+      ],
+      "quote": "To-Do List Ann to ﬁnish website as much as possible by next week (picture dependent)",
+      "confidence": 0.78
+    },
+    {
+      "object_id": "memory_9d967f16ac73",
+      "type": "action_item",
+      "title": "Fill in interview information for James.",
+      "summary": "Interviewers should fill in interview information for James.",
+      "owner_names": [
+        "Interviewers"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "To-Do List",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "To-Do List If you did an interview please ﬁll in information so James knows",
+          "locator": "file_9389a0b35cf38f8a#section-10",
+          "page": 3,
+          "url": null
+        }
+      ],
+      "quote": "To-Do List If you did an interview please ﬁll in information so James knows",
+      "confidence": 0.78
+    }
+  ]
+}

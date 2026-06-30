@@ -1,0 +1,23 @@
+{
+  "workspace": "AcmeAI",
+  "messages": [
+    {
+      "channel": "growth",
+      "channel_id": "C_GROWTH",
+      "thread_ts": "1800001000.000100",
+      "ts": "1800001000.000100",
+      "speaker": "Maya Chen",
+      "speaker_role": "Head of Growth",
+      "text": "We should move the lifecycle email vendor review into the onboarding workstream because the launch checklist depends on it."
+    },
+    {
+      "channel": "growth",
+      "channel_id": "C_GROWTH",
+      "thread_ts": "1800001000.000100",
+      "ts": "1800001060.000200",
+      "speaker": "Nora Patel",
+      "speaker_role": "COO",
+      "text": "Approved: move the lifecycle email vendor review into the onboarding workstream. No owner assigned yet."
+    }
+  ]
+}

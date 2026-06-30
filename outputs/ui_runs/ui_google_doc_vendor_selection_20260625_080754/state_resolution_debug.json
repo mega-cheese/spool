@@ -1,0 +1,54 @@
+{
+  "resolver_version": "shadow-0.1",
+  "candidate_count": 1,
+  "states": {
+    "candidate_dec_0ee58ff3cf": "confirmed"
+  },
+  "claim_ownership": [
+    {
+      "claim": "LaunchDarkly supports audit requirements and the SDK is already tested in staging.",
+      "category": "reasoning",
+      "target_name": "LaunchDarkly",
+      "target_role": "chosen_option"
+    },
+    {
+      "claim": "Higher monthly spend is the accepted tradeoff.",
+      "category": "tradeoffs",
+      "target_name": "LaunchDarkly",
+      "target_role": "chosen_option"
+    },
+    {
+      "claim": "Implementation can finish in about eight business days.",
+      "category": "timelines",
+      "target_name": "LaunchDarkly",
+      "target_role": "chosen_option"
+    },
+    {
+      "claim": "ConfigCat was cheaper.",
+      "category": "comparison",
+      "target_name": "ConfigCat",
+      "target_role": "rejected_alternative"
+    },
+    {
+      "claim": "ConfigCat migration would take longer because the flag evaluation wrapper must be rebuilt.",
+      "category": "timeline",
+      "target_name": "ConfigCat",
+      "target_role": "rejected_alternative"
+    }
+  ],
+  "excluded_from_active_memory": [
+    {
+      "claim": "ConfigCat was cheaper.",
+      "reason": "claim targets rejected alternative",
+      "target_name": "ConfigCat",
+      "target_role": "rejected_alternative"
+    },
+    {
+      "claim": "ConfigCat migration would take longer because the flag evaluation wrapper must be rebuilt.",
+      "reason": "claim targets rejected alternative",
+      "target_name": "ConfigCat",
+      "target_role": "rejected_alternative"
+    }
+  ],
+  "duplicate_pairs": []
+}

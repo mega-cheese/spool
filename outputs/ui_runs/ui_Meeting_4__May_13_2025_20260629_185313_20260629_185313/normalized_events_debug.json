@@ -1,0 +1,2058 @@
+[
+  {
+    "event_id": "uploaded_document_file_9389a0b35cf38f8a_section_1",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9389a0b35cf38f8a#section-1",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9389a0b35cf38f8a",
+      "name": "Meeting_4__May_13_2025_20260629_185313.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9389a0b35cf38f8a",
+      "section_heading": "Document"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T18:53:13.425635+00:00",
+    "content": {
+      "text": "May 13th, 2025\n\nZoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)\n\n\n    1.   Staﬀing\n             a.   Start sending out positions for directors + chairs\n             b.   James to start sending out director acceptances"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9389a0b35cf38f8a#section-1",
+      "quote": "May 13th, 2025\n\nZoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)\n\n\n    1.   Staﬀing\n             a.   Start sending out positions for directors + chairs\n             b.   James to start sending out director acceptances",
+      "workspace": "local_upload",
+      "document_id": "file_9389a0b35cf38f8a",
+      "document_title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+      "section_heading": "Document",
+      "page": 1
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "Document",
+        "text": "May 13th, 2025\n\nZoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)\n\n\n    1.   Staﬀing\n             a.   Start sending out positions for directors + chairs\n             b.   James to start sending out director acceptances",
+        "lines": [
+          {
+            "text": "May 13th, 2025",
+            "indent": 0,
+            "bullet_marker": null,
+            "body": "May 13th, 2025",
+            "checkbox": false
+          },
+          {
+            "text": "Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+            "indent": 0,
+            "bullet_marker": null,
+            "body": "Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+            "checkbox": false
+          },
+          {
+            "text": "1.   Staﬀing",
+            "indent": 4,
+            "bullet_marker": "1.",
+            "body": "Staﬀing",
+            "checkbox": false
+          },
+          {
+            "text": "a.   Start sending out positions for directors + chairs",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Start sending out positions for directors + chairs",
+            "checkbox": false
+          },
+          {
+            "text": "b.   James to start sending out director acceptances",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "James to start sending out director acceptances",
+            "checkbox": false
+          }
+        ],
+        "page": 1
+      },
+      "lines": [
+        {
+          "text": "May 13th, 2025",
+          "indent": 0,
+          "bullet_marker": null,
+          "body": "May 13th, 2025",
+          "checkbox": false
+        },
+        {
+          "text": "Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+          "indent": 0,
+          "bullet_marker": null,
+          "body": "Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+          "checkbox": false
+        },
+        {
+          "text": "1.   Staﬀing",
+          "indent": 4,
+          "bullet_marker": "1.",
+          "body": "Staﬀing",
+          "checkbox": false
+        },
+        {
+          "text": "a.   Start sending out positions for directors + chairs",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Start sending out positions for directors + chairs",
+          "checkbox": false
+        },
+        {
+          "text": "b.   James to start sending out director acceptances",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "James to start sending out director acceptances",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9389a0b35cf38f8a",
+        "title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_4__May_13_2025_20260629_185313.pdf",
+        "updated_at": "2026-06-29T18:53:13.425635+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9389a0b35cf38f8a_section_2",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9389a0b35cf38f8a#section-2",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9389a0b35cf38f8a",
+      "name": "Meeting_4__May_13_2025_20260629_185313.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9389a0b35cf38f8a",
+      "section_heading": "2.   Committee List"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T18:53:13.425635+00:00",
+    "content": {
+      "text": "a.       Committees\n                     i.    Wildcard for a passionate director\n                    ii.    Science council over UNEP\n                    iii.   HOC (Harold?) - US Senate a bit too controversial at the moment\n                                1.  Leaning away from current political views\n             b.   Jr committees?\n             c.   UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate)\n                     i.    Depends on how it plays out - not fantasy football\n                    ii.    FIFA council could be acceptable - VMUN had one\n                                1.  Another option is Olympic Committee\n                    iii.   Don’t want to have to write a whole new backgrounder\n                    iv.    UBC could be more suitable\n                     v.    Director is Cameron Stanger (Chair: John Huang)\n    3.   VYMUN Jr.\n             a.   Let the directors decide\n             b.   3 committees: general, specialized and crisis\n                     i.    Have  to make sure the crisis directors are fully prepared\n                    ii.    Harder to manage younger children - timeliness\n                    iii.   Has to be more structured and approved\n    4.   Conﬁrm theme to put on website\n             a.   The Room Where It Happens\n                     i.    conﬁrmed!"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9389a0b35cf38f8a#section-2",
+      "quote": "a.       Committees\n                     i.    Wildcard for a passionate director\n                    ii.    Science council over UNEP\n                    iii.   HOC (Harold?) - US Senate a bit too controversial at the moment\n                                1.  Leaning away from current political views\n             b.   Jr committees?\n             c.   UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate)\n                     i.    Depends on how it plays out - not fantasy football\n                    ii.    FIFA council could be acceptable - VMUN had one\n                                1.  Another option is Olympic Committee\n                    iii.   Don’t want to have to write a whole new backgrounder\n                    iv.    UBC could be more suitable\n                     v.    Director is Cameron Stanger (Chair: John Huang)\n    3.   VYMUN Jr.\n             a.   Let the directors decide\n             b.   3 committees: general, specialized and crisis\n                     i.    Have  to make sure the crisis directors are fully prepared\n                    ii.    Harder to manage younger children - timeliness\n                    iii.   Has to be more structured and approved\n    4.   Conﬁrm theme to put on website\n             a.   The Room Where It Happens\n                     i.    conﬁrmed!",
+      "workspace": "local_upload",
+      "document_id": "file_9389a0b35cf38f8a",
+      "document_title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+      "section_heading": "2.   Committee List",
+      "page": 1
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "2.   Committee List",
+        "text": "a.       Committees\n                     i.    Wildcard for a passionate director\n                    ii.    Science council over UNEP\n                    iii.   HOC (Harold?) - US Senate a bit too controversial at the moment\n                                1.  Leaning away from current political views\n             b.   Jr committees?\n             c.   UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate)\n                     i.    Depends on how it plays out - not fantasy football\n                    ii.    FIFA council could be acceptable - VMUN had one\n                                1.  Another option is Olympic Committee\n                    iii.   Don’t want to have to write a whole new backgrounder\n                    iv.    UBC could be more suitable\n                     v.    Director is Cameron Stanger (Chair: John Huang)\n    3.   VYMUN Jr.\n             a.   Let the directors decide\n             b.   3 committees: general, specialized and crisis\n                     i.    Have  to make sure the crisis directors are fully prepared\n                    ii.    Harder to manage younger children - timeliness\n                    iii.   Has to be more structured and approved\n    4.   Conﬁrm theme to put on website\n             a.   The Room Where It Happens\n                     i.    conﬁrmed!",
+        "lines": [
+          {
+            "text": "a.       Committees",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Committees",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Wildcard for a passionate director",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Wildcard for a passionate director",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    Science council over UNEP",
+            "indent": 20,
+            "bullet_marker": "ii.",
+            "body": "Science council over UNEP",
+            "checkbox": false
+          },
+          {
+            "text": "iii.   HOC (Harold?) - US Senate a bit too controversial at the moment",
+            "indent": 20,
+            "bullet_marker": "iii.",
+            "body": "HOC (Harold?) - US Senate a bit too controversial at the moment",
+            "checkbox": false
+          },
+          {
+            "text": "1.  Leaning away from current political views",
+            "indent": 32,
+            "bullet_marker": "1.",
+            "body": "Leaning away from current political views",
+            "checkbox": false
+          },
+          {
+            "text": "b.   Jr committees?",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "Jr committees?",
+            "checkbox": false
+          },
+          {
+            "text": "c.   UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate)",
+            "indent": 13,
+            "bullet_marker": "c.",
+            "body": "UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate)",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Depends on how it plays out - not fantasy football",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Depends on how it plays out - not fantasy football",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    FIFA council could be acceptable - VMUN had one",
+            "indent": 20,
+            "bullet_marker": "ii.",
+            "body": "FIFA council could be acceptable - VMUN had one",
+            "checkbox": false
+          },
+          {
+            "text": "1.  Another option is Olympic Committee",
+            "indent": 32,
+            "bullet_marker": "1.",
+            "body": "Another option is Olympic Committee",
+            "checkbox": false
+          },
+          {
+            "text": "iii.   Don’t want to have to write a whole new backgrounder",
+            "indent": 20,
+            "bullet_marker": "iii.",
+            "body": "Don’t want to have to write a whole new backgrounder",
+            "checkbox": false
+          },
+          {
+            "text": "iv.    UBC could be more suitable",
+            "indent": 20,
+            "bullet_marker": "iv.",
+            "body": "UBC could be more suitable",
+            "checkbox": false
+          },
+          {
+            "text": "v.    Director is Cameron Stanger (Chair: John Huang)",
+            "indent": 21,
+            "bullet_marker": "v.",
+            "body": "Director is Cameron Stanger (Chair: John Huang)",
+            "checkbox": false
+          },
+          {
+            "text": "3.   VYMUN Jr.",
+            "indent": 4,
+            "bullet_marker": "3.",
+            "body": "VYMUN Jr.",
+            "checkbox": false
+          },
+          {
+            "text": "a.   Let the directors decide",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Let the directors decide",
+            "checkbox": false
+          },
+          {
+            "text": "b.   3 committees: general, specialized and crisis",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "3 committees: general, specialized and crisis",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Have  to make sure the crisis directors are fully prepared",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Have  to make sure the crisis directors are fully prepared",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    Harder to manage younger children - timeliness",
+            "indent": 20,
+            "bullet_marker": "ii.",
+            "body": "Harder to manage younger children - timeliness",
+            "checkbox": false
+          },
+          {
+            "text": "iii.   Has to be more structured and approved",
+            "indent": 20,
+            "bullet_marker": "iii.",
+            "body": "Has to be more structured and approved",
+            "checkbox": false
+          },
+          {
+            "text": "4.   Conﬁrm theme to put on website",
+            "indent": 4,
+            "bullet_marker": "4.",
+            "body": "Conﬁrm theme to put on website",
+            "checkbox": false
+          },
+          {
+            "text": "a.   The Room Where It Happens",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "The Room Where It Happens",
+            "checkbox": false
+          },
+          {
+            "text": "i.    conﬁrmed!",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "conﬁrmed!",
+            "checkbox": false
+          }
+        ],
+        "page": 1
+      },
+      "lines": [
+        {
+          "text": "a.       Committees",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Committees",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Wildcard for a passionate director",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Wildcard for a passionate director",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    Science council over UNEP",
+          "indent": 20,
+          "bullet_marker": "ii.",
+          "body": "Science council over UNEP",
+          "checkbox": false
+        },
+        {
+          "text": "iii.   HOC (Harold?) - US Senate a bit too controversial at the moment",
+          "indent": 20,
+          "bullet_marker": "iii.",
+          "body": "HOC (Harold?) - US Senate a bit too controversial at the moment",
+          "checkbox": false
+        },
+        {
+          "text": "1.  Leaning away from current political views",
+          "indent": 32,
+          "bullet_marker": "1.",
+          "body": "Leaning away from current political views",
+          "checkbox": false
+        },
+        {
+          "text": "b.   Jr committees?",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "Jr committees?",
+          "checkbox": false
+        },
+        {
+          "text": "c.   UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate)",
+          "indent": 13,
+          "bullet_marker": "c.",
+          "body": "UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate)",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Depends on how it plays out - not fantasy football",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Depends on how it plays out - not fantasy football",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    FIFA council could be acceptable - VMUN had one",
+          "indent": 20,
+          "bullet_marker": "ii.",
+          "body": "FIFA council could be acceptable - VMUN had one",
+          "checkbox": false
+        },
+        {
+          "text": "1.  Another option is Olympic Committee",
+          "indent": 32,
+          "bullet_marker": "1.",
+          "body": "Another option is Olympic Committee",
+          "checkbox": false
+        },
+        {
+          "text": "iii.   Don’t want to have to write a whole new backgrounder",
+          "indent": 20,
+          "bullet_marker": "iii.",
+          "body": "Don’t want to have to write a whole new backgrounder",
+          "checkbox": false
+        },
+        {
+          "text": "iv.    UBC could be more suitable",
+          "indent": 20,
+          "bullet_marker": "iv.",
+          "body": "UBC could be more suitable",
+          "checkbox": false
+        },
+        {
+          "text": "v.    Director is Cameron Stanger (Chair: John Huang)",
+          "indent": 21,
+          "bullet_marker": "v.",
+          "body": "Director is Cameron Stanger (Chair: John Huang)",
+          "checkbox": false
+        },
+        {
+          "text": "3.   VYMUN Jr.",
+          "indent": 4,
+          "bullet_marker": "3.",
+          "body": "VYMUN Jr.",
+          "checkbox": false
+        },
+        {
+          "text": "a.   Let the directors decide",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Let the directors decide",
+          "checkbox": false
+        },
+        {
+          "text": "b.   3 committees: general, specialized and crisis",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "3 committees: general, specialized and crisis",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Have  to make sure the crisis directors are fully prepared",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Have  to make sure the crisis directors are fully prepared",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    Harder to manage younger children - timeliness",
+          "indent": 20,
+          "bullet_marker": "ii.",
+          "body": "Harder to manage younger children - timeliness",
+          "checkbox": false
+        },
+        {
+          "text": "iii.   Has to be more structured and approved",
+          "indent": 20,
+          "bullet_marker": "iii.",
+          "body": "Has to be more structured and approved",
+          "checkbox": false
+        },
+        {
+          "text": "4.   Conﬁrm theme to put on website",
+          "indent": 4,
+          "bullet_marker": "4.",
+          "body": "Conﬁrm theme to put on website",
+          "checkbox": false
+        },
+        {
+          "text": "a.   The Room Where It Happens",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "The Room Where It Happens",
+          "checkbox": false
+        },
+        {
+          "text": "i.    conﬁrmed!",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "conﬁrmed!",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9389a0b35cf38f8a",
+        "title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_4__May_13_2025_20260629_185313.pdf",
+        "updated_at": "2026-06-29T18:53:13.425635+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9389a0b35cf38f8a_section_3",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9389a0b35cf38f8a#section-3",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9389a0b35cf38f8a",
+      "name": "Meeting_4__May_13_2025_20260629_185313.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9389a0b35cf38f8a",
+      "section_heading": "5.   Sec bios"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T18:53:13.425635+00:00",
+    "content": {
+      "text": "a.   Finish by Thursday!!! (so that the website can be updated all at once)\n                     i.    Frankie, James, Owen, Quinton, Evangeline"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9389a0b35cf38f8a#section-3",
+      "quote": "a.   Finish by Thursday!!! (so that the website can be updated all at once)\n                     i.    Frankie, James, Owen, Quinton, Evangeline",
+      "workspace": "local_upload",
+      "document_id": "file_9389a0b35cf38f8a",
+      "document_title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+      "section_heading": "5.   Sec bios",
+      "page": 1
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "5.   Sec bios",
+        "text": "a.   Finish by Thursday!!! (so that the website can be updated all at once)\n                     i.    Frankie, James, Owen, Quinton, Evangeline",
+        "lines": [
+          {
+            "text": "a.   Finish by Thursday!!! (so that the website can be updated all at once)",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Finish by Thursday!!! (so that the website can be updated all at once)",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Frankie, James, Owen, Quinton, Evangeline",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Frankie, James, Owen, Quinton, Evangeline",
+            "checkbox": false
+          }
+        ],
+        "page": 1
+      },
+      "lines": [
+        {
+          "text": "a.   Finish by Thursday!!! (so that the website can be updated all at once)",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Finish by Thursday!!! (so that the website can be updated all at once)",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Frankie, James, Owen, Quinton, Evangeline",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Frankie, James, Owen, Quinton, Evangeline",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9389a0b35cf38f8a",
+        "title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_4__May_13_2025_20260629_185313.pdf",
+        "updated_at": "2026-06-29T18:53:13.425635+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9389a0b35cf38f8a_section_4",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9389a0b35cf38f8a#section-4",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9389a0b35cf38f8a",
+      "name": "Meeting_4__May_13_2025_20260629_185313.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9389a0b35cf38f8a",
+      "section_heading": "6.   Secretariat Photos"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T18:53:13.425635+00:00",
+    "content": {
+      "text": "a.   Friday?\n             b.   Tomorrow Recess - meet at basketball court\n             c.   Ceremonial Uniform or business casual\n                     i.    Same area, backdrop, sizing/distance\n                    ii.    Looks more polished"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9389a0b35cf38f8a#section-4",
+      "quote": "a.   Friday?\n             b.   Tomorrow Recess - meet at basketball court\n             c.   Ceremonial Uniform or business casual\n                     i.    Same area, backdrop, sizing/distance\n                    ii.    Looks more polished",
+      "workspace": "local_upload",
+      "document_id": "file_9389a0b35cf38f8a",
+      "document_title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+      "section_heading": "6.   Secretariat Photos",
+      "page": 1
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "6.   Secretariat Photos",
+        "text": "a.   Friday?\n             b.   Tomorrow Recess - meet at basketball court\n             c.   Ceremonial Uniform or business casual\n                     i.    Same area, backdrop, sizing/distance\n                    ii.    Looks more polished",
+        "lines": [
+          {
+            "text": "a.   Friday?",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Friday?",
+            "checkbox": false
+          },
+          {
+            "text": "b.   Tomorrow Recess - meet at basketball court",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "Tomorrow Recess - meet at basketball court",
+            "checkbox": false
+          },
+          {
+            "text": "c.   Ceremonial Uniform or business casual",
+            "indent": 13,
+            "bullet_marker": "c.",
+            "body": "Ceremonial Uniform or business casual",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Same area, backdrop, sizing/distance",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Same area, backdrop, sizing/distance",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    Looks more polished",
+            "indent": 20,
+            "bullet_marker": "ii.",
+            "body": "Looks more polished",
+            "checkbox": false
+          }
+        ],
+        "page": 1
+      },
+      "lines": [
+        {
+          "text": "a.   Friday?",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Friday?",
+          "checkbox": false
+        },
+        {
+          "text": "b.   Tomorrow Recess - meet at basketball court",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "Tomorrow Recess - meet at basketball court",
+          "checkbox": false
+        },
+        {
+          "text": "c.   Ceremonial Uniform or business casual",
+          "indent": 13,
+          "bullet_marker": "c.",
+          "body": "Ceremonial Uniform or business casual",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Same area, backdrop, sizing/distance",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Same area, backdrop, sizing/distance",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    Looks more polished",
+          "indent": 20,
+          "bullet_marker": "ii.",
+          "body": "Looks more polished",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9389a0b35cf38f8a",
+        "title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_4__May_13_2025_20260629_185313.pdf",
+        "updated_at": "2026-06-29T18:53:13.425635+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9389a0b35cf38f8a_section_5",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9389a0b35cf38f8a#section-5",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9389a0b35cf38f8a",
+      "name": "Meeting_4__May_13_2025_20260629_185313.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9389a0b35cf38f8a",
+      "section_heading": "7.   Delegate social contact catering (Nest)"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T18:53:13.425635+00:00",
+    "content": {
+      "text": "a.   Elliott - get a rough list of what to order\n                     i.    Nest last year"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9389a0b35cf38f8a#section-5",
+      "quote": "a.   Elliott - get a rough list of what to order\n                     i.    Nest last year",
+      "workspace": "local_upload",
+      "document_id": "file_9389a0b35cf38f8a",
+      "document_title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+      "section_heading": "7.   Delegate social contact catering (Nest)",
+      "page": 1
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "7.   Delegate social contact catering (Nest)",
+        "text": "a.   Elliott - get a rough list of what to order\n                     i.    Nest last year",
+        "lines": [
+          {
+            "text": "a.   Elliott - get a rough list of what to order",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Elliott - get a rough list of what to order",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Nest last year",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Nest last year",
+            "checkbox": false
+          }
+        ],
+        "page": 1
+      },
+      "lines": [
+        {
+          "text": "a.   Elliott - get a rough list of what to order",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Elliott - get a rough list of what to order",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Nest last year",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Nest last year",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9389a0b35cf38f8a",
+        "title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_4__May_13_2025_20260629_185313.pdf",
+        "updated_at": "2026-06-29T18:53:13.425635+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9389a0b35cf38f8a_section_6",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9389a0b35cf38f8a#section-6",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9389a0b35cf38f8a",
+      "name": "Meeting_4__May_13_2025_20260629_185313.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9389a0b35cf38f8a",
+      "section_heading": "Document"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T18:53:13.425635+00:00",
+    "content": {
+      "text": "ii.    Look at menu - look at old orders\n               iii.    Order more\n                iv.    Get started - long process\n         b.   Order more than last year\n8.  Are we re-designing the logo?\n         a.   Mrs Haider’s sister is redesigning logo for this year - done next week\n         b.   Same colour scheme but jazzed up"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9389a0b35cf38f8a#section-6",
+      "quote": "ii.    Look at menu - look at old orders\n               iii.    Order more\n                iv.    Get started - long process\n         b.   Order more than last year\n8.  Are we re-designing the logo?\n         a.   Mrs Haider’s sister is redesigning logo for this year - done next week\n         b.   Same colour scheme but jazzed up",
+      "workspace": "local_upload",
+      "document_id": "file_9389a0b35cf38f8a",
+      "document_title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+      "section_heading": "Document",
+      "page": 2
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "Document",
+        "text": "ii.    Look at menu - look at old orders\n               iii.    Order more\n                iv.    Get started - long process\n         b.   Order more than last year\n8.  Are we re-designing the logo?\n         a.   Mrs Haider’s sister is redesigning logo for this year - done next week\n         b.   Same colour scheme but jazzed up",
+        "lines": [
+          {
+            "text": "ii.    Look at menu - look at old orders",
+            "indent": 0,
+            "bullet_marker": "ii.",
+            "body": "Look at menu - look at old orders",
+            "checkbox": false
+          },
+          {
+            "text": "iii.    Order more",
+            "indent": 15,
+            "bullet_marker": "iii.",
+            "body": "Order more",
+            "checkbox": false
+          },
+          {
+            "text": "iv.    Get started - long process",
+            "indent": 16,
+            "bullet_marker": "iv.",
+            "body": "Get started - long process",
+            "checkbox": false
+          },
+          {
+            "text": "b.   Order more than last year",
+            "indent": 9,
+            "bullet_marker": "b.",
+            "body": "Order more than last year",
+            "checkbox": false
+          },
+          {
+            "text": "8.  Are we re-designing the logo?",
+            "indent": 0,
+            "bullet_marker": "8.",
+            "body": "Are we re-designing the logo?",
+            "checkbox": false
+          },
+          {
+            "text": "a.   Mrs Haider’s sister is redesigning logo for this year - done next week",
+            "indent": 9,
+            "bullet_marker": "a.",
+            "body": "Mrs Haider’s sister is redesigning logo for this year - done next week",
+            "checkbox": false
+          },
+          {
+            "text": "b.   Same colour scheme but jazzed up",
+            "indent": 9,
+            "bullet_marker": "b.",
+            "body": "Same colour scheme but jazzed up",
+            "checkbox": false
+          }
+        ],
+        "page": 2
+      },
+      "lines": [
+        {
+          "text": "ii.    Look at menu - look at old orders",
+          "indent": 0,
+          "bullet_marker": "ii.",
+          "body": "Look at menu - look at old orders",
+          "checkbox": false
+        },
+        {
+          "text": "iii.    Order more",
+          "indent": 15,
+          "bullet_marker": "iii.",
+          "body": "Order more",
+          "checkbox": false
+        },
+        {
+          "text": "iv.    Get started - long process",
+          "indent": 16,
+          "bullet_marker": "iv.",
+          "body": "Get started - long process",
+          "checkbox": false
+        },
+        {
+          "text": "b.   Order more than last year",
+          "indent": 9,
+          "bullet_marker": "b.",
+          "body": "Order more than last year",
+          "checkbox": false
+        },
+        {
+          "text": "8.  Are we re-designing the logo?",
+          "indent": 0,
+          "bullet_marker": "8.",
+          "body": "Are we re-designing the logo?",
+          "checkbox": false
+        },
+        {
+          "text": "a.   Mrs Haider’s sister is redesigning logo for this year - done next week",
+          "indent": 9,
+          "bullet_marker": "a.",
+          "body": "Mrs Haider’s sister is redesigning logo for this year - done next week",
+          "checkbox": false
+        },
+        {
+          "text": "b.   Same colour scheme but jazzed up",
+          "indent": 9,
+          "bullet_marker": "b.",
+          "body": "Same colour scheme but jazzed up",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9389a0b35cf38f8a",
+        "title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_4__May_13_2025_20260629_185313.pdf",
+        "updated_at": "2026-06-29T18:53:13.425635+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9389a0b35cf38f8a_section_7",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9389a0b35cf38f8a#section-7",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9389a0b35cf38f8a",
+      "name": "Meeting_4__May_13_2025_20260629_185313.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9389a0b35cf38f8a",
+      "section_heading": "9.  Go through materials left from last year"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T18:53:13.425635+00:00",
+    "content": {
+      "text": "a.   Owen look on his own time\n10. Anything else?\n         a.   XX rather than 20? Lean into it? Xceptional, Xtraodinary?\n                 i.    Think about for next time\n         b.   Hugo and Evangeline visits to homeroom?\n                 i.    Mrs Haider will do a letter to parents by the end of the week\n                ii.    Some interest, talked to homerooms\n               iii.    Went over basics - told them they’d get information soon via their\n                       parents\n                iv.    Visiting more this week\n                v.     Should be ﬁne - Evangeline away for this week\n               vi.     Someone want to join Hugo on thursday?\n                            1.  Ann can go\n               vii.    Conﬁrm visits for leftover rooms next week\n         c.   Registration link up for juniors\n                 i.    65 for junior\n                ii.    Last year 150 (early was 135) at regular\n               iii.    This year 165 (early 150) for regular\n         d.   Evangeline made a note for other schools\n         e.   Invite other schools?\n         f.   Mrs Haider and Owen corresponding with school in Winnipeg\n                 i.    May join us\n                ii.    Owen to send follow up (very excited to have you, help with hotels\n                       etc)\n                            1.  School will cover ground transport\n                            2.  Mrs Haider try to get hotels cheaper\n                            3.  Hopefully they would be only responsible for airfare\n               iii.    Reach out to island schools - questions about registration go to\n                       Frankie\n                            1.  Let them know they’re supported\n         g.   Pins to give out- wolves, maple leaves, local company so ﬁgure out soon\n                 i.    Peruse website - do a vote\n         h.   Frankie messaging with Major Calvert\n                 i.    Seems interested\n                ii.    Member of armed forces so may have scheduling issues"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9389a0b35cf38f8a#section-7",
+      "quote": "a.   Owen look on his own time\n10. Anything else?\n         a.   XX rather than 20? Lean into it? Xceptional, Xtraodinary?\n                 i.    Think about for next time\n         b.   Hugo and Evangeline visits to homeroom?\n                 i.    Mrs Haider will do a letter to parents by the end of the week\n                ii.    Some interest, talked to homerooms\n               iii.    Went over basics - told them they’d get information soon via their\n                       parents\n                iv.    Visiting more this week\n                v.     Should be ﬁne - Evangeline away for this week\n               vi.     Someone want to join Hugo on thursday?\n                            1.  Ann can go\n               vii.    Conﬁrm visits for leftover rooms next week\n         c.   Registration link up for juniors\n                 i.    65 for junior\n                ii.    Last year 150 (early was 135) at regular\n               iii.    This year 165 (early 150) for regular\n         d.   Evangeline made a note for other schools\n         e.   Invite other schools?\n         f.   Mrs Haider and Owen corresponding with school in Winnipeg\n                 i.    May join us\n                ii.    Owen to send follow up (very excited to have you, help with hotels\n                       etc)\n                            1.  School will cover ground transport\n                            2.  Mrs Haider try to get hotels cheaper\n                            3.  Hopefully they would be only responsible for airfare\n               iii.    Reach out to island schools - questions about registration go to\n                       Frankie\n                            1.  Let them know they’re supported\n         g.   Pins to give out- wolves, maple leaves, local company so ﬁgure out soon\n                 i.    Peruse website - do a vote\n         h.   Frankie messaging with Major Calvert\n                 i.    Seems interested\n                ii.    Member of armed forces so may have scheduling issues",
+      "workspace": "local_upload",
+      "document_id": "file_9389a0b35cf38f8a",
+      "document_title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+      "section_heading": "9.  Go through materials left from last year",
+      "page": 2
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "9.  Go through materials left from last year",
+        "text": "a.   Owen look on his own time\n10. Anything else?\n         a.   XX rather than 20? Lean into it? Xceptional, Xtraodinary?\n                 i.    Think about for next time\n         b.   Hugo and Evangeline visits to homeroom?\n                 i.    Mrs Haider will do a letter to parents by the end of the week\n                ii.    Some interest, talked to homerooms\n               iii.    Went over basics - told them they’d get information soon via their\n                       parents\n                iv.    Visiting more this week\n                v.     Should be ﬁne - Evangeline away for this week\n               vi.     Someone want to join Hugo on thursday?\n                            1.  Ann can go\n               vii.    Conﬁrm visits for leftover rooms next week\n         c.   Registration link up for juniors\n                 i.    65 for junior\n                ii.    Last year 150 (early was 135) at regular\n               iii.    This year 165 (early 150) for regular\n         d.   Evangeline made a note for other schools\n         e.   Invite other schools?\n         f.   Mrs Haider and Owen corresponding with school in Winnipeg\n                 i.    May join us\n                ii.    Owen to send follow up (very excited to have you, help with hotels\n                       etc)\n                            1.  School will cover ground transport\n                            2.  Mrs Haider try to get hotels cheaper\n                            3.  Hopefully they would be only responsible for airfare\n               iii.    Reach out to island schools - questions about registration go to\n                       Frankie\n                            1.  Let them know they’re supported\n         g.   Pins to give out- wolves, maple leaves, local company so ﬁgure out soon\n                 i.    Peruse website - do a vote\n         h.   Frankie messaging with Major Calvert\n                 i.    Seems interested\n                ii.    Member of armed forces so may have scheduling issues",
+        "lines": [
+          {
+            "text": "a.   Owen look on his own time",
+            "indent": 9,
+            "bullet_marker": "a.",
+            "body": "Owen look on his own time",
+            "checkbox": false
+          },
+          {
+            "text": "10. Anything else?",
+            "indent": 0,
+            "bullet_marker": "10.",
+            "body": "Anything else?",
+            "checkbox": false
+          },
+          {
+            "text": "a.   XX rather than 20? Lean into it? Xceptional, Xtraodinary?",
+            "indent": 9,
+            "bullet_marker": "a.",
+            "body": "XX rather than 20? Lean into it? Xceptional, Xtraodinary?",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Think about for next time",
+            "indent": 17,
+            "bullet_marker": "i.",
+            "body": "Think about for next time",
+            "checkbox": false
+          },
+          {
+            "text": "b.   Hugo and Evangeline visits to homeroom?",
+            "indent": 9,
+            "bullet_marker": "b.",
+            "body": "Hugo and Evangeline visits to homeroom?",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Mrs Haider will do a letter to parents by the end of the week",
+            "indent": 17,
+            "bullet_marker": "i.",
+            "body": "Mrs Haider will do a letter to parents by the end of the week",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    Some interest, talked to homerooms",
+            "indent": 16,
+            "bullet_marker": "ii.",
+            "body": "Some interest, talked to homerooms",
+            "checkbox": false
+          },
+          {
+            "text": "iii.    Went over basics - told them they’d get information soon via their",
+            "indent": 15,
+            "bullet_marker": "iii.",
+            "body": "Went over basics - told them they’d get information soon via their",
+            "checkbox": false
+          },
+          {
+            "text": "parents",
+            "indent": 23,
+            "bullet_marker": null,
+            "body": "parents",
+            "checkbox": false
+          },
+          {
+            "text": "iv.    Visiting more this week",
+            "indent": 16,
+            "bullet_marker": "iv.",
+            "body": "Visiting more this week",
+            "checkbox": false
+          },
+          {
+            "text": "v.     Should be ﬁne - Evangeline away for this week",
+            "indent": 16,
+            "bullet_marker": "v.",
+            "body": "Should be ﬁne - Evangeline away for this week",
+            "checkbox": false
+          },
+          {
+            "text": "vi.     Someone want to join Hugo on thursday?",
+            "indent": 15,
+            "bullet_marker": "vi.",
+            "body": "Someone want to join Hugo on thursday?",
+            "checkbox": false
+          },
+          {
+            "text": "1.  Ann can go",
+            "indent": 28,
+            "bullet_marker": "1.",
+            "body": "Ann can go",
+            "checkbox": false
+          },
+          {
+            "text": "vii.    Conﬁrm visits for leftover rooms next week",
+            "indent": 15,
+            "bullet_marker": "vii.",
+            "body": "Conﬁrm visits for leftover rooms next week",
+            "checkbox": false
+          },
+          {
+            "text": "c.   Registration link up for juniors",
+            "indent": 9,
+            "bullet_marker": "c.",
+            "body": "Registration link up for juniors",
+            "checkbox": false
+          },
+          {
+            "text": "i.    65 for junior",
+            "indent": 17,
+            "bullet_marker": "i.",
+            "body": "65 for junior",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    Last year 150 (early was 135) at regular",
+            "indent": 16,
+            "bullet_marker": "ii.",
+            "body": "Last year 150 (early was 135) at regular",
+            "checkbox": false
+          },
+          {
+            "text": "iii.    This year 165 (early 150) for regular",
+            "indent": 15,
+            "bullet_marker": "iii.",
+            "body": "This year 165 (early 150) for regular",
+            "checkbox": false
+          },
+          {
+            "text": "d.   Evangeline made a note for other schools",
+            "indent": 9,
+            "bullet_marker": "d.",
+            "body": "Evangeline made a note for other schools",
+            "checkbox": false
+          },
+          {
+            "text": "e.   Invite other schools?",
+            "indent": 9,
+            "bullet_marker": "e.",
+            "body": "Invite other schools?",
+            "checkbox": false
+          },
+          {
+            "text": "f.   Mrs Haider and Owen corresponding with school in Winnipeg",
+            "indent": 9,
+            "bullet_marker": "f.",
+            "body": "Mrs Haider and Owen corresponding with school in Winnipeg",
+            "checkbox": false
+          },
+          {
+            "text": "i.    May join us",
+            "indent": 17,
+            "bullet_marker": "i.",
+            "body": "May join us",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    Owen to send follow up (very excited to have you, help with hotels",
+            "indent": 16,
+            "bullet_marker": "ii.",
+            "body": "Owen to send follow up (very excited to have you, help with hotels",
+            "checkbox": false
+          },
+          {
+            "text": "etc)",
+            "indent": 23,
+            "bullet_marker": null,
+            "body": "etc)",
+            "checkbox": false
+          },
+          {
+            "text": "1.  School will cover ground transport",
+            "indent": 28,
+            "bullet_marker": "1.",
+            "body": "School will cover ground transport",
+            "checkbox": false
+          },
+          {
+            "text": "2.  Mrs Haider try to get hotels cheaper",
+            "indent": 28,
+            "bullet_marker": "2.",
+            "body": "Mrs Haider try to get hotels cheaper",
+            "checkbox": false
+          },
+          {
+            "text": "3.  Hopefully they would be only responsible for airfare",
+            "indent": 28,
+            "bullet_marker": "3.",
+            "body": "Hopefully they would be only responsible for airfare",
+            "checkbox": false
+          },
+          {
+            "text": "iii.    Reach out to island schools - questions about registration go to",
+            "indent": 15,
+            "bullet_marker": "iii.",
+            "body": "Reach out to island schools - questions about registration go to",
+            "checkbox": false
+          },
+          {
+            "text": "Frankie",
+            "indent": 23,
+            "bullet_marker": null,
+            "body": "Frankie",
+            "checkbox": false
+          },
+          {
+            "text": "1.  Let them know they’re supported",
+            "indent": 28,
+            "bullet_marker": "1.",
+            "body": "Let them know they’re supported",
+            "checkbox": false
+          },
+          {
+            "text": "g.   Pins to give out- wolves, maple leaves, local company so ﬁgure out soon",
+            "indent": 9,
+            "bullet_marker": "g.",
+            "body": "Pins to give out- wolves, maple leaves, local company so ﬁgure out soon",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Peruse website - do a vote",
+            "indent": 17,
+            "bullet_marker": "i.",
+            "body": "Peruse website - do a vote",
+            "checkbox": false
+          },
+          {
+            "text": "h.   Frankie messaging with Major Calvert",
+            "indent": 9,
+            "bullet_marker": "h.",
+            "body": "Frankie messaging with Major Calvert",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Seems interested",
+            "indent": 17,
+            "bullet_marker": "i.",
+            "body": "Seems interested",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    Member of armed forces so may have scheduling issues",
+            "indent": 16,
+            "bullet_marker": "ii.",
+            "body": "Member of armed forces so may have scheduling issues",
+            "checkbox": false
+          }
+        ],
+        "page": 2
+      },
+      "lines": [
+        {
+          "text": "a.   Owen look on his own time",
+          "indent": 9,
+          "bullet_marker": "a.",
+          "body": "Owen look on his own time",
+          "checkbox": false
+        },
+        {
+          "text": "10. Anything else?",
+          "indent": 0,
+          "bullet_marker": "10.",
+          "body": "Anything else?",
+          "checkbox": false
+        },
+        {
+          "text": "a.   XX rather than 20? Lean into it? Xceptional, Xtraodinary?",
+          "indent": 9,
+          "bullet_marker": "a.",
+          "body": "XX rather than 20? Lean into it? Xceptional, Xtraodinary?",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Think about for next time",
+          "indent": 17,
+          "bullet_marker": "i.",
+          "body": "Think about for next time",
+          "checkbox": false
+        },
+        {
+          "text": "b.   Hugo and Evangeline visits to homeroom?",
+          "indent": 9,
+          "bullet_marker": "b.",
+          "body": "Hugo and Evangeline visits to homeroom?",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Mrs Haider will do a letter to parents by the end of the week",
+          "indent": 17,
+          "bullet_marker": "i.",
+          "body": "Mrs Haider will do a letter to parents by the end of the week",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    Some interest, talked to homerooms",
+          "indent": 16,
+          "bullet_marker": "ii.",
+          "body": "Some interest, talked to homerooms",
+          "checkbox": false
+        },
+        {
+          "text": "iii.    Went over basics - told them they’d get information soon via their",
+          "indent": 15,
+          "bullet_marker": "iii.",
+          "body": "Went over basics - told them they’d get information soon via their",
+          "checkbox": false
+        },
+        {
+          "text": "parents",
+          "indent": 23,
+          "bullet_marker": null,
+          "body": "parents",
+          "checkbox": false
+        },
+        {
+          "text": "iv.    Visiting more this week",
+          "indent": 16,
+          "bullet_marker": "iv.",
+          "body": "Visiting more this week",
+          "checkbox": false
+        },
+        {
+          "text": "v.     Should be ﬁne - Evangeline away for this week",
+          "indent": 16,
+          "bullet_marker": "v.",
+          "body": "Should be ﬁne - Evangeline away for this week",
+          "checkbox": false
+        },
+        {
+          "text": "vi.     Someone want to join Hugo on thursday?",
+          "indent": 15,
+          "bullet_marker": "vi.",
+          "body": "Someone want to join Hugo on thursday?",
+          "checkbox": false
+        },
+        {
+          "text": "1.  Ann can go",
+          "indent": 28,
+          "bullet_marker": "1.",
+          "body": "Ann can go",
+          "checkbox": false
+        },
+        {
+          "text": "vii.    Conﬁrm visits for leftover rooms next week",
+          "indent": 15,
+          "bullet_marker": "vii.",
+          "body": "Conﬁrm visits for leftover rooms next week",
+          "checkbox": false
+        },
+        {
+          "text": "c.   Registration link up for juniors",
+          "indent": 9,
+          "bullet_marker": "c.",
+          "body": "Registration link up for juniors",
+          "checkbox": false
+        },
+        {
+          "text": "i.    65 for junior",
+          "indent": 17,
+          "bullet_marker": "i.",
+          "body": "65 for junior",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    Last year 150 (early was 135) at regular",
+          "indent": 16,
+          "bullet_marker": "ii.",
+          "body": "Last year 150 (early was 135) at regular",
+          "checkbox": false
+        },
+        {
+          "text": "iii.    This year 165 (early 150) for regular",
+          "indent": 15,
+          "bullet_marker": "iii.",
+          "body": "This year 165 (early 150) for regular",
+          "checkbox": false
+        },
+        {
+          "text": "d.   Evangeline made a note for other schools",
+          "indent": 9,
+          "bullet_marker": "d.",
+          "body": "Evangeline made a note for other schools",
+          "checkbox": false
+        },
+        {
+          "text": "e.   Invite other schools?",
+          "indent": 9,
+          "bullet_marker": "e.",
+          "body": "Invite other schools?",
+          "checkbox": false
+        },
+        {
+          "text": "f.   Mrs Haider and Owen corresponding with school in Winnipeg",
+          "indent": 9,
+          "bullet_marker": "f.",
+          "body": "Mrs Haider and Owen corresponding with school in Winnipeg",
+          "checkbox": false
+        },
+        {
+          "text": "i.    May join us",
+          "indent": 17,
+          "bullet_marker": "i.",
+          "body": "May join us",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    Owen to send follow up (very excited to have you, help with hotels",
+          "indent": 16,
+          "bullet_marker": "ii.",
+          "body": "Owen to send follow up (very excited to have you, help with hotels",
+          "checkbox": false
+        },
+        {
+          "text": "etc)",
+          "indent": 23,
+          "bullet_marker": null,
+          "body": "etc)",
+          "checkbox": false
+        },
+        {
+          "text": "1.  School will cover ground transport",
+          "indent": 28,
+          "bullet_marker": "1.",
+          "body": "School will cover ground transport",
+          "checkbox": false
+        },
+        {
+          "text": "2.  Mrs Haider try to get hotels cheaper",
+          "indent": 28,
+          "bullet_marker": "2.",
+          "body": "Mrs Haider try to get hotels cheaper",
+          "checkbox": false
+        },
+        {
+          "text": "3.  Hopefully they would be only responsible for airfare",
+          "indent": 28,
+          "bullet_marker": "3.",
+          "body": "Hopefully they would be only responsible for airfare",
+          "checkbox": false
+        },
+        {
+          "text": "iii.    Reach out to island schools - questions about registration go to",
+          "indent": 15,
+          "bullet_marker": "iii.",
+          "body": "Reach out to island schools - questions about registration go to",
+          "checkbox": false
+        },
+        {
+          "text": "Frankie",
+          "indent": 23,
+          "bullet_marker": null,
+          "body": "Frankie",
+          "checkbox": false
+        },
+        {
+          "text": "1.  Let them know they’re supported",
+          "indent": 28,
+          "bullet_marker": "1.",
+          "body": "Let them know they’re supported",
+          "checkbox": false
+        },
+        {
+          "text": "g.   Pins to give out- wolves, maple leaves, local company so ﬁgure out soon",
+          "indent": 9,
+          "bullet_marker": "g.",
+          "body": "Pins to give out- wolves, maple leaves, local company so ﬁgure out soon",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Peruse website - do a vote",
+          "indent": 17,
+          "bullet_marker": "i.",
+          "body": "Peruse website - do a vote",
+          "checkbox": false
+        },
+        {
+          "text": "h.   Frankie messaging with Major Calvert",
+          "indent": 9,
+          "bullet_marker": "h.",
+          "body": "Frankie messaging with Major Calvert",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Seems interested",
+          "indent": 17,
+          "bullet_marker": "i.",
+          "body": "Seems interested",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    Member of armed forces so may have scheduling issues",
+          "indent": 16,
+          "bullet_marker": "ii.",
+          "body": "Member of armed forces so may have scheduling issues",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9389a0b35cf38f8a",
+        "title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_4__May_13_2025_20260629_185313.pdf",
+        "updated_at": "2026-06-29T18:53:13.425635+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9389a0b35cf38f8a_section_8",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9389a0b35cf38f8a#section-8",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9389a0b35cf38f8a",
+      "name": "Meeting_4__May_13_2025_20260629_185313.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9389a0b35cf38f8a",
+      "section_heading": "Document"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T18:53:13.425635+00:00",
+    "content": {
+      "text": "iii.   Flexible, presentation can be how he wants (we can support)\n                    iv.    Beaded poppy through the poppy store as a gift\n             i.   Guest speaker for junior\n             j.   Registration link up before end of long weekend on website\n             k.   Cabaret night\n                     i.    Meet at lunch tuesday?\n                     ii.   Boland and Haider\n\nDavid Bonin,"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9389a0b35cf38f8a#section-8",
+      "quote": "iii.   Flexible, presentation can be how he wants (we can support)\n                    iv.    Beaded poppy through the poppy store as a gift\n             i.   Guest speaker for junior\n             j.   Registration link up before end of long weekend on website\n             k.   Cabaret night\n                     i.    Meet at lunch tuesday?\n                     ii.   Boland and Haider\n\nDavid Bonin,",
+      "workspace": "local_upload",
+      "document_id": "file_9389a0b35cf38f8a",
+      "document_title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+      "section_heading": "Document",
+      "page": 3
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "Document",
+        "text": "iii.   Flexible, presentation can be how he wants (we can support)\n                    iv.    Beaded poppy through the poppy store as a gift\n             i.   Guest speaker for junior\n             j.   Registration link up before end of long weekend on website\n             k.   Cabaret night\n                     i.    Meet at lunch tuesday?\n                     ii.   Boland and Haider\n\nDavid Bonin,",
+        "lines": [
+          {
+            "text": "iii.   Flexible, presentation can be how he wants (we can support)",
+            "indent": 0,
+            "bullet_marker": "iii.",
+            "body": "Flexible, presentation can be how he wants (we can support)",
+            "checkbox": false
+          },
+          {
+            "text": "iv.    Beaded poppy through the poppy store as a gift",
+            "indent": 20,
+            "bullet_marker": "iv.",
+            "body": "Beaded poppy through the poppy store as a gift",
+            "checkbox": false
+          },
+          {
+            "text": "i.   Guest speaker for junior",
+            "indent": 13,
+            "bullet_marker": "i.",
+            "body": "Guest speaker for junior",
+            "checkbox": false
+          },
+          {
+            "text": "j.   Registration link up before end of long weekend on website",
+            "indent": 13,
+            "bullet_marker": "j.",
+            "body": "Registration link up before end of long weekend on website",
+            "checkbox": false
+          },
+          {
+            "text": "k.   Cabaret night",
+            "indent": 13,
+            "bullet_marker": "k.",
+            "body": "Cabaret night",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Meet at lunch tuesday?",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Meet at lunch tuesday?",
+            "checkbox": false
+          },
+          {
+            "text": "ii.   Boland and Haider",
+            "indent": 21,
+            "bullet_marker": "ii.",
+            "body": "Boland and Haider",
+            "checkbox": false
+          },
+          {
+            "text": "David Bonin,",
+            "indent": 0,
+            "bullet_marker": null,
+            "body": "David Bonin,",
+            "checkbox": false
+          }
+        ],
+        "page": 3
+      },
+      "lines": [
+        {
+          "text": "iii.   Flexible, presentation can be how he wants (we can support)",
+          "indent": 0,
+          "bullet_marker": "iii.",
+          "body": "Flexible, presentation can be how he wants (we can support)",
+          "checkbox": false
+        },
+        {
+          "text": "iv.    Beaded poppy through the poppy store as a gift",
+          "indent": 20,
+          "bullet_marker": "iv.",
+          "body": "Beaded poppy through the poppy store as a gift",
+          "checkbox": false
+        },
+        {
+          "text": "i.   Guest speaker for junior",
+          "indent": 13,
+          "bullet_marker": "i.",
+          "body": "Guest speaker for junior",
+          "checkbox": false
+        },
+        {
+          "text": "j.   Registration link up before end of long weekend on website",
+          "indent": 13,
+          "bullet_marker": "j.",
+          "body": "Registration link up before end of long weekend on website",
+          "checkbox": false
+        },
+        {
+          "text": "k.   Cabaret night",
+          "indent": 13,
+          "bullet_marker": "k.",
+          "body": "Cabaret night",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Meet at lunch tuesday?",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Meet at lunch tuesday?",
+          "checkbox": false
+        },
+        {
+          "text": "ii.   Boland and Haider",
+          "indent": 21,
+          "bullet_marker": "ii.",
+          "body": "Boland and Haider",
+          "checkbox": false
+        },
+        {
+          "text": "David Bonin,",
+          "indent": 0,
+          "bullet_marker": null,
+          "body": "David Bonin,",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9389a0b35cf38f8a",
+        "title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_4__May_13_2025_20260629_185313.pdf",
+        "updated_at": "2026-06-29T18:53:13.425635+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9389a0b35cf38f8a_section_9",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9389a0b35cf38f8a#section-9",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9389a0b35cf38f8a",
+      "name": "Meeting_4__May_13_2025_20260629_185313.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9389a0b35cf38f8a",
+      "section_heading": "Account Manager"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T18:53:13.425635+00:00",
+    "content": {
+      "text": "Native Northwest | Art by Indigenous Artists\ndavidb@nativenorthwest.com | nativenorthwest.com\n604-266-9044 ext 121  | 1640 W. 75th Ave., Vancouver BC V6P 6G2\n\nPins can be found HERE.  I do notice that they have quite a few different ones – even\nanother wolf (although I LOVE Simone Diamond’s stuff!).  Loads to choose from!"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9389a0b35cf38f8a#section-9",
+      "quote": "Native Northwest | Art by Indigenous Artists\ndavidb@nativenorthwest.com | nativenorthwest.com\n604-266-9044 ext 121  | 1640 W. 75th Ave., Vancouver BC V6P 6G2\n\nPins can be found HERE.  I do notice that they have quite a few different ones – even\nanother wolf (although I LOVE Simone Diamond’s stuff!).  Loads to choose from!",
+      "workspace": "local_upload",
+      "document_id": "file_9389a0b35cf38f8a",
+      "document_title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+      "section_heading": "Account Manager",
+      "page": 3
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "Account Manager",
+        "text": "Native Northwest | Art by Indigenous Artists\ndavidb@nativenorthwest.com | nativenorthwest.com\n604-266-9044 ext 121  | 1640 W. 75th Ave., Vancouver BC V6P 6G2\n\nPins can be found HERE.  I do notice that they have quite a few different ones – even\nanother wolf (although I LOVE Simone Diamond’s stuff!).  Loads to choose from!",
+        "lines": [
+          {
+            "text": "Native Northwest | Art by Indigenous Artists",
+            "indent": 0,
+            "bullet_marker": null,
+            "body": "Native Northwest | Art by Indigenous Artists",
+            "checkbox": false
+          },
+          {
+            "text": "davidb@nativenorthwest.com | nativenorthwest.com",
+            "indent": 0,
+            "bullet_marker": null,
+            "body": "davidb@nativenorthwest.com | nativenorthwest.com",
+            "checkbox": false
+          },
+          {
+            "text": "604-266-9044 ext 121  | 1640 W. 75th Ave., Vancouver BC V6P 6G2",
+            "indent": 0,
+            "bullet_marker": null,
+            "body": "604-266-9044 ext 121  | 1640 W. 75th Ave., Vancouver BC V6P 6G2",
+            "checkbox": false
+          },
+          {
+            "text": "Pins can be found HERE.  I do notice that they have quite a few different ones – even",
+            "indent": 0,
+            "bullet_marker": null,
+            "body": "Pins can be found HERE.  I do notice that they have quite a few different ones – even",
+            "checkbox": false
+          },
+          {
+            "text": "another wolf (although I LOVE Simone Diamond’s stuff!).  Loads to choose from!",
+            "indent": 0,
+            "bullet_marker": null,
+            "body": "another wolf (although I LOVE Simone Diamond’s stuff!).  Loads to choose from!",
+            "checkbox": false
+          }
+        ],
+        "page": 3
+      },
+      "lines": [
+        {
+          "text": "Native Northwest | Art by Indigenous Artists",
+          "indent": 0,
+          "bullet_marker": null,
+          "body": "Native Northwest | Art by Indigenous Artists",
+          "checkbox": false
+        },
+        {
+          "text": "davidb@nativenorthwest.com | nativenorthwest.com",
+          "indent": 0,
+          "bullet_marker": null,
+          "body": "davidb@nativenorthwest.com | nativenorthwest.com",
+          "checkbox": false
+        },
+        {
+          "text": "604-266-9044 ext 121  | 1640 W. 75th Ave., Vancouver BC V6P 6G2",
+          "indent": 0,
+          "bullet_marker": null,
+          "body": "604-266-9044 ext 121  | 1640 W. 75th Ave., Vancouver BC V6P 6G2",
+          "checkbox": false
+        },
+        {
+          "text": "Pins can be found HERE.  I do notice that they have quite a few different ones – even",
+          "indent": 0,
+          "bullet_marker": null,
+          "body": "Pins can be found HERE.  I do notice that they have quite a few different ones – even",
+          "checkbox": false
+        },
+        {
+          "text": "another wolf (although I LOVE Simone Diamond’s stuff!).  Loads to choose from!",
+          "indent": 0,
+          "bullet_marker": null,
+          "body": "another wolf (although I LOVE Simone Diamond’s stuff!).  Loads to choose from!",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9389a0b35cf38f8a",
+        "title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_4__May_13_2025_20260629_185313.pdf",
+        "updated_at": "2026-06-29T18:53:13.425635+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_9389a0b35cf38f8a_section_10",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_9389a0b35cf38f8a#section-10",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_9389a0b35cf38f8a",
+      "name": "Meeting_4__May_13_2025_20260629_185313.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_9389a0b35cf38f8a",
+      "section_heading": "To-Do List"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T18:53:13.425635+00:00",
+    "content": {
+      "text": "James: send out director acceptances once interviews are done\n                  Better to do all at once\n                  Send an update (overwhelmed by interest) - with date\n         Sec Bios (Frankie, James, Owen, Quinton, Evangeline) - Thursday May 15\n         Meet tomorrow recess at basketball court - attempt #1\n         Elliott: get a list of what to order\n         Owen to look through old materials\n         Ann and Hugo to go to the rest of the homerooms (2A Thursday)\n         Everyone to look at pin options\n         Hugo and Evangeline to consider guest speaker for junior\n         Ann to ﬁnish website as much as possible by next week (picture dependent)\n         Meet at lunch on Tuesday instead of that night\n         If you did an interview please ﬁll in information so James knows"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_9389a0b35cf38f8a#section-10",
+      "quote": "James: send out director acceptances once interviews are done\n                  Better to do all at once\n                  Send an update (overwhelmed by interest) - with date\n         Sec Bios (Frankie, James, Owen, Quinton, Evangeline) - Thursday May 15\n         Meet tomorrow recess at basketball court - attempt #1\n         Elliott: get a list of what to order\n         Owen to look through old materials\n         Ann and Hugo to go to the rest of the homerooms (2A Thursday)\n         Everyone to look at pin options\n         Hugo and Evangeline to consider guest speaker for junior\n         Ann to ﬁnish website as much as possible by next week (picture dependent)\n         Meet at lunch on Tuesday instead of that night\n         If you did an interview please ﬁll in information so James knows",
+      "workspace": "local_upload",
+      "document_id": "file_9389a0b35cf38f8a",
+      "document_title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+      "section_heading": "To-Do List",
+      "page": 3
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "To-Do List",
+        "text": "James: send out director acceptances once interviews are done\n                  Better to do all at once\n                  Send an update (overwhelmed by interest) - with date\n         Sec Bios (Frankie, James, Owen, Quinton, Evangeline) - Thursday May 15\n         Meet tomorrow recess at basketball court - attempt #1\n         Elliott: get a list of what to order\n         Owen to look through old materials\n         Ann and Hugo to go to the rest of the homerooms (2A Thursday)\n         Everyone to look at pin options\n         Hugo and Evangeline to consider guest speaker for junior\n         Ann to ﬁnish website as much as possible by next week (picture dependent)\n         Meet at lunch on Tuesday instead of that night\n         If you did an interview please ﬁll in information so James knows",
+        "lines": [
+          {
+            "text": "James: send out director acceptances once interviews are done",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "James: send out director acceptances once interviews are done",
+            "checkbox": false
+          },
+          {
+            "text": "Better to do all at once",
+            "indent": 18,
+            "bullet_marker": null,
+            "body": "Better to do all at once",
+            "checkbox": false
+          },
+          {
+            "text": "Send an update (overwhelmed by interest) - with date",
+            "indent": 18,
+            "bullet_marker": null,
+            "body": "Send an update (overwhelmed by interest) - with date",
+            "checkbox": false
+          },
+          {
+            "text": "Sec Bios (Frankie, James, Owen, Quinton, Evangeline) - Thursday May 15",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Sec Bios (Frankie, James, Owen, Quinton, Evangeline) - Thursday May 15",
+            "checkbox": false
+          },
+          {
+            "text": "Meet tomorrow recess at basketball court - attempt #1",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Meet tomorrow recess at basketball court - attempt #1",
+            "checkbox": false
+          },
+          {
+            "text": "Elliott: get a list of what to order",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Elliott: get a list of what to order",
+            "checkbox": false
+          },
+          {
+            "text": "Owen to look through old materials",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Owen to look through old materials",
+            "checkbox": false
+          },
+          {
+            "text": "Ann and Hugo to go to the rest of the homerooms (2A Thursday)",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Ann and Hugo to go to the rest of the homerooms (2A Thursday)",
+            "checkbox": false
+          },
+          {
+            "text": "Everyone to look at pin options",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Everyone to look at pin options",
+            "checkbox": false
+          },
+          {
+            "text": "Hugo and Evangeline to consider guest speaker for junior",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Hugo and Evangeline to consider guest speaker for junior",
+            "checkbox": false
+          },
+          {
+            "text": "Ann to ﬁnish website as much as possible by next week (picture dependent)",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Ann to ﬁnish website as much as possible by next week (picture dependent)",
+            "checkbox": false
+          },
+          {
+            "text": "Meet at lunch on Tuesday instead of that night",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Meet at lunch on Tuesday instead of that night",
+            "checkbox": false
+          },
+          {
+            "text": "If you did an interview please ﬁll in information so James knows",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "If you did an interview please ﬁll in information so James knows",
+            "checkbox": false
+          }
+        ],
+        "page": 3
+      },
+      "lines": [
+        {
+          "text": "James: send out director acceptances once interviews are done",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "James: send out director acceptances once interviews are done",
+          "checkbox": false
+        },
+        {
+          "text": "Better to do all at once",
+          "indent": 18,
+          "bullet_marker": null,
+          "body": "Better to do all at once",
+          "checkbox": false
+        },
+        {
+          "text": "Send an update (overwhelmed by interest) - with date",
+          "indent": 18,
+          "bullet_marker": null,
+          "body": "Send an update (overwhelmed by interest) - with date",
+          "checkbox": false
+        },
+        {
+          "text": "Sec Bios (Frankie, James, Owen, Quinton, Evangeline) - Thursday May 15",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Sec Bios (Frankie, James, Owen, Quinton, Evangeline) - Thursday May 15",
+          "checkbox": false
+        },
+        {
+          "text": "Meet tomorrow recess at basketball court - attempt #1",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Meet tomorrow recess at basketball court - attempt #1",
+          "checkbox": false
+        },
+        {
+          "text": "Elliott: get a list of what to order",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Elliott: get a list of what to order",
+          "checkbox": false
+        },
+        {
+          "text": "Owen to look through old materials",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Owen to look through old materials",
+          "checkbox": false
+        },
+        {
+          "text": "Ann and Hugo to go to the rest of the homerooms (2A Thursday)",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Ann and Hugo to go to the rest of the homerooms (2A Thursday)",
+          "checkbox": false
+        },
+        {
+          "text": "Everyone to look at pin options",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Everyone to look at pin options",
+          "checkbox": false
+        },
+        {
+          "text": "Hugo and Evangeline to consider guest speaker for junior",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Hugo and Evangeline to consider guest speaker for junior",
+          "checkbox": false
+        },
+        {
+          "text": "Ann to ﬁnish website as much as possible by next week (picture dependent)",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Ann to ﬁnish website as much as possible by next week (picture dependent)",
+          "checkbox": false
+        },
+        {
+          "text": "Meet at lunch on Tuesday instead of that night",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Meet at lunch on Tuesday instead of that night",
+          "checkbox": false
+        },
+        {
+          "text": "If you did an interview please ﬁll in information so James knows",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "If you did an interview please ﬁll in information so James knows",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_9389a0b35cf38f8a",
+        "title": "Meeting_4__May_13_2025_20260629_185313.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_4__May_13_2025_20260629_185313.pdf",
+        "updated_at": "2026-06-29T18:53:13.425635+00:00"
+      }
+    }
+  }
+]

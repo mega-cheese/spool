@@ -1,0 +1,198 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/September Meeting Notes.pdf",
+    "candidate_count": 16,
+    "approved_count": 0,
+    "needs_review_count": 12,
+    "rejected_count": 0
+  },
+  "items": [
+    {
+      "memory_id": "mem_980c65571570",
+      "type": "decision",
+      "title": "1",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "1.   Send Tutor Peer Tutoring sign up message once the form is released (use template 1)\n    2.   Send Parent Peer Tutoring regular sign up message once it is released, cap at the number given\n         by Haley (use template 2a)\n    3.   Once the regular parent form is closed, send the waitlist sign up form (use template 2b)\n    4.   Sign up day is where the parents are going to have the most amount of questions\n              a.   For example, they might ask, is my child registered? Why didn’t I receive any emails?\n                       i.    In this case, check the master spreadsheet, and respond with “Yes, your child is\n                             registered” or “no, your child is not registered” (in Mandarin/English\n                             depending on the parent)"
+    },
+    {
+      "memory_id": "mem_9e20163be31e",
+      "type": "commitment",
+      "title": "Preparing forms/spreadsheets:.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.84,
+      "reason_codes": [
+        "weak_task_parse",
+        "coverage_warning"
+      ],
+      "source_quote": "Document Steps to preparing forms/spreadsheets:"
+    },
+    {
+      "memory_id": "mem_a1084d46c5e5",
+      "type": "commitment",
+      "title": "Add haley’s main wechat acc to the parent and student gc.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "Document 2. Remember to add haley’s main wechat acc to the parent and student gc"
+    },
+    {
+      "memory_id": "mem_48efe73d7948",
+      "type": "commitment",
+      "title": "Prep (edit) tutor sign up and waitlist forms, link to spreadsheet.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "Document ● Tyler September 4th Prep (edit) tutor sign up and waitlist forms, link to spreadsheet"
+    },
+    {
+      "memory_id": "mem_9985505d62a6",
+      "type": "commitment",
+      "title": "Prep (edit) student sign up and waitlist forms, link to spreadsheet.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "Document ● Owen September 4th Prep (edit) student sign up and waitlist forms, link to spreadsheet"
+    },
+    {
+      "memory_id": "mem_82149e10a4c3",
+      "type": "commitment",
+      "title": "Send a mass email to tutors and parents about our fall 2024 PT.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "Document Tyler September 10th Send a mass email to tutors and parents about our fall 2024 PT"
+    },
+    {
+      "memory_id": "mem_93cb1d8e0616",
+      "type": "commitment",
+      "title": "Make TR template for Monday-Wednesday (drafts).",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "Document ● Bernice September 14th Make TR template for Monday-Wednesday (drafts)"
+    },
+    {
+      "memory_id": "mem_7dd4ebef3b77",
+      "type": "commitment",
+      "title": "(drafts).",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "Document ● Bernice September 14th (drafts)"
+    },
+    {
+      "memory_id": "mem_adb67c12ee54",
+      "type": "commitment",
+      "title": "(drafts).",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "Document ● Owen September 14th (drafts)"
+    },
+    {
+      "memory_id": "mem_7e00337aa8c6",
+      "type": "commitment",
+      "title": "Start pairing students and tutors.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "Document and Owen September 23rd Start pairing students and tutors"
+    },
+    {
+      "memory_id": "mem_1c81c8e9c562",
+      "type": "commitment",
+      "title": "Send out class information to parents and students.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "Document Tyler September 28th Send out class information to parents and students"
+    },
+    {
+      "memory_id": "mem_27c0d79d4e84",
+      "type": "commitment",
+      "title": "And close the form on the 18th.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "Document - We will begin the hiring process for tutors on the September 5th and close the form on the 18th"
+    },
+    {
+      "memory_id": "mem_84f6e71ec17b",
+      "type": "commitment",
+      "title": "Until December 9th (10 weeks).",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "Document - 2024 Fall PT starts on October 7th until December 9th (10 weeks)"
+    },
+    {
+      "memory_id": "mem_ee122e001c3a",
+      "type": "commitment",
+      "title": "Keep track of attendance.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "Document - Remember to keep track of attendance"
+    },
+    {
+      "memory_id": "mem_79c0cd527094",
+      "type": "commitment",
+      "title": "To June 30th, 2022. The position entails a.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.84,
+      "reason_codes": [
+        "weak_task_parse",
+        "coverage_warning"
+      ],
+      "source_quote": "Document ⭕ Ensure that you can commit from September 12th to June 30th, 2022. The position entails a"
+    },
+    {
+      "memory_id": "mem_28e312380db6",
+      "type": "context",
+      "title": "Task table may have been under-extracted",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.79,
+      "reason_codes": [
+        "extraction_warning",
+        "coverage_warning"
+      ],
+      "source_quote": "https://docs.google.com/forms/d/1ZfE_0MLbNKgDeiwpmPX0CvPBeAnQb4Oo1USRs97\n                     Xlgc/edit\n\n          Steps to preparing forms/spreadsheets:\n                1.   Make copies of the forms above\n                2.   Put them into the right folder\n                3.   Change details relevant to this season: dates, link to waitlist, etc.\n                4.   Link form responses to spreadsheet\n                5.   Fix anything else if needed\n\n     2.   Notifications for tutors (contact promotions) and students’ parents (wechat) (communications)\n                -    Tutor sign up opens first, then student sign up to gauge for # of guaranteed classes\n                -    Waitlist: classes not guaranteed\n                -    TEMPLATE: at the very bottom of this document\n\n          Tutor sign up notification:\n                -    Instagram & newsletter (promotions department)\n                -    Wechat (us) ← we have a wechat volunteer group chat\n\n          Parent notification:\n                -    Instagram & newsletter (promotions department)\n                -    Wechat (us) ← parent group chat\n\n          Notes regarding student sign up release (after tutor sign up release)\n                -    We need to be waiting for the number of student sign up to reach the target number (to make\n                     sure we have enough tutors for guaranteed classes)\n                          -     E.g. if we have 80 tutor sign up at this moment, we need to cap regular student sign up\n                                at 65\n                          -     Then open student waitlist for the rest (classes not guaranteed)\n\n     3.   Class pairing (admissions)\n                -    Make new sub sheet in master google spreadsheet\n                -    Pair students and tutors with fewer availabilities first\n                -    Pair siblings with the same tutor if possible, but it doesn’t have to be like this\n                -    See 2023 winter spring season spreadsheet for class pairing examples:\n                          -     https://docs.google.com/spreadsheets/d/1o0GZHuSfB5-Q2jj_IS-O5t7ILbS4OaSgrO\n                                eTQ_Ki3dw/edit?usp=sharing"
+    }
+  ]
+}

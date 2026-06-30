@@ -1,0 +1,527 @@
+[
+  {
+    "bundle_id": "slack_thread_AcmeAI_C_ENG_1782202000_000100",
+    "bundle_type": "slack_thread",
+    "source_types": [
+      "slack"
+    ],
+    "root_id": "1782202000.000100",
+    "title": "Proposal: use Redis for session state because Postgres latency is too high under load.",
+    "time_range": {
+      "start": "2026-06-23T08:06:40.000100+00:00",
+      "end": "2026-06-23T08:09:40.000400+00:00"
+    },
+    "events": [
+      {
+        "event_id": "slack_C_ENG_1782202000_000100",
+        "source_type": "slack",
+        "source_subtype": "message",
+        "external_id": "1782202000.000100",
+        "source_url": null,
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "channel",
+          "id": "C_ENG",
+          "name": "engineering"
+        },
+        "context": {
+          "type": "thread",
+          "root_id": "1782202000.000100"
+        },
+        "actor": {
+          "name": "Leo Park",
+          "role": "CTO"
+        },
+        "event_type": "message",
+        "created_at": "2026-06-23T08:06:40.000100+00:00",
+        "updated_at": null,
+        "content": {
+          "text": "Proposal: use Redis for session state because Postgres latency is too high under load."
+        },
+        "provenance": {
+          "source_type": "slack",
+          "locator": "1782202000.000100",
+          "quote": "Proposal: use Redis for session state because Postgres latency is too high under load.",
+          "workspace": "AcmeAI",
+          "channel_id": "C_ENG",
+          "thread_ts": "1782202000.000100"
+        },
+        "raw_ref": {
+          "source": "local_slack_fixture",
+          "message": {
+            "ts": "1782202000.000100",
+            "thread_ts": "1782202000.000100",
+            "date": "2026-06-23",
+            "user_name": "Leo Park",
+            "role": "CTO",
+            "text": "Proposal: use Redis for session state because Postgres latency is too high under load."
+          }
+        }
+      },
+      {
+        "event_id": "slack_C_ENG_1782202060_000200",
+        "source_type": "slack",
+        "source_subtype": "message",
+        "external_id": "1782202060.000200",
+        "source_url": null,
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "channel",
+          "id": "C_ENG",
+          "name": "engineering"
+        },
+        "context": {
+          "type": "thread",
+          "root_id": "1782202000.000100"
+        },
+        "actor": {
+          "name": "Priya Shah",
+          "role": "Staff Engineer"
+        },
+        "event_type": "message",
+        "created_at": "2026-06-23T08:07:40.000200+00:00",
+        "updated_at": null,
+        "content": {
+          "text": "I agree. The tradeoff is extra infra complexity, but latency is the bigger risk."
+        },
+        "provenance": {
+          "source_type": "slack",
+          "locator": "1782202060.000200",
+          "quote": "I agree. The tradeoff is extra infra complexity, but latency is the bigger risk.",
+          "workspace": "AcmeAI",
+          "channel_id": "C_ENG",
+          "thread_ts": "1782202000.000100"
+        },
+        "raw_ref": {
+          "source": "local_slack_fixture",
+          "message": {
+            "ts": "1782202060.000200",
+            "thread_ts": "1782202000.000100",
+            "date": "2026-06-23",
+            "user_name": "Priya Shah",
+            "role": "Staff Engineer",
+            "text": "I agree. The tradeoff is extra infra complexity, but latency is the bigger risk."
+          }
+        }
+      },
+      {
+        "event_id": "slack_C_ENG_1782202120_000300",
+        "source_type": "slack",
+        "source_subtype": "message",
+        "external_id": "1782202120.000300",
+        "source_url": null,
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "channel",
+          "id": "C_ENG",
+          "name": "engineering"
+        },
+        "context": {
+          "type": "thread",
+          "root_id": "1782202000.000100"
+        },
+        "actor": {
+          "name": "Owen Diaz",
+          "role": "Engineering Manager"
+        },
+        "event_type": "message",
+        "created_at": "2026-06-23T08:08:40.000300+00:00",
+        "updated_at": null,
+        "content": {
+          "text": "If Redis becomes a bottleneck later, we can revisit the design after launch."
+        },
+        "provenance": {
+          "source_type": "slack",
+          "locator": "1782202120.000300",
+          "quote": "If Redis becomes a bottleneck later, we can revisit the design after launch.",
+          "workspace": "AcmeAI",
+          "channel_id": "C_ENG",
+          "thread_ts": "1782202000.000100"
+        },
+        "raw_ref": {
+          "source": "local_slack_fixture",
+          "message": {
+            "ts": "1782202120.000300",
+            "thread_ts": "1782202000.000100",
+            "date": "2026-06-23",
+            "user_name": "Owen Diaz",
+            "role": "Engineering Manager",
+            "text": "If Redis becomes a bottleneck later, we can revisit the design after launch."
+          }
+        }
+      },
+      {
+        "event_id": "slack_C_ENG_1782202180_000400",
+        "source_type": "slack",
+        "source_subtype": "message",
+        "external_id": "1782202180.000400",
+        "source_url": null,
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "channel",
+          "id": "C_ENG",
+          "name": "engineering"
+        },
+        "context": {
+          "type": "thread",
+          "root_id": "1782202000.000100"
+        },
+        "actor": {
+          "name": "Leo Park",
+          "role": "CTO"
+        },
+        "event_type": "message",
+        "created_at": "2026-06-23T08:09:40.000400+00:00",
+        "updated_at": null,
+        "content": {
+          "text": "Approved, let's move forward with Redis for session state."
+        },
+        "provenance": {
+          "source_type": "slack",
+          "locator": "1782202180.000400",
+          "quote": "Approved, let's move forward with Redis for session state.",
+          "workspace": "AcmeAI",
+          "channel_id": "C_ENG",
+          "thread_ts": "1782202000.000100"
+        },
+        "raw_ref": {
+          "source": "local_slack_fixture",
+          "message": {
+            "ts": "1782202180.000400",
+            "thread_ts": "1782202000.000100",
+            "date": "2026-06-23",
+            "user_name": "Leo Park",
+            "role": "CTO",
+            "text": "Approved, let's move forward with Redis for session state."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "bundle_id": "slack_thread_AcmeAI_C_PRODUCT_1782201000_000100",
+    "bundle_type": "slack_thread",
+    "source_types": [
+      "slack"
+    ],
+    "root_id": "1782201000.000100",
+    "title": "I think we should delay the enterprise launch until SOC 2 is complete. Two pilot customers said security review will ...",
+    "time_range": {
+      "start": "2026-06-23T07:50:00.000100+00:00",
+      "end": "2026-06-23T07:53:00.000400+00:00"
+    },
+    "events": [
+      {
+        "event_id": "slack_C_PRODUCT_1782201000_000100",
+        "source_type": "slack",
+        "source_subtype": "message",
+        "external_id": "1782201000.000100",
+        "source_url": null,
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "channel",
+          "id": "C_PRODUCT",
+          "name": "product-strategy"
+        },
+        "context": {
+          "type": "thread",
+          "root_id": "1782201000.000100"
+        },
+        "actor": {
+          "name": "Maya Chen",
+          "role": "VP Product"
+        },
+        "event_type": "message",
+        "created_at": "2026-06-23T07:50:00.000100+00:00",
+        "updated_at": null,
+        "content": {
+          "text": "I think we should delay the enterprise launch until SOC 2 is complete. Two pilot customers said security review will block us without it."
+        },
+        "provenance": {
+          "source_type": "slack",
+          "locator": "1782201000.000100",
+          "quote": "I think we should delay the enterprise launch until SOC 2 is complete. Two pilot customers said security review will block us without it.",
+          "workspace": "AcmeAI",
+          "channel_id": "C_PRODUCT",
+          "thread_ts": "1782201000.000100"
+        },
+        "raw_ref": {
+          "source": "local_slack_fixture",
+          "message": {
+            "ts": "1782201000.000100",
+            "thread_ts": "1782201000.000100",
+            "date": "2026-06-23",
+            "user_name": "Maya Chen",
+            "role": "VP Product",
+            "text": "I think we should delay the enterprise launch until SOC 2 is complete. Two pilot customers said security review will block us without it."
+          }
+        }
+      },
+      {
+        "event_id": "slack_C_PRODUCT_1782201060_000200",
+        "source_type": "slack",
+        "source_subtype": "message",
+        "external_id": "1782201060.000200",
+        "source_url": null,
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "channel",
+          "id": "C_PRODUCT",
+          "name": "product-strategy"
+        },
+        "context": {
+          "type": "thread",
+          "root_id": "1782201000.000100"
+        },
+        "actor": {
+          "name": "Leo Park",
+          "role": "CTO"
+        },
+        "event_type": "message",
+        "created_at": "2026-06-23T07:51:00.000200+00:00",
+        "updated_at": null,
+        "content": {
+          "text": "Agreed. Without audit logs and SSO, security review will probably fail. Engineering needs about four more weeks."
+        },
+        "provenance": {
+          "source_type": "slack",
+          "locator": "1782201060.000200",
+          "quote": "Agreed. Without audit logs and SSO, security review will probably fail. Engineering needs about four more weeks.",
+          "workspace": "AcmeAI",
+          "channel_id": "C_PRODUCT",
+          "thread_ts": "1782201000.000100"
+        },
+        "raw_ref": {
+          "source": "local_slack_fixture",
+          "message": {
+            "ts": "1782201060.000200",
+            "thread_ts": "1782201000.000100",
+            "date": "2026-06-23",
+            "user_name": "Leo Park",
+            "role": "CTO",
+            "text": "Agreed. Without audit logs and SSO, security review will probably fail. Engineering needs about four more weeks."
+          }
+        }
+      },
+      {
+        "event_id": "slack_C_PRODUCT_1782201120_000300",
+        "source_type": "slack",
+        "source_subtype": "message",
+        "external_id": "1782201120.000300",
+        "source_url": null,
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "channel",
+          "id": "C_PRODUCT",
+          "name": "product-strategy"
+        },
+        "context": {
+          "type": "thread",
+          "root_id": "1782201000.000100"
+        },
+        "actor": {
+          "name": "Sarah Kim",
+          "role": "Head of Sales"
+        },
+        "event_type": "message",
+        "created_at": "2026-06-23T07:52:00.000300+00:00",
+        "updated_at": null,
+        "content": {
+          "text": "I'm concerned the delay could hurt Q3 pipeline, but assuming the pilots will wait, this is still safer. Let's revisit on 2026-09-12."
+        },
+        "provenance": {
+          "source_type": "slack",
+          "locator": "1782201120.000300",
+          "quote": "I'm concerned the delay could hurt Q3 pipeline, but assuming the pilots will wait, this is still safer. Let's revisit on 2026-09-12.",
+          "workspace": "AcmeAI",
+          "channel_id": "C_PRODUCT",
+          "thread_ts": "1782201000.000100"
+        },
+        "raw_ref": {
+          "source": "local_slack_fixture",
+          "message": {
+            "ts": "1782201120.000300",
+            "thread_ts": "1782201000.000100",
+            "date": "2026-06-23",
+            "user_name": "Sarah Kim",
+            "role": "Head of Sales",
+            "text": "I'm concerned the delay could hurt Q3 pipeline, but assuming the pilots will wait, this is still safer. Let's revisit on 2026-09-12."
+          }
+        }
+      },
+      {
+        "event_id": "slack_C_PRODUCT_1782201180_000400",
+        "source_type": "slack",
+        "source_subtype": "message",
+        "external_id": "1782201180.000400",
+        "source_url": null,
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "channel",
+          "id": "C_PRODUCT",
+          "name": "product-strategy"
+        },
+        "context": {
+          "type": "thread",
+          "root_id": "1782201000.000100"
+        },
+        "actor": {
+          "name": "Maya Chen",
+          "role": "VP Product"
+        },
+        "event_type": "message",
+        "created_at": "2026-06-23T07:53:00.000400+00:00",
+        "updated_at": null,
+        "content": {
+          "text": "Final decision: delay launch until SOC 2 is complete and revisit on 2026-09-12."
+        },
+        "provenance": {
+          "source_type": "slack",
+          "locator": "1782201180.000400",
+          "quote": "Final decision: delay launch until SOC 2 is complete and revisit on 2026-09-12.",
+          "workspace": "AcmeAI",
+          "channel_id": "C_PRODUCT",
+          "thread_ts": "1782201000.000100"
+        },
+        "raw_ref": {
+          "source": "local_slack_fixture",
+          "message": {
+            "ts": "1782201180.000400",
+            "thread_ts": "1782201000.000100",
+            "date": "2026-06-23",
+            "user_name": "Maya Chen",
+            "role": "VP Product",
+            "text": "Final decision: delay launch until SOC 2 is complete and revisit on 2026-09-12."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "bundle_id": "slack_thread_AcmeAI_C_RANDOM_1782203000_000100",
+    "bundle_type": "slack_thread",
+    "source_types": [
+      "slack"
+    ],
+    "root_id": "1782203000.000100",
+    "title": "The new launch poster looks sharp. Lunch at noon?",
+    "time_range": {
+      "start": "2026-06-23T08:23:20.000100+00:00",
+      "end": "2026-06-23T08:24:20.000200+00:00"
+    },
+    "events": [
+      {
+        "event_id": "slack_C_RANDOM_1782203000_000100",
+        "source_type": "slack",
+        "source_subtype": "message",
+        "external_id": "1782203000.000100",
+        "source_url": null,
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "channel",
+          "id": "C_RANDOM",
+          "name": "random"
+        },
+        "context": {
+          "type": "thread",
+          "root_id": "1782203000.000100"
+        },
+        "actor": {
+          "name": "Nina Patel",
+          "role": "Designer"
+        },
+        "event_type": "message",
+        "created_at": "2026-06-23T08:23:20.000100+00:00",
+        "updated_at": null,
+        "content": {
+          "text": "The new launch poster looks sharp. Lunch at noon?"
+        },
+        "provenance": {
+          "source_type": "slack",
+          "locator": "1782203000.000100",
+          "quote": "The new launch poster looks sharp. Lunch at noon?",
+          "workspace": "AcmeAI",
+          "channel_id": "C_RANDOM",
+          "thread_ts": "1782203000.000100"
+        },
+        "raw_ref": {
+          "source": "local_slack_fixture",
+          "message": {
+            "ts": "1782203000.000100",
+            "thread_ts": "1782203000.000100",
+            "date": "2026-06-23",
+            "user_name": "Nina Patel",
+            "role": "Designer",
+            "text": "The new launch poster looks sharp. Lunch at noon?"
+          }
+        }
+      },
+      {
+        "event_id": "slack_C_RANDOM_1782203060_000200",
+        "source_type": "slack",
+        "source_subtype": "message",
+        "external_id": "1782203060.000200",
+        "source_url": null,
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "channel",
+          "id": "C_RANDOM",
+          "name": "random"
+        },
+        "context": {
+          "type": "thread",
+          "root_id": "1782203000.000100"
+        },
+        "actor": {
+          "name": "Sarah Kim",
+          "role": "Head of Sales"
+        },
+        "event_type": "message",
+        "created_at": "2026-06-23T08:24:20.000200+00:00",
+        "updated_at": null,
+        "content": {
+          "text": "Yes, let's grab sandwiches after the standup."
+        },
+        "provenance": {
+          "source_type": "slack",
+          "locator": "1782203060.000200",
+          "quote": "Yes, let's grab sandwiches after the standup.",
+          "workspace": "AcmeAI",
+          "channel_id": "C_RANDOM",
+          "thread_ts": "1782203000.000100"
+        },
+        "raw_ref": {
+          "source": "local_slack_fixture",
+          "message": {
+            "ts": "1782203060.000200",
+            "thread_ts": "1782203000.000100",
+            "date": "2026-06-23",
+            "user_name": "Sarah Kim",
+            "role": "Head of Sales",
+            "text": "Yes, let's grab sandwiches after the standup."
+          }
+        }
+      }
+    ]
+  }
+]

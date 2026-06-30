@@ -1,0 +1,4 @@
+scenario_type,scenario_name,variant,expected_count,actual_count,count_pass,invariant_pass,verdict,failure_count,review_item_count,review_reasons
+conflict_detection,conflict_slack_doc_vendor_selection,conflict,0,0,True,True,PASS,0,1,conflicting_sources
+conflict_detection,no_conflict_doc_rejected_alternative,conflict,1,1,True,True,PASS,0,1,owner_missing
+conflict_detection,conflict_stale_doc_vs_new_slack,conflict,0,0,True,True,PASS,0,1,conflicting_sources

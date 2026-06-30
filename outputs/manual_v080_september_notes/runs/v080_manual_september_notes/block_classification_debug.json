@@ -1,0 +1,3447 @@
+{
+  "blocks": [
+    {
+      "block_id": "block_5f7aceed72d1",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_1",
+      "block_type": "meeting_metadata",
+      "heading": "Document",
+      "text": "September 1st - 2024 Logistics Notes\n\n   Attendees: Tyler, Bernice, Owen, Cecilia, Emily, Haley, Fiona\n\n Absent:                                                     Helpful Links:\n\n                                                                  ✧        2. Logistics    - upload everything here\n\n                                                                  ✧        YIV Logistics (ADM+COMMS) Guide\n                                                                  ✧        Fall 2023 Peer Tutoring Master Spreadsh…",
+      "lines": [
+        {
+          "text": "September 1st - 2024 Logistics Notes",
+          "body": "September 1st - 2024 Logistics Notes",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Attendees: Tyler, Bernice, Owen, Cecilia, Emily, Haley, Fiona",
+          "body": "Attendees: Tyler, Bernice, Owen, Cecilia, Emily, Haley, Fiona",
+          "indent": 3,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Absent: Helpful Links:",
+          "body": "Absent: Helpful Links:",
+          "indent": 1,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "✧ 2. Logistics - upload everything here",
+          "body": "✧ 2. Logistics - upload everything here",
+          "indent": 66,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "✧ YIV Logistics (ADM+COMMS) Guide",
+          "body": "✧ YIV Logistics (ADM+COMMS) Guide",
+          "indent": 66,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "✧ Fall 2023 Peer Tutoring Master Spreadsh…",
+          "body": "✧ Fall 2023 Peer Tutoring Master Spreadsh…",
+          "indent": 66,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.86,
+      "signals": [
+        "meeting metadata"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 1,
+          "text": "Attendees: Tyler, Bernice, Owen, Cecilia, Emily, Haley, Fiona",
+          "body": "Attendees: Tyler, Bernice, Owen, Cecilia, Emily, Haley, Fiona"
+        },
+        {
+          "line_index": 2,
+          "text": "Absent: Helpful Links:",
+          "body": "Absent: Helpful Links:"
+        },
+        {
+          "line_index": 3,
+          "text": "✧ 2. Logistics - upload everything here",
+          "body": "✧ 2. Logistics - upload everything here"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_e21c348824ee",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_2",
+      "block_type": "policy_or_process",
+      "heading": "Team Organizational Practices",
+      "text": "●    Please check the instagram chat DAILY if you haven’t been doing so already. This is our\n         PRIMARY form of communication. React/reply to the messages too to show you’ve read it,\n         especially if it applies to you!\n    ●    If you can’t make it to a meeting, please dm Haley or say it in the group 3 days in advance\n    ●    Complete your tasks before the deadline, and if you need an extension then notify Haley in\n         advance\n    ●    Remember to keep track of your hours if you want an hours certificate at the end of the year\n    ●    We will be having monthly department meetings (most of the time - usually the second week of the\n         month)",
+      "lines": [
+        {
+          "text": "● Please check the instagram chat DAILY if you haven’t been doing so already. This is our",
+          "body": "● Please check the instagram chat DAILY if you haven’t been doing so already. This is our",
+          "indent": 4,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "PRIMARY form of communication. React/reply to the messages too to show you’ve read it,",
+          "body": "PRIMARY form of communication. React/reply to the messages too to show you’ve read it,",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "especially if it applies to you!",
+          "body": "especially if it applies to you!",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "● If you can’t make it to a meeting, please dm Haley or say it in the group 3 days in advance",
+          "body": "● If you can’t make it to a meeting, please dm Haley or say it in the group 3 days in advance",
+          "indent": 4,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "● Complete your tasks before the deadline, and if you need an extension then notify Haley in",
+          "body": "● Complete your tasks before the deadline, and if you need an extension then notify Haley in",
+          "indent": 4,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "advance",
+          "body": "advance",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "● Remember to keep track of your hours if you want an hours certificate at the end of the year",
+          "body": "● Remember to keep track of your hours if you want an hours certificate at the end of the year",
+          "indent": 4,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "● We will be having monthly department meetings (most of the time - usually the second week of the",
+          "body": "● We will be having monthly department meetings (most of the time - usually the second week of the",
+          "indent": 4,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "month)",
+          "body": "month)",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.9,
+      "signals": [
+        "policy/process heading"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 6,
+          "text": "● Remember to keep track of your hours if you want an hours certificate at the end of the year",
+          "body": "● Remember to keep track of your hours if you want an hours certificate at the end of the year"
+        },
+        {
+          "line_index": 7,
+          "text": "● We will be having monthly department meetings (most of the time - usually the second week of the",
+          "body": "● We will be having monthly department meetings (most of the time - usually the second week of the"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_237484c01950",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_3",
+      "block_type": "agenda_section",
+      "heading": "Preparing for Fall PT",
+      "text": "1.   Sign up form (tutor + student)\n         → 4 forms (tutor sign up/waitlist + student sign up/waitlist)\n              -    Link form to spreadsheet (set up spreadsheet)\n         Forms from 2022 Fall:\n              -    Tutor sign up:\n                   https://docs.google.com/forms/d/10qJ0aZ9-Uas3IAwa4MWTv8KaczS9KxkvloJQex05xV8/e\n                   dit\n              -    Tutor waitlist:\n                   https://docs.google.com/forms/d/1lIcdzROONOVmUOTitCvcQXSB5xrFmIfZGJOF9MR7\n                   woA/edit\n              -    Student sign up:\n                   https://docs.google.com/forms/d/1J-op_vgScgP7Pknh6KsENmN5WN7BEOETWVcFB3aK\n                   Au0/edit\n              -    Student waitlist:",
+      "lines": [
+        {
+          "text": "1. Sign up form (tutor + student)",
+          "body": "Sign up form (tutor + student)",
+          "indent": 4,
+          "bullet_marker": "1.",
+          "checkbox": false
+        },
+        {
+          "text": "→ 4 forms (tutor sign up/waitlist + student sign up/waitlist)",
+          "body": "→ 4 forms (tutor sign up/waitlist + student sign up/waitlist)",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- Link form to spreadsheet (set up spreadsheet)",
+          "body": "Link form to spreadsheet (set up spreadsheet)",
+          "indent": 14,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "Forms from 2022 Fall:",
+          "body": "Forms from 2022 Fall:",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- Tutor sign up:",
+          "body": "Tutor sign up:",
+          "indent": 14,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "https://docs.google.com/forms/d/10qJ0aZ9-Uas3IAwa4MWTv8KaczS9KxkvloJQex05xV8/e",
+          "body": "https://docs.google.com/forms/d/10qJ0aZ9-Uas3IAwa4MWTv8KaczS9KxkvloJQex05xV8/e",
+          "indent": 19,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "dit",
+          "body": "dit",
+          "indent": 19,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- Tutor waitlist:",
+          "body": "Tutor waitlist:",
+          "indent": 14,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "https://docs.google.com/forms/d/1lIcdzROONOVmUOTitCvcQXSB5xrFmIfZGJOF9MR7",
+          "body": "https://docs.google.com/forms/d/1lIcdzROONOVmUOTitCvcQXSB5xrFmIfZGJOF9MR7",
+          "indent": 19,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "woA/edit",
+          "body": "woA/edit",
+          "indent": 19,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- Student sign up:",
+          "body": "Student sign up:",
+          "indent": 14,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "https://docs.google.com/forms/d/1J-op_vgScgP7Pknh6KsENmN5WN7BEOETWVcFB3aK",
+          "body": "https://docs.google.com/forms/d/1J-op_vgScgP7Pknh6KsENmN5WN7BEOETWVcFB3aK",
+          "indent": 19,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Au0/edit",
+          "body": "Au0/edit",
+          "indent": 19,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- Student waitlist:",
+          "body": "Student waitlist:",
+          "indent": 14,
+          "bullet_marker": "-",
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.74,
+      "signals": [
+        "numbered agenda"
+      ],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_b6dcbe957afd",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_4",
+      "block_type": "task_table",
+      "heading": "Document",
+      "text": "https://docs.google.com/forms/d/1ZfE_0MLbNKgDeiwpmPX0CvPBeAnQb4Oo1USRs97\n                     Xlgc/edit\n\n          Steps to preparing forms/spreadsheets:\n                1.   Make copies of the forms above\n                2.   Put them into the right folder\n                3.   Change details relevant to this season: dates, link to waitlist, etc.\n                4.   Link form responses to spreadsheet\n                5.   Fix anything else if needed\n\n     2.   Notifications for tutors (contact promotions) and students’ parents (wechat) (communications)\n                -    Tutor sign up opens first, then student sign up to gauge for # of guaranteed classes\n                -    Waitlist: classes not guaranteed\n                -    TEMPLATE: at the very bottom of this document\n\n          Tutor sign up notification:\n                -    Instagram & newsletter (promotions department)\n                -    Wechat (us) ← we have a wechat volunteer group chat\n\n          Parent notification:\n                -    Instagram & newsletter (promotions department)\n                -    Wechat (us) ← parent group chat\n\n          Notes regarding student sign up release (after tutor sign up release)\n                -    We need to be waiting for the number of student sign up to reach the target number (to make\n                     sure we have enough tutors for guaranteed classes)\n                          -     E.g. if we have 80 tutor sign up at this moment, we need to cap regular student sign up\n                                at 65\n                          -     Then open student waitlist for the rest (classes not guaranteed)\n\n     3.   Class pairing (admissions)\n                -    Make new sub sheet in master google spreadsheet\n                -    Pair students and tutors with fewer availabilities first\n                -    Pair siblings with the same tutor if possible, but it doesn’t have to be like this\n                -    See 2023 winter spring season spreadsheet for class pairing examples:\n                          -     https://docs.google.com/spreadsheets/d/1o0GZHuSfB5-Q2jj_IS-O5t7ILbS4OaSgrO\n                                eTQ_Ki3dw/edit?usp=sharing",
+      "lines": [
+        {
+          "text": "https://docs.google.com/forms/d/1ZfE_0MLbNKgDeiwpmPX0CvPBeAnQb4Oo1USRs97",
+          "body": "https://docs.google.com/forms/d/1ZfE_0MLbNKgDeiwpmPX0CvPBeAnQb4Oo1USRs97",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Xlgc/edit",
+          "body": "Xlgc/edit",
+          "indent": 21,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Steps to preparing forms/spreadsheets:",
+          "body": "Steps to preparing forms/spreadsheets:",
+          "indent": 10,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "1. Make copies of the forms above",
+          "body": "Make copies of the forms above",
+          "indent": 16,
+          "bullet_marker": "1.",
+          "checkbox": false
+        },
+        {
+          "text": "2. Put them into the right folder",
+          "body": "Put them into the right folder",
+          "indent": 16,
+          "bullet_marker": "2.",
+          "checkbox": false
+        },
+        {
+          "text": "3. Change details relevant to this season: dates, link to waitlist, etc.",
+          "body": "Change details relevant to this season: dates, link to waitlist, etc.",
+          "indent": 16,
+          "bullet_marker": "3.",
+          "checkbox": false
+        },
+        {
+          "text": "4. Link form responses to spreadsheet",
+          "body": "Link form responses to spreadsheet",
+          "indent": 16,
+          "bullet_marker": "4.",
+          "checkbox": false
+        },
+        {
+          "text": "5. Fix anything else if needed",
+          "body": "Fix anything else if needed",
+          "indent": 16,
+          "bullet_marker": "5.",
+          "checkbox": false
+        },
+        {
+          "text": "2. Notifications for tutors (contact promotions) and students’ parents (wechat) (communications)",
+          "body": "Notifications for tutors (contact promotions) and students’ parents (wechat) (communications)",
+          "indent": 5,
+          "bullet_marker": "2.",
+          "checkbox": false
+        },
+        {
+          "text": "- Tutor sign up opens first, then student sign up to gauge for # of guaranteed classes",
+          "body": "Tutor sign up opens first, then student sign up to gauge for # of guaranteed classes",
+          "indent": 16,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Waitlist: classes not guaranteed",
+          "body": "Waitlist: classes not guaranteed",
+          "indent": 16,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- TEMPLATE: at the very bottom of this document",
+          "body": "TEMPLATE: at the very bottom of this document",
+          "indent": 16,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "Tutor sign up notification:",
+          "body": "Tutor sign up notification:",
+          "indent": 10,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- Instagram & newsletter (promotions department)",
+          "body": "Instagram & newsletter (promotions department)",
+          "indent": 16,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Wechat (us) ← we have a wechat volunteer group chat",
+          "body": "Wechat (us) ← we have a wechat volunteer group chat",
+          "indent": 16,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "Parent notification:",
+          "body": "Parent notification:",
+          "indent": 10,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- Instagram & newsletter (promotions department)",
+          "body": "Instagram & newsletter (promotions department)",
+          "indent": 16,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Wechat (us) ← parent group chat",
+          "body": "Wechat (us) ← parent group chat",
+          "indent": 16,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "Notes regarding student sign up release (after tutor sign up release)",
+          "body": "Notes regarding student sign up release (after tutor sign up release)",
+          "indent": 10,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- We need to be waiting for the number of student sign up to reach the target number (to make",
+          "body": "We need to be waiting for the number of student sign up to reach the target number (to make",
+          "indent": 16,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "sure we have enough tutors for guaranteed classes)",
+          "body": "sure we have enough tutors for guaranteed classes)",
+          "indent": 21,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- E.g. if we have 80 tutor sign up at this moment, we need to cap regular student sign up",
+          "body": "E.g. if we have 80 tutor sign up at this moment, we need to cap regular student sign up",
+          "indent": 26,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "at 65",
+          "body": "at 65",
+          "indent": 32,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- Then open student waitlist for the rest (classes not guaranteed)",
+          "body": "Then open student waitlist for the rest (classes not guaranteed)",
+          "indent": 26,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "3. Class pairing (admissions)",
+          "body": "Class pairing (admissions)",
+          "indent": 5,
+          "bullet_marker": "3.",
+          "checkbox": false
+        },
+        {
+          "text": "- Make new sub sheet in master google spreadsheet",
+          "body": "Make new sub sheet in master google spreadsheet",
+          "indent": 16,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Pair students and tutors with fewer availabilities first",
+          "body": "Pair students and tutors with fewer availabilities first",
+          "indent": 16,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Pair siblings with the same tutor if possible, but it doesn’t have to be like this",
+          "body": "Pair siblings with the same tutor if possible, but it doesn’t have to be like this",
+          "indent": 16,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- See 2023 winter spring season spreadsheet for class pairing examples:",
+          "body": "See 2023 winter spring season spreadsheet for class pairing examples:",
+          "indent": 16,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- https://docs.google.com/spreadsheets/d/1o0GZHuSfB5-Q2jj_IS-O5t7ILbS4OaSgrO",
+          "body": "https://docs.google.com/spreadsheets/d/1o0GZHuSfB5-Q2jj_IS-O5t7ILbS4OaSgrO",
+          "indent": 26,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "eTQ_Ki3dw/edit?usp=sharing",
+          "body": "eTQ_Ki3dw/edit?usp=sharing",
+          "indent": 32,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 2,
+      "confidence": 0.9,
+      "signals": [
+        "table-like task rows"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 2,
+          "text": "Steps to preparing forms/spreadsheets:",
+          "body": "Steps to preparing forms/spreadsheets:"
+        },
+        {
+          "line_index": 10,
+          "text": "- Waitlist: classes not guaranteed",
+          "body": "Waitlist: classes not guaranteed"
+        },
+        {
+          "line_index": 11,
+          "text": "- TEMPLATE: at the very bottom of this document",
+          "body": "TEMPLATE: at the very bottom of this document"
+        }
+      ],
+      "extracted_action_item_ids": [
+        "memory_8f870e0670f3"
+      ]
+    },
+    {
+      "block_id": "block_9bd7e33aef9e",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_5",
+      "block_type": "template_or_example",
+      "heading": "Document",
+      "text": "4.   Prep relevant materials for each class (email, group chat, welcome messages, TR)\n               -     Email template: can be found in email drafts\n               -     Welcome message: at the bottom of this document\n               -     Group chat: made for each class\n\n\n\n\n\n\n\n\n\n\n               -     TR examples:\n                          -    https://docs.google.com/document/d/1KL1wN6m-UALeyg8IBvXAhk3myb9YhN\n                               me5No54jy-jK4/edit?usp=sharing\n                          -    Where to put TRs? Go into YIV’s drive, find the folder named teaching reports, find\n                               the sub folder named Fall 2024 TRs (               Teaching Reports       ), and put it there\n                          -    Make a copy of past template → make new mon-fri templates\n                          -    Change the dates to suit this season’s dates\n                          -    Make TRs from templates for each class\n                          -    Message to be sent with the Teaching Report:\n                               This is your 2024 Summer Teaching Report that is expected to be filled after each class. 1\n                               hour of service hour is given for each completed report as an acknowledgment of your\n                               class preparation time. Please remember to complete the conclusion that adds an extra 1\n                               hour.\n\n     5.   Send welcome message to start PT\n               -     Monitor the start of the classes\n               -     For communications: if the chat is inactive, dm the tutor to start conversations with the parent\n               -     Example conversations: asking about a child’s current learning level, sending zoom meeting\n                     links, parents sending relevant materials etc.\n\n     6.   During the season: monitor classes, answer questions, and track attendance (ins, wechat, email) (make\n          attendance spreadsheet)\n               -     Will be distributed\n               -     Example attendance spreadsheet:\n                     https://docs.google.com/spreadsheets/d/1o0GZHuSfB5-Q2jj_IS-O5t7ILbS4OaSgrOeTQ_Ki\n                     3dw/edit#gid=1117858174 (first sub sheet)",
+      "lines": [
+        {
+          "text": "4. Prep relevant materials for each class (email, group chat, welcome messages, TR)",
+          "body": "Prep relevant materials for each class (email, group chat, welcome messages, TR)",
+          "indent": 0,
+          "bullet_marker": "4.",
+          "checkbox": false
+        },
+        {
+          "text": "- Email template: can be found in email drafts",
+          "body": "Email template: can be found in email drafts",
+          "indent": 15,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Welcome message: at the bottom of this document",
+          "body": "Welcome message: at the bottom of this document",
+          "indent": 15,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Group chat: made for each class",
+          "body": "Group chat: made for each class",
+          "indent": 15,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- TR examples:",
+          "body": "TR examples:",
+          "indent": 15,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- https://docs.google.com/document/d/1KL1wN6m-UALeyg8IBvXAhk3myb9YhN",
+          "body": "https://docs.google.com/document/d/1KL1wN6m-UALeyg8IBvXAhk3myb9YhN",
+          "indent": 26,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "me5No54jy-jK4/edit?usp=sharing",
+          "body": "me5No54jy-jK4/edit?usp=sharing",
+          "indent": 31,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- Where to put TRs? Go into YIV’s drive, find the folder named teaching reports, find",
+          "body": "Where to put TRs? Go into YIV’s drive, find the folder named teaching reports, find",
+          "indent": 26,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "the sub folder named Fall 2024 TRs ( Teaching Reports ), and put it there",
+          "body": "the sub folder named Fall 2024 TRs ( Teaching Reports ), and put it there",
+          "indent": 31,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- Make a copy of past template → make new mon-fri templates",
+          "body": "Make a copy of past template → make new mon-fri templates",
+          "indent": 26,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Change the dates to suit this season’s dates",
+          "body": "Change the dates to suit this season’s dates",
+          "indent": 26,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Make TRs from templates for each class",
+          "body": "Make TRs from templates for each class",
+          "indent": 26,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Message to be sent with the Teaching Report:",
+          "body": "Message to be sent with the Teaching Report:",
+          "indent": 26,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "This is your 2024 Summer Teaching Report that is expected to be filled after each class. 1",
+          "body": "This is your 2024 Summer Teaching Report that is expected to be filled after each class. 1",
+          "indent": 31,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "hour of service hour is given for each completed report as an acknowledgment of your",
+          "body": "hour of service hour is given for each completed report as an acknowledgment of your",
+          "indent": 31,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "class preparation time. Please remember to complete the conclusion that adds an extra 1",
+          "body": "class preparation time. Please remember to complete the conclusion that adds an extra 1",
+          "indent": 31,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "hour.",
+          "body": "hour.",
+          "indent": 31,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "5. Send welcome message to start PT",
+          "body": "Send welcome message to start PT",
+          "indent": 5,
+          "bullet_marker": "5.",
+          "checkbox": false
+        },
+        {
+          "text": "- Monitor the start of the classes",
+          "body": "Monitor the start of the classes",
+          "indent": 15,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- For communications: if the chat is inactive, dm the tutor to start conversations with the parent",
+          "body": "For communications: if the chat is inactive, dm the tutor to start conversations with the parent",
+          "indent": 15,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Example conversations: asking about a child’s current learning level, sending zoom meeting",
+          "body": "Example conversations: asking about a child’s current learning level, sending zoom meeting",
+          "indent": 15,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "links, parents sending relevant materials etc.",
+          "body": "links, parents sending relevant materials etc.",
+          "indent": 21,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "6. During the season: monitor classes, answer questions, and track attendance (ins, wechat, email) (make",
+          "body": "During the season: monitor classes, answer questions, and track attendance (ins, wechat, email) (make",
+          "indent": 5,
+          "bullet_marker": "6.",
+          "checkbox": false
+        },
+        {
+          "text": "attendance spreadsheet)",
+          "body": "attendance spreadsheet)",
+          "indent": 10,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- Will be distributed",
+          "body": "Will be distributed",
+          "indent": 15,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Example attendance spreadsheet:",
+          "body": "Example attendance spreadsheet:",
+          "indent": 15,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "https://docs.google.com/spreadsheets/d/1o0GZHuSfB5-Q2jj_IS-O5t7ILbS4OaSgrOeTQ_Ki",
+          "body": "https://docs.google.com/spreadsheets/d/1o0GZHuSfB5-Q2jj_IS-O5t7ILbS4OaSgrOeTQ_Ki",
+          "indent": 21,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "3dw/edit#gid=1117858174 (first sub sheet)",
+          "body": "3dw/edit#gid=1117858174 (first sub sheet)",
+          "indent": 21,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 3,
+      "confidence": 0.82,
+      "signals": [
+        "template/example language"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 7,
+          "text": "- Where to put TRs? Go into YIV’s drive, find the folder named teaching reports, find",
+          "body": "Where to put TRs? Go into YIV’s drive, find the folder named teaching reports, find"
+        },
+        {
+          "line_index": 12,
+          "text": "- Message to be sent with the Teaching Report:",
+          "body": "Message to be sent with the Teaching Report:"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_b5fbd6de254a",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_6",
+      "block_type": "task_table",
+      "heading": "Document",
+      "text": "This Week’s Tasks:\n\n     1.    Account pass down\n                a.    Email\n                          i.     Professionalism\n                         ii.     Signatures\n                b.    Instagram\n                c.    Wechat\n                          i.     Communications Account → Cecilia\n                                      1.    Main chats (volunteer & parent group chat -- sticky on top)\n                                      2.    Remember to add haley’s main wechat acc to the parent and student gc\n                         ii.     Main Account → Haley\n\n     2.    Individual tasks - Ask if you are not sure what/how to do each task\n\n\n ●     Tyler         September 4th               Prep (edit) tutor sign up and waitlist forms, link to spreadsheet\n\n ●     Owen          September 4th               Prep (edit) student sign up and waitlist forms, link to spreadsheet\n\n       Tyler         September 10th              Send a mass email to tutors and parents about our fall 2024 PT\n\n ●     Bernice       September 14th              Make TR template for Monday-Wednesday (drafts)\n\n                                                 Edit parent notification/sign up message + make TR template for Thurs & Fri\n ●     Bernice       September 14th              (drafts)\n\n                                                 Edit tutor notification/sign up message + make TR template for Sat + Sun\n ●     Owen          September 14th              (drafts)\n\n       Bernice\n       and Owen      September 23rd              Start pairing students and tutors\n\n       Tyler         September 28th              Send out class information to parents and students\n     -     We will begin the hiring process for tutors on the September 5th and close the form on the 18th\n                -     Send waitlist form\n     -     Communications send the student form and close when it reaches 50\n     -     Send out waitlist form after\n     -     Tutor training 25th and then start pairing on the 23rd\n     -     2024 Fall PT starts on October 7th until December 9th (10 weeks)\n                -     Remember to keep track of attendance\n     -     Next team meeting: October 16th",
+      "lines": [
+        {
+          "text": "This Week’s Tasks:",
+          "body": "This Week’s Tasks:",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "1. Account pass down",
+          "body": "Account pass down",
+          "indent": 5,
+          "bullet_marker": "1.",
+          "checkbox": false
+        },
+        {
+          "text": "a. Email",
+          "body": "Email",
+          "indent": 16,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "i. Professionalism",
+          "body": "Professionalism",
+          "indent": 26,
+          "bullet_marker": "i.",
+          "checkbox": false
+        },
+        {
+          "text": "ii. Signatures",
+          "body": "Signatures",
+          "indent": 25,
+          "bullet_marker": "ii.",
+          "checkbox": false
+        },
+        {
+          "text": "b. Instagram",
+          "body": "Instagram",
+          "indent": 16,
+          "bullet_marker": "b.",
+          "checkbox": false
+        },
+        {
+          "text": "c. Wechat",
+          "body": "Wechat",
+          "indent": 16,
+          "bullet_marker": "c.",
+          "checkbox": false
+        },
+        {
+          "text": "i. Communications Account → Cecilia",
+          "body": "Communications Account → Cecilia",
+          "indent": 26,
+          "bullet_marker": "i.",
+          "checkbox": false
+        },
+        {
+          "text": "1. Main chats (volunteer & parent group chat -- sticky on top)",
+          "body": "Main chats (volunteer & parent group chat -- sticky on top)",
+          "indent": 38,
+          "bullet_marker": "1.",
+          "checkbox": false
+        },
+        {
+          "text": "2. Remember to add haley’s main wechat acc to the parent and student gc",
+          "body": "Remember to add haley’s main wechat acc to the parent and student gc",
+          "indent": 38,
+          "bullet_marker": "2.",
+          "checkbox": false
+        },
+        {
+          "text": "ii. Main Account → Haley",
+          "body": "Main Account → Haley",
+          "indent": 25,
+          "bullet_marker": "ii.",
+          "checkbox": false
+        },
+        {
+          "text": "2. Individual tasks - Ask if you are not sure what/how to do each task",
+          "body": "Individual tasks - Ask if you are not sure what/how to do each task",
+          "indent": 5,
+          "bullet_marker": "2.",
+          "checkbox": false
+        },
+        {
+          "text": "● Tyler September 4th Prep (edit) tutor sign up and waitlist forms, link to spreadsheet",
+          "body": "● Tyler September 4th Prep (edit) tutor sign up and waitlist forms, link to spreadsheet",
+          "indent": 1,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "● Owen September 4th Prep (edit) student sign up and waitlist forms, link to spreadsheet",
+          "body": "● Owen September 4th Prep (edit) student sign up and waitlist forms, link to spreadsheet",
+          "indent": 1,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Tyler September 10th Send a mass email to tutors and parents about our fall 2024 PT",
+          "body": "Tyler September 10th Send a mass email to tutors and parents about our fall 2024 PT",
+          "indent": 7,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "● Bernice September 14th Make TR template for Monday-Wednesday (drafts)",
+          "body": "● Bernice September 14th Make TR template for Monday-Wednesday (drafts)",
+          "indent": 1,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Edit parent notification/sign up message + make TR template for Thurs & Fri",
+          "body": "Edit parent notification/sign up message + make TR template for Thurs & Fri",
+          "indent": 49,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "● Bernice September 14th (drafts)",
+          "body": "● Bernice September 14th (drafts)",
+          "indent": 1,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Edit tutor notification/sign up message + make TR template for Sat + Sun",
+          "body": "Edit tutor notification/sign up message + make TR template for Sat + Sun",
+          "indent": 49,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "● Owen September 14th (drafts)",
+          "body": "● Owen September 14th (drafts)",
+          "indent": 1,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Bernice",
+          "body": "Bernice",
+          "indent": 7,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "and Owen September 23rd Start pairing students and tutors",
+          "body": "and Owen September 23rd Start pairing students and tutors",
+          "indent": 7,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Tyler September 28th Send out class information to parents and students",
+          "body": "Tyler September 28th Send out class information to parents and students",
+          "indent": 7,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- We will begin the hiring process for tutors on the September 5th and close the form on the 18th",
+          "body": "We will begin the hiring process for tutors on the September 5th and close the form on the 18th",
+          "indent": 5,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Send waitlist form",
+          "body": "Send waitlist form",
+          "indent": 16,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Communications send the student form and close when it reaches 50",
+          "body": "Communications send the student form and close when it reaches 50",
+          "indent": 5,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Send out waitlist form after",
+          "body": "Send out waitlist form after",
+          "indent": 5,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Tutor training 25th and then start pairing on the 23rd",
+          "body": "Tutor training 25th and then start pairing on the 23rd",
+          "indent": 5,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- 2024 Fall PT starts on October 7th until December 9th (10 weeks)",
+          "body": "2024 Fall PT starts on October 7th until December 9th (10 weeks)",
+          "indent": 5,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Remember to keep track of attendance",
+          "body": "Remember to keep track of attendance",
+          "indent": 16,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Next team meeting: October 16th",
+          "body": "Next team meeting: October 16th",
+          "indent": 5,
+          "bullet_marker": "-",
+          "checkbox": false
+        }
+      ],
+      "page": 4,
+      "confidence": 0.9,
+      "signals": [
+        "table-like task rows"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 9,
+          "text": "2. Remember to add haley’s main wechat acc to the parent and student gc",
+          "body": "Remember to add haley’s main wechat acc to the parent and student gc"
+        },
+        {
+          "line_index": 14,
+          "text": "Tyler September 10th Send a mass email to tutors and parents about our fall 2024 PT",
+          "body": "Tyler September 10th Send a mass email to tutors and parents about our fall 2024 PT"
+        },
+        {
+          "line_index": 22,
+          "text": "Tyler September 28th Send out class information to parents and students",
+          "body": "Tyler September 28th Send out class information to parents and students"
+        },
+        {
+          "line_index": 23,
+          "text": "- We will begin the hiring process for tutors on the September 5th and close the form on the 18th",
+          "body": "We will begin the hiring process for tutors on the September 5th and close the form on the 18th"
+        },
+        {
+          "line_index": 29,
+          "text": "- Remember to keep track of attendance",
+          "body": "Remember to keep track of attendance"
+        }
+      ],
+      "extracted_action_item_ids": [
+        "memory_3fd3310f46c7",
+        "memory_a6b0532e76a7",
+        "memory_028b3ac28b91",
+        "memory_32f51d5776d2",
+        "memory_8a09526003b4",
+        "memory_08a4c662f3bb",
+        "memory_ff0233aefcdf",
+        "memory_4de04d80e629",
+        "memory_ad8c9ce64cdb",
+        "memory_168a1821a8bf",
+        "memory_007e026ef086",
+        "memory_20a07919f101"
+      ]
+    },
+    {
+      "block_id": "block_dbc71a2ad2bf",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_7",
+      "block_type": "unknown",
+      "heading": "Document",
+      "text": "Communications",
+      "lines": [
+        {
+          "text": "Communications",
+          "body": "Communications",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 5,
+      "confidence": 0.45,
+      "signals": [],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_1903685845d7",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_8",
+      "block_type": "policy_or_process",
+      "heading": "General Guidelines",
+      "text": "1.   Be polite/respectful regardless of what the parent said.\n    2.   Try to help the parent/tutor the best way you can, but maintain professionalism and remember\n         that this is YIV’s Wechat account. Anything you say is a reflection of YIV.\n    3.   If you need any help/suggestions on what to respond, always ask! Send a screenshot in the\n         logistics group chat or directly send it to Haley. Don’t be afraid to ask for second opinions on\n         difficult situations to respond.\n    4.   Respond as promptly as you can.",
+      "lines": [
+        {
+          "text": "1. Be polite/respectful regardless of what the parent said.",
+          "body": "Be polite/respectful regardless of what the parent said.",
+          "indent": 4,
+          "bullet_marker": "1.",
+          "checkbox": false
+        },
+        {
+          "text": "2. Try to help the parent/tutor the best way you can, but maintain professionalism and remember",
+          "body": "Try to help the parent/tutor the best way you can, but maintain professionalism and remember",
+          "indent": 4,
+          "bullet_marker": "2.",
+          "checkbox": false
+        },
+        {
+          "text": "that this is YIV’s Wechat account. Anything you say is a reflection of YIV.",
+          "body": "that this is YIV’s Wechat account. Anything you say is a reflection of YIV.",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "3. If you need any help/suggestions on what to respond, always ask! Send a screenshot in the",
+          "body": "If you need any help/suggestions on what to respond, always ask! Send a screenshot in the",
+          "indent": 4,
+          "bullet_marker": "3.",
+          "checkbox": false
+        },
+        {
+          "text": "logistics group chat or directly send it to Haley. Don’t be afraid to ask for second opinions on",
+          "body": "logistics group chat or directly send it to Haley. Don’t be afraid to ask for second opinions on",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "difficult situations to respond.",
+          "body": "difficult situations to respond.",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "4. Respond as promptly as you can.",
+          "body": "Respond as promptly as you can.",
+          "indent": 4,
+          "bullet_marker": "4.",
+          "checkbox": false
+        }
+      ],
+      "page": 5,
+      "confidence": 0.9,
+      "signals": [
+        "policy/process heading"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 1,
+          "text": "2. Try to help the parent/tutor the best way you can, but maintain professionalism and remember",
+          "body": "Try to help the parent/tutor the best way you can, but maintain professionalism and remember"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_952a1286342d",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_9",
+      "block_type": "task_table",
+      "heading": "Account Pass-Downs",
+      "text": "1.   Emily’s Account (YIV)\n              a.   wechat ID: yivcanada\n              b.   PW: youthinitiative\n    2.   Fiona’s Account (YIV Communications Manager)\n              a.    Wechat ID: yivcanada_pm\n              b.    PW: yivcanada",
+      "lines": [
+        {
+          "text": "1. Emily’s Account (YIV)",
+          "body": "Emily’s Account (YIV)",
+          "indent": 4,
+          "bullet_marker": "1.",
+          "checkbox": false
+        },
+        {
+          "text": "a. wechat ID: yivcanada",
+          "body": "wechat ID: yivcanada",
+          "indent": 14,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "b. PW: youthinitiative",
+          "body": "PW: youthinitiative",
+          "indent": 14,
+          "bullet_marker": "b.",
+          "checkbox": false
+        },
+        {
+          "text": "2. Fiona’s Account (YIV Communications Manager)",
+          "body": "Fiona’s Account (YIV Communications Manager)",
+          "indent": 4,
+          "bullet_marker": "2.",
+          "checkbox": false
+        },
+        {
+          "text": "a. Wechat ID: yivcanada_pm",
+          "body": "Wechat ID: yivcanada_pm",
+          "indent": 14,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "b. PW: yivcanada",
+          "body": "PW: yivcanada",
+          "indent": 14,
+          "bullet_marker": "b.",
+          "checkbox": false
+        }
+      ],
+      "page": 5,
+      "confidence": 0.9,
+      "signals": [
+        "table-like task rows"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 1,
+          "text": "a. wechat ID: yivcanada",
+          "body": "wechat ID: yivcanada"
+        },
+        {
+          "line_index": 2,
+          "text": "b. PW: youthinitiative",
+          "body": "PW: youthinitiative"
+        },
+        {
+          "line_index": 4,
+          "text": "a. Wechat ID: yivcanada_pm",
+          "body": "Wechat ID: yivcanada_pm"
+        },
+        {
+          "line_index": 5,
+          "text": "b. PW: yivcanada",
+          "body": "PW: yivcanada"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_fccc3bb13f77",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_10",
+      "block_type": "agenda_section",
+      "heading": "3.   YIV Email",
+      "text": "a.   info@yivcanada.ca\n              b.   PW: yivcanada2023",
+      "lines": [
+        {
+          "text": "a. info@yivcanada.ca",
+          "body": "info@yivcanada.ca",
+          "indent": 14,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "b. PW: yivcanada2023",
+          "body": "PW: yivcanada2023",
+          "indent": 14,
+          "bullet_marker": "b.",
+          "checkbox": false
+        }
+      ],
+      "page": 5,
+      "confidence": 0.74,
+      "signals": [
+        "numbered agenda"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 1,
+          "text": "b. PW: yivcanada2023",
+          "body": "PW: yivcanada2023"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_13446b79cbd5",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_11",
+      "block_type": "agenda_section",
+      "heading": "4.   YIV Instagram",
+      "text": "a.   Username: yivcanada\n              b.   Password: yivcanada2023",
+      "lines": [
+        {
+          "text": "a. Username: yivcanada",
+          "body": "Username: yivcanada",
+          "indent": 14,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "b. Password: yivcanada2023",
+          "body": "Password: yivcanada2023",
+          "indent": 14,
+          "bullet_marker": "b.",
+          "checkbox": false
+        }
+      ],
+      "page": 5,
+      "confidence": 0.74,
+      "signals": [
+        "numbered agenda"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 0,
+          "text": "a. Username: yivcanada",
+          "body": "Username: yivcanada"
+        },
+        {
+          "line_index": 1,
+          "text": "b. Password: yivcanada2023",
+          "body": "Password: yivcanada2023"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_a65e145ee1c5",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_12",
+      "block_type": "policy_or_process",
+      "heading": "Communications Workflow",
+      "text": "1.   Send Tutor Peer Tutoring sign up message once the form is released (use template 1)\n    2.   Send Parent Peer Tutoring regular sign up message once it is released, cap at the number given\n         by Haley (use template 2a)\n    3.   Once the regular parent form is closed, send the waitlist sign up form (use template 2b)\n    4.   Sign up day is where the parents are going to have the most amount of questions\n              a.   For example, they might ask, is my child registered? Why didn’t I receive any emails?\n                       i.    In this case, check the master spreadsheet, and respond with “Yes, your child is\n                             registered” or “no, your child is not registered” (in Mandarin/English\n                             depending on the parent)",
+      "lines": [
+        {
+          "text": "1. Send Tutor Peer Tutoring sign up message once the form is released (use template 1)",
+          "body": "Send Tutor Peer Tutoring sign up message once the form is released (use template 1)",
+          "indent": 4,
+          "bullet_marker": "1.",
+          "checkbox": false
+        },
+        {
+          "text": "2. Send Parent Peer Tutoring regular sign up message once it is released, cap at the number given",
+          "body": "Send Parent Peer Tutoring regular sign up message once it is released, cap at the number given",
+          "indent": 4,
+          "bullet_marker": "2.",
+          "checkbox": false
+        },
+        {
+          "text": "by Haley (use template 2a)",
+          "body": "by Haley (use template 2a)",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "3. Once the regular parent form is closed, send the waitlist sign up form (use template 2b)",
+          "body": "Once the regular parent form is closed, send the waitlist sign up form (use template 2b)",
+          "indent": 4,
+          "bullet_marker": "3.",
+          "checkbox": false
+        },
+        {
+          "text": "4. Sign up day is where the parents are going to have the most amount of questions",
+          "body": "Sign up day is where the parents are going to have the most amount of questions",
+          "indent": 4,
+          "bullet_marker": "4.",
+          "checkbox": false
+        },
+        {
+          "text": "a. For example, they might ask, is my child registered? Why didn’t I receive any emails?",
+          "body": "For example, they might ask, is my child registered? Why didn’t I receive any emails?",
+          "indent": 14,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "i. In this case, check the master spreadsheet, and respond with “Yes, your child is",
+          "body": "In this case, check the master spreadsheet, and respond with “Yes, your child is",
+          "indent": 23,
+          "bullet_marker": "i.",
+          "checkbox": false
+        },
+        {
+          "text": "registered” or “no, your child is not registered” (in Mandarin/English",
+          "body": "registered” or “no, your child is not registered” (in Mandarin/English",
+          "indent": 29,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "depending on the parent)",
+          "body": "depending on the parent)",
+          "indent": 29,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 5,
+      "confidence": 0.9,
+      "signals": [
+        "policy/process heading"
+      ],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_f00b16b346c6",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_13",
+      "block_type": "template_or_example",
+      "heading": "Document",
+      "text": "ii.    Some parents might be worried about not receiving emails after registration,\n                             tell them to give their child’s name and check with YIV’s record. Reassure\n                             them that they are registered if they are on the spreadsheet and it’s ok that they\n                             didn’t receive an email.\n              b.   If necessary, explain again that regular sign up guarantees classes but waitlist doesn’t\n    5.   Between sign up release and class pairings release, some parents might ask when classes are out,\n         reply with something like:\n                   您好，我们正在给孩子们分配课程，请您耐心等待。 谢谢。\n    6.   Once class pairings are out, some parents might ask questions in about zoom link/classes (see\n         template sections 8 and 9 for some common questions)\n              a.   If the parent is having trouble contacting the tutor, contact the tutor for the parent,\n                   and let the parent know the response.\n    7.   Once class pairings are out, make group chats for each class (include both YIV accounts, parent\n         wechat account, and tutor wechat account)\n              a.   Title the groupchat with the name of the students and class schedule\n\n\n\n\n\n\n\n\n\n              b.   Send welcome message (see template 4a)",
+      "lines": [
+        {
+          "text": "ii. Some parents might be worried about not receiving emails after registration,",
+          "body": "Some parents might be worried about not receiving emails after registration,",
+          "indent": 0,
+          "bullet_marker": "ii.",
+          "checkbox": false
+        },
+        {
+          "text": "tell them to give their child’s name and check with YIV’s record. Reassure",
+          "body": "tell them to give their child’s name and check with YIV’s record. Reassure",
+          "indent": 29,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "them that they are registered if they are on the spreadsheet and it’s ok that they",
+          "body": "them that they are registered if they are on the spreadsheet and it’s ok that they",
+          "indent": 29,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "didn’t receive an email.",
+          "body": "didn’t receive an email.",
+          "indent": 29,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "b. If necessary, explain again that regular sign up guarantees classes but waitlist doesn’t",
+          "body": "If necessary, explain again that regular sign up guarantees classes but waitlist doesn’t",
+          "indent": 14,
+          "bullet_marker": "b.",
+          "checkbox": false
+        },
+        {
+          "text": "5. Between sign up release and class pairings release, some parents might ask when classes are out,",
+          "body": "Between sign up release and class pairings release, some parents might ask when classes are out,",
+          "indent": 4,
+          "bullet_marker": "5.",
+          "checkbox": false
+        },
+        {
+          "text": "reply with something like:",
+          "body": "reply with something like:",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "您好，我们正在给孩子们分配课程，请您耐心等待。 谢谢。",
+          "body": "您好，我们正在给孩子们分配课程，请您耐心等待。 谢谢。",
+          "indent": 19,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "6. Once class pairings are out, some parents might ask questions in about zoom link/classes (see",
+          "body": "Once class pairings are out, some parents might ask questions in about zoom link/classes (see",
+          "indent": 4,
+          "bullet_marker": "6.",
+          "checkbox": false
+        },
+        {
+          "text": "template sections 8 and 9 for some common questions)",
+          "body": "template sections 8 and 9 for some common questions)",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "a. If the parent is having trouble contacting the tutor, contact the tutor for the parent,",
+          "body": "If the parent is having trouble contacting the tutor, contact the tutor for the parent,",
+          "indent": 14,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "and let the parent know the response.",
+          "body": "and let the parent know the response.",
+          "indent": 19,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "7. Once class pairings are out, make group chats for each class (include both YIV accounts, parent",
+          "body": "Once class pairings are out, make group chats for each class (include both YIV accounts, parent",
+          "indent": 4,
+          "bullet_marker": "7.",
+          "checkbox": false
+        },
+        {
+          "text": "wechat account, and tutor wechat account)",
+          "body": "wechat account, and tutor wechat account)",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "a. Title the groupchat with the name of the students and class schedule",
+          "body": "Title the groupchat with the name of the students and class schedule",
+          "indent": 14,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "b. Send welcome message (see template 4a)",
+          "body": "Send welcome message (see template 4a)",
+          "indent": 14,
+          "bullet_marker": "b.",
+          "checkbox": false
+        }
+      ],
+      "page": 6,
+      "confidence": 0.82,
+      "signals": [
+        "template/example language"
+      ],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_c4741be4de9d",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_14",
+      "block_type": "template_or_example",
+      "heading": "8.   Check in each week regarding attendance (see template 4b)",
+      "text": "a.   To check attendance\n                       i.    Zoom screenshot\n                      ii.    Class overview\n                     iii.    To check attendance if there is no chat history: Did you all have class today?\n    9.   Notify parents/students/tutors of any breaks and notify everyone one week before the end of\n         the season (see template 4c)",
+      "lines": [
+        {
+          "text": "a. To check attendance",
+          "body": "To check attendance",
+          "indent": 14,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "i. Zoom screenshot",
+          "body": "Zoom screenshot",
+          "indent": 23,
+          "bullet_marker": "i.",
+          "checkbox": false
+        },
+        {
+          "text": "ii. Class overview",
+          "body": "Class overview",
+          "indent": 22,
+          "bullet_marker": "ii.",
+          "checkbox": false
+        },
+        {
+          "text": "iii. To check attendance if there is no chat history: Did you all have class today?",
+          "body": "To check attendance if there is no chat history: Did you all have class today?",
+          "indent": 21,
+          "bullet_marker": "iii.",
+          "checkbox": false
+        },
+        {
+          "text": "9. Notify parents/students/tutors of any breaks and notify everyone one week before the end of",
+          "body": "Notify parents/students/tutors of any breaks and notify everyone one week before the end of",
+          "indent": 4,
+          "bullet_marker": "9.",
+          "checkbox": false
+        },
+        {
+          "text": "the season (see template 4c)",
+          "body": "the season (see template 4c)",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 6,
+      "confidence": 0.82,
+      "signals": [
+        "template/example language"
+      ],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_f9f93e0cf9b6",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_15",
+      "block_type": "template_or_example",
+      "heading": "10.  Thank you notes to parents/tutors at the end of each season",
+      "text": "a.   One thank you note to each class group chat (template 4di)\n              b.   One thank you note to the (big) YIV volunteer group chat (template 4di)\n              c.   One thank you note to the (big) YIV parent group chat (template 4dii)\n    11.  Disband class wechat groups after each season",
+      "lines": [
+        {
+          "text": "a. One thank you note to each class group chat (template 4di)",
+          "body": "One thank you note to each class group chat (template 4di)",
+          "indent": 14,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "b. One thank you note to the (big) YIV volunteer group chat (template 4di)",
+          "body": "One thank you note to the (big) YIV volunteer group chat (template 4di)",
+          "indent": 14,
+          "bullet_marker": "b.",
+          "checkbox": false
+        },
+        {
+          "text": "c. One thank you note to the (big) YIV parent group chat (template 4dii)",
+          "body": "One thank you note to the (big) YIV parent group chat (template 4dii)",
+          "indent": 14,
+          "bullet_marker": "c.",
+          "checkbox": false
+        },
+        {
+          "text": "11. Disband class wechat groups after each season",
+          "body": "Disband class wechat groups after each season",
+          "indent": 4,
+          "bullet_marker": "11.",
+          "checkbox": false
+        }
+      ],
+      "page": 6,
+      "confidence": 0.82,
+      "signals": [
+        "template/example language"
+      ],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_72dcf63d243b",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_16",
+      "block_type": "agenda_section",
+      "heading": "12. Promotions/CYVAC/Hiring/New Year Celebration (Formality)",
+      "text": "a.  See other templates below from past seasons\n\n\n\nStandardized Messages & Common Responses Sorted by Type/Event\n\n   1.  Tutor Peer Tutoring Sign Up Message:\n\nVOLUNTEERS NEEDED!\n\n🍁 2024 Fall Peer Tutoring Program — the 12th season.\n\n📅Run Dates: Oct 7 – Dec 9\n📚Available subjects: English, Math, Art, Mandarin, Science, Other\n🧒Age range: Kindergarten to Grade 5\n\nYIV is excited to announce the 12th rendition of our most popular program, where high school\nstudents like you can gain unique leadership skills by creating a personalized curriculum for your\nstudents. Sign up at: https://forms.gle/DtUMxSM2tck4iH7D6\n\n\n   2.  Parent Peer Tutor Sign Up Message:\n\n   a.  Regular Sign-Up\n\n🌻2024年YIV秋季同伴辅导计划🌻\n\n🎉至今为止，YIV已举办了十个赛季的同伴辅导计划！秋天的来临，同时也意味着我们\n2024年秋季课程表的到来！\n\n私人课程已开启，优质且热情的导师将会免费给幼儿园到5年级的孩子进行一对一的定制\n化学习旅程！\n\n• • •",
+      "lines": [
+        {
+          "text": "a. See other templates below from past seasons",
+          "body": "See other templates below from past seasons",
+          "indent": 11,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "Standardized Messages & Common Responses Sorted by Type/Event",
+          "body": "Standardized Messages & Common Responses Sorted by Type/Event",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "1. Tutor Peer Tutoring Sign Up Message:",
+          "body": "Tutor Peer Tutoring Sign Up Message:",
+          "indent": 3,
+          "bullet_marker": "1.",
+          "checkbox": false
+        },
+        {
+          "text": "VOLUNTEERS NEEDED!",
+          "body": "VOLUNTEERS NEEDED!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "🍁 2024 Fall Peer Tutoring Program — the 12th season.",
+          "body": "🍁 2024 Fall Peer Tutoring Program — the 12th season.",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "📅Run Dates: Oct 7 – Dec 9",
+          "body": "📅Run Dates: Oct 7 – Dec 9",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "📚Available subjects: English, Math, Art, Mandarin, Science, Other",
+          "body": "📚Available subjects: English, Math, Art, Mandarin, Science, Other",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "🧒Age range: Kindergarten to Grade 5",
+          "body": "🧒Age range: Kindergarten to Grade 5",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "YIV is excited to announce the 12th rendition of our most popular program, where high school",
+          "body": "YIV is excited to announce the 12th rendition of our most popular program, where high school",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "students like you can gain unique leadership skills by creating a personalized curriculum for your",
+          "body": "students like you can gain unique leadership skills by creating a personalized curriculum for your",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "students. Sign up at: https://forms.gle/DtUMxSM2tck4iH7D6",
+          "body": "students. Sign up at: https://forms.gle/DtUMxSM2tck4iH7D6",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "2. Parent Peer Tutor Sign Up Message:",
+          "body": "Parent Peer Tutor Sign Up Message:",
+          "indent": 3,
+          "bullet_marker": "2.",
+          "checkbox": false
+        },
+        {
+          "text": "a. Regular Sign-Up",
+          "body": "Regular Sign-Up",
+          "indent": 3,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "🌻2024年YIV秋季同伴辅导计划🌻",
+          "body": "🌻2024年YIV秋季同伴辅导计划🌻",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "🎉至今为止，YIV已举办了十个赛季的同伴辅导计划！秋天的来临，同时也意味着我们",
+          "body": "🎉至今为止，YIV已举办了十个赛季的同伴辅导计划！秋天的来临，同时也意味着我们",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "2024年秋季课程表的到来！",
+          "body": "2024年秋季课程表的到来！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "私人课程已开启，优质且热情的导师将会免费给幼儿园到5年级的孩子进行一对一的定制",
+          "body": "私人课程已开启，优质且热情的导师将会免费给幼儿园到5年级的孩子进行一对一的定制",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "化学习旅程！",
+          "body": "化学习旅程！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "• • •",
+          "body": "• • •",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 7,
+      "confidence": 0.74,
+      "signals": [
+        "numbered agenda"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 5,
+          "text": "📅Run Dates: Oct 7 – Dec 9",
+          "body": "📅Run Dates: Oct 7 – Dec 9"
+        },
+        {
+          "line_index": 7,
+          "text": "🧒Age range: Kindergarten to Grade 5",
+          "body": "🧒Age range: Kindergarten to Grade 5"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_7dc58f7766c9",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_17",
+      "block_type": "unknown",
+      "heading": "Document",
+      "text": "📅 学期范围：2024年10月7日至12月9日\n\n📚可选科目：英语、美术、数学、科学和语文\n\n💻所有课程将由我们优质且经验丰富的导师在Zoom或Google Meet上免费授课！\n\n‼  本学期的学生人数有限，因此优先报名的小伙伴有优先权！抓紧报名哦！\n\n➡快来注册并加入我们吧：https://forms.gle/DtUMxSM2tck4iH7D6\n\n🤗别忘记把这个难得一见的机会分享给你的家人和朋友们哦！我们十分期待能够在这个\n新年与您合作🌟\n\n\n  b. Waitlist Sign-Up\n\n2022年YIV秋季同伴辅导计划学生等候名单\n\n感谢大家对我们同伴辅导计划的热情支持！由于本季开放位置的人数有限，我们将开放学\n生报名表的等候名单！\n\n‼ 请注意我们不能100%保证等候名单上的学生一定能排到课程的位置，所有排课都是根据\n报名顺序进行。轮到位置时，我们将根据以上填写的时间排课程，并且通过邮件通知您‼\n• • •\n\n📅 学期范围：2022年10月3日至12月11日\n\n📚可选科目：英语、美术、数学、科学和语文\n\n💻所有课程将由我们优质且经验丰富的导师在Zoom或Google Meet上免费授课！\n\n➡快来注册并加入我们吧：https://forms.gle/TZzPkqfPZUBvu1Cu5\n\n🤗别忘记把这个难得一见的机会分享给你的家人和朋友们哦！我们十分期待能够在这个\n新年与您合作🌟",
+      "lines": [
+        {
+          "text": "📅 学期范围：2024年10月7日至12月9日",
+          "body": "📅 学期范围：2024年10月7日至12月9日",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "📚可选科目：英语、美术、数学、科学和语文",
+          "body": "📚可选科目：英语、美术、数学、科学和语文",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "💻所有课程将由我们优质且经验丰富的导师在Zoom或Google Meet上免费授课！",
+          "body": "💻所有课程将由我们优质且经验丰富的导师在Zoom或Google Meet上免费授课！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "‼ 本学期的学生人数有限，因此优先报名的小伙伴有优先权！抓紧报名哦！",
+          "body": "‼ 本学期的学生人数有限，因此优先报名的小伙伴有优先权！抓紧报名哦！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "➡快来注册并加入我们吧：https://forms.gle/DtUMxSM2tck4iH7D6",
+          "body": "➡快来注册并加入我们吧：https://forms.gle/DtUMxSM2tck4iH7D6",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "🤗别忘记把这个难得一见的机会分享给你的家人和朋友们哦！我们十分期待能够在这个",
+          "body": "🤗别忘记把这个难得一见的机会分享给你的家人和朋友们哦！我们十分期待能够在这个",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "新年与您合作🌟",
+          "body": "新年与您合作🌟",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "b. Waitlist Sign-Up",
+          "body": "Waitlist Sign-Up",
+          "indent": 2,
+          "bullet_marker": "b.",
+          "checkbox": false
+        },
+        {
+          "text": "2022年YIV秋季同伴辅导计划学生等候名单",
+          "body": "2022年YIV秋季同伴辅导计划学生等候名单",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "感谢大家对我们同伴辅导计划的热情支持！由于本季开放位置的人数有限，我们将开放学",
+          "body": "感谢大家对我们同伴辅导计划的热情支持！由于本季开放位置的人数有限，我们将开放学",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "生报名表的等候名单！",
+          "body": "生报名表的等候名单！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "‼ 请注意我们不能100%保证等候名单上的学生一定能排到课程的位置，所有排课都是根据",
+          "body": "‼ 请注意我们不能100%保证等候名单上的学生一定能排到课程的位置，所有排课都是根据",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "报名顺序进行。轮到位置时，我们将根据以上填写的时间排课程，并且通过邮件通知您‼",
+          "body": "报名顺序进行。轮到位置时，我们将根据以上填写的时间排课程，并且通过邮件通知您‼",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "• • •",
+          "body": "• • •",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "📅 学期范围：2022年10月3日至12月11日",
+          "body": "📅 学期范围：2022年10月3日至12月11日",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "📚可选科目：英语、美术、数学、科学和语文",
+          "body": "📚可选科目：英语、美术、数学、科学和语文",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "💻所有课程将由我们优质且经验丰富的导师在Zoom或Google Meet上免费授课！",
+          "body": "💻所有课程将由我们优质且经验丰富的导师在Zoom或Google Meet上免费授课！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "➡快来注册并加入我们吧：https://forms.gle/TZzPkqfPZUBvu1Cu5",
+          "body": "➡快来注册并加入我们吧：https://forms.gle/TZzPkqfPZUBvu1Cu5",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "🤗别忘记把这个难得一见的机会分享给你的家人和朋友们哦！我们十分期待能够在这个",
+          "body": "🤗别忘记把这个难得一见的机会分享给你的家人和朋友们哦！我们十分期待能够在这个",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "新年与您合作🌟",
+          "body": "新年与您合作🌟",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 8,
+      "confidence": 0.45,
+      "signals": [],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_3cc0cf2dcff4",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_18",
+      "block_type": "task_table",
+      "heading": "Document",
+      "text": "3.   Math TA Sign Up Message:\n\nOur Math Teaching Assistant (TA) Program is back for the school year!\n\n󰞹 Have a passion for math? Want to a professional volunteer experience to add your resume while\nworking under an esteemed math teacher?\n\n📚 Volunteers will be helping with academic classes, from grade 8-12 math courses to advanced\npreparation courses like SAT, AP, and IB.\n\nInterested in applying?\n⭕ Please send your resume to info@yivcanada.ca\n⭕ Ensure that you can commit from September 12th to June 30th, 2022. The position entails a\nflexible workload of 3-4 hours per week!\n\nPlease let us know if you have any questions and we look forward to viewing your application.\n\n\n    4.   Group Chat Messages:\n\n    a.   Introduction Messages for each new peer tutoring group chat:\n\nHi everyone! I am YIV’s Fiona who will be your contact for any problems during the classes! Thank\nyou all for your participation in our program!\n\nThe first day of class will be the week of October 2, 2023\n\nTutor: Sunny Li\nStudent: Terry Bao\nSubject: Math\nClass Schedule: Fri 8:30-9:15pm\n\nIf anyone will be absent for a class, please notify me in the chat!",
+      "lines": [
+        {
+          "text": "3. Math TA Sign Up Message:",
+          "body": "Math TA Sign Up Message:",
+          "indent": 0,
+          "bullet_marker": "3.",
+          "checkbox": false
+        },
+        {
+          "text": "Our Math Teaching Assistant (TA) Program is back for the school year!",
+          "body": "Our Math Teaching Assistant (TA) Program is back for the school year!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "󰞹 Have a passion for math? Want to a professional volunteer experience to add your resume while",
+          "body": "󰞹 Have a passion for math? Want to a professional volunteer experience to add your resume while",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "working under an esteemed math teacher?",
+          "body": "working under an esteemed math teacher?",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "📚 Volunteers will be helping with academic classes, from grade 8-12 math courses to advanced",
+          "body": "📚 Volunteers will be helping with academic classes, from grade 8-12 math courses to advanced",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "preparation courses like SAT, AP, and IB.",
+          "body": "preparation courses like SAT, AP, and IB.",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Interested in applying?",
+          "body": "Interested in applying?",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "⭕ Please send your resume to info@yivcanada.ca",
+          "body": "⭕ Please send your resume to info@yivcanada.ca",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "⭕ Ensure that you can commit from September 12th to June 30th, 2022. The position entails a",
+          "body": "⭕ Ensure that you can commit from September 12th to June 30th, 2022. The position entails a",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "flexible workload of 3-4 hours per week!",
+          "body": "flexible workload of 3-4 hours per week!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Please let us know if you have any questions and we look forward to viewing your application.",
+          "body": "Please let us know if you have any questions and we look forward to viewing your application.",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "4. Group Chat Messages:",
+          "body": "Group Chat Messages:",
+          "indent": 4,
+          "bullet_marker": "4.",
+          "checkbox": false
+        },
+        {
+          "text": "a. Introduction Messages for each new peer tutoring group chat:",
+          "body": "Introduction Messages for each new peer tutoring group chat:",
+          "indent": 4,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "Hi everyone! I am YIV’s Fiona who will be your contact for any problems during the classes! Thank",
+          "body": "Hi everyone! I am YIV’s Fiona who will be your contact for any problems during the classes! Thank",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "you all for your participation in our program!",
+          "body": "you all for your participation in our program!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "The first day of class will be the week of October 2, 2023",
+          "body": "The first day of class will be the week of October 2, 2023",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Tutor: Sunny Li",
+          "body": "Tutor: Sunny Li",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Student: Terry Bao",
+          "body": "Student: Terry Bao",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Subject: Math",
+          "body": "Subject: Math",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Class Schedule: Fri 8:30-9:15pm",
+          "body": "Class Schedule: Fri 8:30-9:15pm",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "If anyone will be absent for a class, please notify me in the chat!",
+          "body": "If anyone will be absent for a class, please notify me in the chat!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 9,
+      "confidence": 0.9,
+      "signals": [
+        "table-like task rows"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 2,
+          "text": "󰞹 Have a passion for math? Want to a professional volunteer experience to add your resume while",
+          "body": "󰞹 Have a passion for math? Want to a professional volunteer experience to add your resume while"
+        },
+        {
+          "line_index": 4,
+          "text": "📚 Volunteers will be helping with academic classes, from grade 8-12 math courses to advanced",
+          "body": "📚 Volunteers will be helping with academic classes, from grade 8-12 math courses to advanced"
+        },
+        {
+          "line_index": 16,
+          "text": "Tutor: Sunny Li",
+          "body": "Tutor: Sunny Li"
+        },
+        {
+          "line_index": 17,
+          "text": "Student: Terry Bao",
+          "body": "Student: Terry Bao"
+        },
+        {
+          "line_index": 18,
+          "text": "Subject: Math",
+          "body": "Subject: Math"
+        },
+        {
+          "line_index": 19,
+          "text": "Class Schedule: Fri 8:30-9:15pm",
+          "body": "Class Schedule: Fri 8:30-9:15pm"
+        }
+      ],
+      "extracted_action_item_ids": [
+        "memory_9dec04cdf2fa"
+      ]
+    },
+    {
+      "block_id": "block_9f5b5d004b4e",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_19",
+      "block_type": "unknown",
+      "heading": "Document",
+      "text": "@TUTOR Please take a picture of the Zoom Waiting Room and send it to me privately! Also\nremember to remind the parents of class time beforehand!\n\n@ALL Once class starts, one is to follow all YIV’s policies.\n\n\n    b.  Checking Attendance:\n\nHi everyone, did you all have class this week?\n\n\n    c.  Reminder for break/end of season:\n\nall 各位家长好！提醒一下大家我们这周，12月5至11日，是我们秋季最后一周的课程了！谢谢大\n家对我们的支持，希望大家寒假都过得愉快！[Joyful]\n\n@所有人 A reminder that the last class for this season is THIS week: the week of Jun. 6 (Mon) -\nJun. 12 (Sun). Please remember to notify the parent as well!\n提醒各位我们这一季还有一周（一堂课）就结束了！最后一堂课是6月6至6月12日的那一周，请\n记得提前提醒家长们！\n\n\n    d.  Season End-Message\n\n          i.    To be sent in the overall volunteer chat and individual class chats:\n\nThank you for participating in YIV's program [Hug][Hug] we hope everyone really had a great time and\nexperience with us this season! We hope to see everyone soon! [Heart]\n*If there are any questions or concerns please message us!\n\n          ii.   To be sent in the overall parent chat:\n\n@all 谢谢各位家长和同学们，我们这一季圆满结束了！希望这一季大家都有所收获[Hug][Hug]感\n谢各位来参加我们YIV的辅导课活动！[Heart] 期待下次再见哦！\n*如果有任何问题请记得私信我哦！\n\n\n    5.  Thank You Messages/Celebratory Messages",
+      "lines": [
+        {
+          "text": "@TUTOR Please take a picture of the Zoom Waiting Room and send it to me privately! Also",
+          "body": "@TUTOR Please take a picture of the Zoom Waiting Room and send it to me privately! Also",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "remember to remind the parents of class time beforehand!",
+          "body": "remember to remind the parents of class time beforehand!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "@ALL Once class starts, one is to follow all YIV’s policies.",
+          "body": "@ALL Once class starts, one is to follow all YIV’s policies.",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "b. Checking Attendance:",
+          "body": "Checking Attendance:",
+          "indent": 4,
+          "bullet_marker": "b.",
+          "checkbox": false
+        },
+        {
+          "text": "Hi everyone, did you all have class this week?",
+          "body": "Hi everyone, did you all have class this week?",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "c. Reminder for break/end of season:",
+          "body": "Reminder for break/end of season:",
+          "indent": 4,
+          "bullet_marker": "c.",
+          "checkbox": false
+        },
+        {
+          "text": "all 各位家长好！提醒一下大家我们这周，12月5至11日，是我们秋季最后一周的课程了！谢谢大",
+          "body": "all 各位家长好！提醒一下大家我们这周，12月5至11日，是我们秋季最后一周的课程了！谢谢大",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "家对我们的支持，希望大家寒假都过得愉快！[Joyful]",
+          "body": "家对我们的支持，希望大家寒假都过得愉快！[Joyful]",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "@所有人 A reminder that the last class for this season is THIS week: the week of Jun. 6 (Mon) -",
+          "body": "@所有人 A reminder that the last class for this season is THIS week: the week of Jun. 6 (Mon) -",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Jun. 12 (Sun). Please remember to notify the parent as well!",
+          "body": "Jun. 12 (Sun). Please remember to notify the parent as well!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "提醒各位我们这一季还有一周（一堂课）就结束了！最后一堂课是6月6至6月12日的那一周，请",
+          "body": "提醒各位我们这一季还有一周（一堂课）就结束了！最后一堂课是6月6至6月12日的那一周，请",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "记得提前提醒家长们！",
+          "body": "记得提前提醒家长们！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "d. Season End-Message",
+          "body": "Season End-Message",
+          "indent": 4,
+          "bullet_marker": "d.",
+          "checkbox": false
+        },
+        {
+          "text": "i. To be sent in the overall volunteer chat and individual class chats:",
+          "body": "To be sent in the overall volunteer chat and individual class chats:",
+          "indent": 10,
+          "bullet_marker": "i.",
+          "checkbox": false
+        },
+        {
+          "text": "Thank you for participating in YIV's program [Hug][Hug] we hope everyone really had a great time and",
+          "body": "Thank you for participating in YIV's program [Hug][Hug] we hope everyone really had a great time and",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "experience with us this season! We hope to see everyone soon! [Heart]",
+          "body": "experience with us this season! We hope to see everyone soon! [Heart]",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "*If there are any questions or concerns please message us!",
+          "body": "*If there are any questions or concerns please message us!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "ii. To be sent in the overall parent chat:",
+          "body": "To be sent in the overall parent chat:",
+          "indent": 10,
+          "bullet_marker": "ii.",
+          "checkbox": false
+        },
+        {
+          "text": "@all 谢谢各位家长和同学们，我们这一季圆满结束了！希望这一季大家都有所收获[Hug][Hug]感",
+          "body": "@all 谢谢各位家长和同学们，我们这一季圆满结束了！希望这一季大家都有所收获[Hug][Hug]感",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "谢各位来参加我们YIV的辅导课活动！[Heart] 期待下次再见哦！",
+          "body": "谢各位来参加我们YIV的辅导课活动！[Heart] 期待下次再见哦！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "*如果有任何问题请记得私信我哦！",
+          "body": "*如果有任何问题请记得私信我哦！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "5. Thank You Messages/Celebratory Messages",
+          "body": "Thank You Messages/Celebratory Messages",
+          "indent": 4,
+          "bullet_marker": "5.",
+          "checkbox": false
+        }
+      ],
+      "page": 10,
+      "confidence": 0.45,
+      "signals": [],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_602f709a1acd",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_20",
+      "block_type": "unknown",
+      "heading": "Document",
+      "text": "a. General Thank you messages\n\n🥰我们感谢大家友好和勇敢的反馈！家长和学生们的积极响应让教学变得值得，并且让我们的志\n愿者成为更有效的老师！\n\n谢谢家长和小朋友们的支持，我们YIV的义工和小老师也学到了不少技巧并且很荣幸可以给小朋\n友们辅导！[Joyful]\n\n谢谢各位，我们这一季结束了！希望这几周大家都有很好的回忆[拥抱][拥抱]感谢各位来参加我们\nYIV的辅导课活动！[爱心] 在此谢谢大家这一整季的努力和付出🙏 期待下次再见哦！\n\n*如果有任何问题的话请记得私信我哦！\n\n\n   b. Celebratory Messages (e.g. New Year)\n\nYIV祝大家新年快乐！祝大家在新的一年里万事如意！🎉\n\n\n   6. YIV Hiring (send messages like this with the poster)\n\n大家好，YIV每年的管理人员招聘时间到了！我们欢迎您把这个机会分享给您身边负责并想加入\n大温地区最大的学生非营利组织的中学生。申请的表格可以在这个链接查看: linktr.ee/yivcanada\n。截止日是6月25日。谢谢大家 [Joyful]\n\n\n   7. Other Event Messages:\n\n   a. New Peer Tutor Training:\n\n@All A reminder that we will be hosting a MANDATORY Training Session for all new tutors tonight,\nJanuary 21st, 2023 at 7:00 PM PDT. Returning tutors are also welcome to join us to learn more about\nYIV’s growth, view our updated and improved interactive presentation with new teaching strategies,\nand engage with other tutors.",
+      "lines": [
+        {
+          "text": "a. General Thank you messages",
+          "body": "General Thank you messages",
+          "indent": 0,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "🥰我们感谢大家友好和勇敢的反馈！家长和学生们的积极响应让教学变得值得，并且让我们的志",
+          "body": "🥰我们感谢大家友好和勇敢的反馈！家长和学生们的积极响应让教学变得值得，并且让我们的志",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "愿者成为更有效的老师！",
+          "body": "愿者成为更有效的老师！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "谢谢家长和小朋友们的支持，我们YIV的义工和小老师也学到了不少技巧并且很荣幸可以给小朋",
+          "body": "谢谢家长和小朋友们的支持，我们YIV的义工和小老师也学到了不少技巧并且很荣幸可以给小朋",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "友们辅导！[Joyful]",
+          "body": "友们辅导！[Joyful]",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "谢谢各位，我们这一季结束了！希望这几周大家都有很好的回忆[拥抱][拥抱]感谢各位来参加我们",
+          "body": "谢谢各位，我们这一季结束了！希望这几周大家都有很好的回忆[拥抱][拥抱]感谢各位来参加我们",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "YIV的辅导课活动！[爱心] 在此谢谢大家这一整季的努力和付出🙏 期待下次再见哦！",
+          "body": "YIV的辅导课活动！[爱心] 在此谢谢大家这一整季的努力和付出🙏 期待下次再见哦！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "*如果有任何问题的话请记得私信我哦！",
+          "body": "*如果有任何问题的话请记得私信我哦！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "b. Celebratory Messages (e.g. New Year)",
+          "body": "Celebratory Messages (e.g. New Year)",
+          "indent": 3,
+          "bullet_marker": "b.",
+          "checkbox": false
+        },
+        {
+          "text": "YIV祝大家新年快乐！祝大家在新的一年里万事如意！🎉",
+          "body": "YIV祝大家新年快乐！祝大家在新的一年里万事如意！🎉",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "6. YIV Hiring (send messages like this with the poster)",
+          "body": "YIV Hiring (send messages like this with the poster)",
+          "indent": 3,
+          "bullet_marker": "6.",
+          "checkbox": false
+        },
+        {
+          "text": "大家好，YIV每年的管理人员招聘时间到了！我们欢迎您把这个机会分享给您身边负责并想加入",
+          "body": "大家好，YIV每年的管理人员招聘时间到了！我们欢迎您把这个机会分享给您身边负责并想加入",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "大温地区最大的学生非营利组织的中学生。申请的表格可以在这个链接查看: linktr.ee/yivcanada",
+          "body": "大温地区最大的学生非营利组织的中学生。申请的表格可以在这个链接查看: linktr.ee/yivcanada",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "。截止日是6月25日。谢谢大家 [Joyful]",
+          "body": "。截止日是6月25日。谢谢大家 [Joyful]",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "7. Other Event Messages:",
+          "body": "Other Event Messages:",
+          "indent": 3,
+          "bullet_marker": "7.",
+          "checkbox": false
+        },
+        {
+          "text": "a. New Peer Tutor Training:",
+          "body": "New Peer Tutor Training:",
+          "indent": 3,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "@All A reminder that we will be hosting a MANDATORY Training Session for all new tutors tonight,",
+          "body": "@All A reminder that we will be hosting a MANDATORY Training Session for all new tutors tonight,",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "January 21st, 2023 at 7:00 PM PDT. Returning tutors are also welcome to join us to learn more about",
+          "body": "January 21st, 2023 at 7:00 PM PDT. Returning tutors are also welcome to join us to learn more about",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "YIV’s growth, view our updated and improved interactive presentation with new teaching strategies,",
+          "body": "YIV’s growth, view our updated and improved interactive presentation with new teaching strategies,",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "and engage with other tutors.",
+          "body": "and engage with other tutors.",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 11,
+      "confidence": 0.45,
+      "signals": [],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_dfcdebb8b744",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_21",
+      "block_type": "meeting_metadata",
+      "heading": "Zoom Meeting Link",
+      "text": "https://us06web.zoom.us/j/82163431148?pwd=WG1iUUY3eDAyVTdISW1qVFdycG5CZz09\n\nMeeting ID: 821 6343 1148",
+      "lines": [
+        {
+          "text": "https://us06web.zoom.us/j/82163431148?pwd=WG1iUUY3eDAyVTdISW1qVFdycG5CZz09",
+          "body": "https://us06web.zoom.us/j/82163431148?pwd=WG1iUUY3eDAyVTdISW1qVFdycG5CZz09",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Meeting ID: 821 6343 1148",
+          "body": "Meeting ID: 821 6343 1148",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 11,
+      "confidence": 0.86,
+      "signals": [
+        "meeting metadata"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 1,
+          "text": "Meeting ID: 821 6343 1148",
+          "body": "Meeting ID: 821 6343 1148"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_6edbe172b80a",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_22",
+      "block_type": "unknown",
+      "heading": "Document",
+      "text": "Passcode: 298980\n\nWe look forward to seeing you there! 🌟\n\n\n    b.   Year-end Conference:\n\nCongratulations, we are almost at the end of the year! 👏\n\n🗓On December 17th from 7:30-9:00 PM PST, join us for YIV’s 2022 Annual Conference for\nyear-end awards, an overview of YIV’s accomplishments this year, our plan for 2023, and a NEW &\nEXCLUSIVE networking event to strengthen community bonds! 🤝 As a volunteer, you will have the\nchance to meet fellow members of the YIV community during this interactive evening. 🚀 Learn more\nabout our mission and charitable endeavours!\n\n📣Anyone is welcome to attend our virtual conference on Zoom; however, you may receive an\ninvitation to attend our IN-PERSON conference at the Academy of Modern Art! Keep an eye on your\ninbox. 🎊 Stay tuned for more details closer to the date, and we hope to see you there!\n\nThank you to all of our volunteers and supporters who made this successful year possible. 🌟\n\n\n    c.   One-Time Volunteering Opportunities (e.g. Krispy Kreme Fundraiser):\n\nIN-PERSON VOLUNTEER OPPORTUNITY!\n\nYIV is holding a Krispy Kreme donut sale on Saturday, Apr 1st at Sheraton Vancouver Wall Centre and\ndowntown Vancouver. We are calling for volunteers to support out Fundraiser!\n\nShift 1: 10:00am-2:30pm\nShift 2: 12:30pm-4:30pm\n\nSign up for volunteer shifts below! After you sign up, please DM us your full name, grade, email, and\nphone number for ease of contact.",
+      "lines": [
+        {
+          "text": "Passcode: 298980",
+          "body": "Passcode: 298980",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "We look forward to seeing you there! 🌟",
+          "body": "We look forward to seeing you there! 🌟",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "b. Year-end Conference:",
+          "body": "Year-end Conference:",
+          "indent": 4,
+          "bullet_marker": "b.",
+          "checkbox": false
+        },
+        {
+          "text": "Congratulations, we are almost at the end of the year! 👏",
+          "body": "Congratulations, we are almost at the end of the year! 👏",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "🗓On December 17th from 7:30-9:00 PM PST, join us for YIV’s 2022 Annual Conference for",
+          "body": "🗓On December 17th from 7:30-9:00 PM PST, join us for YIV’s 2022 Annual Conference for",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "year-end awards, an overview of YIV’s accomplishments this year, our plan for 2023, and a NEW &",
+          "body": "year-end awards, an overview of YIV’s accomplishments this year, our plan for 2023, and a NEW &",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "EXCLUSIVE networking event to strengthen community bonds! 🤝 As a volunteer, you will have the",
+          "body": "EXCLUSIVE networking event to strengthen community bonds! 🤝 As a volunteer, you will have the",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "chance to meet fellow members of the YIV community during this interactive evening. 🚀 Learn more",
+          "body": "chance to meet fellow members of the YIV community during this interactive evening. 🚀 Learn more",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "about our mission and charitable endeavours!",
+          "body": "about our mission and charitable endeavours!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "📣Anyone is welcome to attend our virtual conference on Zoom; however, you may receive an",
+          "body": "📣Anyone is welcome to attend our virtual conference on Zoom; however, you may receive an",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "invitation to attend our IN-PERSON conference at the Academy of Modern Art! Keep an eye on your",
+          "body": "invitation to attend our IN-PERSON conference at the Academy of Modern Art! Keep an eye on your",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "inbox. 🎊 Stay tuned for more details closer to the date, and we hope to see you there!",
+          "body": "inbox. 🎊 Stay tuned for more details closer to the date, and we hope to see you there!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Thank you to all of our volunteers and supporters who made this successful year possible. 🌟",
+          "body": "Thank you to all of our volunteers and supporters who made this successful year possible. 🌟",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "c. One-Time Volunteering Opportunities (e.g. Krispy Kreme Fundraiser):",
+          "body": "One-Time Volunteering Opportunities (e.g. Krispy Kreme Fundraiser):",
+          "indent": 4,
+          "bullet_marker": "c.",
+          "checkbox": false
+        },
+        {
+          "text": "IN-PERSON VOLUNTEER OPPORTUNITY!",
+          "body": "IN-PERSON VOLUNTEER OPPORTUNITY!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "YIV is holding a Krispy Kreme donut sale on Saturday, Apr 1st at Sheraton Vancouver Wall Centre and",
+          "body": "YIV is holding a Krispy Kreme donut sale on Saturday, Apr 1st at Sheraton Vancouver Wall Centre and",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "downtown Vancouver. We are calling for volunteers to support out Fundraiser!",
+          "body": "downtown Vancouver. We are calling for volunteers to support out Fundraiser!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Shift 1: 10:00am-2:30pm",
+          "body": "Shift 1: 10:00am-2:30pm",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Shift 2: 12:30pm-4:30pm",
+          "body": "Shift 2: 12:30pm-4:30pm",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Sign up for volunteer shifts below! After you sign up, please DM us your full name, grade, email, and",
+          "body": "Sign up for volunteer shifts below! After you sign up, please DM us your full name, grade, email, and",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "phone number for ease of contact.",
+          "body": "phone number for ease of contact.",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 12,
+      "confidence": 0.45,
+      "signals": [],
+      "likely_task_rows": [
+        {
+          "line_index": 0,
+          "text": "Passcode: 298980",
+          "body": "Passcode: 298980"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_e86e358bff78",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_23",
+      "block_type": "unknown",
+      "heading": "Document",
+      "text": "Our in-person opportunities are limited—seize this chance to get involved and gain valuable\nfundraising experience!\n\nReach out to us if you have any questions. Thank you everyone for your support!\nEx. Full name, shifts available\n\n1. YIV - Emily, Shift 1 & 2\n\nPre-orders are now available for YIV’s Krispy Kreme Fundraiser!\n\nSupport us by pre-ordering Krispy Kreme donuts 🍩 to fundraise for Vancouver General Hospital and",
+      "lines": [
+        {
+          "text": "Our in-person opportunities are limited—seize this chance to get involved and gain valuable",
+          "body": "Our in-person opportunities are limited—seize this chance to get involved and gain valuable",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "fundraising experience!",
+          "body": "fundraising experience!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Reach out to us if you have any questions. Thank you everyone for your support!",
+          "body": "Reach out to us if you have any questions. Thank you everyone for your support!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Ex. Full name, shifts available",
+          "body": "Ex. Full name, shifts available",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "1. YIV - Emily, Shift 1 & 2",
+          "body": "YIV - Emily, Shift 1 & 2",
+          "indent": 0,
+          "bullet_marker": "1.",
+          "checkbox": false
+        },
+        {
+          "text": "Pre-orders are now available for YIV’s Krispy Kreme Fundraiser!",
+          "body": "Pre-orders are now available for YIV’s Krispy Kreme Fundraiser!",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Support us by pre-ordering Krispy Kreme donuts 🍩 to fundraise for Vancouver General Hospital and",
+          "body": "Support us by pre-ordering Krispy Kreme donuts 🍩 to fundraise for Vancouver General Hospital and",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 13,
+      "confidence": 0.45,
+      "signals": [],
+      "likely_task_rows": [
+        {
+          "line_index": 4,
+          "text": "1. YIV - Emily, Shift 1 & 2",
+          "body": "YIV - Emily, Shift 1 & 2"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_77c7bd23a370",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_24",
+      "block_type": "unknown",
+      "heading": "UBC Hospital Foundation. Here is the link to the pre-order form",
+      "text": "https://form.jotform.com/230796863090262\n\nAfter you order, pick up your donuts at our downtown or UBC location on Apr 1st. Check out the\nslides for more information. Thank you everyone in advance for your support! [Rose][Rose]\n\nHi everyone, remember to teach class consistently and send a class summary to your chat after each\nclass. If you are going to be absent for any class, please notify the parent and YIV at least 24 hours in\nadvance. Enjoy the last few weeks of class this season! [Joyful]\n\n家长们好，YIV 正准备举办我们第二次线下义卖活动！🤗[Heart]\n我们会卖甜甜圈🍩来筹款支持我们的CYVAC 合作伙伴：温哥华综合医院卑省大学医院基金会。\n对于此次义卖活动，我们将接受提前预订，这是我们的预定表格：\nhttps://www.jotform.com/build/230796863090262。\n家长们填好表格后，可以在下周六4月29号早上10点到下午5点之间前往Kerrisdale, AOMA (2309\nW 41st Ave)🍩。\n我们真诚地希望家长们能够支持YIV，YIV的学生志愿者，以及温哥华综合医院卑省大学医院基金\n会。谢谢大家！[Hug]🌹\n\n\n   d.  Past Promotional messages\n\n🌷这是我们YIV同伴辅导计划一名可爱的学生，Tina。她非常喜欢和YIV小老师在英语课中的交流\n方式以及建立的联系。感谢Tina主动分享的学习经验 [Heart]\n\n🌱这是我们同伴辅导计划另一位勤奋的学生，从我们的课程中深深受益！这位同学非常感激小\n老师对她的关怀和支持，以及帮助她一步一步的讲解她不会的数学问题！",
+      "lines": [
+        {
+          "text": "https://form.jotform.com/230796863090262",
+          "body": "https://form.jotform.com/230796863090262",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "After you order, pick up your donuts at our downtown or UBC location on Apr 1st. Check out the",
+          "body": "After you order, pick up your donuts at our downtown or UBC location on Apr 1st. Check out the",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "slides for more information. Thank you everyone in advance for your support! [Rose][Rose]",
+          "body": "slides for more information. Thank you everyone in advance for your support! [Rose][Rose]",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Hi everyone, remember to teach class consistently and send a class summary to your chat after each",
+          "body": "Hi everyone, remember to teach class consistently and send a class summary to your chat after each",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "class. If you are going to be absent for any class, please notify the parent and YIV at least 24 hours in",
+          "body": "class. If you are going to be absent for any class, please notify the parent and YIV at least 24 hours in",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "advance. Enjoy the last few weeks of class this season! [Joyful]",
+          "body": "advance. Enjoy the last few weeks of class this season! [Joyful]",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "家长们好，YIV 正准备举办我们第二次线下义卖活动！🤗[Heart]",
+          "body": "家长们好，YIV 正准备举办我们第二次线下义卖活动！🤗[Heart]",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "我们会卖甜甜圈🍩来筹款支持我们的CYVAC 合作伙伴：温哥华综合医院卑省大学医院基金会。",
+          "body": "我们会卖甜甜圈🍩来筹款支持我们的CYVAC 合作伙伴：温哥华综合医院卑省大学医院基金会。",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "对于此次义卖活动，我们将接受提前预订，这是我们的预定表格：",
+          "body": "对于此次义卖活动，我们将接受提前预订，这是我们的预定表格：",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "https://www.jotform.com/build/230796863090262。",
+          "body": "https://www.jotform.com/build/230796863090262。",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "家长们填好表格后，可以在下周六4月29号早上10点到下午5点之间前往Kerrisdale, AOMA (2309",
+          "body": "家长们填好表格后，可以在下周六4月29号早上10点到下午5点之间前往Kerrisdale, AOMA (2309",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "W 41st Ave)🍩。",
+          "body": "W 41st Ave)🍩。",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "我们真诚地希望家长们能够支持YIV，YIV的学生志愿者，以及温哥华综合医院卑省大学医院基金",
+          "body": "我们真诚地希望家长们能够支持YIV，YIV的学生志愿者，以及温哥华综合医院卑省大学医院基金",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "会。谢谢大家！[Hug]🌹",
+          "body": "会。谢谢大家！[Hug]🌹",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "d. Past Promotional messages",
+          "body": "Past Promotional messages",
+          "indent": 3,
+          "bullet_marker": "d.",
+          "checkbox": false
+        },
+        {
+          "text": "🌷这是我们YIV同伴辅导计划一名可爱的学生，Tina。她非常喜欢和YIV小老师在英语课中的交流",
+          "body": "🌷这是我们YIV同伴辅导计划一名可爱的学生，Tina。她非常喜欢和YIV小老师在英语课中的交流",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "方式以及建立的联系。感谢Tina主动分享的学习经验 [Heart]",
+          "body": "方式以及建立的联系。感谢Tina主动分享的学习经验 [Heart]",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "🌱这是我们同伴辅导计划另一位勤奋的学生，从我们的课程中深深受益！这位同学非常感激小",
+          "body": "🌱这是我们同伴辅导计划另一位勤奋的学生，从我们的课程中深深受益！这位同学非常感激小",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "老师对她的关怀和支持，以及帮助她一步一步的讲解她不会的数学问题！",
+          "body": "老师对她的关怀和支持，以及帮助她一步一步的讲解她不会的数学问题！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 13,
+      "confidence": 0.45,
+      "signals": [],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_b5a53cbbf5e6",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_25",
+      "block_type": "unknown",
+      "heading": "Document",
+      "text": "各位家长好！ 随着我们的夏季2021Peer Tutoring项目的结束，我们希望大家可以填写一份调查\n问卷，以便于我们提升自己的Peer Tutoring活动。 我们真诚的感谢大家参与这个项目，希望秋季\n再见！\n\n大家好！非常感谢大家这一季参加我们的同伴辅导项目。来帮助我们进一步改进这个项目，我们\n希望大家可以填写一份调查问卷。感谢大家积极参与，希望夏季再见！\n\n\n   8.  Common Questions from Parents & Examples of Responses\n\n   a.  Where can I find my course information?\n\n家长们好，请大家查看自己的邮件。我们已经把课程信息都发给大家了。\n\n   b.  Why didn’t I receive my course schedule?\n         i.   In this case, double check with Haley and the master spreadsheet → if they are\n              a regular sign up student, notify the admissions manager to resend the email,\n              then tell them.\n        ii.   More commonly, they signed up for the waitlist, which does not guarantee a\n              class. Utilize responses such as:\n\n如果您一开始报的是等候名单，我们无法保证给您安排上课。如果有空间，我们才会给等候名单\n的学生安排课。谢谢大家的理解。\n\n\n   c.  Will YIV send me my zoom information (for peer tutoring classes)?\n\n大家好，zoom链接大家可以找老师要。因为很多课时间重复，我们无法给大家一一提供链接。如\n果有任何链接的问题，大家可以让老师们重新发。\n\n\n   d.  Other miscellaneous message templates\n\nRemember: festivals (especially in WeChat, remember new year, Chinese new year, mothers day, fathers\nday, easter, etc.)\n\nHi everyone, remember to teach class consistently and send a class summary to your chat after each class.\nIf you are going to be absent for any class, please notify the parent and YIV at least 24 hours in advance.\nEnjoy the last few weeks of class of this season! [愉快]",
+      "lines": [
+        {
+          "text": "各位家长好！ 随着我们的夏季2021Peer Tutoring项目的结束，我们希望大家可以填写一份调查",
+          "body": "各位家长好！ 随着我们的夏季2021Peer Tutoring项目的结束，我们希望大家可以填写一份调查",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "问卷，以便于我们提升自己的Peer Tutoring活动。 我们真诚的感谢大家参与这个项目，希望秋季",
+          "body": "问卷，以便于我们提升自己的Peer Tutoring活动。 我们真诚的感谢大家参与这个项目，希望秋季",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "再见！",
+          "body": "再见！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "大家好！非常感谢大家这一季参加我们的同伴辅导项目。来帮助我们进一步改进这个项目，我们",
+          "body": "大家好！非常感谢大家这一季参加我们的同伴辅导项目。来帮助我们进一步改进这个项目，我们",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "希望大家可以填写一份调查问卷。感谢大家积极参与，希望夏季再见！",
+          "body": "希望大家可以填写一份调查问卷。感谢大家积极参与，希望夏季再见！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "8. Common Questions from Parents & Examples of Responses",
+          "body": "Common Questions from Parents & Examples of Responses",
+          "indent": 3,
+          "bullet_marker": "8.",
+          "checkbox": false
+        },
+        {
+          "text": "a. Where can I find my course information?",
+          "body": "Where can I find my course information?",
+          "indent": 3,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "家长们好，请大家查看自己的邮件。我们已经把课程信息都发给大家了。",
+          "body": "家长们好，请大家查看自己的邮件。我们已经把课程信息都发给大家了。",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "b. Why didn’t I receive my course schedule?",
+          "body": "Why didn’t I receive my course schedule?",
+          "indent": 3,
+          "bullet_marker": "b.",
+          "checkbox": false
+        },
+        {
+          "text": "i. In this case, double check with Haley and the master spreadsheet → if they are",
+          "body": "In this case, double check with Haley and the master spreadsheet → if they are",
+          "indent": 9,
+          "bullet_marker": "i.",
+          "checkbox": false
+        },
+        {
+          "text": "a regular sign up student, notify the admissions manager to resend the email,",
+          "body": "a regular sign up student, notify the admissions manager to resend the email,",
+          "indent": 14,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "then tell them.",
+          "body": "then tell them.",
+          "indent": 14,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "ii. More commonly, they signed up for the waitlist, which does not guarantee a",
+          "body": "More commonly, they signed up for the waitlist, which does not guarantee a",
+          "indent": 8,
+          "bullet_marker": "ii.",
+          "checkbox": false
+        },
+        {
+          "text": "class. Utilize responses such as:",
+          "body": "class. Utilize responses such as:",
+          "indent": 14,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "如果您一开始报的是等候名单，我们无法保证给您安排上课。如果有空间，我们才会给等候名单",
+          "body": "如果您一开始报的是等候名单，我们无法保证给您安排上课。如果有空间，我们才会给等候名单",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "的学生安排课。谢谢大家的理解。",
+          "body": "的学生安排课。谢谢大家的理解。",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "c. Will YIV send me my zoom information (for peer tutoring classes)?",
+          "body": "Will YIV send me my zoom information (for peer tutoring classes)?",
+          "indent": 3,
+          "bullet_marker": "c.",
+          "checkbox": false
+        },
+        {
+          "text": "大家好，zoom链接大家可以找老师要。因为很多课时间重复，我们无法给大家一一提供链接。如",
+          "body": "大家好，zoom链接大家可以找老师要。因为很多课时间重复，我们无法给大家一一提供链接。如",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "果有任何链接的问题，大家可以让老师们重新发。",
+          "body": "果有任何链接的问题，大家可以让老师们重新发。",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "d. Other miscellaneous message templates",
+          "body": "Other miscellaneous message templates",
+          "indent": 3,
+          "bullet_marker": "d.",
+          "checkbox": false
+        },
+        {
+          "text": "Remember: festivals (especially in WeChat, remember new year, Chinese new year, mothers day, fathers",
+          "body": "Remember: festivals (especially in WeChat, remember new year, Chinese new year, mothers day, fathers",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "day, easter, etc.)",
+          "body": "day, easter, etc.)",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Hi everyone, remember to teach class consistently and send a class summary to your chat after each class.",
+          "body": "Hi everyone, remember to teach class consistently and send a class summary to your chat after each class.",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "If you are going to be absent for any class, please notify the parent and YIV at least 24 hours in advance.",
+          "body": "If you are going to be absent for any class, please notify the parent and YIV at least 24 hours in advance.",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Enjoy the last few weeks of class of this season! [愉快]",
+          "body": "Enjoy the last few weeks of class of this season! [愉快]",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 14,
+      "confidence": 0.45,
+      "signals": [],
+      "likely_task_rows": [
+        {
+          "line_index": 20,
+          "text": "Remember: festivals (especially in WeChat, remember new year, Chinese new year, mothers day, fathers",
+          "body": "Remember: festivals (especially in WeChat, remember new year, Chinese new year, mothers day, fathers"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_c118cec01dfa",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_26",
+      "block_type": "unknown",
+      "heading": "Document",
+      "text": "由于这一季课程将在几周后结束，我们希望学生们能坚持按时上课。如果需要请假，请家长们至\n少提前 24 小时通知我们。谢谢大家，也祝小朋友们上课愉快！[愉快]\n\nAs the current season of classes will come to a close in a few weeks, we kindly request that all students\nmake a consistent effort to attend classes. In the event of any absences, it would be greatly appreciated if\nwe are notified at least 24 hours in advance. Thank you\n\nHello Parents,\n\n家长们大家好，\n\nThank you everyone for participating in this season’s Peer Tutoring. We are very sorry that the lessons\ntaught by David and Taichi this summer had been very inconsistent. We had contacted the tutors many\ntimes, however, we didn’t receive any actionable response. Because of this situation, we had decided to\nend the season early. We apologize for your experience during this season. Normally, our tutors are\nresponsible and teach classes regularly. We hope to see you all in the Peer Tutoring Program in the future.\nThank you very much for your feedback and your patience and understanding.\n\n\n感谢大家参加我们这一季的同伴辅导课程。我们很抱歉David和Taichi一直没有给大家好好上课。\n我们多次联系过老师，但是我们没有收到老师们回应怎么把课上的更好。由于这个情况，我们决\n定提前结束这一季给大家的课。我们十分抱歉您这一季的上课经历不好。通常，我们的老师们是\n负责的并且会每一周按时教课的。我们希望能在下一季的同伴辅导项目中见到大家。非常感谢大\n家的反馈以及大家的耐心和理解。\n\nThank you everyone.\n\n谢谢大家。\n\n\n\n各位家长好！ 随着我们的夏季2021Peer Tutoring项目的结束，我们希望大家可以填写一份调查问\n卷，以便于我们提升自己的Peer Tutoring活动。 我们真诚的感谢大家参与这个项目，希望秋季再\n见！\n\n大家好！非常感谢大家这一季参加我们的同伴辅导项目。来帮助我们进一步改进这个项目，我们\n希望大家可以填写一份调查问卷。感谢大家积极参与，希望夏季再见！\n\nHello Jeffrey, due to many missed lessons, your irresponsibility is unacceptable as a tutor. YIV\nsupervisors have made the decision to not provide you with volunteer hours. Thank you.\n\n您好，我们跟老师取得了联系，然后她表示3:30-4:15pm 的上课时间可能对您来说太匆忙了。我们\n建议把上课时间调到4:00-4:45pm，来确保双方都能准时上课。同时我们也会提醒老师让她提前\n5-10分钟打开Zoom。",
+      "lines": [
+        {
+          "text": "由于这一季课程将在几周后结束，我们希望学生们能坚持按时上课。如果需要请假，请家长们至",
+          "body": "由于这一季课程将在几周后结束，我们希望学生们能坚持按时上课。如果需要请假，请家长们至",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "少提前 24 小时通知我们。谢谢大家，也祝小朋友们上课愉快！[愉快]",
+          "body": "少提前 24 小时通知我们。谢谢大家，也祝小朋友们上课愉快！[愉快]",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "As the current season of classes will come to a close in a few weeks, we kindly request that all students",
+          "body": "As the current season of classes will come to a close in a few weeks, we kindly request that all students",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "make a consistent effort to attend classes. In the event of any absences, it would be greatly appreciated if",
+          "body": "make a consistent effort to attend classes. In the event of any absences, it would be greatly appreciated if",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "we are notified at least 24 hours in advance. Thank you",
+          "body": "we are notified at least 24 hours in advance. Thank you",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Hello Parents,",
+          "body": "Hello Parents,",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "家长们大家好，",
+          "body": "家长们大家好，",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Thank you everyone for participating in this season’s Peer Tutoring. We are very sorry that the lessons",
+          "body": "Thank you everyone for participating in this season’s Peer Tutoring. We are very sorry that the lessons",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "taught by David and Taichi this summer had been very inconsistent. We had contacted the tutors many",
+          "body": "taught by David and Taichi this summer had been very inconsistent. We had contacted the tutors many",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "times, however, we didn’t receive any actionable response. Because of this situation, we had decided to",
+          "body": "times, however, we didn’t receive any actionable response. Because of this situation, we had decided to",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "end the season early. We apologize for your experience during this season. Normally, our tutors are",
+          "body": "end the season early. We apologize for your experience during this season. Normally, our tutors are",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "responsible and teach classes regularly. We hope to see you all in the Peer Tutoring Program in the future.",
+          "body": "responsible and teach classes regularly. We hope to see you all in the Peer Tutoring Program in the future.",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Thank you very much for your feedback and your patience and understanding.",
+          "body": "Thank you very much for your feedback and your patience and understanding.",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "感谢大家参加我们这一季的同伴辅导课程。我们很抱歉David和Taichi一直没有给大家好好上课。",
+          "body": "感谢大家参加我们这一季的同伴辅导课程。我们很抱歉David和Taichi一直没有给大家好好上课。",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "我们多次联系过老师，但是我们没有收到老师们回应怎么把课上的更好。由于这个情况，我们决",
+          "body": "我们多次联系过老师，但是我们没有收到老师们回应怎么把课上的更好。由于这个情况，我们决",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "定提前结束这一季给大家的课。我们十分抱歉您这一季的上课经历不好。通常，我们的老师们是",
+          "body": "定提前结束这一季给大家的课。我们十分抱歉您这一季的上课经历不好。通常，我们的老师们是",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "负责的并且会每一周按时教课的。我们希望能在下一季的同伴辅导项目中见到大家。非常感谢大",
+          "body": "负责的并且会每一周按时教课的。我们希望能在下一季的同伴辅导项目中见到大家。非常感谢大",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "家的反馈以及大家的耐心和理解。",
+          "body": "家的反馈以及大家的耐心和理解。",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Thank you everyone.",
+          "body": "Thank you everyone.",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "谢谢大家。",
+          "body": "谢谢大家。",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "各位家长好！ 随着我们的夏季2021Peer Tutoring项目的结束，我们希望大家可以填写一份调查问",
+          "body": "各位家长好！ 随着我们的夏季2021Peer Tutoring项目的结束，我们希望大家可以填写一份调查问",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "卷，以便于我们提升自己的Peer Tutoring活动。 我们真诚的感谢大家参与这个项目，希望秋季再",
+          "body": "卷，以便于我们提升自己的Peer Tutoring活动。 我们真诚的感谢大家参与这个项目，希望秋季再",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "见！",
+          "body": "见！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "大家好！非常感谢大家这一季参加我们的同伴辅导项目。来帮助我们进一步改进这个项目，我们",
+          "body": "大家好！非常感谢大家这一季参加我们的同伴辅导项目。来帮助我们进一步改进这个项目，我们",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "希望大家可以填写一份调查问卷。感谢大家积极参与，希望夏季再见！",
+          "body": "希望大家可以填写一份调查问卷。感谢大家积极参与，希望夏季再见！",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Hello Jeffrey, due to many missed lessons, your irresponsibility is unacceptable as a tutor. YIV",
+          "body": "Hello Jeffrey, due to many missed lessons, your irresponsibility is unacceptable as a tutor. YIV",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "supervisors have made the decision to not provide you with volunteer hours. Thank you.",
+          "body": "supervisors have made the decision to not provide you with volunteer hours. Thank you.",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "您好，我们跟老师取得了联系，然后她表示3:30-4:15pm 的上课时间可能对您来说太匆忙了。我们",
+          "body": "您好，我们跟老师取得了联系，然后她表示3:30-4:15pm 的上课时间可能对您来说太匆忙了。我们",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "建议把上课时间调到4:00-4:45pm，来确保双方都能准时上课。同时我们也会提醒老师让她提前",
+          "body": "建议把上课时间调到4:00-4:45pm，来确保双方都能准时上课。同时我们也会提醒老师让她提前",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "5-10分钟打开Zoom。",
+          "body": "5-10分钟打开Zoom。",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 15,
+      "confidence": 0.45,
+      "signals": [],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_0b9927998fe6",
+      "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_27",
+      "block_type": "unknown",
+      "heading": "Document",
+      "text": "我们感谢并且希望您能继续对老师保持耐心的态度，因为他们是义工学生，面对志愿者工作中的\n一些特殊情况时，他们也在学习如何更好的和处理和跟您沟通。如果时间不合适，请告诉我们什\n么时候会更好，谢谢您\n\nHi Nancy, due to your frequent and late-noticed absences, classes with Owen and Riley were unable to\nrun consistently and effectively. Thus, we have made the decision to terminate your role as a tutor. Your\nclasses will stop starting from next week, thank you for your cooperation.\n\nHi Ella, Rysa will no longer be continuing her participation in the Peer Tutoring classes. The parent feels\nthat Rysa has not been learning well in class and decided to withdraw. Classes will stop starting from next\nweek, thank your for understanding. We understand that you have previously wished to withdraw due to\npersonal reasons as well, is this something you would still choose?\n\n\n    9.  Other Examples of Interaction w/ Parents (see screenshots on the next page)",
+      "lines": [
+        {
+          "text": "我们感谢并且希望您能继续对老师保持耐心的态度，因为他们是义工学生，面对志愿者工作中的",
+          "body": "我们感谢并且希望您能继续对老师保持耐心的态度，因为他们是义工学生，面对志愿者工作中的",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "一些特殊情况时，他们也在学习如何更好的和处理和跟您沟通。如果时间不合适，请告诉我们什",
+          "body": "一些特殊情况时，他们也在学习如何更好的和处理和跟您沟通。如果时间不合适，请告诉我们什",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "么时候会更好，谢谢您",
+          "body": "么时候会更好，谢谢您",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Hi Nancy, due to your frequent and late-noticed absences, classes with Owen and Riley were unable to",
+          "body": "Hi Nancy, due to your frequent and late-noticed absences, classes with Owen and Riley were unable to",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "run consistently and effectively. Thus, we have made the decision to terminate your role as a tutor. Your",
+          "body": "run consistently and effectively. Thus, we have made the decision to terminate your role as a tutor. Your",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "classes will stop starting from next week, thank you for your cooperation.",
+          "body": "classes will stop starting from next week, thank you for your cooperation.",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Hi Ella, Rysa will no longer be continuing her participation in the Peer Tutoring classes. The parent feels",
+          "body": "Hi Ella, Rysa will no longer be continuing her participation in the Peer Tutoring classes. The parent feels",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "that Rysa has not been learning well in class and decided to withdraw. Classes will stop starting from next",
+          "body": "that Rysa has not been learning well in class and decided to withdraw. Classes will stop starting from next",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "week, thank your for understanding. We understand that you have previously wished to withdraw due to",
+          "body": "week, thank your for understanding. We understand that you have previously wished to withdraw due to",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "personal reasons as well, is this something you would still choose?",
+          "body": "personal reasons as well, is this something you would still choose?",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "9. Other Examples of Interaction w/ Parents (see screenshots on the next page)",
+          "body": "Other Examples of Interaction w/ Parents (see screenshots on the next page)",
+          "indent": 4,
+          "bullet_marker": "9.",
+          "checkbox": false
+        }
+      ],
+      "page": 16,
+      "confidence": 0.45,
+      "signals": [],
+      "likely_task_rows": [
+        {
+          "line_index": 6,
+          "text": "Hi Ella, Rysa will no longer be continuing her participation in the Peer Tutoring classes. The parent feels",
+          "body": "Hi Ella, Rysa will no longer be continuing her participation in the Peer Tutoring classes. The parent feels"
+        },
+        {
+          "line_index": 7,
+          "text": "that Rysa has not been learning well in class and decided to withdraw. Classes will stop starting from next",
+          "body": "that Rysa has not been learning well in class and decided to withdraw. Classes will stop starting from next"
+        }
+      ],
+      "extracted_action_item_ids": []
+    }
+  ],
+  "detected_task_spans": [],
+  "coverage_audit_warnings": [
+    {
+      "reason": "extraction_warning",
+      "severity": "high",
+      "title": "Task table may have been under-extracted",
+      "summary": "Document appears to contain a task table, but many likely task rows were not extracted.",
+      "candidate_decision": "Task table may have been under-extracted",
+      "recommended_action": "Review block classification and task extraction output.",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_4"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-4",
+          "page": 2,
+          "url": null,
+          "quote": "https://docs.google.com/forms/d/1ZfE_0MLbNKgDeiwpmPX0CvPBeAnQb4Oo1USRs97\n                     Xlgc/edit\n\n          Steps to preparing forms/spreadsheets:\n                1.   Make copies of the forms above\n                2.   Put them into the right folder\n                3.   Change details relevant to this season: dates, link to waitlist, etc.\n                4.   Link form responses to spreadsheet\n                5.   Fix anything else if needed\n\n     2.   Notifications for tutors (contact promotions) and students’ parents (wechat) (communications)\n                -    Tutor sign up opens first, then student sign up to gauge for # of guaranteed classes\n                -    Waitlist: classes not guaranteed\n                -    TEMPLATE: at the very bottom of this document\n\n          Tutor sign up notification:\n                -    Instagram & newsletter (promotions department)\n                -    Wechat (us) ← we have a wechat volunteer group chat\n\n          Parent notification:\n                -    Instagram & newsletter (promotions department)\n                -    Wechat (us) ← parent group chat\n\n          Notes regarding student sign up release (after tutor sign up release)\n                -    We need to be waiting for the number of student sign up to reach the target number (to make\n                     sure we have enough tutors for guaranteed classes)\n                          -     E.g. if we have 80 tutor sign up at this moment, we need to cap regular student sign up\n                                at 65\n                          -     Then open student waitlist for the rest (classes not guaranteed)\n\n     3.   Class pairing (admissions)\n                -    Make new sub sheet in master google spreadsheet\n                -    Pair students and tutors with fewer availabilities first\n                -    Pair siblings with the same tutor if possible, but it doesn’t have to be like this\n                -    See 2023 winter spring season spreadsheet for class pairing examples:\n                          -     https://docs.google.com/spreadsheets/d/1o0GZHuSfB5-Q2jj_IS-O5t7ILbS4OaSgrO\n                                eTQ_Ki3dw/edit?usp=sharing"
+        }
+      ],
+      "related_candidate_ids": []
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "high",
+      "title": "Task table may have been under-extracted",
+      "summary": "Document appears to contain a task table, but many likely task rows were not extracted.",
+      "candidate_decision": "Task table may have been under-extracted",
+      "recommended_action": "Review block classification and task extraction output.",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_9"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_9",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Account Pass-Downs",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-9",
+          "page": 5,
+          "url": null,
+          "quote": "1.   Emily’s Account (YIV)\n              a.   wechat ID: yivcanada\n              b.   PW: youthinitiative\n    2.   Fiona’s Account (YIV Communications Manager)\n              a.    Wechat ID: yivcanada_pm\n              b.    PW: yivcanada"
+        }
+      ],
+      "related_candidate_ids": []
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "high",
+      "title": "Task table may have been under-extracted",
+      "summary": "Document appears to contain a task table, but many likely task rows were not extracted.",
+      "candidate_decision": "Task table may have been under-extracted",
+      "recommended_action": "Review block classification and task extraction output.",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_18"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_18",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-18",
+          "page": 9,
+          "url": null,
+          "quote": "3.   Math TA Sign Up Message:\n\nOur Math Teaching Assistant (TA) Program is back for the school year!\n\n󰞹 Have a passion for math? Want to a professional volunteer experience to add your resume while\nworking under an esteemed math teacher?\n\n📚 Volunteers will be helping with academic classes, from grade 8-12 math courses to advanced\npreparation courses like SAT, AP, and IB.\n\nInterested in applying?\n⭕ Please send your resume to info@yivcanada.ca\n⭕ Ensure that you can commit from September 12th to June 30th, 2022. The position entails a\nflexible workload of 3-4 hours per week!\n\nPlease let us know if you have any questions and we look forward to viewing your application.\n\n\n    4.   Group Chat Messages:\n\n    a.   Introduction Messages for each new peer tutoring group chat:\n\nHi everyone! I am YIV’s Fiona who will be your contact for any problems during the classes! Thank\nyou all for your participation in our program!\n\nThe first day of class will be the week of October 2, 2023\n\nTutor: Sunny Li\nStudent: Terry Bao\nSubject: Math\nClass Schedule: Fri 8:30-9:15pm\n\nIf anyone will be absent for a class, please notify me in the chat!"
+        }
+      ],
+      "related_candidate_ids": []
+    }
+  ]
+}

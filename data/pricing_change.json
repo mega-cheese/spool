@@ -1,0 +1,40 @@
+{
+  "workspace": "AcmeAI",
+  "exported_at": "2026-06-24T00:30:00Z",
+  "channels": [
+    {
+      "channel_id": "C_GTM",
+      "channel_name": "go-to-market",
+      "messages": [
+        {
+          "ts": "1782288000.000100",
+          "user": "Nina Patel",
+          "role": "Head of Growth",
+          "text": "Proposal: raise the Pro plan from $19 to $29 next month. Trial conversion is healthy, but support load per Pro customer is much higher than expected.",
+          "thread_ts": "1782288000.000100"
+        },
+        {
+          "ts": "1782288060.000200",
+          "user": "Marco Silva",
+          "role": "Finance Lead",
+          "text": "I support the increase. At $19, gross margin on Pro is below target once onboarding calls are included. The tradeoff is we may lose some price-sensitive solo users.",
+          "thread_ts": "1782288000.000100"
+        },
+        {
+          "ts": "1782288120.000300",
+          "user": "Aisha Rahman",
+          "role": "Customer Success Manager",
+          "text": "I'm worried about surprising existing customers. Assuming we grandfather current Pro users for 6 months, the support team can handle the messaging.",
+          "thread_ts": "1782288000.000100"
+        },
+        {
+          "ts": "1782288180.000400",
+          "user": "Nina Patel",
+          "role": "Head of Growth",
+          "text": "Final decision: raise Pro pricing to $29 for new customers starting 2026-08-01, grandfather existing Pro customers for 6 months, and review churn after the first billing cycle.",
+          "thread_ts": "1782288000.000100"
+        }
+      ]
+    }
+  ]
+}

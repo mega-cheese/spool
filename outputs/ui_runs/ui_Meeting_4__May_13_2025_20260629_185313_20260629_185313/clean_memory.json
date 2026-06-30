@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_4__May_13_2025_20260629_185313.pdf",
+    "mode": "llm",
+    "pipeline": "candidates-shadow",
+    "classification": "generic_document",
+    "generated_at": "2026-06-29T18:53:18.537242+00:00",
+    "meeting_date": null,
+    "location": null,
+    "present": [],
+    "absent": [],
+    "confirmed_memory_count": 0,
+    "action_item_count": 0,
+    "open_question_count": 0,
+    "review_item_count": 0
+  },
+  "confirmed_memory": [],
+  "action_items": [],
+  "open_questions": [],
+  "review_items": []
+}

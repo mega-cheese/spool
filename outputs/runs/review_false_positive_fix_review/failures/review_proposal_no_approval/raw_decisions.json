@@ -1,0 +1,1 @@
+{"metadata": {"input_file": "data/review_proposal_no_approval.json", "decision_count": 0, "extractor_version": "skeletal-0.4.1", "mode": "llm", "model": "gpt-5.4-mini", "verified": true, "generated_at": "2026-06-27T08:28:10.404462+00:00", "validation_issue_count": 0, "validation_issues": []}, "decisions": []}

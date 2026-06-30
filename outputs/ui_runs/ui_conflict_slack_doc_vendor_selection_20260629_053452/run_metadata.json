@@ -1,0 +1,21 @@
+{
+  "run_id": "ui_conflict_slack_doc_vendor_selection_20260629_053452",
+  "input_file": "data/conflict_slack_doc_vendor_selection.json",
+  "mode": "llm",
+  "pipeline": "candidates-shadow",
+  "model": "gpt-4.1-mini",
+  "source_type": "mixed",
+  "created_at": "2026-06-29T05:35:04.300959+00:00",
+  "artifacts": {
+    "decisions": "outputs/ui_runs/ui_conflict_slack_doc_vendor_selection_20260629_053452/decisions.json",
+    "raw_decisions": "outputs/ui_runs/ui_conflict_slack_doc_vendor_selection_20260629_053452/raw_decisions.json",
+    "normalized_events_debug": "outputs/ui_runs/ui_conflict_slack_doc_vendor_selection_20260629_053452/normalized_events_debug.json",
+    "source_bundles_debug": "outputs/ui_runs/ui_conflict_slack_doc_vendor_selection_20260629_053452/source_bundles_debug.json",
+    "candidates_debug": "outputs/ui_runs/ui_conflict_slack_doc_vendor_selection_20260629_053452/candidates_debug.json",
+    "state_resolution_debug": "outputs/ui_runs/ui_conflict_slack_doc_vendor_selection_20260629_053452/state_resolution_debug.json",
+    "conflicts_debug": "outputs/ui_runs/ui_conflict_slack_doc_vendor_selection_20260629_053452/conflicts_debug.json",
+    "review_queue": "outputs/ui_runs/ui_conflict_slack_doc_vendor_selection_20260629_053452/review_queue.json",
+    "review_queue_md": "outputs/ui_runs/ui_conflict_slack_doc_vendor_selection_20260629_053452/review_queue.md",
+    "run_metadata": "outputs/ui_runs/ui_conflict_slack_doc_vendor_selection_20260629_053452/run_metadata.json"
+  }
+}

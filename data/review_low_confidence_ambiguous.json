@@ -1,0 +1,23 @@
+{
+  "workspace": "AcmeAI",
+  "messages": [
+    {
+      "channel": "product",
+      "channel_id": "C_PRODUCT",
+      "thread_ts": "1800002000.000100",
+      "ts": "1800002000.000100",
+      "speaker": "Owen Diaz",
+      "speaker_role": "Product Manager",
+      "text": "Maybe we should probably move the analytics dashboard beta later. The QA signal is still thin."
+    },
+    {
+      "channel": "product",
+      "channel_id": "C_PRODUCT",
+      "thread_ts": "1800002000.000100",
+      "ts": "1800002060.000200",
+      "speaker": "Priya Shah",
+      "speaker_role": "Staff Engineer",
+      "text": "Yeah, seems reasonable, but I would not call that final yet."
+    }
+  ]
+}

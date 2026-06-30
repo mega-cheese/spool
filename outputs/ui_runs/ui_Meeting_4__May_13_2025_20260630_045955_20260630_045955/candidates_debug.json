@@ -1,0 +1,410 @@
+[
+  {
+    "candidate_id": "candidate_dec_95c741950940",
+    "proposed_action": "\"The Room Where It Happens\" is confirmed as the theme to put on the website.",
+    "normalized_action": "room where it happens is confirmed as theme put on website",
+    "state": "confirmed",
+    "confidence": 0.95,
+    "source_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_2"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_2"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_2"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "\"The Room Where It Happens\" is confirmed as the theme to put on the website.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_2"
+        ],
+        "support_level": "direct",
+        "confidence": 0.95,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_2"
+        ],
+        "confidence": 0.95,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_2"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_d03c509c8472",
+    "proposed_action": "VYMUN Jr. should have three committees: general, specialized, and crisis.",
+    "normalized_action": "vymun jr should have three committees general specialized crisis",
+    "state": "confirmed",
+    "confidence": 0.9,
+    "source_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_2"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_2"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_2"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "VYMUN Jr. should have three committees: general, specialized, and crisis.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_2"
+        ],
+        "support_level": "direct",
+        "confidence": 0.9,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_2"
+        ],
+        "confidence": 0.9,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_2"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_f5bfc8d9f785",
+    "proposed_action": "The sports committee director is Cameron Stanger and the chair is John Huang.",
+    "normalized_action": "sports committee director is cameron stanger chair is john huang",
+    "state": "confirmed",
+    "confidence": 0.86,
+    "source_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_2"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_2"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_2"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "The sports committee director is Cameron Stanger and the chair is John Huang.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_2"
+        ],
+        "support_level": "direct",
+        "confidence": 0.86,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_2"
+        ],
+        "confidence": 0.86,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_2"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_484959bb40ea",
+    "proposed_action": "Junior registration is 65.",
+    "normalized_action": "junior registration is 65",
+    "state": "confirmed",
+    "confidence": 0.92,
+    "source_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_7"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_7"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_7"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Junior registration is 65.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_7"
+        ],
+        "support_level": "direct",
+        "confidence": 0.92,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_7"
+        ],
+        "confidence": 0.92,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_7"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_fda9b82cf268",
+    "proposed_action": "Regular registration is 165.",
+    "normalized_action": "regular registration is 165",
+    "state": "confirmed",
+    "confidence": 0.9,
+    "source_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_7"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_7"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_7"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Regular registration is 165.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_7"
+        ],
+        "support_level": "direct",
+        "confidence": 0.9,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_7"
+        ],
+        "confidence": 0.9,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_7"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_c3486916941c",
+    "proposed_action": "Early registration is 150.",
+    "normalized_action": "early registration is 150",
+    "state": "confirmed",
+    "confidence": 0.9,
+    "source_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_7"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_7"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_7"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Early registration is 150.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_7"
+        ],
+        "support_level": "direct",
+        "confidence": 0.9,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_7"
+        ],
+        "confidence": 0.9,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_7"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_be96bbe1d67b",
+    "proposed_action": "Mrs. Haider's sister is redesigning the logo for this year with the same colour scheme jazzed up.",
+    "normalized_action": "mrs haider s sister is redesigning logo this year with same colour scheme jazzed up",
+    "state": "confirmed",
+    "confidence": 0.88,
+    "source_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_6"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_6"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_6"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Mrs. Haider's sister is redesigning the logo for this year with the same colour scheme jazzed up.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_6"
+        ],
+        "support_level": "direct",
+        "confidence": 0.88,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_6"
+        ],
+        "confidence": 0.88,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_6"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_008cee7eb9fb",
+    "proposed_action": "Order more catering than last year.",
+    "normalized_action": "order more catering than last year",
+    "state": "confirmed",
+    "confidence": 0.84,
+    "source_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_6"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_6"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_9389a0b35cf38f8a_section_6"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Order more catering than last year.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_6"
+        ],
+        "support_level": "direct",
+        "confidence": 0.84,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_6"
+        ],
+        "confidence": 0.84,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_9389a0b35cf38f8a_section_6"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  }
+]

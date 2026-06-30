@@ -1,0 +1,39 @@
+{
+  "workspace": "AcmeAI",
+  "channels": [
+    {
+      "channel_id": "C_GTM",
+      "channel_name": "go-to-market",
+      "messages": [
+        {
+          "ts": "1791020000.000100",
+          "user": "Nina Patel",
+          "role": "Head of Growth",
+          "text": "Proposal: move the Team plan from $49 to $59 next month. Expansion revenue is strong, but onboarding time per Team account is higher than we modeled.",
+          "thread_ts": "1791020000.000100"
+        },
+        {
+          "ts": "1791020060.000200",
+          "user": "Marco Silva",
+          "role": "Finance Lead",
+          "text": "I support the increase. At $49, Team gross margin is below target once implementation support is included. The tradeoff is we may lose some very small teams.",
+          "thread_ts": "1791020000.000100"
+        },
+        {
+          "ts": "1791020120.000300",
+          "user": "Aisha Rahman",
+          "role": "Customer Success Manager",
+          "text": "I'm worried about surprising current Team customers. Assuming we grandfather existing Team customers for 4 months, CS can handle the messaging.",
+          "thread_ts": "1791020000.000100"
+        },
+        {
+          "ts": "1791020180.000400",
+          "user": "Nina Patel",
+          "role": "Head of Growth",
+          "text": "Final decision: move Team pricing to $59 for new customers starting 2026-09-01, grandfather existing Team customers for 4 months, and review churn after the first renewal cycle.",
+          "thread_ts": "1791020000.000100"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "input_file": "data/new_vendor_selection.json",
+    "mode": "llm",
+    "pipeline": "candidates-shadow",
+    "generated_at": "2026-06-30T07:53:10.696083+00:00",
+    "review_item_count": 0
+  },
+  "items": []
+}

@@ -1,0 +1,17 @@
+{
+  "resolver_version": "shadow-0.1",
+  "candidate_count": 8,
+  "states": {
+    "candidate_dec_0d1b347273eb": "confirmed",
+    "candidate_dec_3dc679f245ea": "confirmed",
+    "candidate_dec_7e94b9e06e9f": "confirmed",
+    "candidate_dec_023a19a80b26": "confirmed",
+    "candidate_dec_a228f26e444d": "confirmed",
+    "candidate_dec_87750591ce35": "confirmed",
+    "candidate_dec_e81233d258e3": "confirmed",
+    "candidate_dec_5f470865bf0b": "confirmed"
+  },
+  "claim_ownership": [],
+  "excluded_from_active_memory": [],
+  "duplicate_pairs": []
+}

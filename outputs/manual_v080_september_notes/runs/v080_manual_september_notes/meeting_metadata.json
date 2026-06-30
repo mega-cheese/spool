@@ -1,0 +1,14 @@
+{
+  "input_file": "/Users/admin/Downloads/September Meeting Notes.pdf",
+  "mode": "heuristic",
+  "pipeline": "candidates-shadow",
+  "classification": "generic_document",
+  "generated_at": "2026-06-30T22:12:08.461757+00:00",
+  "meeting_date": "2022-06-30",
+  "location": "flexible workload of 3-4 hours per week!",
+  "present": [],
+  "absent": [
+    "Helpful Links:"
+  ],
+  "source_event_count": 27
+}

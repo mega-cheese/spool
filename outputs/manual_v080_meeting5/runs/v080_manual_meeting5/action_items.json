@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/Meeting #5_ May 20th, 2025.pdf",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "classification": "meeting_minutes",
+    "generated_at": "2026-06-30T22:11:56.762876+00:00",
+    "action_item_count": 4
+  },
+  "action_items": [
+    {
+      "object_id": "memory_3b49ecf2e0fd",
+      "type": "action_item",
+      "title": "Sec bio.",
+      "summary": "Evangeline should sec bio.",
+      "owner_names": [
+        "Evangeline"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_dfc0cceebce2664c_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting #5_ May 20th, 2025.pdf",
+          "section_heading": "To Do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_dfc0cceebce2664c#section-8",
+          "page": 1,
+          "url": null,
+          "quote": "To Do Evangeline sec bio"
+        }
+      ],
+      "quote": "To Do Evangeline sec bio",
+      "confidence": 0.8,
+      "block_id": "block_6fb77ece98d3",
+      "span_id": "span_e56a27718ea8"
+    },
+    {
+      "object_id": "memory_c0cf1deb5868",
+      "type": "action_item",
+      "title": "Ask Ms Janzen for reg link.",
+      "summary": "Mrs. Haider should ask Ms Janzen for reg link.",
+      "owner_names": [
+        "Mrs. Haider"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_dfc0cceebce2664c_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting #5_ May 20th, 2025.pdf",
+          "section_heading": "To Do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_dfc0cceebce2664c#section-8",
+          "page": 1,
+          "url": null,
+          "quote": "To Do Mrs Haider ask Ms Janzen for reg link"
+        }
+      ],
+      "quote": "To Do Mrs Haider ask Ms Janzen for reg link",
+      "confidence": 0.8,
+      "block_id": "block_6fb77ece98d3",
+      "span_id": "span_e56a27718ea8"
+    },
+    {
+      "object_id": "memory_807a26d29a67",
+      "type": "action_item",
+      "title": "Finalize directors and set a meeting.",
+      "summary": "James should finalize directors and set a meeting.",
+      "owner_names": [
+        "James"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_dfc0cceebce2664c_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting #5_ May 20th, 2025.pdf",
+          "section_heading": "To Do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_dfc0cceebce2664c#section-8",
+          "page": 1,
+          "url": null,
+          "quote": "To Do James to finalize directors and set a meeting"
+        }
+      ],
+      "quote": "To Do James to finalize directors and set a meeting",
+      "confidence": 0.8,
+      "block_id": "block_6fb77ece98d3",
+      "span_id": "span_e56a27718ea8"
+    },
+    {
+      "object_id": "memory_b93f80cfbcd2",
+      "type": "action_item",
+      "title": "Reach out to schools.",
+      "summary": "Owen should reach out to schools.",
+      "owner_names": [
+        "Owen"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_dfc0cceebce2664c_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting #5_ May 20th, 2025.pdf",
+          "section_heading": "To Do",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_dfc0cceebce2664c#section-8",
+          "page": 1,
+          "url": null,
+          "quote": "To Do Owen to reach out to schools"
+        }
+      ],
+      "quote": "To Do Owen to reach out to schools",
+      "confidence": 0.8,
+      "block_id": "block_6fb77ece98d3",
+      "span_id": "span_e56a27718ea8"
+    }
+  ]
+}

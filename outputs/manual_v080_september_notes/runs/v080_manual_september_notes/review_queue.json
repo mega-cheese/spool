@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/September Meeting Notes.pdf",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "generated_at": "2026-06-30T22:12:08.508557+00:00",
+    "review_item_count": 1
+  },
+  "items": [
+    {
+      "review_id": "review_ce2ca23451ac",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Task table may have been under-extracted",
+      "summary": "Document appears to contain a task table, but many likely task rows were not extracted.",
+      "candidate_decision": "Task table may have been under-extracted",
+      "reason": "extraction_warning",
+      "recommended_action": "Review block classification and task extraction output.",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_4",
+        "uploaded_document_file_11471d225e12e8cc_section_9",
+        "uploaded_document_file_11471d225e12e8cc_section_18"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-4",
+          "page": 2,
+          "url": null,
+          "quote": "https://docs.google.com/forms/d/1ZfE_0MLbNKgDeiwpmPX0CvPBeAnQb4Oo1USRs97\n                     Xlgc/edit\n\n          Steps to preparing forms/spreadsheets:\n                1.   Make copies of the forms above\n                2.   Put them into the right folder\n                3.   Change details relevant to this season: dates, link to waitlist, etc.\n                4.   Link form responses to spreadsheet\n                5.   Fix anything else if needed\n\n     2.   Notifications for tutors (contact promotions) and students’ parents (wechat) (communications)\n                -    Tutor sign up opens first, then student sign up to gauge for # of guaranteed classes\n                -    Waitlist: classes not guaranteed\n                -    TEMPLATE: at the very bottom of this document\n\n          Tutor sign up notification:\n                -    Instagram & newsletter (promotions department)\n                -    Wechat (us) ← we have a wechat volunteer group chat\n\n          Parent notification:\n                -    Instagram & newsletter (promotions department)\n                -    Wechat (us) ← parent group chat\n\n          Notes regarding student sign up release (after tutor sign up release)\n                -    We need to be waiting for the number of student sign up to reach the target number (to make\n                     sure we have enough tutors for guaranteed classes)\n                          -     E.g. if we have 80 tutor sign up at this moment, we need to cap regular student sign up\n                                at 65\n                          -     Then open student waitlist for the rest (classes not guaranteed)\n\n     3.   Class pairing (admissions)\n                -    Make new sub sheet in master google spreadsheet\n                -    Pair students and tutors with fewer availabilities first\n                -    Pair siblings with the same tutor if possible, but it doesn’t have to be like this\n                -    See 2023 winter spring season spreadsheet for class pairing examples:\n                          -     https://docs.google.com/spreadsheets/d/1o0GZHuSfB5-Q2jj_IS-O5t7ILbS4OaSgrO\n                                eTQ_Ki3dw/edit?usp=sharing"
+        },
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_9",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Account Pass-Downs",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-9",
+          "page": 5,
+          "url": null,
+          "quote": "1.   Emily’s Account (YIV)\n              a.   wechat ID: yivcanada\n              b.   PW: youthinitiative\n    2.   Fiona’s Account (YIV Communications Manager)\n              a.    Wechat ID: yivcanada_pm\n              b.    PW: yivcanada"
+        },
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_18",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-18",
+          "page": 9,
+          "url": null,
+          "quote": "3.   Math TA Sign Up Message:\n\nOur Math Teaching Assistant (TA) Program is back for the school year!\n\n󰞹 Have a passion for math? Want to a professional volunteer experience to add your resume while\nworking under an esteemed math teacher?\n\n📚 Volunteers will be helping with academic classes, from grade 8-12 math courses to advanced\npreparation courses like SAT, AP, and IB.\n\nInterested in applying?\n⭕ Please send your resume to info@yivcanada.ca\n⭕ Ensure that you can commit from September 12th to June 30th, 2022. The position entails a\nflexible workload of 3-4 hours per week!\n\nPlease let us know if you have any questions and we look forward to viewing your application.\n\n\n    4.   Group Chat Messages:\n\n    a.   Introduction Messages for each new peer tutoring group chat:\n\nHi everyone! I am YIV’s Fiona who will be your contact for any problems during the classes! Thank\nyou all for your participation in our program!\n\nThe first day of class will be the week of October 2, 2023\n\nTutor: Sunny Li\nStudent: Terry Bao\nSubject: Math\nClass Schedule: Fri 8:30-9:15pm\n\nIf anyone will be absent for a class, please notify me in the chat!"
+        }
+      ],
+      "related_candidate_ids": [],
+      "created_at": "2026-06-30T22:12:08.508557+00:00"
+    }
+  ]
+}

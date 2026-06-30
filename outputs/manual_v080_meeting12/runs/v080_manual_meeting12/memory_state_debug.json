@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/Meeting #12_ September 30th, 2025.pdf",
+    "candidate_count": 23,
+    "approved_count": 0,
+    "needs_review_count": 8,
+    "rejected_count": 0
+  },
+  "items": [
+    {
+      "memory_id": "mem_63bda1f8ce94",
+      "type": "commitment",
+      "title": "See who on the Sec team can come on the Thursday before the conference for friendly debate.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "To-Do list (New) See who on the Sec team can come on the Thursday before the conference for friendly debate (Ann)"
+    },
+    {
+      "memory_id": "mem_e1e01abf275a",
+      "type": "commitment",
+      "title": "Send message out to MUN club abt Thursday friendly debate.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (New) Send message out to MUN club abt Thursday friendly debate (Sheree/Mrs. Haider)"
+    },
+    {
+      "memory_id": "mem_ee02dc094fb0",
+      "type": "commitment",
+      "title": "Order Pizza Jr.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (New) Order Pizza Jr. (Evangeline & Hugo)"
+    },
+    {
+      "memory_id": "mem_dfd4d338bec3",
+      "type": "commitment",
+      "title": "Staff training - get the VYMUN Jr. WPGA delegates to come up to the Sr. school as well.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (New) Staff training - get the VYMUN Jr. WPGA delegates to come up to the Sr. school as well"
+    },
+    {
+      "memory_id": "mem_851051ea9eda",
+      "type": "commitment",
+      "title": "Send staff names to Mrs. Haider for risk management forms.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (New) James send staff names to Mrs. Haider for risk management forms"
+    },
+    {
+      "memory_id": "mem_c9a7439151ed",
+      "type": "commitment",
+      "title": "Yapp to external chaperones.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "To-Do list (New) Yapp to external chaperones (Frankie)"
+    },
+    {
+      "memory_id": "mem_54e48a071e18",
+      "type": "commitment",
+      "title": "Find your people for WPGA chaperones.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (New) Find your people for WPGA chaperones"
+    },
+    {
+      "memory_id": "mem_667b44668cb2",
+      "type": "commitment",
+      "title": "VYMUN 2025 WPGA Chaperone Sign-Up.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "To-Do list (New) VYMUN 2025 WPGA Chaperone Sign-Up (EVERYONE!)"
+    },
+    {
+      "memory_id": "mem_4097e1c8fb3c",
+      "type": "commitment",
+      "title": "Announcements/displays in the jr. school for vymun jr.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "To-Do list (New) Announcements/displays in the jr. school for vymun jr (Evangeline & Hugo)"
+    },
+    {
+      "memory_id": "mem_0f0a5f8a16bb",
+      "type": "commitment",
+      "title": "Assign WPGA delegates Jr.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (Copied from last week) Assign WPGA delegates Jr (Hugo & Evangeline)"
+    },
+    {
+      "memory_id": "mem_3a0955395c94",
+      "type": "commitment",
+      "title": "Assign WPGA delegates UBC.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (Copied from last week) Assign WPGA delegates UBC (Frankie)"
+    },
+    {
+      "memory_id": "mem_24b3767e4497",
+      "type": "commitment",
+      "title": "Ask Mr. McCauley abt cameras for VYMUN.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (Copied from last week) Ask Mr. McCauley abt cameras for VYMUN (Ann)"
+    },
+    {
+      "memory_id": "mem_1491f8e908e5",
+      "type": "commitment",
+      "title": "Thank you gifts for chaperones list.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "To-Do list (Copied from last week) Thank you gifts for chaperones list (Frankie)"
+    },
+    {
+      "memory_id": "mem_60285714681b",
+      "type": "commitment",
+      "title": "Share Yapp with chaperones.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (Copied from last week) Share Yapp with chaperones (Ann)"
+    },
+    {
+      "memory_id": "mem_cf1f5c531ade",
+      "type": "commitment",
+      "title": "Email maintenance abt tables.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (Copied from last week) Email maintenance abt tables (Owen)"
+    },
+    {
+      "memory_id": "mem_30bb56fcf549",
+      "type": "commitment",
+      "title": "Gift list for chaperones.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "To-Do list (Copied from last week) Gift list for chaperones (Frankie & James)"
+    },
+    {
+      "memory_id": "mem_8a4c92d94590",
+      "type": "commitment",
+      "title": "Find teacher chaperone.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (Copied from last week) Find teacher chaperone (Everyone)"
+    },
+    {
+      "memory_id": "mem_f95996245771",
+      "type": "commitment",
+      "title": "Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices per person and delivery for 11:45am.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (Copied from last week) Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices per person and delivery for 11:45am (Evangeline & Hugo)"
+    },
+    {
+      "memory_id": "mem_b84c4b9c7de3",
+      "type": "commitment",
+      "title": "Name on order.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (Copied from last week) Evangeline - Name on order"
+    },
+    {
+      "memory_id": "mem_1d1967dbd364",
+      "type": "commitment",
+      "title": "Connect with Chef Stacey to organize ice cream bar for the afternoon.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (Copied from last week) Connect with Chef Stacey to organize ice cream bar for the afternoon skaloff@wpga.ca (Evangeline & Hugo)"
+    },
+    {
+      "memory_id": "mem_72763b9d2a2f",
+      "type": "commitment",
+      "title": "Follow up with Mulgrave and Kenneth Gordon Maplewood.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-Do list (Copied from last week) Follow up with Mulgrave and Kenneth Gordon Maplewood (Evangeline & Hugo)"
+    },
+    {
+      "memory_id": "mem_5a5c7fac735c",
+      "type": "commitment",
+      "title": "Invitation to Tracey Lee (Closing Ceremony).",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "To-Do list (Copied from last week) Invitation to Tracey Lee (Closing Ceremony) Frankie"
+    },
+    {
+      "memory_id": "mem_cdd4ce5fb9fa",
+      "type": "commitment",
+      "title": "Invitation to Mr. Anthony (Closing Ceremony).",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "To-Do list (Copied from last week) Invitation to Mr. Anthony (Closing Ceremony) Frankie"
+    }
+  ]
+}

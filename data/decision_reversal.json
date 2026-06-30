@@ -1,0 +1,59 @@
+{
+  "workspace": "AcmeAI",
+  "messages": [
+    {
+      "channel": "growth",
+      "channel_id": "C_GROWTH",
+      "thread_ts": "1782380000.000100",
+      "ts": "1782380000.000100",
+      "speaker": "Nina Patel",
+      "speaker_role": "Head of Growth",
+      "text": "Proposal: use SendGrid for lifecycle emails. The templates are already built there, and marketing has used it before."
+    },
+    {
+      "channel": "growth",
+      "channel_id": "C_GROWTH",
+      "thread_ts": "1782380000.000100",
+      "ts": "1782380060.000200",
+      "speaker": "Marco Silva",
+      "speaker_role": "Finance Lead",
+      "text": "SendGrid is cheaper for the first 100k emails, but deliverability was worse during the March campaign. Postmark is more expensive, but support said it had fewer spam-folder issues."
+    },
+    {
+      "channel": "growth",
+      "channel_id": "C_GROWTH",
+      "thread_ts": "1782380000.000100",
+      "ts": "1782380120.000300",
+      "speaker": "Aisha Rahman",
+      "speaker_role": "Customer Success Manager",
+      "text": "I'm concerned about using SendGrid again because password-reset emails also had delays last quarter. Assuming deliverability matters more than the lower price, I would choose Postmark."
+    },
+    {
+      "channel": "growth",
+      "channel_id": "C_GROWTH",
+      "thread_ts": "1782380000.000100",
+      "ts": "1782380180.000400",
+      "speaker": "Nina Patel",
+      "speaker_role": "Head of Growth",
+      "text": "Approved: use SendGrid for lifecycle emails for now. Marco owns setup, and we will review deliverability after the first campaign."
+    },
+    {
+      "channel": "growth",
+      "channel_id": "C_GROWTH",
+      "thread_ts": "1782380000.000100",
+      "ts": "1782380240.000500",
+      "speaker": "Marco Silva",
+      "speaker_role": "Finance Lead",
+      "text": "Update: I checked the contract details. SendGrid's cheaper tier does not include the dedicated IP package we need, so the real cost difference is much smaller."
+    },
+    {
+      "channel": "growth",
+      "channel_id": "C_GROWTH",
+      "thread_ts": "1782380000.000100",
+      "ts": "1782380300.000600",
+      "speaker": "Nina Patel",
+      "speaker_role": "Head of Growth",
+      "text": "Reversing the earlier decision. Final decision: use Postmark for lifecycle emails instead of SendGrid. Deliverability matters more than the small cost difference. Marco still owns setup, and we need it ready before the onboarding launch on 2026-08-20."
+    }
+  ]
+}

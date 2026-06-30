@@ -1,0 +1,25 @@
+{
+  "input_file": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_061342.pdf",
+  "mode": "llm",
+  "pipeline": "candidates-shadow",
+  "classification": "meeting_minutes",
+  "generated_at": "2026-06-29T06:13:45.985801+00:00",
+  "meeting_date": "2025-04-15",
+  "location": "Glass Room",
+  "present": [
+    "Ann",
+    "Elliot",
+    "Quinton",
+    "Mrs. Haider",
+    "Owen",
+    "Ms. Boland",
+    "James",
+    "Frankie",
+    "Hugo"
+  ],
+  "absent": [
+    "Evangeline",
+    "Sheree"
+  ],
+  "source_event_count": 7
+}

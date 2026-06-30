@@ -1,0 +1,36 @@
+{
+  "resolver_version": "shadow-0.1",
+  "candidate_count": 2,
+  "states": {
+    "candidate_dec_c4fa2a62fe": "confirmed",
+    "candidate_dec_135306cecf": "confirmed"
+  },
+  "claim_ownership": [
+    {
+      "claim": "Postgres latency is too high under load.",
+      "category": "reasoning",
+      "target_name": "Redis",
+      "target_role": "chosen_option"
+    },
+    {
+      "claim": "Latency is the bigger risk.",
+      "category": "reasoning",
+      "target_name": "Redis",
+      "target_role": "chosen_option"
+    },
+    {
+      "claim": "Redis could become a bottleneck later.",
+      "category": "risks",
+      "target_name": "Redis",
+      "target_role": "chosen_option"
+    },
+    {
+      "claim": "Extra infra complexity is the accepted tradeoff.",
+      "category": "tradeoffs",
+      "target_name": "Redis",
+      "target_role": "chosen_option"
+    }
+  ],
+  "excluded_from_active_memory": [],
+  "duplicate_pairs": []
+}

@@ -1,0 +1,268 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_4__May_13_2025_20260630_045955.pdf",
+    "mode": "llm",
+    "pipeline": "candidates-shadow",
+    "classification": "meeting_minutes",
+    "generated_at": "2026-06-30T05:00:05.117617+00:00",
+    "open_question_count": 8
+  },
+  "open_questions": [
+    {
+      "object_id": "memory_8fdd2fdb13cf",
+      "type": "open_question",
+      "title": "Jr committees are unresolved.",
+      "summary": "Jr committees are unresolved.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_2"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_2",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "2.   Committee List",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "2. Committee List b. Jr committees? c. UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate) i. Depends on how it plays out - not fantasy football ii. FIFA council could be acceptable - VMUN had one 1. Another option is Olympic Committee iii. Don’t want to have to write a whole new backgrounder",
+          "locator": "file_9389a0b35cf38f8a#section-2",
+          "page": 1,
+          "url": null
+        }
+      ],
+      "quote": "2. Committee List b. Jr committees? c. UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate) i. Depends on how it plays out - not fantasy football ii. FIFA council could be acceptable - VMUN had one 1. Another option is Olympic Committee iii. Don’t want to have to write a whole new backgrounder",
+      "confidence": 0.9
+    },
+    {
+      "object_id": "memory_e306eda053ef",
+      "type": "open_question",
+      "title": "Whether the sports committee should be for UBC VYMUN or Jr. is unresolved.",
+      "summary": "Whether the sports committee should be for UBC VYMUN or Jr. is unresolved.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_2"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_2",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "2.   Committee List",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "2. Committee List c. UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate) i. Depends on how it plays out - not fantasy football ii. FIFA council could be acceptable - VMUN had one 1. Another option is Olympic Committee iii. Don’t want to have to write a whole new backgrounder iv. UBC could be more suitable",
+          "locator": "file_9389a0b35cf38f8a#section-2",
+          "page": 1,
+          "url": null
+        }
+      ],
+      "quote": "2. Committee List c. UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate) i. Depends on how it plays out - not fantasy football ii. FIFA council could be acceptable - VMUN had one 1. Another option is Olympic Committee iii. Don’t want to have to write a whole new backgrounder iv. UBC could be more suitable",
+      "confidence": 0.88
+    },
+    {
+      "object_id": "memory_6f205fee33e1",
+      "type": "open_question",
+      "title": "FIFA Council versus Olympic Committee is unresolved if the sports committee proceeds.",
+      "summary": "FIFA Council versus Olympic Committee is unresolved if the sports committee proceeds.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_2"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_2",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "2.   Committee List",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "2. Committee List 1. Another option is Olympic Committee iii. Don’t want to have to write a whole new backgrounder iv. UBC could be more suitable v. Director is Cameron Stanger (Chair: John Huang) 3. VYMUN Jr. a. Let the directors decide",
+          "locator": "file_9389a0b35cf38f8a#section-2",
+          "page": 1,
+          "url": null
+        }
+      ],
+      "quote": "2. Committee List 1. Another option is Olympic Committee iii. Don’t want to have to write a whole new backgrounder iv. UBC could be more suitable v. Director is Cameron Stanger (Chair: John Huang) 3. VYMUN Jr. a. Let the directors decide",
+      "confidence": 0.86
+    },
+    {
+      "object_id": "memory_541a9b92131d",
+      "type": "open_question",
+      "title": "Secretariat photos may happen Friday.",
+      "summary": "Secretariat photos may happen Friday.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_4"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "6.   Secretariat Photos",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "6. Secretariat Photos a. Friday? b. Tomorrow Recess - meet at basketball court c. Ceremonial Uniform or business casual i. Same area, backdrop, sizing/distance ii. Looks more polished",
+          "locator": "file_9389a0b35cf38f8a#section-4",
+          "page": 1,
+          "url": null
+        }
+      ],
+      "quote": "6. Secretariat Photos a. Friday? b. Tomorrow Recess - meet at basketball court c. Ceremonial Uniform or business casual i. Same area, backdrop, sizing/distance ii. Looks more polished",
+      "confidence": 0.84
+    },
+    {
+      "object_id": "memory_67ca7c65aff7",
+      "type": "open_question",
+      "title": "Ceremonial uniform or business casual is unresolved.",
+      "summary": "Ceremonial uniform or business casual is unresolved.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_4"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "6.   Secretariat Photos",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "6. Secretariat Photos a. Friday? b. Tomorrow Recess - meet at basketball court c. Ceremonial Uniform or business casual i. Same area, backdrop, sizing/distance ii. Looks more polished",
+          "locator": "file_9389a0b35cf38f8a#section-4",
+          "page": 1,
+          "url": null
+        }
+      ],
+      "quote": "6. Secretariat Photos a. Friday? b. Tomorrow Recess - meet at basketball court c. Ceremonial Uniform or business casual i. Same area, backdrop, sizing/distance ii. Looks more polished",
+      "confidence": 0.84
+    },
+    {
+      "object_id": "memory_5d14b43d69d6",
+      "type": "open_question",
+      "title": "Whether to invite other schools is unresolved.",
+      "summary": "Whether to invite other schools is unresolved.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "9.  Go through materials left from last year",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "9. Go through materials left from last year e. Invite other schools? f. Mrs Haider and Owen corresponding with school in Winnipeg i. May join us ii. Owen to send follow up (very excited to have you, help with hotels etc) 1. School will cover ground transport",
+          "locator": "file_9389a0b35cf38f8a#section-7",
+          "page": 2,
+          "url": null
+        }
+      ],
+      "quote": "9. Go through materials left from last year e. Invite other schools? f. Mrs Haider and Owen corresponding with school in Winnipeg i. May join us ii. Owen to send follow up (very excited to have you, help with hotels etc) 1. School will cover ground transport",
+      "confidence": 0.9
+    },
+    {
+      "object_id": "memory_0b80402403d1",
+      "type": "open_question",
+      "title": "Guest speaker for junior is unresolved.",
+      "summary": "Guest speaker for junior is unresolved.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Document i. Guest speaker for junior j. Registration link up before end of long weekend on website k. Cabaret night i. Meet at lunch tuesday? ii. Boland and Haider David Bonin,",
+          "locator": "file_9389a0b35cf38f8a#section-8",
+          "page": 3,
+          "url": null
+        }
+      ],
+      "quote": "Document i. Guest speaker for junior j. Registration link up before end of long weekend on website k. Cabaret night i. Meet at lunch tuesday? ii. Boland and Haider David Bonin,",
+      "confidence": 0.82
+    },
+    {
+      "object_id": "memory_f501e693dd1a",
+      "type": "open_question",
+      "title": "Cabaret night is unresolved.",
+      "summary": "Cabaret night is unresolved.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9389a0b35cf38f8a_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9389a0b35cf38f8a_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9389a0b35cf38f8a",
+          "document_title": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Document k. Cabaret night i. Meet at lunch tuesday? ii. Boland and Haider David Bonin,",
+          "locator": "file_9389a0b35cf38f8a#section-8",
+          "page": 3,
+          "url": null
+        }
+      ],
+      "quote": "Document k. Cabaret night i. Meet at lunch tuesday? ii. Boland and Haider David Bonin,",
+      "confidence": 0.82
+    }
+  ]
+}

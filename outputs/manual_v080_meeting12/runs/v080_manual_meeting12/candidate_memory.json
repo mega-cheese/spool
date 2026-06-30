@@ -1,0 +1,1020 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/Meeting #12_ September 30th, 2025.pdf",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "generated_at": "2026-06-30T22:11:56.901574+00:00",
+    "candidate_count": 23
+  },
+  "candidates": [
+    {
+      "memory_id": "mem_63bda1f8ce94",
+      "source_object_id": "memory_47b6b6a96dc9",
+      "type": "commitment",
+      "title": "See who on the Sec team can come on the Thursday before the conference for friendly debate.",
+      "summary": "Ann should see who on the Sec team can come on the Thursday before the conference for friendly debate.",
+      "owner_names": [
+        "Ann"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (New) See who on the Sec team can come on the Thursday before the conference for friendly debate (Ann)"
+        }
+      ],
+      "quote": "To-Do list (New) See who on the Sec team can come on the Thursday before the conference for friendly debate (Ann)",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_e1e01abf275a",
+      "source_object_id": "memory_6cfaa056a63f",
+      "type": "commitment",
+      "title": "Send message out to MUN club abt Thursday friendly debate.",
+      "summary": "Sheree and Mrs. Haider should send message out to MUN club abt Thursday friendly debate.",
+      "owner_names": [
+        "Sheree",
+        "Mrs. Haider"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (New) Send message out to MUN club abt Thursday friendly debate (Sheree/Mrs. Haider)"
+        }
+      ],
+      "quote": "To-Do list (New) Send message out to MUN club abt Thursday friendly debate (Sheree/Mrs. Haider)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_ee02dc094fb0",
+      "source_object_id": "memory_c60928c66c3f",
+      "type": "commitment",
+      "title": "Order Pizza Jr.",
+      "summary": "Evangeline and Hugo should order Pizza Jr.",
+      "owner_names": [
+        "Evangeline",
+        "Hugo"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (New) Order Pizza Jr. (Evangeline & Hugo)"
+        }
+      ],
+      "quote": "To-Do list (New) Order Pizza Jr. (Evangeline & Hugo)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_dfd4d338bec3",
+      "source_object_id": "memory_41159731c61f",
+      "type": "commitment",
+      "title": "Staff training - get the VYMUN Jr. WPGA delegates to come up to the Sr. school as well.",
+      "summary": "The team should staff training - get the VYMUN Jr. WPGA delegates to come up to the Sr. school as well.",
+      "owner_names": [],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (New) Staff training - get the VYMUN Jr. WPGA delegates to come up to the Sr. school as well"
+        }
+      ],
+      "quote": "To-Do list (New) Staff training - get the VYMUN Jr. WPGA delegates to come up to the Sr. school as well",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_851051ea9eda",
+      "source_object_id": "memory_d749bd7b09a6",
+      "type": "commitment",
+      "title": "Send staff names to Mrs. Haider for risk management forms.",
+      "summary": "James should send staff names to Mrs. Haider for risk management forms.",
+      "owner_names": [
+        "James"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (New) James send staff names to Mrs. Haider for risk management forms"
+        }
+      ],
+      "quote": "To-Do list (New) James send staff names to Mrs. Haider for risk management forms",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_c9a7439151ed",
+      "source_object_id": "memory_876ca86e84ae",
+      "type": "commitment",
+      "title": "Yapp to external chaperones.",
+      "summary": "Frankie should yapp to external chaperones.",
+      "owner_names": [
+        "Frankie"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (New) Yapp to external chaperones (Frankie)"
+        }
+      ],
+      "quote": "To-Do list (New) Yapp to external chaperones (Frankie)",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_54e48a071e18",
+      "source_object_id": "memory_20546754aa0b",
+      "type": "commitment",
+      "title": "Find your people for WPGA chaperones.",
+      "summary": "The team should find your people for WPGA chaperones.",
+      "owner_names": [],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (New) Find your people for WPGA chaperones"
+        }
+      ],
+      "quote": "To-Do list (New) Find your people for WPGA chaperones",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_667b44668cb2",
+      "source_object_id": "memory_c7f203ef1409",
+      "type": "commitment",
+      "title": "VYMUN 2025 WPGA Chaperone Sign-Up.",
+      "summary": "Everyone should vYMUN 2025 WPGA Chaperone Sign-Up.",
+      "owner_names": [
+        "Everyone"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (New) VYMUN 2025 WPGA Chaperone Sign-Up (EVERYONE!)"
+        }
+      ],
+      "quote": "To-Do list (New) VYMUN 2025 WPGA Chaperone Sign-Up (EVERYONE!)",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_4097e1c8fb3c",
+      "source_object_id": "memory_f5d73530225d",
+      "type": "commitment",
+      "title": "Announcements/displays in the jr. school for vymun jr.",
+      "summary": "Evangeline and Hugo should announcements/displays in the jr. school for vymun jr.",
+      "owner_names": [
+        "Evangeline",
+        "Hugo"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (New) Announcements/displays in the jr. school for vymun jr (Evangeline & Hugo)"
+        }
+      ],
+      "quote": "To-Do list (New) Announcements/displays in the jr. school for vymun jr (Evangeline & Hugo)",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_0f0a5f8a16bb",
+      "source_object_id": "memory_5c2212daaa26",
+      "type": "commitment",
+      "title": "Assign WPGA delegates Jr.",
+      "summary": "Hugo and Evangeline should assign WPGA delegates Jr.",
+      "owner_names": [
+        "Hugo",
+        "Evangeline"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (Copied from last week) Assign WPGA delegates Jr (Hugo & Evangeline)"
+        }
+      ],
+      "quote": "To-Do list (Copied from last week) Assign WPGA delegates Jr (Hugo & Evangeline)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_3a0955395c94",
+      "source_object_id": "memory_373741a1f6bc",
+      "type": "commitment",
+      "title": "Assign WPGA delegates UBC.",
+      "summary": "Frankie should assign WPGA delegates UBC.",
+      "owner_names": [
+        "Frankie"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (Copied from last week) Assign WPGA delegates UBC (Frankie)"
+        }
+      ],
+      "quote": "To-Do list (Copied from last week) Assign WPGA delegates UBC (Frankie)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_24b3767e4497",
+      "source_object_id": "memory_11af2590e762",
+      "type": "commitment",
+      "title": "Ask Mr. McCauley abt cameras for VYMUN.",
+      "summary": "Ann should ask Mr. McCauley abt cameras for VYMUN.",
+      "owner_names": [
+        "Ann"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (Copied from last week) Ask Mr. McCauley abt cameras for VYMUN (Ann)"
+        }
+      ],
+      "quote": "To-Do list (Copied from last week) Ask Mr. McCauley abt cameras for VYMUN (Ann)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_1491f8e908e5",
+      "source_object_id": "memory_ee751adef5c4",
+      "type": "commitment",
+      "title": "Thank you gifts for chaperones list.",
+      "summary": "Frankie should thank you gifts for chaperones list.",
+      "owner_names": [
+        "Frankie"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (Copied from last week) Thank you gifts for chaperones list (Frankie)"
+        }
+      ],
+      "quote": "To-Do list (Copied from last week) Thank you gifts for chaperones list (Frankie)",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_60285714681b",
+      "source_object_id": "memory_80d22568be4e",
+      "type": "commitment",
+      "title": "Share Yapp with chaperones.",
+      "summary": "Ann should share Yapp with chaperones.",
+      "owner_names": [
+        "Ann"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (Copied from last week) Share Yapp with chaperones (Ann)"
+        }
+      ],
+      "quote": "To-Do list (Copied from last week) Share Yapp with chaperones (Ann)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_cf1f5c531ade",
+      "source_object_id": "memory_593a19fbe52f",
+      "type": "commitment",
+      "title": "Email maintenance abt tables.",
+      "summary": "Owen should email maintenance abt tables.",
+      "owner_names": [
+        "Owen"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (Copied from last week) Email maintenance abt tables (Owen)"
+        }
+      ],
+      "quote": "To-Do list (Copied from last week) Email maintenance abt tables (Owen)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_30bb56fcf549",
+      "source_object_id": "memory_d5f2b592e0ed",
+      "type": "commitment",
+      "title": "Gift list for chaperones.",
+      "summary": "Frankie and James should gift list for chaperones.",
+      "owner_names": [
+        "Frankie",
+        "James"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (Copied from last week) Gift list for chaperones (Frankie & James)"
+        }
+      ],
+      "quote": "To-Do list (Copied from last week) Gift list for chaperones (Frankie & James)",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_8a4c92d94590",
+      "source_object_id": "memory_dec858bfea6e",
+      "type": "commitment",
+      "title": "Find teacher chaperone.",
+      "summary": "Everyone should find teacher chaperone.",
+      "owner_names": [
+        "Everyone"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "11. WPGA Chaperone Conversations",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-8",
+          "page": 2,
+          "url": null,
+          "quote": "To-Do list (Copied from last week) Find teacher chaperone (Everyone)"
+        }
+      ],
+      "quote": "To-Do list (Copied from last week) Find teacher chaperone (Everyone)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_f95996245771",
+      "source_object_id": "memory_f2d8f8ee5154",
+      "type": "commitment",
+      "title": "Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices per person and delivery for 11:45am.",
+      "summary": "Evangeline and Hugo should call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices per person and delivery for 11:45am.",
+      "owner_names": [
+        "Evangeline",
+        "Hugo"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_9"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_9",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-9",
+          "page": 3,
+          "url": null,
+          "quote": "To-Do list (Copied from last week) Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices per person and delivery for 11:45am (Evangeline & Hugo)"
+        }
+      ],
+      "quote": "To-Do list (Copied from last week) Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices per person and delivery for 11:45am (Evangeline & Hugo)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_b84c4b9c7de3",
+      "source_object_id": "memory_9a3255809ab0",
+      "type": "commitment",
+      "title": "Name on order.",
+      "summary": "Evangeline should name on order.",
+      "owner_names": [
+        "Evangeline"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_9"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_9",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-9",
+          "page": 3,
+          "url": null,
+          "quote": "To-Do list (Copied from last week) Evangeline - Name on order"
+        }
+      ],
+      "quote": "To-Do list (Copied from last week) Evangeline - Name on order",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_1d1967dbd364",
+      "source_object_id": "memory_5ad331d29a77",
+      "type": "commitment",
+      "title": "Connect with Chef Stacey to organize ice cream bar for the afternoon.",
+      "summary": "Evangeline and Hugo should connect with Chef Stacey to organize ice cream bar for the afternoon.",
+      "owner_names": [
+        "Evangeline",
+        "Hugo"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "Connect with Chef Stacey to organize ice cream bar for the afternoon",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-10",
+          "page": 3,
+          "url": null,
+          "quote": "To-Do list (Copied from last week) Connect with Chef Stacey to organize ice cream bar for the afternoon skaloff@wpga.ca (Evangeline & Hugo)"
+        }
+      ],
+      "quote": "To-Do list (Copied from last week) Connect with Chef Stacey to organize ice cream bar for the afternoon skaloff@wpga.ca (Evangeline & Hugo)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_72763b9d2a2f",
+      "source_object_id": "memory_3990d52cb83b",
+      "type": "commitment",
+      "title": "Follow up with Mulgrave and Kenneth Gordon Maplewood.",
+      "summary": "Evangeline and Hugo should follow up with Mulgrave and Kenneth Gordon Maplewood.",
+      "owner_names": [
+        "Evangeline",
+        "Hugo"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "Connect with Chef Stacey to organize ice cream bar for the afternoon",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-10",
+          "page": 3,
+          "url": null,
+          "quote": "To-Do list (Copied from last week) Follow up with Mulgrave and Kenneth Gordon Maplewood (Evangeline & Hugo)"
+        }
+      ],
+      "quote": "To-Do list (Copied from last week) Follow up with Mulgrave and Kenneth Gordon Maplewood (Evangeline & Hugo)",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_5a5c7fac735c",
+      "source_object_id": "memory_bfb502ef6c4c",
+      "type": "commitment",
+      "title": "Invitation to Tracey Lee (Closing Ceremony).",
+      "summary": "Frankie should invitation to Tracey Lee (Closing Ceremony).",
+      "owner_names": [
+        "Frankie"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "Connect with Chef Stacey to organize ice cream bar for the afternoon",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-10",
+          "page": 3,
+          "url": null,
+          "quote": "To-Do list (Copied from last week) Invitation to Tracey Lee (Closing Ceremony) Frankie"
+        }
+      ],
+      "quote": "To-Do list (Copied from last week) Invitation to Tracey Lee (Closing Ceremony) Frankie",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_cdd4ce5fb9fa",
+      "source_object_id": "memory_a42f302ab606",
+      "type": "commitment",
+      "title": "Invitation to Mr. Anthony (Closing Ceremony).",
+      "summary": "Frankie should invitation to Mr. Anthony (Closing Ceremony).",
+      "owner_names": [
+        "Frankie"
+      ],
+      "status": "unresolved",
+      "confidence": 0.8,
+      "source_event_ids": [
+        "uploaded_document_file_b0bf803730892707_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b0bf803730892707_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b0bf803730892707",
+          "document_title": "Meeting #12_ September 30th, 2025.pdf",
+          "section_heading": "Connect with Chef Stacey to organize ice cream bar for the afternoon",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b0bf803730892707#section-10",
+          "page": 3,
+          "url": null,
+          "quote": "To-Do list (Copied from last week) Invitation to Mr. Anthony (Closing Ceremony) Frankie"
+        }
+      ],
+      "quote": "To-Do list (Copied from last week) Invitation to Mr. Anthony (Closing Ceremony) Frankie",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-06-30T22:11:56.901574+00:00",
+      "updated_at": "2026-06-30T22:11:56.901574+00:00",
+      "metadata": {
+        "source_kind": "action_item",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "weak_task_parse"
+      ],
+      "memory_quality_score": 0.92
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+[
+  {
+    "candidate_id": "candidate_dec_312cae11f8",
+    "proposed_action": "Delay the enterprise launch until SOC 2 is complete.",
+    "normalized_action": "delay enterprise launch until soc 2 is complete",
+    "state": "confirmed",
+    "confidence": 0.86,
+    "source_event_ids": [
+      "slack_C_PRODUCT_1782201180_000400",
+      "slack_C_PRODUCT_1782201000_000100",
+      "slack_C_PRODUCT_1782201060_000200",
+      "slack_C_PRODUCT_1782201120_000300"
+    ],
+    "decision_event_ids": [
+      "slack_C_PRODUCT_1782201180_000400"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "slack_C_PRODUCT_1782201180_000400"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Pilot customers said security review will block the launch without SOC 2.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201000_000100"
+        ],
+        "support_level": "direct",
+        "confidence": 0.9,
+        "target_name": null,
+        "target_role": null
+      },
+      {
+        "claim": "Without audit logs and SSO, security review will probably fail.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201060_000200"
+        ],
+        "support_level": "direct",
+        "confidence": 0.9,
+        "target_name": null,
+        "target_role": null
+      },
+      {
+        "claim": "Assuming the pilots will wait, delaying is safer.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201120_000300"
+        ],
+        "support_level": "direct",
+        "confidence": 0.8,
+        "target_name": null,
+        "target_role": null
+      },
+      {
+        "claim": "The delay could hurt Q3 sales pipeline.",
+        "category": "objections",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201120_000300"
+        ],
+        "support_level": "direct",
+        "confidence": 0.8,
+        "target_name": null,
+        "target_role": null
+      },
+      {
+        "claim": "Engineering needs about four more weeks to complete SOC 2 preparation.",
+        "category": "timelines",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201060_000200"
+        ],
+        "support_level": "direct",
+        "confidence": 0.9,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201180_000400"
+        ],
+        "confidence": 0.86,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201000_000100",
+          "slack_C_PRODUCT_1782201060_000200",
+          "slack_C_PRODUCT_1782201120_000300"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      },
+      {
+        "signal_type": "objection_signal",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201120_000300"
+        ],
+        "confidence": 0.75,
+        "note": "Derived from objections claims."
+      },
+      {
+        "signal_type": "timeline_signal",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201060_000200"
+        ],
+        "confidence": 0.75,
+        "note": "Derived from timelines claims."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_ae7c6d9cfa",
+    "proposed_action": "Use Redis for session state instead of Postgres due to latency under load.",
+    "normalized_action": "redis session state over postgres due latency under load",
+    "state": "confirmed",
+    "confidence": 0.86,
+    "source_event_ids": [
+      "slack_C_ENG_1782202180_000400",
+      "slack_C_ENG_1782202000_000100",
+      "slack_C_ENG_1782202060_000200",
+      "slack_C_ENG_1782202120_000300"
+    ],
+    "decision_event_ids": [
+      "slack_C_ENG_1782202180_000400"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "slack_C_ENG_1782202180_000400"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Postgres latency is too high under load.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "slack_C_ENG_1782202000_000100"
+        ],
+        "support_level": "direct",
+        "confidence": 1.0,
+        "target_name": "Redis",
+        "target_role": "chosen_option"
+      },
+      {
+        "claim": "Extra infrastructure complexity is the accepted tradeoff.",
+        "category": "tradeoffs",
+        "source_event_ids": [
+          "slack_C_ENG_1782202060_000200"
+        ],
+        "support_level": "direct",
+        "confidence": 1.0,
+        "target_name": "Redis",
+        "target_role": "chosen_option"
+      },
+      {
+        "claim": "If Redis becomes a bottleneck later, we can revisit the design after launch.",
+        "category": "timelines",
+        "source_event_ids": [
+          "slack_C_ENG_1782202120_000300"
+        ],
+        "support_level": "direct",
+        "confidence": 1.0,
+        "target_name": "Redis",
+        "target_role": "chosen_option"
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "slack_C_ENG_1782202180_000400"
+        ],
+        "confidence": 0.86,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "slack_C_ENG_1782202000_000100",
+          "slack_C_ENG_1782202060_000200",
+          "slack_C_ENG_1782202120_000300"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      },
+      {
+        "signal_type": "tradeoff_signal",
+        "source_event_ids": [
+          "slack_C_ENG_1782202060_000200"
+        ],
+        "confidence": 0.75,
+        "note": "Derived from tradeoffs claims."
+      },
+      {
+        "signal_type": "timeline_signal",
+        "source_event_ids": [
+          "slack_C_ENG_1782202120_000300"
+        ],
+        "confidence": 0.75,
+        "note": "Derived from timelines claims."
+      }
+    ]
+  }
+]

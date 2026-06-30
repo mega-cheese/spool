@@ -1,0 +1,27 @@
+{
+  "run_id": "ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828",
+  "input_file": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+  "mode": "llm",
+  "pipeline": "candidates-shadow",
+  "model": "gpt-4.1-mini",
+  "source_type": "uploaded_document",
+  "created_at": "2026-06-30T20:18:32.054778+00:00",
+  "artifacts": {
+    "decisions": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/decisions.json",
+    "raw_decisions": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/raw_decisions.json",
+    "normalized_events_debug": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/normalized_events_debug.json",
+    "source_bundles_debug": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/source_bundles_debug.json",
+    "candidates_debug": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/candidates_debug.json",
+    "state_resolution_debug": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/state_resolution_debug.json",
+    "conflicts_debug": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/conflicts_debug.json",
+    "meeting_metadata": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/meeting_metadata.json",
+    "clean_memory": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/clean_memory.json",
+    "action_items": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/action_items.json",
+    "open_questions": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/open_questions.json",
+    "document_memory_debug": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/document_memory_debug.json",
+    "block_classification_debug": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/block_classification_debug.json",
+    "review_queue": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/review_queue.json",
+    "review_queue_md": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/review_queue.md",
+    "run_metadata": "outputs/ui_runs/ui_Meeting_7__August_26th_2025_20260630_201828_20260630_201828/run_metadata.json"
+  }
+}

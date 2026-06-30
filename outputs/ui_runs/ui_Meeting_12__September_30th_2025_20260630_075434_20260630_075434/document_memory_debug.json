@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_12__September_30th_2025_20260630_075434.pdf",
+    "mode": "llm",
+    "pipeline": "candidates-shadow",
+    "classification": "meeting_minutes",
+    "generated_at": "2026-06-30T07:54:39.373781+00:00"
+  },
+  "classification": "meeting_minutes",
+  "source_headings": [
+    "Document",
+    "1.  Registration assignments finalize & send out",
+    "3.  Supplies",
+    "4.  Invite Mr. Anthony to Opening Ceremony (Mr. Parker coming to closing)-",
+    "6.  VYMUN Junior",
+    "7.  Write opening & Closing Ceremony Speeches",
+    "Document",
+    "11. WPGA Chaperone Conversations",
+    "Document",
+    "Connect with Chef Stacey to organize ice cream bar for the afternoon"
+  ],
+  "memory_objects": [],
+  "review_warnings": []
+}

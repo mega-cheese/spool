@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/Meeting #5_ May 20th, 2025.pdf",
+    "candidate_count": 5,
+    "approved_count": 0,
+    "needs_review_count": 1,
+    "rejected_count": 0
+  },
+  "items": [
+    {
+      "memory_id": "mem_a6f2939b6ddb",
+      "type": "commitment",
+      "title": "Sec bio.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "To Do Evangeline sec bio"
+    },
+    {
+      "memory_id": "mem_0c610c55e47d",
+      "type": "commitment",
+      "title": "Ask Ms Janzen for reg link.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To Do Mrs Haider ask Ms Janzen for reg link"
+    },
+    {
+      "memory_id": "mem_49ef9103099e",
+      "type": "commitment",
+      "title": "Finalize directors and set a meeting.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To Do James to finalize directors and set a meeting"
+    },
+    {
+      "memory_id": "mem_ad31597c3493",
+      "type": "commitment",
+      "title": "Reach out to schools.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To Do Owen to reach out to schools"
+    },
+    {
+      "memory_id": "mem_3f84d057d9b2",
+      "type": "open_question",
+      "title": "Media items, including website and Instagram, are to be discussed next time.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "Document May 20th, 2025 Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)"
+    }
+  ]
+}

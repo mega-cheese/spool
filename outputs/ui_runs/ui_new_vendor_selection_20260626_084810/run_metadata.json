@@ -1,0 +1,18 @@
+{
+  "run_id": "ui_new_vendor_selection_20260626_084810",
+  "input_file": "data/new_vendor_selection.json",
+  "mode": "heuristic",
+  "pipeline": "candidates-shadow",
+  "model": null,
+  "source_type": "slack",
+  "created_at": "2026-06-26T08:48:10.493100+00:00",
+  "artifacts": {
+    "decisions": "outputs/ui_runs/ui_new_vendor_selection_20260626_084810/decisions.json",
+    "raw_decisions": null,
+    "normalized_events_debug": "outputs/ui_runs/ui_new_vendor_selection_20260626_084810/normalized_events_debug.json",
+    "source_bundles_debug": "outputs/ui_runs/ui_new_vendor_selection_20260626_084810/source_bundles_debug.json",
+    "candidates_debug": "outputs/ui_runs/ui_new_vendor_selection_20260626_084810/candidates_debug.json",
+    "state_resolution_debug": "outputs/ui_runs/ui_new_vendor_selection_20260626_084810/state_resolution_debug.json",
+    "run_metadata": "outputs/ui_runs/ui_new_vendor_selection_20260626_084810/run_metadata.json"
+  }
+}

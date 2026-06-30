@@ -1,0 +1,1094 @@
+[
+  {
+    "event_id": "uploaded_document_file_6448cad81c690415_section_1",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_6448cad81c690415#section-1",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_6448cad81c690415",
+      "name": "Meeting_1__April_15th_2025_20260629_061342.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_6448cad81c690415",
+      "section_heading": "Document"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T06:13:42.618948+00:00",
+    "content": {
+      "text": "April 15th, 2025\nGlass Room\n\nPresent: Ann, Elliot, Quinton, Mrs. Haider, Owen, Ms. Boland, James, Frankie, Hugo\nAbsent: Evangeline, Sheree\n\n    1.   Welcome! Congrats!\n             a.   Shared what everyone’s excited about for VYMUN 2025!\n    2.   Theme for VYMUN Sr. and Jr?\n             a.   Metamorphosis/Change - Quinton\n             b.   A new chapter/horizons - Mrs Haider\n             c.   VYMUN new generation - Mrs Boland\n             d.   Fight for democracy - Mrs Boland\n             e.   Voice/Positive Discussion/Productive Discourse - Mrs Haider\n             f.   The Room where it happens/presence\n             g.   Contribution - Ann"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_6448cad81c690415#section-1",
+      "quote": "April 15th, 2025\nGlass Room\n\nPresent: Ann, Elliot, Quinton, Mrs. Haider, Owen, Ms. Boland, James, Frankie, Hugo\nAbsent: Evangeline, Sheree\n\n    1.   Welcome! Congrats!\n             a.   Shared what everyone’s excited about for VYMUN 2025!\n    2.   Theme for VYMUN Sr. and Jr?\n             a.   Metamorphosis/Change - Quinton\n             b.   A new chapter/horizons - Mrs Haider\n             c.   VYMUN new generation - Mrs Boland\n             d.   Fight for democracy - Mrs Boland\n             e.   Voice/Positive Discussion/Productive Discourse - Mrs Haider\n             f.   The Room where it happens/presence\n             g.   Contribution - Ann",
+      "workspace": "local_upload",
+      "document_id": "file_6448cad81c690415",
+      "document_title": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+      "section_heading": "Document",
+      "page": 1
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "Document",
+        "text": "April 15th, 2025\nGlass Room\n\nPresent: Ann, Elliot, Quinton, Mrs. Haider, Owen, Ms. Boland, James, Frankie, Hugo\nAbsent: Evangeline, Sheree\n\n    1.   Welcome! Congrats!\n             a.   Shared what everyone’s excited about for VYMUN 2025!\n    2.   Theme for VYMUN Sr. and Jr?\n             a.   Metamorphosis/Change - Quinton\n             b.   A new chapter/horizons - Mrs Haider\n             c.   VYMUN new generation - Mrs Boland\n             d.   Fight for democracy - Mrs Boland\n             e.   Voice/Positive Discussion/Productive Discourse - Mrs Haider\n             f.   The Room where it happens/presence\n             g.   Contribution - Ann",
+        "lines": [
+          {
+            "text": "April 15th, 2025",
+            "indent": 0,
+            "bullet_marker": null,
+            "body": "April 15th, 2025",
+            "checkbox": false
+          },
+          {
+            "text": "Glass Room",
+            "indent": 0,
+            "bullet_marker": null,
+            "body": "Glass Room",
+            "checkbox": false
+          },
+          {
+            "text": "Present: Ann, Elliot, Quinton, Mrs. Haider, Owen, Ms. Boland, James, Frankie, Hugo",
+            "indent": 0,
+            "bullet_marker": null,
+            "body": "Present: Ann, Elliot, Quinton, Mrs. Haider, Owen, Ms. Boland, James, Frankie, Hugo",
+            "checkbox": false
+          },
+          {
+            "text": "Absent: Evangeline, Sheree",
+            "indent": 0,
+            "bullet_marker": null,
+            "body": "Absent: Evangeline, Sheree",
+            "checkbox": false
+          },
+          {
+            "text": "1.   Welcome! Congrats!",
+            "indent": 4,
+            "bullet_marker": "1.",
+            "body": "Welcome! Congrats!",
+            "checkbox": false
+          },
+          {
+            "text": "a.   Shared what everyone’s excited about for VYMUN 2025!",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Shared what everyone’s excited about for VYMUN 2025!",
+            "checkbox": false
+          },
+          {
+            "text": "2.   Theme for VYMUN Sr. and Jr?",
+            "indent": 4,
+            "bullet_marker": "2.",
+            "body": "Theme for VYMUN Sr. and Jr?",
+            "checkbox": false
+          },
+          {
+            "text": "a.   Metamorphosis/Change - Quinton",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Metamorphosis/Change - Quinton",
+            "checkbox": false
+          },
+          {
+            "text": "b.   A new chapter/horizons - Mrs Haider",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "A new chapter/horizons - Mrs Haider",
+            "checkbox": false
+          },
+          {
+            "text": "c.   VYMUN new generation - Mrs Boland",
+            "indent": 13,
+            "bullet_marker": "c.",
+            "body": "VYMUN new generation - Mrs Boland",
+            "checkbox": false
+          },
+          {
+            "text": "d.   Fight for democracy - Mrs Boland",
+            "indent": 13,
+            "bullet_marker": "d.",
+            "body": "Fight for democracy - Mrs Boland",
+            "checkbox": false
+          },
+          {
+            "text": "e.   Voice/Positive Discussion/Productive Discourse - Mrs Haider",
+            "indent": 13,
+            "bullet_marker": "e.",
+            "body": "Voice/Positive Discussion/Productive Discourse - Mrs Haider",
+            "checkbox": false
+          },
+          {
+            "text": "f.   The Room where it happens/presence",
+            "indent": 13,
+            "bullet_marker": "f.",
+            "body": "The Room where it happens/presence",
+            "checkbox": false
+          },
+          {
+            "text": "g.   Contribution - Ann",
+            "indent": 13,
+            "bullet_marker": "g.",
+            "body": "Contribution - Ann",
+            "checkbox": false
+          }
+        ],
+        "page": 1
+      },
+      "lines": [
+        {
+          "text": "April 15th, 2025",
+          "indent": 0,
+          "bullet_marker": null,
+          "body": "April 15th, 2025",
+          "checkbox": false
+        },
+        {
+          "text": "Glass Room",
+          "indent": 0,
+          "bullet_marker": null,
+          "body": "Glass Room",
+          "checkbox": false
+        },
+        {
+          "text": "Present: Ann, Elliot, Quinton, Mrs. Haider, Owen, Ms. Boland, James, Frankie, Hugo",
+          "indent": 0,
+          "bullet_marker": null,
+          "body": "Present: Ann, Elliot, Quinton, Mrs. Haider, Owen, Ms. Boland, James, Frankie, Hugo",
+          "checkbox": false
+        },
+        {
+          "text": "Absent: Evangeline, Sheree",
+          "indent": 0,
+          "bullet_marker": null,
+          "body": "Absent: Evangeline, Sheree",
+          "checkbox": false
+        },
+        {
+          "text": "1.   Welcome! Congrats!",
+          "indent": 4,
+          "bullet_marker": "1.",
+          "body": "Welcome! Congrats!",
+          "checkbox": false
+        },
+        {
+          "text": "a.   Shared what everyone’s excited about for VYMUN 2025!",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Shared what everyone’s excited about for VYMUN 2025!",
+          "checkbox": false
+        },
+        {
+          "text": "2.   Theme for VYMUN Sr. and Jr?",
+          "indent": 4,
+          "bullet_marker": "2.",
+          "body": "Theme for VYMUN Sr. and Jr?",
+          "checkbox": false
+        },
+        {
+          "text": "a.   Metamorphosis/Change - Quinton",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Metamorphosis/Change - Quinton",
+          "checkbox": false
+        },
+        {
+          "text": "b.   A new chapter/horizons - Mrs Haider",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "A new chapter/horizons - Mrs Haider",
+          "checkbox": false
+        },
+        {
+          "text": "c.   VYMUN new generation - Mrs Boland",
+          "indent": 13,
+          "bullet_marker": "c.",
+          "body": "VYMUN new generation - Mrs Boland",
+          "checkbox": false
+        },
+        {
+          "text": "d.   Fight for democracy - Mrs Boland",
+          "indent": 13,
+          "bullet_marker": "d.",
+          "body": "Fight for democracy - Mrs Boland",
+          "checkbox": false
+        },
+        {
+          "text": "e.   Voice/Positive Discussion/Productive Discourse - Mrs Haider",
+          "indent": 13,
+          "bullet_marker": "e.",
+          "body": "Voice/Positive Discussion/Productive Discourse - Mrs Haider",
+          "checkbox": false
+        },
+        {
+          "text": "f.   The Room where it happens/presence",
+          "indent": 13,
+          "bullet_marker": "f.",
+          "body": "The Room where it happens/presence",
+          "checkbox": false
+        },
+        {
+          "text": "g.   Contribution - Ann",
+          "indent": 13,
+          "bullet_marker": "g.",
+          "body": "Contribution - Ann",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_6448cad81c690415",
+        "title": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_061342.pdf",
+        "updated_at": "2026-06-29T06:13:42.618948+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_6448cad81c690415_section_2",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_6448cad81c690415#section-2",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_6448cad81c690415",
+      "name": "Meeting_1__April_15th_2025_20260629_061342.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_6448cad81c690415",
+      "section_heading": "3.   Financials (Mrs. Haider)"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T06:13:42.618948+00:00",
+    "content": {
+      "text": "a.   Larger budget this year - may inﬂuence price for delegates\n             b.   We do not buy anything ourselves, go through Mrs Boland/Mrs Haider\n                     i.    Let them know if you have ideas\n    4.   Secretariat Roles & Job Descriptions.\n             a.       Secretariat Job Descriptions VYMUN 2025\n             b.   Feedback/questions about roles and responsibilities"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_6448cad81c690415#section-2",
+      "quote": "a.   Larger budget this year - may inﬂuence price for delegates\n             b.   We do not buy anything ourselves, go through Mrs Boland/Mrs Haider\n                     i.    Let them know if you have ideas\n    4.   Secretariat Roles & Job Descriptions.\n             a.       Secretariat Job Descriptions VYMUN 2025\n             b.   Feedback/questions about roles and responsibilities",
+      "workspace": "local_upload",
+      "document_id": "file_6448cad81c690415",
+      "document_title": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+      "section_heading": "3.   Financials (Mrs. Haider)",
+      "page": 1
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "3.   Financials (Mrs. Haider)",
+        "text": "a.   Larger budget this year - may inﬂuence price for delegates\n             b.   We do not buy anything ourselves, go through Mrs Boland/Mrs Haider\n                     i.    Let them know if you have ideas\n    4.   Secretariat Roles & Job Descriptions.\n             a.       Secretariat Job Descriptions VYMUN 2025\n             b.   Feedback/questions about roles and responsibilities",
+        "lines": [
+          {
+            "text": "a.   Larger budget this year - may inﬂuence price for delegates",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Larger budget this year - may inﬂuence price for delegates",
+            "checkbox": false
+          },
+          {
+            "text": "b.   We do not buy anything ourselves, go through Mrs Boland/Mrs Haider",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "We do not buy anything ourselves, go through Mrs Boland/Mrs Haider",
+            "checkbox": false
+          },
+          {
+            "text": "i.    Let them know if you have ideas",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Let them know if you have ideas",
+            "checkbox": false
+          },
+          {
+            "text": "4.   Secretariat Roles & Job Descriptions.",
+            "indent": 4,
+            "bullet_marker": "4.",
+            "body": "Secretariat Roles & Job Descriptions.",
+            "checkbox": false
+          },
+          {
+            "text": "a.       Secretariat Job Descriptions VYMUN 2025",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Secretariat Job Descriptions VYMUN 2025",
+            "checkbox": false
+          },
+          {
+            "text": "b.   Feedback/questions about roles and responsibilities",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "Feedback/questions about roles and responsibilities",
+            "checkbox": false
+          }
+        ],
+        "page": 1
+      },
+      "lines": [
+        {
+          "text": "a.   Larger budget this year - may inﬂuence price for delegates",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Larger budget this year - may inﬂuence price for delegates",
+          "checkbox": false
+        },
+        {
+          "text": "b.   We do not buy anything ourselves, go through Mrs Boland/Mrs Haider",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "We do not buy anything ourselves, go through Mrs Boland/Mrs Haider",
+          "checkbox": false
+        },
+        {
+          "text": "i.    Let them know if you have ideas",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Let them know if you have ideas",
+          "checkbox": false
+        },
+        {
+          "text": "4.   Secretariat Roles & Job Descriptions.",
+          "indent": 4,
+          "bullet_marker": "4.",
+          "body": "Secretariat Roles & Job Descriptions.",
+          "checkbox": false
+        },
+        {
+          "text": "a.       Secretariat Job Descriptions VYMUN 2025",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Secretariat Job Descriptions VYMUN 2025",
+          "checkbox": false
+        },
+        {
+          "text": "b.   Feedback/questions about roles and responsibilities",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "Feedback/questions about roles and responsibilities",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_6448cad81c690415",
+        "title": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_061342.pdf",
+        "updated_at": "2026-06-29T06:13:42.618948+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_6448cad81c690415_section_3",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_6448cad81c690415#section-3",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_6448cad81c690415",
+      "name": "Meeting_1__April_15th_2025_20260629_061342.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_6448cad81c690415",
+      "section_heading": "5.   Weekly Zoom meeting schedule"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T06:13:42.618948+00:00",
+    "content": {
+      "text": "i.    Deﬁnitely Not: Friday(Haider and Boland), Monday (Frankie),\n                           Thursday (Quinton)\n             b.   Tuesday at 7PM\n             c.   Backup: Thursday at 7PM\n             d.   Start April 28th\nConference: (24th - 26th)\n    -    Explore starting earlier on Friday (start at 10-11AM - Sec set up in morning)"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_6448cad81c690415#section-3",
+      "quote": "i.    Deﬁnitely Not: Friday(Haider and Boland), Monday (Frankie),\n                           Thursday (Quinton)\n             b.   Tuesday at 7PM\n             c.   Backup: Thursday at 7PM\n             d.   Start April 28th\nConference: (24th - 26th)\n    -    Explore starting earlier on Friday (start at 10-11AM - Sec set up in morning)",
+      "workspace": "local_upload",
+      "document_id": "file_6448cad81c690415",
+      "document_title": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+      "section_heading": "5.   Weekly Zoom meeting schedule",
+      "page": 1
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "5.   Weekly Zoom meeting schedule",
+        "text": "i.    Deﬁnitely Not: Friday(Haider and Boland), Monday (Frankie),\n                           Thursday (Quinton)\n             b.   Tuesday at 7PM\n             c.   Backup: Thursday at 7PM\n             d.   Start April 28th\nConference: (24th - 26th)\n    -    Explore starting earlier on Friday (start at 10-11AM - Sec set up in morning)",
+        "lines": [
+          {
+            "text": "i.    Deﬁnitely Not: Friday(Haider and Boland), Monday (Frankie),",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "Deﬁnitely Not: Friday(Haider and Boland), Monday (Frankie),",
+            "checkbox": false
+          },
+          {
+            "text": "Thursday (Quinton)",
+            "indent": 27,
+            "bullet_marker": null,
+            "body": "Thursday (Quinton)",
+            "checkbox": false
+          },
+          {
+            "text": "b.   Tuesday at 7PM",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "Tuesday at 7PM",
+            "checkbox": false
+          },
+          {
+            "text": "c.   Backup: Thursday at 7PM",
+            "indent": 13,
+            "bullet_marker": "c.",
+            "body": "Backup: Thursday at 7PM",
+            "checkbox": false
+          },
+          {
+            "text": "d.   Start April 28th",
+            "indent": 13,
+            "bullet_marker": "d.",
+            "body": "Start April 28th",
+            "checkbox": false
+          },
+          {
+            "text": "Conference: (24th - 26th)",
+            "indent": 0,
+            "bullet_marker": null,
+            "body": "Conference: (24th - 26th)",
+            "checkbox": false
+          },
+          {
+            "text": "-    Explore starting earlier on Friday (start at 10-11AM - Sec set up in morning)",
+            "indent": 4,
+            "bullet_marker": "-",
+            "body": "Explore starting earlier on Friday (start at 10-11AM - Sec set up in morning)",
+            "checkbox": false
+          }
+        ],
+        "page": 1
+      },
+      "lines": [
+        {
+          "text": "i.    Deﬁnitely Not: Friday(Haider and Boland), Monday (Frankie),",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "Deﬁnitely Not: Friday(Haider and Boland), Monday (Frankie),",
+          "checkbox": false
+        },
+        {
+          "text": "Thursday (Quinton)",
+          "indent": 27,
+          "bullet_marker": null,
+          "body": "Thursday (Quinton)",
+          "checkbox": false
+        },
+        {
+          "text": "b.   Tuesday at 7PM",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "Tuesday at 7PM",
+          "checkbox": false
+        },
+        {
+          "text": "c.   Backup: Thursday at 7PM",
+          "indent": 13,
+          "bullet_marker": "c.",
+          "body": "Backup: Thursday at 7PM",
+          "checkbox": false
+        },
+        {
+          "text": "d.   Start April 28th",
+          "indent": 13,
+          "bullet_marker": "d.",
+          "body": "Start April 28th",
+          "checkbox": false
+        },
+        {
+          "text": "Conference: (24th - 26th)",
+          "indent": 0,
+          "bullet_marker": null,
+          "body": "Conference: (24th - 26th)",
+          "checkbox": false
+        },
+        {
+          "text": "-    Explore starting earlier on Friday (start at 10-11AM - Sec set up in morning)",
+          "indent": 4,
+          "bullet_marker": "-",
+          "body": "Explore starting earlier on Friday (start at 10-11AM - Sec set up in morning)",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_6448cad81c690415",
+        "title": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_061342.pdf",
+        "updated_at": "2026-06-29T06:13:42.618948+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_6448cad81c690415_section_4",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_6448cad81c690415#section-4",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_6448cad81c690415",
+      "name": "Meeting_1__April_15th_2025_20260629_061342.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_6448cad81c690415",
+      "section_heading": "6.   Staﬀ hiring"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T06:13:42.618948+00:00",
+    "content": {
+      "text": "a.   Process\n                     i.    James has old form, Ann has old poster\n                    ii.    Put in DAs\n                   iii.    One application for both Sr and Jr\n                               1.   Open Jr up to younger applicants for Chair/AD positions\n                               2.   Experienced MUNers\n                               3.   Write on form more info about Jr and Sr so they are more\n                                    educated to make a decision\n             b.   Deadlines\n                     i.    May 2nd - Application Deadline\n             c.   Advertising: Email to MUN club, DA’s, The Howl"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_6448cad81c690415#section-4",
+      "quote": "a.   Process\n                     i.    James has old form, Ann has old poster\n                    ii.    Put in DAs\n                   iii.    One application for both Sr and Jr\n                               1.   Open Jr up to younger applicants for Chair/AD positions\n                               2.   Experienced MUNers\n                               3.   Write on form more info about Jr and Sr so they are more\n                                    educated to make a decision\n             b.   Deadlines\n                     i.    May 2nd - Application Deadline\n             c.   Advertising: Email to MUN club, DA’s, The Howl",
+      "workspace": "local_upload",
+      "document_id": "file_6448cad81c690415",
+      "document_title": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+      "section_heading": "6.   Staﬀ hiring",
+      "page": 1
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "6.   Staﬀ hiring",
+        "text": "a.   Process\n                     i.    James has old form, Ann has old poster\n                    ii.    Put in DAs\n                   iii.    One application for both Sr and Jr\n                               1.   Open Jr up to younger applicants for Chair/AD positions\n                               2.   Experienced MUNers\n                               3.   Write on form more info about Jr and Sr so they are more\n                                    educated to make a decision\n             b.   Deadlines\n                     i.    May 2nd - Application Deadline\n             c.   Advertising: Email to MUN club, DA’s, The Howl",
+        "lines": [
+          {
+            "text": "a.   Process",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Process",
+            "checkbox": false
+          },
+          {
+            "text": "i.    James has old form, Ann has old poster",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "James has old form, Ann has old poster",
+            "checkbox": false
+          },
+          {
+            "text": "ii.    Put in DAs",
+            "indent": 20,
+            "bullet_marker": "ii.",
+            "body": "Put in DAs",
+            "checkbox": false
+          },
+          {
+            "text": "iii.    One application for both Sr and Jr",
+            "indent": 19,
+            "bullet_marker": "iii.",
+            "body": "One application for both Sr and Jr",
+            "checkbox": false
+          },
+          {
+            "text": "1.   Open Jr up to younger applicants for Chair/AD positions",
+            "indent": 31,
+            "bullet_marker": "1.",
+            "body": "Open Jr up to younger applicants for Chair/AD positions",
+            "checkbox": false
+          },
+          {
+            "text": "2.   Experienced MUNers",
+            "indent": 31,
+            "bullet_marker": "2.",
+            "body": "Experienced MUNers",
+            "checkbox": false
+          },
+          {
+            "text": "3.   Write on form more info about Jr and Sr so they are more",
+            "indent": 31,
+            "bullet_marker": "3.",
+            "body": "Write on form more info about Jr and Sr so they are more",
+            "checkbox": false
+          },
+          {
+            "text": "educated to make a decision",
+            "indent": 36,
+            "bullet_marker": null,
+            "body": "educated to make a decision",
+            "checkbox": false
+          },
+          {
+            "text": "b.   Deadlines",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "Deadlines",
+            "checkbox": false
+          },
+          {
+            "text": "i.    May 2nd - Application Deadline",
+            "indent": 21,
+            "bullet_marker": "i.",
+            "body": "May 2nd - Application Deadline",
+            "checkbox": false
+          },
+          {
+            "text": "c.   Advertising: Email to MUN club, DA’s, The Howl",
+            "indent": 13,
+            "bullet_marker": "c.",
+            "body": "Advertising: Email to MUN club, DA’s, The Howl",
+            "checkbox": false
+          }
+        ],
+        "page": 1
+      },
+      "lines": [
+        {
+          "text": "a.   Process",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Process",
+          "checkbox": false
+        },
+        {
+          "text": "i.    James has old form, Ann has old poster",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "James has old form, Ann has old poster",
+          "checkbox": false
+        },
+        {
+          "text": "ii.    Put in DAs",
+          "indent": 20,
+          "bullet_marker": "ii.",
+          "body": "Put in DAs",
+          "checkbox": false
+        },
+        {
+          "text": "iii.    One application for both Sr and Jr",
+          "indent": 19,
+          "bullet_marker": "iii.",
+          "body": "One application for both Sr and Jr",
+          "checkbox": false
+        },
+        {
+          "text": "1.   Open Jr up to younger applicants for Chair/AD positions",
+          "indent": 31,
+          "bullet_marker": "1.",
+          "body": "Open Jr up to younger applicants for Chair/AD positions",
+          "checkbox": false
+        },
+        {
+          "text": "2.   Experienced MUNers",
+          "indent": 31,
+          "bullet_marker": "2.",
+          "body": "Experienced MUNers",
+          "checkbox": false
+        },
+        {
+          "text": "3.   Write on form more info about Jr and Sr so they are more",
+          "indent": 31,
+          "bullet_marker": "3.",
+          "body": "Write on form more info about Jr and Sr so they are more",
+          "checkbox": false
+        },
+        {
+          "text": "educated to make a decision",
+          "indent": 36,
+          "bullet_marker": null,
+          "body": "educated to make a decision",
+          "checkbox": false
+        },
+        {
+          "text": "b.   Deadlines",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "Deadlines",
+          "checkbox": false
+        },
+        {
+          "text": "i.    May 2nd - Application Deadline",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "body": "May 2nd - Application Deadline",
+          "checkbox": false
+        },
+        {
+          "text": "c.   Advertising: Email to MUN club, DA’s, The Howl",
+          "indent": 13,
+          "bullet_marker": "c.",
+          "body": "Advertising: Email to MUN club, DA’s, The Howl",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_6448cad81c690415",
+        "title": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_061342.pdf",
+        "updated_at": "2026-06-29T06:13:42.618948+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_6448cad81c690415_section_5",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_6448cad81c690415#section-5",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_6448cad81c690415",
+      "name": "Meeting_1__April_15th_2025_20260629_061342.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_6448cad81c690415",
+      "section_heading": "7.   Media"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T06:13:42.618948+00:00",
+    "content": {
+      "text": "a.   Website\n             b.   Instagram"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_6448cad81c690415#section-5",
+      "quote": "a.   Website\n             b.   Instagram",
+      "workspace": "local_upload",
+      "document_id": "file_6448cad81c690415",
+      "document_title": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+      "section_heading": "7.   Media",
+      "page": 2
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "7.   Media",
+        "text": "a.   Website\n             b.   Instagram",
+        "lines": [
+          {
+            "text": "a.   Website",
+            "indent": 13,
+            "bullet_marker": "a.",
+            "body": "Website",
+            "checkbox": false
+          },
+          {
+            "text": "b.   Instagram",
+            "indent": 13,
+            "bullet_marker": "b.",
+            "body": "Instagram",
+            "checkbox": false
+          }
+        ],
+        "page": 2
+      },
+      "lines": [
+        {
+          "text": "a.   Website",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "body": "Website",
+          "checkbox": false
+        },
+        {
+          "text": "b.   Instagram",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "body": "Instagram",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_6448cad81c690415",
+        "title": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_061342.pdf",
+        "updated_at": "2026-06-29T06:13:42.618948+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_6448cad81c690415_section_6",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_6448cad81c690415#section-6",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_6448cad81c690415",
+      "name": "Meeting_1__April_15th_2025_20260629_061342.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_6448cad81c690415",
+      "section_heading": "Action Items"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T06:13:42.618948+00:00",
+    "content": {
+      "text": "James Wang        Edit the staﬀ application form, put onto DA/Howl\n                  Include USG of Crisis and Media (Rest of crisis/media can be separate)\n         Frances Nakhuda        Poll/email teachers if they would be willing to start at\n         12:00pm/welcome email\n         Hugo Chung        Evangeline Zixuan Lin       meet + talk about vymun jr vision (e.g. staﬀing)\n                  Slide deck to present to Junior School before the end of the school year\n         Zi Kun Meng      Brainstorming ideas"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_6448cad81c690415#section-6",
+      "quote": "James Wang        Edit the staﬀ application form, put onto DA/Howl\n                  Include USG of Crisis and Media (Rest of crisis/media can be separate)\n         Frances Nakhuda        Poll/email teachers if they would be willing to start at\n         12:00pm/welcome email\n         Hugo Chung        Evangeline Zixuan Lin       meet + talk about vymun jr vision (e.g. staﬀing)\n                  Slide deck to present to Junior School before the end of the school year\n         Zi Kun Meng      Brainstorming ideas",
+      "workspace": "local_upload",
+      "document_id": "file_6448cad81c690415",
+      "document_title": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+      "section_heading": "Action Items",
+      "page": 2
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "Action Items",
+        "text": "James Wang        Edit the staﬀ application form, put onto DA/Howl\n                  Include USG of Crisis and Media (Rest of crisis/media can be separate)\n         Frances Nakhuda        Poll/email teachers if they would be willing to start at\n         12:00pm/welcome email\n         Hugo Chung        Evangeline Zixuan Lin       meet + talk about vymun jr vision (e.g. staﬀing)\n                  Slide deck to present to Junior School before the end of the school year\n         Zi Kun Meng      Brainstorming ideas",
+        "lines": [
+          {
+            "text": "James Wang        Edit the staﬀ application form, put onto DA/Howl",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "James Wang        Edit the staﬀ application form, put onto DA/Howl",
+            "checkbox": false
+          },
+          {
+            "text": "Include USG of Crisis and Media (Rest of crisis/media can be separate)",
+            "indent": 18,
+            "bullet_marker": null,
+            "body": "Include USG of Crisis and Media (Rest of crisis/media can be separate)",
+            "checkbox": false
+          },
+          {
+            "text": "Frances Nakhuda        Poll/email teachers if they would be willing to start at",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Frances Nakhuda        Poll/email teachers if they would be willing to start at",
+            "checkbox": false
+          },
+          {
+            "text": "12:00pm/welcome email",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "12:00pm/welcome email",
+            "checkbox": false
+          },
+          {
+            "text": "Hugo Chung        Evangeline Zixuan Lin       meet + talk about vymun jr vision (e.g. staﬀing)",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Hugo Chung        Evangeline Zixuan Lin       meet + talk about vymun jr vision (e.g. staﬀing)",
+            "checkbox": false
+          },
+          {
+            "text": "Slide deck to present to Junior School before the end of the school year",
+            "indent": 18,
+            "bullet_marker": null,
+            "body": "Slide deck to present to Junior School before the end of the school year",
+            "checkbox": false
+          },
+          {
+            "text": "Zi Kun Meng      Brainstorming ideas",
+            "indent": 9,
+            "bullet_marker": null,
+            "body": "Zi Kun Meng      Brainstorming ideas",
+            "checkbox": false
+          }
+        ],
+        "page": 2
+      },
+      "lines": [
+        {
+          "text": "James Wang        Edit the staﬀ application form, put onto DA/Howl",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "James Wang        Edit the staﬀ application form, put onto DA/Howl",
+          "checkbox": false
+        },
+        {
+          "text": "Include USG of Crisis and Media (Rest of crisis/media can be separate)",
+          "indent": 18,
+          "bullet_marker": null,
+          "body": "Include USG of Crisis and Media (Rest of crisis/media can be separate)",
+          "checkbox": false
+        },
+        {
+          "text": "Frances Nakhuda        Poll/email teachers if they would be willing to start at",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Frances Nakhuda        Poll/email teachers if they would be willing to start at",
+          "checkbox": false
+        },
+        {
+          "text": "12:00pm/welcome email",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "12:00pm/welcome email",
+          "checkbox": false
+        },
+        {
+          "text": "Hugo Chung        Evangeline Zixuan Lin       meet + talk about vymun jr vision (e.g. staﬀing)",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Hugo Chung        Evangeline Zixuan Lin       meet + talk about vymun jr vision (e.g. staﬀing)",
+          "checkbox": false
+        },
+        {
+          "text": "Slide deck to present to Junior School before the end of the school year",
+          "indent": 18,
+          "bullet_marker": null,
+          "body": "Slide deck to present to Junior School before the end of the school year",
+          "checkbox": false
+        },
+        {
+          "text": "Zi Kun Meng      Brainstorming ideas",
+          "indent": 9,
+          "bullet_marker": null,
+          "body": "Zi Kun Meng      Brainstorming ideas",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_6448cad81c690415",
+        "title": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_061342.pdf",
+        "updated_at": "2026-06-29T06:13:42.618948+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_6448cad81c690415_section_7",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_6448cad81c690415#section-7",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_6448cad81c690415",
+      "name": "Meeting_1__April_15th_2025_20260629_061342.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_6448cad81c690415",
+      "section_heading": "Changes"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T06:13:42.618948+00:00",
+    "content": {
+      "text": "-    Some committees may need three topics"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_6448cad81c690415#section-7",
+      "quote": "-    Some committees may need three topics",
+      "workspace": "local_upload",
+      "document_id": "file_6448cad81c690415",
+      "document_title": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+      "section_heading": "Changes",
+      "page": 2
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "Changes",
+        "text": "-    Some committees may need three topics",
+        "lines": [
+          {
+            "text": "-    Some committees may need three topics",
+            "indent": 4,
+            "bullet_marker": "-",
+            "body": "Some committees may need three topics",
+            "checkbox": false
+          }
+        ],
+        "page": 2
+      },
+      "lines": [
+        {
+          "text": "-    Some committees may need three topics",
+          "indent": 4,
+          "bullet_marker": "-",
+          "body": "Some committees may need three topics",
+          "checkbox": false
+        }
+      ],
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_6448cad81c690415",
+        "title": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_061342.pdf",
+        "updated_at": "2026-06-29T06:13:42.618948+00:00"
+      }
+    }
+  }
+]

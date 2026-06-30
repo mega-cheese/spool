@@ -1,0 +1,410 @@
+[
+  {
+    "candidate_id": "candidate_dec_0d1b347273eb",
+    "proposed_action": "Weekly Zoom meetings will be Tuesday at 7PM.",
+    "normalized_action": "weekly zoom meetings will be tuesday at 7pm",
+    "state": "confirmed",
+    "confidence": 0.9,
+    "source_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_3"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_3"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_3"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Weekly Zoom meetings will be Tuesday at 7PM.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_3"
+        ],
+        "support_level": "direct",
+        "confidence": 0.9,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_3"
+        ],
+        "confidence": 0.9,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_3"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_3dc679f245ea",
+    "proposed_action": "Thursday at 7PM is the backup meeting time.",
+    "normalized_action": "thursday at 7pm is backup meeting time",
+    "state": "confirmed",
+    "confidence": 0.9,
+    "source_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_3"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_3"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_3"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Thursday at 7PM is the backup meeting time.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_3"
+        ],
+        "support_level": "direct",
+        "confidence": 0.9,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_3"
+        ],
+        "confidence": 0.9,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_3"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_7e94b9e06e9f",
+    "proposed_action": "Weekly Zoom meetings start April 28th.",
+    "normalized_action": "weekly zoom meetings start april 28th",
+    "state": "confirmed",
+    "confidence": 0.9,
+    "source_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_3"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_3"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_3"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Weekly Zoom meetings start April 28th.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_3"
+        ],
+        "support_level": "direct",
+        "confidence": 0.9,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_3"
+        ],
+        "confidence": 0.9,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_3"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_023a19a80b26",
+    "proposed_action": "Staff application deadline is May 2nd.",
+    "normalized_action": "staff application deadline is may 2nd",
+    "state": "confirmed",
+    "confidence": 0.9,
+    "source_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_4"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_4"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_4"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Staff application deadline is May 2nd.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_4"
+        ],
+        "support_level": "direct",
+        "confidence": 0.9,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_4"
+        ],
+        "confidence": 0.9,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_4"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_a228f26e444d",
+    "proposed_action": "There will be one application for both Sr. and Jr.",
+    "normalized_action": "there will be one application both sr jr",
+    "state": "confirmed",
+    "confidence": 0.9,
+    "source_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_4"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_4"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_4"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "There will be one application for both Sr. and Jr.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_4"
+        ],
+        "support_level": "direct",
+        "confidence": 0.9,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_4"
+        ],
+        "confidence": 0.9,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_4"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_87750591ce35",
+    "proposed_action": "Jr. positions should be opened to younger applicants for Chair/AD roles.",
+    "normalized_action": "jr positions should be opened younger applicants chair ad roles",
+    "state": "confirmed",
+    "confidence": 0.9,
+    "source_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_4"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_4"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_4"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Jr. positions should be opened to younger applicants for Chair/AD roles.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_4"
+        ],
+        "support_level": "direct",
+        "confidence": 0.9,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_4"
+        ],
+        "confidence": 0.9,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_4"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_e81233d258e3",
+    "proposed_action": "Purchases should go through Mrs. Boland / Mrs. Haider rather than being bought individually.",
+    "normalized_action": "purchases should go through mrs boland mrs haider rather than being bought individually",
+    "state": "confirmed",
+    "confidence": 0.9,
+    "source_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_2"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_2"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_2"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Purchases should go through Mrs. Boland / Mrs. Haider rather than being bought individually.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_2"
+        ],
+        "support_level": "direct",
+        "confidence": 0.9,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_2"
+        ],
+        "confidence": 0.9,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_2"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_5f470865bf0b",
+    "proposed_action": "Some committees may need three topics.",
+    "normalized_action": "some committees may need three topics",
+    "state": "confirmed",
+    "confidence": 0.72,
+    "source_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_7"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_7"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "uploaded_document_file_6448cad81c690415_section_7"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Some committees may need three topics.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_7"
+        ],
+        "support_level": "direct",
+        "confidence": 0.72,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_7"
+        ],
+        "confidence": 0.72,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_6448cad81c690415_section_7"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  }
+]

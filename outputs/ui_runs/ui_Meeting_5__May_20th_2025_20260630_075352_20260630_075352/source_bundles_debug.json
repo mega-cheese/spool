@@ -1,0 +1,945 @@
+[
+  {
+    "bundle_id": "document_local_upload_file_dfc0cceebce2664c",
+    "bundle_type": "document",
+    "source_types": [
+      "uploaded_document"
+    ],
+    "root_id": "file_dfc0cceebce2664c",
+    "title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+    "time_range": {
+      "start": null,
+      "end": "2026-06-30T07:53:52.817369+00:00"
+    },
+    "events": [
+      {
+        "event_id": "uploaded_document_file_dfc0cceebce2664c_section_1",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_dfc0cceebce2664c#section-1",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_dfc0cceebce2664c",
+          "name": "Meeting_5__May_20th_2025_20260630_075352.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_dfc0cceebce2664c",
+          "section_heading": "Document"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:53:52.817369+00:00",
+        "content": {
+          "text": "May 20th, 2025\n\nZoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_dfc0cceebce2664c#section-1",
+          "quote": "May 20th, 2025\n\nZoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+          "section_heading": "Document",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "Document",
+            "text": "May 20th, 2025\n\nZoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+            "lines": [
+              {
+                "text": "May 20th, 2025",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "May 20th, 2025",
+                "checkbox": false
+              },
+              {
+                "text": "Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "May 20th, 2025",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "May 20th, 2025",
+              "checkbox": false
+            },
+            {
+              "text": "Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_dfc0cceebce2664c",
+            "title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "updated_at": "2026-06-30T07:53:52.817369+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_dfc0cceebce2664c_section_2",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_dfc0cceebce2664c#section-2",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_dfc0cceebce2664c",
+          "name": "Meeting_5__May_20th_2025_20260630_075352.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_dfc0cceebce2664c",
+          "section_heading": "1.   SECRETARIAT BIOS - EVANGELINE"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:53:52.817369+00:00",
+        "content": {
+          "text": "a.   Quinton Done\n    2.   Yapp?\n             a.   Online, good place to communicate with various groups of people\n             b.   Use as a forum\n             c.   Can have all delegates in a chat for an update\n                     i.    Need to touch on social media etiquette"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_dfc0cceebce2664c#section-2",
+          "quote": "a.   Quinton Done\n    2.   Yapp?\n             a.   Online, good place to communicate with various groups of people\n             b.   Use as a forum\n             c.   Can have all delegates in a chat for an update\n                     i.    Need to touch on social media etiquette",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+          "section_heading": "1.   SECRETARIAT BIOS - EVANGELINE",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "1.   SECRETARIAT BIOS - EVANGELINE",
+            "text": "a.   Quinton Done\n    2.   Yapp?\n             a.   Online, good place to communicate with various groups of people\n             b.   Use as a forum\n             c.   Can have all delegates in a chat for an update\n                     i.    Need to touch on social media etiquette",
+            "lines": [
+              {
+                "text": "a.   Quinton Done",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "Quinton Done",
+                "checkbox": false
+              },
+              {
+                "text": "2.   Yapp?",
+                "indent": 4,
+                "bullet_marker": "2.",
+                "body": "Yapp?",
+                "checkbox": false
+              },
+              {
+                "text": "a.   Online, good place to communicate with various groups of people",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "Online, good place to communicate with various groups of people",
+                "checkbox": false
+              },
+              {
+                "text": "b.   Use as a forum",
+                "indent": 13,
+                "bullet_marker": "b.",
+                "body": "Use as a forum",
+                "checkbox": false
+              },
+              {
+                "text": "c.   Can have all delegates in a chat for an update",
+                "indent": 13,
+                "bullet_marker": "c.",
+                "body": "Can have all delegates in a chat for an update",
+                "checkbox": false
+              },
+              {
+                "text": "i.    Need to touch on social media etiquette",
+                "indent": 21,
+                "bullet_marker": "i.",
+                "body": "Need to touch on social media etiquette",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "a.   Quinton Done",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "Quinton Done",
+              "checkbox": false
+            },
+            {
+              "text": "2.   Yapp?",
+              "indent": 4,
+              "bullet_marker": "2.",
+              "body": "Yapp?",
+              "checkbox": false
+            },
+            {
+              "text": "a.   Online, good place to communicate with various groups of people",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "Online, good place to communicate with various groups of people",
+              "checkbox": false
+            },
+            {
+              "text": "b.   Use as a forum",
+              "indent": 13,
+              "bullet_marker": "b.",
+              "body": "Use as a forum",
+              "checkbox": false
+            },
+            {
+              "text": "c.   Can have all delegates in a chat for an update",
+              "indent": 13,
+              "bullet_marker": "c.",
+              "body": "Can have all delegates in a chat for an update",
+              "checkbox": false
+            },
+            {
+              "text": "i.    Need to touch on social media etiquette",
+              "indent": 21,
+              "bullet_marker": "i.",
+              "body": "Need to touch on social media etiquette",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_dfc0cceebce2664c",
+            "title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "updated_at": "2026-06-30T07:53:52.817369+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_dfc0cceebce2664c_section_3",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_dfc0cceebce2664c#section-3",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_dfc0cceebce2664c",
+          "name": "Meeting_5__May_20th_2025_20260630_075352.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_dfc0cceebce2664c",
+          "section_heading": "3.   Registration Links for UBC VYMUN - Mrs. Haider"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:53:52.817369+00:00",
+        "content": {
+          "text": "4.   Owen - email update?\n             a.   https://my.yapp.us/VYMUN\n             b.   No chance yet\n    5.   Director emails?\n             a.   Set these up later, Mrs Haider happy to have them\n             b.   Send position papers to these emails directly"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_dfc0cceebce2664c#section-3",
+          "quote": "4.   Owen - email update?\n             a.   https://my.yapp.us/VYMUN\n             b.   No chance yet\n    5.   Director emails?\n             a.   Set these up later, Mrs Haider happy to have them\n             b.   Send position papers to these emails directly",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+          "section_heading": "3.   Registration Links for UBC VYMUN - Mrs. Haider",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "3.   Registration Links for UBC VYMUN - Mrs. Haider",
+            "text": "4.   Owen - email update?\n             a.   https://my.yapp.us/VYMUN\n             b.   No chance yet\n    5.   Director emails?\n             a.   Set these up later, Mrs Haider happy to have them\n             b.   Send position papers to these emails directly",
+            "lines": [
+              {
+                "text": "4.   Owen - email update?",
+                "indent": 4,
+                "bullet_marker": "4.",
+                "body": "Owen - email update?",
+                "checkbox": false
+              },
+              {
+                "text": "a.   https://my.yapp.us/VYMUN",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "https://my.yapp.us/VYMUN",
+                "checkbox": false
+              },
+              {
+                "text": "b.   No chance yet",
+                "indent": 13,
+                "bullet_marker": "b.",
+                "body": "No chance yet",
+                "checkbox": false
+              },
+              {
+                "text": "5.   Director emails?",
+                "indent": 4,
+                "bullet_marker": "5.",
+                "body": "Director emails?",
+                "checkbox": false
+              },
+              {
+                "text": "a.   Set these up later, Mrs Haider happy to have them",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "Set these up later, Mrs Haider happy to have them",
+                "checkbox": false
+              },
+              {
+                "text": "b.   Send position papers to these emails directly",
+                "indent": 13,
+                "bullet_marker": "b.",
+                "body": "Send position papers to these emails directly",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "4.   Owen - email update?",
+              "indent": 4,
+              "bullet_marker": "4.",
+              "body": "Owen - email update?",
+              "checkbox": false
+            },
+            {
+              "text": "a.   https://my.yapp.us/VYMUN",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "https://my.yapp.us/VYMUN",
+              "checkbox": false
+            },
+            {
+              "text": "b.   No chance yet",
+              "indent": 13,
+              "bullet_marker": "b.",
+              "body": "No chance yet",
+              "checkbox": false
+            },
+            {
+              "text": "5.   Director emails?",
+              "indent": 4,
+              "bullet_marker": "5.",
+              "body": "Director emails?",
+              "checkbox": false
+            },
+            {
+              "text": "a.   Set these up later, Mrs Haider happy to have them",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "Set these up later, Mrs Haider happy to have them",
+              "checkbox": false
+            },
+            {
+              "text": "b.   Send position papers to these emails directly",
+              "indent": 13,
+              "bullet_marker": "b.",
+              "body": "Send position papers to these emails directly",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_dfc0cceebce2664c",
+            "title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "updated_at": "2026-06-30T07:53:52.817369+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_dfc0cceebce2664c_section_4",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_dfc0cceebce2664c#section-4",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_dfc0cceebce2664c",
+          "name": "Meeting_5__May_20th_2025_20260630_075352.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_dfc0cceebce2664c",
+          "section_heading": "6.   Director meeting - to determine topics"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:53:52.817369+00:00",
+        "content": {
+          "text": "a.   Need to contact Nate Levy\n             b.   Raeann for IPC director"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_dfc0cceebce2664c#section-4",
+          "quote": "a.   Need to contact Nate Levy\n             b.   Raeann for IPC director",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+          "section_heading": "6.   Director meeting - to determine topics",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "6.   Director meeting - to determine topics",
+            "text": "a.   Need to contact Nate Levy\n             b.   Raeann for IPC director",
+            "lines": [
+              {
+                "text": "a.   Need to contact Nate Levy",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "Need to contact Nate Levy",
+                "checkbox": false
+              },
+              {
+                "text": "b.   Raeann for IPC director",
+                "indent": 13,
+                "bullet_marker": "b.",
+                "body": "Raeann for IPC director",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "a.   Need to contact Nate Levy",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "Need to contact Nate Levy",
+              "checkbox": false
+            },
+            {
+              "text": "b.   Raeann for IPC director",
+              "indent": 13,
+              "bullet_marker": "b.",
+              "body": "Raeann for IPC director",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_dfc0cceebce2664c",
+            "title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "updated_at": "2026-06-30T07:53:52.817369+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_dfc0cceebce2664c_section_5",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_dfc0cceebce2664c#section-5",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_dfc0cceebce2664c",
+          "name": "Meeting_5__May_20th_2025_20260630_075352.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_dfc0cceebce2664c",
+          "section_heading": "7.   Keynote speaker"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:53:52.817369+00:00",
+        "content": {
+          "text": "a.   No new updates\n             b.   Not urgent so we’ll stay tuned\n             c.   Tentative yes - interested"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_dfc0cceebce2664c#section-5",
+          "quote": "a.   No new updates\n             b.   Not urgent so we’ll stay tuned\n             c.   Tentative yes - interested",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+          "section_heading": "7.   Keynote speaker",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "7.   Keynote speaker",
+            "text": "a.   No new updates\n             b.   Not urgent so we’ll stay tuned\n             c.   Tentative yes - interested",
+            "lines": [
+              {
+                "text": "a.   No new updates",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "No new updates",
+                "checkbox": false
+              },
+              {
+                "text": "b.   Not urgent so we’ll stay tuned",
+                "indent": 13,
+                "bullet_marker": "b.",
+                "body": "Not urgent so we’ll stay tuned",
+                "checkbox": false
+              },
+              {
+                "text": "c.   Tentative yes - interested",
+                "indent": 13,
+                "bullet_marker": "c.",
+                "body": "Tentative yes - interested",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "a.   No new updates",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "No new updates",
+              "checkbox": false
+            },
+            {
+              "text": "b.   Not urgent so we’ll stay tuned",
+              "indent": 13,
+              "bullet_marker": "b.",
+              "body": "Not urgent so we’ll stay tuned",
+              "checkbox": false
+            },
+            {
+              "text": "c.   Tentative yes - interested",
+              "indent": 13,
+              "bullet_marker": "c.",
+              "body": "Tentative yes - interested",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_dfc0cceebce2664c",
+            "title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "updated_at": "2026-06-30T07:53:52.817369+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_dfc0cceebce2664c_section_6",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_dfc0cceebce2664c#section-6",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_dfc0cceebce2664c",
+          "name": "Meeting_5__May_20th_2025_20260630_075352.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_dfc0cceebce2664c",
+          "section_heading": "8.   Frankie to send out website updates"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:53:52.817369+00:00",
+        "content": {
+          "text": "a.   Massive message saying website is updated\n             b.   On instagram\n             c.   Once reg link up and running"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_dfc0cceebce2664c#section-6",
+          "quote": "a.   Massive message saying website is updated\n             b.   On instagram\n             c.   Once reg link up and running",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+          "section_heading": "8.   Frankie to send out website updates",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "8.   Frankie to send out website updates",
+            "text": "a.   Massive message saying website is updated\n             b.   On instagram\n             c.   Once reg link up and running",
+            "lines": [
+              {
+                "text": "a.   Massive message saying website is updated",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "Massive message saying website is updated",
+                "checkbox": false
+              },
+              {
+                "text": "b.   On instagram",
+                "indent": 13,
+                "bullet_marker": "b.",
+                "body": "On instagram",
+                "checkbox": false
+              },
+              {
+                "text": "c.   Once reg link up and running",
+                "indent": 13,
+                "bullet_marker": "c.",
+                "body": "Once reg link up and running",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "a.   Massive message saying website is updated",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "Massive message saying website is updated",
+              "checkbox": false
+            },
+            {
+              "text": "b.   On instagram",
+              "indent": 13,
+              "bullet_marker": "b.",
+              "body": "On instagram",
+              "checkbox": false
+            },
+            {
+              "text": "c.   Once reg link up and running",
+              "indent": 13,
+              "bullet_marker": "c.",
+              "body": "Once reg link up and running",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_dfc0cceebce2664c",
+            "title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "updated_at": "2026-06-30T07:53:52.817369+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_dfc0cceebce2664c_section_7",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_dfc0cceebce2664c#section-7",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_dfc0cceebce2664c",
+          "name": "Meeting_5__May_20th_2025_20260630_075352.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_dfc0cceebce2664c",
+          "section_heading": "9.   Junior zoom meeting"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:53:52.817369+00:00",
+        "content": {
+          "text": "a.   First week of zoom\n    -    Lots of delegates registered for VYMUN Junior\n             -    Momentum\n             -    Evangeline email St Georges?\n             -    Parent zoom meeting for junior school?\n    -    One more visit to the junior school"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_dfc0cceebce2664c#section-7",
+          "quote": "a.   First week of zoom\n    -    Lots of delegates registered for VYMUN Junior\n             -    Momentum\n             -    Evangeline email St Georges?\n             -    Parent zoom meeting for junior school?\n    -    One more visit to the junior school",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+          "section_heading": "9.   Junior zoom meeting",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "9.   Junior zoom meeting",
+            "text": "a.   First week of zoom\n    -    Lots of delegates registered for VYMUN Junior\n             -    Momentum\n             -    Evangeline email St Georges?\n             -    Parent zoom meeting for junior school?\n    -    One more visit to the junior school",
+            "lines": [
+              {
+                "text": "a.   First week of zoom",
+                "indent": 13,
+                "bullet_marker": "a.",
+                "body": "First week of zoom",
+                "checkbox": false
+              },
+              {
+                "text": "-    Lots of delegates registered for VYMUN Junior",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Lots of delegates registered for VYMUN Junior",
+                "checkbox": false
+              },
+              {
+                "text": "-    Momentum",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Momentum",
+                "checkbox": false
+              },
+              {
+                "text": "-    Evangeline email St Georges?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Evangeline email St Georges?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Parent zoom meeting for junior school?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Parent zoom meeting for junior school?",
+                "checkbox": false
+              },
+              {
+                "text": "-    One more visit to the junior school",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "One more visit to the junior school",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "a.   First week of zoom",
+              "indent": 13,
+              "bullet_marker": "a.",
+              "body": "First week of zoom",
+              "checkbox": false
+            },
+            {
+              "text": "-    Lots of delegates registered for VYMUN Junior",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Lots of delegates registered for VYMUN Junior",
+              "checkbox": false
+            },
+            {
+              "text": "-    Momentum",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Momentum",
+              "checkbox": false
+            },
+            {
+              "text": "-    Evangeline email St Georges?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Evangeline email St Georges?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Parent zoom meeting for junior school?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Parent zoom meeting for junior school?",
+              "checkbox": false
+            },
+            {
+              "text": "-    One more visit to the junior school",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "One more visit to the junior school",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_dfc0cceebce2664c",
+            "title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "updated_at": "2026-06-30T07:53:52.817369+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_dfc0cceebce2664c_section_8",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_dfc0cceebce2664c#section-8",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_dfc0cceebce2664c",
+          "name": "Meeting_5__May_20th_2025_20260630_075352.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_dfc0cceebce2664c",
+          "section_heading": "To Do"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T07:53:52.817369+00:00",
+        "content": {
+          "text": "Evangeline sec bio\n         Mrs Haider ask Ms Janzen for reg link\n         James to finalize directors and set a meeting\n         Owen to reach out to schools"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_dfc0cceebce2664c#section-8",
+          "quote": "Evangeline sec bio\n         Mrs Haider ask Ms Janzen for reg link\n         James to finalize directors and set a meeting\n         Owen to reach out to schools",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+          "section_heading": "To Do",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "To Do",
+            "text": "Evangeline sec bio\n         Mrs Haider ask Ms Janzen for reg link\n         James to finalize directors and set a meeting\n         Owen to reach out to schools",
+            "lines": [
+              {
+                "text": "Evangeline sec bio",
+                "indent": 9,
+                "bullet_marker": null,
+                "body": "Evangeline sec bio",
+                "checkbox": false
+              },
+              {
+                "text": "Mrs Haider ask Ms Janzen for reg link",
+                "indent": 9,
+                "bullet_marker": null,
+                "body": "Mrs Haider ask Ms Janzen for reg link",
+                "checkbox": false
+              },
+              {
+                "text": "James to finalize directors and set a meeting",
+                "indent": 9,
+                "bullet_marker": null,
+                "body": "James to finalize directors and set a meeting",
+                "checkbox": false
+              },
+              {
+                "text": "Owen to reach out to schools",
+                "indent": 9,
+                "bullet_marker": null,
+                "body": "Owen to reach out to schools",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "Evangeline sec bio",
+              "indent": 9,
+              "bullet_marker": null,
+              "body": "Evangeline sec bio",
+              "checkbox": false
+            },
+            {
+              "text": "Mrs Haider ask Ms Janzen for reg link",
+              "indent": 9,
+              "bullet_marker": null,
+              "body": "Mrs Haider ask Ms Janzen for reg link",
+              "checkbox": false
+            },
+            {
+              "text": "James to finalize directors and set a meeting",
+              "indent": 9,
+              "bullet_marker": null,
+              "body": "James to finalize directors and set a meeting",
+              "checkbox": false
+            },
+            {
+              "text": "Owen to reach out to schools",
+              "indent": 9,
+              "bullet_marker": null,
+              "body": "Owen to reach out to schools",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_dfc0cceebce2664c",
+            "title": "Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_5__May_20th_2025_20260630_075352.pdf",
+            "updated_at": "2026-06-30T07:53:52.817369+00:00"
+          }
+        }
+      }
+    ]
+  }
+]

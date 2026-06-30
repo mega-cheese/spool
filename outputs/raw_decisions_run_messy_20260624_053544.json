@@ -1,0 +1,521 @@
+{
+  "metadata": {
+    "input_file": "data/messy.json",
+    "decision_count": 1,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-5.4-mini",
+    "verified": false,
+    "generated_at": "2026-06-24T05:35:44.799949+00:00",
+    "validation_issue_count": 2,
+    "validation_issues": [
+      {
+        "type": "indirect_support_claim",
+        "severity": "warning",
+        "decision_id": "dec_e19b2afffd",
+        "field": "risks",
+        "claim": "The admin beta could slip.",
+        "message_ts": "1782460420.000800",
+        "action": "removed_from_clean_output",
+        "message": "Claim is only indirectly supported."
+      },
+      {
+        "type": "needs_review_claim",
+        "severity": "warning",
+        "decision_id": "dec_e19b2afffd",
+        "field": "risks",
+        "claim": "The admin beta could slip.",
+        "message_ts": "1782460420.000800",
+        "action": "removed_from_clean_output",
+        "message": "Claim is marked needs_review."
+      }
+    ],
+    "raw_validation_issue_count": 2
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_e19b2afffd",
+      "decision": "Create an Organization Settings parent section and move billing, roles, SAML, and audit logs under it.",
+      "date": null,
+      "owner": "Priya Shah",
+      "owner_role": "Staff Engineer",
+      "participants": [
+        "Maya Chen",
+        "Leo Park",
+        "Priya Shah",
+        "Sarah Kim",
+        "Owen Diaz"
+      ],
+      "status": "confirmed",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "It matches where the product is going.",
+          "support_level": "direct",
+          "confidence": 0.94,
+          "source_message_ts": "1782460360.000700",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1782460000.000100",
+            "message_ts": "1782460360.000700",
+            "speaker": "Leo Park",
+            "speaker_role": "CTO",
+            "quote": "That is more work, but it matches where the product is going. Billing-only shortcut saves maybe 3 days and creates another cleanup project.",
+            "url": null
+          }
+        },
+        {
+          "claim": "It solves the demo issue.",
+          "support_level": "direct",
+          "confidence": 0.92,
+          "source_message_ts": "1782460540.001000",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1782460000.000100",
+            "message_ts": "1782460540.001000",
+            "speaker": "Sarah Kim",
+            "speaker_role": "Head of Sales",
+            "quote": "That would solve the demo issue. Also lol at 'first pass boring' — honestly that's all we need.",
+            "url": null
+          }
+        }
+      ],
+      "objections": [
+        {
+          "claim": "Putting SAML under billing would be regretted in about two weeks.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source_message_ts": "1782460300.000600",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1782460000.000100",
+            "message_ts": "1782460300.000600",
+            "speaker": "Priya Shah",
+            "speaker_role": "Staff Engineer",
+            "quote": "Please don't put SAML under billing. We'll regret that in like two weeks. I'd rather create a real Organization Settings section and move billing, roles, audit logs, and SAML under it.",
+            "url": null
+          }
+        }
+      ],
+      "assumptions": [
+        {
+          "claim": "The first pass should stay boring.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source_message_ts": "1782460480.000900",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1782460000.000100",
+            "message_ts": "1782460480.000900",
+            "speaker": "Priya Shah",
+            "speaker_role": "Staff Engineer",
+            "quote": "If we keep the first pass boring, I can have the new section wired by next Friday. No custom permissions redesign, just navigation plus moving the existing pages.",
+            "url": null
+          }
+        }
+      ],
+      "risks": [
+        {
+          "claim": "The admin beta could slip.",
+          "support_level": "indirect",
+          "confidence": 0.75,
+          "needs_review": true,
+          "source_message_ts": "1782460420.000800",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1782460000.000100",
+            "message_ts": "1782460420.000800",
+            "speaker": "Maya Chen",
+            "speaker_role": "VP Product",
+            "quote": "My only worry is slipping the admin beta. We promised it to design partners before 2026-08-05.",
+            "url": null
+          }
+        },
+        {
+          "claim": "A billing-only shortcut would create another cleanup project.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source_message_ts": "1782460360.000700",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1782460000.000100",
+            "message_ts": "1782460360.000700",
+            "speaker": "Leo Park",
+            "speaker_role": "CTO",
+            "quote": "That is more work, but it matches where the product is going. Billing-only shortcut saves maybe 3 days and creates another cleanup project.",
+            "url": null
+          }
+        }
+      ],
+      "tradeoffs": [
+        {
+          "claim": "Accept a basic IA now instead of the full permissions model.",
+          "support_level": "direct",
+          "confidence": 0.95,
+          "source_message_ts": "1782460780.001400",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1782460000.000100",
+            "message_ts": "1782460780.001400",
+            "speaker": "Leo Park",
+            "speaker_role": "CTO",
+            "quote": "Agree. Tradeoff is we accept a basic IA now instead of doing the full permissions model. Safer than hiding SAML under billing.",
+            "url": null
+          }
+        }
+      ],
+      "timelines": [
+        {
+          "claim": "The new section can be wired by next Friday.",
+          "support_level": "direct",
+          "confidence": 0.95,
+          "source_message_ts": "1782460480.000900",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1782460000.000100",
+            "message_ts": "1782460480.000900",
+            "speaker": "Priya Shah",
+            "speaker_role": "Staff Engineer",
+            "quote": "If we keep the first pass boring, I can have the new section wired by next Friday. No custom permissions redesign, just navigation plus moving the existing pages.",
+            "url": null
+          }
+        }
+      ],
+      "deadlines": [
+        {
+          "date": "2026-08-05",
+          "description": "Admin beta promised to design partners.",
+          "source_message_ts": "1782460420.000800",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1782460000.000100",
+            "message_ts": "1782460420.000800",
+            "speaker": "Maya Chen",
+            "speaker_role": "VP Product",
+            "quote": "My only worry is slipping the admin beta. We promised it to design partners before 2026-08-05.",
+            "url": null
+          }
+        }
+      ],
+      "action_items": [
+        {
+          "action": "Take the nav work.",
+          "owner": "Priya Shah",
+          "due_date": null,
+          "due_text": null,
+          "source_message_ts": "1782460600.001100",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1782460000.000100",
+            "message_ts": "1782460600.001100",
+            "speaker": "Owen Diaz",
+            "speaker_role": "Engineering Manager",
+            "quote": "Works for me. Priya, can you take the nav work? I can move audit logs once the route exists.",
+            "url": null
+          }
+        },
+        {
+          "action": "Move audit logs once the route exists.",
+          "owner": "Owen Diaz",
+          "due_date": null,
+          "due_text": null,
+          "source_message_ts": "1782460600.001100",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1782460000.000100",
+            "message_ts": "1782460600.001100",
+            "speaker": "Owen Diaz",
+            "speaker_role": "Engineering Manager",
+            "quote": "Works for me. Priya, can you take the nav work? I can move audit logs once the route exists.",
+            "url": null
+          }
+        },
+        {
+          "action": "Make Organization Settings the parent section and move billing and roles first, then SAML.",
+          "owner": "Priya Shah",
+          "due_date": null,
+          "due_text": null,
+          "source_message_ts": "1782460660.001200",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1782460000.000100",
+            "message_ts": "1782460660.001200",
+            "speaker": "Priya Shah",
+            "speaker_role": "Staff Engineer",
+            "quote": "Yep. I'll make Organization Settings the parent section, move billing and roles first, then SAML. Audit logs can follow after Owen's piece.",
+            "url": null
+          }
+        },
+        {
+          "action": "Move audit logs after Owen's piece.",
+          "owner": "Owen Diaz",
+          "due_date": null,
+          "due_text": null,
+          "source_message_ts": "1782460660.001200",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1782460000.000100",
+            "message_ts": "1782460660.001200",
+            "speaker": "Priya Shah",
+            "speaker_role": "Staff Engineer",
+            "quote": "Yep. I'll make Organization Settings the parent section, move billing and roles first, then SAML. Audit logs can follow after Owen's piece.",
+            "url": null
+          }
+        }
+      ],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460780.001400",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "Agree. Tradeoff is we accept a basic IA now instead of doing the full permissions model. Safer than hiding SAML under billing.",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460360.000700",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "That is more work, but it matches where the product is going. Billing-only shortcut saves maybe 3 days and creates another cleanup project.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460540.001000",
+          "speaker": "Sarah Kim",
+          "speaker_role": "Head of Sales",
+          "quote": "That would solve the demo issue. Also lol at 'first pass boring' — honestly that's all we need.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460300.000600",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "Please don't put SAML under billing. We'll regret that in like two weeks. I'd rather create a real Organization Settings section and move billing, roles, audit logs, and SAML under it.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460480.000900",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "If we keep the first pass boring, I can have the new section wired by next Friday. No custom permissions redesign, just navigation plus moving the existing pages.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460420.000800",
+          "speaker": "Maya Chen",
+          "speaker_role": "VP Product",
+          "quote": "My only worry is slipping the admin beta. We promised it to design partners before 2026-08-05.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460780.001400",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "Agree. Tradeoff is we accept a basic IA now instead of doing the full permissions model. Safer than hiding SAML under billing.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460600.001100",
+          "speaker": "Owen Diaz",
+          "speaker_role": "Engineering Manager",
+          "quote": "Works for me. Priya, can you take the nav work? I can move audit logs once the route exists.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460660.001200",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "Yep. I'll make Organization Settings the parent section, move billing and roles first, then SAML. Audit logs can follow after Owen's piece.",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460780.001400",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "Agree. Tradeoff is we accept a basic IA now instead of doing the full permissions model. Safer than hiding SAML under billing.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460360.000700",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "That is more work, but it matches where the product is going. Billing-only shortcut saves maybe 3 days and creates another cleanup project.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460540.001000",
+          "speaker": "Sarah Kim",
+          "speaker_role": "Head of Sales",
+          "quote": "That would solve the demo issue. Also lol at 'first pass boring' — honestly that's all we need.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460300.000600",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "Please don't put SAML under billing. We'll regret that in like two weeks. I'd rather create a real Organization Settings section and move billing, roles, audit logs, and SAML under it.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460480.000900",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "If we keep the first pass boring, I can have the new section wired by next Friday. No custom permissions redesign, just navigation plus moving the existing pages.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460420.000800",
+          "speaker": "Maya Chen",
+          "speaker_role": "VP Product",
+          "quote": "My only worry is slipping the admin beta. We promised it to design partners before 2026-08-05.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460600.001100",
+          "speaker": "Owen Diaz",
+          "speaker_role": "Engineering Manager",
+          "quote": "Works for me. Priya, can you take the nav work? I can move audit logs once the route exists.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1782460000.000100",
+          "message_ts": "1782460660.001200",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "Yep. I'll make Organization Settings the parent section, move billing and roles first, then SAML. Audit logs can follow after Owen's piece.",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "1782460780.001400"
+    }
+  ]
+}

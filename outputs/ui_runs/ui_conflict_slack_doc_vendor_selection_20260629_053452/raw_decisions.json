@@ -1,0 +1,229 @@
+{
+  "metadata": {
+    "input_file": "data/conflict_slack_doc_vendor_selection.json",
+    "decision_count": 2,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-4.1-mini",
+    "verified": true,
+    "generated_at": "2026-06-29T05:35:04.295891+00:00",
+    "validation_issue_count": 0,
+    "validation_issues": [],
+    "raw_validation_issue_count": 0
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_a481f65caa",
+      "decision": "Choose LaunchDarkly for feature flags.",
+      "date": "2027-05-11T01:47:40.000200+00:00",
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Priya Shah",
+        "Hannah Lee"
+      ],
+      "status": "confirmed",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Audit support for feature flags is ready in LaunchDarkly.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source_message_ts": "1810000000.000100",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "platform",
+            "channel_id": "C_PLATFORM",
+            "thread_ts": "1810000000.000100",
+            "message_ts": "1810000000.000100",
+            "speaker": "Priya Shah",
+            "speaker_role": "Staff Engineer",
+            "quote": "For feature flags, I recommend choosing LaunchDarkly because audit support is ready.",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "platform",
+          "channel_id": "C_PLATFORM",
+          "thread_ts": "1810000000.000100",
+          "message_ts": "1810000060.000200",
+          "speaker": "Hannah Lee",
+          "speaker_role": "Director of Engineering",
+          "quote": "Approved: choose LaunchDarkly for feature flags now.",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "platform",
+          "channel_id": "C_PLATFORM",
+          "thread_ts": "1810000000.000100",
+          "message_ts": "1810000000.000100",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "For feature flags, I recommend choosing LaunchDarkly because audit support is ready.",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "platform",
+          "channel_id": "C_PLATFORM",
+          "thread_ts": "1810000000.000100",
+          "message_ts": "1810000060.000200",
+          "speaker": "Hannah Lee",
+          "speaker_role": "Director of Engineering",
+          "quote": "Approved: choose LaunchDarkly for feature flags now.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "platform",
+          "channel_id": "C_PLATFORM",
+          "thread_ts": "1810000000.000100",
+          "message_ts": "1810000000.000100",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "For feature flags, I recommend choosing LaunchDarkly because audit support is ready.",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "1810000060.000200"
+    },
+    {
+      "decision_id": "dec_34cd76c5f5",
+      "decision": "Use ConfigCat for feature flags.",
+      "date": "2027-05-14T13:00:00Z",
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Maya Chen"
+      ],
+      "status": "confirmed",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "ConfigCat has enough audit coverage for the initial rollout.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source_message_ts": "doc_conflict_feature_flags#section-2",
+          "source": {
+            "source_type": "google_doc",
+            "workspace": "AcmeAI",
+            "channel": "Feature Flag Vendor Decision",
+            "channel_id": "doc_conflict_feature_flags",
+            "thread_ts": "doc_conflict_feature_flags",
+            "message_ts": "doc_conflict_feature_flags#section-2",
+            "speaker": "Maya Chen",
+            "speaker_role": "VP Product",
+            "quote": "ConfigCat has enough audit coverage for the initial rollout and finance prefers the lower contract.",
+            "url": "https://docs.google.com/document/d/conflict-feature-flags"
+          }
+        },
+        {
+          "claim": "Finance prefers the lower contract cost of ConfigCat.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source_message_ts": "doc_conflict_feature_flags#section-2",
+          "source": {
+            "source_type": "google_doc",
+            "workspace": "AcmeAI",
+            "channel": "Feature Flag Vendor Decision",
+            "channel_id": "doc_conflict_feature_flags",
+            "thread_ts": "doc_conflict_feature_flags",
+            "message_ts": "doc_conflict_feature_flags#section-2",
+            "speaker": "Maya Chen",
+            "speaker_role": "VP Product",
+            "quote": "ConfigCat has enough audit coverage for the initial rollout and finance prefers the lower contract.",
+            "url": "https://docs.google.com/document/d/conflict-feature-flags"
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "google_doc",
+          "workspace": "AcmeAI",
+          "channel": "Feature Flag Vendor Decision",
+          "channel_id": "doc_conflict_feature_flags",
+          "thread_ts": "doc_conflict_feature_flags",
+          "message_ts": "doc_conflict_feature_flags#section-1",
+          "speaker": "Maya Chen",
+          "speaker_role": "VP Product",
+          "quote": "Final decision: use ConfigCat for feature flags.",
+          "url": "https://docs.google.com/document/d/conflict-feature-flags"
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "google_doc",
+          "workspace": "AcmeAI",
+          "channel": "Feature Flag Vendor Decision",
+          "channel_id": "doc_conflict_feature_flags",
+          "thread_ts": "doc_conflict_feature_flags",
+          "message_ts": "doc_conflict_feature_flags#section-2",
+          "speaker": "Maya Chen",
+          "speaker_role": "VP Product",
+          "quote": "ConfigCat has enough audit coverage for the initial rollout and finance prefers the lower contract.",
+          "url": "https://docs.google.com/document/d/conflict-feature-flags"
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "google_doc",
+          "workspace": "AcmeAI",
+          "channel": "Feature Flag Vendor Decision",
+          "channel_id": "doc_conflict_feature_flags",
+          "thread_ts": "doc_conflict_feature_flags",
+          "message_ts": "doc_conflict_feature_flags#section-1",
+          "speaker": "Maya Chen",
+          "speaker_role": "VP Product",
+          "quote": "Final decision: use ConfigCat for feature flags.",
+          "url": "https://docs.google.com/document/d/conflict-feature-flags"
+        },
+        {
+          "source_type": "google_doc",
+          "workspace": "AcmeAI",
+          "channel": "Feature Flag Vendor Decision",
+          "channel_id": "doc_conflict_feature_flags",
+          "thread_ts": "doc_conflict_feature_flags",
+          "message_ts": "doc_conflict_feature_flags#section-2",
+          "speaker": "Maya Chen",
+          "speaker_role": "VP Product",
+          "quote": "ConfigCat has enough audit coverage for the initial rollout and finance prefers the lower contract.",
+          "url": "https://docs.google.com/document/d/conflict-feature-flags"
+        }
+      ],
+      "decision_source_message_ts": "doc_conflict_feature_flags#section-1"
+    }
+  ]
+}

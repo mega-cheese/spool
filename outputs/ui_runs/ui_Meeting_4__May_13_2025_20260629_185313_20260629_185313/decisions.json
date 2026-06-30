@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_4__May_13_2025_20260629_185313.pdf",
+    "decision_count": 1,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-4.1-mini",
+    "verified": true,
+    "generated_at": "2026-06-29T18:53:18.545682+00:00",
+    "raw_validation_issue_count": 0,
+    "clean_validation_issue_count": 0,
+    "removed_claim_count": 0,
+    "repair_count": 0,
+    "postprocessing_change_count": 0
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_1a3fe62eda",
+      "decision": "Confirm theme to put on website: 'The Room Where It Happens'",
+      "date": null,
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "The theme 'The Room Where It Happens' is confirmed to put on the website.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260629_185313.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-2",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "a.       Committees\n                     i.    Wildcard for a passionate director\n                    ii.    Science council over UNEP\n                    iii.   HOC (Harold?) - US Senate a bit too controversial at the moment\n                                1.  Leaning away from current political views\n             b.   Jr committees?\n             c.   UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate)\n                     i.    Depends on how it plays out - not fantasy football\n                    ii.    FIFA council could be acceptable - VMUN had one\n                                1.  Another option is Olympic Committee\n                    iii.   Don’t want to have to write a whole new backgrounder\n                    iv.    UBC could be more suitable\n                     v.    Director is Cameron Stanger (Chair: John Huang)\n    3.   VYMUN Jr.\n             a.   Let the directors decide\n             b.   3 committees: general, specialized and crisis\n                     i.    Have  to make sure the crisis directors are fully prepared\n                    ii.    Harder to manage younger children - timeliness\n                    iii.   Has to be more structured and approved\n    4.   Conﬁrm theme to put on website\n             a.   The Room Where It Happens\n                     i.    conﬁrmed!",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260629_185313.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "a.       Committees\n                     i.    Wildcard for a passionate director\n                    ii.    Science council over UNEP\n                    iii.   HOC (Harold?) - US Senate a bit too controversial at the moment\n                                1.  Leaning away from current political views\n             b.   Jr committees?\n             c.   UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate)\n                     i.    Depends on how it plays out - not fantasy football\n                    ii.    FIFA council could be acceptable - VMUN had one\n                                1.  Another option is Olympic Committee\n                    iii.   Don’t want to have to write a whole new backgrounder\n                    iv.    UBC could be more suitable\n                     v.    Director is Cameron Stanger (Chair: John Huang)\n    3.   VYMUN Jr.\n             a.   Let the directors decide\n             b.   3 committees: general, specialized and crisis\n                     i.    Have  to make sure the crisis directors are fully prepared\n                    ii.    Harder to manage younger children - timeliness\n                    iii.   Has to be more structured and approved\n    4.   Conﬁrm theme to put on website\n             a.   The Room Where It Happens\n                     i.    conﬁrmed!",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260629_185313.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "a.       Committees\n                     i.    Wildcard for a passionate director\n                    ii.    Science council over UNEP\n                    iii.   HOC (Harold?) - US Senate a bit too controversial at the moment\n                                1.  Leaning away from current political views\n             b.   Jr committees?\n             c.   UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate)\n                     i.    Depends on how it plays out - not fantasy football\n                    ii.    FIFA council could be acceptable - VMUN had one\n                                1.  Another option is Olympic Committee\n                    iii.   Don’t want to have to write a whole new backgrounder\n                    iv.    UBC could be more suitable\n                     v.    Director is Cameron Stanger (Chair: John Huang)\n    3.   VYMUN Jr.\n             a.   Let the directors decide\n             b.   3 committees: general, specialized and crisis\n                     i.    Have  to make sure the crisis directors are fully prepared\n                    ii.    Harder to manage younger children - timeliness\n                    iii.   Has to be more structured and approved\n    4.   Conﬁrm theme to put on website\n             a.   The Room Where It Happens\n                     i.    conﬁrmed!",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260629_185313.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "a.       Committees\n                     i.    Wildcard for a passionate director\n                    ii.    Science council over UNEP\n                    iii.   HOC (Harold?) - US Senate a bit too controversial at the moment\n                                1.  Leaning away from current political views\n             b.   Jr committees?\n             c.   UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate)\n                     i.    Depends on how it plays out - not fantasy football\n                    ii.    FIFA council could be acceptable - VMUN had one\n                                1.  Another option is Olympic Committee\n                    iii.   Don’t want to have to write a whole new backgrounder\n                    iv.    UBC could be more suitable\n                     v.    Director is Cameron Stanger (Chair: John Huang)\n    3.   VYMUN Jr.\n             a.   Let the directors decide\n             b.   3 committees: general, specialized and crisis\n                     i.    Have  to make sure the crisis directors are fully prepared\n                    ii.    Harder to manage younger children - timeliness\n                    iii.   Has to be more structured and approved\n    4.   Conﬁrm theme to put on website\n             a.   The Room Where It Happens\n                     i.    conﬁrmed!",
+          "url": null
+        }
+      ]
+    }
+  ]
+}

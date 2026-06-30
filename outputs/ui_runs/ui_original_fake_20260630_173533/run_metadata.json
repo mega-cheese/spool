@@ -1,0 +1,27 @@
+{
+  "run_id": "ui_original_fake_20260630_173533",
+  "input_file": "data/original_fake.json",
+  "mode": "llm",
+  "pipeline": "candidates-shadow",
+  "model": "gpt-5.4-mini",
+  "source_type": "slack",
+  "created_at": "2026-06-30T17:35:39.826924+00:00",
+  "artifacts": {
+    "decisions": "outputs/ui_runs/ui_original_fake_20260630_173533/decisions.json",
+    "raw_decisions": "outputs/ui_runs/ui_original_fake_20260630_173533/raw_decisions.json",
+    "normalized_events_debug": "outputs/ui_runs/ui_original_fake_20260630_173533/normalized_events_debug.json",
+    "source_bundles_debug": "outputs/ui_runs/ui_original_fake_20260630_173533/source_bundles_debug.json",
+    "candidates_debug": "outputs/ui_runs/ui_original_fake_20260630_173533/candidates_debug.json",
+    "state_resolution_debug": "outputs/ui_runs/ui_original_fake_20260630_173533/state_resolution_debug.json",
+    "conflicts_debug": "outputs/ui_runs/ui_original_fake_20260630_173533/conflicts_debug.json",
+    "meeting_metadata": "outputs/ui_runs/ui_original_fake_20260630_173533/meeting_metadata.json",
+    "clean_memory": "outputs/ui_runs/ui_original_fake_20260630_173533/clean_memory.json",
+    "action_items": "outputs/ui_runs/ui_original_fake_20260630_173533/action_items.json",
+    "open_questions": "outputs/ui_runs/ui_original_fake_20260630_173533/open_questions.json",
+    "document_memory_debug": "outputs/ui_runs/ui_original_fake_20260630_173533/document_memory_debug.json",
+    "block_classification_debug": "outputs/ui_runs/ui_original_fake_20260630_173533/block_classification_debug.json",
+    "review_queue": "outputs/ui_runs/ui_original_fake_20260630_173533/review_queue.json",
+    "review_queue_md": "outputs/ui_runs/ui_original_fake_20260630_173533/review_queue.md",
+    "run_metadata": "outputs/ui_runs/ui_original_fake_20260630_173533/run_metadata.json"
+  }
+}

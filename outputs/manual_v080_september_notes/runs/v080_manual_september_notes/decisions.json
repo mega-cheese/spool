@@ -1,0 +1,209 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/September Meeting Notes.pdf",
+    "decision_count": 1,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "heuristic",
+    "model": null,
+    "verified": true,
+    "generated_at": "2026-06-30T22:12:08.521336+00:00",
+    "clean_validation_issue_count": 0
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_5717ed6ef6",
+      "decision": "1",
+      "date": null,
+      "owner": "Unknown",
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Of this situation, we had decided to end the season early",
+          "support_level": "direct",
+          "confidence": 0.82,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "September Meeting Notes.pdf",
+            "channel_id": "file_11471d225e12e8cc",
+            "thread_ts": "file_11471d225e12e8cc",
+            "message_ts": "file_11471d225e12e8cc#section-26",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "由于这一季课程将在几周后结束，我们希望学生们能坚持按时上课。如果需要请假，请家长们至\n少提前 24 小时通知我们。谢谢大家，也祝小朋友们上课愉快！[愉快]\n\nAs the current season of classes will come to a close in a few weeks, we kindly request that all students\nmake a consistent effort to attend classes. In the event of any absences, it would be greatly appreciated if\nwe are notified at least 24 hours in advance. Thank you\n\nHello Parents,\n\n家长们大家好，\n\nThank you everyone for participating in this season’s Peer Tutoring. We are very sorry that the lessons\ntaught by David and Taichi this summer had been very inconsistent. We had contacted the tutors many\ntimes, however, we didn’t receive any actionable response. Because of this situation, we had decided to\nend the season early. We apologize for your experience during this season. Normally, our tutors are\nresponsible and teach classes regularly. We hope to see you all in the Peer Tutoring Program in the future.\nThank you very much for your feedback and your patience and understanding.\n\n\n感谢大家参加我们这一季的同伴辅导课程。我们很抱歉David和Taichi一直没有给大家好好上课。\n我们多次联系过老师，但是我们没有收到老师们回应怎么把课上的更好。由于这个情况，我们决\n定提前结束这一季给大家的课。我们十分抱歉您这一季的上课经历不好。通常，我们的老师们是\n负责的并且会每一周按时教课的。我们希望能在下一季的同伴辅导项目中见到大家。非常感谢大\n家的反馈以及大家的耐心和理解。\n\nThank you everyone.\n\n谢谢大家。\n\n\n\n各位家长好！ 随着我们的夏季2021Peer Tutoring项目的结束，我们希望大家可以填写一份调查问\n卷，以便于我们提升自己的Peer Tutoring活动。 我们真诚的感谢大家参与这个项目，希望秋季再\n见！\n\n大家好！非常感谢大家这一季参加我们的同伴辅导项目。来帮助我们进一步改进这个项目，我们\n希望大家可以填写一份调查问卷。感谢大家积极参与，希望夏季再见！\n\nHello Jeffrey, due to many missed lessons, your irresponsibility is unacceptable as a tutor. YIV\nsupervisors have made the decision to not provide you with volunteer hours. Thank you.\n\n您好，我们跟老师取得了联系，然后她表示3:30-4:15pm 的上课时间可能对您来说太匆忙了。我们\n建议把上课时间调到4:00-4:45pm，来确保双方都能准时上课。同时我们也会提醒老师让她提前\n5-10分钟打开Zoom。",
+            "url": null
+          }
+        },
+        {
+          "claim": "Many missed lessons, your irresponsibility is unacceptable as a tutor",
+          "support_level": "direct",
+          "confidence": 0.82,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "September Meeting Notes.pdf",
+            "channel_id": "file_11471d225e12e8cc",
+            "thread_ts": "file_11471d225e12e8cc",
+            "message_ts": "file_11471d225e12e8cc#section-26",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "由于这一季课程将在几周后结束，我们希望学生们能坚持按时上课。如果需要请假，请家长们至\n少提前 24 小时通知我们。谢谢大家，也祝小朋友们上课愉快！[愉快]\n\nAs the current season of classes will come to a close in a few weeks, we kindly request that all students\nmake a consistent effort to attend classes. In the event of any absences, it would be greatly appreciated if\nwe are notified at least 24 hours in advance. Thank you\n\nHello Parents,\n\n家长们大家好，\n\nThank you everyone for participating in this season’s Peer Tutoring. We are very sorry that the lessons\ntaught by David and Taichi this summer had been very inconsistent. We had contacted the tutors many\ntimes, however, we didn’t receive any actionable response. Because of this situation, we had decided to\nend the season early. We apologize for your experience during this season. Normally, our tutors are\nresponsible and teach classes regularly. We hope to see you all in the Peer Tutoring Program in the future.\nThank you very much for your feedback and your patience and understanding.\n\n\n感谢大家参加我们这一季的同伴辅导课程。我们很抱歉David和Taichi一直没有给大家好好上课。\n我们多次联系过老师，但是我们没有收到老师们回应怎么把课上的更好。由于这个情况，我们决\n定提前结束这一季给大家的课。我们十分抱歉您这一季的上课经历不好。通常，我们的老师们是\n负责的并且会每一周按时教课的。我们希望能在下一季的同伴辅导项目中见到大家。非常感谢大\n家的反馈以及大家的耐心和理解。\n\nThank you everyone.\n\n谢谢大家。\n\n\n\n各位家长好！ 随着我们的夏季2021Peer Tutoring项目的结束，我们希望大家可以填写一份调查问\n卷，以便于我们提升自己的Peer Tutoring活动。 我们真诚的感谢大家参与这个项目，希望秋季再\n见！\n\n大家好！非常感谢大家这一季参加我们的同伴辅导项目。来帮助我们进一步改进这个项目，我们\n希望大家可以填写一份调查问卷。感谢大家积极参与，希望夏季再见！\n\nHello Jeffrey, due to many missed lessons, your irresponsibility is unacceptable as a tutor. YIV\nsupervisors have made the decision to not provide you with volunteer hours. Thank you.\n\n您好，我们跟老师取得了联系，然后她表示3:30-4:15pm 的上课时间可能对您来说太匆忙了。我们\n建议把上课时间调到4:00-4:45pm，来确保双方都能准时上课。同时我们也会提醒老师让她提前\n5-10分钟打开Zoom。",
+            "url": null
+          }
+        },
+        {
+          "claim": "Your frequent and late-noticed absences, classes with Owen and Riley were unable to run consistently and effectively",
+          "support_level": "direct",
+          "confidence": 0.82,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "September Meeting Notes.pdf",
+            "channel_id": "file_11471d225e12e8cc",
+            "thread_ts": "file_11471d225e12e8cc",
+            "message_ts": "file_11471d225e12e8cc#section-27",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "我们感谢并且希望您能继续对老师保持耐心的态度，因为他们是义工学生，面对志愿者工作中的\n一些特殊情况时，他们也在学习如何更好的和处理和跟您沟通。如果时间不合适，请告诉我们什\n么时候会更好，谢谢您\n\nHi Nancy, due to your frequent and late-noticed absences, classes with Owen and Riley were unable to\nrun consistently and effectively. Thus, we have made the decision to terminate your role as a tutor. Your\nclasses will stop starting from next week, thank you for your cooperation.\n\nHi Ella, Rysa will no longer be continuing her participation in the Peer Tutoring classes. The parent feels\nthat Rysa has not been learning well in class and decided to withdraw. Classes will stop starting from next\nweek, thank your for understanding. We understand that you have previously wished to withdraw due to\npersonal reasons as well, is this something you would still choose?\n\n\n    9.  Other Examples of Interaction w/ Parents (see screenshots on the next page)",
+            "url": null
+          }
+        }
+      ],
+      "objections": [
+        {
+          "claim": "There is concern about what/how to do each task ● Tyler September 4th Prep (edit) tutor sign up and waitlist forms, link to spreadsheet ● Owen September 4th Prep (edit) student sign up and waitlist forms, link to spreadsheet Tyler September 10th Send a mass email to tutors and parents about our fall 2024 PT ● Bernice September 14th Make TR template for Monday-Wednesday (drafts) Edit parent notification/sign up message + make TR template for Thurs & Fri ● Bernice September 14th (drafts) Edit tutor notification/sign up message + make TR template for Sat + Sun ● Owen September 14th (drafts) Bernice and Owen September 23rd Start pairing students and tutors Tyler September 28th Send out class information to parents and students - We will begin the hiring process for tutors on the September 5th and close the form on the 18th - Send waitlist form - Communications send the student form and close when it reaches 50 - Send out waitlist form after - Tutor training 25th and then start pairing on the 23rd - 2024 Fall PT starts on October 7th until December 9th (10 weeks) - Remember to keep track of attendance - Next team meeting: October 16th",
+          "support_level": "direct",
+          "confidence": 0.8,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "September Meeting Notes.pdf",
+            "channel_id": "file_11471d225e12e8cc",
+            "thread_ts": "file_11471d225e12e8cc",
+            "message_ts": "file_11471d225e12e8cc#section-6",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "This Week’s Tasks:\n\n     1.    Account pass down\n                a.    Email\n                          i.     Professionalism\n                         ii.     Signatures\n                b.    Instagram\n                c.    Wechat\n                          i.     Communications Account → Cecilia\n                                      1.    Main chats (volunteer & parent group chat -- sticky on top)\n                                      2.    Remember to add haley’s main wechat acc to the parent and student gc\n                         ii.     Main Account → Haley\n\n     2.    Individual tasks - Ask if you are not sure what/how to do each task\n\n\n ●     Tyler         September 4th               Prep (edit) tutor sign up and waitlist forms, link to spreadsheet\n\n ●     Owen          September 4th               Prep (edit) student sign up and waitlist forms, link to spreadsheet\n\n       Tyler         September 10th              Send a mass email to tutors and parents about our fall 2024 PT\n\n ●     Bernice       September 14th              Make TR template for Monday-Wednesday (drafts)\n\n                                                 Edit parent notification/sign up message + make TR template for Thurs & Fri\n ●     Bernice       September 14th              (drafts)\n\n                                                 Edit tutor notification/sign up message + make TR template for Sat + Sun\n ●     Owen          September 14th              (drafts)\n\n       Bernice\n       and Owen      September 23rd              Start pairing students and tutors\n\n       Tyler         September 28th              Send out class information to parents and students\n     -     We will begin the hiring process for tutors on the September 5th and close the form on the 18th\n                -     Send waitlist form\n     -     Communications send the student form and close when it reaches 50\n     -     Send out waitlist form after\n     -     Tutor training 25th and then start pairing on the 23rd\n     -     2024 Fall PT starts on October 7th until December 9th (10 weeks)\n                -     Remember to keep track of attendance\n     -     Next team meeting: October 16th",
+            "url": null
+          }
+        }
+      ],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "September Meeting Notes.pdf",
+          "channel_id": "file_11471d225e12e8cc",
+          "thread_ts": "file_11471d225e12e8cc",
+          "message_ts": "file_11471d225e12e8cc#section-12",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "1.   Send Tutor Peer Tutoring sign up message once the form is released (use template 1)\n    2.   Send Parent Peer Tutoring regular sign up message once it is released, cap at the number given\n         by Haley (use template 2a)\n    3.   Once the regular parent form is closed, send the waitlist sign up form (use template 2b)\n    4.   Sign up day is where the parents are going to have the most amount of questions\n              a.   For example, they might ask, is my child registered? Why didn’t I receive any emails?\n                       i.    In this case, check the master spreadsheet, and respond with “Yes, your child is\n                             registered” or “no, your child is not registered” (in Mandarin/English\n                             depending on the parent)",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "September Meeting Notes.pdf",
+          "channel_id": "file_11471d225e12e8cc",
+          "thread_ts": "file_11471d225e12e8cc",
+          "message_ts": "file_11471d225e12e8cc#section-26",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "由于这一季课程将在几周后结束，我们希望学生们能坚持按时上课。如果需要请假，请家长们至\n少提前 24 小时通知我们。谢谢大家，也祝小朋友们上课愉快！[愉快]\n\nAs the current season of classes will come to a close in a few weeks, we kindly request that all students\nmake a consistent effort to attend classes. In the event of any absences, it would be greatly appreciated if\nwe are notified at least 24 hours in advance. Thank you\n\nHello Parents,\n\n家长们大家好，\n\nThank you everyone for participating in this season’s Peer Tutoring. We are very sorry that the lessons\ntaught by David and Taichi this summer had been very inconsistent. We had contacted the tutors many\ntimes, however, we didn’t receive any actionable response. Because of this situation, we had decided to\nend the season early. We apologize for your experience during this season. Normally, our tutors are\nresponsible and teach classes regularly. We hope to see you all in the Peer Tutoring Program in the future.\nThank you very much for your feedback and your patience and understanding.\n\n\n感谢大家参加我们这一季的同伴辅导课程。我们很抱歉David和Taichi一直没有给大家好好上课。\n我们多次联系过老师，但是我们没有收到老师们回应怎么把课上的更好。由于这个情况，我们决\n定提前结束这一季给大家的课。我们十分抱歉您这一季的上课经历不好。通常，我们的老师们是\n负责的并且会每一周按时教课的。我们希望能在下一季的同伴辅导项目中见到大家。非常感谢大\n家的反馈以及大家的耐心和理解。\n\nThank you everyone.\n\n谢谢大家。\n\n\n\n各位家长好！ 随着我们的夏季2021Peer Tutoring项目的结束，我们希望大家可以填写一份调查问\n卷，以便于我们提升自己的Peer Tutoring活动。 我们真诚的感谢大家参与这个项目，希望秋季再\n见！\n\n大家好！非常感谢大家这一季参加我们的同伴辅导项目。来帮助我们进一步改进这个项目，我们\n希望大家可以填写一份调查问卷。感谢大家积极参与，希望夏季再见！\n\nHello Jeffrey, due to many missed lessons, your irresponsibility is unacceptable as a tutor. YIV\nsupervisors have made the decision to not provide you with volunteer hours. Thank you.\n\n您好，我们跟老师取得了联系，然后她表示3:30-4:15pm 的上课时间可能对您来说太匆忙了。我们\n建议把上课时间调到4:00-4:45pm，来确保双方都能准时上课。同时我们也会提醒老师让她提前\n5-10分钟打开Zoom。",
+          "url": null
+        },
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "September Meeting Notes.pdf",
+          "channel_id": "file_11471d225e12e8cc",
+          "thread_ts": "file_11471d225e12e8cc",
+          "message_ts": "file_11471d225e12e8cc#section-27",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "我们感谢并且希望您能继续对老师保持耐心的态度，因为他们是义工学生，面对志愿者工作中的\n一些特殊情况时，他们也在学习如何更好的和处理和跟您沟通。如果时间不合适，请告诉我们什\n么时候会更好，谢谢您\n\nHi Nancy, due to your frequent and late-noticed absences, classes with Owen and Riley were unable to\nrun consistently and effectively. Thus, we have made the decision to terminate your role as a tutor. Your\nclasses will stop starting from next week, thank you for your cooperation.\n\nHi Ella, Rysa will no longer be continuing her participation in the Peer Tutoring classes. The parent feels\nthat Rysa has not been learning well in class and decided to withdraw. Classes will stop starting from next\nweek, thank your for understanding. We understand that you have previously wished to withdraw due to\npersonal reasons as well, is this something you would still choose?\n\n\n    9.  Other Examples of Interaction w/ Parents (see screenshots on the next page)",
+          "url": null
+        },
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "September Meeting Notes.pdf",
+          "channel_id": "file_11471d225e12e8cc",
+          "thread_ts": "file_11471d225e12e8cc",
+          "message_ts": "file_11471d225e12e8cc#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "This Week’s Tasks:\n\n     1.    Account pass down\n                a.    Email\n                          i.     Professionalism\n                         ii.     Signatures\n                b.    Instagram\n                c.    Wechat\n                          i.     Communications Account → Cecilia\n                                      1.    Main chats (volunteer & parent group chat -- sticky on top)\n                                      2.    Remember to add haley’s main wechat acc to the parent and student gc\n                         ii.     Main Account → Haley\n\n     2.    Individual tasks - Ask if you are not sure what/how to do each task\n\n\n ●     Tyler         September 4th               Prep (edit) tutor sign up and waitlist forms, link to spreadsheet\n\n ●     Owen          September 4th               Prep (edit) student sign up and waitlist forms, link to spreadsheet\n\n       Tyler         September 10th              Send a mass email to tutors and parents about our fall 2024 PT\n\n ●     Bernice       September 14th              Make TR template for Monday-Wednesday (drafts)\n\n                                                 Edit parent notification/sign up message + make TR template for Thurs & Fri\n ●     Bernice       September 14th              (drafts)\n\n                                                 Edit tutor notification/sign up message + make TR template for Sat + Sun\n ●     Owen          September 14th              (drafts)\n\n       Bernice\n       and Owen      September 23rd              Start pairing students and tutors\n\n       Tyler         September 28th              Send out class information to parents and students\n     -     We will begin the hiring process for tutors on the September 5th and close the form on the 18th\n                -     Send waitlist form\n     -     Communications send the student form and close when it reaches 50\n     -     Send out waitlist form after\n     -     Tutor training 25th and then start pairing on the 23rd\n     -     2024 Fall PT starts on October 7th until December 9th (10 weeks)\n                -     Remember to keep track of attendance\n     -     Next team meeting: October 16th",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "September Meeting Notes.pdf",
+          "channel_id": "file_11471d225e12e8cc",
+          "thread_ts": "file_11471d225e12e8cc",
+          "message_ts": "file_11471d225e12e8cc#section-12",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "1.   Send Tutor Peer Tutoring sign up message once the form is released (use template 1)\n    2.   Send Parent Peer Tutoring regular sign up message once it is released, cap at the number given\n         by Haley (use template 2a)\n    3.   Once the regular parent form is closed, send the waitlist sign up form (use template 2b)\n    4.   Sign up day is where the parents are going to have the most amount of questions\n              a.   For example, they might ask, is my child registered? Why didn’t I receive any emails?\n                       i.    In this case, check the master spreadsheet, and respond with “Yes, your child is\n                             registered” or “no, your child is not registered” (in Mandarin/English\n                             depending on the parent)",
+          "url": null
+        },
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "September Meeting Notes.pdf",
+          "channel_id": "file_11471d225e12e8cc",
+          "thread_ts": "file_11471d225e12e8cc",
+          "message_ts": "file_11471d225e12e8cc#section-26",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "由于这一季课程将在几周后结束，我们希望学生们能坚持按时上课。如果需要请假，请家长们至\n少提前 24 小时通知我们。谢谢大家，也祝小朋友们上课愉快！[愉快]\n\nAs the current season of classes will come to a close in a few weeks, we kindly request that all students\nmake a consistent effort to attend classes. In the event of any absences, it would be greatly appreciated if\nwe are notified at least 24 hours in advance. Thank you\n\nHello Parents,\n\n家长们大家好，\n\nThank you everyone for participating in this season’s Peer Tutoring. We are very sorry that the lessons\ntaught by David and Taichi this summer had been very inconsistent. We had contacted the tutors many\ntimes, however, we didn’t receive any actionable response. Because of this situation, we had decided to\nend the season early. We apologize for your experience during this season. Normally, our tutors are\nresponsible and teach classes regularly. We hope to see you all in the Peer Tutoring Program in the future.\nThank you very much for your feedback and your patience and understanding.\n\n\n感谢大家参加我们这一季的同伴辅导课程。我们很抱歉David和Taichi一直没有给大家好好上课。\n我们多次联系过老师，但是我们没有收到老师们回应怎么把课上的更好。由于这个情况，我们决\n定提前结束这一季给大家的课。我们十分抱歉您这一季的上课经历不好。通常，我们的老师们是\n负责的并且会每一周按时教课的。我们希望能在下一季的同伴辅导项目中见到大家。非常感谢大\n家的反馈以及大家的耐心和理解。\n\nThank you everyone.\n\n谢谢大家。\n\n\n\n各位家长好！ 随着我们的夏季2021Peer Tutoring项目的结束，我们希望大家可以填写一份调查问\n卷，以便于我们提升自己的Peer Tutoring活动。 我们真诚的感谢大家参与这个项目，希望秋季再\n见！\n\n大家好！非常感谢大家这一季参加我们的同伴辅导项目。来帮助我们进一步改进这个项目，我们\n希望大家可以填写一份调查问卷。感谢大家积极参与，希望夏季再见！\n\nHello Jeffrey, due to many missed lessons, your irresponsibility is unacceptable as a tutor. YIV\nsupervisors have made the decision to not provide you with volunteer hours. Thank you.\n\n您好，我们跟老师取得了联系，然后她表示3:30-4:15pm 的上课时间可能对您来说太匆忙了。我们\n建议把上课时间调到4:00-4:45pm，来确保双方都能准时上课。同时我们也会提醒老师让她提前\n5-10分钟打开Zoom。",
+          "url": null
+        },
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "September Meeting Notes.pdf",
+          "channel_id": "file_11471d225e12e8cc",
+          "thread_ts": "file_11471d225e12e8cc",
+          "message_ts": "file_11471d225e12e8cc#section-27",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "我们感谢并且希望您能继续对老师保持耐心的态度，因为他们是义工学生，面对志愿者工作中的\n一些特殊情况时，他们也在学习如何更好的和处理和跟您沟通。如果时间不合适，请告诉我们什\n么时候会更好，谢谢您\n\nHi Nancy, due to your frequent and late-noticed absences, classes with Owen and Riley were unable to\nrun consistently and effectively. Thus, we have made the decision to terminate your role as a tutor. Your\nclasses will stop starting from next week, thank you for your cooperation.\n\nHi Ella, Rysa will no longer be continuing her participation in the Peer Tutoring classes. The parent feels\nthat Rysa has not been learning well in class and decided to withdraw. Classes will stop starting from next\nweek, thank your for understanding. We understand that you have previously wished to withdraw due to\npersonal reasons as well, is this something you would still choose?\n\n\n    9.  Other Examples of Interaction w/ Parents (see screenshots on the next page)",
+          "url": null
+        },
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "September Meeting Notes.pdf",
+          "channel_id": "file_11471d225e12e8cc",
+          "thread_ts": "file_11471d225e12e8cc",
+          "message_ts": "file_11471d225e12e8cc#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "This Week’s Tasks:\n\n     1.    Account pass down\n                a.    Email\n                          i.     Professionalism\n                         ii.     Signatures\n                b.    Instagram\n                c.    Wechat\n                          i.     Communications Account → Cecilia\n                                      1.    Main chats (volunteer & parent group chat -- sticky on top)\n                                      2.    Remember to add haley’s main wechat acc to the parent and student gc\n                         ii.     Main Account → Haley\n\n     2.    Individual tasks - Ask if you are not sure what/how to do each task\n\n\n ●     Tyler         September 4th               Prep (edit) tutor sign up and waitlist forms, link to spreadsheet\n\n ●     Owen          September 4th               Prep (edit) student sign up and waitlist forms, link to spreadsheet\n\n       Tyler         September 10th              Send a mass email to tutors and parents about our fall 2024 PT\n\n ●     Bernice       September 14th              Make TR template for Monday-Wednesday (drafts)\n\n                                                 Edit parent notification/sign up message + make TR template for Thurs & Fri\n ●     Bernice       September 14th              (drafts)\n\n                                                 Edit tutor notification/sign up message + make TR template for Sat + Sun\n ●     Owen          September 14th              (drafts)\n\n       Bernice\n       and Owen      September 23rd              Start pairing students and tutors\n\n       Tyler         September 28th              Send out class information to parents and students\n     -     We will begin the hiring process for tutors on the September 5th and close the form on the 18th\n                -     Send waitlist form\n     -     Communications send the student form and close when it reaches 50\n     -     Send out waitlist form after\n     -     Tutor training 25th and then start pairing on the 23rd\n     -     2024 Fall PT starts on October 7th until December 9th (10 weeks)\n                -     Remember to keep track of attendance\n     -     Next team meeting: October 16th",
+          "url": null
+        }
+      ]
+    }
+  ]
+}

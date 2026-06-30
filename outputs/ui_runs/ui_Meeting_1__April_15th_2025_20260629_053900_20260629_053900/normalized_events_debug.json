@@ -1,0 +1,114 @@
+[
+  {
+    "event_id": "uploaded_document_file_6448cad81c690415_section_1",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_6448cad81c690415#section-1",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_6448cad81c690415",
+      "name": "Meeting_1__April_15th_2025_20260629_053900.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_6448cad81c690415",
+      "section_heading": "Document"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T05:39:00.448816+00:00",
+    "content": {
+      "text": "April  15th,  2025  Glass  Room   Present:  Ann,  Elliot,  Quinton,  Mrs.  Haider,  Owen,  Ms.  Boland,  James,  Frankie,  Hugo  Absent:  Evangeline,  Sheree   1.  Welcome!  Congrats!  a.  Shared  what  everyone’s  excited  about  for  VYMUN  2025!  2.  Theme  for  VYMUN  Sr.  and  Jr?  a.  Metamorphosis/Change  -  Quinton  b.  A  new  chapter/horizons  -  Mrs  Haider  c.  VYMUN  new  generation  -  Mrs  Boland  d.  Fight  for  democracy  -  Mrs  Boland  e.  Voice/Positive  Discussion/Productive  Discourse  -  Mrs  Haider  f.  The  Room  where  it  happens/presence  g.  Contribution  -  Ann  3.  Financials  (Mrs.  Haider)  a.  Larger  budget  this  year  -  may  inﬂuence  price  for  delegates  b.  We  do  not  buy  anything  ourselves,  go  through  Mrs  Boland/Mrs  Haider  i.  Let  them  know  if  you  have  ideas  4.  Secretariat  Roles  &  Job  Descriptions.  a.   Secretariat Job Descriptions VYMUN 2025 b.  Feedback/questions  about  roles  and  responsibilities  5.  Weekly  Zoom  meeting  schedule   i.  Deﬁnitely  Not :  Friday(Haider  and  Boland),  Monday  (Frankie),\nThursday\n\n(Quinton)\n b.  Tuesday  at  7PM  c.  Backup:  Thursday  at  7PM  d.  Start  April  28th  Conference:  (24th  -  26th)  -  Explore  starting  earlier  on  Friday  (start  at  10-11AM  -  Sec  set  up  in  morning)  6.  Staﬀ  hiring:  a.  Process  i.  James  has  old  form,  Ann  has  old  poster  ii.  Put  in  DAs  iii.  One  application  for  both  Sr  and  Jr  1.  Open  Jr  up  to  younger  applicants  for  Chair/AD  positions  2.  Experienced  MUNers  3.  Write  on  form  more  info  about  Jr  and  Sr  so  they  are  more\neducated\n\nto\n\nmake\n\na\n\ndecision\n b.  Deadlines  i.  May  2nd  -  Application  Deadline  c.  Advertising:  Email  to  MUN  club,  DA’s,  The  Howl"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_6448cad81c690415#section-1",
+      "quote": "April  15th,  2025  Glass  Room   Present:  Ann,  Elliot,  Quinton,  Mrs.  Haider,  Owen,  Ms.  Boland,  James,  Frankie,  Hugo  Absent:  Evangeline,  Sheree   1.  Welcome!  Congrats!  a.  Shared  what  everyone’s  excited  about  for  VYMUN  2025!  2.  Theme  for  VYMUN  Sr.  and  Jr?  a.  Metamorphosis/Change  -  Quinton  b.  A  new  chapter/horizons  -  Mrs  Haider  c.  VYMUN  new  generation  -  Mrs  Boland  d.  Fight  for  democracy  -  Mrs  Boland  e.  Voice/Positive  Discussion/Productive  Discourse  -  Mrs  Haider  f.  The  Room  where  it  happens/presence  g.  Contribution  -  Ann  3.  Financials  (Mrs.  Haider)  a.  Larger  budget  this  year  -  may  inﬂuence  price  for  delegates  b.  We  do  not  buy  anything  ourselves,  go  through  Mrs  Boland/Mrs  Haider  i.  Let  them  know  if  you  have  ideas  4.  Secretariat  Roles  &  Job  Descriptions.  a.   Secretariat Job Descriptions VYMUN 2025 b.  Feedback/questions  about  roles  and  responsibilities  5.  Weekly  Zoom  meeting  schedule   i.  Deﬁnitely  Not :  Friday(Haider  and  Boland),  Monday  (Frankie),\nThursday\n\n(Quinton)\n b.  Tuesday  at  7PM  c.  Backup:  Thursday  at  7PM  d.  Start  April  28th  Conference:  (24th  -  26th)  -  Explore  starting  earlier  on  Friday  (start  at  10-11AM  -  Sec  set  up  in  morning)  6.  Staﬀ  hiring:  a.  Process  i.  James  has  old  form,  Ann  has  old  poster  ii.  Put  in  DAs  iii.  One  application  for  both  Sr  and  Jr  1.  Open  Jr  up  to  younger  applicants  for  Chair/AD  positions  2.  Experienced  MUNers  3.  Write  on  form  more  info  about  Jr  and  Sr  so  they  are  more\neducated\n\nto\n\nmake\n\na\n\ndecision\n b.  Deadlines  i.  May  2nd  -  Application  Deadline  c.  Advertising:  Email  to  MUN  club,  DA’s,  The  Howl",
+      "workspace": "local_upload",
+      "document_id": "file_6448cad81c690415",
+      "document_title": "Meeting_1__April_15th_2025_20260629_053900.pdf",
+      "section_heading": "Document",
+      "page": 1
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "Document",
+        "text": "April  15th,  2025  Glass  Room   Present:  Ann,  Elliot,  Quinton,  Mrs.  Haider,  Owen,  Ms.  Boland,  James,  Frankie,  Hugo  Absent:  Evangeline,  Sheree   1.  Welcome!  Congrats!  a.  Shared  what  everyone’s  excited  about  for  VYMUN  2025!  2.  Theme  for  VYMUN  Sr.  and  Jr?  a.  Metamorphosis/Change  -  Quinton  b.  A  new  chapter/horizons  -  Mrs  Haider  c.  VYMUN  new  generation  -  Mrs  Boland  d.  Fight  for  democracy  -  Mrs  Boland  e.  Voice/Positive  Discussion/Productive  Discourse  -  Mrs  Haider  f.  The  Room  where  it  happens/presence  g.  Contribution  -  Ann  3.  Financials  (Mrs.  Haider)  a.  Larger  budget  this  year  -  may  inﬂuence  price  for  delegates  b.  We  do  not  buy  anything  ourselves,  go  through  Mrs  Boland/Mrs  Haider  i.  Let  them  know  if  you  have  ideas  4.  Secretariat  Roles  &  Job  Descriptions.  a.   Secretariat Job Descriptions VYMUN 2025 b.  Feedback/questions  about  roles  and  responsibilities  5.  Weekly  Zoom  meeting  schedule   i.  Deﬁnitely  Not :  Friday(Haider  and  Boland),  Monday  (Frankie),\nThursday\n\n(Quinton)\n b.  Tuesday  at  7PM  c.  Backup:  Thursday  at  7PM  d.  Start  April  28th  Conference:  (24th  -  26th)  -  Explore  starting  earlier  on  Friday  (start  at  10-11AM  -  Sec  set  up  in  morning)  6.  Staﬀ  hiring:  a.  Process  i.  James  has  old  form,  Ann  has  old  poster  ii.  Put  in  DAs  iii.  One  application  for  both  Sr  and  Jr  1.  Open  Jr  up  to  younger  applicants  for  Chair/AD  positions  2.  Experienced  MUNers  3.  Write  on  form  more  info  about  Jr  and  Sr  so  they  are  more\neducated\n\nto\n\nmake\n\na\n\ndecision\n b.  Deadlines  i.  May  2nd  -  Application  Deadline  c.  Advertising:  Email  to  MUN  club,  DA’s,  The  Howl",
+        "page": 1
+      },
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_6448cad81c690415",
+        "title": "Meeting_1__April_15th_2025_20260629_053900.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_053900.pdf",
+        "updated_at": "2026-06-29T05:39:00.448816+00:00"
+      }
+    }
+  },
+  {
+    "event_id": "uploaded_document_file_6448cad81c690415_section_2",
+    "source_type": "uploaded_document",
+    "source_subtype": "document_section",
+    "external_id": "file_6448cad81c690415#section-2",
+    "source_url": null,
+    "workspace": {
+      "name": "local_upload"
+    },
+    "container": {
+      "type": "document",
+      "id": "file_6448cad81c690415",
+      "name": "Meeting_1__April_15th_2025_20260629_053900.pdf"
+    },
+    "context": {
+      "type": "document",
+      "root_id": "file_6448cad81c690415",
+      "section_heading": "Document"
+    },
+    "actor": {
+      "name": null,
+      "role": null
+    },
+    "event_type": "document_section",
+    "created_at": null,
+    "updated_at": "2026-06-29T05:39:00.448816+00:00",
+    "content": {
+      "text": "To  be  Discussed  Next  TIme:   7.  Media:  a.  Website  b.  Instagram  Action  Items:    Edit  the  staﬀ  application  form,  put  onto  DA/Howl  James Wang Include  USG  of  Crisis  and  Media  (Rest  of  crisis/media  can  be  separate)   Poll/email  teachers  if  they  would  be  willing  to  start  at  Frances Nakhuda12:00pm/welcome  email   meet  +  talk  about  vymun  jr  vision  (e.g.  staﬀing)  Hugo Chung Evangeline Zixuan Lin Slide  deck  to  present  to  Junior  School  before  the  end  of  the  school  year   Brainstorming  ideas   Zi Kun Meng   Changes:  -  Some  committees  may  need  three  topics"
+    },
+    "provenance": {
+      "source_type": "uploaded_document",
+      "locator": "file_6448cad81c690415#section-2",
+      "quote": "To  be  Discussed  Next  TIme:   7.  Media:  a.  Website  b.  Instagram  Action  Items:    Edit  the  staﬀ  application  form,  put  onto  DA/Howl  James Wang Include  USG  of  Crisis  and  Media  (Rest  of  crisis/media  can  be  separate)   Poll/email  teachers  if  they  would  be  willing  to  start  at  Frances Nakhuda12:00pm/welcome  email   meet  +  talk  about  vymun  jr  vision  (e.g.  staﬀing)  Hugo Chung Evangeline Zixuan Lin Slide  deck  to  present  to  Junior  School  before  the  end  of  the  school  year   Brainstorming  ideas   Zi Kun Meng   Changes:  -  Some  committees  may  need  three  topics",
+      "workspace": "local_upload",
+      "document_id": "file_6448cad81c690415",
+      "document_title": "Meeting_1__April_15th_2025_20260629_053900.pdf",
+      "section_heading": "Document",
+      "page": 2
+    },
+    "raw_ref": {
+      "source": "uploaded_document",
+      "section": {
+        "heading": "Document",
+        "text": "To  be  Discussed  Next  TIme:   7.  Media:  a.  Website  b.  Instagram  Action  Items:    Edit  the  staﬀ  application  form,  put  onto  DA/Howl  James Wang Include  USG  of  Crisis  and  Media  (Rest  of  crisis/media  can  be  separate)   Poll/email  teachers  if  they  would  be  willing  to  start  at  Frances Nakhuda12:00pm/welcome  email   meet  +  talk  about  vymun  jr  vision  (e.g.  staﬀing)  Hugo Chung Evangeline Zixuan Lin Slide  deck  to  present  to  Junior  School  before  the  end  of  the  school  year   Brainstorming  ideas   Zi Kun Meng   Changes:  -  Some  committees  may  need  three  topics",
+        "page": 2
+      },
+      "document": {
+        "source_type": "uploaded_document",
+        "document_id": "file_6448cad81c690415",
+        "title": "Meeting_1__April_15th_2025_20260629_053900.pdf",
+        "workspace": "local_upload",
+        "path": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_053900.pdf",
+        "updated_at": "2026-06-29T05:39:00.448816+00:00"
+      }
+    }
+  }
+]

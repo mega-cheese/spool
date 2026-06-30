@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/Training Meeting Notes .pdf",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "generated_at": "2026-06-30T22:12:06.027232+00:00",
+    "review_item_count": 1
+  },
+  "items": [
+    {
+      "review_id": "review_d6fa5dd356fe",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Task table may have been under-extracted",
+      "summary": "Document appears to contain a task table, but many likely task rows were not extracted.",
+      "candidate_decision": "Task table may have been under-extracted",
+      "reason": "extraction_warning",
+      "recommended_action": "Review block classification and task extraction output.",
+      "source_event_ids": [
+        "uploaded_document_file_2f94e7dc9d4ff24d_section_2"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_2",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_2f94e7dc9d4ff24d",
+          "document_title": "Training Meeting Notes .pdf",
+          "section_heading": "Overview",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_2f94e7dc9d4ff24d#section-2",
+          "page": 1,
+          "url": null,
+          "quote": "Script: Have Corina shorten the script\n         Slideshow: Have Angela design the slide and match it to the script\n         Kahoot/Icebreaker/Mini Discussions: Have Leanna make a 7-10 question kahoot (or find\n         one online). Review the icebreakers on the slideshow, and change them how you see fit.\n         Add notes for mini discussions: what is the question, and when during the meeting?\n         Breakout Rooms (TENTATIVE): Who has never peer tutored and can’t answer\n         questions?\n         Feedback Form: Have Amanda shorten the feedback form.\n         We will do a debrief of the training session after it is over/the next day."
+        }
+      ],
+      "related_candidate_ids": [],
+      "created_at": "2026-06-30T22:12:06.027232+00:00"
+    }
+  ]
+}

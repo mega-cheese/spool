@@ -1,0 +1,12 @@
+{
+  "input_file": "/Users/admin/Downloads/Meeting #5_ May 20th, 2025.pdf",
+  "mode": "heuristic",
+  "pipeline": "candidates-shadow",
+  "classification": "meeting_minutes",
+  "generated_at": "2026-06-30T22:11:56.762876+00:00",
+  "meeting_date": "2025-05-20",
+  "location": "Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+  "present": [],
+  "absent": [],
+  "source_event_count": 8
+}

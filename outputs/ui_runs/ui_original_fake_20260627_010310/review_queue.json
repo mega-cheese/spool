@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "input_file": "data/original_fake.json",
+    "mode": "llm",
+    "pipeline": "candidates-shadow",
+    "generated_at": "2026-06-27T01:03:24.422441+00:00",
+    "review_item_count": 1
+  },
+  "items": [
+    {
+      "review_id": "review_e29b250d7831",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Decision needs human review",
+      "summary": "The system found a possible decision but does not have enough evidence to safely write it to clean memory.",
+      "candidate_decision": "Possible decision from source thread.",
+      "reason": "approval_missing",
+      "recommended_action": "Confirm whether this should enter clean memory.",
+      "source_event_ids": [
+        "slack_C_RANDOM_1782203000_000100",
+        "slack_C_RANDOM_1782203060_000200"
+      ],
+      "sources": [
+        {
+          "source_event_id": "slack_C_RANDOM_1782203000_000100",
+          "source_type": "slack",
+          "source_subtype": "message",
+          "actor": "Nina Patel",
+          "actor_role": "Designer",
+          "quote": "The new launch poster looks sharp. Lunch at noon?",
+          "locator": "1782203000.000100",
+          "url": null
+        },
+        {
+          "source_event_id": "slack_C_RANDOM_1782203060_000200",
+          "source_type": "slack",
+          "source_subtype": "message",
+          "actor": "Sarah Kim",
+          "actor_role": "Head of Sales",
+          "quote": "Yes, let's grab sandwiches after the standup.",
+          "locator": "1782203060.000200",
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [],
+      "created_at": "2026-06-27T01:03:24.422441+00:00"
+    }
+  ]
+}

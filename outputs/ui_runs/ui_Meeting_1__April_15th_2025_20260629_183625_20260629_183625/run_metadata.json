@@ -1,0 +1,25 @@
+{
+  "run_id": "ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625",
+  "input_file": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_183625.pdf",
+  "mode": "llm",
+  "pipeline": "candidates-shadow",
+  "model": "gpt-4.1-mini",
+  "source_type": "uploaded_document",
+  "created_at": "2026-06-29T18:36:27.515368+00:00",
+  "artifacts": {
+    "decisions": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625/decisions.json",
+    "raw_decisions": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625/raw_decisions.json",
+    "normalized_events_debug": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625/normalized_events_debug.json",
+    "source_bundles_debug": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625/source_bundles_debug.json",
+    "candidates_debug": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625/candidates_debug.json",
+    "state_resolution_debug": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625/state_resolution_debug.json",
+    "conflicts_debug": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625/conflicts_debug.json",
+    "meeting_metadata": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625/meeting_metadata.json",
+    "action_items": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625/action_items.json",
+    "open_questions": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625/open_questions.json",
+    "document_memory_debug": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625/document_memory_debug.json",
+    "review_queue": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625/review_queue.json",
+    "review_queue_md": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625/review_queue.md",
+    "run_metadata": "outputs/ui_runs/ui_Meeting_1__April_15th_2025_20260629_183625_20260629_183625/run_metadata.json"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "run_id": "v080_manual_meeting7",
+  "input_file": "/Users/admin/Downloads/Meeting #7_ August 26th, 2025.pdf",
+  "pipeline": "candidates-shadow",
+  "mode": "heuristic",
+  "created_at": "2026-06-30T22:11:56.998628+00:00",
+  "artifacts": {
+    "decisions": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/decisions.json",
+    "normalized_events_debug": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/normalized_events_debug.json",
+    "source_bundles_debug": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/source_bundles_debug.json",
+    "candidates_debug": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/candidates_debug.json",
+    "state_resolution_debug": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/state_resolution_debug.json",
+    "conflicts_debug": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/conflicts_debug.json",
+    "meeting_metadata": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/meeting_metadata.json",
+    "clean_memory": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/clean_memory.json",
+    "action_items": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/action_items.json",
+    "open_questions": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/open_questions.json",
+    "document_memory_debug": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/document_memory_debug.json",
+    "block_classification_debug": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/block_classification_debug.json",
+    "review_queue": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/review_queue.json",
+    "candidate_memory": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/candidate_memory.json",
+    "approved_memory": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/approved_memory.json",
+    "rejected_memory": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/rejected_memory.json",
+    "review_actions": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/review_actions.json",
+    "memory_state_debug": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/memory_state_debug.json",
+    "review_queue_md": "outputs/manual_v080_meeting7/runs/v080_manual_meeting7/review_queue.md",
+    "raw_decisions": null
+  }
+}

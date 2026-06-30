@@ -1,0 +1,416 @@
+[
+  {
+    "bundle_id": "document_AcmeAI_doc_architecture_decision_001",
+    "bundle_type": "document",
+    "source_types": [
+      "google_doc"
+    ],
+    "root_id": "doc_architecture_decision_001",
+    "title": "Feature Flag Vendor Decision",
+    "time_range": {
+      "start": "2026-10-03T13:00:00Z",
+      "end": "2026-10-03T13:20:00Z"
+    },
+    "events": [
+      {
+        "event_id": "google_doc_doc_architecture_decision_001_section_1",
+        "source_type": "google_doc",
+        "source_subtype": "document_section",
+        "external_id": "doc_architecture_decision_001#section-1",
+        "source_url": "https://docs.google.com/document/d/fake-doc-id",
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "document",
+          "id": "doc_architecture_decision_001",
+          "name": "Feature Flag Vendor Decision"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "doc_architecture_decision_001",
+          "section_heading": "Decision"
+        },
+        "actor": {
+          "name": "Priya Shah",
+          "role": "Staff Engineer"
+        },
+        "event_type": "document_section",
+        "created_at": "2026-10-03T13:00:00Z",
+        "updated_at": "2026-10-03T13:20:00Z",
+        "content": {
+          "text": "Final decision: use LaunchDarkly for feature flags."
+        },
+        "provenance": {
+          "source_type": "google_doc",
+          "locator": "doc_architecture_decision_001#section-1",
+          "quote": "Final decision: use LaunchDarkly for feature flags.",
+          "workspace": "AcmeAI",
+          "document_id": "doc_architecture_decision_001",
+          "document_title": "Feature Flag Vendor Decision",
+          "section_heading": "Decision"
+        },
+        "raw_ref": {
+          "source": "document_fixture",
+          "section": {
+            "heading": "Decision",
+            "text": "Final decision: use LaunchDarkly for feature flags."
+          },
+          "document": {
+            "source_type": "google_doc",
+            "document_id": "doc_architecture_decision_001",
+            "title": "Feature Flag Vendor Decision",
+            "workspace": "AcmeAI",
+            "created_at": "2026-10-03T13:00:00Z",
+            "updated_at": "2026-10-03T13:20:00Z",
+            "author": "Priya Shah",
+            "author_role": "Staff Engineer",
+            "url": "https://docs.google.com/document/d/fake-doc-id"
+          }
+        }
+      },
+      {
+        "event_id": "google_doc_doc_architecture_decision_001_section_2",
+        "source_type": "google_doc",
+        "source_subtype": "document_section",
+        "external_id": "doc_architecture_decision_001#section-2",
+        "source_url": "https://docs.google.com/document/d/fake-doc-id",
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "document",
+          "id": "doc_architecture_decision_001",
+          "name": "Feature Flag Vendor Decision"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "doc_architecture_decision_001",
+          "section_heading": "Owner"
+        },
+        "actor": {
+          "name": "Priya Shah",
+          "role": "Staff Engineer"
+        },
+        "event_type": "document_section",
+        "created_at": "2026-10-03T13:00:00Z",
+        "updated_at": "2026-10-03T13:20:00Z",
+        "content": {
+          "text": "Priya Shah owns implementation."
+        },
+        "provenance": {
+          "source_type": "google_doc",
+          "locator": "doc_architecture_decision_001#section-2",
+          "quote": "Priya Shah owns implementation.",
+          "workspace": "AcmeAI",
+          "document_id": "doc_architecture_decision_001",
+          "document_title": "Feature Flag Vendor Decision",
+          "section_heading": "Owner"
+        },
+        "raw_ref": {
+          "source": "document_fixture",
+          "section": {
+            "heading": "Owner",
+            "text": "Priya Shah owns implementation."
+          },
+          "document": {
+            "source_type": "google_doc",
+            "document_id": "doc_architecture_decision_001",
+            "title": "Feature Flag Vendor Decision",
+            "workspace": "AcmeAI",
+            "created_at": "2026-10-03T13:00:00Z",
+            "updated_at": "2026-10-03T13:20:00Z",
+            "author": "Priya Shah",
+            "author_role": "Staff Engineer",
+            "url": "https://docs.google.com/document/d/fake-doc-id"
+          }
+        }
+      },
+      {
+        "event_id": "google_doc_doc_architecture_decision_001_section_3",
+        "source_type": "google_doc",
+        "source_subtype": "document_section",
+        "external_id": "doc_architecture_decision_001#section-3",
+        "source_url": "https://docs.google.com/document/d/fake-doc-id",
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "document",
+          "id": "doc_architecture_decision_001",
+          "name": "Feature Flag Vendor Decision"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "doc_architecture_decision_001",
+          "section_heading": "Rationale"
+        },
+        "actor": {
+          "name": "Priya Shah",
+          "role": "Staff Engineer"
+        },
+        "event_type": "document_section",
+        "created_at": "2026-10-03T13:00:00Z",
+        "updated_at": "2026-10-03T13:20:00Z",
+        "content": {
+          "text": "LaunchDarkly supports audit requirements and the SDK is already tested in staging."
+        },
+        "provenance": {
+          "source_type": "google_doc",
+          "locator": "doc_architecture_decision_001#section-3",
+          "quote": "LaunchDarkly supports audit requirements and the SDK is already tested in staging.",
+          "workspace": "AcmeAI",
+          "document_id": "doc_architecture_decision_001",
+          "document_title": "Feature Flag Vendor Decision",
+          "section_heading": "Rationale"
+        },
+        "raw_ref": {
+          "source": "document_fixture",
+          "section": {
+            "heading": "Rationale",
+            "text": "LaunchDarkly supports audit requirements and the SDK is already tested in staging."
+          },
+          "document": {
+            "source_type": "google_doc",
+            "document_id": "doc_architecture_decision_001",
+            "title": "Feature Flag Vendor Decision",
+            "workspace": "AcmeAI",
+            "created_at": "2026-10-03T13:00:00Z",
+            "updated_at": "2026-10-03T13:20:00Z",
+            "author": "Priya Shah",
+            "author_role": "Staff Engineer",
+            "url": "https://docs.google.com/document/d/fake-doc-id"
+          }
+        }
+      },
+      {
+        "event_id": "google_doc_doc_architecture_decision_001_section_4",
+        "source_type": "google_doc",
+        "source_subtype": "document_section",
+        "external_id": "doc_architecture_decision_001#section-4",
+        "source_url": "https://docs.google.com/document/d/fake-doc-id",
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "document",
+          "id": "doc_architecture_decision_001",
+          "name": "Feature Flag Vendor Decision"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "doc_architecture_decision_001",
+          "section_heading": "Rejected Alternatives"
+        },
+        "actor": {
+          "name": "Priya Shah",
+          "role": "Staff Engineer"
+        },
+        "event_type": "document_section",
+        "created_at": "2026-10-03T13:00:00Z",
+        "updated_at": "2026-10-03T13:20:00Z",
+        "content": {
+          "text": "ConfigCat was cheaper, but migration would take longer because we would need to rebuild the flag evaluation wrapper."
+        },
+        "provenance": {
+          "source_type": "google_doc",
+          "locator": "doc_architecture_decision_001#section-4",
+          "quote": "ConfigCat was cheaper, but migration would take longer because we would need to rebuild the flag evaluation wrapper.",
+          "workspace": "AcmeAI",
+          "document_id": "doc_architecture_decision_001",
+          "document_title": "Feature Flag Vendor Decision",
+          "section_heading": "Rejected Alternatives"
+        },
+        "raw_ref": {
+          "source": "document_fixture",
+          "section": {
+            "heading": "Rejected Alternatives",
+            "text": "ConfigCat was cheaper, but migration would take longer because we would need to rebuild the flag evaluation wrapper."
+          },
+          "document": {
+            "source_type": "google_doc",
+            "document_id": "doc_architecture_decision_001",
+            "title": "Feature Flag Vendor Decision",
+            "workspace": "AcmeAI",
+            "created_at": "2026-10-03T13:00:00Z",
+            "updated_at": "2026-10-03T13:20:00Z",
+            "author": "Priya Shah",
+            "author_role": "Staff Engineer",
+            "url": "https://docs.google.com/document/d/fake-doc-id"
+          }
+        }
+      },
+      {
+        "event_id": "google_doc_doc_architecture_decision_001_section_5",
+        "source_type": "google_doc",
+        "source_subtype": "document_section",
+        "external_id": "doc_architecture_decision_001#section-5",
+        "source_url": "https://docs.google.com/document/d/fake-doc-id",
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "document",
+          "id": "doc_architecture_decision_001",
+          "name": "Feature Flag Vendor Decision"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "doc_architecture_decision_001",
+          "section_heading": "Tradeoff"
+        },
+        "actor": {
+          "name": "Priya Shah",
+          "role": "Staff Engineer"
+        },
+        "event_type": "document_section",
+        "created_at": "2026-10-03T13:00:00Z",
+        "updated_at": "2026-10-03T13:20:00Z",
+        "content": {
+          "text": "The tradeoff with LaunchDarkly is higher monthly spend."
+        },
+        "provenance": {
+          "source_type": "google_doc",
+          "locator": "doc_architecture_decision_001#section-5",
+          "quote": "The tradeoff with LaunchDarkly is higher monthly spend.",
+          "workspace": "AcmeAI",
+          "document_id": "doc_architecture_decision_001",
+          "document_title": "Feature Flag Vendor Decision",
+          "section_heading": "Tradeoff"
+        },
+        "raw_ref": {
+          "source": "document_fixture",
+          "section": {
+            "heading": "Tradeoff",
+            "text": "The tradeoff with LaunchDarkly is higher monthly spend."
+          },
+          "document": {
+            "source_type": "google_doc",
+            "document_id": "doc_architecture_decision_001",
+            "title": "Feature Flag Vendor Decision",
+            "workspace": "AcmeAI",
+            "created_at": "2026-10-03T13:00:00Z",
+            "updated_at": "2026-10-03T13:20:00Z",
+            "author": "Priya Shah",
+            "author_role": "Staff Engineer",
+            "url": "https://docs.google.com/document/d/fake-doc-id"
+          }
+        }
+      },
+      {
+        "event_id": "google_doc_doc_architecture_decision_001_section_6",
+        "source_type": "google_doc",
+        "source_subtype": "document_section",
+        "external_id": "doc_architecture_decision_001#section-6",
+        "source_url": "https://docs.google.com/document/d/fake-doc-id",
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "document",
+          "id": "doc_architecture_decision_001",
+          "name": "Feature Flag Vendor Decision"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "doc_architecture_decision_001",
+          "section_heading": "Timeline"
+        },
+        "actor": {
+          "name": "Priya Shah",
+          "role": "Staff Engineer"
+        },
+        "event_type": "document_section",
+        "created_at": "2026-10-03T13:00:00Z",
+        "updated_at": "2026-10-03T13:20:00Z",
+        "content": {
+          "text": "Implementation can finish in about eight business days."
+        },
+        "provenance": {
+          "source_type": "google_doc",
+          "locator": "doc_architecture_decision_001#section-6",
+          "quote": "Implementation can finish in about eight business days.",
+          "workspace": "AcmeAI",
+          "document_id": "doc_architecture_decision_001",
+          "document_title": "Feature Flag Vendor Decision",
+          "section_heading": "Timeline"
+        },
+        "raw_ref": {
+          "source": "document_fixture",
+          "section": {
+            "heading": "Timeline",
+            "text": "Implementation can finish in about eight business days."
+          },
+          "document": {
+            "source_type": "google_doc",
+            "document_id": "doc_architecture_decision_001",
+            "title": "Feature Flag Vendor Decision",
+            "workspace": "AcmeAI",
+            "created_at": "2026-10-03T13:00:00Z",
+            "updated_at": "2026-10-03T13:20:00Z",
+            "author": "Priya Shah",
+            "author_role": "Staff Engineer",
+            "url": "https://docs.google.com/document/d/fake-doc-id"
+          }
+        }
+      },
+      {
+        "event_id": "google_doc_doc_architecture_decision_001_section_7",
+        "source_type": "google_doc",
+        "source_subtype": "document_section",
+        "external_id": "doc_architecture_decision_001#section-7",
+        "source_url": "https://docs.google.com/document/d/fake-doc-id",
+        "workspace": {
+          "name": "AcmeAI"
+        },
+        "container": {
+          "type": "document",
+          "id": "doc_architecture_decision_001",
+          "name": "Feature Flag Vendor Decision"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "doc_architecture_decision_001",
+          "section_heading": "Review"
+        },
+        "actor": {
+          "name": "Priya Shah",
+          "role": "Staff Engineer"
+        },
+        "event_type": "document_section",
+        "created_at": "2026-10-03T13:00:00Z",
+        "updated_at": "2026-10-03T13:20:00Z",
+        "content": {
+          "text": "Review flag hygiene after 45 days."
+        },
+        "provenance": {
+          "source_type": "google_doc",
+          "locator": "doc_architecture_decision_001#section-7",
+          "quote": "Review flag hygiene after 45 days.",
+          "workspace": "AcmeAI",
+          "document_id": "doc_architecture_decision_001",
+          "document_title": "Feature Flag Vendor Decision",
+          "section_heading": "Review"
+        },
+        "raw_ref": {
+          "source": "document_fixture",
+          "section": {
+            "heading": "Review",
+            "text": "Review flag hygiene after 45 days."
+          },
+          "document": {
+            "source_type": "google_doc",
+            "document_id": "doc_architecture_decision_001",
+            "title": "Feature Flag Vendor Decision",
+            "workspace": "AcmeAI",
+            "created_at": "2026-10-03T13:00:00Z",
+            "updated_at": "2026-10-03T13:20:00Z",
+            "author": "Priya Shah",
+            "author_role": "Staff Engineer",
+            "url": "https://docs.google.com/document/d/fake-doc-id"
+          }
+        }
+      }
+    ]
+  }
+]

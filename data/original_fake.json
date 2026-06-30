@@ -1,0 +1,104 @@
+
+{
+  "workspace": "AcmeAI",
+  "channels": [
+    {
+      "channel": "product-strategy",
+      "channel_id": "C_PRODUCT",
+      "messages": [
+        {
+          "ts": "1782201000.000100",
+          "thread_ts": "1782201000.000100",
+          "date": "2026-06-23",
+          "user_name": "Maya Chen",
+          "role": "VP Product",
+          "text": "I think we should delay the enterprise launch until SOC 2 is complete. Two pilot customers said security review will block us without it."
+        },
+        {
+          "ts": "1782201060.000200",
+          "thread_ts": "1782201000.000100",
+          "date": "2026-06-23",
+          "user_name": "Leo Park",
+          "role": "CTO",
+          "text": "Agreed. Without audit logs and SSO, security review will probably fail. Engineering needs about four more weeks."
+        },
+        {
+          "ts": "1782201120.000300",
+          "thread_ts": "1782201000.000100",
+          "date": "2026-06-23",
+          "user_name": "Sarah Kim",
+          "role": "Head of Sales",
+          "text": "I'm concerned the delay could hurt Q3 pipeline, but assuming the pilots will wait, this is still safer. Let's revisit on 2026-09-12."
+        },
+        {
+          "ts": "1782201180.000400",
+          "thread_ts": "1782201000.000100",
+          "date": "2026-06-23",
+          "user_name": "Maya Chen",
+          "role": "VP Product",
+          "text": "Final decision: delay launch until SOC 2 is complete and revisit on 2026-09-12."
+        }
+      ]
+    },
+    {
+      "channel": "engineering",
+      "channel_id": "C_ENG",
+      "messages": [
+        {
+          "ts": "1782202000.000100",
+          "thread_ts": "1782202000.000100",
+          "date": "2026-06-23",
+          "user_name": "Leo Park",
+          "role": "CTO",
+          "text": "Proposal: use Redis for session state because Postgres latency is too high under load."
+        },
+        {
+          "ts": "1782202060.000200",
+          "thread_ts": "1782202000.000100",
+          "date": "2026-06-23",
+          "user_name": "Priya Shah",
+          "role": "Staff Engineer",
+          "text": "I agree. The tradeoff is extra infra complexity, but latency is the bigger risk."
+        },
+        {
+          "ts": "1782202120.000300",
+          "thread_ts": "1782202000.000100",
+          "date": "2026-06-23",
+          "user_name": "Owen Diaz",
+          "role": "Engineering Manager",
+          "text": "If Redis becomes a bottleneck later, we can revisit the design after launch."
+        },
+        {
+          "ts": "1782202180.000400",
+          "thread_ts": "1782202000.000100",
+          "date": "2026-06-23",
+          "user_name": "Leo Park",
+          "role": "CTO",
+          "text": "Approved, let's move forward with Redis for session state."
+        }
+      ]
+    },
+    {
+      "channel": "random",
+      "channel_id": "C_RANDOM",
+      "messages": [
+        {
+          "ts": "1782203000.000100",
+          "thread_ts": "1782203000.000100",
+          "date": "2026-06-23",
+          "user_name": "Nina Patel",
+          "role": "Designer",
+          "text": "The new launch poster looks sharp. Lunch at noon?"
+        },
+        {
+          "ts": "1782203060.000200",
+          "thread_ts": "1782203000.000100",
+          "date": "2026-06-23",
+          "user_name": "Sarah Kim",
+          "role": "Head of Sales",
+          "text": "Yes, let's grab sandwiches after the standup."
+        }
+      ]
+    }
+  ]
+}

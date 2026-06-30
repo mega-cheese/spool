@@ -1,0 +1,51 @@
+{
+  "workspace": "AcmeAI",
+  "channels": [
+    {
+      "channel": "mobile",
+      "channel_id": "C_MOBILE",
+      "messages": [
+        {
+          "ts": "1791010000.000100",
+          "thread_ts": "1791010000.000100",
+          "date": "2026-08-21",
+          "user_name": "Nina Patel",
+          "role": "Head of Growth",
+          "text": "Can we discuss whether we should build a native Android app before the partner summit? A few prospects have asked about it."
+        },
+        {
+          "ts": "1791010060.000200",
+          "thread_ts": "1791010000.000100",
+          "date": "2026-08-21",
+          "user_name": "Priya Shah",
+          "role": "Staff Engineer",
+          "text": "Android is possible, but it would pull people off onboarding and analytics. I don't think we have a clean estimate yet."
+        },
+        {
+          "ts": "1791010120.000300",
+          "thread_ts": "1791010000.000100",
+          "date": "2026-08-21",
+          "user_name": "Sarah Kim",
+          "role": "Head of Sales",
+          "text": "Sales would love it, but I don't know if it actually unblocks deals. Most of the asks are more like nice-to-have comments."
+        },
+        {
+          "ts": "1791010180.000400",
+          "thread_ts": "1791010000.000100",
+          "date": "2026-08-21",
+          "user_name": "Leo Park",
+          "role": "CTO",
+          "text": "Let's not decide today. Priya, can you size Android, mobile web improvements, and doing nothing for the next roadmap review?"
+        },
+        {
+          "ts": "1791010240.000500",
+          "thread_ts": "1791010000.000100",
+          "date": "2026-08-21",
+          "user_name": "Maya Chen",
+          "role": "VP Product",
+          "text": "Agreed. Do not commit yet. We'll revisit once we have usage data and a rough cost estimate."
+        }
+      ]
+    }
+  ]
+}

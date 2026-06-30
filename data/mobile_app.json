@@ -1,0 +1,40 @@
+{
+  "workspace": "AcmeAI",
+  "exported_at": "2026-06-24T00:30:00Z",
+  "channels": [
+    {
+      "channel_id": "C_PRODUCT",
+      "channel_name": "product-strategy",
+      "messages": [
+        {
+          "ts": "1782291600.000100",
+          "user": "Evan Brooks",
+          "role": "Product Manager",
+          "text": "Should we build a lightweight mobile app this quarter? A few enterprise admins asked for mobile approvals, but we don't know if it is a top-three workflow yet.",
+          "thread_ts": "1782291600.000100"
+        },
+        {
+          "ts": "1782291660.000200",
+          "user": "Lena Zhou",
+          "role": "Design Lead",
+          "text": "I would not commit yet. We only have three customer comments, and none of them described daily use. I want discovery calls before we choose native app versus responsive web.",
+          "thread_ts": "1782291600.000100"
+        },
+        {
+          "ts": "1782291720.000300",
+          "user": "Raj Mehta",
+          "role": "Engineering Manager",
+          "text": "Native mobile would take at least eight weeks with the current team. Responsive web changes are probably two weeks, but may not satisfy push-notification requests.",
+          "thread_ts": "1782291600.000100"
+        },
+        {
+          "ts": "1782291780.000400",
+          "user": "Evan Brooks",
+          "role": "Product Manager",
+          "text": "Let's not decide today. Action item: run five admin interviews and bring evidence back next Friday.",
+          "thread_ts": "1782291600.000100"
+        }
+      ]
+    }
+  ]
+}

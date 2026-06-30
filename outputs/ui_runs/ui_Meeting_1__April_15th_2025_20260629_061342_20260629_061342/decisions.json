@@ -1,0 +1,746 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_1__April_15th_2025_20260629_061342.pdf",
+    "decision_count": 8,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-4.1-mini",
+    "verified": true,
+    "generated_at": "2026-06-29T06:13:46.003788+00:00",
+    "raw_validation_issue_count": 0,
+    "clean_validation_issue_count": 0,
+    "removed_claim_count": 0,
+    "repair_count": 0,
+    "postprocessing_change_count": 0
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_0d1b347273eb",
+      "decision": "Weekly Zoom meetings will be Tuesday at 7PM.",
+      "date": "2025-04-15",
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Ann",
+        "Elliot",
+        "Quinton",
+        "Mrs. Haider",
+        "Owen",
+        "Ms. Boland",
+        "James",
+        "Frankie",
+        "Hugo"
+      ],
+      "status": "confirmed",
+      "confidence": 0.9,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Weekly Zoom meetings will be Tuesday at 7PM.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+            "channel_id": "file_6448cad81c690415",
+            "thread_ts": "file_6448cad81c690415",
+            "message_ts": "file_6448cad81c690415#section-3",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "b. Tuesday at 7PM",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-3",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "b. Tuesday at 7PM",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-3",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "b. Tuesday at 7PM",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-3",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "b. Tuesday at 7PM",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_3dc679f245ea",
+      "decision": "Thursday at 7PM is the backup meeting time.",
+      "date": "2025-04-15",
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Ann",
+        "Elliot",
+        "Quinton",
+        "Mrs. Haider",
+        "Owen",
+        "Ms. Boland",
+        "James",
+        "Frankie",
+        "Hugo"
+      ],
+      "status": "confirmed",
+      "confidence": 0.9,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Thursday at 7PM is the backup meeting time.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+            "channel_id": "file_6448cad81c690415",
+            "thread_ts": "file_6448cad81c690415",
+            "message_ts": "file_6448cad81c690415#section-3",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "c. Backup: Thursday at 7PM",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-3",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "c. Backup: Thursday at 7PM",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-3",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "c. Backup: Thursday at 7PM",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-3",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "c. Backup: Thursday at 7PM",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_7e94b9e06e9f",
+      "decision": "Weekly Zoom meetings start April 28th.",
+      "date": "2025-04-28",
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Ann",
+        "Elliot",
+        "Quinton",
+        "Mrs. Haider",
+        "Owen",
+        "Ms. Boland",
+        "James",
+        "Frankie",
+        "Hugo"
+      ],
+      "status": "confirmed",
+      "confidence": 0.9,
+      "effective_date": "2025-04-28",
+      "reasoning": [
+        {
+          "claim": "Weekly Zoom meetings start April 28th.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+            "channel_id": "file_6448cad81c690415",
+            "thread_ts": "file_6448cad81c690415",
+            "message_ts": "file_6448cad81c690415#section-3",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "d. Start April 28th",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-3",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "d. Start April 28th",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-3",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "d. Start April 28th",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-3",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "d. Start April 28th",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_023a19a80b26",
+      "decision": "Staff application deadline is May 2nd.",
+      "date": "2025-05-02",
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Ann",
+        "Elliot",
+        "Quinton",
+        "Mrs. Haider",
+        "Owen",
+        "Ms. Boland",
+        "James",
+        "Frankie",
+        "Hugo"
+      ],
+      "status": "confirmed",
+      "confidence": 0.9,
+      "effective_date": "2025-05-02",
+      "reasoning": [
+        {
+          "claim": "Staff application deadline is May 2nd.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+            "channel_id": "file_6448cad81c690415",
+            "thread_ts": "file_6448cad81c690415",
+            "message_ts": "file_6448cad81c690415#section-4",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "i. May 2nd - Application Deadline",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-4",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "i. May 2nd - Application Deadline",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-4",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "i. May 2nd - Application Deadline",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-4",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "i. May 2nd - Application Deadline",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_a228f26e444d",
+      "decision": "There will be one application for both Sr. and Jr.",
+      "date": "2025-04-15",
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Ann",
+        "Elliot",
+        "Quinton",
+        "Mrs. Haider",
+        "Owen",
+        "Ms. Boland",
+        "James",
+        "Frankie",
+        "Hugo"
+      ],
+      "status": "confirmed",
+      "confidence": 0.9,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "There will be one application for both Sr. and Jr.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+            "channel_id": "file_6448cad81c690415",
+            "thread_ts": "file_6448cad81c690415",
+            "message_ts": "file_6448cad81c690415#section-4",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "iii. One application for both Sr and Jr",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-4",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "iii. One application for both Sr and Jr",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-4",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "iii. One application for both Sr and Jr",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-4",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "iii. One application for both Sr and Jr",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_87750591ce35",
+      "decision": "Jr. positions should be opened to younger applicants for Chair/AD roles.",
+      "date": "2025-04-15",
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Ann",
+        "Elliot",
+        "Quinton",
+        "Mrs. Haider",
+        "Owen",
+        "Ms. Boland",
+        "James",
+        "Frankie",
+        "Hugo"
+      ],
+      "status": "confirmed",
+      "confidence": 0.9,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Jr. positions should be opened to younger applicants for Chair/AD roles.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+            "channel_id": "file_6448cad81c690415",
+            "thread_ts": "file_6448cad81c690415",
+            "message_ts": "file_6448cad81c690415#section-4",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "1. Open Jr up to younger applicants for Chair/AD positions",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-4",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "1. Open Jr up to younger applicants for Chair/AD positions",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-4",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "1. Open Jr up to younger applicants for Chair/AD positions",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-4",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "1. Open Jr up to younger applicants for Chair/AD positions",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_e81233d258e3",
+      "decision": "Purchases should go through Mrs. Boland / Mrs. Haider rather than being bought individually.",
+      "date": "2025-04-15",
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Ann",
+        "Elliot",
+        "Quinton",
+        "Mrs. Haider",
+        "Owen",
+        "Ms. Boland",
+        "James",
+        "Frankie",
+        "Hugo"
+      ],
+      "status": "confirmed",
+      "confidence": 0.9,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Purchases should go through Mrs. Boland / Mrs. Haider rather than being bought individually.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+            "channel_id": "file_6448cad81c690415",
+            "thread_ts": "file_6448cad81c690415",
+            "message_ts": "file_6448cad81c690415#section-2",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "b. We do not buy anything ourselves, go through Mrs Boland/Mrs Haider",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "b. We do not buy anything ourselves, go through Mrs Boland/Mrs Haider",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "b. We do not buy anything ourselves, go through Mrs Boland/Mrs Haider",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "b. We do not buy anything ourselves, go through Mrs Boland/Mrs Haider",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_5f470865bf0b",
+      "decision": "Some committees may need three topics.",
+      "date": "2025-04-15",
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Ann",
+        "Elliot",
+        "Quinton",
+        "Mrs. Haider",
+        "Owen",
+        "Ms. Boland",
+        "James",
+        "Frankie",
+        "Hugo"
+      ],
+      "status": "confirmed",
+      "confidence": 0.72,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Some committees may need three topics.",
+          "support_level": "direct",
+          "confidence": 0.72,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+            "channel_id": "file_6448cad81c690415",
+            "thread_ts": "file_6448cad81c690415",
+            "message_ts": "file_6448cad81c690415#section-7",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "- Some committees may need three topics",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "- Some committees may need three topics",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "- Some committees may need three topics",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_1__April_15th_2025_20260629_061342.pdf",
+          "channel_id": "file_6448cad81c690415",
+          "thread_ts": "file_6448cad81c690415",
+          "message_ts": "file_6448cad81c690415#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "- Some committees may need three topics",
+          "url": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "input_file": "/Users/admin/Downloads/Training Meeting Notes .pdf",
+  "mode": "heuristic",
+  "pipeline": "candidates-shadow",
+  "classification": "meeting_minutes",
+  "generated_at": "2026-06-30T22:12:05.970466+00:00",
+  "meeting_date": null,
+  "location": null,
+  "present": [],
+  "absent": [],
+  "source_event_count": 6
+}

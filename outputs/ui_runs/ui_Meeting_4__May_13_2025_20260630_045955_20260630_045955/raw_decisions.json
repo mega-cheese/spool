@@ -1,0 +1,940 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_4__May_13_2025_20260630_045955.pdf",
+    "decision_count": 12,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-4.1-mini",
+    "verified": true,
+    "generated_at": "2026-06-30T05:00:05.179259+00:00",
+    "validation_issue_count": 0,
+    "validation_issues": [],
+    "raw_validation_issue_count": 0
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_80ed929394",
+      "decision": "Start sending out positions for directors and chairs and start sending out director acceptances after interviews are done.",
+      "date": null,
+      "owner": "James",
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Better to send out all director acceptances at once.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source_message_ts": "file_9389a0b35cf38f8a#section-10",
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-10",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "James: send out director acceptances once interviews are done\n                  Better to do all at once\n                  Send an update (overwhelmed by interest) - with date\n         Sec Bios (Frankie, James, Owen, Quinton, Evangeline) - Thursday May 15\n         Meet tomorrow recess at basketball court - attempt #1\n         Elliott: get a list of what to order\n         Owen to look through old materials\n         Ann and Hugo to go to the rest of the homerooms (2A Thursday)\n         Everyone to look at pin options\n         Hugo and Evangeline to consider guest speaker for junior\n         Ann to ﬁnish website as much as possible by next week (picture dependent)\n         Meet at lunch on Tuesday instead of that night\n         If you did an interview please ﬁll in information so James knows",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [
+        {
+          "action": "James to start sending out director acceptances once interviews are done.",
+          "owner": "James",
+          "due_date": null,
+          "due_text": null,
+          "source_message_ts": "file_9389a0b35cf38f8a#section-10",
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-10",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "James: send out director acceptances once interviews are done\n                  Better to do all at once\n                  Send an update (overwhelmed by interest) - with date\n         Sec Bios (Frankie, James, Owen, Quinton, Evangeline) - Thursday May 15\n         Meet tomorrow recess at basketball court - attempt #1\n         Elliott: get a list of what to order\n         Owen to look through old materials\n         Ann and Hugo to go to the rest of the homerooms (2A Thursday)\n         Everyone to look at pin options\n         Hugo and Evangeline to consider guest speaker for junior\n         Ann to ﬁnish website as much as possible by next week (picture dependent)\n         Meet at lunch on Tuesday instead of that night\n         If you did an interview please ﬁll in information so James knows",
+            "url": null
+          }
+        }
+      ],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-1",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "May 13th, 2025\n\nZoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)\n\n\n    1.   Staﬀing\n             a.   Start sending out positions for directors + chairs\n             b.   James to start sending out director acceptances",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-10",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "James: send out director acceptances once interviews are done\n                  Better to do all at once\n                  Send an update (overwhelmed by interest) - with date\n         Sec Bios (Frankie, James, Owen, Quinton, Evangeline) - Thursday May 15\n         Meet tomorrow recess at basketball court - attempt #1\n         Elliott: get a list of what to order\n         Owen to look through old materials\n         Ann and Hugo to go to the rest of the homerooms (2A Thursday)\n         Everyone to look at pin options\n         Hugo and Evangeline to consider guest speaker for junior\n         Ann to ﬁnish website as much as possible by next week (picture dependent)\n         Meet at lunch on Tuesday instead of that night\n         If you did an interview please ﬁll in information so James knows",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-1",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "May 13th, 2025\n\nZoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)\n\n\n    1.   Staﬀing\n             a.   Start sending out positions for directors + chairs\n             b.   James to start sending out director acceptances",
+          "url": null
+        },
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-10",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "James: send out director acceptances once interviews are done\n                  Better to do all at once\n                  Send an update (overwhelmed by interest) - with date\n         Sec Bios (Frankie, James, Owen, Quinton, Evangeline) - Thursday May 15\n         Meet tomorrow recess at basketball court - attempt #1\n         Elliott: get a list of what to order\n         Owen to look through old materials\n         Ann and Hugo to go to the rest of the homerooms (2A Thursday)\n         Everyone to look at pin options\n         Hugo and Evangeline to consider guest speaker for junior\n         Ann to ﬁnish website as much as possible by next week (picture dependent)\n         Meet at lunch on Tuesday instead of that night\n         If you did an interview please ﬁll in information so James knows",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "file_9389a0b35cf38f8a#section-1"
+    },
+    {
+      "decision_id": "dec_58d61b25dc",
+      "decision": "Confirm theme for the event as 'The Room Where It Happens'.",
+      "date": null,
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "a.       Committees\n                     i.    Wildcard for a passionate director\n                    ii.    Science council over UNEP\n                    iii.   HOC (Harold?) - US Senate a bit too controversial at the moment\n                                1.  Leaning away from current political views\n             b.   Jr committees?\n             c.   UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate)\n                     i.    Depends on how it plays out - not fantasy football\n                    ii.    FIFA council could be acceptable - VMUN had one\n                                1.  Another option is Olympic Committee\n                    iii.   Don’t want to have to write a whole new backgrounder\n                    iv.    UBC could be more suitable\n                     v.    Director is Cameron Stanger (Chair: John Huang)\n    3.   VYMUN Jr.\n             a.   Let the directors decide\n             b.   3 committees: general, specialized and crisis\n                     i.    Have  to make sure the crisis directors are fully prepared\n                    ii.    Harder to manage younger children - timeliness\n                    iii.   Has to be more structured and approved\n    4.   Conﬁrm theme to put on website\n             a.   The Room Where It Happens\n                     i.    conﬁrmed!",
+          "url": null
+        }
+      ],
+      "supporting_sources": [],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "a.       Committees\n                     i.    Wildcard for a passionate director\n                    ii.    Science council over UNEP\n                    iii.   HOC (Harold?) - US Senate a bit too controversial at the moment\n                                1.  Leaning away from current political views\n             b.   Jr committees?\n             c.   UBC VYMUN or Jr: Sports committee idea (John, Cameron, Nate)\n                     i.    Depends on how it plays out - not fantasy football\n                    ii.    FIFA council could be acceptable - VMUN had one\n                                1.  Another option is Olympic Committee\n                    iii.   Don’t want to have to write a whole new backgrounder\n                    iv.    UBC could be more suitable\n                     v.    Director is Cameron Stanger (Chair: John Huang)\n    3.   VYMUN Jr.\n             a.   Let the directors decide\n             b.   3 committees: general, specialized and crisis\n                     i.    Have  to make sure the crisis directors are fully prepared\n                    ii.    Harder to manage younger children - timeliness\n                    iii.   Has to be more structured and approved\n    4.   Conﬁrm theme to put on website\n             a.   The Room Where It Happens\n                     i.    conﬁrmed!",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "file_9389a0b35cf38f8a#section-2"
+    },
+    {
+      "decision_id": "dec_bde3ec4a93",
+      "decision": "Website finish date set as Thursday to update all at once.",
+      "date": null,
+      "owner": "Frankie, James, Owen, Quinton, Evangeline",
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-3",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "a.   Finish by Thursday!!! (so that the website can be updated all at once)\n                     i.    Frankie, James, Owen, Quinton, Evangeline",
+          "url": null
+        }
+      ],
+      "supporting_sources": [],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-3",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "a.   Finish by Thursday!!! (so that the website can be updated all at once)\n                     i.    Frankie, James, Owen, Quinton, Evangeline",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "file_9389a0b35cf38f8a#section-3"
+    },
+    {
+      "decision_id": "dec_b1e0ea292d",
+      "decision": "Mrs. Haider's sister is redesigning the logo for this year, keeping same color scheme but jazzed up, to be done next week.",
+      "date": null,
+      "owner": "Mrs Haider's sister",
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "ii.    Look at menu - look at old orders\n               iii.    Order more\n                iv.    Get started - long process\n         b.   Order more than last year\n8.  Are we re-designing the logo?\n         a.   Mrs Haider’s sister is redesigning logo for this year - done next week\n         b.   Same colour scheme but jazzed up",
+          "url": null
+        }
+      ],
+      "supporting_sources": [],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "ii.    Look at menu - look at old orders\n               iii.    Order more\n                iv.    Get started - long process\n         b.   Order more than last year\n8.  Are we re-designing the logo?\n         a.   Mrs Haider’s sister is redesigning logo for this year - done next week\n         b.   Same colour scheme but jazzed up",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "file_9389a0b35cf38f8a#section-6"
+    },
+    {
+      "decision_id": "dec_95c741950940",
+      "decision": "\"The Room Where It Happens\" is confirmed as the theme to put on the website.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.95,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "\"The Room Where It Happens\" is confirmed as the theme to put on the website.",
+          "support_level": "direct",
+          "confidence": 0.95,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-2",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "2. Committee List 4. Conﬁrm theme to put on website",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List 4. Conﬁrm theme to put on website",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List 4. Conﬁrm theme to put on website",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List 4. Conﬁrm theme to put on website",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_d03c509c8472",
+      "decision": "VYMUN Jr. should have three committees: general, specialized, and crisis.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.9,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "VYMUN Jr. should have three committees: general, specialized, and crisis.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-2",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "2. Committee List b. 3 committees: general, specialized and crisis",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List b. 3 committees: general, specialized and crisis",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List b. 3 committees: general, specialized and crisis",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List b. 3 committees: general, specialized and crisis",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_f5bfc8d9f785",
+      "decision": "The sports committee director is Cameron Stanger and the chair is John Huang.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "The sports committee director is Cameron Stanger and the chair is John Huang.",
+          "support_level": "direct",
+          "confidence": 0.86,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-2",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "2. Committee List v. Director is Cameron Stanger (Chair: John Huang)",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List v. Director is Cameron Stanger (Chair: John Huang)",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List v. Director is Cameron Stanger (Chair: John Huang)",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "2. Committee List v. Director is Cameron Stanger (Chair: John Huang)",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_484959bb40ea",
+      "decision": "Junior registration is 65.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.92,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Junior registration is 65.",
+          "support_level": "direct",
+          "confidence": 0.92,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-7",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "9. Go through materials left from last year i. 65 for junior",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year i. 65 for junior",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year i. 65 for junior",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year i. 65 for junior",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_fda9b82cf268",
+      "decision": "Regular registration is 165.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.9,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Regular registration is 165.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-7",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "9. Go through materials left from last year iii. This year 165 (early 150) for regular",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year iii. This year 165 (early 150) for regular",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year iii. This year 165 (early 150) for regular",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year iii. This year 165 (early 150) for regular",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_c3486916941c",
+      "decision": "Early registration is 150.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.9,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Early registration is 150.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-7",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "9. Go through materials left from last year ii. Last year 150 (early was 135) at regular",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year ii. Last year 150 (early was 135) at regular",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year ii. Last year 150 (early was 135) at regular",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "9. Go through materials left from last year ii. Last year 150 (early was 135) at regular",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_be96bbe1d67b",
+      "decision": "Mrs. Haider's sister is redesigning the logo for this year with the same colour scheme jazzed up.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.88,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Mrs. Haider's sister is redesigning the logo for this year with the same colour scheme jazzed up.",
+          "support_level": "direct",
+          "confidence": 0.88,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-6",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "Document a. Mrs Haider’s sister is redesigning logo for this year - done next week",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Document a. Mrs Haider’s sister is redesigning logo for this year - done next week",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Document a. Mrs Haider’s sister is redesigning logo for this year - done next week",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Document a. Mrs Haider’s sister is redesigning logo for this year - done next week",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_008cee7eb9fb",
+      "decision": "Order more catering than last year.",
+      "date": "2025-05-13",
+      "owner": null,
+      "owner_role": null,
+      "participants": [],
+      "status": "confirmed",
+      "confidence": 0.84,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Order more catering than last year.",
+          "support_level": "direct",
+          "confidence": 0.84,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+            "channel_id": "file_9389a0b35cf38f8a",
+            "thread_ts": "file_9389a0b35cf38f8a",
+            "message_ts": "file_9389a0b35cf38f8a#section-6",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "Document b. Order more than last year",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Document b. Order more than last year",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Document b. Order more than last year",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_4__May_13_2025_20260630_045955.pdf",
+          "channel_id": "file_9389a0b35cf38f8a",
+          "thread_ts": "file_9389a0b35cf38f8a",
+          "message_ts": "file_9389a0b35cf38f8a#section-6",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Document b. Order more than last year",
+          "url": null
+        }
+      ]
+    }
+  ]
+}

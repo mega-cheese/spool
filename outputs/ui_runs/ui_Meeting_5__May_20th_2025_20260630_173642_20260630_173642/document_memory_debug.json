@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_5__May_20th_2025_20260630_173642.pdf",
+    "mode": "llm",
+    "pipeline": "candidates-shadow",
+    "classification": "meeting_minutes",
+    "generated_at": "2026-06-30T17:36:43.862802+00:00"
+  },
+  "classification": "meeting_minutes",
+  "source_headings": [
+    "Document",
+    "1.   SECRETARIAT BIOS - EVANGELINE",
+    "3.   Registration Links for UBC VYMUN - Mrs. Haider",
+    "6.   Director meeting - to determine topics",
+    "7.   Keynote speaker",
+    "8.   Frankie to send out website updates",
+    "9.   Junior zoom meeting",
+    "To Do"
+  ],
+  "memory_objects": [
+    {
+      "object_id": "memory_dc87f9c6db25",
+      "type": "open_question",
+      "title": "Media items, including website and Instagram, are to be discussed next time.",
+      "summary": "Media items, including website and Instagram, are to be discussed next time.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_dfc0cceebce2664c_section_1"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_1",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_173642.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Document May 20th, 2025 Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+          "locator": "file_dfc0cceebce2664c#section-1",
+          "page": 1,
+          "url": null
+        }
+      ],
+      "quote": "Document May 20th, 2025 Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+      "confidence": 0.86
+    },
+    {
+      "object_id": "memory_30ca5687564e",
+      "type": "action_item",
+      "title": "Touch on social media etiquette.",
+      "summary": "Need should touch on social media etiquette.",
+      "owner_names": [
+        "Need"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_dfc0cceebce2664c_section_2"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_2",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_173642.pdf",
+          "section_heading": "1.   SECRETARIAT BIOS - EVANGELINE",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_dfc0cceebce2664c#section-2",
+          "page": 1,
+          "url": null,
+          "quote": "1. SECRETARIAT BIOS - EVANGELINE i. Need to touch on social media etiquette"
+        }
+      ],
+      "quote": "1. SECRETARIAT BIOS - EVANGELINE i. Need to touch on social media etiquette",
+      "confidence": 0.8,
+      "block_id": "block_a3d731453fd4"
+    },
+    {
+      "object_id": "memory_0e9ac1e0bc8d",
+      "type": "action_item",
+      "title": "Email update?",
+      "summary": "Owen should email update?",
+      "owner_names": [
+        "Owen"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_dfc0cceebce2664c_section_3"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_3",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_173642.pdf",
+          "section_heading": "3.   Registration Links for UBC VYMUN - Mrs. Haider",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_dfc0cceebce2664c#section-3",
+          "page": 1,
+          "url": null,
+          "quote": "3. Registration Links for UBC VYMUN - Mrs. Haider 4. Owen - email update?"
+        }
+      ],
+      "quote": "3. Registration Links for UBC VYMUN - Mrs. Haider 4. Owen - email update?",
+      "confidence": 0.8,
+      "block_id": "block_afe2cfc399d6"
+    }
+  ],
+  "review_warnings": [
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Owner-task lines may have been missed",
+      "summary": "Document contains multiple owner-task patterns but few action items were extracted.",
+      "candidate_decision": "Owner-task lines may have been missed",
+      "recommended_action": "Review block classification and task extraction output.",
+      "source_event_ids": [
+        "uploaded_document_file_dfc0cceebce2664c_section_1"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_1",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_173642.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_dfc0cceebce2664c#section-1",
+          "page": 1,
+          "url": null,
+          "quote": "May 20th, 2025\n\nZoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)"
+        }
+      ],
+      "related_candidate_ids": []
+    }
+  ]
+}

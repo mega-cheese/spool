@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "input_file": "data/original_fake.json",
+    "mode": "llm",
+    "pipeline": "candidates-shadow",
+    "classification": "unknown",
+    "generated_at": "2026-06-30T17:34:38.362541+00:00"
+  },
+  "classification": "unknown",
+  "source_headings": [
+    "Document",
+    "Document",
+    "Document",
+    "Document",
+    "Document",
+    "Document",
+    "Document",
+    "Document",
+    "Document",
+    "Document"
+  ],
+  "memory_objects": [],
+  "review_warnings": []
+}

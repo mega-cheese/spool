@@ -1,0 +1,18 @@
+{
+  "run_id": "ui_google_doc_vendor_selection_20260625_080754",
+  "input_file": "data/google_doc_vendor_selection.json",
+  "mode": "llm",
+  "pipeline": "candidates-shadow",
+  "model": "gpt-4.1-mini",
+  "source_type": "google_doc",
+  "created_at": "2026-06-25T08:08:04.116281+00:00",
+  "artifacts": {
+    "decisions": "outputs/ui_runs/ui_google_doc_vendor_selection_20260625_080754/decisions.json",
+    "raw_decisions": "outputs/ui_runs/ui_google_doc_vendor_selection_20260625_080754/raw_decisions.json",
+    "normalized_events_debug": "outputs/ui_runs/ui_google_doc_vendor_selection_20260625_080754/normalized_events_debug.json",
+    "source_bundles_debug": "outputs/ui_runs/ui_google_doc_vendor_selection_20260625_080754/source_bundles_debug.json",
+    "candidates_debug": "outputs/ui_runs/ui_google_doc_vendor_selection_20260625_080754/candidates_debug.json",
+    "state_resolution_debug": "outputs/ui_runs/ui_google_doc_vendor_selection_20260625_080754/state_resolution_debug.json",
+    "run_metadata": "outputs/ui_runs/ui_google_doc_vendor_selection_20260625_080754/run_metadata.json"
+  }
+}

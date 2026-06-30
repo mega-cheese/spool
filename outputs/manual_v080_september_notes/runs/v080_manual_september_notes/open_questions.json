@@ -1,0 +1,11 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/September Meeting Notes.pdf",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "classification": "generic_document",
+    "generated_at": "2026-06-30T22:12:08.461757+00:00",
+    "open_question_count": 0
+  },
+  "open_questions": []
+}

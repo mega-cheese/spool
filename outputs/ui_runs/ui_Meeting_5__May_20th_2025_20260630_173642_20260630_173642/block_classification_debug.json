@@ -1,0 +1,424 @@
+{
+  "blocks": [
+    {
+      "block_id": "block_26884bdd69f5",
+      "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_1",
+      "block_type": "meeting_metadata",
+      "heading": "Document",
+      "text": "May 20th, 2025\n\nZoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+      "lines": [
+        {
+          "text": "May 20th, 2025",
+          "body": "May 20th, 2025",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+          "body": "Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.86,
+      "signals": [
+        "meeting metadata"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 1,
+          "text": "Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)",
+          "body": "Zoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_a3d731453fd4",
+      "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_2",
+      "block_type": "agenda_section",
+      "heading": "1.   SECRETARIAT BIOS - EVANGELINE",
+      "text": "a.   Quinton Done\n    2.   Yapp?\n             a.   Online, good place to communicate with various groups of people\n             b.   Use as a forum\n             c.   Can have all delegates in a chat for an update\n                     i.    Need to touch on social media etiquette",
+      "lines": [
+        {
+          "text": "a. Quinton Done",
+          "body": "Quinton Done",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "2. Yapp?",
+          "body": "Yapp?",
+          "indent": 4,
+          "bullet_marker": "2.",
+          "checkbox": false
+        },
+        {
+          "text": "a. Online, good place to communicate with various groups of people",
+          "body": "Online, good place to communicate with various groups of people",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "b. Use as a forum",
+          "body": "Use as a forum",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "checkbox": false
+        },
+        {
+          "text": "c. Can have all delegates in a chat for an update",
+          "body": "Can have all delegates in a chat for an update",
+          "indent": 13,
+          "bullet_marker": "c.",
+          "checkbox": false
+        },
+        {
+          "text": "i. Need to touch on social media etiquette",
+          "body": "Need to touch on social media etiquette",
+          "indent": 21,
+          "bullet_marker": "i.",
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.74,
+      "signals": [
+        "numbered agenda"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 5,
+          "text": "i. Need to touch on social media etiquette",
+          "body": "Need to touch on social media etiquette"
+        }
+      ],
+      "extracted_action_item_ids": [
+        "memory_30ca5687564e"
+      ]
+    },
+    {
+      "block_id": "block_afe2cfc399d6",
+      "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_3",
+      "block_type": "agenda_section",
+      "heading": "3.   Registration Links for UBC VYMUN - Mrs. Haider",
+      "text": "4.   Owen - email update?\n             a.   https://my.yapp.us/VYMUN\n             b.   No chance yet\n    5.   Director emails?\n             a.   Set these up later, Mrs Haider happy to have them\n             b.   Send position papers to these emails directly",
+      "lines": [
+        {
+          "text": "4. Owen - email update?",
+          "body": "Owen - email update?",
+          "indent": 4,
+          "bullet_marker": "4.",
+          "checkbox": false
+        },
+        {
+          "text": "a. https://my.yapp.us/VYMUN",
+          "body": "https://my.yapp.us/VYMUN",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "b. No chance yet",
+          "body": "No chance yet",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "checkbox": false
+        },
+        {
+          "text": "5. Director emails?",
+          "body": "Director emails?",
+          "indent": 4,
+          "bullet_marker": "5.",
+          "checkbox": false
+        },
+        {
+          "text": "a. Set these up later, Mrs Haider happy to have them",
+          "body": "Set these up later, Mrs Haider happy to have them",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "b. Send position papers to these emails directly",
+          "body": "Send position papers to these emails directly",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.74,
+      "signals": [
+        "numbered agenda"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 0,
+          "text": "4. Owen - email update?",
+          "body": "Owen - email update?"
+        }
+      ],
+      "extracted_action_item_ids": [
+        "memory_0e9ac1e0bc8d"
+      ]
+    },
+    {
+      "block_id": "block_c467579f8e55",
+      "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_4",
+      "block_type": "meeting_metadata",
+      "heading": "6.   Director meeting - to determine topics",
+      "text": "a.   Need to contact Nate Levy\n             b.   Raeann for IPC director",
+      "lines": [
+        {
+          "text": "a. Need to contact Nate Levy",
+          "body": "Need to contact Nate Levy",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "b. Raeann for IPC director",
+          "body": "Raeann for IPC director",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.86,
+      "signals": [
+        "meeting metadata"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 0,
+          "text": "a. Need to contact Nate Levy",
+          "body": "Need to contact Nate Levy"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_3f51898f61e9",
+      "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_5",
+      "block_type": "agenda_section",
+      "heading": "7.   Keynote speaker",
+      "text": "a.   No new updates\n             b.   Not urgent so we’ll stay tuned\n             c.   Tentative yes - interested",
+      "lines": [
+        {
+          "text": "a. No new updates",
+          "body": "No new updates",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "b. Not urgent so we’ll stay tuned",
+          "body": "Not urgent so we’ll stay tuned",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "checkbox": false
+        },
+        {
+          "text": "c. Tentative yes - interested",
+          "body": "Tentative yes - interested",
+          "indent": 13,
+          "bullet_marker": "c.",
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.74,
+      "signals": [
+        "numbered agenda"
+      ],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_ec11a4ac0e83",
+      "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_6",
+      "block_type": "agenda_section",
+      "heading": "8.   Frankie to send out website updates",
+      "text": "a.   Massive message saying website is updated\n             b.   On instagram\n             c.   Once reg link up and running",
+      "lines": [
+        {
+          "text": "a. Massive message saying website is updated",
+          "body": "Massive message saying website is updated",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "b. On instagram",
+          "body": "On instagram",
+          "indent": 13,
+          "bullet_marker": "b.",
+          "checkbox": false
+        },
+        {
+          "text": "c. Once reg link up and running",
+          "body": "Once reg link up and running",
+          "indent": 13,
+          "bullet_marker": "c.",
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.74,
+      "signals": [
+        "numbered agenda"
+      ],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_654f01b2b691",
+      "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_7",
+      "block_type": "agenda_section",
+      "heading": "9.   Junior zoom meeting",
+      "text": "a.   First week of zoom\n    -    Lots of delegates registered for VYMUN Junior\n             -    Momentum\n             -    Evangeline email St Georges?\n             -    Parent zoom meeting for junior school?\n    -    One more visit to the junior school",
+      "lines": [
+        {
+          "text": "a. First week of zoom",
+          "body": "First week of zoom",
+          "indent": 13,
+          "bullet_marker": "a.",
+          "checkbox": false
+        },
+        {
+          "text": "- Lots of delegates registered for VYMUN Junior",
+          "body": "Lots of delegates registered for VYMUN Junior",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Momentum",
+          "body": "Momentum",
+          "indent": 13,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Evangeline email St Georges?",
+          "body": "Evangeline email St Georges?",
+          "indent": 13,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Parent zoom meeting for junior school?",
+          "body": "Parent zoom meeting for junior school?",
+          "indent": 13,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- One more visit to the junior school",
+          "body": "One more visit to the junior school",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.74,
+      "signals": [
+        "numbered agenda"
+      ],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_6fb77ece98d3",
+      "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_8",
+      "block_type": "unknown",
+      "heading": "To Do",
+      "text": "Evangeline sec bio\n         Mrs Haider ask Ms Janzen for reg link\n         James to finalize directors and set a meeting\n         Owen to reach out to schools",
+      "lines": [
+        {
+          "text": "Evangeline sec bio",
+          "body": "Evangeline sec bio",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Mrs Haider ask Ms Janzen for reg link",
+          "body": "Mrs Haider ask Ms Janzen for reg link",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "James to finalize directors and set a meeting",
+          "body": "James to finalize directors and set a meeting",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Owen to reach out to schools",
+          "body": "Owen to reach out to schools",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.45,
+      "signals": [],
+      "likely_task_rows": [
+        {
+          "line_index": 2,
+          "text": "James to finalize directors and set a meeting",
+          "body": "James to finalize directors and set a meeting"
+        },
+        {
+          "line_index": 3,
+          "text": "Owen to reach out to schools",
+          "body": "Owen to reach out to schools"
+        }
+      ],
+      "extracted_action_item_ids": []
+    }
+  ],
+  "coverage_audit_warnings": [
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Owner-task lines may have been missed",
+      "summary": "Document contains multiple owner-task patterns but few action items were extracted.",
+      "candidate_decision": "Owner-task lines may have been missed",
+      "recommended_action": "Review block classification and task extraction output.",
+      "source_event_ids": [
+        "uploaded_document_file_dfc0cceebce2664c_section_1"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_dfc0cceebce2664c_section_1",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_dfc0cceebce2664c",
+          "document_title": "Meeting_5__May_20th_2025_20260630_173642.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_dfc0cceebce2664c#section-1",
+          "page": 1,
+          "url": null,
+          "quote": "May 20th, 2025\n\nZoom: Mrs. Haider’s zoom room (www.wpga.ca/lhaider)"
+        }
+      ],
+      "related_candidate_ids": []
+    }
+  ]
+}

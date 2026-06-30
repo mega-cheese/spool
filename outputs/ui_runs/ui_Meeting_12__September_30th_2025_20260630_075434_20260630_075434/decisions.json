@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_12__September_30th_2025_20260630_075434.pdf",
+    "decision_count": 1,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-4.1-mini",
+    "verified": true,
+    "generated_at": "2026-06-30T07:54:39.381739+00:00",
+    "raw_validation_issue_count": 0,
+    "clean_validation_issue_count": 0,
+    "removed_claim_count": 1,
+    "repair_count": 1,
+    "postprocessing_change_count": 2
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_ac210cb78a",
+      "decision": "Order pizza from Domino's on Broadway for the event with a budget of two slices per person and delivery scheduled for 11:45am.",
+      "date": null,
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Domino's on Broadway offers a deal of $10 per pizza, which fits the budget constraints.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+            "channel_id": "file_b0bf803730892707",
+            "thread_ts": "file_b0bf803730892707",
+            "message_ts": "file_b0bf803730892707#section-9",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices\n per person and delivery for 11:45am (Evangeline & Hugo)\n          11.99/Pizza (They said thats the most they can do?)\n          16 cheese\n          16 pepperoni\n          6 hawaiian\n          Gluten Free/Dairy Free\n          Only vegetables\n          $478 dollars 40 cents\n          Evangeline - Name on order",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+          "channel_id": "file_b0bf803730892707",
+          "thread_ts": "file_b0bf803730892707",
+          "message_ts": "file_b0bf803730892707#section-9",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices\n per person and delivery for 11:45am (Evangeline & Hugo)\n          11.99/Pizza (They said thats the most they can do?)\n          16 cheese\n          16 pepperoni\n          6 hawaiian\n          Gluten Free/Dairy Free\n          Only vegetables\n          $478 dollars 40 cents\n          Evangeline - Name on order",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+          "channel_id": "file_b0bf803730892707",
+          "thread_ts": "file_b0bf803730892707",
+          "message_ts": "file_b0bf803730892707#section-9",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices\n per person and delivery for 11:45am (Evangeline & Hugo)\n          11.99/Pizza (They said thats the most they can do?)\n          16 cheese\n          16 pepperoni\n          6 hawaiian\n          Gluten Free/Dairy Free\n          Only vegetables\n          $478 dollars 40 cents\n          Evangeline - Name on order",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_12__September_30th_2025_20260630_075434.pdf",
+          "channel_id": "file_b0bf803730892707",
+          "thread_ts": "file_b0bf803730892707",
+          "message_ts": "file_b0bf803730892707#section-9",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "Call Domino’s on Broadway- they will give us a deal of $10/pizza. Budget two slices\n per person and delivery for 11:45am (Evangeline & Hugo)\n          11.99/Pizza (They said thats the most they can do?)\n          16 cheese\n          16 pepperoni\n          6 hawaiian\n          Gluten Free/Dairy Free\n          Only vegetables\n          $478 dollars 40 cents\n          Evangeline - Name on order",
+          "url": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "run_id": "ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955",
+  "input_file": "outputs/ui_uploads/Meeting_4__May_13_2025_20260630_045955.pdf",
+  "mode": "llm",
+  "pipeline": "candidates-shadow",
+  "model": "gpt-4.1-mini",
+  "source_type": "uploaded_document",
+  "created_at": "2026-06-30T05:00:05.207286+00:00",
+  "artifacts": {
+    "decisions": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/decisions.json",
+    "raw_decisions": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/raw_decisions.json",
+    "normalized_events_debug": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/normalized_events_debug.json",
+    "source_bundles_debug": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/source_bundles_debug.json",
+    "candidates_debug": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/candidates_debug.json",
+    "state_resolution_debug": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/state_resolution_debug.json",
+    "conflicts_debug": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/conflicts_debug.json",
+    "meeting_metadata": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/meeting_metadata.json",
+    "clean_memory": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/clean_memory.json",
+    "action_items": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/action_items.json",
+    "open_questions": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/open_questions.json",
+    "document_memory_debug": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/document_memory_debug.json",
+    "review_queue": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/review_queue.json",
+    "review_queue_md": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/review_queue.md",
+    "run_metadata": "outputs/ui_runs/ui_Meeting_4__May_13_2025_20260630_045955_20260630_045955/run_metadata.json"
+  }
+}

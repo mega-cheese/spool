@@ -1,0 +1,97 @@
+[
+  {
+    "candidate_id": "candidate_dec_5717ed6ef6",
+    "proposed_action": "1",
+    "normalized_action": "1",
+    "state": "confirmed",
+    "confidence": 0.86,
+    "source_event_ids": [
+      "uploaded_document_file_11471d225e12e8cc_section_12",
+      "uploaded_document_file_11471d225e12e8cc_section_26",
+      "uploaded_document_file_11471d225e12e8cc_section_27",
+      "uploaded_document_file_11471d225e12e8cc_section_6"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_11471d225e12e8cc_section_12"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Of this situation, we had decided to end the season early",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_11471d225e12e8cc_section_26"
+        ],
+        "support_level": "direct",
+        "confidence": 0.82,
+        "target_name": null,
+        "target_role": null
+      },
+      {
+        "claim": "Many missed lessons, your irresponsibility is unacceptable as a tutor",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_11471d225e12e8cc_section_26"
+        ],
+        "support_level": "direct",
+        "confidence": 0.82,
+        "target_name": null,
+        "target_role": null
+      },
+      {
+        "claim": "Your frequent and late-noticed absences, classes with Owen and Riley were unable to run consistently and effectively",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_11471d225e12e8cc_section_27"
+        ],
+        "support_level": "direct",
+        "confidence": 0.82,
+        "target_name": null,
+        "target_role": null
+      },
+      {
+        "claim": "There is concern about what/how to do each task ● Tyler September 4th Prep (edit) tutor sign up and waitlist forms, link to spreadsheet ● Owen September 4th Prep (edit) student sign up and waitlist forms, link to spreadsheet Tyler September 10th Send a mass email to tutors and parents about our fall 2024 PT ● Bernice September 14th Make TR template for Monday-Wednesday (drafts) Edit parent notification/sign up message + make TR template for Thurs & Fri ● Bernice September 14th (drafts) Edit tutor notification/sign up message + make TR template for Sat + Sun ● Owen September 14th (drafts) Bernice and Owen September 23rd Start pairing students and tutors Tyler September 28th Send out class information to parents and students - We will begin the hiring process for tutors on the September 5th and close the form on the 18th - Send waitlist form - Communications send the student form and close when it reaches 50 - Send out waitlist form after - Tutor training 25th and then start pairing on the 23rd - 2024 Fall PT starts on October 7th until December 9th (10 weeks) - Remember to keep track of attendance - Next team meeting: October 16th",
+        "category": "objections",
+        "source_event_ids": [
+          "uploaded_document_file_11471d225e12e8cc_section_6"
+        ],
+        "support_level": "direct",
+        "confidence": 0.8,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_11471d225e12e8cc_section_12"
+        ],
+        "confidence": 0.86,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_11471d225e12e8cc_section_26",
+          "uploaded_document_file_11471d225e12e8cc_section_27",
+          "uploaded_document_file_11471d225e12e8cc_section_6"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      },
+      {
+        "signal_type": "objection_signal",
+        "source_event_ids": [
+          "uploaded_document_file_11471d225e12e8cc_section_6"
+        ],
+        "confidence": 0.75,
+        "note": "Derived from objections claims."
+      }
+    ]
+  }
+]

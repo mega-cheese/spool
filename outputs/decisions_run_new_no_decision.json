@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "input_file": "data/new_no_decision.json",
+    "decision_count": 0,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-5.4-mini",
+    "verified": true,
+    "generated_at": "2026-06-24T19:38:37.578765+00:00",
+    "raw_validation_issue_count": 0,
+    "clean_validation_issue_count": 0,
+    "removed_claim_count": 0,
+    "repair_count": 0,
+    "postprocessing_change_count": 0
+  },
+  "decisions": []
+}

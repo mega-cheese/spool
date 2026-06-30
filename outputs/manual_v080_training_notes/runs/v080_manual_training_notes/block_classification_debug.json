@@ -1,0 +1,584 @@
+{
+  "blocks": [
+    {
+      "block_id": "block_ad5271acd298",
+      "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_1",
+      "block_type": "unknown",
+      "heading": "Document",
+      "text": "2024-09 Peer Tutor Training Overview\n\nResources: Tutor > Peer Tutoring Training and Resources",
+      "lines": [
+        {
+          "text": "2024-09 Peer Tutor Training Overview",
+          "body": "2024-09 Peer Tutor Training Overview",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Resources: Tutor > Peer Tutoring Training and Resources",
+          "body": "Resources: Tutor > Peer Tutoring Training and Resources",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.45,
+      "signals": [],
+      "likely_task_rows": [
+        {
+          "line_index": 1,
+          "text": "Resources: Tutor > Peer Tutoring Training and Resources",
+          "body": "Resources: Tutor > Peer Tutoring Training and Resources"
+        }
+      ],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_3b68f4bb0b40",
+      "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_2",
+      "block_type": "task_table",
+      "heading": "Overview",
+      "text": "Script: Have Corina shorten the script\n         Slideshow: Have Angela design the slide and match it to the script\n         Kahoot/Icebreaker/Mini Discussions: Have Leanna make a 7-10 question kahoot (or find\n         one online). Review the icebreakers on the slideshow, and change them how you see fit.\n         Add notes for mini discussions: what is the question, and when during the meeting?\n         Breakout Rooms (TENTATIVE): Who has never peer tutored and can’t answer\n         questions?\n         Feedback Form: Have Amanda shorten the feedback form.\n         We will do a debrief of the training session after it is over/the next day.",
+      "lines": [
+        {
+          "text": "Script: Have Corina shorten the script",
+          "body": "Script: Have Corina shorten the script",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Slideshow: Have Angela design the slide and match it to the script",
+          "body": "Slideshow: Have Angela design the slide and match it to the script",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Kahoot/Icebreaker/Mini Discussions: Have Leanna make a 7-10 question kahoot (or find",
+          "body": "Kahoot/Icebreaker/Mini Discussions: Have Leanna make a 7-10 question kahoot (or find",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "one online). Review the icebreakers on the slideshow, and change them how you see fit.",
+          "body": "one online). Review the icebreakers on the slideshow, and change them how you see fit.",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Add notes for mini discussions: what is the question, and when during the meeting?",
+          "body": "Add notes for mini discussions: what is the question, and when during the meeting?",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Breakout Rooms (TENTATIVE): Who has never peer tutored and can’t answer",
+          "body": "Breakout Rooms (TENTATIVE): Who has never peer tutored and can’t answer",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "questions?",
+          "body": "questions?",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Feedback Form: Have Amanda shorten the feedback form.",
+          "body": "Feedback Form: Have Amanda shorten the feedback form.",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "We will do a debrief of the training session after it is over/the next day.",
+          "body": "We will do a debrief of the training session after it is over/the next day.",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.9,
+      "signals": [
+        "table-like task rows"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 0,
+          "text": "Script: Have Corina shorten the script",
+          "body": "Script: Have Corina shorten the script"
+        },
+        {
+          "line_index": 1,
+          "text": "Slideshow: Have Angela design the slide and match it to the script",
+          "body": "Slideshow: Have Angela design the slide and match it to the script"
+        },
+        {
+          "line_index": 2,
+          "text": "Kahoot/Icebreaker/Mini Discussions: Have Leanna make a 7-10 question kahoot (or find",
+          "body": "Kahoot/Icebreaker/Mini Discussions: Have Leanna make a 7-10 question kahoot (or find"
+        },
+        {
+          "line_index": 7,
+          "text": "Feedback Form: Have Amanda shorten the feedback form.",
+          "body": "Feedback Form: Have Amanda shorten the feedback form."
+        },
+        {
+          "line_index": 8,
+          "text": "We will do a debrief of the training session after it is over/the next day.",
+          "body": "We will do a debrief of the training session after it is over/the next day."
+        }
+      ],
+      "extracted_action_item_ids": [
+        "memory_fcb60e4d3d24"
+      ]
+    },
+    {
+      "block_id": "block_04e78d1b48ca",
+      "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_3",
+      "block_type": "policy_or_process",
+      "heading": "Mandatory Notes",
+      "text": "-    Maintain a professional setting.\n    -    Always stay on topic, if you are having some difficulties please message another exec to\n         take over or help\n    -    Go off of the script if you want\n    -    Message other execs (hr people) through the script OR through the Zoom chat\n    -    Have our email open and regularly check\n    -    Whenever you ask the tutors a question or relay to get examples please type the\n         question you are asking in chat.\n    -    If it is your turn to talk and some people don’t have their cameras on, please remind\n         them to turn it on.\n    -    If you do not know/are unsure of the answer to a question, relay it to the HR manager.",
+      "lines": [
+        {
+          "text": "- Maintain a professional setting.",
+          "body": "Maintain a professional setting.",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Always stay on topic, if you are having some difficulties please message another exec to",
+          "body": "Always stay on topic, if you are having some difficulties please message another exec to",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "take over or help",
+          "body": "take over or help",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- Go off of the script if you want",
+          "body": "Go off of the script if you want",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Message other execs (hr people) through the script OR through the Zoom chat",
+          "body": "Message other execs (hr people) through the script OR through the Zoom chat",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Have our email open and regularly check",
+          "body": "Have our email open and regularly check",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- Whenever you ask the tutors a question or relay to get examples please type the",
+          "body": "Whenever you ask the tutors a question or relay to get examples please type the",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "question you are asking in chat.",
+          "body": "question you are asking in chat.",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- If it is your turn to talk and some people don’t have their cameras on, please remind",
+          "body": "If it is your turn to talk and some people don’t have their cameras on, please remind",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "them to turn it on.",
+          "body": "them to turn it on.",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- If you do not know/are unsure of the answer to a question, relay it to the HR manager.",
+          "body": "If you do not know/are unsure of the answer to a question, relay it to the HR manager.",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.9,
+      "signals": [
+        "policy/process heading"
+      ],
+      "likely_task_rows": [],
+      "extracted_action_item_ids": []
+    },
+    {
+      "block_id": "block_3e0fef640621",
+      "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_4",
+      "block_type": "task_table",
+      "heading": "Tasks",
+      "text": "Corina: Record the training session\n         Corina: Reorganize script\n         Leanna: Open the Kahoot",
+      "lines": [
+        {
+          "text": "Corina: Record the training session",
+          "body": "Corina: Record the training session",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Corina: Reorganize script",
+          "body": "Corina: Reorganize script",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Leanna: Open the Kahoot",
+          "body": "Leanna: Open the Kahoot",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 1,
+      "confidence": 0.94,
+      "signals": [
+        "task heading",
+        "table-like task rows"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 0,
+          "text": "Corina: Record the training session",
+          "body": "Corina: Record the training session"
+        },
+        {
+          "line_index": 1,
+          "text": "Corina: Reorganize script",
+          "body": "Corina: Reorganize script"
+        },
+        {
+          "line_index": 2,
+          "text": "Leanna: Open the Kahoot",
+          "body": "Leanna: Open the Kahoot"
+        }
+      ],
+      "extracted_action_item_ids": [
+        "memory_bfa0b2c0f3a8",
+        "memory_b3463e04222c",
+        "memory_41bb06fbee62"
+      ]
+    },
+    {
+      "block_id": "block_9f8e2bfb6172",
+      "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_5",
+      "block_type": "unknown",
+      "heading": "Document",
+      "text": "Leanna: The entire backup crew. If someone does not send a link/example/question in\n         the chat please do it for them. (Wait 10-30 seconds to see if they are in the process of\n         doing so or has forgotten.)\n         Amanda: Take attendance.",
+      "lines": [
+        {
+          "text": "Leanna: The entire backup crew. If someone does not send a link/example/question in",
+          "body": "Leanna: The entire backup crew. If someone does not send a link/example/question in",
+          "indent": 0,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "the chat please do it for them. (Wait 10-30 seconds to see if they are in the process of",
+          "body": "the chat please do it for them. (Wait 10-30 seconds to see if they are in the process of",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "doing so or has forgotten.)",
+          "body": "doing so or has forgotten.)",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "Amanda: Take attendance.",
+          "body": "Amanda: Take attendance.",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 2,
+      "confidence": 0.45,
+      "signals": [],
+      "likely_task_rows": [
+        {
+          "line_index": 0,
+          "text": "Leanna: The entire backup crew. If someone does not send a link/example/question in",
+          "body": "Leanna: The entire backup crew. If someone does not send a link/example/question in"
+        },
+        {
+          "line_index": 3,
+          "text": "Amanda: Take attendance.",
+          "body": "Amanda: Take attendance."
+        }
+      ],
+      "extracted_action_item_ids": [
+        "memory_dfe96d885508",
+        "memory_2cd53e7cc4c2"
+      ]
+    },
+    {
+      "block_id": "block_496407128ca8",
+      "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_6",
+      "block_type": "policy_or_process",
+      "heading": "Tips",
+      "text": "-    If you see that everyone is distracted try to change your script/slide into a discussion\n         question\n             -    If the session has been over an hour you can also initiate a 5-minute break\n                  (preferably not anywhere near the Kahoot/another discussion pause)\n    -    If your fellow exec is muted but talking, please just unmute and let them know (this goes\n         for all attendees as well)\n    -    Try to have a fun/engaging tone. If the script information seems unnecessary (PLEASE\n         CHECK/COMMUNICATE THIS BEFORE HAND) let the HR manager know and skip the\n         part.\n    -    If there are extra notes that you would like to mention please do it during your slide OR\n         type it in the chat.\n             -    If you want to say something but are unsure if the information is reliable or\n                  necessary, please communicate it to the rest of your hr team/ hr manager.\n             -    Ex. Just to add onto what [ ] has said about the ___ slide/section…\n    -    You can also stop and ask for questions/concerns at any time if you judge that people\n         look confused or uninterested.",
+      "lines": [
+        {
+          "text": "- If you see that everyone is distracted try to change your script/slide into a discussion",
+          "body": "If you see that everyone is distracted try to change your script/slide into a discussion",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "question",
+          "body": "question",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- If the session has been over an hour you can also initiate a 5-minute break",
+          "body": "If the session has been over an hour you can also initiate a 5-minute break",
+          "indent": 13,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "(preferably not anywhere near the Kahoot/another discussion pause)",
+          "body": "(preferably not anywhere near the Kahoot/another discussion pause)",
+          "indent": 18,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- If your fellow exec is muted but talking, please just unmute and let them know (this goes",
+          "body": "If your fellow exec is muted but talking, please just unmute and let them know (this goes",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "for all attendees as well)",
+          "body": "for all attendees as well)",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- Try to have a fun/engaging tone. If the script information seems unnecessary (PLEASE",
+          "body": "Try to have a fun/engaging tone. If the script information seems unnecessary (PLEASE",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "CHECK/COMMUNICATE THIS BEFORE HAND) let the HR manager know and skip the",
+          "body": "CHECK/COMMUNICATE THIS BEFORE HAND) let the HR manager know and skip the",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "part.",
+          "body": "part.",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- If there are extra notes that you would like to mention please do it during your slide OR",
+          "body": "If there are extra notes that you would like to mention please do it during your slide OR",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "type it in the chat.",
+          "body": "type it in the chat.",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- If you want to say something but are unsure if the information is reliable or",
+          "body": "If you want to say something but are unsure if the information is reliable or",
+          "indent": 13,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "necessary, please communicate it to the rest of your hr team/ hr manager.",
+          "body": "necessary, please communicate it to the rest of your hr team/ hr manager.",
+          "indent": 18,
+          "bullet_marker": null,
+          "checkbox": false
+        },
+        {
+          "text": "- Ex. Just to add onto what [ ] has said about the ___ slide/section…",
+          "body": "Ex. Just to add onto what [ ] has said about the ___ slide/section…",
+          "indent": 13,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "- You can also stop and ask for questions/concerns at any time if you judge that people",
+          "body": "You can also stop and ask for questions/concerns at any time if you judge that people",
+          "indent": 4,
+          "bullet_marker": "-",
+          "checkbox": false
+        },
+        {
+          "text": "look confused or uninterested.",
+          "body": "look confused or uninterested.",
+          "indent": 9,
+          "bullet_marker": null,
+          "checkbox": false
+        }
+      ],
+      "page": 2,
+      "confidence": 0.9,
+      "signals": [
+        "policy/process heading"
+      ],
+      "likely_task_rows": [
+        {
+          "line_index": 6,
+          "text": "- Try to have a fun/engaging tone. If the script information seems unnecessary (PLEASE",
+          "body": "Try to have a fun/engaging tone. If the script information seems unnecessary (PLEASE"
+        },
+        {
+          "line_index": 13,
+          "text": "- Ex. Just to add onto what [ ] has said about the ___ slide/section…",
+          "body": "Ex. Just to add onto what [ ] has said about the ___ slide/section…"
+        }
+      ],
+      "extracted_action_item_ids": []
+    }
+  ],
+  "detected_task_spans": [
+    {
+      "span_id": "span_8d0c898dea22",
+      "heading": "Tasks",
+      "source_event_ids": [
+        "uploaded_document_file_2f94e7dc9d4ff24d_section_4",
+        "uploaded_document_file_2f94e7dc9d4ff24d_section_5"
+      ],
+      "block_ids": [
+        "block_3e0fef640621",
+        "block_9f8e2bfb6172"
+      ],
+      "start_line_index": 0,
+      "end_line_index": 3,
+      "line_count": 7,
+      "quote": "Tasks Corina: Record the training session Corina: Reorganize script Leanna: Open the Kahoot Leanna: The entire backup crew. If someone does not send a link/example/question in the chat please do it for them. (Wait 10-30 seconds to see if they are in the process of doing so or has forgotten.) Amanda: Take attendance.",
+      "likely_task_rows": [
+        {
+          "line_index": 0,
+          "text": "Corina: Record the training session",
+          "body": "Corina: Record the training session",
+          "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_4",
+          "block_id": "block_3e0fef640621"
+        },
+        {
+          "line_index": 1,
+          "text": "Corina: Reorganize script",
+          "body": "Corina: Reorganize script",
+          "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_4",
+          "block_id": "block_3e0fef640621"
+        },
+        {
+          "line_index": 2,
+          "text": "Leanna: Open the Kahoot",
+          "body": "Leanna: Open the Kahoot",
+          "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_4",
+          "block_id": "block_3e0fef640621"
+        },
+        {
+          "line_index": 0,
+          "text": "Leanna: The entire backup crew. If someone does not send a link/example/question in the chat please do it for them. (Wait 10-30 seconds to see if they are in the process of doing so or has forgotten.)",
+          "body": "Leanna: The entire backup crew. If someone does not send a link/example/question in the chat please do it for them. (Wait 10-30 seconds to see if they are in the process of doing so or has forgotten.)",
+          "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_5",
+          "block_id": "block_9f8e2bfb6172"
+        },
+        {
+          "line_index": 3,
+          "text": "Amanda: Take attendance.",
+          "body": "Amanda: Take attendance.",
+          "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_5",
+          "block_id": "block_9f8e2bfb6172"
+        }
+      ],
+      "extracted_action_item_ids": [
+        "memory_bfa0b2c0f3a8",
+        "memory_b3463e04222c",
+        "memory_41bb06fbee62",
+        "memory_dfe96d885508",
+        "memory_2cd53e7cc4c2"
+      ]
+    }
+  ],
+  "coverage_audit_warnings": [
+    {
+      "reason": "extraction_warning",
+      "severity": "high",
+      "title": "Task table may have been under-extracted",
+      "summary": "Document appears to contain a task table, but many likely task rows were not extracted.",
+      "candidate_decision": "Task table may have been under-extracted",
+      "recommended_action": "Review block classification and task extraction output.",
+      "source_event_ids": [
+        "uploaded_document_file_2f94e7dc9d4ff24d_section_2"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_2",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_2f94e7dc9d4ff24d",
+          "document_title": "Training Meeting Notes .pdf",
+          "section_heading": "Overview",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_2f94e7dc9d4ff24d#section-2",
+          "page": 1,
+          "url": null,
+          "quote": "Script: Have Corina shorten the script\n         Slideshow: Have Angela design the slide and match it to the script\n         Kahoot/Icebreaker/Mini Discussions: Have Leanna make a 7-10 question kahoot (or find\n         one online). Review the icebreakers on the slideshow, and change them how you see fit.\n         Add notes for mini discussions: what is the question, and when during the meeting?\n         Breakout Rooms (TENTATIVE): Who has never peer tutored and can’t answer\n         questions?\n         Feedback Form: Have Amanda shorten the feedback form.\n         We will do a debrief of the training session after it is over/the next day."
+        }
+      ],
+      "related_candidate_ids": []
+    }
+  ]
+}

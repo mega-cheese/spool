@@ -1,0 +1,12 @@
+{
+  "input_file": "/Users/admin/Downloads/Meeting #7_ August 26th, 2025.pdf",
+  "mode": "heuristic",
+  "pipeline": "candidates-shadow",
+  "classification": "meeting_minutes",
+  "generated_at": "2026-06-30T22:11:56.928755+00:00",
+  "meeting_date": "2025-08-26",
+  "location": "1. Registration Updates- Master Reg. Doc Here.",
+  "present": [],
+  "absent": [],
+  "source_event_count": 15
+}

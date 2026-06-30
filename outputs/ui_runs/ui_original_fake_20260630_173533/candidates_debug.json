@@ -1,0 +1,243 @@
+[
+  {
+    "candidate_id": "candidate_dec_c4fa2a62fe",
+    "proposed_action": "Delay the enterprise launch until SOC 2 is complete and revisit on 2026-09-12.",
+    "normalized_action": "delay enterprise launch until soc 2 is complete revisit on 2026 09 12",
+    "state": "confirmed",
+    "confidence": 0.86,
+    "source_event_ids": [
+      "slack_C_PRODUCT_1782201180_000400",
+      "slack_C_PRODUCT_1782201000_000100",
+      "slack_C_PRODUCT_1782201060_000200",
+      "slack_C_PRODUCT_1782201120_000300"
+    ],
+    "decision_event_ids": [
+      "slack_C_PRODUCT_1782201180_000400"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "slack_C_PRODUCT_1782201180_000400"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Security review will block the launch without SOC 2.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201000_000100"
+        ],
+        "support_level": "direct",
+        "confidence": 0.97,
+        "target_name": null,
+        "target_role": null
+      },
+      {
+        "claim": "Without audit logs and SSO, security review will probably fail.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201060_000200"
+        ],
+        "support_level": "direct",
+        "confidence": 0.95,
+        "target_name": null,
+        "target_role": null
+      },
+      {
+        "claim": "The delay could hurt Q3 pipeline.",
+        "category": "objections",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201120_000300"
+        ],
+        "support_level": "direct",
+        "confidence": 0.95,
+        "target_name": null,
+        "target_role": null
+      },
+      {
+        "claim": "The pilots will wait.",
+        "category": "assumptions",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201120_000300"
+        ],
+        "support_level": "direct",
+        "confidence": 0.93,
+        "target_name": null,
+        "target_role": null
+      },
+      {
+        "claim": "The accepted cost is delaying launch is the accepted tradeoff.",
+        "category": "tradeoffs",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201180_000400"
+        ],
+        "support_level": "direct",
+        "confidence": 0.9,
+        "target_name": null,
+        "target_role": null
+      },
+      {
+        "claim": "Engineering needs about four more weeks.",
+        "category": "timelines",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201060_000200"
+        ],
+        "support_level": "direct",
+        "confidence": 0.97,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201180_000400"
+        ],
+        "confidence": 0.86,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201000_000100",
+          "slack_C_PRODUCT_1782201060_000200",
+          "slack_C_PRODUCT_1782201120_000300",
+          "slack_C_PRODUCT_1782201180_000400"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      },
+      {
+        "signal_type": "objection_signal",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201120_000300"
+        ],
+        "confidence": 0.75,
+        "note": "Derived from objections claims."
+      },
+      {
+        "signal_type": "assumption_signal",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201120_000300"
+        ],
+        "confidence": 0.75,
+        "note": "Derived from assumptions claims."
+      },
+      {
+        "signal_type": "tradeoff_signal",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201180_000400"
+        ],
+        "confidence": 0.75,
+        "note": "Derived from tradeoffs claims."
+      },
+      {
+        "signal_type": "timeline_signal",
+        "source_event_ids": [
+          "slack_C_PRODUCT_1782201060_000200"
+        ],
+        "confidence": 0.75,
+        "note": "Derived from timelines claims."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_135306cecf",
+    "proposed_action": "Use Redis for session state.",
+    "normalized_action": "redis session state",
+    "state": "confirmed",
+    "confidence": 0.86,
+    "source_event_ids": [
+      "slack_C_ENG_1782202180_000400",
+      "slack_C_ENG_1782202000_000100",
+      "slack_C_ENG_1782202060_000200",
+      "slack_C_ENG_1782202120_000300"
+    ],
+    "decision_event_ids": [
+      "slack_C_ENG_1782202180_000400"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [
+      "slack_C_ENG_1782202180_000400"
+    ],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Postgres latency is too high under load.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "slack_C_ENG_1782202000_000100"
+        ],
+        "support_level": "direct",
+        "confidence": 0.96,
+        "target_name": "Redis",
+        "target_role": "chosen_option"
+      },
+      {
+        "claim": "Latency is the bigger risk.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "slack_C_ENG_1782202060_000200"
+        ],
+        "support_level": "direct",
+        "confidence": 0.92,
+        "target_name": "Redis",
+        "target_role": "chosen_option"
+      },
+      {
+        "claim": "Redis could become a bottleneck later.",
+        "category": "risks",
+        "source_event_ids": [
+          "slack_C_ENG_1782202120_000300"
+        ],
+        "support_level": "direct",
+        "confidence": 0.88,
+        "target_name": "Redis",
+        "target_role": "chosen_option"
+      },
+      {
+        "claim": "Extra infra complexity is the accepted tradeoff.",
+        "category": "tradeoffs",
+        "source_event_ids": [
+          "slack_C_ENG_1782202060_000200"
+        ],
+        "support_level": "direct",
+        "confidence": 0.94,
+        "target_name": "Redis",
+        "target_role": "chosen_option"
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "slack_C_ENG_1782202180_000400"
+        ],
+        "confidence": 0.86,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "slack_C_ENG_1782202000_000100",
+          "slack_C_ENG_1782202060_000200",
+          "slack_C_ENG_1782202120_000300"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      },
+      {
+        "signal_type": "tradeoff_signal",
+        "source_event_ids": [
+          "slack_C_ENG_1782202060_000200"
+        ],
+        "confidence": 0.75,
+        "note": "Derived from tradeoffs claims."
+      }
+    ]
+  }
+]

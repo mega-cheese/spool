@@ -1,0 +1,12 @@
+{
+  "input_file": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+  "mode": "llm",
+  "pipeline": "candidates-shadow",
+  "classification": "meeting_minutes",
+  "generated_at": "2026-06-30T20:18:32.009967+00:00",
+  "meeting_date": "2025-08-26",
+  "location": "1. Registration Updates- Master Reg. Doc Here.",
+  "present": [],
+  "absent": [],
+  "source_event_count": 15
+}

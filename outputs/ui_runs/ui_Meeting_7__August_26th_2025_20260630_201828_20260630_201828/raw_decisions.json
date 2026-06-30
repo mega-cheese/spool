@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_7__August_26th_2025_20260630_201828.pdf",
+    "decision_count": 1,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-4.1-mini",
+    "verified": true,
+    "generated_at": "2026-06-30T20:18:32.033752+00:00",
+    "validation_issue_count": 0,
+    "validation_issues": [],
+    "raw_validation_issue_count": 0
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_7ff5107a47",
+      "decision": "Two winners will be selected on the second day of the competition.",
+      "date": null,
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "The winners are highlighted at the ceremony to mark the 20th anniversary.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source_message_ts": "file_9cf77b848dc74377#section-10",
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+            "channel_id": "file_9cf77b848dc74377",
+            "thread_ts": "file_9cf77b848dc74377",
+            "message_ts": "file_9cf77b848dc74377#section-10",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "a.  2 winners - selected on the second day\n         b.  Speeches under 2 min - give at ceremony to highlight 20th anniversary\n         c.  Overnight competition",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+          "channel_id": "file_9cf77b848dc74377",
+          "thread_ts": "file_9cf77b848dc74377",
+          "message_ts": "file_9cf77b848dc74377#section-10",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "a.  2 winners - selected on the second day\n         b.  Speeches under 2 min - give at ceremony to highlight 20th anniversary\n         c.  Overnight competition",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+          "channel_id": "file_9cf77b848dc74377",
+          "thread_ts": "file_9cf77b848dc74377",
+          "message_ts": "file_9cf77b848dc74377#section-10",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "a.  2 winners - selected on the second day\n         b.  Speeches under 2 min - give at ceremony to highlight 20th anniversary\n         c.  Overnight competition",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_7__August_26th_2025_20260630_201828.pdf",
+          "channel_id": "file_9cf77b848dc74377",
+          "thread_ts": "file_9cf77b848dc74377",
+          "message_ts": "file_9cf77b848dc74377#section-10",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "a.  2 winners - selected on the second day\n         b.  Speeches under 2 min - give at ceremony to highlight 20th anniversary\n         c.  Overnight competition",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "file_9cf77b848dc74377#section-10"
+    }
+  ]
+}

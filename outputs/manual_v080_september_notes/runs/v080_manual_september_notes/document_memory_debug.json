@@ -1,0 +1,620 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/September Meeting Notes.pdf",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "classification": "generic_document",
+    "generated_at": "2026-06-30T22:12:08.461757+00:00"
+  },
+  "classification": "generic_document",
+  "source_headings": [
+    "Document",
+    "Team Organizational Practices",
+    "Preparing for Fall PT",
+    "Document",
+    "Document",
+    "Document",
+    "Document",
+    "General Guidelines",
+    "Account Pass-Downs",
+    "3.   YIV Email",
+    "4.   YIV Instagram",
+    "Communications Workflow",
+    "Document",
+    "8.   Check in each week regarding attendance (see template 4b)",
+    "10.  Thank you notes to parents/tutors at the end of each season",
+    "12. Promotions/CYVAC/Hiring/New Year Celebration (Formality)",
+    "Document",
+    "Document",
+    "Document",
+    "Document",
+    "Zoom Meeting Link",
+    "Document",
+    "Document",
+    "UBC Hospital Foundation. Here is the link to the pre-order form",
+    "Document",
+    "Document",
+    "Document"
+  ],
+  "memory_objects": [
+    {
+      "object_id": "memory_8f870e0670f3",
+      "type": "action_item",
+      "title": "Preparing forms/spreadsheets:.",
+      "summary": "Steps should preparing forms/spreadsheets:.",
+      "owner_names": [
+        "Steps"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_4"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-4",
+          "page": 2,
+          "url": null,
+          "quote": "Document Steps to preparing forms/spreadsheets:"
+        }
+      ],
+      "quote": "Document Steps to preparing forms/spreadsheets:",
+      "confidence": 0.8,
+      "block_id": "block_b6dcbe957afd"
+    },
+    {
+      "object_id": "memory_3fd3310f46c7",
+      "type": "action_item",
+      "title": "Add haley’s main wechat acc to the parent and student gc.",
+      "summary": "Remember should add haley’s main wechat acc to the parent and student gc.",
+      "owner_names": [
+        "Remember"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-6",
+          "page": 4,
+          "url": null,
+          "quote": "Document 2. Remember to add haley’s main wechat acc to the parent and student gc"
+        }
+      ],
+      "quote": "Document 2. Remember to add haley’s main wechat acc to the parent and student gc",
+      "confidence": 0.8,
+      "block_id": "block_b5fbd6de254a"
+    },
+    {
+      "object_id": "memory_a6b0532e76a7",
+      "type": "action_item",
+      "title": "Prep (edit) tutor sign up and waitlist forms, link to spreadsheet.",
+      "summary": "● Tyler should prep (edit) tutor sign up and waitlist forms, link to spreadsheet.",
+      "owner_names": [
+        "● Tyler"
+      ],
+      "due_date": "2022-09-04",
+      "date": "2022-09-04",
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-6",
+          "page": 4,
+          "url": null,
+          "quote": "Document ● Tyler September 4th Prep (edit) tutor sign up and waitlist forms, link to spreadsheet"
+        }
+      ],
+      "quote": "Document ● Tyler September 4th Prep (edit) tutor sign up and waitlist forms, link to spreadsheet",
+      "confidence": 0.8,
+      "block_id": "block_b5fbd6de254a"
+    },
+    {
+      "object_id": "memory_028b3ac28b91",
+      "type": "action_item",
+      "title": "Prep (edit) student sign up and waitlist forms, link to spreadsheet.",
+      "summary": "● Owen should prep (edit) student sign up and waitlist forms, link to spreadsheet.",
+      "owner_names": [
+        "● Owen"
+      ],
+      "due_date": "2022-09-04",
+      "date": "2022-09-04",
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-6",
+          "page": 4,
+          "url": null,
+          "quote": "Document ● Owen September 4th Prep (edit) student sign up and waitlist forms, link to spreadsheet"
+        }
+      ],
+      "quote": "Document ● Owen September 4th Prep (edit) student sign up and waitlist forms, link to spreadsheet",
+      "confidence": 0.8,
+      "block_id": "block_b5fbd6de254a"
+    },
+    {
+      "object_id": "memory_32f51d5776d2",
+      "type": "action_item",
+      "title": "Send a mass email to tutors and parents about our fall 2024 PT.",
+      "summary": "Tyler should send a mass email to tutors and parents about our fall 2024 PT.",
+      "owner_names": [
+        "Tyler"
+      ],
+      "due_date": "2022-09-10",
+      "date": "2022-09-10",
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-6",
+          "page": 4,
+          "url": null,
+          "quote": "Document Tyler September 10th Send a mass email to tutors and parents about our fall 2024 PT"
+        }
+      ],
+      "quote": "Document Tyler September 10th Send a mass email to tutors and parents about our fall 2024 PT",
+      "confidence": 0.8,
+      "block_id": "block_b5fbd6de254a"
+    },
+    {
+      "object_id": "memory_8a09526003b4",
+      "type": "action_item",
+      "title": "Make TR template for Monday-Wednesday (drafts).",
+      "summary": "● Bernice should make TR template for Monday-Wednesday (drafts).",
+      "owner_names": [
+        "● Bernice"
+      ],
+      "due_date": "2022-09-14",
+      "date": "2022-09-14",
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-6",
+          "page": 4,
+          "url": null,
+          "quote": "Document ● Bernice September 14th Make TR template for Monday-Wednesday (drafts)"
+        }
+      ],
+      "quote": "Document ● Bernice September 14th Make TR template for Monday-Wednesday (drafts)",
+      "confidence": 0.8,
+      "block_id": "block_b5fbd6de254a"
+    },
+    {
+      "object_id": "memory_08a4c662f3bb",
+      "type": "action_item",
+      "title": "(drafts).",
+      "summary": "● Bernice should (drafts).",
+      "owner_names": [
+        "● Bernice"
+      ],
+      "due_date": "2022-09-14",
+      "date": "2022-09-14",
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-6",
+          "page": 4,
+          "url": null,
+          "quote": "Document ● Bernice September 14th (drafts)"
+        }
+      ],
+      "quote": "Document ● Bernice September 14th (drafts)",
+      "confidence": 0.8,
+      "block_id": "block_b5fbd6de254a"
+    },
+    {
+      "object_id": "memory_ff0233aefcdf",
+      "type": "action_item",
+      "title": "(drafts).",
+      "summary": "● Owen should (drafts).",
+      "owner_names": [
+        "● Owen"
+      ],
+      "due_date": "2022-09-14",
+      "date": "2022-09-14",
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-6",
+          "page": 4,
+          "url": null,
+          "quote": "Document ● Owen September 14th (drafts)"
+        }
+      ],
+      "quote": "Document ● Owen September 14th (drafts)",
+      "confidence": 0.8,
+      "block_id": "block_b5fbd6de254a"
+    },
+    {
+      "object_id": "memory_4de04d80e629",
+      "type": "action_item",
+      "title": "Start pairing students and tutors.",
+      "summary": "and Owen should start pairing students and tutors.",
+      "owner_names": [
+        "and Owen"
+      ],
+      "due_date": "2022-09-23",
+      "date": "2022-09-23",
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-6",
+          "page": 4,
+          "url": null,
+          "quote": "Document and Owen September 23rd Start pairing students and tutors"
+        }
+      ],
+      "quote": "Document and Owen September 23rd Start pairing students and tutors",
+      "confidence": 0.8,
+      "block_id": "block_b5fbd6de254a"
+    },
+    {
+      "object_id": "memory_ad8c9ce64cdb",
+      "type": "action_item",
+      "title": "Send out class information to parents and students.",
+      "summary": "Tyler should send out class information to parents and students.",
+      "owner_names": [
+        "Tyler"
+      ],
+      "due_date": "2022-09-28",
+      "date": "2022-09-28",
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-6",
+          "page": 4,
+          "url": null,
+          "quote": "Document Tyler September 28th Send out class information to parents and students"
+        }
+      ],
+      "quote": "Document Tyler September 28th Send out class information to parents and students",
+      "confidence": 0.8,
+      "block_id": "block_b5fbd6de254a"
+    },
+    {
+      "object_id": "memory_168a1821a8bf",
+      "type": "action_item",
+      "title": "And close the form on the 18th.",
+      "summary": "We will begin the hiring process for tutors on the should and close the form on the 18th.",
+      "owner_names": [
+        "We will begin the hiring process for tutors on the"
+      ],
+      "due_date": "2022-09-05",
+      "date": "2022-09-05",
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-6",
+          "page": 4,
+          "url": null,
+          "quote": "Document - We will begin the hiring process for tutors on the September 5th and close the form on the 18th"
+        }
+      ],
+      "quote": "Document - We will begin the hiring process for tutors on the September 5th and close the form on the 18th",
+      "confidence": 0.8,
+      "block_id": "block_b5fbd6de254a"
+    },
+    {
+      "object_id": "memory_007e026ef086",
+      "type": "action_item",
+      "title": "Until December 9th (10 weeks).",
+      "summary": "2024 Fall PT starts on should until December 9th (10 weeks).",
+      "owner_names": [
+        "2024 Fall PT starts on"
+      ],
+      "due_date": "2022-10-07",
+      "date": "2022-10-07",
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-6",
+          "page": 4,
+          "url": null,
+          "quote": "Document - 2024 Fall PT starts on October 7th until December 9th (10 weeks)"
+        }
+      ],
+      "quote": "Document - 2024 Fall PT starts on October 7th until December 9th (10 weeks)",
+      "confidence": 0.8,
+      "block_id": "block_b5fbd6de254a"
+    },
+    {
+      "object_id": "memory_20a07919f101",
+      "type": "action_item",
+      "title": "Keep track of attendance.",
+      "summary": "Remember should keep track of attendance.",
+      "owner_names": [
+        "Remember"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-6",
+          "page": 4,
+          "url": null,
+          "quote": "Document - Remember to keep track of attendance"
+        }
+      ],
+      "quote": "Document - Remember to keep track of attendance",
+      "confidence": 0.8,
+      "block_id": "block_b5fbd6de254a"
+    },
+    {
+      "object_id": "memory_9dec04cdf2fa",
+      "type": "action_item",
+      "title": "To June 30th, 2022. The position entails a.",
+      "summary": "⭕ Ensure that you can commit from should to June 30th, 2022. The position entails a.",
+      "owner_names": [
+        "⭕ Ensure that you can commit from"
+      ],
+      "due_date": "2022-09-12",
+      "date": "2022-09-12",
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_18"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_18",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-18",
+          "page": 9,
+          "url": null,
+          "quote": "Document ⭕ Ensure that you can commit from September 12th to June 30th, 2022. The position entails a"
+        }
+      ],
+      "quote": "Document ⭕ Ensure that you can commit from September 12th to June 30th, 2022. The position entails a",
+      "confidence": 0.8,
+      "block_id": "block_3cc0cf2dcff4"
+    }
+  ],
+  "review_warnings": [
+    {
+      "reason": "extraction_warning",
+      "severity": "high",
+      "title": "Task table may have been under-extracted",
+      "summary": "Document appears to contain a task table, but many likely task rows were not extracted.",
+      "candidate_decision": "Task table may have been under-extracted",
+      "recommended_action": "Review block classification and task extraction output.",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_4"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-4",
+          "page": 2,
+          "url": null,
+          "quote": "https://docs.google.com/forms/d/1ZfE_0MLbNKgDeiwpmPX0CvPBeAnQb4Oo1USRs97\n                     Xlgc/edit\n\n          Steps to preparing forms/spreadsheets:\n                1.   Make copies of the forms above\n                2.   Put them into the right folder\n                3.   Change details relevant to this season: dates, link to waitlist, etc.\n                4.   Link form responses to spreadsheet\n                5.   Fix anything else if needed\n\n     2.   Notifications for tutors (contact promotions) and students’ parents (wechat) (communications)\n                -    Tutor sign up opens first, then student sign up to gauge for # of guaranteed classes\n                -    Waitlist: classes not guaranteed\n                -    TEMPLATE: at the very bottom of this document\n\n          Tutor sign up notification:\n                -    Instagram & newsletter (promotions department)\n                -    Wechat (us) ← we have a wechat volunteer group chat\n\n          Parent notification:\n                -    Instagram & newsletter (promotions department)\n                -    Wechat (us) ← parent group chat\n\n          Notes regarding student sign up release (after tutor sign up release)\n                -    We need to be waiting for the number of student sign up to reach the target number (to make\n                     sure we have enough tutors for guaranteed classes)\n                          -     E.g. if we have 80 tutor sign up at this moment, we need to cap regular student sign up\n                                at 65\n                          -     Then open student waitlist for the rest (classes not guaranteed)\n\n     3.   Class pairing (admissions)\n                -    Make new sub sheet in master google spreadsheet\n                -    Pair students and tutors with fewer availabilities first\n                -    Pair siblings with the same tutor if possible, but it doesn’t have to be like this\n                -    See 2023 winter spring season spreadsheet for class pairing examples:\n                          -     https://docs.google.com/spreadsheets/d/1o0GZHuSfB5-Q2jj_IS-O5t7ILbS4OaSgrO\n                                eTQ_Ki3dw/edit?usp=sharing"
+        }
+      ],
+      "related_candidate_ids": []
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "high",
+      "title": "Task table may have been under-extracted",
+      "summary": "Document appears to contain a task table, but many likely task rows were not extracted.",
+      "candidate_decision": "Task table may have been under-extracted",
+      "recommended_action": "Review block classification and task extraction output.",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_9"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_9",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Account Pass-Downs",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-9",
+          "page": 5,
+          "url": null,
+          "quote": "1.   Emily’s Account (YIV)\n              a.   wechat ID: yivcanada\n              b.   PW: youthinitiative\n    2.   Fiona’s Account (YIV Communications Manager)\n              a.    Wechat ID: yivcanada_pm\n              b.    PW: yivcanada"
+        }
+      ],
+      "related_candidate_ids": []
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "high",
+      "title": "Task table may have been under-extracted",
+      "summary": "Document appears to contain a task table, but many likely task rows were not extracted.",
+      "candidate_decision": "Task table may have been under-extracted",
+      "recommended_action": "Review block classification and task extraction output.",
+      "source_event_ids": [
+        "uploaded_document_file_11471d225e12e8cc_section_18"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_11471d225e12e8cc_section_18",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_11471d225e12e8cc",
+          "document_title": "September Meeting Notes.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_11471d225e12e8cc#section-18",
+          "page": 9,
+          "url": null,
+          "quote": "3.   Math TA Sign Up Message:\n\nOur Math Teaching Assistant (TA) Program is back for the school year!\n\n󰞹 Have a passion for math? Want to a professional volunteer experience to add your resume while\nworking under an esteemed math teacher?\n\n📚 Volunteers will be helping with academic classes, from grade 8-12 math courses to advanced\npreparation courses like SAT, AP, and IB.\n\nInterested in applying?\n⭕ Please send your resume to info@yivcanada.ca\n⭕ Ensure that you can commit from September 12th to June 30th, 2022. The position entails a\nflexible workload of 3-4 hours per week!\n\nPlease let us know if you have any questions and we look forward to viewing your application.\n\n\n    4.   Group Chat Messages:\n\n    a.   Introduction Messages for each new peer tutoring group chat:\n\nHi everyone! I am YIV’s Fiona who will be your contact for any problems during the classes! Thank\nyou all for your participation in our program!\n\nThe first day of class will be the week of October 2, 2023\n\nTutor: Sunny Li\nStudent: Terry Bao\nSubject: Math\nClass Schedule: Fri 8:30-9:15pm\n\nIf anyone will be absent for a class, please notify me in the chat!"
+        }
+      ],
+      "related_candidate_ids": []
+    }
+  ]
+}

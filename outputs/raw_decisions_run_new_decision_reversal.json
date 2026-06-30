@@ -1,0 +1,368 @@
+{
+  "metadata": {
+    "input_file": "data/new_decision_reversal.json",
+    "decision_count": 1,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-5.4-mini",
+    "verified": true,
+    "generated_at": "2026-06-24T19:38:51.619398+00:00",
+    "validation_issue_count": 0,
+    "validation_issues": [],
+    "raw_validation_issue_count": 0
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_d347f8b578",
+      "decision": "Use Segment for event tracking instead of RudderStack.",
+      "date": null,
+      "owner": "Marco Silva",
+      "owner_role": "Finance Lead",
+      "participants": [
+        "Nina Patel",
+        "Marco Silva",
+        "Aisha Rahman"
+      ],
+      "status": "confirmed",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Debuggability matters more than the small cost difference.",
+          "support_level": "direct",
+          "confidence": 0.98,
+          "source_message_ts": "1791040300.000600",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1791040000.000100",
+            "message_ts": "1791040300.000600",
+            "speaker": "Nina Patel",
+            "speaker_role": "Head of Growth",
+            "quote": "Reversing the earlier decision. Final decision: use Segment for event tracking instead of RudderStack. Debuggability matters more than the small cost difference. Marco still owns setup, and we need it ready before lifecycle launch on 2026-09-25.",
+            "url": null
+          }
+        },
+        {
+          "claim": "The real cost difference is much smaller.",
+          "support_level": "direct",
+          "confidence": 0.95,
+          "source_message_ts": "1791040240.000500",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1791040000.000100",
+            "message_ts": "1791040240.000500",
+            "speaker": "Marco Silva",
+            "speaker_role": "Finance Lead",
+            "quote": "Update: I checked the implementation details. RudderStack's cheaper plan does not include the replay tooling support needs, so the real cost difference is much smaller.",
+            "url": null
+          }
+        },
+        {
+          "claim": "Segment has cleaner integrations with the lifecycle tools.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source_message_ts": "1791040060.000200",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1791040000.000100",
+            "message_ts": "1791040060.000200",
+            "speaker": "Marco Silva",
+            "speaker_role": "Finance Lead",
+            "quote": "RudderStack is cheaper for our current volume, but Segment has cleaner integrations with the lifecycle tools. If cost is the main factor, I would pick RudderStack.",
+            "url": null
+          }
+        }
+      ],
+      "objections": [
+        {
+          "claim": "RudderStack had trouble debugging missing events during the March onboarding campaign.",
+          "support_level": "direct",
+          "confidence": 0.96,
+          "source_message_ts": "1791040120.000300",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1791040000.000100",
+            "message_ts": "1791040120.000300",
+            "speaker": "Aisha Rahman",
+            "speaker_role": "Customer Success Manager",
+            "quote": "I'm concerned about using RudderStack because the support team had trouble debugging missing events during the March onboarding campaign. Assuming cost matters more than support workflow, RudderStack is fine.",
+            "url": null
+          }
+        }
+      ],
+      "assumptions": [
+        {
+          "claim": "Cost matters more than support workflow.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source_message_ts": "1791040120.000300",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1791040000.000100",
+            "message_ts": "1791040120.000300",
+            "speaker": "Aisha Rahman",
+            "speaker_role": "Customer Success Manager",
+            "quote": "I'm concerned about using RudderStack because the support team had trouble debugging missing events during the March onboarding campaign. Assuming cost matters more than support workflow, RudderStack is fine.",
+            "url": null
+          }
+        }
+      ],
+      "risks": [
+        {
+          "claim": "Support debugging could become a blocker.",
+          "support_level": "direct",
+          "confidence": 0.97,
+          "source_message_ts": "1791040180.000400",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1791040000.000100",
+            "message_ts": "1791040180.000400",
+            "speaker": "Nina Patel",
+            "speaker_role": "Head of Growth",
+            "quote": "Approved for now: use RudderStack for event tracking. Marco owns setup, and we'll revisit if support debugging becomes a blocker.",
+            "url": null
+          }
+        }
+      ],
+      "tradeoffs": [
+        {
+          "claim": "The small cost difference is accepted.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source_message_ts": "1791040300.000600",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1791040000.000100",
+            "message_ts": "1791040300.000600",
+            "speaker": "Nina Patel",
+            "speaker_role": "Head of Growth",
+            "quote": "Reversing the earlier decision. Final decision: use Segment for event tracking instead of RudderStack. Debuggability matters more than the small cost difference. Marco still owns setup, and we need it ready before lifecycle launch on 2026-09-25.",
+            "url": null
+          }
+        }
+      ],
+      "timelines": [
+        {
+          "claim": "Setup needs to be ready before lifecycle launch.",
+          "support_level": "direct",
+          "confidence": 0.93,
+          "source_message_ts": "1791040300.000600",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1791040000.000100",
+            "message_ts": "1791040300.000600",
+            "speaker": "Nina Patel",
+            "speaker_role": "Head of Growth",
+            "quote": "Reversing the earlier decision. Final decision: use Segment for event tracking instead of RudderStack. Debuggability matters more than the small cost difference. Marco still owns setup, and we need it ready before lifecycle launch on 2026-09-25.",
+            "url": null
+          }
+        }
+      ],
+      "deadlines": [
+        {
+          "date": "2026-09-25",
+          "description": "Lifecycle launch.",
+          "source_message_ts": "1791040300.000600",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1791040000.000100",
+            "message_ts": "1791040300.000600",
+            "speaker": "Nina Patel",
+            "speaker_role": "Head of Growth",
+            "quote": "Reversing the earlier decision. Final decision: use Segment for event tracking instead of RudderStack. Debuggability matters more than the small cost difference. Marco still owns setup, and we need it ready before lifecycle launch on 2026-09-25.",
+            "url": null
+          }
+        }
+      ],
+      "action_items": [
+        {
+          "action": "Set up Segment for event tracking.",
+          "owner": "Marco Silva",
+          "due_date": null,
+          "due_text": "before lifecycle launch",
+          "source_message_ts": "1791040300.000600",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1791040000.000100",
+            "message_ts": "1791040300.000600",
+            "speaker": "Nina Patel",
+            "speaker_role": "Head of Growth",
+            "quote": "Reversing the earlier decision. Final decision: use Segment for event tracking instead of RudderStack. Debuggability matters more than the small cost difference. Marco still owns setup, and we need it ready before lifecycle launch on 2026-09-25.",
+            "url": null
+          }
+        }
+      ],
+      "revisit_date": null,
+      "revisit_trigger": "If support debugging becomes a blocker.",
+      "decision_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1791040000.000100",
+          "message_ts": "1791040300.000600",
+          "speaker": "Nina Patel",
+          "speaker_role": "Head of Growth",
+          "quote": "Reversing the earlier decision. Final decision: use Segment for event tracking instead of RudderStack. Debuggability matters more than the small cost difference. Marco still owns setup, and we need it ready before lifecycle launch on 2026-09-25.",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1791040000.000100",
+          "message_ts": "1791040300.000600",
+          "speaker": "Nina Patel",
+          "speaker_role": "Head of Growth",
+          "quote": "Reversing the earlier decision. Final decision: use Segment for event tracking instead of RudderStack. Debuggability matters more than the small cost difference. Marco still owns setup, and we need it ready before lifecycle launch on 2026-09-25.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1791040000.000100",
+          "message_ts": "1791040240.000500",
+          "speaker": "Marco Silva",
+          "speaker_role": "Finance Lead",
+          "quote": "Update: I checked the implementation details. RudderStack's cheaper plan does not include the replay tooling support needs, so the real cost difference is much smaller.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1791040000.000100",
+          "message_ts": "1791040060.000200",
+          "speaker": "Marco Silva",
+          "speaker_role": "Finance Lead",
+          "quote": "RudderStack is cheaper for our current volume, but Segment has cleaner integrations with the lifecycle tools. If cost is the main factor, I would pick RudderStack.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1791040000.000100",
+          "message_ts": "1791040120.000300",
+          "speaker": "Aisha Rahman",
+          "speaker_role": "Customer Success Manager",
+          "quote": "I'm concerned about using RudderStack because the support team had trouble debugging missing events during the March onboarding campaign. Assuming cost matters more than support workflow, RudderStack is fine.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1791040000.000100",
+          "message_ts": "1791040180.000400",
+          "speaker": "Nina Patel",
+          "speaker_role": "Head of Growth",
+          "quote": "Approved for now: use RudderStack for event tracking. Marco owns setup, and we'll revisit if support debugging becomes a blocker.",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1791040000.000100",
+          "message_ts": "1791040300.000600",
+          "speaker": "Nina Patel",
+          "speaker_role": "Head of Growth",
+          "quote": "Reversing the earlier decision. Final decision: use Segment for event tracking instead of RudderStack. Debuggability matters more than the small cost difference. Marco still owns setup, and we need it ready before lifecycle launch on 2026-09-25.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1791040000.000100",
+          "message_ts": "1791040240.000500",
+          "speaker": "Marco Silva",
+          "speaker_role": "Finance Lead",
+          "quote": "Update: I checked the implementation details. RudderStack's cheaper plan does not include the replay tooling support needs, so the real cost difference is much smaller.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1791040000.000100",
+          "message_ts": "1791040060.000200",
+          "speaker": "Marco Silva",
+          "speaker_role": "Finance Lead",
+          "quote": "RudderStack is cheaper for our current volume, but Segment has cleaner integrations with the lifecycle tools. If cost is the main factor, I would pick RudderStack.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1791040000.000100",
+          "message_ts": "1791040120.000300",
+          "speaker": "Aisha Rahman",
+          "speaker_role": "Customer Success Manager",
+          "quote": "I'm concerned about using RudderStack because the support team had trouble debugging missing events during the March onboarding campaign. Assuming cost matters more than support workflow, RudderStack is fine.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1791040000.000100",
+          "message_ts": "1791040180.000400",
+          "speaker": "Nina Patel",
+          "speaker_role": "Head of Growth",
+          "quote": "Approved for now: use RudderStack for event tracking. Marco owns setup, and we'll revisit if support debugging becomes a blocker.",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "1791040300.000600"
+    }
+  ]
+}

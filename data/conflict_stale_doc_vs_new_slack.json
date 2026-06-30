@@ -1,0 +1,44 @@
+{
+  "workspace": "AcmeAI",
+  "sources": [
+    {
+      "source_type": "google_doc",
+      "doc_id": "doc_stale_feature_flags",
+      "title": "Earlier Feature Flag Vendor Decision",
+      "created_at": "2027-05-01T13:00:00Z",
+      "updated_at": "2027-05-01T13:10:00Z",
+      "author": "Maya Chen",
+      "author_role": "VP Product",
+      "url": "https://docs.google.com/document/d/stale-feature-flags",
+      "sections": [
+        {
+          "heading": "Decision",
+          "text": "Final decision: use ConfigCat for feature flags."
+        }
+      ]
+    },
+    {
+      "source_type": "slack",
+      "messages": [
+        {
+          "channel": "platform",
+          "channel_id": "C_PLATFORM",
+          "thread_ts": "1811200000.000100",
+          "ts": "1811200000.000100",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "text": "The ConfigCat plan is stale. LaunchDarkly has the enterprise audit hooks ready now."
+        },
+        {
+          "channel": "platform",
+          "channel_id": "C_PLATFORM",
+          "thread_ts": "1811200000.000100",
+          "ts": "1811200060.000200",
+          "speaker": "Hannah Lee",
+          "speaker_role": "Director of Engineering",
+          "text": "Approved: choose LaunchDarkly for feature flags now."
+        }
+      ]
+    }
+  ]
+}

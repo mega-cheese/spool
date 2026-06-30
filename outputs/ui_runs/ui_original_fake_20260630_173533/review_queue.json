@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "input_file": "data/original_fake.json",
+    "mode": "llm",
+    "pipeline": "candidates-shadow",
+    "generated_at": "2026-06-30T17:35:39.816317+00:00",
+    "review_item_count": 0
+  },
+  "items": []
+}

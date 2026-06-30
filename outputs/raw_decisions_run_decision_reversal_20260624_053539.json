@@ -1,0 +1,325 @@
+{
+  "metadata": {
+    "input_file": "data/decision_reversal.json",
+    "decision_count": 1,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-5.4-mini",
+    "verified": true,
+    "generated_at": "2026-06-24T05:35:39.874265+00:00",
+    "validation_issue_count": 0,
+    "validation_issues": [],
+    "raw_validation_issue_count": 0
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_91e0e3abb9",
+      "decision": "Use Postmark for lifecycle emails instead of SendGrid.",
+      "date": null,
+      "owner": "Marco Silva",
+      "owner_role": "Finance Lead",
+      "participants": [
+        "Nina Patel",
+        "Marco Silva",
+        "Aisha Rahman"
+      ],
+      "status": "confirmed",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Deliverability matters more than the small cost difference.",
+          "support_level": "direct",
+          "confidence": 0.98,
+          "source_message_ts": "1782380300.000600",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1782380000.000100",
+            "message_ts": "1782380300.000600",
+            "speaker": "Nina Patel",
+            "speaker_role": "Head of Growth",
+            "quote": "Reversing the earlier decision. Final decision: use Postmark for lifecycle emails instead of SendGrid. Deliverability matters more than the small cost difference. Marco still owns setup, and we need it ready before the onboarding launch on 2026-08-20.",
+            "url": null
+          }
+        }
+      ],
+      "objections": [
+        {
+          "claim": "SendGrid had delays on password-reset emails last quarter.",
+          "support_level": "direct",
+          "confidence": 0.91,
+          "source_message_ts": "1782380120.000300",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1782380000.000100",
+            "message_ts": "1782380120.000300",
+            "speaker": "Aisha Rahman",
+            "speaker_role": "Customer Success Manager",
+            "quote": "I'm concerned about using SendGrid again because password-reset emails also had delays last quarter. Assuming deliverability matters more than the lower price, I would choose Postmark.",
+            "url": null
+          }
+        }
+      ],
+      "assumptions": [
+        {
+          "claim": "Deliverability matters more than the lower price.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source_message_ts": "1782380120.000300",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1782380000.000100",
+            "message_ts": "1782380120.000300",
+            "speaker": "Aisha Rahman",
+            "speaker_role": "Customer Success Manager",
+            "quote": "I'm concerned about using SendGrid again because password-reset emails also had delays last quarter. Assuming deliverability matters more than the lower price, I would choose Postmark.",
+            "url": null
+          }
+        }
+      ],
+      "risks": [
+        {
+          "claim": "SendGrid had worse deliverability during the March campaign.",
+          "support_level": "direct",
+          "confidence": 0.93,
+          "source_message_ts": "1782380060.000200",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1782380000.000100",
+            "message_ts": "1782380060.000200",
+            "speaker": "Marco Silva",
+            "speaker_role": "Finance Lead",
+            "quote": "SendGrid is cheaper for the first 100k emails, but deliverability was worse during the March campaign. Postmark is more expensive, but support said it had fewer spam-folder issues.",
+            "url": null
+          }
+        },
+        {
+          "claim": "SendGrid's cheaper tier does not include the dedicated IP package needed.",
+          "support_level": "direct",
+          "confidence": 0.95,
+          "source_message_ts": "1782380240.000500",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1782380000.000100",
+            "message_ts": "1782380240.000500",
+            "speaker": "Marco Silva",
+            "speaker_role": "Finance Lead",
+            "quote": "Update: I checked the contract details. SendGrid's cheaper tier does not include the dedicated IP package we need, so the real cost difference is much smaller.",
+            "url": null
+          }
+        }
+      ],
+      "tradeoffs": [
+        {
+          "claim": "Postmark is more expensive.",
+          "support_level": "direct",
+          "confidence": 0.92,
+          "source_message_ts": "1782380060.000200",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1782380000.000100",
+            "message_ts": "1782380060.000200",
+            "speaker": "Marco Silva",
+            "speaker_role": "Finance Lead",
+            "quote": "SendGrid is cheaper for the first 100k emails, but deliverability was worse during the March campaign. Postmark is more expensive, but support said it had fewer spam-folder issues.",
+            "url": null
+          }
+        },
+        {
+          "claim": "The real cost difference is much smaller.",
+          "support_level": "direct",
+          "confidence": 0.95,
+          "source_message_ts": "1782380240.000500",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1782380000.000100",
+            "message_ts": "1782380240.000500",
+            "speaker": "Marco Silva",
+            "speaker_role": "Finance Lead",
+            "quote": "Update: I checked the contract details. SendGrid's cheaper tier does not include the dedicated IP package we need, so the real cost difference is much smaller.",
+            "url": null
+          }
+        }
+      ],
+      "timelines": [],
+      "deadlines": [
+        {
+          "date": "2026-08-20",
+          "description": "Ready before the onboarding launch.",
+          "source_message_ts": "1782380300.000600",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1782380000.000100",
+            "message_ts": "1782380300.000600",
+            "speaker": "Nina Patel",
+            "speaker_role": "Head of Growth",
+            "quote": "Reversing the earlier decision. Final decision: use Postmark for lifecycle emails instead of SendGrid. Deliverability matters more than the small cost difference. Marco still owns setup, and we need it ready before the onboarding launch on 2026-08-20.",
+            "url": null
+          }
+        }
+      ],
+      "action_items": [
+        {
+          "action": "Marco Silva owns setup.",
+          "owner": "Marco Silva",
+          "due_date": null,
+          "due_text": null,
+          "source_message_ts": "1782380300.000600",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "growth",
+            "channel_id": "C_GROWTH",
+            "thread_ts": "1782380000.000100",
+            "message_ts": "1782380300.000600",
+            "speaker": "Nina Patel",
+            "speaker_role": "Head of Growth",
+            "quote": "Reversing the earlier decision. Final decision: use Postmark for lifecycle emails instead of SendGrid. Deliverability matters more than the small cost difference. Marco still owns setup, and we need it ready before the onboarding launch on 2026-08-20.",
+            "url": null
+          }
+        }
+      ],
+      "revisit_date": null,
+      "revisit_trigger": "After the first campaign.",
+      "decision_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1782380000.000100",
+          "message_ts": "1782380300.000600",
+          "speaker": "Nina Patel",
+          "speaker_role": "Head of Growth",
+          "quote": "Reversing the earlier decision. Final decision: use Postmark for lifecycle emails instead of SendGrid. Deliverability matters more than the small cost difference. Marco still owns setup, and we need it ready before the onboarding launch on 2026-08-20.",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1782380000.000100",
+          "message_ts": "1782380300.000600",
+          "speaker": "Nina Patel",
+          "speaker_role": "Head of Growth",
+          "quote": "Reversing the earlier decision. Final decision: use Postmark for lifecycle emails instead of SendGrid. Deliverability matters more than the small cost difference. Marco still owns setup, and we need it ready before the onboarding launch on 2026-08-20.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1782380000.000100",
+          "message_ts": "1782380120.000300",
+          "speaker": "Aisha Rahman",
+          "speaker_role": "Customer Success Manager",
+          "quote": "I'm concerned about using SendGrid again because password-reset emails also had delays last quarter. Assuming deliverability matters more than the lower price, I would choose Postmark.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1782380000.000100",
+          "message_ts": "1782380060.000200",
+          "speaker": "Marco Silva",
+          "speaker_role": "Finance Lead",
+          "quote": "SendGrid is cheaper for the first 100k emails, but deliverability was worse during the March campaign. Postmark is more expensive, but support said it had fewer spam-folder issues.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1782380000.000100",
+          "message_ts": "1782380240.000500",
+          "speaker": "Marco Silva",
+          "speaker_role": "Finance Lead",
+          "quote": "Update: I checked the contract details. SendGrid's cheaper tier does not include the dedicated IP package we need, so the real cost difference is much smaller.",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1782380000.000100",
+          "message_ts": "1782380300.000600",
+          "speaker": "Nina Patel",
+          "speaker_role": "Head of Growth",
+          "quote": "Reversing the earlier decision. Final decision: use Postmark for lifecycle emails instead of SendGrid. Deliverability matters more than the small cost difference. Marco still owns setup, and we need it ready before the onboarding launch on 2026-08-20.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1782380000.000100",
+          "message_ts": "1782380120.000300",
+          "speaker": "Aisha Rahman",
+          "speaker_role": "Customer Success Manager",
+          "quote": "I'm concerned about using SendGrid again because password-reset emails also had delays last quarter. Assuming deliverability matters more than the lower price, I would choose Postmark.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1782380000.000100",
+          "message_ts": "1782380060.000200",
+          "speaker": "Marco Silva",
+          "speaker_role": "Finance Lead",
+          "quote": "SendGrid is cheaper for the first 100k emails, but deliverability was worse during the March campaign. Postmark is more expensive, but support said it had fewer spam-folder issues.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "growth",
+          "channel_id": "C_GROWTH",
+          "thread_ts": "1782380000.000100",
+          "message_ts": "1782380240.000500",
+          "speaker": "Marco Silva",
+          "speaker_role": "Finance Lead",
+          "quote": "Update: I checked the contract details. SendGrid's cheaper tier does not include the dedicated IP package we need, so the real cost difference is much smaller.",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "1782380300.000600"
+    }
+  ]
+}

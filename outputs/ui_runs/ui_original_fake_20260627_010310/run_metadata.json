@@ -1,0 +1,20 @@
+{
+  "run_id": "ui_original_fake_20260627_010310",
+  "input_file": "data/original_fake.json",
+  "mode": "llm",
+  "pipeline": "candidates-shadow",
+  "model": "gpt-4.1-mini",
+  "source_type": "slack",
+  "created_at": "2026-06-27T01:03:24.443851+00:00",
+  "artifacts": {
+    "decisions": "outputs/ui_runs/ui_original_fake_20260627_010310/decisions.json",
+    "raw_decisions": "outputs/ui_runs/ui_original_fake_20260627_010310/raw_decisions.json",
+    "normalized_events_debug": "outputs/ui_runs/ui_original_fake_20260627_010310/normalized_events_debug.json",
+    "source_bundles_debug": "outputs/ui_runs/ui_original_fake_20260627_010310/source_bundles_debug.json",
+    "candidates_debug": "outputs/ui_runs/ui_original_fake_20260627_010310/candidates_debug.json",
+    "state_resolution_debug": "outputs/ui_runs/ui_original_fake_20260627_010310/state_resolution_debug.json",
+    "review_queue": "outputs/ui_runs/ui_original_fake_20260627_010310/review_queue.json",
+    "review_queue_md": "outputs/ui_runs/ui_original_fake_20260627_010310/review_queue.md",
+    "run_metadata": "outputs/ui_runs/ui_original_fake_20260627_010310/run_metadata.json"
+  }
+}

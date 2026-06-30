@@ -1,0 +1,29 @@
+{
+  "run_id": "v080_manual_training_notes",
+  "input_file": "/Users/admin/Downloads/Training Meeting Notes .pdf",
+  "pipeline": "candidates-shadow",
+  "mode": "heuristic",
+  "created_at": "2026-06-30T22:12:06.068735+00:00",
+  "artifacts": {
+    "decisions": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/decisions.json",
+    "normalized_events_debug": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/normalized_events_debug.json",
+    "source_bundles_debug": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/source_bundles_debug.json",
+    "candidates_debug": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/candidates_debug.json",
+    "state_resolution_debug": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/state_resolution_debug.json",
+    "conflicts_debug": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/conflicts_debug.json",
+    "meeting_metadata": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/meeting_metadata.json",
+    "clean_memory": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/clean_memory.json",
+    "action_items": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/action_items.json",
+    "open_questions": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/open_questions.json",
+    "document_memory_debug": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/document_memory_debug.json",
+    "block_classification_debug": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/block_classification_debug.json",
+    "review_queue": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/review_queue.json",
+    "candidate_memory": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/candidate_memory.json",
+    "approved_memory": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/approved_memory.json",
+    "rejected_memory": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/rejected_memory.json",
+    "review_actions": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/review_actions.json",
+    "memory_state_debug": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/memory_state_debug.json",
+    "review_queue_md": "outputs/manual_v080_training_notes/runs/v080_manual_training_notes/review_queue.md",
+    "raw_decisions": null
+  }
+}

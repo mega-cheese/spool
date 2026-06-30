@@ -1,0 +1,263 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/Meeting #7_ August 26th, 2025.pdf",
+    "candidate_count": 23,
+    "approved_count": 0,
+    "needs_review_count": 8,
+    "rejected_count": 1
+  },
+  "items": [
+    {
+      "memory_id": "mem_181794f161e9",
+      "type": "commitment",
+      "title": "Award descriptions post on website.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "To-do Award descriptions post on website (Ann)"
+    },
+    {
+      "memory_id": "mem_faf453eef182",
+      "type": "commitment",
+      "title": "How are awards determined.",
+      "review_state": "rejected",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.76,
+      "reason_codes": [
+        "suspicious_owner",
+        "weak_task_parse",
+        "ugly_parser_text"
+      ],
+      "source_quote": "To-do JBo Rubrics - How are awards determined"
+    },
+    {
+      "memory_id": "mem_a74e45d59008",
+      "type": "commitment",
+      "title": "Update instagram for recruitment.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-do Frankie to update instagram for recruitment"
+    },
+    {
+      "memory_id": "mem_20adbd404fec",
+      "type": "commitment",
+      "title": "Write Howl article.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-do Sheree to write Howl article"
+    },
+    {
+      "memory_id": "mem_453598bf64b6",
+      "type": "commitment",
+      "title": "Start reaching out about chaperones.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "To-do Elliott to start reaching out about chaperones"
+    },
+    {
+      "memory_id": "mem_bc65074186da",
+      "type": "commitment",
+      "title": "Start planning JS training sessions.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "To-do Evangeline to start planning JS training sessions"
+    },
+    {
+      "memory_id": "mem_a57e01a388ed",
+      "type": "commitment",
+      "title": "Follow up with directors who are behind.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-do James to follow up with directors who are behind"
+    },
+    {
+      "memory_id": "mem_676bfc790acf",
+      "type": "commitment",
+      "title": "Send backgrounders to teachers before publishing for final review.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-do Hugo to send backgrounders to teachers before publishing for ﬁnal review"
+    },
+    {
+      "memory_id": "mem_fde7ac3fa05b",
+      "type": "commitment",
+      "title": "Start ordering materials (incl awards).",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "To-do Elliott to start ordering materials (incl awards)"
+    },
+    {
+      "memory_id": "mem_a9b117bb18ec",
+      "type": "commitment",
+      "title": "Think about awards for speech contest.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "To-do Sheree will think about awards for speech contest"
+    },
+    {
+      "memory_id": "mem_bf8f2fbd5621",
+      "type": "commitment",
+      "title": "Owen and Frankie to follow up with St John’s Ravens Court.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-do Owen and Frankie to follow up with St John’s Ravens Court - Wednesday"
+    },
+    {
+      "memory_id": "mem_beffb15f77b3",
+      "type": "commitment",
+      "title": "Contact Mr Mac about media.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-do Owen contact Mr Mac about media"
+    },
+    {
+      "memory_id": "mem_ee4b3a89c0a2",
+      "type": "commitment",
+      "title": "Can talk to Reid about swimming conﬂict (get a list to prepare).",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "To-do Sheree can talk to Reid about swimming conﬂict (get a list to prepare)"
+    },
+    {
+      "memory_id": "mem_2da33af66435",
+      "type": "commitment",
+      "title": "JS staff.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.84,
+      "reason_codes": [
+        "weak_task_parse",
+        "coverage_warning"
+      ],
+      "source_quote": "3. VYMUN Junior Training & Connections iv. Talk to JS staﬀ"
+    },
+    {
+      "memory_id": "mem_fb95cc813e04",
+      "type": "commitment",
+      "title": "Send them to the teachers for review before publishing on.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "4. Background guides updates (James) i. Hugo to send them to the teachers for review before publishing on"
+    },
+    {
+      "memory_id": "mem_9831b7d5f788",
+      "type": "commitment",
+      "title": "Finalize w/ caterers.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "7. Delegate social catering (Elliott) a. Elliott to ﬁnalize w/ caterers"
+    },
+    {
+      "memory_id": "mem_9a3f090684ab",
+      "type": "commitment",
+      "title": "Avoid gavel hunters.",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "weak_task_parse"
+      ],
+      "source_quote": "8. Awards need to be ordered (Elliott) b. Attempting to avoid gavel hunters"
+    },
+    {
+      "memory_id": "mem_69cf5d7a7695",
+      "type": "commitment",
+      "title": "Follow up with the Major.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "9. Keynote speaker updates (Frankie) c. Frankie to follow up with the Major"
+    },
+    {
+      "memory_id": "mem_54932fe735bf",
+      "type": "commitment",
+      "title": "Find contacts in schools (Owen’s stalking).",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "10. Hotels (Owen) ii. Hard to ﬁnd contacts in schools (Owen’s stalking)"
+    },
+    {
+      "memory_id": "mem_999074eb9ad3",
+      "type": "commitment",
+      "title": "Follow up.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "10. Hotels (Owen) 2. Follow up (Owen and Frankie)"
+    },
+    {
+      "memory_id": "mem_3179bde718ed",
+      "type": "commitment",
+      "title": "Connect w/ Mr Mac.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "12. Special projects (Quinton) h. Connect w/ Mr Mac (Owen)"
+    },
+    {
+      "memory_id": "mem_c8977339bc5f",
+      "type": "open_question",
+      "title": "Media items, including website and Instagram, are to be discussed next time.",
+      "review_state": "unreviewed",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "source_quote": "Document August 26th, 2025 1. Registration Updates- Master Reg. Doc Here. a. VYMUN- UBC: 76 external delegates i. 100 spots left for UBC (not incl staﬀ) ii. Poster with QR code for Display Wall b. VYMUN Junior: 39"
+    },
+    {
+      "memory_id": "mem_b901b281cabd",
+      "type": "context",
+      "title": "Task table may have been under-extracted",
+      "review_state": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.79,
+      "reason_codes": [
+        "extraction_warning",
+        "coverage_warning"
+      ],
+      "source_quote": "a.   Reminder: We sent this welcome back letter in June\n             b.   Plan for training & support leading up to the conference?\n             c.   Update 2024 September/October letter- send when backgrounders and\n                  assignments are done.\n             d.   Contact Mr. Lee to begin asking for chaperone support. - reach out to Ms. A.\n                  Shaw as a possible chaperone\n                     i.    Elliott\n             e.   Sessions with registered Junior School delegates to prep them\n                     i.    Also evening sessions to work on topic paragraphs\n                    ii.    Parents could come in\n                    iii.   Evangeline plan 2 in-person, 2 online sessions\n                    iv.    Talk to JS staﬀ"
+    }
+  ]
+}

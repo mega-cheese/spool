@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/Meeting #7_ August 26th, 2025.pdf",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "classification": "meeting_minutes",
+    "generated_at": "2026-06-30T22:11:56.928755+00:00",
+    "open_question_count": 1
+  },
+  "open_questions": [
+    {
+      "object_id": "memory_17e6272c6ea3",
+      "type": "open_question",
+      "title": "Media items, including website and Instagram, are to be discussed next time.",
+      "summary": "Media items, including website and Instagram, are to be discussed next time.",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_9cf77b848dc74377_section_1"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_9cf77b848dc74377_section_1",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_9cf77b848dc74377",
+          "document_title": "Meeting #7_ August 26th, 2025.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Document August 26th, 2025 1. Registration Updates- Master Reg. Doc Here. a. VYMUN- UBC: 76 external delegates i. 100 spots left for UBC (not incl staﬀ) ii. Poster with QR code for Display Wall b. VYMUN Junior: 39",
+          "locator": "file_9cf77b848dc74377#section-1",
+          "page": 1,
+          "url": null
+        }
+      ],
+      "quote": "Document August 26th, 2025 1. Registration Updates- Master Reg. Doc Here. a. VYMUN- UBC: 76 external delegates i. 100 spots left for UBC (not incl staﬀ) ii. Poster with QR code for Display Wall b. VYMUN Junior: 39",
+      "confidence": 0.86
+    }
+  ]
+}

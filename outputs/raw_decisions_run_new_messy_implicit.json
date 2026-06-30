@@ -1,0 +1,424 @@
+{
+  "metadata": {
+    "input_file": "data/new_messy_implicit.json",
+    "decision_count": 1,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-5.4-mini",
+    "verified": true,
+    "generated_at": "2026-06-24T19:38:56.807725+00:00",
+    "validation_issue_count": 0,
+    "validation_issues": [],
+    "raw_validation_issue_count": 0
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_2afb583e5c",
+      "decision": "Make Security Center the parent section for security settings, moving SSO and audit exports first, then SCIM, with API tokens following after Owen's piece.",
+      "date": null,
+      "owner": "Priya Shah",
+      "owner_role": "Staff Engineer",
+      "participants": [
+        "Maya Chen",
+        "Sarah Kim",
+        "Priya Shah",
+        "Leo Park",
+        "Owen Diaz"
+      ],
+      "status": "confirmed",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "It matches where enterprise admin is going.",
+          "support_level": "direct",
+          "confidence": 0.95,
+          "source_message_ts": "1791050180.000400",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1791050000.000100",
+            "message_ts": "1791050180.000400",
+            "speaker": "Leo Park",
+            "speaker_role": "CTO",
+            "quote": "That is more work, but it matches where enterprise admin is going. Keeping SSO under Account saves maybe 2 days and creates another cleanup project.",
+            "url": null
+          }
+        },
+        {
+          "claim": "It solves the demo issue.",
+          "support_level": "direct",
+          "confidence": 0.95,
+          "source_message_ts": "1791050360.000700",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1791050000.000100",
+            "message_ts": "1791050360.000700",
+            "speaker": "Sarah Kim",
+            "speaker_role": "Head of Sales",
+            "quote": "That would solve the demo issue. Boring is honestly fine here.",
+            "url": null
+          }
+        },
+        {
+          "claim": "Safer than hiding SSO under Account.",
+          "support_level": "direct",
+          "confidence": 0.95,
+          "source_message_ts": "1791050540.001000",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1791050000.000100",
+            "message_ts": "1791050540.001000",
+            "speaker": "Leo Park",
+            "speaker_role": "CTO",
+            "quote": "Agree. Tradeoff is we accept a basic security IA now instead of doing the full permissions model. Safer than hiding SSO under Account.",
+            "url": null
+          }
+        }
+      ],
+      "objections": [
+        {
+          "claim": "Keeping SSO under Account saves maybe 2 days.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source_message_ts": "1791050180.000400",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1791050000.000100",
+            "message_ts": "1791050180.000400",
+            "speaker": "Leo Park",
+            "speaker_role": "CTO",
+            "quote": "That is more work, but it matches where enterprise admin is going. Keeping SSO under Account saves maybe 2 days and creates another cleanup project.",
+            "url": null
+          }
+        },
+        {
+          "claim": "The updated admin flow is promised to design partners before 2026-09-10.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source_message_ts": "1791050240.000500",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1791050000.000100",
+            "message_ts": "1791050240.000500",
+            "speaker": "Maya Chen",
+            "speaker_role": "VP Product",
+            "quote": "My only worry is slipping the security review demo. We promised the updated admin flow to design partners before 2026-09-10.",
+            "url": null
+          }
+        }
+      ],
+      "assumptions": [],
+      "risks": [
+        {
+          "claim": "Slipping the security review demo is a worry.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source_message_ts": "1791050240.000500",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1791050000.000100",
+            "message_ts": "1791050240.000500",
+            "speaker": "Maya Chen",
+            "speaker_role": "VP Product",
+            "quote": "My only worry is slipping the security review demo. We promised the updated admin flow to design partners before 2026-09-10.",
+            "url": null
+          }
+        }
+      ],
+      "tradeoffs": [
+        {
+          "claim": "We accept a basic security IA now instead of doing the full permissions model.",
+          "support_level": "direct",
+          "confidence": 0.95,
+          "source_message_ts": "1791050540.001000",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1791050000.000100",
+            "message_ts": "1791050540.001000",
+            "speaker": "Leo Park",
+            "speaker_role": "CTO",
+            "quote": "Agree. Tradeoff is we accept a basic security IA now instead of doing the full permissions model. Safer than hiding SSO under Account.",
+            "url": null
+          }
+        }
+      ],
+      "timelines": [
+        {
+          "claim": "Security Center section can be wired by next Thursday.",
+          "support_level": "direct",
+          "confidence": 0.95,
+          "source_message_ts": "1791050300.000600",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1791050000.000100",
+            "message_ts": "1791050300.000600",
+            "speaker": "Priya Shah",
+            "speaker_role": "Staff Engineer",
+            "quote": "If we keep the first pass boring, I can have the Security Center section wired by next Thursday. No custom permission scopes in this pass.",
+            "url": null
+          }
+        }
+      ],
+      "deadlines": [
+        {
+          "date": "2026-09-10",
+          "description": "Updated admin flow is due to design partners before the demo.",
+          "source_message_ts": "1791050240.000500",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1791050000.000100",
+            "message_ts": "1791050240.000500",
+            "speaker": "Maya Chen",
+            "speaker_role": "VP Product",
+            "quote": "My only worry is slipping the security review demo. We promised the updated admin flow to design partners before 2026-09-10.",
+            "url": null
+          }
+        }
+      ],
+      "action_items": [
+        {
+          "action": "Take the nav work.",
+          "owner": "Priya Shah",
+          "due_date": null,
+          "due_text": null,
+          "source_message_ts": "1791050420.000800",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1791050000.000100",
+            "message_ts": "1791050420.000800",
+            "speaker": "Owen Diaz",
+            "speaker_role": "Engineering Manager",
+            "quote": "Works for me. Priya, can you take the nav work? I can move API tokens once the route exists.",
+            "url": null
+          }
+        },
+        {
+          "action": "Move API tokens once the route exists.",
+          "owner": "Owen Diaz",
+          "due_date": null,
+          "due_text": null,
+          "source_message_ts": "1791050420.000800",
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-eng",
+            "channel_id": "C_PRODUCT_ENG",
+            "thread_ts": "1791050000.000100",
+            "message_ts": "1791050420.000800",
+            "speaker": "Owen Diaz",
+            "speaker_role": "Engineering Manager",
+            "quote": "Works for me. Priya, can you take the nav work? I can move API tokens once the route exists.",
+            "url": null
+          }
+        }
+      ],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1791050000.000100",
+          "message_ts": "1791050480.000900",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "Yep. I'll make Security Center the parent section, move SSO and audit exports first, then SCIM. API tokens can follow after Owen's piece.",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1791050000.000100",
+          "message_ts": "1791050180.000400",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "That is more work, but it matches where enterprise admin is going. Keeping SSO under Account saves maybe 2 days and creates another cleanup project.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1791050000.000100",
+          "message_ts": "1791050360.000700",
+          "speaker": "Sarah Kim",
+          "speaker_role": "Head of Sales",
+          "quote": "That would solve the demo issue. Boring is honestly fine here.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1791050000.000100",
+          "message_ts": "1791050540.001000",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "Agree. Tradeoff is we accept a basic security IA now instead of doing the full permissions model. Safer than hiding SSO under Account.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1791050000.000100",
+          "message_ts": "1791050240.000500",
+          "speaker": "Maya Chen",
+          "speaker_role": "VP Product",
+          "quote": "My only worry is slipping the security review demo. We promised the updated admin flow to design partners before 2026-09-10.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1791050000.000100",
+          "message_ts": "1791050300.000600",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "If we keep the first pass boring, I can have the Security Center section wired by next Thursday. No custom permission scopes in this pass.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1791050000.000100",
+          "message_ts": "1791050420.000800",
+          "speaker": "Owen Diaz",
+          "speaker_role": "Engineering Manager",
+          "quote": "Works for me. Priya, can you take the nav work? I can move API tokens once the route exists.",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1791050000.000100",
+          "message_ts": "1791050480.000900",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "Yep. I'll make Security Center the parent section, move SSO and audit exports first, then SCIM. API tokens can follow after Owen's piece.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1791050000.000100",
+          "message_ts": "1791050180.000400",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "That is more work, but it matches where enterprise admin is going. Keeping SSO under Account saves maybe 2 days and creates another cleanup project.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1791050000.000100",
+          "message_ts": "1791050360.000700",
+          "speaker": "Sarah Kim",
+          "speaker_role": "Head of Sales",
+          "quote": "That would solve the demo issue. Boring is honestly fine here.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1791050000.000100",
+          "message_ts": "1791050540.001000",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "Agree. Tradeoff is we accept a basic security IA now instead of doing the full permissions model. Safer than hiding SSO under Account.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1791050000.000100",
+          "message_ts": "1791050240.000500",
+          "speaker": "Maya Chen",
+          "speaker_role": "VP Product",
+          "quote": "My only worry is slipping the security review demo. We promised the updated admin flow to design partners before 2026-09-10.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1791050000.000100",
+          "message_ts": "1791050300.000600",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "If we keep the first pass boring, I can have the Security Center section wired by next Thursday. No custom permission scopes in this pass.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-eng",
+          "channel_id": "C_PRODUCT_ENG",
+          "thread_ts": "1791050000.000100",
+          "message_ts": "1791050420.000800",
+          "speaker": "Owen Diaz",
+          "speaker_role": "Engineering Manager",
+          "quote": "Works for me. Priya, can you take the nav work? I can move API tokens once the route exists.",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "1791050480.000900"
+    }
+  ]
+}

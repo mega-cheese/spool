@@ -1,0 +1,414 @@
+{
+  "metadata": {
+    "input_file": "data/original_fake.json",
+    "decision_count": 2,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-4.1-mini",
+    "verified": true,
+    "generated_at": "2026-06-30T17:34:38.377314+00:00",
+    "raw_validation_issue_count": 0,
+    "clean_validation_issue_count": 0,
+    "removed_claim_count": 0,
+    "repair_count": 0,
+    "postprocessing_change_count": 0
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_312cae11f8",
+      "decision": "Delay the enterprise launch until SOC 2 is complete.",
+      "date": "2026-06-23",
+      "owner": "Maya Chen",
+      "owner_role": "VP Product",
+      "participants": [
+        "Maya Chen",
+        "Leo Park",
+        "Sarah Kim"
+      ],
+      "status": "confirmed",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Pilot customers said security review will block the launch without SOC 2.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-strategy",
+            "channel_id": "C_PRODUCT",
+            "thread_ts": "1782201000.000100",
+            "message_ts": "1782201000.000100",
+            "speaker": "Maya Chen",
+            "speaker_role": "VP Product",
+            "quote": "I think we should delay the enterprise launch until SOC 2 is complete. Two pilot customers said security review will block us without it.",
+            "url": null
+          }
+        },
+        {
+          "claim": "Without audit logs and SSO, security review will probably fail.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-strategy",
+            "channel_id": "C_PRODUCT",
+            "thread_ts": "1782201000.000100",
+            "message_ts": "1782201060.000200",
+            "speaker": "Leo Park",
+            "speaker_role": "CTO",
+            "quote": "Agreed. Without audit logs and SSO, security review will probably fail. Engineering needs about four more weeks.",
+            "url": null
+          }
+        },
+        {
+          "claim": "Assuming the pilots will wait, delaying is safer.",
+          "support_level": "direct",
+          "confidence": 0.8,
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-strategy",
+            "channel_id": "C_PRODUCT",
+            "thread_ts": "1782201000.000100",
+            "message_ts": "1782201120.000300",
+            "speaker": "Sarah Kim",
+            "speaker_role": "Head of Sales",
+            "quote": "I'm concerned the delay could hurt Q3 pipeline, but assuming the pilots will wait, this is still safer. Let's revisit on 2026-09-12.",
+            "url": null
+          }
+        }
+      ],
+      "objections": [
+        {
+          "claim": "The delay could hurt Q3 sales pipeline.",
+          "support_level": "direct",
+          "confidence": 0.8,
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-strategy",
+            "channel_id": "C_PRODUCT",
+            "thread_ts": "1782201000.000100",
+            "message_ts": "1782201120.000300",
+            "speaker": "Sarah Kim",
+            "speaker_role": "Head of Sales",
+            "quote": "I'm concerned the delay could hurt Q3 pipeline, but assuming the pilots will wait, this is still safer. Let's revisit on 2026-09-12.",
+            "url": null
+          }
+        }
+      ],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [
+        {
+          "claim": "Engineering needs about four more weeks to complete SOC 2 preparation.",
+          "support_level": "direct",
+          "confidence": 0.9,
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "product-strategy",
+            "channel_id": "C_PRODUCT",
+            "thread_ts": "1782201000.000100",
+            "message_ts": "1782201060.000200",
+            "speaker": "Leo Park",
+            "speaker_role": "CTO",
+            "quote": "Agreed. Without audit logs and SSO, security review will probably fail. Engineering needs about four more weeks.",
+            "url": null
+          }
+        }
+      ],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": "2026-09-12",
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-strategy",
+          "channel_id": "C_PRODUCT",
+          "thread_ts": "1782201000.000100",
+          "message_ts": "1782201180.000400",
+          "speaker": "Maya Chen",
+          "speaker_role": "VP Product",
+          "quote": "Final decision: delay launch until SOC 2 is complete and revisit on 2026-09-12.",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-strategy",
+          "channel_id": "C_PRODUCT",
+          "thread_ts": "1782201000.000100",
+          "message_ts": "1782201000.000100",
+          "speaker": "Maya Chen",
+          "speaker_role": "VP Product",
+          "quote": "I think we should delay the enterprise launch until SOC 2 is complete. Two pilot customers said security review will block us without it.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-strategy",
+          "channel_id": "C_PRODUCT",
+          "thread_ts": "1782201000.000100",
+          "message_ts": "1782201060.000200",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "Agreed. Without audit logs and SSO, security review will probably fail. Engineering needs about four more weeks.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-strategy",
+          "channel_id": "C_PRODUCT",
+          "thread_ts": "1782201000.000100",
+          "message_ts": "1782201120.000300",
+          "speaker": "Sarah Kim",
+          "speaker_role": "Head of Sales",
+          "quote": "I'm concerned the delay could hurt Q3 pipeline, but assuming the pilots will wait, this is still safer. Let's revisit on 2026-09-12.",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-strategy",
+          "channel_id": "C_PRODUCT",
+          "thread_ts": "1782201000.000100",
+          "message_ts": "1782201180.000400",
+          "speaker": "Maya Chen",
+          "speaker_role": "VP Product",
+          "quote": "Final decision: delay launch until SOC 2 is complete and revisit on 2026-09-12.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-strategy",
+          "channel_id": "C_PRODUCT",
+          "thread_ts": "1782201000.000100",
+          "message_ts": "1782201000.000100",
+          "speaker": "Maya Chen",
+          "speaker_role": "VP Product",
+          "quote": "I think we should delay the enterprise launch until SOC 2 is complete. Two pilot customers said security review will block us without it.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-strategy",
+          "channel_id": "C_PRODUCT",
+          "thread_ts": "1782201000.000100",
+          "message_ts": "1782201060.000200",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "Agreed. Without audit logs and SSO, security review will probably fail. Engineering needs about four more weeks.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "product-strategy",
+          "channel_id": "C_PRODUCT",
+          "thread_ts": "1782201000.000100",
+          "message_ts": "1782201120.000300",
+          "speaker": "Sarah Kim",
+          "speaker_role": "Head of Sales",
+          "quote": "I'm concerned the delay could hurt Q3 pipeline, but assuming the pilots will wait, this is still safer. Let's revisit on 2026-09-12.",
+          "url": null
+        }
+      ]
+    },
+    {
+      "decision_id": "dec_ae7c6d9cfa",
+      "decision": "Use Redis for session state instead of Postgres due to latency under load.",
+      "date": "2026-06-23",
+      "owner": "Leo Park",
+      "owner_role": "CTO",
+      "participants": [
+        "Leo Park",
+        "Priya Shah",
+        "Owen Diaz"
+      ],
+      "status": "confirmed",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Postgres latency is too high under load.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "engineering",
+            "channel_id": "C_ENG",
+            "thread_ts": "1782202000.000100",
+            "message_ts": "1782202000.000100",
+            "speaker": "Leo Park",
+            "speaker_role": "CTO",
+            "quote": "Proposal: use Redis for session state because Postgres latency is too high under load.",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [
+        {
+          "claim": "Extra infrastructure complexity is the accepted tradeoff.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "engineering",
+            "channel_id": "C_ENG",
+            "thread_ts": "1782202000.000100",
+            "message_ts": "1782202060.000200",
+            "speaker": "Priya Shah",
+            "speaker_role": "Staff Engineer",
+            "quote": "I agree. The tradeoff is extra infra complexity, but latency is the bigger risk.",
+            "url": null
+          }
+        }
+      ],
+      "timelines": [
+        {
+          "claim": "If Redis becomes a bottleneck later, we can revisit the design after launch.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source": {
+            "source_type": "slack",
+            "workspace": "AcmeAI",
+            "channel": "engineering",
+            "channel_id": "C_ENG",
+            "thread_ts": "1782202000.000100",
+            "message_ts": "1782202120.000300",
+            "speaker": "Owen Diaz",
+            "speaker_role": "Engineering Manager",
+            "quote": "If Redis becomes a bottleneck later, we can revisit the design after launch.",
+            "url": null
+          }
+        }
+      ],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "engineering",
+          "channel_id": "C_ENG",
+          "thread_ts": "1782202000.000100",
+          "message_ts": "1782202180.000400",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "Approved, let's move forward with Redis for session state.",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "engineering",
+          "channel_id": "C_ENG",
+          "thread_ts": "1782202000.000100",
+          "message_ts": "1782202000.000100",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "Proposal: use Redis for session state because Postgres latency is too high under load.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "engineering",
+          "channel_id": "C_ENG",
+          "thread_ts": "1782202000.000100",
+          "message_ts": "1782202060.000200",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "I agree. The tradeoff is extra infra complexity, but latency is the bigger risk.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "engineering",
+          "channel_id": "C_ENG",
+          "thread_ts": "1782202000.000100",
+          "message_ts": "1782202120.000300",
+          "speaker": "Owen Diaz",
+          "speaker_role": "Engineering Manager",
+          "quote": "If Redis becomes a bottleneck later, we can revisit the design after launch.",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "engineering",
+          "channel_id": "C_ENG",
+          "thread_ts": "1782202000.000100",
+          "message_ts": "1782202180.000400",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "Approved, let's move forward with Redis for session state.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "engineering",
+          "channel_id": "C_ENG",
+          "thread_ts": "1782202000.000100",
+          "message_ts": "1782202000.000100",
+          "speaker": "Leo Park",
+          "speaker_role": "CTO",
+          "quote": "Proposal: use Redis for session state because Postgres latency is too high under load.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "engineering",
+          "channel_id": "C_ENG",
+          "thread_ts": "1782202000.000100",
+          "message_ts": "1782202060.000200",
+          "speaker": "Priya Shah",
+          "speaker_role": "Staff Engineer",
+          "quote": "I agree. The tradeoff is extra infra complexity, but latency is the bigger risk.",
+          "url": null
+        },
+        {
+          "source_type": "slack",
+          "workspace": "AcmeAI",
+          "channel": "engineering",
+          "channel_id": "C_ENG",
+          "thread_ts": "1782202000.000100",
+          "message_ts": "1782202120.000300",
+          "speaker": "Owen Diaz",
+          "speaker_role": "Engineering Manager",
+          "quote": "If Redis becomes a bottleneck later, we can revisit the design after launch.",
+          "url": null
+        }
+      ]
+    }
+  ]
+}

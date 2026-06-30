@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "input_file": "/Users/admin/Downloads/Training Meeting Notes .pdf",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "classification": "meeting_minutes",
+    "generated_at": "2026-06-30T22:12:05.970466+00:00"
+  },
+  "classification": "meeting_minutes",
+  "source_headings": [
+    "Document",
+    "Overview",
+    "Mandatory Notes",
+    "Tasks",
+    "Document",
+    "Tips"
+  ],
+  "memory_objects": [
+    {
+      "object_id": "memory_bfa0b2c0f3a8",
+      "type": "action_item",
+      "title": "Record the training session.",
+      "summary": "Corina should record the training session.",
+      "owner_names": [
+        "Corina"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_2f94e7dc9d4ff24d_section_4"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_2f94e7dc9d4ff24d",
+          "document_title": "Training Meeting Notes .pdf",
+          "section_heading": "Tasks",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_2f94e7dc9d4ff24d#section-4",
+          "page": 1,
+          "url": null,
+          "quote": "Tasks Corina: Record the training session"
+        }
+      ],
+      "quote": "Tasks Corina: Record the training session",
+      "confidence": 0.8,
+      "block_id": "block_3e0fef640621",
+      "span_id": "span_8d0c898dea22"
+    },
+    {
+      "object_id": "memory_b3463e04222c",
+      "type": "action_item",
+      "title": "Reorganize script.",
+      "summary": "Corina should reorganize script.",
+      "owner_names": [
+        "Corina"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_2f94e7dc9d4ff24d_section_4"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_2f94e7dc9d4ff24d",
+          "document_title": "Training Meeting Notes .pdf",
+          "section_heading": "Tasks",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_2f94e7dc9d4ff24d#section-4",
+          "page": 1,
+          "url": null,
+          "quote": "Tasks Corina: Reorganize script"
+        }
+      ],
+      "quote": "Tasks Corina: Reorganize script",
+      "confidence": 0.8,
+      "block_id": "block_3e0fef640621",
+      "span_id": "span_8d0c898dea22"
+    },
+    {
+      "object_id": "memory_41bb06fbee62",
+      "type": "action_item",
+      "title": "Open the Kahoot.",
+      "summary": "Leanna should open the Kahoot.",
+      "owner_names": [
+        "Leanna"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_2f94e7dc9d4ff24d_section_4"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_2f94e7dc9d4ff24d",
+          "document_title": "Training Meeting Notes .pdf",
+          "section_heading": "Tasks",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_2f94e7dc9d4ff24d#section-4",
+          "page": 1,
+          "url": null,
+          "quote": "Tasks Leanna: Open the Kahoot"
+        }
+      ],
+      "quote": "Tasks Leanna: Open the Kahoot",
+      "confidence": 0.8,
+      "block_id": "block_3e0fef640621",
+      "span_id": "span_8d0c898dea22"
+    },
+    {
+      "object_id": "memory_dfe96d885508",
+      "type": "action_item",
+      "title": "The entire backup crew. If someone does not send a link/example/question in the chat please do it for them. (Wait 10-30 seconds to see if they are in the process of doing so or has forgotten.).",
+      "summary": "Leanna should the entire backup crew. If someone does not send a link/example/question in the chat please do it for them. (Wait 10-30 seconds to see if they are in the process of doing so or has forgotten.).",
+      "owner_names": [
+        "Leanna"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_2f94e7dc9d4ff24d_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_5",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_2f94e7dc9d4ff24d",
+          "document_title": "Training Meeting Notes .pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_2f94e7dc9d4ff24d#section-5",
+          "page": 2,
+          "url": null,
+          "quote": "Tasks Leanna: The entire backup crew. If someone does not send a link/example/question in the chat please do it for them. (Wait 10-30 seconds to see if they are in the process of doing so or has forgotten.)"
+        }
+      ],
+      "quote": "Tasks Leanna: The entire backup crew. If someone does not send a link/example/question in the chat please do it for them. (Wait 10-30 seconds to see if they are in the process of doing so or has forgotten.)",
+      "confidence": 0.8,
+      "block_id": "block_9f8e2bfb6172",
+      "span_id": "span_8d0c898dea22"
+    },
+    {
+      "object_id": "memory_2cd53e7cc4c2",
+      "type": "action_item",
+      "title": "Take attendance.",
+      "summary": "Amanda should take attendance.",
+      "owner_names": [
+        "Amanda"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_2f94e7dc9d4ff24d_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_5",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_2f94e7dc9d4ff24d",
+          "document_title": "Training Meeting Notes .pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_2f94e7dc9d4ff24d#section-5",
+          "page": 2,
+          "url": null,
+          "quote": "Tasks Amanda: Take attendance."
+        }
+      ],
+      "quote": "Tasks Amanda: Take attendance.",
+      "confidence": 0.8,
+      "block_id": "block_9f8e2bfb6172",
+      "span_id": "span_8d0c898dea22"
+    },
+    {
+      "object_id": "memory_fcb60e4d3d24",
+      "type": "action_item",
+      "title": "Do a debrief of the training session after it is over/the next day.",
+      "summary": "We should do a debrief of the training session after it is over/the next day.",
+      "owner_names": [
+        "We"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_2f94e7dc9d4ff24d_section_2"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_2",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_2f94e7dc9d4ff24d",
+          "document_title": "Training Meeting Notes .pdf",
+          "section_heading": "Overview",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_2f94e7dc9d4ff24d#section-2",
+          "page": 1,
+          "url": null,
+          "quote": "Overview We will do a debrief of the training session after it is over/the next day."
+        }
+      ],
+      "quote": "Overview We will do a debrief of the training session after it is over/the next day.",
+      "confidence": 0.8,
+      "block_id": "block_3b68f4bb0b40"
+    }
+  ],
+  "review_warnings": [
+    {
+      "reason": "extraction_warning",
+      "severity": "high",
+      "title": "Task table may have been under-extracted",
+      "summary": "Document appears to contain a task table, but many likely task rows were not extracted.",
+      "candidate_decision": "Task table may have been under-extracted",
+      "recommended_action": "Review block classification and task extraction output.",
+      "source_event_ids": [
+        "uploaded_document_file_2f94e7dc9d4ff24d_section_2"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_2f94e7dc9d4ff24d_section_2",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_2f94e7dc9d4ff24d",
+          "document_title": "Training Meeting Notes .pdf",
+          "section_heading": "Overview",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_2f94e7dc9d4ff24d#section-2",
+          "page": 1,
+          "url": null,
+          "quote": "Script: Have Corina shorten the script\n         Slideshow: Have Angela design the slide and match it to the script\n         Kahoot/Icebreaker/Mini Discussions: Have Leanna make a 7-10 question kahoot (or find\n         one online). Review the icebreakers on the slideshow, and change them how you see fit.\n         Add notes for mini discussions: what is the question, and when during the meeting?\n         Breakout Rooms (TENTATIVE): Who has never peer tutored and can’t answer\n         questions?\n         Feedback Form: Have Amanda shorten the feedback form.\n         We will do a debrief of the training session after it is over/the next day."
+        }
+      ],
+      "related_candidate_ids": []
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "source_type": "google_doc",
+  "doc_id": "doc_architecture_decision_001",
+  "title": "Feature Flag Vendor Decision",
+  "workspace": "AcmeAI",
+  "created_at": "2026-10-03T13:00:00Z",
+  "updated_at": "2026-10-03T13:20:00Z",
+  "author": "Priya Shah",
+  "author_role": "Staff Engineer",
+  "url": "https://docs.google.com/document/d/fake-doc-id",
+  "sections": [
+    {
+      "heading": "Decision",
+      "text": "Final decision: use LaunchDarkly for feature flags."
+    },
+    {
+      "heading": "Owner",
+      "text": "Priya Shah owns implementation."
+    },
+    {
+      "heading": "Rationale",
+      "text": "LaunchDarkly supports audit requirements and the SDK is already tested in staging."
+    },
+    {
+      "heading": "Rejected Alternatives",
+      "text": "ConfigCat was cheaper, but migration would take longer because we would need to rebuild the flag evaluation wrapper."
+    },
+    {
+      "heading": "Tradeoff",
+      "text": "The tradeoff with LaunchDarkly is higher monthly spend."
+    },
+    {
+      "heading": "Timeline",
+      "text": "Implementation can finish in about eight business days."
+    },
+    {
+      "heading": "Review",
+      "text": "Review flag hygiene after 45 days."
+    }
+  ]
+}

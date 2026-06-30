@@ -1,0 +1,81 @@
+{
+  "workspace": "AcmeAI",
+  "channels": [
+    {
+      "channel": "product-strategy",
+      "channel_id": "C_PRODUCT",
+      "messages": [
+        {
+          "ts": "1791001000.000100",
+          "thread_ts": "1791001000.000100",
+          "date": "2026-08-20",
+          "user_name": "Maya Chen",
+          "role": "VP Product",
+          "text": "I think we should delay the analytics dashboard beta until role-based access is complete. Two design partners said they cannot test with real data if every admin can see every workspace."
+        },
+        {
+          "ts": "1791001060.000200",
+          "thread_ts": "1791001000.000100",
+          "date": "2026-08-20",
+          "user_name": "Leo Park",
+          "role": "CTO",
+          "text": "Agreed. Without role-based access, the dashboard could expose team-level metrics to the wrong people. Engineering needs about three more weeks."
+        },
+        {
+          "ts": "1791001120.000300",
+          "thread_ts": "1791001000.000100",
+          "date": "2026-08-20",
+          "user_name": "Sarah Kim",
+          "role": "Head of Sales",
+          "text": "I'm worried a delay could weaken the enterprise demo pipeline, but assuming the design partners will wait, this is the safer call. Let's revisit on 2026-10-09."
+        },
+        {
+          "ts": "1791001180.000400",
+          "thread_ts": "1791001000.000100",
+          "date": "2026-08-20",
+          "user_name": "Maya Chen",
+          "role": "VP Product",
+          "text": "Final decision: delay the analytics dashboard beta until role-based access is complete and revisit on 2026-10-09."
+        }
+      ]
+    },
+    {
+      "channel": "engineering",
+      "channel_id": "C_ENG",
+      "messages": [
+        {
+          "ts": "1791002000.000100",
+          "thread_ts": "1791002000.000100",
+          "date": "2026-08-20",
+          "user_name": "Priya Shah",
+          "role": "Staff Engineer",
+          "text": "Proposal: use S3 pre-signed URLs for customer data exports because routing large files through the app server is causing timeout risk."
+        },
+        {
+          "ts": "1791002060.000200",
+          "thread_ts": "1791002000.000100",
+          "date": "2026-08-20",
+          "user_name": "Owen Diaz",
+          "role": "Engineering Manager",
+          "text": "I agree. The tradeoff is a little more IAM complexity, but export reliability is the bigger risk."
+        },
+        {
+          "ts": "1791002120.000300",
+          "thread_ts": "1791002000.000100",
+          "date": "2026-08-20",
+          "user_name": "Leo Park",
+          "role": "CTO",
+          "text": "If download links become hard to audit later, we can revisit the design after the beta."
+        },
+        {
+          "ts": "1791002180.000400",
+          "thread_ts": "1791002000.000100",
+          "date": "2026-08-20",
+          "user_name": "Priya Shah",
+          "role": "Staff Engineer",
+          "text": "Approved, let's move forward with S3 pre-signed URLs for customer data exports."
+        }
+      ]
+    }
+  ]
+}
