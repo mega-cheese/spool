@@ -1,0 +1,9 @@
+{
+  "approved_memory": [
+    {
+      "memory_id": "mem_candidate_review",
+      "title": "Candidate memory requires review.",
+      "summary": "Candidate memory should be reviewed before approval."
+    }
+  ]
+}

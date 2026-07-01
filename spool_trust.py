@@ -17,7 +17,7 @@ def main() -> int:
     parser.add_argument("--out", required=True, help="Output directory for trust_report.json and trust_report.md.")
     parser.add_argument("--test-output", help="Optional test or CI output file.")
     parser.add_argument("--repo-memory", help="Optional approved repo memory JSON path. Defaults to .spool/approved_repo_memory.json.")
-    parser.add_argument("--mode", choices=["heuristic", "llm"], default="heuristic")
+    parser.add_argument("--mode", choices=["heuristic"], default="heuristic")
     parser.add_argument("--pretty", action="store_true", help="Pretty-print JSON output.")
     args = parser.parse_args()
 

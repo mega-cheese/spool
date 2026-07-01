@@ -1,0 +1,9 @@
+{
+  "approved_memory": [
+    {
+      "memory_id": "mem_append_only",
+      "title": "Review actions are append-only.",
+      "summary": "Review actions must preserve action history and never overwrite prior actions."
+    }
+  ]
+}

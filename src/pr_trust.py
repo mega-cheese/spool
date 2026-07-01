@@ -92,6 +92,13 @@ class PRTrustReport:
     def to_dict(self) -> dict[str, object]:
         return {
             "overall_verdict": self.overall_verdict,
+            "summary": {
+                "changed_files_checked": len(self.scope_report.changed_files),
+                "allowed_scope_status": _allowed_scope_status(self.scope_report),
+                "supported_claims_count": sum(1 for claim in self.claims if claim.verdict == "supported"),
+                "test_evidence_status": _test_evidence_status(self.claims),
+                "repo_memory_status": _repo_memory_status(self.repo_memory_check),
+            },
             "scope": self.scope_report.to_dict(),
             "agent_claims": [claim.to_dict() for claim in self.claims],
             "weak_or_missing_evidence": list(self.weak_or_missing_evidence),
@@ -103,7 +110,8 @@ class PRTrustReport:
 
 
 def analyze_pr_trust(evidence: PREvidence, *, mode: str = "heuristic") -> PRTrustReport:
-    del mode
+    if mode != "heuristic":
+        raise NotImplementedError("spool_trust v0.9.1 supports only --mode heuristic.")
     changed_files = parse_changed_files(evidence.diff_text)
     scope = evaluate_scope(evidence.task_text, changed_files, task_source=evidence.task_path)
     claims = _extract_and_verify_claims(evidence, changed_files)
@@ -168,14 +176,21 @@ def _extract_and_verify_claims(evidence: PREvidence, changed_files: list[object]
 def _is_behavior_claim(line: str, artifact_paths: list[str]) -> bool:
     if not artifact_paths:
         return False
-    return bool(re.search(r"\b(append|appends|overwrite|overwrites|persist|save|write)\b", line, re.IGNORECASE))
+    return bool(
+        re.search(
+            r"\b(append|appends|add|adds|preserve|preserves|retain|retains|retained|keep|keeps|overwrite|overwrites|replace|replaces|reset|rewrite|persist|save|write|drop|delete|remove)\b",
+            line,
+            re.IGNORECASE,
+        )
+    )
 
 
 def _behavior_claim(line: str, evidence: PREvidence) -> TrustClaim:
     lower = line.lower()
     diff = evidence.diff_text
-    if "overwrite" in lower:
-        supported = bool(re.search(r"json\.dumps\(\[action\]\)|json\(\[action\]\)|write_text\([^)]*\[action\]", diff))
+    normalized_lower = _normalize(lower)
+    if _mentions_overwrite_or_replacement(normalized_lower):
+        supported = _diff_shows_overwrite(diff)
         return _claim(
             line,
             "capability_claim",
@@ -185,11 +200,11 @@ def _behavior_claim(line: str, evidence: PREvidence) -> TrustClaim:
             reason=(
                 "The diff shows review actions being written as a single-action list."
                 if supported
-                else "The behavior claim mentions overwriting, but deterministic diff evidence was not found."
+                else "No deterministic behavior matcher verified this claim."
             ),
         )
-    if "append" in lower:
-        supported = "actions.append(action)" in diff or "append_review_action" in diff
+    if _mentions_append_or_history_preservation(normalized_lower):
+        supported = _diff_shows_append(diff)
         return _claim(
             line,
             "capability_claim",
@@ -199,7 +214,21 @@ def _behavior_claim(line: str, evidence: PREvidence) -> TrustClaim:
             reason=(
                 "The diff shows append behavior for review actions."
                 if supported
-                else "The behavior claim mentions appending, but deterministic diff evidence was not found."
+                else "No deterministic behavior matcher verified this claim."
+            ),
+        )
+    if _mentions_source_evidence_preservation(normalized_lower):
+        supported = _diff_shows_source_evidence_preserved(diff)
+        return _claim(
+            line,
+            "capability_claim",
+            "diff.patch",
+            "supported" if supported else "needs_review",
+            evidence_quote=_first_matching_line(diff, ["source_event_ids", "quote", "source"]),
+            reason=(
+                "The diff shows source evidence fields being retained."
+                if supported
+                else "No deterministic behavior matcher verified this claim."
             ),
         )
     return _claim(line, "capability_claim", "diff.patch", "needs_review", reason="No deterministic behavior matcher handled this claim.")
@@ -238,7 +267,7 @@ def _detect_buried_decisions(summary_text: str) -> list[BuriedDecision]:
     for line in _summary_claim_lines(summary_text):
         if _is_low_value_memory_candidate(line):
             continue
-        if re.search(r"\b(going forward|must|should not|should|policy|rule|default|architecture)\b", line, re.IGNORECASE):
+        if _is_durable_buried_decision(line):
             decision = re.sub(r"^\s*going forward,\s*", "", line, flags=re.IGNORECASE).strip()
             decisions.append(
                 BuriedDecision(
@@ -267,14 +296,26 @@ def _check_repo_memory(evidence: PREvidence) -> list[RepoMemoryCheck]:
     for item in evidence.repo_memory_items:
         memory_text = f"{item.title} {item.summary}"
         normalized_memory = _normalize(memory_text)
-        if "append only" in normalized_memory and re.search(r"\boverwrite|only the latest|json \[ action \]", combined):
+        if _repo_memory_contradicted(normalized_memory, combined):
             checks.append(
                 RepoMemoryCheck(
                     memory_id=item.memory_id,
                     memory=item.title,
                     verdict="contradicted",
-                    reason="The PR evidence suggests overwriting review actions, contradicting append-only repo memory.",
-                    evidence_quote=_first_matching_line(evidence.agent_summary_text + "\n" + evidence.diff_text, ["overwrite", "latest", "json([action])"]),
+                    reason="The PR evidence appears to contradict approved repo memory.",
+                    evidence_quote=_first_matching_line(
+                        evidence.agent_summary_text + "\n" + evidence.diff_text,
+                        ["overwrite", "latest", "json([action])", "automatically approved", "auto approved", "status = 'approved'"],
+                    ),
+                )
+            )
+        elif _repo_memory_supported(normalized_memory, combined):
+            checks.append(
+                RepoMemoryCheck(
+                    memory_id=item.memory_id,
+                    memory=item.title,
+                    verdict="supported",
+                    reason="A deterministic rule found positive alignment with this approved repo memory.",
                 )
             )
         elif _memory_keywords_overlap(normalized_memory, combined):
@@ -282,8 +323,8 @@ def _check_repo_memory(evidence: PREvidence) -> list[RepoMemoryCheck]:
                 RepoMemoryCheck(
                     memory_id=item.memory_id,
                     memory=item.title,
-                    verdict="supported",
-                    reason="The PR evidence appears aligned with this approved repo memory.",
+                    verdict="needs_review",
+                    reason="Repo memory shares vocabulary with the PR, but no deterministic agreement or contradiction rule matched.",
                 )
             )
         else:
@@ -306,8 +347,16 @@ def _overall_verdict(
 ) -> str:
     if scope.forbidden_violations or any(item.verdict == "contradicted" for item in repo_memory_check):
         return "stop"
+    if _has_sensitive_scope_violation(scope):
+        return "stop"
+    if any(claim.claim_type == "test_result_claim" and claim.verdict == "contradicted" for claim in claims):
+        return "stop"
     if scope.scope_violations or any(claim.verdict == "contradicted" for claim in claims):
         return "repair"
+    if scope.scope_risks:
+        return "human_review"
+    if any(item.verdict == "needs_review" for item in repo_memory_check):
+        return "human_review"
     if buried_decisions or any(claim.verdict in {"missing_evidence", "weakly_supported", "needs_review"} for claim in claims):
         return "human_review"
     return "continue"
@@ -328,6 +377,7 @@ def _risks(
     repo_memory_check: list[RepoMemoryCheck],
 ) -> list[str]:
     risks: list[str] = []
+    risks.extend(scope.scope_risks)
     if scope.scope_violations:
         risks.append(f"Changed files outside the approved task boundary: {', '.join(scope.scope_violations)}.")
     if scope.forbidden_violations:
@@ -338,6 +388,8 @@ def _risks(
         risks.append("The agent introduced durable decisions that need reviewer approval.")
     if any(item.verdict == "contradicted" for item in repo_memory_check):
         risks.append("The PR appears to conflict with approved repo memory.")
+    if any(item.verdict == "needs_review" for item in repo_memory_check):
+        risks.append("Approved repo memory has unclear relationship to this PR and needs review.")
     return risks
 
 
@@ -357,6 +409,41 @@ def _reviewer_actions(verdict: str, decisions: list[BuriedDecision], repo_memory
     if any(item.verdict == "contradicted" for item in repo_memory):
         actions.append("resolve repo memory conflict")
     return actions
+
+
+def _allowed_scope_status(scope: ScopeReport) -> str:
+    if scope.forbidden_violations:
+        return "forbidden_violation"
+    if scope.scope_violations:
+        return "scope_violation"
+    if scope.scope_risks:
+        return "unbounded_or_ambiguous"
+    if scope.allowed_files:
+        return "within_allowed_scope"
+    return "not_bounded"
+
+
+def _test_evidence_status(claims: list[TrustClaim]) -> str:
+    test_claims = [claim for claim in claims if claim.claim_type == "test_result_claim"]
+    if not test_claims:
+        return "not_claimed"
+    if any(claim.verdict == "contradicted" for claim in test_claims):
+        return "contradicted"
+    if any(claim.verdict == "missing_evidence" for claim in test_claims):
+        return "missing"
+    if all(claim.verdict == "supported" for claim in test_claims):
+        return "supported"
+    return "needs_review"
+
+
+def _repo_memory_status(items: list[RepoMemoryCheck]) -> str:
+    if any(item.verdict == "contradicted" for item in items):
+        return "contradicted"
+    if any(item.verdict == "needs_review" for item in items):
+        return "needs_review"
+    if any(item.verdict == "supported" for item in items):
+        return "supported"
+    return "no_relevant_memory"
 
 
 def _summary_claim_lines(text: str) -> list[str]:
@@ -391,7 +478,91 @@ def _is_low_value_memory_candidate(text: str) -> bool:
         return True
     if "tests passed" in lower or "readme.md was updated" in lower:
         return True
+    if re.search(r"\btests?\s+should\s+pass\b", lower):
+        return True
+    if re.search(r"\bshould\s+(?:return|handle|accept|raise|parse|render|call)\b", lower):
+        return True
     return False
+
+
+def _is_durable_buried_decision(text: str) -> bool:
+    lower = text.lower()
+    if re.search(r"\bgoing forward\b", lower):
+        return True
+    if re.search(r"\b(?:must|should)\s+(?:never|not)\b", lower) and _mentions_durable_domain(lower):
+        return True
+    if re.search(r"\b(?:are|is)\s+append[- ]only\b", lower):
+        return True
+    if re.search(r"\bdefault behavior\s+is\s+to\b", lower):
+        return True
+    if re.search(r"\b(policy|repo memory|approved memory|candidate memory|architecture|product behavior)\b", lower) and re.search(r"\b(must|should|default|rule)\b", lower):
+        return True
+    return False
+
+
+def _mentions_durable_domain(lower_text: str) -> bool:
+    return bool(
+        re.search(
+            r"\b(candidate memory|approved memory|review actions?|repo memory|models?|image upload|default behavior|policy|architecture)\b",
+            lower_text,
+        )
+    )
+
+
+def _mentions_overwrite_or_replacement(normalized_text: str) -> bool:
+    return bool(re.search(r"\b(overwrite|overwrites|replace|replaces|reset|rewrite|rewrites)\b", normalized_text))
+
+
+def _mentions_append_or_history_preservation(normalized_text: str) -> bool:
+    if re.search(r"\b(append|appends|add|adds|persist|persists)\b", normalized_text):
+        return True
+    return bool(re.search(r"\bwithout replacing\b|\bpreserve history\b|\bpreserves history\b|\bkeep history\b|\bkeeps history\b", normalized_text))
+
+
+def _mentions_source_evidence_preservation(normalized_text: str) -> bool:
+    return bool(
+        re.search(r"\b(preserve|preserves|retain|retains|retained|keep|keeps)\b", normalized_text)
+        and re.search(r"\b(source evidence|source|quote|source event ids)\b", normalized_text)
+    )
+
+
+def _diff_shows_append(diff_text: str) -> bool:
+    return bool(re.search(r"\bactions\.append\(|\bappend_review_action\b", diff_text))
+
+
+def _diff_shows_overwrite(diff_text: str) -> bool:
+    return bool(re.search(r"json\.dumps\(\s*\[action\]\s*\)|json\(\s*\[action\]\s*\)|write_text\([^)]*\[action\]", diff_text))
+
+
+def _diff_shows_source_evidence_preserved(diff_text: str) -> bool:
+    normalized = _normalize(diff_text)
+    has_source_field = any(term in normalized for term in ("source event ids", "source_event_ids", "quote", "source evidence"))
+    has_preserve_signal = bool(re.search(r"\b(preserve|retain|keep|copy|old memory|existing)\b", normalized))
+    return has_source_field and has_preserve_signal
+
+
+def _repo_memory_contradicted(normalized_memory: str, combined: str) -> bool:
+    if "append only" in normalized_memory and re.search(r"\boverwrite|replace|reset|rewrite|only the latest|json \[ action \]", combined):
+        return True
+    if re.search(r"candidate memory.*(?:must not|never|not).*auto", normalized_memory):
+        return bool(re.search(r"candidate memory.*(?:automatically|auto).*approved|confidence.*approved|status approved", combined))
+    return False
+
+
+def _repo_memory_supported(normalized_memory: str, combined: str) -> bool:
+    if "append only" in normalized_memory:
+        return bool(re.search(r"\bappend review action\b|\bactions append\b|\bwithout replacing\b|\bpreserve history\b", combined))
+    if re.search(r"candidate memory.*(?:must not|never|not).*auto", normalized_memory):
+        return bool(re.search(r"candidate memory.*(?:does not|must not|never|not).*approved automatically|remain pending|explicit review approval", combined))
+    return False
+
+
+def _has_sensitive_scope_violation(scope: ScopeReport) -> bool:
+    return any(_is_sensitive_path(path) for path in scope.scope_violations + scope.forbidden_violations)
+
+
+def _is_sensitive_path(path: str) -> bool:
+    return bool(re.search(r"\b(auth|permission|billing|payment|migration|schema|security|env|secrets|config|lockfile)\b", path, re.IGNORECASE))
 
 
 def _claim(

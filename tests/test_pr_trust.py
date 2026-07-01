@@ -17,6 +17,51 @@ EXAMPLES = Path("examples/pr_trust")
 
 
 class PRTrustTest(unittest.TestCase):
+    def _evidence_from_text(
+        self,
+        temp_dir: str,
+        *,
+        diff: str,
+        task: str,
+        summary: str,
+        test_output: str | None = None,
+        repo_memory: dict | list | None = None,
+    ):
+        root = Path(temp_dir)
+        diff_path = root / "diff.patch"
+        task_path = root / "task.md"
+        summary_path = root / "agent_summary.md"
+        diff_path.write_text(diff, encoding="utf-8")
+        task_path.write_text(task, encoding="utf-8")
+        summary_path.write_text(summary, encoding="utf-8")
+        test_path = None
+        if test_output is not None:
+            test_path = root / "test_output.txt"
+            test_path.write_text(test_output, encoding="utf-8")
+        memory_path = None
+        if repo_memory is not None:
+            memory_path = root / "approved_repo_memory.json"
+            memory_path.write_text(json.dumps(repo_memory), encoding="utf-8")
+        return load_pr_evidence(
+            diff_path=diff_path,
+            task_path=task_path,
+            agent_summary_path=summary_path,
+            test_output_path=test_path,
+            repo_memory_path=memory_path,
+        )
+
+    def _simple_diff(self, path: str, added_lines: list[str]) -> str:
+        body = "\n".join(f"+{line}" for line in added_lines)
+        return (
+            f"diff --git a/{path} b/{path}\n"
+            "new file mode 100644\n"
+            "index 0000000..1111111\n"
+            "--- /dev/null\n"
+            f"+++ b/{path}\n"
+            "@@ -0,0 +1,3 @@\n"
+            f"{body}\n"
+        )
+
     def test_loads_pr_evidence_without_meeting_or_doc_assumptions(self) -> None:
         evidence = load_pr_evidence(
             diff_path=EXAMPLES / "basic_supported" / "diff.patch",
@@ -73,7 +118,7 @@ class PRTrustTest(unittest.TestCase):
         report = analyze_pr_trust(evidence)
 
         self.assertIn("src/auth.py", scope.scope_violations)
-        self.assertEqual(report.overall_verdict, "repair")
+        self.assertEqual(report.overall_verdict, "stop")
         self.assertIn("src/auth.py", report.scope_report.scope_violations)
 
     def test_generates_json_and_markdown_trust_report(self) -> None:
@@ -170,6 +215,223 @@ class PRTrustTest(unittest.TestCase):
             self.assertIn("Overall verdict: continue", result.stdout)
             self.assertTrue((Path(temp_dir) / "trust_report.json").exists())
             self.assertTrue((Path(temp_dir) / "trust_report.md").exists())
+
+    def test_repo_memory_append_only_contradiction_stops_report(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["path.write_text(json.dumps([action]))"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Review actions now overwrite existing action history.",
+                test_output="OK\n",
+                repo_memory={"approved_memory": [{"title": "Review actions are append-only.", "summary": "Review actions must preserve history."}]},
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        self.assertEqual(report.overall_verdict, "stop")
+        self.assertTrue(any(item.verdict == "contradicted" for item in report.repo_memory_check))
+
+    def test_repo_memory_candidate_auto_approval_contradiction_stops_report(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/memory_store.py", ["if memory.confidence > 0.9: memory.status = 'approved'"]),
+                task="Allowed files:\n- `src/memory_store.py`\n",
+                summary="Candidate memory is now automatically approved when confidence is high.",
+                test_output="OK\n",
+                repo_memory={
+                    "approved_memory": [
+                        {
+                            "title": "Candidate memory must not auto-approve.",
+                            "summary": "Candidate memory must remain pending until explicit review approval.",
+                        }
+                    ]
+                },
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        self.assertEqual(report.overall_verdict, "stop")
+        self.assertTrue(any(item.verdict == "contradicted" for item in report.repo_memory_check))
+
+    def test_repo_memory_keyword_overlap_needs_review_not_supported(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_queue.py", ["def review_candidate_memory(memory): return memory"]),
+                task="Allowed files:\n- `src/review_queue.py`\n",
+                summary="Updated candidate memory review handling.",
+                test_output="OK\n",
+                repo_memory={"approved_memory": [{"title": "Candidate memory requires review.", "summary": "Candidate memory should be reviewed before approval."}]},
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        verdicts = [item.verdict for item in report.repo_memory_check]
+        self.assertIn("needs_review", verdicts)
+        self.assertNotIn("supported", verdicts)
+
+    def test_behavior_claim_persist_without_replacing_is_supported_by_append(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["def append_review_action(path, action):", "    actions.append(action)"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Review actions persist in `review_actions.json` without replacing previous actions.",
+                test_output="OK\n",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        behavior_claims = [claim for claim in report.claims if claim.claim_type == "capability_claim"]
+        self.assertTrue(behavior_claims)
+        self.assertEqual(behavior_claims[0].verdict, "supported")
+
+    def test_behavior_claim_preserves_source_evidence_needs_review_without_source_terms(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["def edit_memory(memory): return memory"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Editing memory preserves source evidence in `review_actions.json`.",
+                test_output="OK\n",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        behavior_claims = [claim for claim in report.claims if claim.claim_type == "capability_claim"]
+        self.assertTrue(behavior_claims)
+        self.assertIn(behavior_claims[0].verdict, {"weakly_supported", "needs_review"})
+        self.assertIn("No deterministic behavior matcher verified this claim", behavior_claims[0].reason)
+
+    def test_behavior_claim_source_evidence_retained_is_supported_by_source_fields(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["new_memory['quote'] = old_memory['quote']", "new_memory['source_event_ids'] = old_memory['source_event_ids']"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Source evidence is retained in `review_actions.json`.",
+                test_output="OK\n",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        behavior_claims = [claim for claim in report.claims if claim.claim_type == "capability_claim"]
+        self.assertTrue(behavior_claims)
+        self.assertEqual(behavior_claims[0].verdict, "supported")
+
+    def test_buried_decision_ignores_ordinary_should_language(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("tests/test_parser.py", ["def test_parser(): assert parse('') is None"]),
+                task="Allowed files:\n- `tests/test_parser.py`\n",
+                summary="Tests should pass.\nThe function should handle empty input.",
+                test_output="OK\n",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        self.assertEqual(report.buried_decisions, [])
+
+    def test_buried_decision_detects_durable_policy(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/memory_store.py", ["def approve(memory): return memory"]),
+                task="Allowed files:\n- `src/memory_store.py`\n",
+                summary="Candidate memory must not become approved automatically.",
+                test_output="OK\n",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        self.assertTrue(any("Candidate memory" in decision.decision for decision in report.buried_decisions))
+        self.assertEqual(report.overall_verdict, "human_review")
+
+    def test_ambiguous_scope_language_creates_scope_risk(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/upload_gate.py", ["def gate(): return True"]) + self._simple_diff("src/other.py", ["value = 1"]),
+                task="Only change the upload gating logic.",
+                summary="Updated upload gating.",
+                test_output="OK\n",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        self.assertEqual(report.overall_verdict, "human_review")
+        self.assertTrue(any("Could not determine approved file scope" in risk for risk in report.risks))
+
+    def test_sensitive_scope_violation_stops_report(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/auth.py", ["def allow(): return True"]),
+                task="Allowed files:\n- `src/ui.ts`\n",
+                summary="Updated `src/auth.py`.",
+                test_output="OK\n",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        self.assertEqual(report.overall_verdict, "stop")
+        self.assertIn("src/auth.py", report.scope_report.scope_violations)
+
+    def test_failed_test_output_contradicts_test_pass_claim_and_stops(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["value = 1"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Tests passed.",
+                test_output="FAILED (failures=1)\n",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        self.assertEqual(report.overall_verdict, "stop")
+        self.assertTrue(any(claim.verdict == "contradicted" for claim in report.claims))
+
+    def test_missing_test_output_claim_requires_human_review(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["value = 1"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Tests passed.",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        self.assertEqual(report.overall_verdict, "human_review")
+
+    def test_cli_llm_mode_errors_clearly(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    "spool_trust.py",
+                    "--diff",
+                    str(EXAMPLES / "basic_supported" / "diff.patch"),
+                    "--task",
+                    str(EXAMPLES / "basic_supported" / "task.md"),
+                    "--agent-summary",
+                    str(EXAMPLES / "basic_supported" / "agent_summary.md"),
+                    "--out",
+                    temp_dir,
+                    "--mode",
+                    "llm",
+                ],
+                cwd=Path(__file__).resolve().parents[1],
+                text=True,
+                capture_output=True,
+            )
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("heuristic", result.stderr.lower())
 
 
 if __name__ == "__main__":

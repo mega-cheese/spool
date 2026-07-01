@@ -20,12 +20,21 @@ def write_trust_report(report: PRTrustReport, out_dir: str | Path, *, pretty: bo
 def trust_report_to_markdown(report: PRTrustReport) -> str:
     payload = report.to_dict()
     scope = payload["scope"]
+    summary = payload.get("summary") or {}
     lines = [
         "# Spool Trust Report",
         "",
         "## Overall Verdict",
         "",
         str(payload["overall_verdict"]),
+        "",
+        "## Checked",
+        "",
+        f"- Changed files checked: {summary.get('changed_files_checked', 0)}",
+        f"- Allowed scope status: {summary.get('allowed_scope_status', 'unknown')}",
+        f"- Supported claims: {summary.get('supported_claims_count', 0)}",
+        f"- Test evidence: {summary.get('test_evidence_status', 'unknown')}",
+        f"- Repo memory: {summary.get('repo_memory_status', 'unknown')}",
         "",
         "## Scope / Authorization",
         "",

@@ -29,6 +29,7 @@ class ScopeReport:
     changed_files: list[FileChange] = field(default_factory=list)
     scope_violations: list[str] = field(default_factory=list)
     forbidden_violations: list[str] = field(default_factory=list)
+    scope_risks: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, object]:
         return {
@@ -39,6 +40,7 @@ class ScopeReport:
             "changed_files": [change.to_dict() for change in self.changed_files],
             "scope_violations": list(self.scope_violations),
             "forbidden_violations": list(self.forbidden_violations),
+            "scope_risks": list(self.scope_risks),
         }
 
 
@@ -91,6 +93,9 @@ def evaluate_scope(task_text: str, changed_files: list[FileChange], *, task_sour
     changed_paths = [change.path for change in changed_files]
     scope_violations = [path for path in changed_paths if allowed_files and path not in allowed_files]
     forbidden_violations = [path for path in changed_paths if _matches_any_path(path, forbidden_paths)]
+    scope_risks = []
+    if not allowed_files and _has_explicit_scope_language(task_text):
+        scope_risks.append("Could not determine approved file scope from task.")
     return ScopeReport(
         task_source=task_source,
         approved_task=_first_nonempty_line(task_text),
@@ -99,6 +104,7 @@ def evaluate_scope(task_text: str, changed_files: list[FileChange], *, task_sour
         changed_files=changed_files,
         scope_violations=scope_violations,
         forbidden_violations=forbidden_violations,
+        scope_risks=scope_risks,
     )
 
 
@@ -144,6 +150,16 @@ def _paths_from_text(text: str) -> list[str]:
 
 def _matches_any_path(path: str, candidates: list[str]) -> bool:
     return any(path == candidate or path.startswith(candidate.rstrip("/") + "/") for candidate in candidates)
+
+
+def _has_explicit_scope_language(task_text: str) -> bool:
+    return bool(
+        re.search(
+            r"\b(?:only|just|do not|don't|must not|scope|limited to|stay within|allowed files|allowed paths)\b",
+            task_text,
+            re.IGNORECASE,
+        )
+    )
 
 
 def _first_nonempty_line(text: str) -> str:
