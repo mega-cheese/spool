@@ -83,6 +83,9 @@ SCENARIO_SETS: dict[str, list[str]] = {
         "data/block_task_training_notes.md",
         "data/block_task_logistics_table.md",
     ],
+    "agent_packets": [
+        "data/agent_change_packet_v081.md",
+    ],
 }
 SCENARIO_SETS["all"] = [*SCENARIO_SETS["original"], *SCENARIO_SETS["new"]]
 
@@ -115,6 +118,7 @@ EXPECTED_COUNTS = {
     "block_task_vymun_todo": 0,
     "block_task_training_notes": 0,
     "block_task_logistics_table": 0,
+    "agent_change_packet_v081": 0,
 }
 
 SCENARIO_TYPES = {
@@ -146,6 +150,7 @@ SCENARIO_TYPES = {
     "block_task_vymun_todo": "meeting_minutes",
     "block_task_training_notes": "meeting_minutes",
     "block_task_logistics_table": "meeting_minutes",
+    "agent_change_packet_v081": "agent_change_packet",
 }
 
 
@@ -172,6 +177,10 @@ class ScenarioArtifacts:
     rejected_memory: dict[str, Any] = field(default_factory=dict)
     review_actions: dict[str, Any] = field(default_factory=dict)
     memory_state_debug: dict[str, Any] = field(default_factory=dict)
+    agent_change_packet_debug: dict[str, Any] = field(default_factory=dict)
+    agent_claims: dict[str, Any] = field(default_factory=dict)
+    agent_audit_report: dict[str, Any] = field(default_factory=dict)
+    agent_audit_report_md: str = ""
 
 
 @dataclass
@@ -267,8 +276,13 @@ def _run_scenario(input_file: str, args: argparse.Namespace) -> ScenarioArtifact
         processed = postprocess_decisions(decisions, event_lookup, include_review_claims=args.include_review_claims)
         raw_decisions = processed.raw_decisions
         clean_decisions = processed.clean_decisions
-        meeting_added_count = merge_meeting_decisions(clean_decisions, raw_decisions, meeting_memory)
-        meeting_guard_removed_count = apply_meeting_minutes_clean_guard(clean_decisions, meeting_memory)
+        if meeting_memory.classification == "agent_change_packet":
+            clean_decisions.clear()
+            meeting_added_count = 0
+            meeting_guard_removed_count = 0
+        else:
+            meeting_added_count = merge_meeting_decisions(clean_decisions, raw_decisions, meeting_memory)
+            meeting_guard_removed_count = apply_meeting_minutes_clean_guard(clean_decisions, meeting_memory)
         ownership_removed_count = (
             filter_clean_decisions_by_claim_ownership(normalized_events, clean_decisions)
             if args.pipeline == "candidates-shadow"
@@ -307,8 +321,12 @@ def _run_scenario(input_file: str, args: argparse.Namespace) -> ScenarioArtifact
     else:
         raw_decisions = copy.deepcopy(decisions)
         clean_decisions, issues = validate_decisions(copy.deepcopy(decisions), event_lookup)
-        meeting_added_count = merge_meeting_decisions(clean_decisions, raw_decisions, meeting_memory)
-        apply_meeting_minutes_clean_guard(clean_decisions, meeting_memory)
+        if meeting_memory.classification == "agent_change_packet":
+            clean_decisions.clear()
+            meeting_added_count = 0
+        else:
+            meeting_added_count = merge_meeting_decisions(clean_decisions, raw_decisions, meeting_memory)
+            apply_meeting_minutes_clean_guard(clean_decisions, meeting_memory)
         if args.pipeline == "candidates-shadow":
             filter_clean_decisions_by_claim_ownership(normalized_events, clean_decisions)
         candidates, state_resolution, _final_guard_removed_count = _shadow_artifacts(normalized_events, clean_decisions, args.pipeline)
@@ -354,6 +372,7 @@ def _run_scenario(input_file: str, args: argparse.Namespace) -> ScenarioArtifact
         clean_memory=clean_memory,
         review_queue=review_queue,
         coverage_warnings=meeting_memory.block_classification_debug.get("coverage_audit_warnings", []),
+        extra_candidates=meeting_memory.extra_candidate_memory,
         auto_approve=args.auto_approve == "true",
     )
 
@@ -379,6 +398,10 @@ def _run_scenario(input_file: str, args: argparse.Namespace) -> ScenarioArtifact
         rejected_memory=memory_artifacts["rejected_memory.json"],
         review_actions=memory_artifacts["review_actions.json"],
         memory_state_debug=memory_artifacts["memory_state_debug.json"],
+        agent_change_packet_debug=meeting_memory.agent_change_packet_debug or {},
+        agent_claims=meeting_memory.agent_claims or {},
+        agent_audit_report=meeting_memory.agent_audit_report or {},
+        agent_audit_report_md=meeting_memory.agent_audit_markdown or "",
     )
 
 
@@ -410,7 +433,11 @@ def _verify_scenario(artifacts: ScenarioArtifacts) -> ScenarioVerification:
         variant=(
             "review"
             if scenario_name.startswith("review_")
-            else ("conflict" if scenario_name.startswith("conflict_") or scenario_name.startswith("no_conflict_") else ("new" if scenario_name.startswith("new_") else "original"))
+            else (
+                "conflict"
+                if scenario_name.startswith("conflict_") or scenario_name.startswith("no_conflict_")
+                else ("agent_packet" if SCENARIO_TYPES[scenario_name] == "agent_change_packet" else ("new" if scenario_name.startswith("new_") else "original"))
+            )
         ),
         expected_count=EXPECTED_COUNTS[scenario_name],
         actual_count=len(decisions),
@@ -826,6 +853,9 @@ def _write_aggregate_files(output_dir: Path, artifacts_by_scenario: dict[str, Sc
         "rejected_memory_by_scenario.json": {name: artifacts.rejected_memory for name, artifacts in artifacts_by_scenario.items()},
         "review_actions_by_scenario.json": {name: artifacts.review_actions for name, artifacts in artifacts_by_scenario.items()},
         "memory_state_debug_by_scenario.json": {name: artifacts.memory_state_debug for name, artifacts in artifacts_by_scenario.items()},
+        "agent_change_packet_debug_by_scenario.json": {name: artifacts.agent_change_packet_debug for name, artifacts in artifacts_by_scenario.items()},
+        "agent_claims_by_scenario.json": {name: artifacts.agent_claims for name, artifacts in artifacts_by_scenario.items()},
+        "agent_audit_report_by_scenario.json": {name: artifacts.agent_audit_report for name, artifacts in artifacts_by_scenario.items()},
     }
     output_paths: dict[str, str] = {}
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -869,6 +899,10 @@ def _expand_failures(
             "rejected_memory.json": artifacts.rejected_memory,
             "review_actions.json": artifacts.review_actions,
             "memory_state_debug.json": artifacts.memory_state_debug,
+            "agent_change_packet_debug.json": artifacts.agent_change_packet_debug,
+            "agent_claims.json": artifacts.agent_claims,
+            "agent_audit_report.json": artifacts.agent_audit_report,
+            "agent_audit_report.md": artifacts.agent_audit_report_md,
         }
         for filename, payload in payloads.items():
             if filename.endswith(".md"):
@@ -931,6 +965,7 @@ def _write_markdown_summary(output_dir: Path, verifications: list[ScenarioVerifi
         "review_queue",
         "conflict_detection",
         "meeting_minutes",
+        "agent_change_packet",
     ]:
         original = _verdict_for(verifications, scenario_type, "original")
         new = _verdict_for(verifications, scenario_type, "new")

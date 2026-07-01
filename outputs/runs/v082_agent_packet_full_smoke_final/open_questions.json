@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "classification": "agent_change_packet",
+    "generated_at": "2026-07-01T00:01:29.314333+00:00",
+    "open_question_count": 5
+  },
+  "open_questions": [
+    {
+      "object_id": "memory_4520689d5c2b",
+      "type": "open_question",
+      "title": "Should weakly_supported memory be approvable?",
+      "summary": "Should weakly_supported memory be approvable?",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [],
+      "sources": [],
+      "quote": "Should weakly_supported memory be approvable?",
+      "confidence": 0.82,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_938b48473095"
+      }
+    },
+    {
+      "object_id": "memory_0e8c030ff3c4",
+      "type": "open_question",
+      "title": "Should approved_memory become canonical in v0.8.2?",
+      "summary": "Should approved_memory become canonical in v0.8.2?",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [],
+      "sources": [],
+      "quote": "Should approved_memory become canonical in v0.8.2?",
+      "confidence": 0.82,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_6673c85ddcef"
+      }
+    },
+    {
+      "object_id": "memory_2cacdd0c567a",
+      "type": "open_question",
+      "title": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "summary": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [],
+      "sources": [],
+      "quote": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "confidence": 0.82,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_cd89958e89d5"
+      }
+    },
+    {
+      "object_id": "memory_85666196c677",
+      "type": "open_question",
+      "title": "Should actions be hash-chained or tamper-evident later?",
+      "summary": "Should actions be hash-chained or tamper-evident later?",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [],
+      "sources": [],
+      "quote": "Should actions be hash-chained or tamper-evident later?",
+      "confidence": 0.82,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_db299aa7045e"
+      }
+    },
+    {
+      "object_id": "memory_b99780e4535a",
+      "type": "open_question",
+      "title": "Should Streamlit expose approve/reject/edit actions?",
+      "summary": "Should Streamlit expose approve/reject/edit actions?",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [],
+      "sources": [],
+      "quote": "Should Streamlit expose approve/reject/edit actions?",
+      "confidence": 0.25,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_db604a35da30"
+      }
+    }
+  ]
+}

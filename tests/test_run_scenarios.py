@@ -287,6 +287,29 @@ class RunScenariosTest(unittest.TestCase):
             self.assertEqual(conflict_item["severity"], "high")
             self.assertEqual({option["option"] for option in conflict_item["options"]}, {"LaunchDarkly", "ConfigCat"})
 
+    def test_agent_packet_batch_passes_and_aggregates_audit_artifacts(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            stdout = self._run_batch(temp_dir, "--scenario-set", "agent_packets", "--run-id", "agent_packet_batch")
+            run_dir = Path(temp_dir) / "runs" / "agent_packet_batch"
+
+            self.assertIn("Overall verdict: PASS", stdout.getvalue())
+            self.assertIn("Failed scenarios: none", stdout.getvalue())
+
+            decisions_by_scenario = json.loads((run_dir / "decisions_by_scenario.json").read_text(encoding="utf-8"))
+            metadata_by_scenario = json.loads((run_dir / "meeting_metadata_by_scenario.json").read_text(encoding="utf-8"))
+            claims_by_scenario = json.loads((run_dir / "agent_claims_by_scenario.json").read_text(encoding="utf-8"))
+            report_by_scenario = json.loads((run_dir / "agent_audit_report_by_scenario.json").read_text(encoding="utf-8"))
+            candidate_by_scenario = json.loads((run_dir / "candidate_memory_by_scenario.json").read_text(encoding="utf-8"))
+
+            self.assertEqual(decisions_by_scenario["agent_change_packet_v081"]["metadata"]["decision_count"], 0)
+            self.assertEqual(metadata_by_scenario["agent_change_packet_v081"]["classification"], "agent_change_packet")
+            self.assertGreater(claims_by_scenario["agent_change_packet_v081"]["metadata"]["claim_count"], 5)
+            self.assertTrue(report_by_scenario["agent_change_packet_v081"]["review_checklist"])
+            candidate_types = {item["type"] for item in candidate_by_scenario["agent_change_packet_v081"]["candidates"]}
+            self.assertIn("decision", candidate_types)
+            self.assertIn("risk", candidate_types)
+            self.assertIn("open_question", candidate_types)
+
     def test_mocked_llm_vendor_batch_applies_ownership_filter_and_tradeoff_canonicalization(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             with patch("run_scenarios.extract_decisions_with_llm", side_effect=self._fake_llm_with_vendor_leaks):

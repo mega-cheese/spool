@@ -1,0 +1,3534 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "classification": "agent_change_packet",
+    "generated_at": "2026-07-01T00:02:59.869006+00:00"
+  },
+  "classification": "agent_change_packet",
+  "source_headings": [
+    "Agent Change Packet: Spool v0.8.1 Review Actions",
+    "Purpose",
+    "Original Request",
+    "Agent Implementation Summary",
+    "Files Changed According to Agent",
+    "Claimed Capabilities",
+    "Validation Claimed by Agent",
+    "Existing Product Rules / Approved Context",
+    "Git Stat",
+    "Git Diff",
+    "Batch Scenario Verification",
+    "Questions for Spool Audit",
+    "Expected Useful Spool Output",
+    "Candidate Technical Decisions",
+    "Candidate Implementation Claims",
+    "Candidate Risks",
+    "Candidate Open Questions",
+    "Review Checklist"
+  ],
+  "memory_objects": [
+    {
+      "object_id": "mem_b234e99e1306",
+      "type": "context",
+      "title": "Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale.",
+      "summary": "Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale",
+      "confidence": 0.25,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_0ebe87064d32",
+        "claim_type": "capability",
+        "audit_verdict": "unsupported",
+        "source_section": "Agent Implementation Summary"
+      }
+    },
+    {
+      "object_id": "mem_ce5cfd632f5b",
+      "type": "context",
+      "title": "Update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json.",
+      "summary": "Update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json",
+      "confidence": 0.82,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_60209127709a",
+        "claim_type": "capability",
+        "audit_verdict": "supported",
+        "source_section": "Agent Implementation Summary"
+      }
+    },
+    {
+      "object_id": "mem_9ceaa6466c90",
+      "type": "context",
+      "title": "Append actions to review_actions.json.",
+      "summary": "Append actions to review_actions.json.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Append actions to review_actions.json",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Append actions to review_actions.json",
+      "confidence": 0.25,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_9e9edbd4a77e",
+        "claim_type": "capability",
+        "audit_verdict": "unsupported",
+        "source_section": "Agent Implementation Summary"
+      }
+    },
+    {
+      "object_id": "mem_6717f04f9ef7",
+      "type": "context",
+      "title": "Preserve source evidence through edits.",
+      "summary": "Preserve source evidence through edits.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Preserve source evidence through edits",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Preserve source evidence through edits",
+      "confidence": 0.25,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_c2b712cd22a3",
+        "claim_type": "capability",
+        "audit_verdict": "unsupported",
+        "source_section": "Agent Implementation Summary"
+      }
+    },
+    {
+      "object_id": "mem_fc01281b5fa6",
+      "type": "context",
+      "title": "Prevent silent approval of unsupported/contradicted memory.",
+      "summary": "Prevent silent approval of unsupported/contradicted memory.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Prevent silent approval of unsupported/contradicted memory",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Prevent silent approval of unsupported/contradicted memory",
+      "confidence": 0.25,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_d41aa401f323",
+        "claim_type": "capability",
+        "audit_verdict": "unsupported",
+        "source_section": "Agent Implementation Summary"
+      }
+    },
+    {
+      "object_id": "mem_8adf2902ebb4",
+      "type": "context",
+      "title": "Avoid duplicate approved/rejected entries by memory_id.",
+      "summary": "Avoid duplicate approved/rejected entries by memory_id.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Avoid duplicate approved/rejected entries by memory_id",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Avoid duplicate approved/rejected entries by memory_id",
+      "confidence": 0.25,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_ba8546106cb6",
+        "claim_type": "capability",
+        "audit_verdict": "unsupported",
+        "source_section": "Agent Implementation Summary"
+      }
+    },
+    {
+      "object_id": "mem_771cf1781f8a",
+      "type": "context",
+      "title": "src/review_actions.py.",
+      "summary": "src/review_actions.py.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`src/review_actions.py`",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`src/review_actions.py`",
+      "confidence": 0.45,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_05ef3e83377a",
+        "claim_type": "capability",
+        "audit_verdict": "needs_review",
+        "source_section": "Agent Implementation Summary"
+      }
+    },
+    {
+      "object_id": "mem_0f5f8ad38927",
+      "type": "context",
+      "title": "review_memory.py.",
+      "summary": "review_memory.py.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`review_memory.py`",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`review_memory.py`",
+      "confidence": 0.45,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_fc1990d4b2c7",
+        "claim_type": "capability",
+        "audit_verdict": "needs_review",
+        "source_section": "Agent Implementation Summary"
+      }
+    },
+    {
+      "object_id": "mem_d1caf3b6a2f2",
+      "type": "context",
+      "title": "src/memory_store.py.",
+      "summary": "src/memory_store.py.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`src/memory_store.py`",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`src/memory_store.py`",
+      "confidence": 0.45,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_1145b1f7c7b4",
+        "claim_type": "capability",
+        "audit_verdict": "needs_review",
+        "source_section": "Agent Implementation Summary"
+      }
+    },
+    {
+      "object_id": "mem_7bed2701b631",
+      "type": "context",
+      "title": "src/review_policy.py.",
+      "summary": "src/review_policy.py.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`src/review_policy.py`",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`src/review_policy.py`",
+      "confidence": 0.45,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_40024232aef0",
+        "claim_type": "capability",
+        "audit_verdict": "needs_review",
+        "source_section": "Agent Implementation Summary"
+      }
+    },
+    {
+      "object_id": "mem_7f86b85d9a98",
+      "type": "context",
+      "title": "tests/test_review_actions.py.",
+      "summary": "tests/test_review_actions.py.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`tests/test_review_actions.py`",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`tests/test_review_actions.py`",
+      "confidence": 0.45,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_238158dc5c23",
+        "claim_type": "capability",
+        "audit_verdict": "needs_review",
+        "source_section": "Agent Implementation Summary"
+      }
+    },
+    {
+      "object_id": "mem_1f61e1aa91a9",
+      "type": "context",
+      "title": "README.",
+      "summary": "README.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`README`",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`README`",
+      "confidence": 0.45,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_f162f731488b",
+        "claim_type": "capability",
+        "audit_verdict": "needs_review",
+        "source_section": "Agent Implementation Summary"
+      }
+    },
+    {
+      "object_id": "mem_785a79cebb2b",
+      "type": "context",
+      "title": "approve.",
+      "summary": "approve.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "approve",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "approve",
+      "confidence": 0.45,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_39bff516f986",
+        "claim_type": "capability",
+        "audit_verdict": "needs_review",
+        "source_section": "Claimed Capabilities"
+      }
+    },
+    {
+      "object_id": "mem_765c7321e3a4",
+      "type": "context",
+      "title": "reject.",
+      "summary": "reject.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "reject",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "reject",
+      "confidence": 0.45,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_d5a89c4ae99a",
+        "claim_type": "capability",
+        "audit_verdict": "needs_review",
+        "source_section": "Claimed Capabilities"
+      }
+    },
+    {
+      "object_id": "mem_24999f1ff0f0",
+      "type": "context",
+      "title": "edit.",
+      "summary": "edit.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "edit",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "edit",
+      "confidence": 0.45,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_c79413a3024a",
+        "claim_type": "capability",
+        "audit_verdict": "needs_review",
+        "source_section": "Claimed Capabilities"
+      }
+    },
+    {
+      "object_id": "mem_79aec7b93044",
+      "type": "context",
+      "title": "mark_needs_review.",
+      "summary": "mark_needs_review.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "mark_needs_review",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "mark_needs_review",
+      "confidence": 0.25,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_48c304005bfa",
+        "claim_type": "capability",
+        "audit_verdict": "unsupported",
+        "source_section": "Claimed Capabilities"
+      }
+    },
+    {
+      "object_id": "mem_4fc2585ad4f3",
+      "type": "context",
+      "title": "mark_resolved.",
+      "summary": "mark_resolved.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "mark_resolved",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "mark_resolved",
+      "confidence": 0.45,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_28bc723750b3",
+        "claim_type": "capability",
+        "audit_verdict": "needs_review",
+        "source_section": "Claimed Capabilities"
+      }
+    },
+    {
+      "object_id": "mem_11b031a54f40",
+      "type": "context",
+      "title": "mark_unresolved.",
+      "summary": "mark_unresolved.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "mark_unresolved",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "mark_unresolved",
+      "confidence": 0.45,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_90bf3631f86c",
+        "claim_type": "capability",
+        "audit_verdict": "needs_review",
+        "source_section": "Claimed Capabilities"
+      }
+    },
+    {
+      "object_id": "mem_6f2d3489e174",
+      "type": "context",
+      "title": "mark_superseded.",
+      "summary": "mark_superseded.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "mark_superseded",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "mark_superseded",
+      "confidence": 0.45,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_bb2be4b0e76c",
+        "claim_type": "capability",
+        "audit_verdict": "needs_review",
+        "source_section": "Claimed Capabilities"
+      }
+    },
+    {
+      "object_id": "mem_f0e7e25d9ebe",
+      "type": "context",
+      "title": "mark_stale.",
+      "summary": "mark_stale.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "mark_stale",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "mark_stale",
+      "confidence": 0.45,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_fefc20e21988",
+        "claim_type": "capability",
+        "audit_verdict": "needs_review",
+        "source_section": "Claimed Capabilities"
+      }
+    },
+    {
+      "object_id": "mem_42f6b17d5b9b",
+      "type": "context",
+      "title": "candidate_memory.json.",
+      "summary": "candidate_memory.json.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`candidate_memory.json`",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`candidate_memory.json`",
+      "confidence": 0.82,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_3d73fb09154d",
+        "claim_type": "capability",
+        "audit_verdict": "supported",
+        "source_section": "Claimed Capabilities"
+      }
+    },
+    {
+      "object_id": "mem_689de2e7001f",
+      "type": "context",
+      "title": "approved_memory.json.",
+      "summary": "approved_memory.json.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`approved_memory.json`",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`approved_memory.json`",
+      "confidence": 0.82,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_a004050f222d",
+        "claim_type": "capability",
+        "audit_verdict": "supported",
+        "source_section": "Claimed Capabilities"
+      }
+    },
+    {
+      "object_id": "mem_e885224a4dfd",
+      "type": "context",
+      "title": "rejected_memory.json.",
+      "summary": "rejected_memory.json.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`rejected_memory.json`",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`rejected_memory.json`",
+      "confidence": 0.82,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_0c49e8af3008",
+        "claim_type": "capability",
+        "audit_verdict": "supported",
+        "source_section": "Claimed Capabilities"
+      }
+    },
+    {
+      "object_id": "mem_86fd074c703b",
+      "type": "context",
+      "title": "memory_state_debug.json.",
+      "summary": "memory_state_debug.json.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`memory_state_debug.json`",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`memory_state_debug.json`",
+      "confidence": 0.82,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_c339708c8f1e",
+        "claim_type": "capability",
+        "audit_verdict": "supported",
+        "source_section": "Claimed Capabilities"
+      }
+    },
+    {
+      "object_id": "mem_4e65b1cd764b",
+      "type": "context",
+      "title": "review_actions.json.",
+      "summary": "review_actions.json.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`review_actions.json`",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`review_actions.json`",
+      "confidence": 0.82,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_9208c1032dc9",
+        "claim_type": "capability",
+        "audit_verdict": "supported",
+        "source_section": "Claimed Capabilities"
+      }
+    },
+    {
+      "object_id": "mem_0b710934861b",
+      "type": "context",
+      "title": "Unit tests passed with 212 tests.",
+      "summary": "Unit tests passed with 212 tests.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "PASS, 212 tests",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "PASS, 212 tests",
+      "confidence": 0.64,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_a2e5b6b7a18a",
+        "claim_type": "test_result",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Validation Claimed by Agent"
+      }
+    },
+    {
+      "object_id": "mem_dd9d32a84f67",
+      "type": "context",
+      "title": "venv/bin/python -m unittest discover -s tests: PASS.",
+      "summary": "venv/bin/python -m unittest discover -s tests: PASS.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "venv/bin/python -m unittest discover -s tests: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "venv/bin/python -m unittest discover -s tests: PASS",
+      "confidence": 0.64,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_8aa39751d567",
+        "claim_type": "test_result",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Validation Claimed by Agent"
+      }
+    },
+    {
+      "object_id": "mem_3dc4124ff683",
+      "type": "context",
+      "title": "meeting_minutes heuristic: PASS.",
+      "summary": "meeting_minutes heuristic: PASS.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "meeting_minutes heuristic: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "meeting_minutes heuristic: PASS",
+      "confidence": 0.64,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_7ffa4b3805bf",
+        "claim_type": "test_result",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Validation Claimed by Agent"
+      }
+    },
+    {
+      "object_id": "mem_a6629ea0e883",
+      "type": "context",
+      "title": "meeting_minutes LLM: PASS.",
+      "summary": "meeting_minutes LLM: PASS.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "meeting_minutes LLM: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "meeting_minutes LLM: PASS",
+      "confidence": 0.64,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_e62a70cd1157",
+        "claim_type": "test_result",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Validation Claimed by Agent"
+      }
+    },
+    {
+      "object_id": "mem_4b168761b1b8",
+      "type": "context",
+      "title": "docs LLM: PASS.",
+      "summary": "docs LLM: PASS.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "docs LLM: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "docs LLM: PASS",
+      "confidence": 0.64,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_afbc3eb90283",
+        "claim_type": "test_result",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Validation Claimed by Agent"
+      }
+    },
+    {
+      "object_id": "mem_74aff74efd6e",
+      "type": "context",
+      "title": "review LLM: PASS.",
+      "summary": "review LLM: PASS.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "review LLM: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "review LLM: PASS",
+      "confidence": 0.64,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_5c0660a2753a",
+        "claim_type": "test_result",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Validation Claimed by Agent"
+      }
+    },
+    {
+      "object_id": "mem_7a4c4c621b4d",
+      "type": "context",
+      "title": "conflict LLM: PASS.",
+      "summary": "conflict LLM: PASS.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "conflict LLM: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "conflict LLM: PASS",
+      "confidence": 0.64,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_444d8570d10a",
+        "claim_type": "test_result",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Validation Claimed by Agent"
+      }
+    },
+    {
+      "object_id": "mem_5ac179c25019",
+      "type": "context",
+      "title": "Created a fresh Meeting #12 run.",
+      "summary": "Created a fresh Meeting #12 run.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Created a fresh Meeting #12 run.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Created a fresh Meeting #12 run.",
+      "confidence": 0.64,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_69b51fe2b9b7",
+        "claim_type": "manual_smoke",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Validation Claimed by Agent"
+      }
+    },
+    {
+      "object_id": "mem_346b52328bda",
+      "type": "context",
+      "title": "Approved one commitment into approved_memory.json.",
+      "summary": "Approved one commitment into approved_memory.json.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Approved one commitment into approved_memory.json.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Approved one commitment into approved_memory.json.",
+      "confidence": 0.64,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_1863a233f515",
+        "claim_type": "manual_smoke",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Validation Claimed by Agent"
+      }
+    },
+    {
+      "object_id": "mem_b3c97ad3c45c",
+      "type": "context",
+      "title": "Rejected one candidate into rejected_memory.json.",
+      "summary": "Rejected one candidate into rejected_memory.json.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Rejected one candidate into rejected_memory.json.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Rejected one candidate into rejected_memory.json.",
+      "confidence": 0.64,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_2f7878433fdd",
+        "claim_type": "manual_smoke",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Validation Claimed by Agent"
+      }
+    },
+    {
+      "object_id": "mem_b4fc1b060e3a",
+      "type": "context",
+      "title": "Edited one weak item while preserving source quote/evidence.",
+      "summary": "Edited one weak item while preserving source quote/evidence.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Edited one weak item while preserving source quote/evidence.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Edited one weak item while preserving source quote/evidence.",
+      "confidence": 0.64,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_58936ce61782",
+        "claim_type": "manual_smoke",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Validation Claimed by Agent"
+      }
+    },
+    {
+      "object_id": "mem_c7a1974c4b7e",
+      "type": "context",
+      "title": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state.",
+      "summary": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state.",
+      "confidence": 0.64,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_de117b389bc4",
+        "claim_type": "manual_smoke",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Validation Claimed by Agent"
+      }
+    },
+    {
+      "object_id": "mem_d3b9007aeaf4",
+      "type": "context",
+      "title": "",
+      "summary": "",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "---",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "---",
+      "confidence": 0.64,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_d2bb40c4d372",
+        "claim_type": "manual_smoke",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Validation Claimed by Agent"
+      }
+    },
+    {
+      "object_id": "mem_777ec3f5e78a",
+      "type": "decision",
+      "title": "Raw extraction is not trusted memory.",
+      "summary": "Raw extraction is not trusted memory.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Raw extraction is not trusted memory.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Raw extraction is not trusted memory.",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_7a3b59bdca16",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_720db365e999",
+      "type": "decision",
+      "title": "Candidate memory must not become approved memory automatically.",
+      "summary": "Candidate memory must not become approved memory automatically.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Candidate memory must not become approved memory automatically.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Candidate memory must not become approved memory automatically.",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_93fc4b0b4157",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_507eff6ae5a7",
+      "type": "decision",
+      "title": "Approved memory is the trusted store for reviewed items.",
+      "summary": "Approved memory is the trusted store for reviewed items.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Approved memory is the trusted store for reviewed items.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Approved memory is the trusted store for reviewed items.",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_9a502c915e83",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_5a30638da7ed",
+      "type": "decision",
+      "title": "Review actions should be append-only.",
+      "summary": "Review actions should be append-only.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Review actions should be append-only.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Review actions should be append-only.",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_302b8a8967ab",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_363be5817aba",
+      "type": "decision",
+      "title": "Source evidence must be preserved through edits.",
+      "summary": "Source evidence must be preserved through edits.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Source evidence must be preserved through edits.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Source evidence must be preserved through edits.",
+      "confidence": 0.25,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_fc34ffa2515b",
+        "claim_type": "technical_decision",
+        "audit_verdict": "unsupported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_a7f9d32e48b2",
+      "type": "decision",
+      "title": "Spool is not a todo tracker.",
+      "summary": "Spool is not a todo tracker.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Spool is not a todo tracker.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Spool is not a todo tracker.",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_3dd1cdd5675a",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_bce4d7e25c8f",
+      "type": "decision",
+      "title": "Action items are represented as commitments in candidate/approved memory.",
+      "summary": "Action items are represented as commitments in candidate/approved memory.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Action items are represented as commitments in candidate/approved memory.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Action items are represented as commitments in candidate/approved memory.",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_7f1e32f6bdc9",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_3a85a93827ce",
+      "type": "decision",
+      "title": "Commitment statuses are memory states, not productivity states:.",
+      "summary": "Commitment statuses are memory states, not productivity states:.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Commitment statuses are memory states, not productivity states:",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Commitment statuses are memory states, not productivity states:",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_bd3b4613be2e",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_12c361acb60c",
+      "type": "decision",
+      "title": "unresolved.",
+      "summary": "unresolved.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "unresolved",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "unresolved",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_83d71a278683",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_3a691d6fe9c5",
+      "type": "decision",
+      "title": "resolved.",
+      "summary": "resolved.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "resolved",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "resolved",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_202b79ed4001",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_0d96bb044b4d",
+      "type": "decision",
+      "title": "superseded.",
+      "summary": "superseded.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "superseded",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "superseded",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_5e1d3f1391db",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_a98e34814852",
+      "type": "decision",
+      "title": "stale.",
+      "summary": "stale.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "stale",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "stale",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_e01f4c2eb927",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_c91c4431ecb5",
+      "type": "decision",
+      "title": "unknown.",
+      "summary": "unknown.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "unknown",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "unknown",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_1e7e695cda69",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_a38142386920",
+      "type": "decision",
+      "title": "v0.8.1 should not implement:.",
+      "summary": "v0.8.1 should not implement:.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "v0.8.1 should not implement:",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "v0.8.1 should not implement:",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_c2ec39d2cdd0",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_a12bc23deda9",
+      "type": "decision",
+      "title": "AI answer verification.",
+      "summary": "AI answer verification.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "AI answer verification",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "AI answer verification",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_7a23e617a730",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_1b5118ef541c",
+      "type": "decision",
+      "title": "browser extension.",
+      "summary": "browser extension.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "browser extension",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "browser extension",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_e216e233a198",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_3c92abb3ee1b",
+      "type": "decision",
+      "title": "user auth.",
+      "summary": "user auth.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "user auth",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "user auth",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_a9a0dc4f0067",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_782aea17a938",
+      "type": "decision",
+      "title": "database.",
+      "summary": "database.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "database",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "database",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_ddf4b87df351",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_c41a396f1a5d",
+      "type": "decision",
+      "title": "cloud sync.",
+      "summary": "cloud sync.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "cloud sync",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "cloud sync",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_2692084f6b3a",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_ef785911f36f",
+      "type": "decision",
+      "title": "Slack/Drive/Gmail integrations.",
+      "summary": "Slack/Drive/Gmail integrations.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Slack/Drive/Gmail integrations",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Slack/Drive/Gmail integrations",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_28707fdeb444",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_67537dcce3e2",
+      "type": "decision",
+      "title": "polished UI.",
+      "summary": "polished UI.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "polished UI",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "polished UI",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_83a8aabb1c1f",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_7f6db653505c",
+      "type": "decision",
+      "title": "Kanban/task tracker/reminders.",
+      "summary": "Kanban/task tracker/reminders.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Kanban/task tracker/reminders",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Kanban/task tracker/reminders",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_f0bfb51e65f9",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_3a4a9277e7c7",
+      "type": "decision",
+      "title": "automatic approval by default.",
+      "summary": "automatic approval by default.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "automatic approval by default",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "automatic approval by default",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_c66c9db16619",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_7e183262851d",
+      "type": "decision",
+      "title": "Spool added a review action application layer as system infrastructure.",
+      "summary": "Spool added a review action application layer as system infrastructure.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Spool added a review action application layer as system infrastructure.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Spool added a review action application layer as system infrastructure.",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_2bd80f6a6679",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_d94245d1b7e3",
+      "type": "decision",
+      "title": "Spool stores reviewed memory using JSON artifacts rather than a database.",
+      "summary": "Spool stores reviewed memory using JSON artifacts rather than a database.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Spool stores reviewed memory using JSON artifacts rather than a database.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Spool stores reviewed memory using JSON artifacts rather than a database.",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_3148f311755a",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_5689b8081733",
+      "type": "decision",
+      "title": "Review actions are append-only in review_actions.json.",
+      "summary": "Review actions are append-only in review_actions.json.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Review actions are append-only in `review_actions.json`.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Review actions are append-only in `review_actions.json`.",
+      "confidence": 0.25,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_b468ce8fc400",
+        "claim_type": "technical_decision",
+        "audit_verdict": "unsupported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_c592ec968c2b",
+      "type": "decision",
+      "title": "Approved memory should not be created automatically from extraction.",
+      "summary": "Approved memory should not be created automatically from extraction.",
+      "status": "candidate",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Approved memory should not be created automatically from extraction.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Approved memory should not be created automatically from extraction.",
+      "confidence": 0.62,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_97b4f8cb2a88",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_2cc5edcacbe6",
+      "type": "risk",
+      "title": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "summary": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "confidence": 0.54,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_d34e16f7a91f",
+        "claim_type": "risk",
+        "audit_verdict": "needs_review",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_8a177ec30b28",
+      "type": "risk",
+      "title": "Edits could accidentally allow source evidence to be removed.",
+      "summary": "Edits could accidentally allow source evidence to be removed.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Edits could accidentally allow source evidence to be removed.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Edits could accidentally allow source evidence to be removed.",
+      "confidence": 0.54,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_020b11837288",
+        "claim_type": "risk",
+        "audit_verdict": "needs_review",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_5440e711bfa9",
+      "type": "risk",
+      "title": "memory_state_debug.json could diverge from actual approved/rejected state.",
+      "summary": "memory_state_debug.json could diverge from actual approved/rejected state.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`memory_state_debug.json` could diverge from actual approved/rejected state.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`memory_state_debug.json` could diverge from actual approved/rejected state.",
+      "confidence": 0.82,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_d962bd9a66e9",
+        "claim_type": "risk",
+        "audit_verdict": "supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_a4f146cedd38",
+      "type": "risk",
+      "title": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "summary": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Duplicate handling by `memory_id` could incorrectly overwrite edited objects.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Duplicate handling by `memory_id` could incorrectly overwrite edited objects.",
+      "confidence": 0.25,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_17b98ec05a64",
+        "claim_type": "risk",
+        "audit_verdict": "unsupported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_0d6bd9155170",
+      "type": "risk",
+      "title": "CLI patch parsing could accept unsafe or invalid fields.",
+      "summary": "CLI patch parsing could accept unsafe or invalid fields.",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "CLI patch parsing could accept unsafe or invalid fields.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "CLI patch parsing could accept unsafe or invalid fields.",
+      "confidence": 0.54,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_d5994f9c1983",
+        "claim_type": "risk",
+        "audit_verdict": "needs_review",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_19fb34ddde26",
+      "type": "open_question",
+      "title": "Should weakly_supported memory be approvable?",
+      "summary": "Should weakly_supported memory be approvable?",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should weakly_supported memory be approvable?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should weakly_supported memory be approvable?",
+      "confidence": 0.54,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_938b48473095",
+        "claim_type": "open_question",
+        "audit_verdict": "needs_review",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_e9b65b0a1ab2",
+      "type": "open_question",
+      "title": "Should approved_memory become canonical in v0.8.2?",
+      "summary": "Should approved_memory become canonical in v0.8.2?",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should approved_memory become canonical in v0.8.2?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should approved_memory become canonical in v0.8.2?",
+      "confidence": 0.54,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_6673c85ddcef",
+        "claim_type": "open_question",
+        "audit_verdict": "needs_review",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_fac6794aceca",
+      "type": "open_question",
+      "title": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "summary": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should review actions eventually support reviewer identity beyond CLI strings?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "confidence": 0.54,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_cd89958e89d5",
+        "claim_type": "open_question",
+        "audit_verdict": "needs_review",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_032a5a6a37f3",
+      "type": "open_question",
+      "title": "Should actions be hash-chained or tamper-evident later?",
+      "summary": "Should actions be hash-chained or tamper-evident later?",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should actions be hash-chained or tamper-evident later?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should actions be hash-chained or tamper-evident later?",
+      "confidence": 0.54,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_db299aa7045e",
+        "claim_type": "open_question",
+        "audit_verdict": "needs_review",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "mem_ba864ff01014",
+      "type": "open_question",
+      "title": "Should Streamlit expose approve/reject/edit actions?",
+      "summary": "Should Streamlit expose approve/reject/edit actions?",
+      "status": "needs_review",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should Streamlit expose approve/reject/edit actions?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should Streamlit expose approve/reject/edit actions?",
+      "confidence": 0.25,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_db604a35da30",
+        "claim_type": "open_question",
+        "audit_verdict": "unsupported",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    }
+  ],
+  "review_warnings": [
+    {
+      "reason": "unsupported_claim",
+      "severity": "high",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale.",
+      "summary": "Agent claim lacks deterministic support.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_0ebe87064d32"
+      ]
+    },
+    {
+      "reason": "unsupported_claim",
+      "severity": "high",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Append actions to review_actions.json.",
+      "summary": "Agent claim lacks deterministic support.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Append actions to review_actions.json",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_9e9edbd4a77e"
+      ]
+    },
+    {
+      "reason": "unsupported_claim",
+      "severity": "high",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Preserve source evidence through edits.",
+      "summary": "Agent claim lacks deterministic support.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Preserve source evidence through edits",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_c2b712cd22a3"
+      ]
+    },
+    {
+      "reason": "unsupported_claim",
+      "severity": "high",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Prevent silent approval of unsupported/contradicted memory.",
+      "summary": "Agent claim lacks deterministic support.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Prevent silent approval of unsupported/contradicted memory",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_d41aa401f323"
+      ]
+    },
+    {
+      "reason": "unsupported_claim",
+      "severity": "high",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Avoid duplicate approved/rejected entries by memory_id.",
+      "summary": "Agent claim lacks deterministic support.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Avoid duplicate approved/rejected entries by memory_id",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_ba8546106cb6"
+      ]
+    },
+    {
+      "reason": "unsupported_claim",
+      "severity": "high",
+      "title": "Agent claim needs review",
+      "candidate_decision": "mark_needs_review.",
+      "summary": "Agent claim lacks deterministic support.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "mark_needs_review",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_48c304005bfa"
+      ]
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Unit tests passed with 212 tests.",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "PASS, 212 tests",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_a2e5b6b7a18a"
+      ]
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent claim needs review",
+      "candidate_decision": "venv/bin/python -m unittest discover -s tests: PASS.",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "venv/bin/python -m unittest discover -s tests: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_8aa39751d567"
+      ]
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent claim needs review",
+      "candidate_decision": "meeting_minutes heuristic: PASS.",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "meeting_minutes heuristic: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_7ffa4b3805bf"
+      ]
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent claim needs review",
+      "candidate_decision": "meeting_minutes LLM: PASS.",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "meeting_minutes LLM: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_e62a70cd1157"
+      ]
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent claim needs review",
+      "candidate_decision": "docs LLM: PASS.",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "docs LLM: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_afbc3eb90283"
+      ]
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent claim needs review",
+      "candidate_decision": "review LLM: PASS.",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "review LLM: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_5c0660a2753a"
+      ]
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent claim needs review",
+      "candidate_decision": "conflict LLM: PASS.",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "conflict LLM: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_444d8570d10a"
+      ]
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Created a fresh Meeting #12 run.",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Created a fresh Meeting #12 run.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_69b51fe2b9b7"
+      ]
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Approved one commitment into approved_memory.json.",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Approved one commitment into approved_memory.json.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_1863a233f515"
+      ]
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Rejected one candidate into rejected_memory.json.",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Rejected one candidate into rejected_memory.json.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_2f7878433fdd"
+      ]
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Edited one weak item while preserving source quote/evidence.",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Edited one weak item while preserving source quote/evidence.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_58936ce61782"
+      ]
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state.",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_de117b389bc4"
+      ]
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent claim needs review",
+      "candidate_decision": "",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "---",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_d2bb40c4d372"
+      ]
+    },
+    {
+      "reason": "unsupported_claim",
+      "severity": "high",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Source evidence must be preserved through edits.",
+      "summary": "Agent claim lacks deterministic support.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Source evidence must be preserved through edits.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_fc34ffa2515b"
+      ]
+    },
+    {
+      "reason": "unsupported_claim",
+      "severity": "high",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Review actions are append-only in review_actions.json.",
+      "summary": "Agent claim lacks deterministic support.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Review actions are append-only in `review_actions.json`.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_b468ce8fc400"
+      ]
+    },
+    {
+      "reason": "unsupported_claim",
+      "severity": "high",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "summary": "Agent claim lacks deterministic support.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Duplicate handling by `memory_id` could incorrectly overwrite edited objects.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_17b98ec05a64"
+      ]
+    },
+    {
+      "reason": "unsupported_claim",
+      "severity": "high",
+      "title": "Agent claim needs review",
+      "candidate_decision": "Should Streamlit expose approve/reject/edit actions?",
+      "summary": "Agent claim lacks deterministic support.",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should Streamlit expose approve/reject/edit actions?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_db604a35da30"
+      ]
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "high",
+      "title": "Possible agent scope drift",
+      "candidate_decision": "Possible agent scope drift",
+      "summary": "Possible out-of-scope addition mentions database.",
+      "recommended_action": "Inspect the diff for out-of-scope additions.",
+      "source_event_ids": [],
+      "sources": []
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "high",
+      "title": "Possible agent scope drift",
+      "candidate_decision": "Possible agent scope drift",
+      "summary": "Possible out-of-scope addition mentions auth.",
+      "recommended_action": "Inspect the diff for out-of-scope additions.",
+      "source_event_ids": [],
+      "sources": []
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent audit risk needs review",
+      "candidate_decision": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "summary": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "recommended_action": "Review whether this risk should be tracked or mitigated.",
+      "source_event_ids": [],
+      "sources": []
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent audit risk needs review",
+      "candidate_decision": "Edits could accidentally allow source evidence to be removed.",
+      "summary": "Edits could accidentally allow source evidence to be removed.",
+      "recommended_action": "Review whether this risk should be tracked or mitigated.",
+      "source_event_ids": [],
+      "sources": []
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent audit risk needs review",
+      "candidate_decision": "memory_state_debug.json could diverge from actual approved/rejected state.",
+      "summary": "memory_state_debug.json could diverge from actual approved/rejected state.",
+      "recommended_action": "Review whether this risk should be tracked or mitigated.",
+      "source_event_ids": [],
+      "sources": []
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent audit risk needs review",
+      "candidate_decision": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "summary": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "recommended_action": "Review whether this risk should be tracked or mitigated.",
+      "source_event_ids": [],
+      "sources": []
+    },
+    {
+      "reason": "extraction_warning",
+      "severity": "medium",
+      "title": "Agent audit risk needs review",
+      "candidate_decision": "CLI patch parsing could accept unsafe or invalid fields.",
+      "summary": "CLI patch parsing could accept unsafe or invalid fields.",
+      "recommended_action": "Review whether this risk should be tracked or mitigated.",
+      "source_event_ids": [],
+      "sources": []
+    }
+  ]
+}

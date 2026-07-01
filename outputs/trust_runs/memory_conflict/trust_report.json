@@ -1,0 +1,69 @@
+{
+  "overall_verdict": "stop",
+  "scope": {
+    "task_source": "examples/pr_trust/memory_conflict/task.md",
+    "approved_task": "Update review action persistence internals.",
+    "allowed_files": [
+      "src/review_actions.py"
+    ],
+    "forbidden_paths": [],
+    "changed_files": [
+      {
+        "path": "src/review_actions.py",
+        "change_type": "modified",
+        "old_path": "src/review_actions.py",
+        "new_path": "src/review_actions.py"
+      }
+    ],
+    "scope_violations": [],
+    "forbidden_violations": []
+  },
+  "agent_claims": [
+    {
+      "claim_id": "file_modified_e1360a2aa26b",
+      "claim": "Updated `src/review_actions.py`.",
+      "claim_type": "file_modified",
+      "verdict": "supported",
+      "evidence_target": "diff.patch",
+      "evidence_quote": "diff --git a/src/review_actions.py b/src/review_actions.py",
+      "reason": "src/review_actions.py appears in the PR diff."
+    },
+    {
+      "claim_id": "capability_claim_343e87652907",
+      "claim": "Review actions now overwrite `review_actions.json` with only the latest action.",
+      "claim_type": "capability_claim",
+      "verdict": "supported",
+      "evidence_target": "diff.patch",
+      "evidence_quote": "diff --git a/src/review_actions.py b/src/review_actions.py",
+      "reason": "The diff shows review actions being written as a single-action list."
+    },
+    {
+      "claim_id": "test_result_claim_4f24117573c2",
+      "claim": "Tests passed.",
+      "claim_type": "test_result_claim",
+      "verdict": "supported",
+      "evidence_target": "test_output.txt",
+      "evidence_quote": "Ran 3 tests in 0.03s",
+      "reason": "The provided test output contains a passing result."
+    }
+  ],
+  "weak_or_missing_evidence": [],
+  "buried_decisions": [],
+  "repo_memory_check": [
+    {
+      "memory_id": "mem_append_only",
+      "memory": "Review actions are append-only.",
+      "verdict": "contradicted",
+      "reason": "The PR evidence suggests overwriting review actions, contradicting append-only repo memory.",
+      "evidence_quote": "- Review actions now overwrite `review_actions.json` with only the latest action."
+    }
+  ],
+  "risks": [
+    "The PR appears to conflict with approved repo memory."
+  ],
+  "reviewer_actions": [
+    "human review required",
+    "stop merge until conflict or violation is resolved",
+    "resolve repo memory conflict"
+  ]
+}

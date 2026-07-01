@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "classification": "agent_change_packet",
+    "generated_at": "2026-07-01T00:01:29.314333+00:00"
+  },
+  "classification": "agent_change_packet",
+  "blocks": [],
+  "detected_task_spans": [],
+  "coverage_audit_warnings": [],
+  "note": "Meeting-minutes task coverage audit skipped for agent change packets."
+}

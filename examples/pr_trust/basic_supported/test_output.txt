@@ -1,0 +1,6 @@
+venv/bin/python -m unittest tests.test_review_actions
+............
+----------------------------------------------------------------------
+Ran 12 tests in 0.12s
+
+OK

@@ -77,8 +77,12 @@ def run_extraction_to_ui_folder(
         processed = postprocess_decisions(decisions, event_lookup)
         raw_decisions = processed.raw_decisions
         clean_decisions = processed.clean_decisions
-        merge_meeting_decisions(clean_decisions, raw_decisions, meeting_memory)
-        meeting_guard_removed_count = apply_meeting_minutes_clean_guard(clean_decisions, meeting_memory)
+        if meeting_memory.classification == "agent_change_packet":
+            clean_decisions.clear()
+            meeting_guard_removed_count = 0
+        else:
+            merge_meeting_decisions(clean_decisions, raw_decisions, meeting_memory)
+            meeting_guard_removed_count = apply_meeting_minutes_clean_guard(clean_decisions, meeting_memory)
         ownership_removed_count = 0
         final_guard_removed_count = 0
         final_tradeoff_change_count = 0
@@ -149,8 +153,11 @@ def run_extraction_to_ui_folder(
     else:
         raw_decisions = copy.deepcopy(decisions)
         clean_decisions, issues = validate_decisions(copy.deepcopy(decisions), event_lookup)
-        merge_meeting_decisions(clean_decisions, raw_decisions, meeting_memory)
-        apply_meeting_minutes_clean_guard(clean_decisions, meeting_memory)
+        if meeting_memory.classification == "agent_change_packet":
+            clean_decisions.clear()
+        else:
+            merge_meeting_decisions(clean_decisions, raw_decisions, meeting_memory)
+            apply_meeting_minutes_clean_guard(clean_decisions, meeting_memory)
         if pipeline == "candidates-shadow":
             filter_clean_decisions_by_claim_ownership(ingested.normalized_events, clean_decisions)
             candidates, state_resolution, _removed_count = finalize_clean_decisions_with_state_resolution(
@@ -225,6 +232,10 @@ def run_extraction_to_ui_folder(
         "rejected_memory": str(run_dir / "rejected_memory.json"),
         "review_actions": str(run_dir / "review_actions.json"),
         "memory_state_debug": str(run_dir / "memory_state_debug.json"),
+        "agent_change_packet_debug": str(run_dir / "agent_change_packet_debug.json") if meeting_memory.agent_change_packet_debug is not None else None,
+        "agent_claims": str(run_dir / "agent_claims.json") if meeting_memory.agent_claims is not None else None,
+        "agent_audit_report": str(run_dir / "agent_audit_report.json") if meeting_memory.agent_audit_report is not None else None,
+        "agent_audit_report_md": str(run_dir / "agent_audit_report.md") if meeting_memory.agent_audit_markdown is not None else None,
         "run_metadata": str(run_dir / "run_metadata.json"),
     }
     decisions_payload = {"metadata": clean_metadata, "decisions": [decision.to_dict() for decision in clean_decisions]}
@@ -237,6 +248,7 @@ def run_extraction_to_ui_folder(
         clean_memory=clean_memory,
         review_queue=review_queue,
         coverage_warnings=meeting_memory.block_classification_debug.get("coverage_audit_warnings", []),
+        extra_candidates=meeting_memory.extra_candidate_memory,
         auto_approve=False,
     )
 
@@ -263,6 +275,14 @@ def run_extraction_to_ui_folder(
     _write_json(run_dir / "open_questions.json", meeting_memory.open_questions, pretty=pretty)
     _write_json(run_dir / "document_memory_debug.json", meeting_memory.document_memory_debug, pretty=pretty)
     _write_json(run_dir / "block_classification_debug.json", meeting_memory.block_classification_debug, pretty=pretty)
+    if meeting_memory.agent_change_packet_debug is not None:
+        _write_json(run_dir / "agent_change_packet_debug.json", meeting_memory.agent_change_packet_debug, pretty=pretty)
+    if meeting_memory.agent_claims is not None:
+        _write_json(run_dir / "agent_claims.json", meeting_memory.agent_claims, pretty=pretty)
+    if meeting_memory.agent_audit_report is not None:
+        _write_json(run_dir / "agent_audit_report.json", meeting_memory.agent_audit_report, pretty=pretty)
+    if meeting_memory.agent_audit_markdown is not None:
+        (run_dir / "agent_audit_report.md").write_text(meeting_memory.agent_audit_markdown, encoding="utf-8")
     _write_json(run_dir / "review_queue.json", review_queue, pretty=pretty)
     (run_dir / "review_queue.md").write_text(review_queue_to_markdown(review_queue), encoding="utf-8")
     for filename, payload in memory_artifacts.items():

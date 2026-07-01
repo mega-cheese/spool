@@ -95,8 +95,12 @@ def main() -> None:
 
     if args.mode == "llm":
         processed = postprocess_decisions(decisions, event_lookup, include_review_claims=args.include_review_claims)
-        merge_meeting_decisions(processed.clean_decisions, processed.raw_decisions, meeting_memory)
-        meeting_guard_removed_count = apply_meeting_minutes_clean_guard(processed.clean_decisions, meeting_memory)
+        if meeting_memory.classification == "agent_change_packet":
+            processed.clean_decisions.clear()
+            meeting_guard_removed_count = 0
+        else:
+            merge_meeting_decisions(processed.clean_decisions, processed.raw_decisions, meeting_memory)
+            meeting_guard_removed_count = apply_meeting_minutes_clean_guard(processed.clean_decisions, meeting_memory)
         ownership_removed_count = 0
         final_guard_removed_count = 0
         final_tradeoff_change_count = 0
@@ -239,8 +243,11 @@ def main() -> None:
 
     decisions, issues = validate_decisions(decisions, event_lookup)
     raw_decisions = list(decisions)
-    merge_meeting_decisions(decisions, raw_decisions, meeting_memory)
-    apply_meeting_minutes_clean_guard(decisions, meeting_memory)
+    if meeting_memory.classification == "agent_change_packet":
+        decisions.clear()
+    else:
+        merge_meeting_decisions(decisions, raw_decisions, meeting_memory)
+        apply_meeting_minutes_clean_guard(decisions, meeting_memory)
     if args.pipeline == "candidates-shadow":
         filter_clean_decisions_by_claim_ownership(normalized_events, decisions)
         _shadow_candidates, _shadow_state_resolution, _removed_count = finalize_clean_decisions_with_state_resolution(normalized_events, decisions)
@@ -490,6 +497,14 @@ def _write_candidates_shadow_run_artifacts(
         payloads["open_questions.json"] = meeting_memory.open_questions
         payloads["document_memory_debug.json"] = meeting_memory.document_memory_debug
         payloads["block_classification_debug.json"] = meeting_memory.block_classification_debug
+        if meeting_memory.agent_change_packet_debug is not None:
+            payloads["agent_change_packet_debug.json"] = meeting_memory.agent_change_packet_debug
+        if meeting_memory.agent_claims is not None:
+            payloads["agent_claims.json"] = meeting_memory.agent_claims
+        if meeting_memory.agent_audit_report is not None:
+            payloads["agent_audit_report.json"] = meeting_memory.agent_audit_report
+        if meeting_memory.agent_audit_markdown is not None:
+            payloads["agent_audit_report.md"] = meeting_memory.agent_audit_markdown
     if raw_metadata is not None and raw_decisions is not None:
         payloads["raw_decisions.json"] = {
             "metadata": raw_metadata,
@@ -518,6 +533,7 @@ def _write_candidates_shadow_run_artifacts(
         clean_memory=clean_memory,
         review_queue=review_queue,
         coverage_warnings=(meeting_memory.block_classification_debug.get("coverage_audit_warnings", []) if meeting_memory is not None else []),
+        extra_candidates=(meeting_memory.extra_candidate_memory if meeting_memory is not None else None),
         auto_approve=auto_approve,
     )
     payloads.update(memory_artifacts)
@@ -526,9 +542,12 @@ def _write_candidates_shadow_run_artifacts(
     for filename, payload in payloads.items():
         path = run_dir / filename
         path.parent.mkdir(parents=True, exist_ok=True)
-        with path.open("w", encoding="utf-8") as handle:
-            json.dump(_to_jsonable(payload), handle, indent=2 if pretty else None, ensure_ascii=False)
-            handle.write("\n")
+        if filename.endswith(".md"):
+            path.write_text(str(payload), encoding="utf-8")
+        else:
+            with path.open("w", encoding="utf-8") as handle:
+                json.dump(_to_jsonable(payload), handle, indent=2 if pretty else None, ensure_ascii=False)
+                handle.write("\n")
         written_paths.append(str(path))
         artifact_paths[_artifact_key(filename)] = str(path)
     review_json_path, review_md_path = write_review_queue(review_queue, run_dir, pretty=pretty)
@@ -572,7 +591,11 @@ def _run_output_dir(output_json: str, input_json: str, run_id: str) -> Path:
 
 
 def _artifact_key(filename: str) -> str:
-    return filename.removesuffix(".json")
+    if filename.endswith(".json"):
+        return filename.removesuffix(".json")
+    if filename.endswith(".md"):
+        return filename.removesuffix(".md") + "_md"
+    return filename
 
 
 def _to_jsonable(value: Any) -> Any:

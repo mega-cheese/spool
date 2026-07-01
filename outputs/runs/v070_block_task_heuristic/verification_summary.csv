@@ -1,6 +1,0 @@
-scenario_type,scenario_name,variant,expected_count,actual_count,count_pass,invariant_pass,verdict,failure_count,review_item_count,review_reasons
-meeting_minutes,meeting_minutes_vymun_april15,original,8,8,True,True,PASS,0,1,ambiguous_decision
-meeting_minutes,meeting_minutes_vymun_may13,original,8,8,True,True,PASS,0,0,
-meeting_minutes,block_task_vymun_todo,original,0,0,True,True,PASS,0,0,
-meeting_minutes,block_task_training_notes,original,0,0,True,True,PASS,0,0,
-meeting_minutes,block_task_logistics_table,original,0,0,True,True,PASS,0,0,

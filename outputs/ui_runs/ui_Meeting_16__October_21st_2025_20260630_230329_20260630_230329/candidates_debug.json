@@ -1,0 +1,275 @@
+[
+  {
+    "candidate_id": "candidate_dec_fea385e29c",
+    "proposed_action": "Thank you cards will be written by each person picking 4 adults, and gift cards will be emailed by Mrs Schultz; cards can be picked up tomorrow.",
+    "normalized_action": "thank you cards will be written by each person picking 4 adults gift cards will be emailed by mrs schultz cards can be picked up tomorrow",
+    "state": "confirmed",
+    "confidence": 0.86,
+    "source_event_ids": [
+      "uploaded_document_file_b63542a57a8f9230_section_10"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_b63542a57a8f9230_section_10"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "Thank you gifts are already taken care of.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_b63542a57a8f9230_section_10"
+        ],
+        "support_level": "direct",
+        "confidence": 1.0,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_b63542a57a8f9230_section_10"
+        ],
+        "confidence": 0.86,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_b63542a57a8f9230_section_10"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_65e1010ba8",
+    "proposed_action": "Elliott and James will coordinate a staggered release of attendees during the break to clear the second floor first.",
+    "normalized_action": "elliott james will coordinate staggered release of attendees during break clear second floor first",
+    "state": "confirmed",
+    "confidence": 0.86,
+    "source_event_ids": [
+      "uploaded_document_file_b63542a57a8f9230_section_2"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_b63542a57a8f9230_section_2"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [
+      {
+        "claim": "A staggered release might be advisable to get the second floor empty first.",
+        "category": "reasoning",
+        "source_event_ids": [
+          "uploaded_document_file_b63542a57a8f9230_section_2"
+        ],
+        "support_level": "direct",
+        "confidence": 1.0,
+        "target_name": null,
+        "target_role": null
+      }
+    ],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_b63542a57a8f9230_section_2"
+        ],
+        "confidence": 0.86,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [
+          "uploaded_document_file_b63542a57a8f9230_section_2"
+        ],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_e3d18a670d",
+    "proposed_action": "Frankie and Ann will sit at the registration desk; Frankie will greet Major Calvert and has emailed him updates.",
+    "normalized_action": "frankie ann will sit at registration desk frankie will greet major calvert has emailed him updates",
+    "state": "confirmed",
+    "confidence": 0.86,
+    "source_event_ids": [
+      "uploaded_document_file_b63542a57a8f9230_section_2"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_b63542a57a8f9230_section_2"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_b63542a57a8f9230_section_2"
+        ],
+        "confidence": 0.86,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_f8c31e1a7c",
+    "proposed_action": "Opening ceremonies speeches will be staffed by Ivan manning the presentation, Elliott saying the speech and introducing guests, including Anthony and Calvert; Elliott will run the land acknowledgement by Mrs. Point.",
+    "normalized_action": "opening ceremonies speeches will be staffed by ivan manning presentation elliott saying speech introducing guests including anthony calvert elliott will run land acknowledgement by mrs point",
+    "state": "confirmed",
+    "confidence": 0.86,
+    "source_event_ids": [
+      "uploaded_document_file_b63542a57a8f9230_section_2"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_b63542a57a8f9230_section_2"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_b63542a57a8f9230_section_2"
+        ],
+        "confidence": 0.86,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_7db67a7eb6",
+    "proposed_action": "ChairMUN will be used as a backup with last year's sheet reused; staff will be sent notes with the tiered approach.",
+    "normalized_action": "chairmun will be used as backup with last year s sheet reused staff will be sent notes with tiered approach",
+    "state": "confirmed",
+    "confidence": 0.86,
+    "source_event_ids": [
+      "uploaded_document_file_b63542a57a8f9230_section_7"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_b63542a57a8f9230_section_7"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_b63542a57a8f9230_section_7"
+        ],
+        "confidence": 0.86,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_f6037b9e8b",
+    "proposed_action": "Frankie will give out the Cynthia Lee Memorial Award during closing ceremonies; Sheree will introduce speech winners with an additional slide about responses.",
+    "normalized_action": "frankie will give out cynthia lee memorial award during closing ceremonies sheree will introduce speech winners with additional slide about responses",
+    "state": "confirmed",
+    "confidence": 0.86,
+    "source_event_ids": [
+      "uploaded_document_file_b63542a57a8f9230_section_8"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_b63542a57a8f9230_section_8"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_b63542a57a8f9230_section_8"
+        ],
+        "confidence": 0.86,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  },
+  {
+    "candidate_id": "candidate_dec_47bac5cf26",
+    "proposed_action": "Staff will store 27 tablecloths and 10 WPGA tables in one classroom for pickup the next day, coordinated by Owen with maintenance and UBC staff.",
+    "normalized_action": "staff will store 27 tablecloths 10 wpga tables in one classroom pickup next day coordinated by owen with maintenance ubc staff",
+    "state": "confirmed",
+    "confidence": 0.86,
+    "source_event_ids": [
+      "uploaded_document_file_b63542a57a8f9230_section_9"
+    ],
+    "decision_event_ids": [
+      "uploaded_document_file_b63542a57a8f9230_section_9"
+    ],
+    "proposal_event_ids": [],
+    "approval_event_ids": [],
+    "rejection_event_ids": [],
+    "reversal_event_ids": [],
+    "supersedes_candidate_ids": [],
+    "claims": [],
+    "evidence_signals": [
+      {
+        "signal_type": "approval_signal",
+        "source_event_ids": [
+          "uploaded_document_file_b63542a57a8f9230_section_9"
+        ],
+        "confidence": 0.86,
+        "note": "Derived from current clean decision source."
+      },
+      {
+        "signal_type": "source_support",
+        "source_event_ids": [],
+        "confidence": 0.75,
+        "note": "Claim source support."
+      }
+    ]
+  }
+]

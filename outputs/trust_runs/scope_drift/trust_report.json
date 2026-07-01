@@ -1,0 +1,66 @@
+{
+  "overall_verdict": "repair",
+  "scope": {
+    "task_source": "examples/pr_trust/scope_drift/task.md",
+    "approved_task": "Update billing copy in `src/billing.py`.",
+    "allowed_files": [
+      "src/billing.py"
+    ],
+    "forbidden_paths": [],
+    "changed_files": [
+      {
+        "path": "src/billing.py",
+        "change_type": "modified",
+        "old_path": "src/billing.py",
+        "new_path": "src/billing.py"
+      },
+      {
+        "path": "src/auth.py",
+        "change_type": "modified",
+        "old_path": "src/auth.py",
+        "new_path": "src/auth.py"
+      }
+    ],
+    "scope_violations": [
+      "src/auth.py"
+    ],
+    "forbidden_violations": []
+  },
+  "agent_claims": [
+    {
+      "claim_id": "file_modified_37b744729e93",
+      "claim": "Updated `src/billing.py` with clearer billing copy.",
+      "claim_type": "file_modified",
+      "verdict": "supported",
+      "evidence_target": "diff.patch",
+      "evidence_quote": "diff --git a/src/billing.py b/src/billing.py",
+      "reason": "src/billing.py appears in the PR diff."
+    },
+    {
+      "claim_id": "test_result_claim_4f24117573c2",
+      "claim": "Tests passed.",
+      "claim_type": "test_result_claim",
+      "verdict": "supported",
+      "evidence_target": "test_output.txt",
+      "evidence_quote": "Ran 4 tests in 0.04s",
+      "reason": "The provided test output contains a passing result."
+    }
+  ],
+  "weak_or_missing_evidence": [],
+  "buried_decisions": [],
+  "repo_memory_check": [
+    {
+      "memory_id": "repo_memory_missing",
+      "memory": "No approved repo memory was provided.",
+      "verdict": "no_relevant_memory",
+      "reason": "Missing approved repo memory is not a failure for v0.9.",
+      "evidence_quote": ""
+    }
+  ],
+  "risks": [
+    "Changed files outside the approved task boundary: src/auth.py."
+  ],
+  "reviewer_actions": [
+    "request repair"
+  ]
+}

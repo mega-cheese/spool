@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "generated_at": "2026-07-01T05:30:47.596812+00:00",
+    "review_item_count": 1
+  },
+  "items": [
+    {
+      "review_id": "review_305ed76286f2",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Validation claims need evidence",
+      "summary": "Validation claims are self-reported and need log evidence.",
+      "candidate_decision": "Validation claims are self-reported",
+      "reason": "weak_validation_evidence",
+      "recommended_action": "Attach or inspect the actual test/scenario logs before relying on these validation claims.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "PASS, 212 tests",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_a2e5b6b7a18a",
+        "claim_8aa39751d567",
+        "claim_7ffa4b3805bf",
+        "claim_e62a70cd1157",
+        "claim_afbc3eb90283",
+        "claim_5c0660a2753a",
+        "claim_444d8570d10a",
+        "claim_69b51fe2b9b7",
+        "claim_1863a233f515",
+        "claim_2f7878433fdd",
+        "claim_58936ce61782",
+        "claim_de117b389bc4",
+        "claim_d2bb40c4d372"
+      ],
+      "created_at": "2026-07-01T05:30:47.596812+00:00"
+    }
+  ]
+}

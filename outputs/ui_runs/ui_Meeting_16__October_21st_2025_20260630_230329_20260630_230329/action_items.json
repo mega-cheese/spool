@@ -1,0 +1,432 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_16__October_21st_2025_20260630_230329.pdf",
+    "mode": "llm",
+    "pipeline": "candidates-shadow",
+    "classification": "generic_document",
+    "generated_at": "2026-06-30T23:03:42.449130+00:00",
+    "action_item_count": 12
+  },
+  "action_items": [
+    {
+      "object_id": "memory_8e8cb3252e82",
+      "type": "action_item",
+      "title": "Bring candy.",
+      "summary": "Mrs. Haider should bring candy.",
+      "owner_names": [
+        "Mrs. Haider"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_b63542a57a8f9230_section_3"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b63542a57a8f9230_section_3",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b63542a57a8f9230#section-3",
+          "page": 2,
+          "url": null,
+          "quote": "Document - Mrs Haider will bring candy"
+        }
+      ],
+      "quote": "Document - Mrs Haider will bring candy",
+      "confidence": 0.8,
+      "block_id": "block_9fe9240f79e5"
+    },
+    {
+      "object_id": "memory_8cc9ffe06aa2",
+      "type": "action_item",
+      "title": "The speech contest work?",
+      "summary": "How should the speech contest work?",
+      "owner_names": [
+        "How"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_b63542a57a8f9230_section_3"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b63542a57a8f9230_section_3",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b63542a57a8f9230#section-3",
+          "page": 2,
+          "url": null,
+          "quote": "Document - How will the speech contest work?"
+        }
+      ],
+      "quote": "Document - How will the speech contest work?",
+      "confidence": 0.8,
+      "block_id": "block_9fe9240f79e5"
+    },
+    {
+      "object_id": "memory_543be2ca4557",
+      "type": "action_item",
+      "title": "Print out extra maps/calendars for reg desk.",
+      "summary": "Elliott should print out extra maps/calendars for reg desk.",
+      "owner_names": [
+        "Elliott"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_b63542a57a8f9230_section_3"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b63542a57a8f9230_section_3",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b63542a57a8f9230#section-3",
+          "page": 2,
+          "url": null,
+          "quote": "Document - Elliott will print out extra maps/calendars for reg desk"
+        }
+      ],
+      "quote": "Document - Elliott will print out extra maps/calendars for reg desk",
+      "confidence": 0.8,
+      "block_id": "block_9fe9240f79e5"
+    },
+    {
+      "object_id": "memory_46943df9d488",
+      "type": "action_item",
+      "title": "Do a welcome?",
+      "summary": "Student should do a welcome?",
+      "owner_names": [
+        "Student"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_b63542a57a8f9230_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b63542a57a8f9230_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b63542a57a8f9230#section-7",
+          "page": 3,
+          "url": null,
+          "quote": "Document - Student to do a welcome?"
+        }
+      ],
+      "quote": "Document - Student to do a welcome?",
+      "confidence": 0.8,
+      "block_id": "block_7c863d5790f5"
+    },
+    {
+      "object_id": "memory_f6b2ccada6bf",
+      "type": "action_item",
+      "title": "Elliott made sheet last year that can be reused.",
+      "summary": "Backup should elliott made sheet last year that can be reused.",
+      "owner_names": [
+        "Backup"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_b63542a57a8f9230_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b63542a57a8f9230_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b63542a57a8f9230#section-7",
+          "page": 3,
+          "url": null,
+          "quote": "Document - Backup - Elliott made sheet last year that can be reused"
+        }
+      ],
+      "quote": "Document - Backup - Elliott made sheet last year that can be reused",
+      "confidence": 0.8,
+      "block_id": "block_7c863d5790f5"
+    },
+    {
+      "object_id": "memory_5369bbcd4dc7",
+      "type": "action_item",
+      "title": "Send Mrs Haider a draft.",
+      "summary": "Hugo should send Mrs Haider a draft.",
+      "owner_names": [
+        "Hugo"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_b63542a57a8f9230_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b63542a57a8f9230_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b63542a57a8f9230#section-7",
+          "page": 3,
+          "url": null,
+          "quote": "Document - Hugo - send Mrs Haider a draft"
+        }
+      ],
+      "quote": "Document - Hugo - send Mrs Haider a draft",
+      "confidence": 0.8,
+      "block_id": "block_7c863d5790f5"
+    },
+    {
+      "object_id": "memory_d7bb54b9a964",
+      "type": "action_item",
+      "title": "Send it to them when ready.",
+      "summary": "Tracey Lee should send it to them when ready.",
+      "owner_names": [
+        "Tracey Lee"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_b63542a57a8f9230_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b63542a57a8f9230_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Sunday",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b63542a57a8f9230#section-8",
+          "page": 3,
+          "url": null,
+          "quote": "Sunday Tracey Lee - send it to them when ready"
+        }
+      ],
+      "quote": "Sunday Tracey Lee - send it to them when ready",
+      "confidence": 0.8,
+      "block_id": "block_14f2213eb13a"
+    },
+    {
+      "object_id": "memory_7f7c386b5a98",
+      "type": "action_item",
+      "title": "Give out Cynthia Lee Memorial Award.",
+      "summary": "Frankie should give out Cynthia Lee Memorial Award.",
+      "owner_names": [
+        "Frankie"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_b63542a57a8f9230_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b63542a57a8f9230_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Sunday",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b63542a57a8f9230#section-8",
+          "page": 3,
+          "url": null,
+          "quote": "Sunday - Frankie to give out Cynthia Lee Memorial Award"
+        }
+      ],
+      "quote": "Sunday - Frankie to give out Cynthia Lee Memorial Award",
+      "confidence": 0.8,
+      "block_id": "block_14f2213eb13a"
+    },
+    {
+      "object_id": "memory_24335882d178",
+      "type": "action_item",
+      "title": "Introduce speech winners.",
+      "summary": "Sheree should introduce speech winners.",
+      "owner_names": [
+        "Sheree"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_b63542a57a8f9230_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b63542a57a8f9230_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Sunday",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b63542a57a8f9230#section-8",
+          "page": 3,
+          "url": null,
+          "quote": "Sunday - Sheree to introduce speech winners"
+        }
+      ],
+      "quote": "Sunday - Sheree to introduce speech winners",
+      "confidence": 0.8,
+      "block_id": "block_14f2213eb13a"
+    },
+    {
+      "object_id": "memory_0d797254f855",
+      "type": "action_item",
+      "title": "Mention schools travelling and give them a shout out.",
+      "summary": "Ann should mention schools travelling and give them a shout out.",
+      "owner_names": [
+        "Ann"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_b63542a57a8f9230_section_9"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b63542a57a8f9230_section_9",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b63542a57a8f9230#section-9",
+          "page": 4,
+          "url": null,
+          "quote": "Document - Ann will mention schools travelling and give them a shout out"
+        }
+      ],
+      "quote": "Document - Ann will mention schools travelling and give them a shout out",
+      "confidence": 0.8,
+      "block_id": "block_eff5cb8c452f"
+    },
+    {
+      "object_id": "memory_d0216821c70a",
+      "type": "action_item",
+      "title": "Frankie and Sheree ask Ms Lee to join you on stage to.",
+      "summary": "Sunday should frankie and Sheree ask Ms Lee to join you on stage to.",
+      "owner_names": [
+        "Sunday"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_b63542a57a8f9230_section_9"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b63542a57a8f9230_section_9",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Document",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b63542a57a8f9230#section-9",
+          "page": 4,
+          "url": null,
+          "quote": "Document - Sunday - Frankie and Sheree ask Ms Lee to join you on stage to"
+        }
+      ],
+      "quote": "Document - Sunday - Frankie and Sheree ask Ms Lee to join you on stage to",
+      "confidence": 0.8,
+      "block_id": "block_eff5cb8c452f"
+    },
+    {
+      "object_id": "memory_d740ae10f5fe",
+      "type": "action_item",
+      "title": "Contact them first to let them know.",
+      "summary": "Elliott should contact them first to let them know.",
+      "owner_names": [
+        "Elliott"
+      ],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_b63542a57a8f9230_section_10"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_b63542a57a8f9230_section_10",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "General logistics",
+          "actor": "Unknown",
+          "actor_role": null,
+          "locator": "file_b63542a57a8f9230#section-10",
+          "page": 4,
+          "url": null,
+          "quote": "General logistics - Elliott will contact them first to let them know"
+        }
+      ],
+      "quote": "General logistics - Elliott will contact them first to let them know",
+      "confidence": 0.8,
+      "block_id": "block_7cfacbc57c47"
+    }
+  ]
+}

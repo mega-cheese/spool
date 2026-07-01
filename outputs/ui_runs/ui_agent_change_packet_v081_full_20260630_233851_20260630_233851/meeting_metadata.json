@@ -1,0 +1,12 @@
+{
+  "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+  "mode": "llm",
+  "pipeline": "candidates-shadow",
+  "classification": "meeting_minutes",
+  "generated_at": "2026-06-30T23:39:17.707522+00:00",
+  "meeting_date": null,
+  "location": null,
+  "present": [],
+  "absent": [],
+  "source_event_count": 18
+}

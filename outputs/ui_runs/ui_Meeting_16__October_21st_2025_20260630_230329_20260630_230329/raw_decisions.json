@@ -1,0 +1,484 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/Meeting_16__October_21st_2025_20260630_230329.pdf",
+    "decision_count": 7,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-4.1-mini",
+    "verified": true,
+    "generated_at": "2026-06-30T23:03:42.533629+00:00",
+    "validation_issue_count": 0,
+    "validation_issues": [],
+    "raw_validation_issue_count": 0
+  },
+  "decisions": [
+    {
+      "decision_id": "dec_fea385e29c",
+      "decision": "Thank you cards will be written by each person picking 4 adults, and gift cards will be emailed by Mrs Schultz; cards can be picked up tomorrow.",
+      "date": null,
+      "owner": null,
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "Thank you gifts are already taken care of.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source_message_ts": "file_b63542a57a8f9230#section-10",
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "channel_id": "file_b63542a57a8f9230",
+            "thread_ts": "file_b63542a57a8f9230",
+            "message_ts": "file_b63542a57a8f9230#section-10",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "-    Thank you cards in Mrs. Haider’s office. Sign up for which cards you are going to\n         write. Thank you gifts are all taken care of.\n             -    All of us pick 4 adults to write a card for\n             -    Mrs Schultz email gift cards\n             -    Come grab them tomorrow\n    -    Pizza debate with SJR- thank you for the support!\n    -    VYMUN on Wolf TV? Howl article?\n             -    Ann wrote one, sent to Mrs Macmillan include tomorrow\n             -    Prefers photos if possible - logo from school?\n             -    VYMUN logo and St John’s Ravencourt\n    -    Popsicle stands & slide decks for the TVs at the Alumni Centre?\n             -    Chaperone guide and extra maps at reg desk\n    -    Do we need backgrounders printed as support for committees?\n             -    Get staff to engage with backgrounders\n             -    Still print them\n             -    Mrs Haider has done 2 committees and all VYMUN junior\n             -    Mrs Boland and Mrs Haider can photocopy the rest\n    -    Westwood printing materials should arrive by Thursday\n    -    Pens should arrive this week too. Tracking here.\n    -    Junior swag bags will be assembled in AP CoGo this week.\n    -    Certificates need to be printed in advance. Template?\n    -    Tech: What dongles do we need?\n    -    ChairMUN: Do we need this?\n    -    Who are our First Responders? We should make them visible on the Yapp and at the\n         Opening Ceremonies\n             -    James, Lily, Mila, Cole, Ella, Elliott, Miller\n             -    Elliott will contact them first to let them know",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-10",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    Thank you cards in Mrs. Haider’s office. Sign up for which cards you are going to\n         write. Thank you gifts are all taken care of.\n             -    All of us pick 4 adults to write a card for\n             -    Mrs Schultz email gift cards\n             -    Come grab them tomorrow\n    -    Pizza debate with SJR- thank you for the support!\n    -    VYMUN on Wolf TV? Howl article?\n             -    Ann wrote one, sent to Mrs Macmillan include tomorrow\n             -    Prefers photos if possible - logo from school?\n             -    VYMUN logo and St John’s Ravencourt\n    -    Popsicle stands & slide decks for the TVs at the Alumni Centre?\n             -    Chaperone guide and extra maps at reg desk\n    -    Do we need backgrounders printed as support for committees?\n             -    Get staff to engage with backgrounders\n             -    Still print them\n             -    Mrs Haider has done 2 committees and all VYMUN junior\n             -    Mrs Boland and Mrs Haider can photocopy the rest\n    -    Westwood printing materials should arrive by Thursday\n    -    Pens should arrive this week too. Tracking here.\n    -    Junior swag bags will be assembled in AP CoGo this week.\n    -    Certificates need to be printed in advance. Template?\n    -    Tech: What dongles do we need?\n    -    ChairMUN: Do we need this?\n    -    Who are our First Responders? We should make them visible on the Yapp and at the\n         Opening Ceremonies\n             -    James, Lily, Mila, Cole, Ella, Elliott, Miller\n             -    Elliott will contact them first to let them know",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-10",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    Thank you cards in Mrs. Haider’s office. Sign up for which cards you are going to\n         write. Thank you gifts are all taken care of.\n             -    All of us pick 4 adults to write a card for\n             -    Mrs Schultz email gift cards\n             -    Come grab them tomorrow\n    -    Pizza debate with SJR- thank you for the support!\n    -    VYMUN on Wolf TV? Howl article?\n             -    Ann wrote one, sent to Mrs Macmillan include tomorrow\n             -    Prefers photos if possible - logo from school?\n             -    VYMUN logo and St John’s Ravencourt\n    -    Popsicle stands & slide decks for the TVs at the Alumni Centre?\n             -    Chaperone guide and extra maps at reg desk\n    -    Do we need backgrounders printed as support for committees?\n             -    Get staff to engage with backgrounders\n             -    Still print them\n             -    Mrs Haider has done 2 committees and all VYMUN junior\n             -    Mrs Boland and Mrs Haider can photocopy the rest\n    -    Westwood printing materials should arrive by Thursday\n    -    Pens should arrive this week too. Tracking here.\n    -    Junior swag bags will be assembled in AP CoGo this week.\n    -    Certificates need to be printed in advance. Template?\n    -    Tech: What dongles do we need?\n    -    ChairMUN: Do we need this?\n    -    Who are our First Responders? We should make them visible on the Yapp and at the\n         Opening Ceremonies\n             -    James, Lily, Mila, Cole, Ella, Elliott, Miller\n             -    Elliott will contact them first to let them know",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-10",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    Thank you cards in Mrs. Haider’s office. Sign up for which cards you are going to\n         write. Thank you gifts are all taken care of.\n             -    All of us pick 4 adults to write a card for\n             -    Mrs Schultz email gift cards\n             -    Come grab them tomorrow\n    -    Pizza debate with SJR- thank you for the support!\n    -    VYMUN on Wolf TV? Howl article?\n             -    Ann wrote one, sent to Mrs Macmillan include tomorrow\n             -    Prefers photos if possible - logo from school?\n             -    VYMUN logo and St John’s Ravencourt\n    -    Popsicle stands & slide decks for the TVs at the Alumni Centre?\n             -    Chaperone guide and extra maps at reg desk\n    -    Do we need backgrounders printed as support for committees?\n             -    Get staff to engage with backgrounders\n             -    Still print them\n             -    Mrs Haider has done 2 committees and all VYMUN junior\n             -    Mrs Boland and Mrs Haider can photocopy the rest\n    -    Westwood printing materials should arrive by Thursday\n    -    Pens should arrive this week too. Tracking here.\n    -    Junior swag bags will be assembled in AP CoGo this week.\n    -    Certificates need to be printed in advance. Template?\n    -    Tech: What dongles do we need?\n    -    ChairMUN: Do we need this?\n    -    Who are our First Responders? We should make them visible on the Yapp and at the\n         Opening Ceremonies\n             -    James, Lily, Mila, Cole, Ella, Elliott, Miller\n             -    Elliott will contact them first to let them know",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "file_b63542a57a8f9230#section-10"
+    },
+    {
+      "decision_id": "dec_65e1010ba8",
+      "decision": "Elliott and James will coordinate a staggered release of attendees during the break to clear the second floor first.",
+      "date": null,
+      "owner": "Elliott and James",
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [
+        {
+          "claim": "A staggered release might be advisable to get the second floor empty first.",
+          "support_level": "direct",
+          "confidence": 1.0,
+          "source_message_ts": "file_b63542a57a8f9230#section-2",
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "channel_id": "file_b63542a57a8f9230",
+            "thread_ts": "file_b63542a57a8f9230",
+            "message_ts": "file_b63542a57a8f9230#section-2",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "-    1pm: Secretariat arrival\n             -    What is our “to do” list?\n             -    Material set-up\n                       -   Separate into boxes for committee rooms\n                       -   Reg Desk\n                       -   Rearrange rooms as necessary\n             -    Don’t have access to all rooms early\n    -    3:30pm: Staff arrival\n             -    What are we tasking staff with?\n             -    Quick meeting\n             -    Set-up\n             -    Let us know if they’re missing anything\n                       -   Get some dongles and fancy paper from staples - Elliott\n    -    4:00pm: Registration opens\n             -    Who will sit at the registration desk?\n                       -   Frankie, Ann\n             -    Who is greeting Major Calvert and when do we expect him to arrive? We\n                  need to send him a final note with details re parking, time etc.\n                       -   Frankie\n                       -   Emailed him the updates and time of arrival\n    -    4:30pm-5:00pm: Opening Ceremonies\n             -    Speeches look great!\n             -    We still need to schedule a quick run-through. Should we do this on Friday\n                  afternoon?\n                       -   Before materials sorted\n             -    Ivan can man the opening ceremony presentation\n             -    No banner (logo doesn’t match)\n             -    Figure out the presentation set-up, make sure it works\n             -    Mr. Anthony intends to be there - have a seat for him close to the stage\n                       -   Both Ann and Elliott go up, Elliott says speech, Ann introduces\n                           Anthony, Elliott introduces Calvert\n             -    Elliott run land acknowledgement by Mrs Point\n    -    5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?\n             -    Yep\n    -    6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)\n             -    Achievement lounge - during last 30 min of first committee session\n    -    7:15pm-7:45pm: Break\n             -    This is designated as a break, but a stagger release might be advisable. Elliot\n                  & James can coordinate this.\n             -    Get second floor empty first",
+            "url": null
+          }
+        }
+      ],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    1pm: Secretariat arrival\n             -    What is our “to do” list?\n             -    Material set-up\n                       -   Separate into boxes for committee rooms\n                       -   Reg Desk\n                       -   Rearrange rooms as necessary\n             -    Don’t have access to all rooms early\n    -    3:30pm: Staff arrival\n             -    What are we tasking staff with?\n             -    Quick meeting\n             -    Set-up\n             -    Let us know if they’re missing anything\n                       -   Get some dongles and fancy paper from staples - Elliott\n    -    4:00pm: Registration opens\n             -    Who will sit at the registration desk?\n                       -   Frankie, Ann\n             -    Who is greeting Major Calvert and when do we expect him to arrive? We\n                  need to send him a final note with details re parking, time etc.\n                       -   Frankie\n                       -   Emailed him the updates and time of arrival\n    -    4:30pm-5:00pm: Opening Ceremonies\n             -    Speeches look great!\n             -    We still need to schedule a quick run-through. Should we do this on Friday\n                  afternoon?\n                       -   Before materials sorted\n             -    Ivan can man the opening ceremony presentation\n             -    No banner (logo doesn’t match)\n             -    Figure out the presentation set-up, make sure it works\n             -    Mr. Anthony intends to be there - have a seat for him close to the stage\n                       -   Both Ann and Elliott go up, Elliott says speech, Ann introduces\n                           Anthony, Elliott introduces Calvert\n             -    Elliott run land acknowledgement by Mrs Point\n    -    5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?\n             -    Yep\n    -    6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)\n             -    Achievement lounge - during last 30 min of first committee session\n    -    7:15pm-7:45pm: Break\n             -    This is designated as a break, but a stagger release might be advisable. Elliot\n                  & James can coordinate this.\n             -    Get second floor empty first",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    1pm: Secretariat arrival\n             -    What is our “to do” list?\n             -    Material set-up\n                       -   Separate into boxes for committee rooms\n                       -   Reg Desk\n                       -   Rearrange rooms as necessary\n             -    Don’t have access to all rooms early\n    -    3:30pm: Staff arrival\n             -    What are we tasking staff with?\n             -    Quick meeting\n             -    Set-up\n             -    Let us know if they’re missing anything\n                       -   Get some dongles and fancy paper from staples - Elliott\n    -    4:00pm: Registration opens\n             -    Who will sit at the registration desk?\n                       -   Frankie, Ann\n             -    Who is greeting Major Calvert and when do we expect him to arrive? We\n                  need to send him a final note with details re parking, time etc.\n                       -   Frankie\n                       -   Emailed him the updates and time of arrival\n    -    4:30pm-5:00pm: Opening Ceremonies\n             -    Speeches look great!\n             -    We still need to schedule a quick run-through. Should we do this on Friday\n                  afternoon?\n                       -   Before materials sorted\n             -    Ivan can man the opening ceremony presentation\n             -    No banner (logo doesn’t match)\n             -    Figure out the presentation set-up, make sure it works\n             -    Mr. Anthony intends to be there - have a seat for him close to the stage\n                       -   Both Ann and Elliott go up, Elliott says speech, Ann introduces\n                           Anthony, Elliott introduces Calvert\n             -    Elliott run land acknowledgement by Mrs Point\n    -    5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?\n             -    Yep\n    -    6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)\n             -    Achievement lounge - during last 30 min of first committee session\n    -    7:15pm-7:45pm: Break\n             -    This is designated as a break, but a stagger release might be advisable. Elliot\n                  & James can coordinate this.\n             -    Get second floor empty first",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    1pm: Secretariat arrival\n             -    What is our “to do” list?\n             -    Material set-up\n                       -   Separate into boxes for committee rooms\n                       -   Reg Desk\n                       -   Rearrange rooms as necessary\n             -    Don’t have access to all rooms early\n    -    3:30pm: Staff arrival\n             -    What are we tasking staff with?\n             -    Quick meeting\n             -    Set-up\n             -    Let us know if they’re missing anything\n                       -   Get some dongles and fancy paper from staples - Elliott\n    -    4:00pm: Registration opens\n             -    Who will sit at the registration desk?\n                       -   Frankie, Ann\n             -    Who is greeting Major Calvert and when do we expect him to arrive? We\n                  need to send him a final note with details re parking, time etc.\n                       -   Frankie\n                       -   Emailed him the updates and time of arrival\n    -    4:30pm-5:00pm: Opening Ceremonies\n             -    Speeches look great!\n             -    We still need to schedule a quick run-through. Should we do this on Friday\n                  afternoon?\n                       -   Before materials sorted\n             -    Ivan can man the opening ceremony presentation\n             -    No banner (logo doesn’t match)\n             -    Figure out the presentation set-up, make sure it works\n             -    Mr. Anthony intends to be there - have a seat for him close to the stage\n                       -   Both Ann and Elliott go up, Elliott says speech, Ann introduces\n                           Anthony, Elliott introduces Calvert\n             -    Elliott run land acknowledgement by Mrs Point\n    -    5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?\n             -    Yep\n    -    6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)\n             -    Achievement lounge - during last 30 min of first committee session\n    -    7:15pm-7:45pm: Break\n             -    This is designated as a break, but a stagger release might be advisable. Elliot\n                  & James can coordinate this.\n             -    Get second floor empty first",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "file_b63542a57a8f9230#section-2"
+    },
+    {
+      "decision_id": "dec_e3d18a670d",
+      "decision": "Frankie and Ann will sit at the registration desk; Frankie will greet Major Calvert and has emailed him updates.",
+      "date": null,
+      "owner": "Frankie and Ann",
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    1pm: Secretariat arrival\n             -    What is our “to do” list?\n             -    Material set-up\n                       -   Separate into boxes for committee rooms\n                       -   Reg Desk\n                       -   Rearrange rooms as necessary\n             -    Don’t have access to all rooms early\n    -    3:30pm: Staff arrival\n             -    What are we tasking staff with?\n             -    Quick meeting\n             -    Set-up\n             -    Let us know if they’re missing anything\n                       -   Get some dongles and fancy paper from staples - Elliott\n    -    4:00pm: Registration opens\n             -    Who will sit at the registration desk?\n                       -   Frankie, Ann\n             -    Who is greeting Major Calvert and when do we expect him to arrive? We\n                  need to send him a final note with details re parking, time etc.\n                       -   Frankie\n                       -   Emailed him the updates and time of arrival\n    -    4:30pm-5:00pm: Opening Ceremonies\n             -    Speeches look great!\n             -    We still need to schedule a quick run-through. Should we do this on Friday\n                  afternoon?\n                       -   Before materials sorted\n             -    Ivan can man the opening ceremony presentation\n             -    No banner (logo doesn’t match)\n             -    Figure out the presentation set-up, make sure it works\n             -    Mr. Anthony intends to be there - have a seat for him close to the stage\n                       -   Both Ann and Elliott go up, Elliott says speech, Ann introduces\n                           Anthony, Elliott introduces Calvert\n             -    Elliott run land acknowledgement by Mrs Point\n    -    5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?\n             -    Yep\n    -    6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)\n             -    Achievement lounge - during last 30 min of first committee session\n    -    7:15pm-7:45pm: Break\n             -    This is designated as a break, but a stagger release might be advisable. Elliot\n                  & James can coordinate this.\n             -    Get second floor empty first",
+          "url": null
+        }
+      ],
+      "supporting_sources": [],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    1pm: Secretariat arrival\n             -    What is our “to do” list?\n             -    Material set-up\n                       -   Separate into boxes for committee rooms\n                       -   Reg Desk\n                       -   Rearrange rooms as necessary\n             -    Don’t have access to all rooms early\n    -    3:30pm: Staff arrival\n             -    What are we tasking staff with?\n             -    Quick meeting\n             -    Set-up\n             -    Let us know if they’re missing anything\n                       -   Get some dongles and fancy paper from staples - Elliott\n    -    4:00pm: Registration opens\n             -    Who will sit at the registration desk?\n                       -   Frankie, Ann\n             -    Who is greeting Major Calvert and when do we expect him to arrive? We\n                  need to send him a final note with details re parking, time etc.\n                       -   Frankie\n                       -   Emailed him the updates and time of arrival\n    -    4:30pm-5:00pm: Opening Ceremonies\n             -    Speeches look great!\n             -    We still need to schedule a quick run-through. Should we do this on Friday\n                  afternoon?\n                       -   Before materials sorted\n             -    Ivan can man the opening ceremony presentation\n             -    No banner (logo doesn’t match)\n             -    Figure out the presentation set-up, make sure it works\n             -    Mr. Anthony intends to be there - have a seat for him close to the stage\n                       -   Both Ann and Elliott go up, Elliott says speech, Ann introduces\n                           Anthony, Elliott introduces Calvert\n             -    Elliott run land acknowledgement by Mrs Point\n    -    5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?\n             -    Yep\n    -    6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)\n             -    Achievement lounge - during last 30 min of first committee session\n    -    7:15pm-7:45pm: Break\n             -    This is designated as a break, but a stagger release might be advisable. Elliot\n                  & James can coordinate this.\n             -    Get second floor empty first",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "file_b63542a57a8f9230#section-2"
+    },
+    {
+      "decision_id": "dec_f8c31e1a7c",
+      "decision": "Opening ceremonies speeches will be staffed by Ivan manning the presentation, Elliott saying the speech and introducing guests, including Anthony and Calvert; Elliott will run the land acknowledgement by Mrs. Point.",
+      "date": null,
+      "owner": "Ivan and Elliott",
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    1pm: Secretariat arrival\n             -    What is our “to do” list?\n             -    Material set-up\n                       -   Separate into boxes for committee rooms\n                       -   Reg Desk\n                       -   Rearrange rooms as necessary\n             -    Don’t have access to all rooms early\n    -    3:30pm: Staff arrival\n             -    What are we tasking staff with?\n             -    Quick meeting\n             -    Set-up\n             -    Let us know if they’re missing anything\n                       -   Get some dongles and fancy paper from staples - Elliott\n    -    4:00pm: Registration opens\n             -    Who will sit at the registration desk?\n                       -   Frankie, Ann\n             -    Who is greeting Major Calvert and when do we expect him to arrive? We\n                  need to send him a final note with details re parking, time etc.\n                       -   Frankie\n                       -   Emailed him the updates and time of arrival\n    -    4:30pm-5:00pm: Opening Ceremonies\n             -    Speeches look great!\n             -    We still need to schedule a quick run-through. Should we do this on Friday\n                  afternoon?\n                       -   Before materials sorted\n             -    Ivan can man the opening ceremony presentation\n             -    No banner (logo doesn’t match)\n             -    Figure out the presentation set-up, make sure it works\n             -    Mr. Anthony intends to be there - have a seat for him close to the stage\n                       -   Both Ann and Elliott go up, Elliott says speech, Ann introduces\n                           Anthony, Elliott introduces Calvert\n             -    Elliott run land acknowledgement by Mrs Point\n    -    5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?\n             -    Yep\n    -    6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)\n             -    Achievement lounge - during last 30 min of first committee session\n    -    7:15pm-7:45pm: Break\n             -    This is designated as a break, but a stagger release might be advisable. Elliot\n                  & James can coordinate this.\n             -    Get second floor empty first",
+          "url": null
+        }
+      ],
+      "supporting_sources": [],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-2",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    1pm: Secretariat arrival\n             -    What is our “to do” list?\n             -    Material set-up\n                       -   Separate into boxes for committee rooms\n                       -   Reg Desk\n                       -   Rearrange rooms as necessary\n             -    Don’t have access to all rooms early\n    -    3:30pm: Staff arrival\n             -    What are we tasking staff with?\n             -    Quick meeting\n             -    Set-up\n             -    Let us know if they’re missing anything\n                       -   Get some dongles and fancy paper from staples - Elliott\n    -    4:00pm: Registration opens\n             -    Who will sit at the registration desk?\n                       -   Frankie, Ann\n             -    Who is greeting Major Calvert and when do we expect him to arrive? We\n                  need to send him a final note with details re parking, time etc.\n                       -   Frankie\n                       -   Emailed him the updates and time of arrival\n    -    4:30pm-5:00pm: Opening Ceremonies\n             -    Speeches look great!\n             -    We still need to schedule a quick run-through. Should we do this on Friday\n                  afternoon?\n                       -   Before materials sorted\n             -    Ivan can man the opening ceremony presentation\n             -    No banner (logo doesn’t match)\n             -    Figure out the presentation set-up, make sure it works\n             -    Mr. Anthony intends to be there - have a seat for him close to the stage\n                       -   Both Ann and Elliott go up, Elliott says speech, Ann introduces\n                           Anthony, Elliott introduces Calvert\n             -    Elliott run land acknowledgement by Mrs Point\n    -    5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?\n             -    Yep\n    -    6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)\n             -    Achievement lounge - during last 30 min of first committee session\n    -    7:15pm-7:45pm: Break\n             -    This is designated as a break, but a stagger release might be advisable. Elliot\n                  & James can coordinate this.\n             -    Get second floor empty first",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "file_b63542a57a8f9230#section-2"
+    },
+    {
+      "decision_id": "dec_7db67a7eb6",
+      "decision": "ChairMUN will be used as a backup with last year's sheet reused; staff will be sent notes with the tiered approach.",
+      "date": null,
+      "owner": "Elliott",
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [
+        {
+          "action": "Send note to staff with the tiered approach for ChairMUN",
+          "owner": null,
+          "due_date": null,
+          "due_text": null,
+          "source_message_ts": "file_b63542a57a8f9230#section-7",
+          "source": {
+            "source_type": "uploaded_document",
+            "workspace": "local_upload",
+            "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "channel_id": "file_b63542a57a8f9230",
+            "thread_ts": "file_b63542a57a8f9230",
+            "message_ts": "file_b63542a57a8f9230#section-7",
+            "speaker": "Unknown",
+            "speaker_role": null,
+            "quote": "-    Mrs Haider would like to see the speeches\n                      -    Plan for escorting students from ceremony to classrooms\n                      -    Signs put up so they don’t get lost\n                      -    Include in opening comments\n                      -    Student to do a welcome?\n             -    Chaperone meeting in SS Staff room\n             -    Food confirmed with Chef Stacey and Dominos?\n                      -    Chef Stacey said she would give Mrs Haider the key on friday\n                      -    Nourish bowls for adults\n                      -    Snacks ordered for the day\n                      -    Evangeline has receipts from dominos\n             -    Circulation plan during committee sessions\n             -    First responder on site?\n                      -    Sign-up is out\n             -    Game at break time.\n             -    How many gavels do we need? Let’s leave these at school before the\n                  weekend.\n             -    ChairMUN\n                      -    Backup - Elliott made sheet last year that can be reused\n                      -    Send note to staff with that tiered approach\n             -    Closing Ceremonies\n                      -    Hugo - send Mrs Haider a draft\n                      -    Awards\n             -    Swag bags tomorrow during compgov (1B)\n             -    Joah doing closing video\n                      -    Fit it into closing\n    -    Elliott meet Mrs Haider first block",
+            "url": null
+          }
+        }
+      ],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    Mrs Haider would like to see the speeches\n                      -    Plan for escorting students from ceremony to classrooms\n                      -    Signs put up so they don’t get lost\n                      -    Include in opening comments\n                      -    Student to do a welcome?\n             -    Chaperone meeting in SS Staff room\n             -    Food confirmed with Chef Stacey and Dominos?\n                      -    Chef Stacey said she would give Mrs Haider the key on friday\n                      -    Nourish bowls for adults\n                      -    Snacks ordered for the day\n                      -    Evangeline has receipts from dominos\n             -    Circulation plan during committee sessions\n             -    First responder on site?\n                      -    Sign-up is out\n             -    Game at break time.\n             -    How many gavels do we need? Let’s leave these at school before the\n                  weekend.\n             -    ChairMUN\n                      -    Backup - Elliott made sheet last year that can be reused\n                      -    Send note to staff with that tiered approach\n             -    Closing Ceremonies\n                      -    Hugo - send Mrs Haider a draft\n                      -    Awards\n             -    Swag bags tomorrow during compgov (1B)\n             -    Joah doing closing video\n                      -    Fit it into closing\n    -    Elliott meet Mrs Haider first block",
+          "url": null
+        }
+      ],
+      "supporting_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    Mrs Haider would like to see the speeches\n                      -    Plan for escorting students from ceremony to classrooms\n                      -    Signs put up so they don’t get lost\n                      -    Include in opening comments\n                      -    Student to do a welcome?\n             -    Chaperone meeting in SS Staff room\n             -    Food confirmed with Chef Stacey and Dominos?\n                      -    Chef Stacey said she would give Mrs Haider the key on friday\n                      -    Nourish bowls for adults\n                      -    Snacks ordered for the day\n                      -    Evangeline has receipts from dominos\n             -    Circulation plan during committee sessions\n             -    First responder on site?\n                      -    Sign-up is out\n             -    Game at break time.\n             -    How many gavels do we need? Let’s leave these at school before the\n                  weekend.\n             -    ChairMUN\n                      -    Backup - Elliott made sheet last year that can be reused\n                      -    Send note to staff with that tiered approach\n             -    Closing Ceremonies\n                      -    Hugo - send Mrs Haider a draft\n                      -    Awards\n             -    Swag bags tomorrow during compgov (1B)\n             -    Joah doing closing video\n                      -    Fit it into closing\n    -    Elliott meet Mrs Haider first block",
+          "url": null
+        }
+      ],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-7",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    Mrs Haider would like to see the speeches\n                      -    Plan for escorting students from ceremony to classrooms\n                      -    Signs put up so they don’t get lost\n                      -    Include in opening comments\n                      -    Student to do a welcome?\n             -    Chaperone meeting in SS Staff room\n             -    Food confirmed with Chef Stacey and Dominos?\n                      -    Chef Stacey said she would give Mrs Haider the key on friday\n                      -    Nourish bowls for adults\n                      -    Snacks ordered for the day\n                      -    Evangeline has receipts from dominos\n             -    Circulation plan during committee sessions\n             -    First responder on site?\n                      -    Sign-up is out\n             -    Game at break time.\n             -    How many gavels do we need? Let’s leave these at school before the\n                  weekend.\n             -    ChairMUN\n                      -    Backup - Elliott made sheet last year that can be reused\n                      -    Send note to staff with that tiered approach\n             -    Closing Ceremonies\n                      -    Hugo - send Mrs Haider a draft\n                      -    Awards\n             -    Swag bags tomorrow during compgov (1B)\n             -    Joah doing closing video\n                      -    Fit it into closing\n    -    Elliott meet Mrs Haider first block",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "file_b63542a57a8f9230#section-7"
+    },
+    {
+      "decision_id": "dec_f6037b9e8b",
+      "decision": "Frankie will give out the Cynthia Lee Memorial Award during closing ceremonies; Sheree will introduce speech winners with an additional slide about responses.",
+      "date": null,
+      "owner": "Frankie and Sheree",
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-8",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    12:30pm-2:00pm: Lunch & wall re-set. Rehearsal for closing.\n             -    How are we thanking Mr. Husband?\n             -    Do we want Ms. Lee to stand on stage to give the speech award?\n             -    Nothing for Mr Anthony\n             -    Flowers for Ms Lee\n             -    Mrs Haider shop for Mrs Husband\n             -    Elliott send email to Coronation Recognition asking for a duplicate of the\n                  Tracey Lee - send it to them when ready\n    -    2:00pm-3:15pm: Closing Ceremonies\n             -    Frankie to give out Cynthia Lee Memorial Award\n                      -    New or young delegation that joins us\n                      -    Only new group is St Johns Ravenscourt\n                      -    Chaperone goes way back with Ms Lee\n                      -    Past: LFA, Urban Academy,\n                               -    Work into speech, happy to see previous institutions returning\n             -    Sheree to introduce speech winners\n                      -    Add slide\n                      -    Mention how we were “overwhelmed with responses” - even if we\n                           weren’t :)",
+          "url": null
+        }
+      ],
+      "supporting_sources": [],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-8",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    12:30pm-2:00pm: Lunch & wall re-set. Rehearsal for closing.\n             -    How are we thanking Mr. Husband?\n             -    Do we want Ms. Lee to stand on stage to give the speech award?\n             -    Nothing for Mr Anthony\n             -    Flowers for Ms Lee\n             -    Mrs Haider shop for Mrs Husband\n             -    Elliott send email to Coronation Recognition asking for a duplicate of the\n                  Tracey Lee - send it to them when ready\n    -    2:00pm-3:15pm: Closing Ceremonies\n             -    Frankie to give out Cynthia Lee Memorial Award\n                      -    New or young delegation that joins us\n                      -    Only new group is St Johns Ravenscourt\n                      -    Chaperone goes way back with Ms Lee\n                      -    Past: LFA, Urban Academy,\n                               -    Work into speech, happy to see previous institutions returning\n             -    Sheree to introduce speech winners\n                      -    Add slide\n                      -    Mention how we were “overwhelmed with responses” - even if we\n                           weren’t :)",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "file_b63542a57a8f9230#section-8"
+    },
+    {
+      "decision_id": "dec_47bac5cf26",
+      "decision": "Staff will store 27 tablecloths and 10 WPGA tables in one classroom for pickup the next day, coordinated by Owen with maintenance and UBC staff.",
+      "date": null,
+      "owner": "Owen",
+      "owner_role": null,
+      "participants": [
+        "Unknown"
+      ],
+      "status": "candidate",
+      "confidence": 0.86,
+      "effective_date": null,
+      "reasoning": [],
+      "objections": [],
+      "assumptions": [],
+      "risks": [],
+      "tradeoffs": [],
+      "timelines": [],
+      "deadlines": [],
+      "action_items": [],
+      "revisit_date": null,
+      "revisit_trigger": null,
+      "decision_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-9",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    Ann will mention schools travelling and give them a shout out\n                      -    Maybe move to opening ceremony\n             -    Mr. Husband, have we told him when to come\n                      -    Frankie\n                      -    Sunday - Frankie and Sheree ask Ms Lee to join you on stage to\n                           present awards\n                                -   She can be the handshaker\n                      -    Plaques after speeches? - have them sitting up front\n                                -   One standing to side while other speaks\n             -    No photo stand but still awards table\n             -    Secretariat are the last to leave. We have to clean up the space, collect lost\n                  items etc.\n                      -    Get staff to make sure their committee rooms are clean\n                      -    Make note of what we moved and move it back\n    -    Tables need to be stored in a classroom for pick up the next day.\n             -    Owen coordinated with the maintenance team\n             -    Pack up 10 WPGA tables and store in one of the classrooms\n             -    Being dropped off Friday - UBC Staff know\n             -    27 tablecloths should cover it",
+          "url": null
+        }
+      ],
+      "supporting_sources": [],
+      "all_sources": [
+        {
+          "source_type": "uploaded_document",
+          "workspace": "local_upload",
+          "channel": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "channel_id": "file_b63542a57a8f9230",
+          "thread_ts": "file_b63542a57a8f9230",
+          "message_ts": "file_b63542a57a8f9230#section-9",
+          "speaker": "Unknown",
+          "speaker_role": null,
+          "quote": "-    Ann will mention schools travelling and give them a shout out\n                      -    Maybe move to opening ceremony\n             -    Mr. Husband, have we told him when to come\n                      -    Frankie\n                      -    Sunday - Frankie and Sheree ask Ms Lee to join you on stage to\n                           present awards\n                                -   She can be the handshaker\n                      -    Plaques after speeches? - have them sitting up front\n                                -   One standing to side while other speaks\n             -    No photo stand but still awards table\n             -    Secretariat are the last to leave. We have to clean up the space, collect lost\n                  items etc.\n                      -    Get staff to make sure their committee rooms are clean\n                      -    Make note of what we moved and move it back\n    -    Tables need to be stored in a classroom for pick up the next day.\n             -    Owen coordinated with the maintenance team\n             -    Pack up 10 WPGA tables and store in one of the classrooms\n             -    Being dropped off Friday - UBC Staff know\n             -    27 tablecloths should cover it",
+          "url": null
+        }
+      ],
+      "decision_source_message_ts": "file_b63542a57a8f9230#section-9"
+    }
+  ]
+}

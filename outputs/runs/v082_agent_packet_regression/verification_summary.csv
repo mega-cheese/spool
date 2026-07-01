@@ -1,0 +1,2 @@
+scenario_type,scenario_name,variant,expected_count,actual_count,count_pass,invariant_pass,verdict,failure_count,review_item_count,review_reasons
+agent_change_packet,agent_change_packet_v081,agent_packet,0,1,False,True,FAIL,0,8,extraction_warning

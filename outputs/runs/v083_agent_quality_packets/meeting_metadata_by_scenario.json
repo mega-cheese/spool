@@ -1,0 +1,1 @@
+{"agent_change_packet_v081": {"input_file": "data/agent_change_packet_v081.md", "mode": "heuristic", "pipeline": "candidates-shadow", "classification": "agent_change_packet", "generated_at": "2026-07-01T05:25:02.632219+00:00", "meeting_date": null, "location": null, "present": [], "absent": [], "source_event_count": 12}}

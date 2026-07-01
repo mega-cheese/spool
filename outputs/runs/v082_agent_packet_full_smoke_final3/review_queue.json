@@ -1,0 +1,893 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "generated_at": "2026-07-01T00:07:10.584045+00:00",
+    "review_item_count": 28
+  },
+  "items": [
+    {
+      "review_id": "review_27f197bad0d7",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim lacks deterministic support.",
+      "candidate_decision": "Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale.",
+      "reason": "unsupported_claim",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5",
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        },
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "mark_needs_review",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_0ebe87064d32",
+        "claim_48c304005bfa"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_44f3904353f9",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim lacks deterministic support.",
+      "candidate_decision": "Append actions to review_actions.json.",
+      "reason": "unsupported_claim",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Append actions to review_actions.json",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_9e9edbd4a77e"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_219ea18e7bb6",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim lacks deterministic support.",
+      "candidate_decision": "Preserve source evidence through edits.",
+      "reason": "unsupported_claim",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Preserve source evidence through edits",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_c2b712cd22a3"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_8bc14fa77df9",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim lacks deterministic support.",
+      "candidate_decision": "Prevent silent approval of unsupported/contradicted memory.",
+      "reason": "unsupported_claim",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Prevent silent approval of unsupported/contradicted memory",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_d41aa401f323"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_e8c4b81a361b",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim lacks deterministic support.",
+      "candidate_decision": "Avoid duplicate approved/rejected entries by memory_id.",
+      "reason": "unsupported_claim",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Avoid duplicate approved/rejected entries by memory_id",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_ba8546106cb6"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_f871d86ca297",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "candidate_decision": "Unit tests passed with 212 tests.",
+      "reason": "extraction_warning",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "PASS, 212 tests",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_a2e5b6b7a18a"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_bbb75489b486",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "candidate_decision": "venv/bin/python -m unittest discover -s tests: PASS.",
+      "reason": "extraction_warning",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "venv/bin/python -m unittest discover -s tests: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_8aa39751d567"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_85a3442f8ba3",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "candidate_decision": "meeting_minutes heuristic: PASS.",
+      "reason": "extraction_warning",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "meeting_minutes heuristic: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_7ffa4b3805bf"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_fd2aae1dac34",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "candidate_decision": "meeting_minutes LLM: PASS.",
+      "reason": "extraction_warning",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "meeting_minutes LLM: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_e62a70cd1157"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_bd67aa3012c1",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "candidate_decision": "docs LLM: PASS.",
+      "reason": "extraction_warning",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "docs LLM: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_afbc3eb90283"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_07eb3063527d",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "candidate_decision": "review LLM: PASS.",
+      "reason": "extraction_warning",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "review LLM: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_5c0660a2753a"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_b4d45993c94d",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "candidate_decision": "conflict LLM: PASS.",
+      "reason": "extraction_warning",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "conflict LLM: PASS",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_444d8570d10a"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_2800637fd2ad",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "candidate_decision": "Created a fresh Meeting #12 run.",
+      "reason": "extraction_warning",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Created a fresh Meeting #12 run.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_69b51fe2b9b7"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_b6a2d8743487",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "candidate_decision": "Approved one commitment into approved_memory.json.",
+      "reason": "extraction_warning",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Approved one commitment into approved_memory.json.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_1863a233f515"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_294512d33292",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "candidate_decision": "Rejected one candidate into rejected_memory.json.",
+      "reason": "extraction_warning",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Rejected one candidate into rejected_memory.json.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_2f7878433fdd"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_d2c6d620cd09",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "candidate_decision": "Edited one weak item while preserving source quote/evidence.",
+      "reason": "extraction_warning",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Edited one weak item while preserving source quote/evidence.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_58936ce61782"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_4badf97694ee",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "candidate_decision": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state.",
+      "reason": "extraction_warning",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state.",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_de117b389bc4"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_f3bbb6539330",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim is stated in the packet but lacks independent artifact evidence.",
+      "candidate_decision": "Meeting minutes extraction warning",
+      "reason": "extraction_warning",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "---",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_d2bb40c4d372"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_a57b2ad459d4",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim lacks deterministic support.",
+      "candidate_decision": "Source evidence must be preserved through edits.",
+      "reason": "unsupported_claim",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Source evidence must be preserved through edits.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_fc34ffa2515b"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_3afe2b05f2ad",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim lacks deterministic support.",
+      "candidate_decision": "Review actions are append-only in review_actions.json.",
+      "reason": "unsupported_claim",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Review actions are append-only in `review_actions.json`.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_b468ce8fc400"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_d4eab17c9027",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim lacks deterministic support.",
+      "candidate_decision": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "reason": "unsupported_claim",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Duplicate handling by `memory_id` could incorrectly overwrite edited objects.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_17b98ec05a64"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_f72820a3139a",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim lacks deterministic support.",
+      "candidate_decision": "Should Streamlit expose approve/reject/edit actions?",
+      "reason": "unsupported_claim",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should Streamlit expose approve/reject/edit actions?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_db604a35da30"
+      ],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_01685bf742a9",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Possible agent scope drift",
+      "summary": "Possible out-of-scope addition mentions database.",
+      "candidate_decision": "Possible agent scope drift",
+      "reason": "extraction_warning",
+      "recommended_action": "Inspect the diff for out-of-scope additions.",
+      "source_event_ids": [],
+      "sources": [],
+      "related_candidate_ids": [],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_d9cbc3c0cfe0",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent audit risk needs review",
+      "summary": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "candidate_decision": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "reason": "extraction_warning",
+      "recommended_action": "Review whether this risk should be tracked or mitigated.",
+      "source_event_ids": [],
+      "sources": [],
+      "related_candidate_ids": [],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_6b7c0fd68b5a",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent audit risk needs review",
+      "summary": "Edits could accidentally allow source evidence to be removed.",
+      "candidate_decision": "Edits could accidentally allow source evidence to be removed.",
+      "reason": "extraction_warning",
+      "recommended_action": "Review whether this risk should be tracked or mitigated.",
+      "source_event_ids": [],
+      "sources": [],
+      "related_candidate_ids": [],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_78a130ae5a05",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent audit risk needs review",
+      "summary": "memory_state_debug.json could diverge from actual approved/rejected state.",
+      "candidate_decision": "memory_state_debug.json could diverge from actual approved/rejected state.",
+      "reason": "extraction_warning",
+      "recommended_action": "Review whether this risk should be tracked or mitigated.",
+      "source_event_ids": [],
+      "sources": [],
+      "related_candidate_ids": [],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_724d4e6c96b7",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent audit risk needs review",
+      "summary": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "candidate_decision": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "reason": "extraction_warning",
+      "recommended_action": "Review whether this risk should be tracked or mitigated.",
+      "source_event_ids": [],
+      "sources": [],
+      "related_candidate_ids": [],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    },
+    {
+      "review_id": "review_4a2863d8d835",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent audit risk needs review",
+      "summary": "CLI patch parsing could accept unsafe or invalid fields.",
+      "candidate_decision": "CLI patch parsing could accept unsafe or invalid fields.",
+      "reason": "extraction_warning",
+      "recommended_action": "Review whether this risk should be tracked or mitigated.",
+      "source_event_ids": [],
+      "sources": [],
+      "related_candidate_ids": [],
+      "created_at": "2026-07-01T00:07:10.584045+00:00"
+    }
+  ]
+}

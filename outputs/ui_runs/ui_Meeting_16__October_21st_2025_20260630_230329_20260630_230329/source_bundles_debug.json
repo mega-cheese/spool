@@ -1,0 +1,3225 @@
+[
+  {
+    "bundle_id": "document_local_upload_file_b63542a57a8f9230",
+    "bundle_type": "document",
+    "source_types": [
+      "uploaded_document"
+    ],
+    "root_id": "file_b63542a57a8f9230",
+    "title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+    "time_range": {
+      "start": null,
+      "end": "2026-06-30T23:03:29.789307+00:00"
+    },
+    "events": [
+      {
+        "event_id": "uploaded_document_file_b63542a57a8f9230_section_1",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b63542a57a8f9230#section-1",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b63542a57a8f9230",
+          "name": "Meeting_16__October_21st_2025_20260630_230329.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b63542a57a8f9230",
+          "section_heading": "Document"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T23:03:29.789307+00:00",
+        "content": {
+          "text": "October 21st, 2025\nwww.wpga.ca/lhaider\n7pm\n\nThis is our last meeting. Hooray! We are going to run through the entire plan tonight. Thank\nyou in advance for your patience."
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b63542a57a8f9230#section-1",
+          "quote": "October 21st, 2025\nwww.wpga.ca/lhaider\n7pm\n\nThis is our last meeting. Hooray! We are going to run through the entire plan tonight. Thank\nyou in advance for your patience.",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Document",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "Document",
+            "text": "October 21st, 2025\nwww.wpga.ca/lhaider\n7pm\n\nThis is our last meeting. Hooray! We are going to run through the entire plan tonight. Thank\nyou in advance for your patience.",
+            "lines": [
+              {
+                "text": "October 21st, 2025",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "October 21st, 2025",
+                "checkbox": false
+              },
+              {
+                "text": "www.wpga.ca/lhaider",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "www.wpga.ca/lhaider",
+                "checkbox": false
+              },
+              {
+                "text": "7pm",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "7pm",
+                "checkbox": false
+              },
+              {
+                "text": "This is our last meeting. Hooray! We are going to run through the entire plan tonight. Thank",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "This is our last meeting. Hooray! We are going to run through the entire plan tonight. Thank",
+                "checkbox": false
+              },
+              {
+                "text": "you in advance for your patience.",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "you in advance for your patience.",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "October 21st, 2025",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "October 21st, 2025",
+              "checkbox": false
+            },
+            {
+              "text": "www.wpga.ca/lhaider",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "www.wpga.ca/lhaider",
+              "checkbox": false
+            },
+            {
+              "text": "7pm",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "7pm",
+              "checkbox": false
+            },
+            {
+              "text": "This is our last meeting. Hooray! We are going to run through the entire plan tonight. Thank",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "This is our last meeting. Hooray! We are going to run through the entire plan tonight. Thank",
+              "checkbox": false
+            },
+            {
+              "text": "you in advance for your patience.",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "you in advance for your patience.",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b63542a57a8f9230",
+            "title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "updated_at": "2026-06-30T23:03:29.789307+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b63542a57a8f9230_section_2",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b63542a57a8f9230#section-2",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b63542a57a8f9230",
+          "name": "Meeting_16__October_21st_2025_20260630_230329.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b63542a57a8f9230",
+          "section_heading": "Friday"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T23:03:29.789307+00:00",
+        "content": {
+          "text": "-    1pm: Secretariat arrival\n             -    What is our “to do” list?\n             -    Material set-up\n                       -   Separate into boxes for committee rooms\n                       -   Reg Desk\n                       -   Rearrange rooms as necessary\n             -    Don’t have access to all rooms early\n    -    3:30pm: Staff arrival\n             -    What are we tasking staff with?\n             -    Quick meeting\n             -    Set-up\n             -    Let us know if they’re missing anything\n                       -   Get some dongles and fancy paper from staples - Elliott\n    -    4:00pm: Registration opens\n             -    Who will sit at the registration desk?\n                       -   Frankie, Ann\n             -    Who is greeting Major Calvert and when do we expect him to arrive? We\n                  need to send him a final note with details re parking, time etc.\n                       -   Frankie\n                       -   Emailed him the updates and time of arrival\n    -    4:30pm-5:00pm: Opening Ceremonies\n             -    Speeches look great!\n             -    We still need to schedule a quick run-through. Should we do this on Friday\n                  afternoon?\n                       -   Before materials sorted\n             -    Ivan can man the opening ceremony presentation\n             -    No banner (logo doesn’t match)\n             -    Figure out the presentation set-up, make sure it works\n             -    Mr. Anthony intends to be there - have a seat for him close to the stage\n                       -   Both Ann and Elliott go up, Elliott says speech, Ann introduces\n                           Anthony, Elliott introduces Calvert\n             -    Elliott run land acknowledgement by Mrs Point\n    -    5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?\n             -    Yep\n    -    6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)\n             -    Achievement lounge - during last 30 min of first committee session\n    -    7:15pm-7:45pm: Break\n             -    This is designated as a break, but a stagger release might be advisable. Elliot\n                  & James can coordinate this.\n             -    Get second floor empty first"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b63542a57a8f9230#section-2",
+          "quote": "-    1pm: Secretariat arrival\n             -    What is our “to do” list?\n             -    Material set-up\n                       -   Separate into boxes for committee rooms\n                       -   Reg Desk\n                       -   Rearrange rooms as necessary\n             -    Don’t have access to all rooms early\n    -    3:30pm: Staff arrival\n             -    What are we tasking staff with?\n             -    Quick meeting\n             -    Set-up\n             -    Let us know if they’re missing anything\n                       -   Get some dongles and fancy paper from staples - Elliott\n    -    4:00pm: Registration opens\n             -    Who will sit at the registration desk?\n                       -   Frankie, Ann\n             -    Who is greeting Major Calvert and when do we expect him to arrive? We\n                  need to send him a final note with details re parking, time etc.\n                       -   Frankie\n                       -   Emailed him the updates and time of arrival\n    -    4:30pm-5:00pm: Opening Ceremonies\n             -    Speeches look great!\n             -    We still need to schedule a quick run-through. Should we do this on Friday\n                  afternoon?\n                       -   Before materials sorted\n             -    Ivan can man the opening ceremony presentation\n             -    No banner (logo doesn’t match)\n             -    Figure out the presentation set-up, make sure it works\n             -    Mr. Anthony intends to be there - have a seat for him close to the stage\n                       -   Both Ann and Elliott go up, Elliott says speech, Ann introduces\n                           Anthony, Elliott introduces Calvert\n             -    Elliott run land acknowledgement by Mrs Point\n    -    5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?\n             -    Yep\n    -    6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)\n             -    Achievement lounge - during last 30 min of first committee session\n    -    7:15pm-7:45pm: Break\n             -    This is designated as a break, but a stagger release might be advisable. Elliot\n                  & James can coordinate this.\n             -    Get second floor empty first",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Friday",
+          "page": 1
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "Friday",
+            "text": "-    1pm: Secretariat arrival\n             -    What is our “to do” list?\n             -    Material set-up\n                       -   Separate into boxes for committee rooms\n                       -   Reg Desk\n                       -   Rearrange rooms as necessary\n             -    Don’t have access to all rooms early\n    -    3:30pm: Staff arrival\n             -    What are we tasking staff with?\n             -    Quick meeting\n             -    Set-up\n             -    Let us know if they’re missing anything\n                       -   Get some dongles and fancy paper from staples - Elliott\n    -    4:00pm: Registration opens\n             -    Who will sit at the registration desk?\n                       -   Frankie, Ann\n             -    Who is greeting Major Calvert and when do we expect him to arrive? We\n                  need to send him a final note with details re parking, time etc.\n                       -   Frankie\n                       -   Emailed him the updates and time of arrival\n    -    4:30pm-5:00pm: Opening Ceremonies\n             -    Speeches look great!\n             -    We still need to schedule a quick run-through. Should we do this on Friday\n                  afternoon?\n                       -   Before materials sorted\n             -    Ivan can man the opening ceremony presentation\n             -    No banner (logo doesn’t match)\n             -    Figure out the presentation set-up, make sure it works\n             -    Mr. Anthony intends to be there - have a seat for him close to the stage\n                       -   Both Ann and Elliott go up, Elliott says speech, Ann introduces\n                           Anthony, Elliott introduces Calvert\n             -    Elliott run land acknowledgement by Mrs Point\n    -    5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?\n             -    Yep\n    -    6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)\n             -    Achievement lounge - during last 30 min of first committee session\n    -    7:15pm-7:45pm: Break\n             -    This is designated as a break, but a stagger release might be advisable. Elliot\n                  & James can coordinate this.\n             -    Get second floor empty first",
+            "lines": [
+              {
+                "text": "-    1pm: Secretariat arrival",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "1pm: Secretariat arrival",
+                "checkbox": false
+              },
+              {
+                "text": "-    What is our “to do” list?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "What is our “to do” list?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Material set-up",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Material set-up",
+                "checkbox": false
+              },
+              {
+                "text": "-   Separate into boxes for committee rooms",
+                "indent": 23,
+                "bullet_marker": "-",
+                "body": "Separate into boxes for committee rooms",
+                "checkbox": false
+              },
+              {
+                "text": "-   Reg Desk",
+                "indent": 23,
+                "bullet_marker": "-",
+                "body": "Reg Desk",
+                "checkbox": false
+              },
+              {
+                "text": "-   Rearrange rooms as necessary",
+                "indent": 23,
+                "bullet_marker": "-",
+                "body": "Rearrange rooms as necessary",
+                "checkbox": false
+              },
+              {
+                "text": "-    Don’t have access to all rooms early",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Don’t have access to all rooms early",
+                "checkbox": false
+              },
+              {
+                "text": "-    3:30pm: Staff arrival",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "3:30pm: Staff arrival",
+                "checkbox": false
+              },
+              {
+                "text": "-    What are we tasking staff with?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "What are we tasking staff with?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Quick meeting",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Quick meeting",
+                "checkbox": false
+              },
+              {
+                "text": "-    Set-up",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Set-up",
+                "checkbox": false
+              },
+              {
+                "text": "-    Let us know if they’re missing anything",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Let us know if they’re missing anything",
+                "checkbox": false
+              },
+              {
+                "text": "-   Get some dongles and fancy paper from staples - Elliott",
+                "indent": 23,
+                "bullet_marker": "-",
+                "body": "Get some dongles and fancy paper from staples - Elliott",
+                "checkbox": false
+              },
+              {
+                "text": "-    4:00pm: Registration opens",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "4:00pm: Registration opens",
+                "checkbox": false
+              },
+              {
+                "text": "-    Who will sit at the registration desk?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Who will sit at the registration desk?",
+                "checkbox": false
+              },
+              {
+                "text": "-   Frankie, Ann",
+                "indent": 23,
+                "bullet_marker": "-",
+                "body": "Frankie, Ann",
+                "checkbox": false
+              },
+              {
+                "text": "-    Who is greeting Major Calvert and when do we expect him to arrive? We",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Who is greeting Major Calvert and when do we expect him to arrive? We",
+                "checkbox": false
+              },
+              {
+                "text": "need to send him a final note with details re parking, time etc.",
+                "indent": 18,
+                "bullet_marker": null,
+                "body": "need to send him a final note with details re parking, time etc.",
+                "checkbox": false
+              },
+              {
+                "text": "-   Frankie",
+                "indent": 23,
+                "bullet_marker": "-",
+                "body": "Frankie",
+                "checkbox": false
+              },
+              {
+                "text": "-   Emailed him the updates and time of arrival",
+                "indent": 23,
+                "bullet_marker": "-",
+                "body": "Emailed him the updates and time of arrival",
+                "checkbox": false
+              },
+              {
+                "text": "-    4:30pm-5:00pm: Opening Ceremonies",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "4:30pm-5:00pm: Opening Ceremonies",
+                "checkbox": false
+              },
+              {
+                "text": "-    Speeches look great!",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Speeches look great!",
+                "checkbox": false
+              },
+              {
+                "text": "-    We still need to schedule a quick run-through. Should we do this on Friday",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "We still need to schedule a quick run-through. Should we do this on Friday",
+                "checkbox": false
+              },
+              {
+                "text": "afternoon?",
+                "indent": 18,
+                "bullet_marker": null,
+                "body": "afternoon?",
+                "checkbox": false
+              },
+              {
+                "text": "-   Before materials sorted",
+                "indent": 23,
+                "bullet_marker": "-",
+                "body": "Before materials sorted",
+                "checkbox": false
+              },
+              {
+                "text": "-    Ivan can man the opening ceremony presentation",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Ivan can man the opening ceremony presentation",
+                "checkbox": false
+              },
+              {
+                "text": "-    No banner (logo doesn’t match)",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "No banner (logo doesn’t match)",
+                "checkbox": false
+              },
+              {
+                "text": "-    Figure out the presentation set-up, make sure it works",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Figure out the presentation set-up, make sure it works",
+                "checkbox": false
+              },
+              {
+                "text": "-    Mr. Anthony intends to be there - have a seat for him close to the stage",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Mr. Anthony intends to be there - have a seat for him close to the stage",
+                "checkbox": false
+              },
+              {
+                "text": "-   Both Ann and Elliott go up, Elliott says speech, Ann introduces",
+                "indent": 23,
+                "bullet_marker": "-",
+                "body": "Both Ann and Elliott go up, Elliott says speech, Ann introduces",
+                "checkbox": false
+              },
+              {
+                "text": "Anthony, Elliott introduces Calvert",
+                "indent": 27,
+                "bullet_marker": null,
+                "body": "Anthony, Elliott introduces Calvert",
+                "checkbox": false
+              },
+              {
+                "text": "-    Elliott run land acknowledgement by Mrs Point",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Elliott run land acknowledgement by Mrs Point",
+                "checkbox": false
+              },
+              {
+                "text": "-    5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Yep",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Yep",
+                "checkbox": false
+              },
+              {
+                "text": "-    6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)",
+                "checkbox": false
+              },
+              {
+                "text": "-    Achievement lounge - during last 30 min of first committee session",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Achievement lounge - during last 30 min of first committee session",
+                "checkbox": false
+              },
+              {
+                "text": "-    7:15pm-7:45pm: Break",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "7:15pm-7:45pm: Break",
+                "checkbox": false
+              },
+              {
+                "text": "-    This is designated as a break, but a stagger release might be advisable. Elliot",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "This is designated as a break, but a stagger release might be advisable. Elliot",
+                "checkbox": false
+              },
+              {
+                "text": "& James can coordinate this.",
+                "indent": 18,
+                "bullet_marker": null,
+                "body": "& James can coordinate this.",
+                "checkbox": false
+              },
+              {
+                "text": "-    Get second floor empty first",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Get second floor empty first",
+                "checkbox": false
+              }
+            ],
+            "page": 1
+          },
+          "lines": [
+            {
+              "text": "-    1pm: Secretariat arrival",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "1pm: Secretariat arrival",
+              "checkbox": false
+            },
+            {
+              "text": "-    What is our “to do” list?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "What is our “to do” list?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Material set-up",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Material set-up",
+              "checkbox": false
+            },
+            {
+              "text": "-   Separate into boxes for committee rooms",
+              "indent": 23,
+              "bullet_marker": "-",
+              "body": "Separate into boxes for committee rooms",
+              "checkbox": false
+            },
+            {
+              "text": "-   Reg Desk",
+              "indent": 23,
+              "bullet_marker": "-",
+              "body": "Reg Desk",
+              "checkbox": false
+            },
+            {
+              "text": "-   Rearrange rooms as necessary",
+              "indent": 23,
+              "bullet_marker": "-",
+              "body": "Rearrange rooms as necessary",
+              "checkbox": false
+            },
+            {
+              "text": "-    Don’t have access to all rooms early",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Don’t have access to all rooms early",
+              "checkbox": false
+            },
+            {
+              "text": "-    3:30pm: Staff arrival",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "3:30pm: Staff arrival",
+              "checkbox": false
+            },
+            {
+              "text": "-    What are we tasking staff with?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "What are we tasking staff with?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Quick meeting",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Quick meeting",
+              "checkbox": false
+            },
+            {
+              "text": "-    Set-up",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Set-up",
+              "checkbox": false
+            },
+            {
+              "text": "-    Let us know if they’re missing anything",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Let us know if they’re missing anything",
+              "checkbox": false
+            },
+            {
+              "text": "-   Get some dongles and fancy paper from staples - Elliott",
+              "indent": 23,
+              "bullet_marker": "-",
+              "body": "Get some dongles and fancy paper from staples - Elliott",
+              "checkbox": false
+            },
+            {
+              "text": "-    4:00pm: Registration opens",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "4:00pm: Registration opens",
+              "checkbox": false
+            },
+            {
+              "text": "-    Who will sit at the registration desk?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Who will sit at the registration desk?",
+              "checkbox": false
+            },
+            {
+              "text": "-   Frankie, Ann",
+              "indent": 23,
+              "bullet_marker": "-",
+              "body": "Frankie, Ann",
+              "checkbox": false
+            },
+            {
+              "text": "-    Who is greeting Major Calvert and when do we expect him to arrive? We",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Who is greeting Major Calvert and when do we expect him to arrive? We",
+              "checkbox": false
+            },
+            {
+              "text": "need to send him a final note with details re parking, time etc.",
+              "indent": 18,
+              "bullet_marker": null,
+              "body": "need to send him a final note with details re parking, time etc.",
+              "checkbox": false
+            },
+            {
+              "text": "-   Frankie",
+              "indent": 23,
+              "bullet_marker": "-",
+              "body": "Frankie",
+              "checkbox": false
+            },
+            {
+              "text": "-   Emailed him the updates and time of arrival",
+              "indent": 23,
+              "bullet_marker": "-",
+              "body": "Emailed him the updates and time of arrival",
+              "checkbox": false
+            },
+            {
+              "text": "-    4:30pm-5:00pm: Opening Ceremonies",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "4:30pm-5:00pm: Opening Ceremonies",
+              "checkbox": false
+            },
+            {
+              "text": "-    Speeches look great!",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Speeches look great!",
+              "checkbox": false
+            },
+            {
+              "text": "-    We still need to schedule a quick run-through. Should we do this on Friday",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "We still need to schedule a quick run-through. Should we do this on Friday",
+              "checkbox": false
+            },
+            {
+              "text": "afternoon?",
+              "indent": 18,
+              "bullet_marker": null,
+              "body": "afternoon?",
+              "checkbox": false
+            },
+            {
+              "text": "-   Before materials sorted",
+              "indent": 23,
+              "bullet_marker": "-",
+              "body": "Before materials sorted",
+              "checkbox": false
+            },
+            {
+              "text": "-    Ivan can man the opening ceremony presentation",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Ivan can man the opening ceremony presentation",
+              "checkbox": false
+            },
+            {
+              "text": "-    No banner (logo doesn’t match)",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "No banner (logo doesn’t match)",
+              "checkbox": false
+            },
+            {
+              "text": "-    Figure out the presentation set-up, make sure it works",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Figure out the presentation set-up, make sure it works",
+              "checkbox": false
+            },
+            {
+              "text": "-    Mr. Anthony intends to be there - have a seat for him close to the stage",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Mr. Anthony intends to be there - have a seat for him close to the stage",
+              "checkbox": false
+            },
+            {
+              "text": "-   Both Ann and Elliott go up, Elliott says speech, Ann introduces",
+              "indent": 23,
+              "bullet_marker": "-",
+              "body": "Both Ann and Elliott go up, Elliott says speech, Ann introduces",
+              "checkbox": false
+            },
+            {
+              "text": "Anthony, Elliott introduces Calvert",
+              "indent": 27,
+              "bullet_marker": null,
+              "body": "Anthony, Elliott introduces Calvert",
+              "checkbox": false
+            },
+            {
+              "text": "-    Elliott run land acknowledgement by Mrs Point",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Elliott run land acknowledgement by Mrs Point",
+              "checkbox": false
+            },
+            {
+              "text": "-    5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "5pm-6pm: Dinner break and wall re-set- is this all sorted with the Alumni Centre?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Yep",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Yep",
+              "checkbox": false
+            },
+            {
+              "text": "-    6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "6pm-7:15pm: Committee session #1 & Chaperone meeting (space confirmed?)",
+              "checkbox": false
+            },
+            {
+              "text": "-    Achievement lounge - during last 30 min of first committee session",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Achievement lounge - during last 30 min of first committee session",
+              "checkbox": false
+            },
+            {
+              "text": "-    7:15pm-7:45pm: Break",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "7:15pm-7:45pm: Break",
+              "checkbox": false
+            },
+            {
+              "text": "-    This is designated as a break, but a stagger release might be advisable. Elliot",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "This is designated as a break, but a stagger release might be advisable. Elliot",
+              "checkbox": false
+            },
+            {
+              "text": "& James can coordinate this.",
+              "indent": 18,
+              "bullet_marker": null,
+              "body": "& James can coordinate this.",
+              "checkbox": false
+            },
+            {
+              "text": "-    Get second floor empty first",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Get second floor empty first",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b63542a57a8f9230",
+            "title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "updated_at": "2026-06-30T23:03:29.789307+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b63542a57a8f9230_section_3",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b63542a57a8f9230#section-3",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b63542a57a8f9230",
+          "name": "Meeting_16__October_21st_2025_20260630_230329.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b63542a57a8f9230",
+          "section_heading": "Document"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T23:03:29.789307+00:00",
+        "content": {
+          "text": "-    Put belongings in one room\n                      -    Allocate different areas for different spots\n                      -    Signs ready     owenq101003@wpga.ca\n                      -    Use both rooms across\n                      -    Tell chaperones in meeting\n             -    Take attendance in committee rooms before the social\n             -    Say break is just hang out in rooms break\n    -    7:45pm-9pm: Delegate Social\n             -    Do we need prizes?\n                      -    Mrs Haider will bring candy\n             -    How will the speech contest work?\n                      -    Release information about contest in opening ceremony\n                      -    Make it due saturday night\n                      -    Two winners get email morning of sunday\n                      -    Rehearse with Sheree that morning\n                      -    They talk in the closing ceremonies\n             -    Are we running a Kahoot this year?\n                      -    Bring card games out to mingle and play\n                      -    See Mrs Haider tomorrow\n    -    Bags and chaperone check-out is how they leave\n    -    Elliott will print out extra maps/calendars for reg desk"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b63542a57a8f9230#section-3",
+          "quote": "-    Put belongings in one room\n                      -    Allocate different areas for different spots\n                      -    Signs ready     owenq101003@wpga.ca\n                      -    Use both rooms across\n                      -    Tell chaperones in meeting\n             -    Take attendance in committee rooms before the social\n             -    Say break is just hang out in rooms break\n    -    7:45pm-9pm: Delegate Social\n             -    Do we need prizes?\n                      -    Mrs Haider will bring candy\n             -    How will the speech contest work?\n                      -    Release information about contest in opening ceremony\n                      -    Make it due saturday night\n                      -    Two winners get email morning of sunday\n                      -    Rehearse with Sheree that morning\n                      -    They talk in the closing ceremonies\n             -    Are we running a Kahoot this year?\n                      -    Bring card games out to mingle and play\n                      -    See Mrs Haider tomorrow\n    -    Bags and chaperone check-out is how they leave\n    -    Elliott will print out extra maps/calendars for reg desk",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Document",
+          "page": 2
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "Document",
+            "text": "-    Put belongings in one room\n                      -    Allocate different areas for different spots\n                      -    Signs ready     owenq101003@wpga.ca\n                      -    Use both rooms across\n                      -    Tell chaperones in meeting\n             -    Take attendance in committee rooms before the social\n             -    Say break is just hang out in rooms break\n    -    7:45pm-9pm: Delegate Social\n             -    Do we need prizes?\n                      -    Mrs Haider will bring candy\n             -    How will the speech contest work?\n                      -    Release information about contest in opening ceremony\n                      -    Make it due saturday night\n                      -    Two winners get email morning of sunday\n                      -    Rehearse with Sheree that morning\n                      -    They talk in the closing ceremonies\n             -    Are we running a Kahoot this year?\n                      -    Bring card games out to mingle and play\n                      -    See Mrs Haider tomorrow\n    -    Bags and chaperone check-out is how they leave\n    -    Elliott will print out extra maps/calendars for reg desk",
+            "lines": [
+              {
+                "text": "-    Put belongings in one room",
+                "indent": 0,
+                "bullet_marker": "-",
+                "body": "Put belongings in one room",
+                "checkbox": false
+              },
+              {
+                "text": "-    Allocate different areas for different spots",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Allocate different areas for different spots",
+                "checkbox": false
+              },
+              {
+                "text": "-    Signs ready     owenq101003@wpga.ca",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Signs ready     owenq101003@wpga.ca",
+                "checkbox": false
+              },
+              {
+                "text": "-    Use both rooms across",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Use both rooms across",
+                "checkbox": false
+              },
+              {
+                "text": "-    Tell chaperones in meeting",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Tell chaperones in meeting",
+                "checkbox": false
+              },
+              {
+                "text": "-    Take attendance in committee rooms before the social",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Take attendance in committee rooms before the social",
+                "checkbox": false
+              },
+              {
+                "text": "-    Say break is just hang out in rooms break",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Say break is just hang out in rooms break",
+                "checkbox": false
+              },
+              {
+                "text": "-    7:45pm-9pm: Delegate Social",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "7:45pm-9pm: Delegate Social",
+                "checkbox": false
+              },
+              {
+                "text": "-    Do we need prizes?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Do we need prizes?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Mrs Haider will bring candy",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Mrs Haider will bring candy",
+                "checkbox": false
+              },
+              {
+                "text": "-    How will the speech contest work?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "How will the speech contest work?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Release information about contest in opening ceremony",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Release information about contest in opening ceremony",
+                "checkbox": false
+              },
+              {
+                "text": "-    Make it due saturday night",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Make it due saturday night",
+                "checkbox": false
+              },
+              {
+                "text": "-    Two winners get email morning of sunday",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Two winners get email morning of sunday",
+                "checkbox": false
+              },
+              {
+                "text": "-    Rehearse with Sheree that morning",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Rehearse with Sheree that morning",
+                "checkbox": false
+              },
+              {
+                "text": "-    They talk in the closing ceremonies",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "They talk in the closing ceremonies",
+                "checkbox": false
+              },
+              {
+                "text": "-    Are we running a Kahoot this year?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Are we running a Kahoot this year?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Bring card games out to mingle and play",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Bring card games out to mingle and play",
+                "checkbox": false
+              },
+              {
+                "text": "-    See Mrs Haider tomorrow",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "See Mrs Haider tomorrow",
+                "checkbox": false
+              },
+              {
+                "text": "-    Bags and chaperone check-out is how they leave",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Bags and chaperone check-out is how they leave",
+                "checkbox": false
+              },
+              {
+                "text": "-    Elliott will print out extra maps/calendars for reg desk",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Elliott will print out extra maps/calendars for reg desk",
+                "checkbox": false
+              }
+            ],
+            "page": 2
+          },
+          "lines": [
+            {
+              "text": "-    Put belongings in one room",
+              "indent": 0,
+              "bullet_marker": "-",
+              "body": "Put belongings in one room",
+              "checkbox": false
+            },
+            {
+              "text": "-    Allocate different areas for different spots",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Allocate different areas for different spots",
+              "checkbox": false
+            },
+            {
+              "text": "-    Signs ready     owenq101003@wpga.ca",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Signs ready     owenq101003@wpga.ca",
+              "checkbox": false
+            },
+            {
+              "text": "-    Use both rooms across",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Use both rooms across",
+              "checkbox": false
+            },
+            {
+              "text": "-    Tell chaperones in meeting",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Tell chaperones in meeting",
+              "checkbox": false
+            },
+            {
+              "text": "-    Take attendance in committee rooms before the social",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Take attendance in committee rooms before the social",
+              "checkbox": false
+            },
+            {
+              "text": "-    Say break is just hang out in rooms break",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Say break is just hang out in rooms break",
+              "checkbox": false
+            },
+            {
+              "text": "-    7:45pm-9pm: Delegate Social",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "7:45pm-9pm: Delegate Social",
+              "checkbox": false
+            },
+            {
+              "text": "-    Do we need prizes?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Do we need prizes?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Mrs Haider will bring candy",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Mrs Haider will bring candy",
+              "checkbox": false
+            },
+            {
+              "text": "-    How will the speech contest work?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "How will the speech contest work?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Release information about contest in opening ceremony",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Release information about contest in opening ceremony",
+              "checkbox": false
+            },
+            {
+              "text": "-    Make it due saturday night",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Make it due saturday night",
+              "checkbox": false
+            },
+            {
+              "text": "-    Two winners get email morning of sunday",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Two winners get email morning of sunday",
+              "checkbox": false
+            },
+            {
+              "text": "-    Rehearse with Sheree that morning",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Rehearse with Sheree that morning",
+              "checkbox": false
+            },
+            {
+              "text": "-    They talk in the closing ceremonies",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "They talk in the closing ceremonies",
+              "checkbox": false
+            },
+            {
+              "text": "-    Are we running a Kahoot this year?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Are we running a Kahoot this year?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Bring card games out to mingle and play",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Bring card games out to mingle and play",
+              "checkbox": false
+            },
+            {
+              "text": "-    See Mrs Haider tomorrow",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "See Mrs Haider tomorrow",
+              "checkbox": false
+            },
+            {
+              "text": "-    Bags and chaperone check-out is how they leave",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Bags and chaperone check-out is how they leave",
+              "checkbox": false
+            },
+            {
+              "text": "-    Elliott will print out extra maps/calendars for reg desk",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Elliott will print out extra maps/calendars for reg desk",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b63542a57a8f9230",
+            "title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "updated_at": "2026-06-30T23:03:29.789307+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b63542a57a8f9230_section_4",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b63542a57a8f9230#section-4",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b63542a57a8f9230",
+          "name": "Meeting_16__October_21st_2025_20260630_230329.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b63542a57a8f9230",
+          "section_heading": "FORM FOR SPEECHHH"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T23:03:29.789307+00:00",
+        "content": {
+          "text": "https://docs.google.com/forms/d/e/1FAIpQLSfP59Ztb-n6qANYtuGDn-d0F1x7TWeK0bqRi59_x2DF\n3DZttw/viewform?usp=publish-editor"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b63542a57a8f9230#section-4",
+          "quote": "https://docs.google.com/forms/d/e/1FAIpQLSfP59Ztb-n6qANYtuGDn-d0F1x7TWeK0bqRi59_x2DF\n3DZttw/viewform?usp=publish-editor",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "FORM FOR SPEECHHH",
+          "page": 2
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "FORM FOR SPEECHHH",
+            "text": "https://docs.google.com/forms/d/e/1FAIpQLSfP59Ztb-n6qANYtuGDn-d0F1x7TWeK0bqRi59_x2DF\n3DZttw/viewform?usp=publish-editor",
+            "lines": [
+              {
+                "text": "https://docs.google.com/forms/d/e/1FAIpQLSfP59Ztb-n6qANYtuGDn-d0F1x7TWeK0bqRi59_x2DF",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "https://docs.google.com/forms/d/e/1FAIpQLSfP59Ztb-n6qANYtuGDn-d0F1x7TWeK0bqRi59_x2DF",
+                "checkbox": false
+              },
+              {
+                "text": "3DZttw/viewform?usp=publish-editor",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "3DZttw/viewform?usp=publish-editor",
+                "checkbox": false
+              }
+            ],
+            "page": 2
+          },
+          "lines": [
+            {
+              "text": "https://docs.google.com/forms/d/e/1FAIpQLSfP59Ztb-n6qANYtuGDn-d0F1x7TWeK0bqRi59_x2DF",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "https://docs.google.com/forms/d/e/1FAIpQLSfP59Ztb-n6qANYtuGDn-d0F1x7TWeK0bqRi59_x2DF",
+              "checkbox": false
+            },
+            {
+              "text": "3DZttw/viewform?usp=publish-editor",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "3DZttw/viewform?usp=publish-editor",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b63542a57a8f9230",
+            "title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "updated_at": "2026-06-30T23:03:29.789307+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b63542a57a8f9230_section_5",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b63542a57a8f9230#section-5",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b63542a57a8f9230",
+          "name": "Meeting_16__October_21st_2025_20260630_230329.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b63542a57a8f9230",
+          "section_heading": "Saturday"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T23:03:29.789307+00:00",
+        "content": {
+          "text": "-    UBC: People should know where to go by Saturday AM. Remember: Mme. Guillois\n         and Mrs. Haider will be at WPGA running VYMUN Junior with Evangeline and Hugo.\n    -    Awards: Dais staff should submit award requests by the end of the day on Saturday.\n    -    Staff Evaluations - Sat Afternoon\n             -    Owen and James make a schedule\n             -    Preferably whenever done first topic\n    -    Zero tolerance for unkindness, kids may make mistakes but make sure staff are\n         explicitly told\n             -    Done in staff training\n             -    Priority message at the beginning of each committee session"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b63542a57a8f9230#section-5",
+          "quote": "-    UBC: People should know where to go by Saturday AM. Remember: Mme. Guillois\n         and Mrs. Haider will be at WPGA running VYMUN Junior with Evangeline and Hugo.\n    -    Awards: Dais staff should submit award requests by the end of the day on Saturday.\n    -    Staff Evaluations - Sat Afternoon\n             -    Owen and James make a schedule\n             -    Preferably whenever done first topic\n    -    Zero tolerance for unkindness, kids may make mistakes but make sure staff are\n         explicitly told\n             -    Done in staff training\n             -    Priority message at the beginning of each committee session",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Saturday",
+          "page": 2
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "Saturday",
+            "text": "-    UBC: People should know where to go by Saturday AM. Remember: Mme. Guillois\n         and Mrs. Haider will be at WPGA running VYMUN Junior with Evangeline and Hugo.\n    -    Awards: Dais staff should submit award requests by the end of the day on Saturday.\n    -    Staff Evaluations - Sat Afternoon\n             -    Owen and James make a schedule\n             -    Preferably whenever done first topic\n    -    Zero tolerance for unkindness, kids may make mistakes but make sure staff are\n         explicitly told\n             -    Done in staff training\n             -    Priority message at the beginning of each committee session",
+            "lines": [
+              {
+                "text": "-    UBC: People should know where to go by Saturday AM. Remember: Mme. Guillois",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "UBC: People should know where to go by Saturday AM. Remember: Mme. Guillois",
+                "checkbox": false
+              },
+              {
+                "text": "and Mrs. Haider will be at WPGA running VYMUN Junior with Evangeline and Hugo.",
+                "indent": 9,
+                "bullet_marker": null,
+                "body": "and Mrs. Haider will be at WPGA running VYMUN Junior with Evangeline and Hugo.",
+                "checkbox": false
+              },
+              {
+                "text": "-    Awards: Dais staff should submit award requests by the end of the day on Saturday.",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Awards: Dais staff should submit award requests by the end of the day on Saturday.",
+                "checkbox": false
+              },
+              {
+                "text": "-    Staff Evaluations - Sat Afternoon",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Staff Evaluations - Sat Afternoon",
+                "checkbox": false
+              },
+              {
+                "text": "-    Owen and James make a schedule",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Owen and James make a schedule",
+                "checkbox": false
+              },
+              {
+                "text": "-    Preferably whenever done first topic",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Preferably whenever done first topic",
+                "checkbox": false
+              },
+              {
+                "text": "-    Zero tolerance for unkindness, kids may make mistakes but make sure staff are",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Zero tolerance for unkindness, kids may make mistakes but make sure staff are",
+                "checkbox": false
+              },
+              {
+                "text": "explicitly told",
+                "indent": 9,
+                "bullet_marker": null,
+                "body": "explicitly told",
+                "checkbox": false
+              },
+              {
+                "text": "-    Done in staff training",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Done in staff training",
+                "checkbox": false
+              },
+              {
+                "text": "-    Priority message at the beginning of each committee session",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Priority message at the beginning of each committee session",
+                "checkbox": false
+              }
+            ],
+            "page": 2
+          },
+          "lines": [
+            {
+              "text": "-    UBC: People should know where to go by Saturday AM. Remember: Mme. Guillois",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "UBC: People should know where to go by Saturday AM. Remember: Mme. Guillois",
+              "checkbox": false
+            },
+            {
+              "text": "and Mrs. Haider will be at WPGA running VYMUN Junior with Evangeline and Hugo.",
+              "indent": 9,
+              "bullet_marker": null,
+              "body": "and Mrs. Haider will be at WPGA running VYMUN Junior with Evangeline and Hugo.",
+              "checkbox": false
+            },
+            {
+              "text": "-    Awards: Dais staff should submit award requests by the end of the day on Saturday.",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Awards: Dais staff should submit award requests by the end of the day on Saturday.",
+              "checkbox": false
+            },
+            {
+              "text": "-    Staff Evaluations - Sat Afternoon",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Staff Evaluations - Sat Afternoon",
+              "checkbox": false
+            },
+            {
+              "text": "-    Owen and James make a schedule",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Owen and James make a schedule",
+              "checkbox": false
+            },
+            {
+              "text": "-    Preferably whenever done first topic",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Preferably whenever done first topic",
+              "checkbox": false
+            },
+            {
+              "text": "-    Zero tolerance for unkindness, kids may make mistakes but make sure staff are",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Zero tolerance for unkindness, kids may make mistakes but make sure staff are",
+              "checkbox": false
+            },
+            {
+              "text": "explicitly told",
+              "indent": 9,
+              "bullet_marker": null,
+              "body": "explicitly told",
+              "checkbox": false
+            },
+            {
+              "text": "-    Done in staff training",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Done in staff training",
+              "checkbox": false
+            },
+            {
+              "text": "-    Priority message at the beginning of each committee session",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Priority message at the beginning of each committee session",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b63542a57a8f9230",
+            "title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "updated_at": "2026-06-30T23:03:29.789307+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b63542a57a8f9230_section_6",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b63542a57a8f9230#section-6",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b63542a57a8f9230",
+          "name": "Meeting_16__October_21st_2025_20260630_230329.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b63542a57a8f9230",
+          "section_heading": "-    VYMUN Junior"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T23:03:29.789307+00:00",
+        "content": {
+          "text": "-    Who is doing registration?\n                      -    Both Evangeline and Hugo\n             -    Guest speaker?\n                      -    Nila not available\n                      -    See if she can record a quick video instead\n             -    Plan for opening ceremonies?\n                      -    One person speaking - more cohesive"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b63542a57a8f9230#section-6",
+          "quote": "-    Who is doing registration?\n                      -    Both Evangeline and Hugo\n             -    Guest speaker?\n                      -    Nila not available\n                      -    See if she can record a quick video instead\n             -    Plan for opening ceremonies?\n                      -    One person speaking - more cohesive",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "-    VYMUN Junior",
+          "page": 2
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "-    VYMUN Junior",
+            "text": "-    Who is doing registration?\n                      -    Both Evangeline and Hugo\n             -    Guest speaker?\n                      -    Nila not available\n                      -    See if she can record a quick video instead\n             -    Plan for opening ceremonies?\n                      -    One person speaking - more cohesive",
+            "lines": [
+              {
+                "text": "-    Who is doing registration?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Who is doing registration?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Both Evangeline and Hugo",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Both Evangeline and Hugo",
+                "checkbox": false
+              },
+              {
+                "text": "-    Guest speaker?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Guest speaker?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Nila not available",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Nila not available",
+                "checkbox": false
+              },
+              {
+                "text": "-    See if she can record a quick video instead",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "See if she can record a quick video instead",
+                "checkbox": false
+              },
+              {
+                "text": "-    Plan for opening ceremonies?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Plan for opening ceremonies?",
+                "checkbox": false
+              },
+              {
+                "text": "-    One person speaking - more cohesive",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "One person speaking - more cohesive",
+                "checkbox": false
+              }
+            ],
+            "page": 2
+          },
+          "lines": [
+            {
+              "text": "-    Who is doing registration?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Who is doing registration?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Both Evangeline and Hugo",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Both Evangeline and Hugo",
+              "checkbox": false
+            },
+            {
+              "text": "-    Guest speaker?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Guest speaker?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Nila not available",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Nila not available",
+              "checkbox": false
+            },
+            {
+              "text": "-    See if she can record a quick video instead",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "See if she can record a quick video instead",
+              "checkbox": false
+            },
+            {
+              "text": "-    Plan for opening ceremonies?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Plan for opening ceremonies?",
+              "checkbox": false
+            },
+            {
+              "text": "-    One person speaking - more cohesive",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "One person speaking - more cohesive",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b63542a57a8f9230",
+            "title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "updated_at": "2026-06-30T23:03:29.789307+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b63542a57a8f9230_section_7",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b63542a57a8f9230#section-7",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b63542a57a8f9230",
+          "name": "Meeting_16__October_21st_2025_20260630_230329.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b63542a57a8f9230",
+          "section_heading": "Document"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T23:03:29.789307+00:00",
+        "content": {
+          "text": "-    Mrs Haider would like to see the speeches\n                      -    Plan for escorting students from ceremony to classrooms\n                      -    Signs put up so they don’t get lost\n                      -    Include in opening comments\n                      -    Student to do a welcome?\n             -    Chaperone meeting in SS Staff room\n             -    Food confirmed with Chef Stacey and Dominos?\n                      -    Chef Stacey said she would give Mrs Haider the key on friday\n                      -    Nourish bowls for adults\n                      -    Snacks ordered for the day\n                      -    Evangeline has receipts from dominos\n             -    Circulation plan during committee sessions\n             -    First responder on site?\n                      -    Sign-up is out\n             -    Game at break time.\n             -    How many gavels do we need? Let’s leave these at school before the\n                  weekend.\n             -    ChairMUN\n                      -    Backup - Elliott made sheet last year that can be reused\n                      -    Send note to staff with that tiered approach\n             -    Closing Ceremonies\n                      -    Hugo - send Mrs Haider a draft\n                      -    Awards\n             -    Swag bags tomorrow during compgov (1B)\n             -    Joah doing closing video\n                      -    Fit it into closing\n    -    Elliott meet Mrs Haider first block"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b63542a57a8f9230#section-7",
+          "quote": "-    Mrs Haider would like to see the speeches\n                      -    Plan for escorting students from ceremony to classrooms\n                      -    Signs put up so they don’t get lost\n                      -    Include in opening comments\n                      -    Student to do a welcome?\n             -    Chaperone meeting in SS Staff room\n             -    Food confirmed with Chef Stacey and Dominos?\n                      -    Chef Stacey said she would give Mrs Haider the key on friday\n                      -    Nourish bowls for adults\n                      -    Snacks ordered for the day\n                      -    Evangeline has receipts from dominos\n             -    Circulation plan during committee sessions\n             -    First responder on site?\n                      -    Sign-up is out\n             -    Game at break time.\n             -    How many gavels do we need? Let’s leave these at school before the\n                  weekend.\n             -    ChairMUN\n                      -    Backup - Elliott made sheet last year that can be reused\n                      -    Send note to staff with that tiered approach\n             -    Closing Ceremonies\n                      -    Hugo - send Mrs Haider a draft\n                      -    Awards\n             -    Swag bags tomorrow during compgov (1B)\n             -    Joah doing closing video\n                      -    Fit it into closing\n    -    Elliott meet Mrs Haider first block",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Document",
+          "page": 3
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "Document",
+            "text": "-    Mrs Haider would like to see the speeches\n                      -    Plan for escorting students from ceremony to classrooms\n                      -    Signs put up so they don’t get lost\n                      -    Include in opening comments\n                      -    Student to do a welcome?\n             -    Chaperone meeting in SS Staff room\n             -    Food confirmed with Chef Stacey and Dominos?\n                      -    Chef Stacey said she would give Mrs Haider the key on friday\n                      -    Nourish bowls for adults\n                      -    Snacks ordered for the day\n                      -    Evangeline has receipts from dominos\n             -    Circulation plan during committee sessions\n             -    First responder on site?\n                      -    Sign-up is out\n             -    Game at break time.\n             -    How many gavels do we need? Let’s leave these at school before the\n                  weekend.\n             -    ChairMUN\n                      -    Backup - Elliott made sheet last year that can be reused\n                      -    Send note to staff with that tiered approach\n             -    Closing Ceremonies\n                      -    Hugo - send Mrs Haider a draft\n                      -    Awards\n             -    Swag bags tomorrow during compgov (1B)\n             -    Joah doing closing video\n                      -    Fit it into closing\n    -    Elliott meet Mrs Haider first block",
+            "lines": [
+              {
+                "text": "-    Mrs Haider would like to see the speeches",
+                "indent": 0,
+                "bullet_marker": "-",
+                "body": "Mrs Haider would like to see the speeches",
+                "checkbox": false
+              },
+              {
+                "text": "-    Plan for escorting students from ceremony to classrooms",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Plan for escorting students from ceremony to classrooms",
+                "checkbox": false
+              },
+              {
+                "text": "-    Signs put up so they don’t get lost",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Signs put up so they don’t get lost",
+                "checkbox": false
+              },
+              {
+                "text": "-    Include in opening comments",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Include in opening comments",
+                "checkbox": false
+              },
+              {
+                "text": "-    Student to do a welcome?",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Student to do a welcome?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Chaperone meeting in SS Staff room",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Chaperone meeting in SS Staff room",
+                "checkbox": false
+              },
+              {
+                "text": "-    Food confirmed with Chef Stacey and Dominos?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Food confirmed with Chef Stacey and Dominos?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Chef Stacey said she would give Mrs Haider the key on friday",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Chef Stacey said she would give Mrs Haider the key on friday",
+                "checkbox": false
+              },
+              {
+                "text": "-    Nourish bowls for adults",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Nourish bowls for adults",
+                "checkbox": false
+              },
+              {
+                "text": "-    Snacks ordered for the day",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Snacks ordered for the day",
+                "checkbox": false
+              },
+              {
+                "text": "-    Evangeline has receipts from dominos",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Evangeline has receipts from dominos",
+                "checkbox": false
+              },
+              {
+                "text": "-    Circulation plan during committee sessions",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Circulation plan during committee sessions",
+                "checkbox": false
+              },
+              {
+                "text": "-    First responder on site?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "First responder on site?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Sign-up is out",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Sign-up is out",
+                "checkbox": false
+              },
+              {
+                "text": "-    Game at break time.",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Game at break time.",
+                "checkbox": false
+              },
+              {
+                "text": "-    How many gavels do we need? Let’s leave these at school before the",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "How many gavels do we need? Let’s leave these at school before the",
+                "checkbox": false
+              },
+              {
+                "text": "weekend.",
+                "indent": 18,
+                "bullet_marker": null,
+                "body": "weekend.",
+                "checkbox": false
+              },
+              {
+                "text": "-    ChairMUN",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "ChairMUN",
+                "checkbox": false
+              },
+              {
+                "text": "-    Backup - Elliott made sheet last year that can be reused",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Backup - Elliott made sheet last year that can be reused",
+                "checkbox": false
+              },
+              {
+                "text": "-    Send note to staff with that tiered approach",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Send note to staff with that tiered approach",
+                "checkbox": false
+              },
+              {
+                "text": "-    Closing Ceremonies",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Closing Ceremonies",
+                "checkbox": false
+              },
+              {
+                "text": "-    Hugo - send Mrs Haider a draft",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Hugo - send Mrs Haider a draft",
+                "checkbox": false
+              },
+              {
+                "text": "-    Awards",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Awards",
+                "checkbox": false
+              },
+              {
+                "text": "-    Swag bags tomorrow during compgov (1B)",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Swag bags tomorrow during compgov (1B)",
+                "checkbox": false
+              },
+              {
+                "text": "-    Joah doing closing video",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Joah doing closing video",
+                "checkbox": false
+              },
+              {
+                "text": "-    Fit it into closing",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Fit it into closing",
+                "checkbox": false
+              },
+              {
+                "text": "-    Elliott meet Mrs Haider first block",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Elliott meet Mrs Haider first block",
+                "checkbox": false
+              }
+            ],
+            "page": 3
+          },
+          "lines": [
+            {
+              "text": "-    Mrs Haider would like to see the speeches",
+              "indent": 0,
+              "bullet_marker": "-",
+              "body": "Mrs Haider would like to see the speeches",
+              "checkbox": false
+            },
+            {
+              "text": "-    Plan for escorting students from ceremony to classrooms",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Plan for escorting students from ceremony to classrooms",
+              "checkbox": false
+            },
+            {
+              "text": "-    Signs put up so they don’t get lost",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Signs put up so they don’t get lost",
+              "checkbox": false
+            },
+            {
+              "text": "-    Include in opening comments",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Include in opening comments",
+              "checkbox": false
+            },
+            {
+              "text": "-    Student to do a welcome?",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Student to do a welcome?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Chaperone meeting in SS Staff room",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Chaperone meeting in SS Staff room",
+              "checkbox": false
+            },
+            {
+              "text": "-    Food confirmed with Chef Stacey and Dominos?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Food confirmed with Chef Stacey and Dominos?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Chef Stacey said she would give Mrs Haider the key on friday",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Chef Stacey said she would give Mrs Haider the key on friday",
+              "checkbox": false
+            },
+            {
+              "text": "-    Nourish bowls for adults",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Nourish bowls for adults",
+              "checkbox": false
+            },
+            {
+              "text": "-    Snacks ordered for the day",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Snacks ordered for the day",
+              "checkbox": false
+            },
+            {
+              "text": "-    Evangeline has receipts from dominos",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Evangeline has receipts from dominos",
+              "checkbox": false
+            },
+            {
+              "text": "-    Circulation plan during committee sessions",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Circulation plan during committee sessions",
+              "checkbox": false
+            },
+            {
+              "text": "-    First responder on site?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "First responder on site?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Sign-up is out",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Sign-up is out",
+              "checkbox": false
+            },
+            {
+              "text": "-    Game at break time.",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Game at break time.",
+              "checkbox": false
+            },
+            {
+              "text": "-    How many gavels do we need? Let’s leave these at school before the",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "How many gavels do we need? Let’s leave these at school before the",
+              "checkbox": false
+            },
+            {
+              "text": "weekend.",
+              "indent": 18,
+              "bullet_marker": null,
+              "body": "weekend.",
+              "checkbox": false
+            },
+            {
+              "text": "-    ChairMUN",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "ChairMUN",
+              "checkbox": false
+            },
+            {
+              "text": "-    Backup - Elliott made sheet last year that can be reused",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Backup - Elliott made sheet last year that can be reused",
+              "checkbox": false
+            },
+            {
+              "text": "-    Send note to staff with that tiered approach",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Send note to staff with that tiered approach",
+              "checkbox": false
+            },
+            {
+              "text": "-    Closing Ceremonies",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Closing Ceremonies",
+              "checkbox": false
+            },
+            {
+              "text": "-    Hugo - send Mrs Haider a draft",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Hugo - send Mrs Haider a draft",
+              "checkbox": false
+            },
+            {
+              "text": "-    Awards",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Awards",
+              "checkbox": false
+            },
+            {
+              "text": "-    Swag bags tomorrow during compgov (1B)",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Swag bags tomorrow during compgov (1B)",
+              "checkbox": false
+            },
+            {
+              "text": "-    Joah doing closing video",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Joah doing closing video",
+              "checkbox": false
+            },
+            {
+              "text": "-    Fit it into closing",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Fit it into closing",
+              "checkbox": false
+            },
+            {
+              "text": "-    Elliott meet Mrs Haider first block",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Elliott meet Mrs Haider first block",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b63542a57a8f9230",
+            "title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "updated_at": "2026-06-30T23:03:29.789307+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b63542a57a8f9230_section_8",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b63542a57a8f9230#section-8",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b63542a57a8f9230",
+          "name": "Meeting_16__October_21st_2025_20260630_230329.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b63542a57a8f9230",
+          "section_heading": "Sunday"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T23:03:29.789307+00:00",
+        "content": {
+          "text": "-    12:30pm-2:00pm: Lunch & wall re-set. Rehearsal for closing.\n             -    How are we thanking Mr. Husband?\n             -    Do we want Ms. Lee to stand on stage to give the speech award?\n             -    Nothing for Mr Anthony\n             -    Flowers for Ms Lee\n             -    Mrs Haider shop for Mrs Husband\n             -    Elliott send email to Coronation Recognition asking for a duplicate of the\n                  Tracey Lee - send it to them when ready\n    -    2:00pm-3:15pm: Closing Ceremonies\n             -    Frankie to give out Cynthia Lee Memorial Award\n                      -    New or young delegation that joins us\n                      -    Only new group is St Johns Ravenscourt\n                      -    Chaperone goes way back with Ms Lee\n                      -    Past: LFA, Urban Academy,\n                               -    Work into speech, happy to see previous institutions returning\n             -    Sheree to introduce speech winners\n                      -    Add slide\n                      -    Mention how we were “overwhelmed with responses” - even if we\n                           weren’t :)"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b63542a57a8f9230#section-8",
+          "quote": "-    12:30pm-2:00pm: Lunch & wall re-set. Rehearsal for closing.\n             -    How are we thanking Mr. Husband?\n             -    Do we want Ms. Lee to stand on stage to give the speech award?\n             -    Nothing for Mr Anthony\n             -    Flowers for Ms Lee\n             -    Mrs Haider shop for Mrs Husband\n             -    Elliott send email to Coronation Recognition asking for a duplicate of the\n                  Tracey Lee - send it to them when ready\n    -    2:00pm-3:15pm: Closing Ceremonies\n             -    Frankie to give out Cynthia Lee Memorial Award\n                      -    New or young delegation that joins us\n                      -    Only new group is St Johns Ravenscourt\n                      -    Chaperone goes way back with Ms Lee\n                      -    Past: LFA, Urban Academy,\n                               -    Work into speech, happy to see previous institutions returning\n             -    Sheree to introduce speech winners\n                      -    Add slide\n                      -    Mention how we were “overwhelmed with responses” - even if we\n                           weren’t :)",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Sunday",
+          "page": 3
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "Sunday",
+            "text": "-    12:30pm-2:00pm: Lunch & wall re-set. Rehearsal for closing.\n             -    How are we thanking Mr. Husband?\n             -    Do we want Ms. Lee to stand on stage to give the speech award?\n             -    Nothing for Mr Anthony\n             -    Flowers for Ms Lee\n             -    Mrs Haider shop for Mrs Husband\n             -    Elliott send email to Coronation Recognition asking for a duplicate of the\n                  Tracey Lee - send it to them when ready\n    -    2:00pm-3:15pm: Closing Ceremonies\n             -    Frankie to give out Cynthia Lee Memorial Award\n                      -    New or young delegation that joins us\n                      -    Only new group is St Johns Ravenscourt\n                      -    Chaperone goes way back with Ms Lee\n                      -    Past: LFA, Urban Academy,\n                               -    Work into speech, happy to see previous institutions returning\n             -    Sheree to introduce speech winners\n                      -    Add slide\n                      -    Mention how we were “overwhelmed with responses” - even if we\n                           weren’t :)",
+            "lines": [
+              {
+                "text": "-    12:30pm-2:00pm: Lunch & wall re-set. Rehearsal for closing.",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "12:30pm-2:00pm: Lunch & wall re-set. Rehearsal for closing.",
+                "checkbox": false
+              },
+              {
+                "text": "-    How are we thanking Mr. Husband?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "How are we thanking Mr. Husband?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Do we want Ms. Lee to stand on stage to give the speech award?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Do we want Ms. Lee to stand on stage to give the speech award?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Nothing for Mr Anthony",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Nothing for Mr Anthony",
+                "checkbox": false
+              },
+              {
+                "text": "-    Flowers for Ms Lee",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Flowers for Ms Lee",
+                "checkbox": false
+              },
+              {
+                "text": "-    Mrs Haider shop for Mrs Husband",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Mrs Haider shop for Mrs Husband",
+                "checkbox": false
+              },
+              {
+                "text": "-    Elliott send email to Coronation Recognition asking for a duplicate of the",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Elliott send email to Coronation Recognition asking for a duplicate of the",
+                "checkbox": false
+              },
+              {
+                "text": "Tracey Lee - send it to them when ready",
+                "indent": 18,
+                "bullet_marker": null,
+                "body": "Tracey Lee - send it to them when ready",
+                "checkbox": false
+              },
+              {
+                "text": "-    2:00pm-3:15pm: Closing Ceremonies",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "2:00pm-3:15pm: Closing Ceremonies",
+                "checkbox": false
+              },
+              {
+                "text": "-    Frankie to give out Cynthia Lee Memorial Award",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Frankie to give out Cynthia Lee Memorial Award",
+                "checkbox": false
+              },
+              {
+                "text": "-    New or young delegation that joins us",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "New or young delegation that joins us",
+                "checkbox": false
+              },
+              {
+                "text": "-    Only new group is St Johns Ravenscourt",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Only new group is St Johns Ravenscourt",
+                "checkbox": false
+              },
+              {
+                "text": "-    Chaperone goes way back with Ms Lee",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Chaperone goes way back with Ms Lee",
+                "checkbox": false
+              },
+              {
+                "text": "-    Past: LFA, Urban Academy,",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Past: LFA, Urban Academy,",
+                "checkbox": false
+              },
+              {
+                "text": "-    Work into speech, happy to see previous institutions returning",
+                "indent": 31,
+                "bullet_marker": "-",
+                "body": "Work into speech, happy to see previous institutions returning",
+                "checkbox": false
+              },
+              {
+                "text": "-    Sheree to introduce speech winners",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Sheree to introduce speech winners",
+                "checkbox": false
+              },
+              {
+                "text": "-    Add slide",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Add slide",
+                "checkbox": false
+              },
+              {
+                "text": "-    Mention how we were “overwhelmed with responses” - even if we",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Mention how we were “overwhelmed with responses” - even if we",
+                "checkbox": false
+              },
+              {
+                "text": "weren’t :)",
+                "indent": 27,
+                "bullet_marker": null,
+                "body": "weren’t :)",
+                "checkbox": false
+              }
+            ],
+            "page": 3
+          },
+          "lines": [
+            {
+              "text": "-    12:30pm-2:00pm: Lunch & wall re-set. Rehearsal for closing.",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "12:30pm-2:00pm: Lunch & wall re-set. Rehearsal for closing.",
+              "checkbox": false
+            },
+            {
+              "text": "-    How are we thanking Mr. Husband?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "How are we thanking Mr. Husband?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Do we want Ms. Lee to stand on stage to give the speech award?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Do we want Ms. Lee to stand on stage to give the speech award?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Nothing for Mr Anthony",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Nothing for Mr Anthony",
+              "checkbox": false
+            },
+            {
+              "text": "-    Flowers for Ms Lee",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Flowers for Ms Lee",
+              "checkbox": false
+            },
+            {
+              "text": "-    Mrs Haider shop for Mrs Husband",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Mrs Haider shop for Mrs Husband",
+              "checkbox": false
+            },
+            {
+              "text": "-    Elliott send email to Coronation Recognition asking for a duplicate of the",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Elliott send email to Coronation Recognition asking for a duplicate of the",
+              "checkbox": false
+            },
+            {
+              "text": "Tracey Lee - send it to them when ready",
+              "indent": 18,
+              "bullet_marker": null,
+              "body": "Tracey Lee - send it to them when ready",
+              "checkbox": false
+            },
+            {
+              "text": "-    2:00pm-3:15pm: Closing Ceremonies",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "2:00pm-3:15pm: Closing Ceremonies",
+              "checkbox": false
+            },
+            {
+              "text": "-    Frankie to give out Cynthia Lee Memorial Award",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Frankie to give out Cynthia Lee Memorial Award",
+              "checkbox": false
+            },
+            {
+              "text": "-    New or young delegation that joins us",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "New or young delegation that joins us",
+              "checkbox": false
+            },
+            {
+              "text": "-    Only new group is St Johns Ravenscourt",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Only new group is St Johns Ravenscourt",
+              "checkbox": false
+            },
+            {
+              "text": "-    Chaperone goes way back with Ms Lee",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Chaperone goes way back with Ms Lee",
+              "checkbox": false
+            },
+            {
+              "text": "-    Past: LFA, Urban Academy,",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Past: LFA, Urban Academy,",
+              "checkbox": false
+            },
+            {
+              "text": "-    Work into speech, happy to see previous institutions returning",
+              "indent": 31,
+              "bullet_marker": "-",
+              "body": "Work into speech, happy to see previous institutions returning",
+              "checkbox": false
+            },
+            {
+              "text": "-    Sheree to introduce speech winners",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Sheree to introduce speech winners",
+              "checkbox": false
+            },
+            {
+              "text": "-    Add slide",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Add slide",
+              "checkbox": false
+            },
+            {
+              "text": "-    Mention how we were “overwhelmed with responses” - even if we",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Mention how we were “overwhelmed with responses” - even if we",
+              "checkbox": false
+            },
+            {
+              "text": "weren’t :)",
+              "indent": 27,
+              "bullet_marker": null,
+              "body": "weren’t :)",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b63542a57a8f9230",
+            "title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "updated_at": "2026-06-30T23:03:29.789307+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b63542a57a8f9230_section_9",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b63542a57a8f9230#section-9",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b63542a57a8f9230",
+          "name": "Meeting_16__October_21st_2025_20260630_230329.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b63542a57a8f9230",
+          "section_heading": "Document"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T23:03:29.789307+00:00",
+        "content": {
+          "text": "-    Ann will mention schools travelling and give them a shout out\n                      -    Maybe move to opening ceremony\n             -    Mr. Husband, have we told him when to come\n                      -    Frankie\n                      -    Sunday - Frankie and Sheree ask Ms Lee to join you on stage to\n                           present awards\n                                -   She can be the handshaker\n                      -    Plaques after speeches? - have them sitting up front\n                                -   One standing to side while other speaks\n             -    No photo stand but still awards table\n             -    Secretariat are the last to leave. We have to clean up the space, collect lost\n                  items etc.\n                      -    Get staff to make sure their committee rooms are clean\n                      -    Make note of what we moved and move it back\n    -    Tables need to be stored in a classroom for pick up the next day.\n             -    Owen coordinated with the maintenance team\n             -    Pack up 10 WPGA tables and store in one of the classrooms\n             -    Being dropped off Friday - UBC Staff know\n             -    27 tablecloths should cover it"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b63542a57a8f9230#section-9",
+          "quote": "-    Ann will mention schools travelling and give them a shout out\n                      -    Maybe move to opening ceremony\n             -    Mr. Husband, have we told him when to come\n                      -    Frankie\n                      -    Sunday - Frankie and Sheree ask Ms Lee to join you on stage to\n                           present awards\n                                -   She can be the handshaker\n                      -    Plaques after speeches? - have them sitting up front\n                                -   One standing to side while other speaks\n             -    No photo stand but still awards table\n             -    Secretariat are the last to leave. We have to clean up the space, collect lost\n                  items etc.\n                      -    Get staff to make sure their committee rooms are clean\n                      -    Make note of what we moved and move it back\n    -    Tables need to be stored in a classroom for pick up the next day.\n             -    Owen coordinated with the maintenance team\n             -    Pack up 10 WPGA tables and store in one of the classrooms\n             -    Being dropped off Friday - UBC Staff know\n             -    27 tablecloths should cover it",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Document",
+          "page": 4
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "Document",
+            "text": "-    Ann will mention schools travelling and give them a shout out\n                      -    Maybe move to opening ceremony\n             -    Mr. Husband, have we told him when to come\n                      -    Frankie\n                      -    Sunday - Frankie and Sheree ask Ms Lee to join you on stage to\n                           present awards\n                                -   She can be the handshaker\n                      -    Plaques after speeches? - have them sitting up front\n                                -   One standing to side while other speaks\n             -    No photo stand but still awards table\n             -    Secretariat are the last to leave. We have to clean up the space, collect lost\n                  items etc.\n                      -    Get staff to make sure their committee rooms are clean\n                      -    Make note of what we moved and move it back\n    -    Tables need to be stored in a classroom for pick up the next day.\n             -    Owen coordinated with the maintenance team\n             -    Pack up 10 WPGA tables and store in one of the classrooms\n             -    Being dropped off Friday - UBC Staff know\n             -    27 tablecloths should cover it",
+            "lines": [
+              {
+                "text": "-    Ann will mention schools travelling and give them a shout out",
+                "indent": 0,
+                "bullet_marker": "-",
+                "body": "Ann will mention schools travelling and give them a shout out",
+                "checkbox": false
+              },
+              {
+                "text": "-    Maybe move to opening ceremony",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Maybe move to opening ceremony",
+                "checkbox": false
+              },
+              {
+                "text": "-    Mr. Husband, have we told him when to come",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Mr. Husband, have we told him when to come",
+                "checkbox": false
+              },
+              {
+                "text": "-    Frankie",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Frankie",
+                "checkbox": false
+              },
+              {
+                "text": "-    Sunday - Frankie and Sheree ask Ms Lee to join you on stage to",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Sunday - Frankie and Sheree ask Ms Lee to join you on stage to",
+                "checkbox": false
+              },
+              {
+                "text": "present awards",
+                "indent": 27,
+                "bullet_marker": null,
+                "body": "present awards",
+                "checkbox": false
+              },
+              {
+                "text": "-   She can be the handshaker",
+                "indent": 32,
+                "bullet_marker": "-",
+                "body": "She can be the handshaker",
+                "checkbox": false
+              },
+              {
+                "text": "-    Plaques after speeches? - have them sitting up front",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Plaques after speeches? - have them sitting up front",
+                "checkbox": false
+              },
+              {
+                "text": "-   One standing to side while other speaks",
+                "indent": 32,
+                "bullet_marker": "-",
+                "body": "One standing to side while other speaks",
+                "checkbox": false
+              },
+              {
+                "text": "-    No photo stand but still awards table",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "No photo stand but still awards table",
+                "checkbox": false
+              },
+              {
+                "text": "-    Secretariat are the last to leave. We have to clean up the space, collect lost",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Secretariat are the last to leave. We have to clean up the space, collect lost",
+                "checkbox": false
+              },
+              {
+                "text": "items etc.",
+                "indent": 18,
+                "bullet_marker": null,
+                "body": "items etc.",
+                "checkbox": false
+              },
+              {
+                "text": "-    Get staff to make sure their committee rooms are clean",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Get staff to make sure their committee rooms are clean",
+                "checkbox": false
+              },
+              {
+                "text": "-    Make note of what we moved and move it back",
+                "indent": 22,
+                "bullet_marker": "-",
+                "body": "Make note of what we moved and move it back",
+                "checkbox": false
+              },
+              {
+                "text": "-    Tables need to be stored in a classroom for pick up the next day.",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Tables need to be stored in a classroom for pick up the next day.",
+                "checkbox": false
+              },
+              {
+                "text": "-    Owen coordinated with the maintenance team",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Owen coordinated with the maintenance team",
+                "checkbox": false
+              },
+              {
+                "text": "-    Pack up 10 WPGA tables and store in one of the classrooms",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Pack up 10 WPGA tables and store in one of the classrooms",
+                "checkbox": false
+              },
+              {
+                "text": "-    Being dropped off Friday - UBC Staff know",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Being dropped off Friday - UBC Staff know",
+                "checkbox": false
+              },
+              {
+                "text": "-    27 tablecloths should cover it",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "27 tablecloths should cover it",
+                "checkbox": false
+              }
+            ],
+            "page": 4
+          },
+          "lines": [
+            {
+              "text": "-    Ann will mention schools travelling and give them a shout out",
+              "indent": 0,
+              "bullet_marker": "-",
+              "body": "Ann will mention schools travelling and give them a shout out",
+              "checkbox": false
+            },
+            {
+              "text": "-    Maybe move to opening ceremony",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Maybe move to opening ceremony",
+              "checkbox": false
+            },
+            {
+              "text": "-    Mr. Husband, have we told him when to come",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Mr. Husband, have we told him when to come",
+              "checkbox": false
+            },
+            {
+              "text": "-    Frankie",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Frankie",
+              "checkbox": false
+            },
+            {
+              "text": "-    Sunday - Frankie and Sheree ask Ms Lee to join you on stage to",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Sunday - Frankie and Sheree ask Ms Lee to join you on stage to",
+              "checkbox": false
+            },
+            {
+              "text": "present awards",
+              "indent": 27,
+              "bullet_marker": null,
+              "body": "present awards",
+              "checkbox": false
+            },
+            {
+              "text": "-   She can be the handshaker",
+              "indent": 32,
+              "bullet_marker": "-",
+              "body": "She can be the handshaker",
+              "checkbox": false
+            },
+            {
+              "text": "-    Plaques after speeches? - have them sitting up front",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Plaques after speeches? - have them sitting up front",
+              "checkbox": false
+            },
+            {
+              "text": "-   One standing to side while other speaks",
+              "indent": 32,
+              "bullet_marker": "-",
+              "body": "One standing to side while other speaks",
+              "checkbox": false
+            },
+            {
+              "text": "-    No photo stand but still awards table",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "No photo stand but still awards table",
+              "checkbox": false
+            },
+            {
+              "text": "-    Secretariat are the last to leave. We have to clean up the space, collect lost",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Secretariat are the last to leave. We have to clean up the space, collect lost",
+              "checkbox": false
+            },
+            {
+              "text": "items etc.",
+              "indent": 18,
+              "bullet_marker": null,
+              "body": "items etc.",
+              "checkbox": false
+            },
+            {
+              "text": "-    Get staff to make sure their committee rooms are clean",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Get staff to make sure their committee rooms are clean",
+              "checkbox": false
+            },
+            {
+              "text": "-    Make note of what we moved and move it back",
+              "indent": 22,
+              "bullet_marker": "-",
+              "body": "Make note of what we moved and move it back",
+              "checkbox": false
+            },
+            {
+              "text": "-    Tables need to be stored in a classroom for pick up the next day.",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Tables need to be stored in a classroom for pick up the next day.",
+              "checkbox": false
+            },
+            {
+              "text": "-    Owen coordinated with the maintenance team",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Owen coordinated with the maintenance team",
+              "checkbox": false
+            },
+            {
+              "text": "-    Pack up 10 WPGA tables and store in one of the classrooms",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Pack up 10 WPGA tables and store in one of the classrooms",
+              "checkbox": false
+            },
+            {
+              "text": "-    Being dropped off Friday - UBC Staff know",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Being dropped off Friday - UBC Staff know",
+              "checkbox": false
+            },
+            {
+              "text": "-    27 tablecloths should cover it",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "27 tablecloths should cover it",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b63542a57a8f9230",
+            "title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "updated_at": "2026-06-30T23:03:29.789307+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b63542a57a8f9230_section_10",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b63542a57a8f9230#section-10",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b63542a57a8f9230",
+          "name": "Meeting_16__October_21st_2025_20260630_230329.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b63542a57a8f9230",
+          "section_heading": "General logistics"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T23:03:29.789307+00:00",
+        "content": {
+          "text": "-    Thank you cards in Mrs. Haider’s office. Sign up for which cards you are going to\n         write. Thank you gifts are all taken care of.\n             -    All of us pick 4 adults to write a card for\n             -    Mrs Schultz email gift cards\n             -    Come grab them tomorrow\n    -    Pizza debate with SJR- thank you for the support!\n    -    VYMUN on Wolf TV? Howl article?\n             -    Ann wrote one, sent to Mrs Macmillan include tomorrow\n             -    Prefers photos if possible - logo from school?\n             -    VYMUN logo and St John’s Ravencourt\n    -    Popsicle stands & slide decks for the TVs at the Alumni Centre?\n             -    Chaperone guide and extra maps at reg desk\n    -    Do we need backgrounders printed as support for committees?\n             -    Get staff to engage with backgrounders\n             -    Still print them\n             -    Mrs Haider has done 2 committees and all VYMUN junior\n             -    Mrs Boland and Mrs Haider can photocopy the rest\n    -    Westwood printing materials should arrive by Thursday\n    -    Pens should arrive this week too. Tracking here.\n    -    Junior swag bags will be assembled in AP CoGo this week.\n    -    Certificates need to be printed in advance. Template?\n    -    Tech: What dongles do we need?\n    -    ChairMUN: Do we need this?\n    -    Who are our First Responders? We should make them visible on the Yapp and at the\n         Opening Ceremonies\n             -    James, Lily, Mila, Cole, Ella, Elliott, Miller\n             -    Elliott will contact them first to let them know"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b63542a57a8f9230#section-10",
+          "quote": "-    Thank you cards in Mrs. Haider’s office. Sign up for which cards you are going to\n         write. Thank you gifts are all taken care of.\n             -    All of us pick 4 adults to write a card for\n             -    Mrs Schultz email gift cards\n             -    Come grab them tomorrow\n    -    Pizza debate with SJR- thank you for the support!\n    -    VYMUN on Wolf TV? Howl article?\n             -    Ann wrote one, sent to Mrs Macmillan include tomorrow\n             -    Prefers photos if possible - logo from school?\n             -    VYMUN logo and St John’s Ravencourt\n    -    Popsicle stands & slide decks for the TVs at the Alumni Centre?\n             -    Chaperone guide and extra maps at reg desk\n    -    Do we need backgrounders printed as support for committees?\n             -    Get staff to engage with backgrounders\n             -    Still print them\n             -    Mrs Haider has done 2 committees and all VYMUN junior\n             -    Mrs Boland and Mrs Haider can photocopy the rest\n    -    Westwood printing materials should arrive by Thursday\n    -    Pens should arrive this week too. Tracking here.\n    -    Junior swag bags will be assembled in AP CoGo this week.\n    -    Certificates need to be printed in advance. Template?\n    -    Tech: What dongles do we need?\n    -    ChairMUN: Do we need this?\n    -    Who are our First Responders? We should make them visible on the Yapp and at the\n         Opening Ceremonies\n             -    James, Lily, Mila, Cole, Ella, Elliott, Miller\n             -    Elliott will contact them first to let them know",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "General logistics",
+          "page": 4
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "General logistics",
+            "text": "-    Thank you cards in Mrs. Haider’s office. Sign up for which cards you are going to\n         write. Thank you gifts are all taken care of.\n             -    All of us pick 4 adults to write a card for\n             -    Mrs Schultz email gift cards\n             -    Come grab them tomorrow\n    -    Pizza debate with SJR- thank you for the support!\n    -    VYMUN on Wolf TV? Howl article?\n             -    Ann wrote one, sent to Mrs Macmillan include tomorrow\n             -    Prefers photos if possible - logo from school?\n             -    VYMUN logo and St John’s Ravencourt\n    -    Popsicle stands & slide decks for the TVs at the Alumni Centre?\n             -    Chaperone guide and extra maps at reg desk\n    -    Do we need backgrounders printed as support for committees?\n             -    Get staff to engage with backgrounders\n             -    Still print them\n             -    Mrs Haider has done 2 committees and all VYMUN junior\n             -    Mrs Boland and Mrs Haider can photocopy the rest\n    -    Westwood printing materials should arrive by Thursday\n    -    Pens should arrive this week too. Tracking here.\n    -    Junior swag bags will be assembled in AP CoGo this week.\n    -    Certificates need to be printed in advance. Template?\n    -    Tech: What dongles do we need?\n    -    ChairMUN: Do we need this?\n    -    Who are our First Responders? We should make them visible on the Yapp and at the\n         Opening Ceremonies\n             -    James, Lily, Mila, Cole, Ella, Elliott, Miller\n             -    Elliott will contact them first to let them know",
+            "lines": [
+              {
+                "text": "-    Thank you cards in Mrs. Haider’s office. Sign up for which cards you are going to",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Thank you cards in Mrs. Haider’s office. Sign up for which cards you are going to",
+                "checkbox": false
+              },
+              {
+                "text": "write. Thank you gifts are all taken care of.",
+                "indent": 9,
+                "bullet_marker": null,
+                "body": "write. Thank you gifts are all taken care of.",
+                "checkbox": false
+              },
+              {
+                "text": "-    All of us pick 4 adults to write a card for",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "All of us pick 4 adults to write a card for",
+                "checkbox": false
+              },
+              {
+                "text": "-    Mrs Schultz email gift cards",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Mrs Schultz email gift cards",
+                "checkbox": false
+              },
+              {
+                "text": "-    Come grab them tomorrow",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Come grab them tomorrow",
+                "checkbox": false
+              },
+              {
+                "text": "-    Pizza debate with SJR- thank you for the support!",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Pizza debate with SJR- thank you for the support!",
+                "checkbox": false
+              },
+              {
+                "text": "-    VYMUN on Wolf TV? Howl article?",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "VYMUN on Wolf TV? Howl article?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Ann wrote one, sent to Mrs Macmillan include tomorrow",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Ann wrote one, sent to Mrs Macmillan include tomorrow",
+                "checkbox": false
+              },
+              {
+                "text": "-    Prefers photos if possible - logo from school?",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Prefers photos if possible - logo from school?",
+                "checkbox": false
+              },
+              {
+                "text": "-    VYMUN logo and St John’s Ravencourt",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "VYMUN logo and St John’s Ravencourt",
+                "checkbox": false
+              },
+              {
+                "text": "-    Popsicle stands & slide decks for the TVs at the Alumni Centre?",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Popsicle stands & slide decks for the TVs at the Alumni Centre?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Chaperone guide and extra maps at reg desk",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Chaperone guide and extra maps at reg desk",
+                "checkbox": false
+              },
+              {
+                "text": "-    Do we need backgrounders printed as support for committees?",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Do we need backgrounders printed as support for committees?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Get staff to engage with backgrounders",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Get staff to engage with backgrounders",
+                "checkbox": false
+              },
+              {
+                "text": "-    Still print them",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Still print them",
+                "checkbox": false
+              },
+              {
+                "text": "-    Mrs Haider has done 2 committees and all VYMUN junior",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Mrs Haider has done 2 committees and all VYMUN junior",
+                "checkbox": false
+              },
+              {
+                "text": "-    Mrs Boland and Mrs Haider can photocopy the rest",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Mrs Boland and Mrs Haider can photocopy the rest",
+                "checkbox": false
+              },
+              {
+                "text": "-    Westwood printing materials should arrive by Thursday",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Westwood printing materials should arrive by Thursday",
+                "checkbox": false
+              },
+              {
+                "text": "-    Pens should arrive this week too. Tracking here.",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Pens should arrive this week too. Tracking here.",
+                "checkbox": false
+              },
+              {
+                "text": "-    Junior swag bags will be assembled in AP CoGo this week.",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Junior swag bags will be assembled in AP CoGo this week.",
+                "checkbox": false
+              },
+              {
+                "text": "-    Certificates need to be printed in advance. Template?",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Certificates need to be printed in advance. Template?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Tech: What dongles do we need?",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Tech: What dongles do we need?",
+                "checkbox": false
+              },
+              {
+                "text": "-    ChairMUN: Do we need this?",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "ChairMUN: Do we need this?",
+                "checkbox": false
+              },
+              {
+                "text": "-    Who are our First Responders? We should make them visible on the Yapp and at the",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Who are our First Responders? We should make them visible on the Yapp and at the",
+                "checkbox": false
+              },
+              {
+                "text": "Opening Ceremonies",
+                "indent": 9,
+                "bullet_marker": null,
+                "body": "Opening Ceremonies",
+                "checkbox": false
+              },
+              {
+                "text": "-    James, Lily, Mila, Cole, Ella, Elliott, Miller",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "James, Lily, Mila, Cole, Ella, Elliott, Miller",
+                "checkbox": false
+              },
+              {
+                "text": "-    Elliott will contact them first to let them know",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Elliott will contact them first to let them know",
+                "checkbox": false
+              }
+            ],
+            "page": 4
+          },
+          "lines": [
+            {
+              "text": "-    Thank you cards in Mrs. Haider’s office. Sign up for which cards you are going to",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Thank you cards in Mrs. Haider’s office. Sign up for which cards you are going to",
+              "checkbox": false
+            },
+            {
+              "text": "write. Thank you gifts are all taken care of.",
+              "indent": 9,
+              "bullet_marker": null,
+              "body": "write. Thank you gifts are all taken care of.",
+              "checkbox": false
+            },
+            {
+              "text": "-    All of us pick 4 adults to write a card for",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "All of us pick 4 adults to write a card for",
+              "checkbox": false
+            },
+            {
+              "text": "-    Mrs Schultz email gift cards",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Mrs Schultz email gift cards",
+              "checkbox": false
+            },
+            {
+              "text": "-    Come grab them tomorrow",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Come grab them tomorrow",
+              "checkbox": false
+            },
+            {
+              "text": "-    Pizza debate with SJR- thank you for the support!",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Pizza debate with SJR- thank you for the support!",
+              "checkbox": false
+            },
+            {
+              "text": "-    VYMUN on Wolf TV? Howl article?",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "VYMUN on Wolf TV? Howl article?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Ann wrote one, sent to Mrs Macmillan include tomorrow",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Ann wrote one, sent to Mrs Macmillan include tomorrow",
+              "checkbox": false
+            },
+            {
+              "text": "-    Prefers photos if possible - logo from school?",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Prefers photos if possible - logo from school?",
+              "checkbox": false
+            },
+            {
+              "text": "-    VYMUN logo and St John’s Ravencourt",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "VYMUN logo and St John’s Ravencourt",
+              "checkbox": false
+            },
+            {
+              "text": "-    Popsicle stands & slide decks for the TVs at the Alumni Centre?",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Popsicle stands & slide decks for the TVs at the Alumni Centre?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Chaperone guide and extra maps at reg desk",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Chaperone guide and extra maps at reg desk",
+              "checkbox": false
+            },
+            {
+              "text": "-    Do we need backgrounders printed as support for committees?",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Do we need backgrounders printed as support for committees?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Get staff to engage with backgrounders",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Get staff to engage with backgrounders",
+              "checkbox": false
+            },
+            {
+              "text": "-    Still print them",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Still print them",
+              "checkbox": false
+            },
+            {
+              "text": "-    Mrs Haider has done 2 committees and all VYMUN junior",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Mrs Haider has done 2 committees and all VYMUN junior",
+              "checkbox": false
+            },
+            {
+              "text": "-    Mrs Boland and Mrs Haider can photocopy the rest",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Mrs Boland and Mrs Haider can photocopy the rest",
+              "checkbox": false
+            },
+            {
+              "text": "-    Westwood printing materials should arrive by Thursday",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Westwood printing materials should arrive by Thursday",
+              "checkbox": false
+            },
+            {
+              "text": "-    Pens should arrive this week too. Tracking here.",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Pens should arrive this week too. Tracking here.",
+              "checkbox": false
+            },
+            {
+              "text": "-    Junior swag bags will be assembled in AP CoGo this week.",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Junior swag bags will be assembled in AP CoGo this week.",
+              "checkbox": false
+            },
+            {
+              "text": "-    Certificates need to be printed in advance. Template?",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Certificates need to be printed in advance. Template?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Tech: What dongles do we need?",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Tech: What dongles do we need?",
+              "checkbox": false
+            },
+            {
+              "text": "-    ChairMUN: Do we need this?",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "ChairMUN: Do we need this?",
+              "checkbox": false
+            },
+            {
+              "text": "-    Who are our First Responders? We should make them visible on the Yapp and at the",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Who are our First Responders? We should make them visible on the Yapp and at the",
+              "checkbox": false
+            },
+            {
+              "text": "Opening Ceremonies",
+              "indent": 9,
+              "bullet_marker": null,
+              "body": "Opening Ceremonies",
+              "checkbox": false
+            },
+            {
+              "text": "-    James, Lily, Mila, Cole, Ella, Elliott, Miller",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "James, Lily, Mila, Cole, Ella, Elliott, Miller",
+              "checkbox": false
+            },
+            {
+              "text": "-    Elliott will contact them first to let them know",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Elliott will contact them first to let them know",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b63542a57a8f9230",
+            "title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "updated_at": "2026-06-30T23:03:29.789307+00:00"
+          }
+        }
+      },
+      {
+        "event_id": "uploaded_document_file_b63542a57a8f9230_section_11",
+        "source_type": "uploaded_document",
+        "source_subtype": "document_section",
+        "external_id": "file_b63542a57a8f9230#section-11",
+        "source_url": null,
+        "workspace": {
+          "name": "local_upload"
+        },
+        "container": {
+          "type": "document",
+          "id": "file_b63542a57a8f9230",
+          "name": "Meeting_16__October_21st_2025_20260630_230329.pdf"
+        },
+        "context": {
+          "type": "document",
+          "root_id": "file_b63542a57a8f9230",
+          "section_heading": "Document"
+        },
+        "actor": {
+          "name": null,
+          "role": null
+        },
+        "event_type": "document_section",
+        "created_at": null,
+        "updated_at": "2026-06-30T23:03:29.789307+00:00",
+        "content": {
+          "text": "-    Crisis staff supplies? Mrs. Haider has some props.\n             -    Mrs Haider has some stuff, get Ella to come look through it\n             -    Need mustaches\n    -    Mrs. Haider and Owen to review bus schedule (and confirm driver)\n\nIt’s been a great year!"
+        },
+        "provenance": {
+          "source_type": "uploaded_document",
+          "locator": "file_b63542a57a8f9230#section-11",
+          "quote": "-    Crisis staff supplies? Mrs. Haider has some props.\n             -    Mrs Haider has some stuff, get Ella to come look through it\n             -    Need mustaches\n    -    Mrs. Haider and Owen to review bus schedule (and confirm driver)\n\nIt’s been a great year!",
+          "workspace": "local_upload",
+          "document_id": "file_b63542a57a8f9230",
+          "document_title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+          "section_heading": "Document",
+          "page": 5
+        },
+        "raw_ref": {
+          "source": "uploaded_document",
+          "section": {
+            "heading": "Document",
+            "text": "-    Crisis staff supplies? Mrs. Haider has some props.\n             -    Mrs Haider has some stuff, get Ella to come look through it\n             -    Need mustaches\n    -    Mrs. Haider and Owen to review bus schedule (and confirm driver)\n\nIt’s been a great year!",
+            "lines": [
+              {
+                "text": "-    Crisis staff supplies? Mrs. Haider has some props.",
+                "indent": 0,
+                "bullet_marker": "-",
+                "body": "Crisis staff supplies? Mrs. Haider has some props.",
+                "checkbox": false
+              },
+              {
+                "text": "-    Mrs Haider has some stuff, get Ella to come look through it",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Mrs Haider has some stuff, get Ella to come look through it",
+                "checkbox": false
+              },
+              {
+                "text": "-    Need mustaches",
+                "indent": 13,
+                "bullet_marker": "-",
+                "body": "Need mustaches",
+                "checkbox": false
+              },
+              {
+                "text": "-    Mrs. Haider and Owen to review bus schedule (and confirm driver)",
+                "indent": 4,
+                "bullet_marker": "-",
+                "body": "Mrs. Haider and Owen to review bus schedule (and confirm driver)",
+                "checkbox": false
+              },
+              {
+                "text": "It’s been a great year!",
+                "indent": 0,
+                "bullet_marker": null,
+                "body": "It’s been a great year!",
+                "checkbox": false
+              }
+            ],
+            "page": 5
+          },
+          "lines": [
+            {
+              "text": "-    Crisis staff supplies? Mrs. Haider has some props.",
+              "indent": 0,
+              "bullet_marker": "-",
+              "body": "Crisis staff supplies? Mrs. Haider has some props.",
+              "checkbox": false
+            },
+            {
+              "text": "-    Mrs Haider has some stuff, get Ella to come look through it",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Mrs Haider has some stuff, get Ella to come look through it",
+              "checkbox": false
+            },
+            {
+              "text": "-    Need mustaches",
+              "indent": 13,
+              "bullet_marker": "-",
+              "body": "Need mustaches",
+              "checkbox": false
+            },
+            {
+              "text": "-    Mrs. Haider and Owen to review bus schedule (and confirm driver)",
+              "indent": 4,
+              "bullet_marker": "-",
+              "body": "Mrs. Haider and Owen to review bus schedule (and confirm driver)",
+              "checkbox": false
+            },
+            {
+              "text": "It’s been a great year!",
+              "indent": 0,
+              "bullet_marker": null,
+              "body": "It’s been a great year!",
+              "checkbox": false
+            }
+          ],
+          "document": {
+            "source_type": "uploaded_document",
+            "document_id": "file_b63542a57a8f9230",
+            "title": "Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "workspace": "local_upload",
+            "path": "outputs/ui_uploads/Meeting_16__October_21st_2025_20260630_230329.pdf",
+            "updated_at": "2026-06-30T23:03:29.789307+00:00"
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,1143 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "generated_at": "2026-07-01T05:30:47.665385+00:00",
+    "candidate_count": 25
+  },
+  "candidates": [
+    {
+      "memory_id": "mem_5e394a901436",
+      "source_object_id": "memory_90a62b96b089",
+      "type": "open_question",
+      "title": "Should weakly_supported memory be approvable?",
+      "summary": "Should weakly_supported memory be approvable?",
+      "owner_names": [],
+      "status": "unresolved",
+      "confidence": 0.54,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should weakly_supported memory be approvable?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should weakly_supported memory be approvable?",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.665385+00:00",
+      "updated_at": "2026-07-01T05:30:47.665385+00:00",
+      "metadata": {
+        "source_kind": "open_question",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "low_confidence"
+      ],
+      "memory_quality_score": 0.87
+    },
+    {
+      "memory_id": "mem_f91a70b7a66b",
+      "source_object_id": "memory_9e70679eb6d6",
+      "type": "open_question",
+      "title": "Should approved_memory become canonical in v0.8.2?",
+      "summary": "Should approved_memory become canonical in v0.8.2?",
+      "owner_names": [],
+      "status": "unresolved",
+      "confidence": 0.54,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should approved_memory become canonical in v0.8.2?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should approved_memory become canonical in v0.8.2?",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.665385+00:00",
+      "updated_at": "2026-07-01T05:30:47.665385+00:00",
+      "metadata": {
+        "source_kind": "open_question",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "low_confidence"
+      ],
+      "memory_quality_score": 0.87
+    },
+    {
+      "memory_id": "mem_e3618661e764",
+      "source_object_id": "memory_086795fb4326",
+      "type": "open_question",
+      "title": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "summary": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "owner_names": [],
+      "status": "unresolved",
+      "confidence": 0.54,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should review actions eventually support reviewer identity beyond CLI strings?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.665385+00:00",
+      "updated_at": "2026-07-01T05:30:47.665385+00:00",
+      "metadata": {
+        "source_kind": "open_question",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "low_confidence"
+      ],
+      "memory_quality_score": 0.87
+    },
+    {
+      "memory_id": "mem_43f8842d56a9",
+      "source_object_id": "memory_b2e851399f74",
+      "type": "open_question",
+      "title": "Should actions be hash-chained or tamper-evident later?",
+      "summary": "Should actions be hash-chained or tamper-evident later?",
+      "owner_names": [],
+      "status": "unresolved",
+      "confidence": 0.54,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should actions be hash-chained or tamper-evident later?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should actions be hash-chained or tamper-evident later?",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.665385+00:00",
+      "updated_at": "2026-07-01T05:30:47.665385+00:00",
+      "metadata": {
+        "source_kind": "open_question",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [
+        "low_confidence"
+      ],
+      "memory_quality_score": 0.87
+    },
+    {
+      "memory_id": "mem_3b0044ce8bee",
+      "source_object_id": "memory_41df74a23ad9",
+      "type": "open_question",
+      "title": "Should Streamlit expose approve/reject/edit actions?",
+      "summary": "Should Streamlit expose approve/reject/edit actions?",
+      "owner_names": [],
+      "status": "unresolved",
+      "confidence": 0.86,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should Streamlit expose approve/reject/edit actions?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should Streamlit expose approve/reject/edit actions?",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-07-01T05:30:47.665385+00:00",
+      "updated_at": "2026-07-01T05:30:47.665385+00:00",
+      "metadata": {
+        "source_kind": "open_question",
+        "legacy_status": "open"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_4684dadf99fa",
+      "source_object_id": "weak_validation_evidence",
+      "type": "context",
+      "title": "Validation claims are self-reported",
+      "summary": "Validation claims are self-reported and need log evidence.",
+      "owner_names": [],
+      "status": "needs_review",
+      "confidence": 0.0,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "PASS, 212 tests",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "PASS, 212 tests",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.665385+00:00",
+      "updated_at": "2026-07-01T05:30:47.665385+00:00",
+      "metadata": {
+        "source_kind": "review_queue",
+        "reason": "weak_validation_evidence",
+        "severity": "medium"
+      },
+      "review_reason_codes": [
+        "weak_validation_evidence"
+      ],
+      "memory_quality_score": 0.87
+    },
+    {
+      "memory_id": "mem_c063eb5333ed",
+      "source_object_id": "claim_6d3617fe0d0c",
+      "type": "context",
+      "title": "The implementation added src/review_actions.py.",
+      "summary": "The implementation added src/review_actions.py.",
+      "owner_names": [],
+      "status": "candidate",
+      "confidence": 0.84,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`src/review_actions.py`",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`src/review_actions.py`",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_6d3617fe0d0c",
+        "claim_type": "file_added",
+        "audit_verdict": "supported",
+        "source_section": "Agent Implementation Summary"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_d23555a4f7aa",
+      "source_object_id": "claim_cca402284ea7",
+      "type": "context",
+      "title": "The implementation added review_memory.py.",
+      "summary": "The implementation added review_memory.py.",
+      "owner_names": [],
+      "status": "candidate",
+      "confidence": 0.84,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`review_memory.py`",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`review_memory.py`",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_cca402284ea7",
+        "claim_type": "file_added",
+        "audit_verdict": "supported",
+        "source_section": "Agent Implementation Summary"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_d551e6bc91d5",
+      "source_object_id": "claim_cf73a3fe877e",
+      "type": "context",
+      "title": "The implementation modified src/memory_store.py.",
+      "summary": "The implementation modified src/memory_store.py.",
+      "owner_names": [],
+      "status": "candidate",
+      "confidence": 0.84,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`src/memory_store.py`",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`src/memory_store.py`",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_cf73a3fe877e",
+        "claim_type": "file_modified",
+        "audit_verdict": "supported",
+        "source_section": "Agent Implementation Summary"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_74dec0f5f478",
+      "source_object_id": "claim_33cabeb8fdde",
+      "type": "context",
+      "title": "The implementation modified src/review_policy.py.",
+      "summary": "The implementation modified src/review_policy.py.",
+      "owner_names": [],
+      "status": "candidate",
+      "confidence": 0.84,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`src/review_policy.py`",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`src/review_policy.py`",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_33cabeb8fdde",
+        "claim_type": "file_modified",
+        "audit_verdict": "supported",
+        "source_section": "Agent Implementation Summary"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_b73c6c137852",
+      "source_object_id": "claim_92ba52344b71",
+      "type": "context",
+      "title": "The implementation added tests/test_review_actions.py.",
+      "summary": "The implementation added tests/test_review_actions.py.",
+      "owner_names": [],
+      "status": "candidate",
+      "confidence": 0.84,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`tests/test_review_actions.py`",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`tests/test_review_actions.py`",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_92ba52344b71",
+        "claim_type": "file_added",
+        "audit_verdict": "supported",
+        "source_section": "Agent Implementation Summary"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_13e40b84b64d",
+      "source_object_id": "claim_b3ba3828d55b",
+      "type": "context",
+      "title": "The implementation modified README.md.",
+      "summary": "The implementation modified README.md.",
+      "owner_names": [],
+      "status": "candidate",
+      "confidence": 0.84,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_4",
+        "uploaded_document_file_ed7d1d643b83d319_section_5"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_4",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Agent Implementation Summary",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`README`",
+          "locator": "file_ed7d1d643b83d319#section-4",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`README`",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_b3ba3828d55b",
+        "claim_type": "file_modified",
+        "audit_verdict": "supported",
+        "source_section": "Agent Implementation Summary"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_c5071dffa138",
+      "source_object_id": "claim_3342eac7f6a0",
+      "type": "context",
+      "title": "The CLI supports approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale.",
+      "summary": "The CLI supports approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale.",
+      "owner_names": [],
+      "status": "candidate",
+      "confidence": 0.84,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Applying review actions",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Applying review actions",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_3342eac7f6a0",
+        "claim_type": "capability",
+        "audit_verdict": "supported",
+        "source_section": "Claimed Capabilities"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_e1eab26617bf",
+      "source_object_id": "claim_e595b61bc15d",
+      "type": "context",
+      "title": "Review actions update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json.",
+      "summary": "Review actions update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json.",
+      "owner_names": [],
+      "status": "candidate",
+      "confidence": 0.82,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Updating review-state artifacts",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Updating review-state artifacts",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_e595b61bc15d",
+        "claim_type": "capability",
+        "audit_verdict": "supported",
+        "source_section": "Claimed Capabilities"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_f4cff53f8e77",
+      "source_object_id": "claim_f8dca1a87922",
+      "type": "context",
+      "title": "review_actions.json is append-only.",
+      "summary": "review_actions.json is append-only.",
+      "owner_names": [],
+      "status": "candidate",
+      "confidence": 0.84,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Appending to review_actions.json",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Appending to review_actions.json",
+      "evidence_state": "supported",
+      "review_state": "unreviewed",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_f8dca1a87922",
+        "claim_type": "capability",
+        "audit_verdict": "supported",
+        "source_section": "Claimed Capabilities"
+      },
+      "review_reason_codes": [],
+      "memory_quality_score": 1.0
+    },
+    {
+      "memory_id": "mem_777ec3f5e78a",
+      "source_object_id": "claim_7a3b59bdca16",
+      "type": "decision",
+      "title": "Raw extraction is not trusted memory.",
+      "summary": "Raw extraction is not trusted memory.",
+      "owner_names": [],
+      "status": "needs_review",
+      "confidence": 0.62,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Raw extraction is not trusted memory.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Raw extraction is not trusted memory.",
+      "evidence_state": "weakly_supported",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_7a3b59bdca16",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      },
+      "review_reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "memory_quality_score": 0.646
+    },
+    {
+      "memory_id": "mem_720db365e999",
+      "source_object_id": "claim_93fc4b0b4157",
+      "type": "decision",
+      "title": "Candidate memory must not become approved memory automatically.",
+      "summary": "Candidate memory must not become approved memory automatically.",
+      "owner_names": [],
+      "status": "needs_review",
+      "confidence": 0.62,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Candidate memory must not become approved memory automatically.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Candidate memory must not become approved memory automatically.",
+      "evidence_state": "weakly_supported",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_93fc4b0b4157",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      },
+      "review_reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "memory_quality_score": 0.646
+    },
+    {
+      "memory_id": "mem_507eff6ae5a7",
+      "source_object_id": "claim_9a502c915e83",
+      "type": "decision",
+      "title": "Approved memory is the trusted store for reviewed items.",
+      "summary": "Approved memory is the trusted store for reviewed items.",
+      "owner_names": [],
+      "status": "needs_review",
+      "confidence": 0.62,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Approved memory is the trusted store for reviewed items.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Approved memory is the trusted store for reviewed items.",
+      "evidence_state": "weakly_supported",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_9a502c915e83",
+        "claim_type": "technical_decision",
+        "audit_verdict": "weakly_supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      },
+      "review_reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "memory_quality_score": 0.646
+    },
+    {
+      "memory_id": "mem_2cc5edcacbe6",
+      "source_object_id": "claim_d34e16f7a91f",
+      "type": "risk",
+      "title": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "summary": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "owner_names": [],
+      "status": "needs_review",
+      "confidence": 0.54,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "evidence_state": "unknown",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_d34e16f7a91f",
+        "claim_type": "risk",
+        "audit_verdict": "needs_review",
+        "source_section": "Existing Product Rules / Approved Context"
+      },
+      "review_reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "memory_quality_score": 0.56
+    },
+    {
+      "memory_id": "mem_8a177ec30b28",
+      "source_object_id": "claim_020b11837288",
+      "type": "risk",
+      "title": "Edits could accidentally allow source evidence to be removed.",
+      "summary": "Edits could accidentally allow source evidence to be removed.",
+      "owner_names": [],
+      "status": "needs_review",
+      "confidence": 0.54,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Edits could accidentally allow source evidence to be removed.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Edits could accidentally allow source evidence to be removed.",
+      "evidence_state": "unknown",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_020b11837288",
+        "claim_type": "risk",
+        "audit_verdict": "needs_review",
+        "source_section": "Existing Product Rules / Approved Context"
+      },
+      "review_reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "memory_quality_score": 0.56
+    },
+    {
+      "memory_id": "mem_5440e711bfa9",
+      "source_object_id": "claim_d962bd9a66e9",
+      "type": "risk",
+      "title": "memory_state_debug.json could diverge from actual approved/rejected state.",
+      "summary": "memory_state_debug.json could diverge from actual approved/rejected state.",
+      "owner_names": [],
+      "status": "needs_review",
+      "confidence": 0.82,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "`memory_state_debug.json` could diverge from actual approved/rejected state.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "`memory_state_debug.json` could diverge from actual approved/rejected state.",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_d962bd9a66e9",
+        "claim_type": "risk",
+        "audit_verdict": "supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      },
+      "review_reason_codes": [
+        "agent_audit_needs_review"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_a4f146cedd38",
+      "source_object_id": "claim_17b98ec05a64",
+      "type": "risk",
+      "title": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "summary": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "owner_names": [],
+      "status": "needs_review",
+      "confidence": 0.84,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Duplicate handling by `memory_id` could incorrectly overwrite edited objects.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Duplicate handling by `memory_id` could incorrectly overwrite edited objects.",
+      "evidence_state": "supported",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_17b98ec05a64",
+        "claim_type": "risk",
+        "audit_verdict": "supported",
+        "source_section": "Existing Product Rules / Approved Context"
+      },
+      "review_reason_codes": [
+        "agent_audit_needs_review"
+      ],
+      "memory_quality_score": 0.92
+    },
+    {
+      "memory_id": "mem_19fb34ddde26",
+      "source_object_id": "claim_938b48473095",
+      "type": "open_question",
+      "title": "Should weakly_supported memory be approvable?",
+      "summary": "Should weakly_supported memory be approvable?",
+      "owner_names": [],
+      "status": "needs_review",
+      "confidence": 0.54,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should weakly_supported memory be approvable?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should weakly_supported memory be approvable?",
+      "evidence_state": "unknown",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_938b48473095",
+        "claim_type": "open_question",
+        "audit_verdict": "needs_review",
+        "source_section": "Existing Product Rules / Approved Context"
+      },
+      "review_reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "memory_quality_score": 0.56
+    },
+    {
+      "memory_id": "mem_e9b65b0a1ab2",
+      "source_object_id": "claim_6673c85ddcef",
+      "type": "open_question",
+      "title": "Should approved_memory become canonical in v0.8.2?",
+      "summary": "Should approved_memory become canonical in v0.8.2?",
+      "owner_names": [],
+      "status": "needs_review",
+      "confidence": 0.54,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should approved_memory become canonical in v0.8.2?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should approved_memory become canonical in v0.8.2?",
+      "evidence_state": "unknown",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_6673c85ddcef",
+        "claim_type": "open_question",
+        "audit_verdict": "needs_review",
+        "source_section": "Existing Product Rules / Approved Context"
+      },
+      "review_reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "memory_quality_score": 0.56
+    },
+    {
+      "memory_id": "mem_fac6794aceca",
+      "source_object_id": "claim_cd89958e89d5",
+      "type": "open_question",
+      "title": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "summary": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "owner_names": [],
+      "status": "needs_review",
+      "confidence": 0.54,
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should review actions eventually support reviewer identity beyond CLI strings?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "evidence_state": "unknown",
+      "review_state": "needs_review",
+      "created_at": "2026-07-01T05:30:47.573205+00:00",
+      "updated_at": "2026-07-01T05:30:47.573205+00:00",
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_cd89958e89d5",
+        "claim_type": "open_question",
+        "audit_verdict": "needs_review",
+        "source_section": "Existing Product Rules / Approved Context"
+      },
+      "review_reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "memory_quality_score": 0.56
+    }
+  ]
+}

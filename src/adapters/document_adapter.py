@@ -194,10 +194,25 @@ def _sections_from_markdown(text: str) -> list[dict[str, Any]]:
     sections: list[dict[str, Any]] = []
     current_heading = "Document"
     current_lines: list[str] = []
+    in_fence = False
+    fence_language = ""
 
     for line in text.splitlines():
+        fence_match = re.match(r"^(\s*)```([A-Za-z0-9_-]*)", line)
+        if fence_match:
+            if not in_fence:
+                in_fence = True
+                fence_language = fence_match.group(2).lower()
+            elif fence_language == "diff" and fence_match.group(1):
+                current_lines.append(line)
+                continue
+            else:
+                in_fence = False
+                fence_language = ""
+            current_lines.append(line)
+            continue
         heading_match = re.match(r"^\s{0,3}#{1,6}\s+(.+?)\s*$", line)
-        if heading_match:
+        if heading_match and not in_fence:
             _append_section(sections, current_heading, current_lines)
             current_heading = heading_match.group(1).strip()
             current_lines = []

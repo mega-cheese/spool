@@ -1,0 +1,490 @@
+from __future__ import annotations
+
+import hashlib
+import re
+from dataclasses import dataclass, field
+
+from .pr_evidence import PREvidence
+from .scope_gate import ScopeReport, evaluate_scope, parse_changed_files
+
+
+CLAIM_VERDICTS = {
+    "supported",
+    "weakly_supported",
+    "unsupported",
+    "contradicted",
+    "not_applicable",
+    "no_relevant_memory",
+    "missing_evidence",
+    "needs_review",
+}
+
+
+@dataclass
+class TrustClaim:
+    claim_id: str
+    claim: str
+    claim_type: str
+    verdict: str
+    evidence_target: str
+    evidence_quote: str = ""
+    reason: str = ""
+
+    def to_dict(self) -> dict[str, str]:
+        return {
+            "claim_id": self.claim_id,
+            "claim": self.claim,
+            "claim_type": self.claim_type,
+            "verdict": self.verdict,
+            "evidence_target": self.evidence_target,
+            "evidence_quote": self.evidence_quote,
+            "reason": self.reason,
+        }
+
+
+@dataclass
+class BuriedDecision:
+    decision_id: str
+    decision: str
+    source: str
+    reason: str
+    verdict: str = "needs_review"
+
+    def to_dict(self) -> dict[str, str]:
+        return {
+            "decision_id": self.decision_id,
+            "decision": self.decision,
+            "source": self.source,
+            "reason": self.reason,
+            "verdict": self.verdict,
+        }
+
+
+@dataclass
+class RepoMemoryCheck:
+    memory_id: str
+    memory: str
+    verdict: str
+    reason: str
+    evidence_quote: str = ""
+
+    def to_dict(self) -> dict[str, str]:
+        return {
+            "memory_id": self.memory_id,
+            "memory": self.memory,
+            "verdict": self.verdict,
+            "reason": self.reason,
+            "evidence_quote": self.evidence_quote,
+        }
+
+
+@dataclass
+class PRTrustReport:
+    overall_verdict: str
+    scope_report: ScopeReport
+    claims: list[TrustClaim] = field(default_factory=list)
+    weak_or_missing_evidence: list[str] = field(default_factory=list)
+    buried_decisions: list[BuriedDecision] = field(default_factory=list)
+    repo_memory_check: list[RepoMemoryCheck] = field(default_factory=list)
+    risks: list[str] = field(default_factory=list)
+    reviewer_actions: list[str] = field(default_factory=list)
+
+    def to_dict(self) -> dict[str, object]:
+        return {
+            "overall_verdict": self.overall_verdict,
+            "scope": self.scope_report.to_dict(),
+            "agent_claims": [claim.to_dict() for claim in self.claims],
+            "weak_or_missing_evidence": list(self.weak_or_missing_evidence),
+            "buried_decisions": [decision.to_dict() for decision in self.buried_decisions],
+            "repo_memory_check": [item.to_dict() for item in self.repo_memory_check],
+            "risks": list(self.risks),
+            "reviewer_actions": list(self.reviewer_actions),
+        }
+
+
+def analyze_pr_trust(evidence: PREvidence, *, mode: str = "heuristic") -> PRTrustReport:
+    del mode
+    changed_files = parse_changed_files(evidence.diff_text)
+    scope = evaluate_scope(evidence.task_text, changed_files, task_source=evidence.task_path)
+    claims = _extract_and_verify_claims(evidence, changed_files)
+    buried_decisions = _detect_buried_decisions(evidence.agent_summary_text)
+    repo_memory_check = _check_repo_memory(evidence)
+    weak_or_missing = _weak_or_missing_evidence(claims)
+    risks = _risks(scope, claims, buried_decisions, repo_memory_check)
+    verdict = _overall_verdict(scope, claims, buried_decisions, repo_memory_check)
+    reviewer_actions = _reviewer_actions(verdict, buried_decisions, repo_memory_check)
+    return PRTrustReport(
+        overall_verdict=verdict,
+        scope_report=scope,
+        claims=claims,
+        weak_or_missing_evidence=weak_or_missing,
+        buried_decisions=buried_decisions,
+        repo_memory_check=repo_memory_check,
+        risks=risks,
+        reviewer_actions=reviewer_actions,
+    )
+
+
+def _extract_and_verify_claims(evidence: PREvidence, changed_files: list[object]) -> list[TrustClaim]:
+    changed_paths = {getattr(change, "path") for change in changed_files}
+    claims: list[TrustClaim] = []
+    for line in _summary_claim_lines(evidence.agent_summary_text):
+        lower = line.lower()
+        if _is_test_pass_claim(line):
+            claims.append(_test_claim(line, evidence))
+            continue
+        paths = _paths_from_text(line)
+        code_paths = [path for path in paths if "/" in path or path.startswith("README")]
+        artifact_paths = [path for path in paths if path not in code_paths]
+        if _is_behavior_claim(line, artifact_paths):
+            claims.append(_behavior_claim(line, evidence))
+        if code_paths:
+            for path in code_paths:
+                claim_type = "file_added" if re.search(r"\badded\b", lower) else "file_modified"
+                if path in changed_paths:
+                    claims.append(
+                        _claim(
+                            line,
+                            claim_type,
+                            "diff.patch",
+                            "supported",
+                            evidence_quote=_diff_header_for_path(evidence.diff_text, path),
+                            reason=f"{path} appears in the PR diff.",
+                        )
+                    )
+                else:
+                    claims.append(
+                        _claim(
+                            line,
+                            claim_type,
+                            "diff.patch",
+                            "unsupported",
+                            reason=f"{path} does not appear in the PR diff.",
+                        )
+                    )
+    return _dedupe_claims(claims)
+
+
+def _is_behavior_claim(line: str, artifact_paths: list[str]) -> bool:
+    if not artifact_paths:
+        return False
+    return bool(re.search(r"\b(append|appends|overwrite|overwrites|persist|save|write)\b", line, re.IGNORECASE))
+
+
+def _behavior_claim(line: str, evidence: PREvidence) -> TrustClaim:
+    lower = line.lower()
+    diff = evidence.diff_text
+    if "overwrite" in lower:
+        supported = bool(re.search(r"json\.dumps\(\[action\]\)|json\(\[action\]\)|write_text\([^)]*\[action\]", diff))
+        return _claim(
+            line,
+            "capability_claim",
+            "diff.patch",
+            "supported" if supported else "needs_review",
+            evidence_quote=_first_matching_line(diff, ["json.dumps([action])", "json([action])", "[action]"]),
+            reason=(
+                "The diff shows review actions being written as a single-action list."
+                if supported
+                else "The behavior claim mentions overwriting, but deterministic diff evidence was not found."
+            ),
+        )
+    if "append" in lower:
+        supported = "actions.append(action)" in diff or "append_review_action" in diff
+        return _claim(
+            line,
+            "capability_claim",
+            "diff.patch",
+            "supported" if supported else "needs_review",
+            evidence_quote=_first_matching_line(diff, ["actions.append(action)", "append_review_action"]),
+            reason=(
+                "The diff shows append behavior for review actions."
+                if supported
+                else "The behavior claim mentions appending, but deterministic diff evidence was not found."
+            ),
+        )
+    return _claim(line, "capability_claim", "diff.patch", "needs_review", reason="No deterministic behavior matcher handled this claim.")
+
+
+def _test_claim(line: str, evidence: PREvidence) -> TrustClaim:
+    if not evidence.has_test_output:
+        return _claim(
+            "Tests passed.",
+            "test_result_claim",
+            "test_output.txt",
+            "missing_evidence",
+            reason="The agent says tests passed, but no test output was provided.",
+        )
+    if _test_output_passed(evidence.test_output_text):
+        return _claim(
+            "Tests passed.",
+            "test_result_claim",
+            "test_output.txt",
+            "supported",
+            evidence_quote=_first_test_evidence_line(evidence.test_output_text),
+            reason="The provided test output contains a passing result.",
+        )
+    return _claim(
+        "Tests passed.",
+        "test_result_claim",
+        "test_output.txt",
+        "contradicted",
+        evidence_quote=_first_test_evidence_line(evidence.test_output_text),
+        reason="The provided test output does not show a passing result.",
+    )
+
+
+def _detect_buried_decisions(summary_text: str) -> list[BuriedDecision]:
+    decisions: list[BuriedDecision] = []
+    for line in _summary_claim_lines(summary_text):
+        if _is_low_value_memory_candidate(line):
+            continue
+        if re.search(r"\b(going forward|must|should not|should|policy|rule|default|architecture)\b", line, re.IGNORECASE):
+            decision = re.sub(r"^\s*going forward,\s*", "", line, flags=re.IGNORECASE).strip()
+            decisions.append(
+                BuriedDecision(
+                    decision_id=_id("decision", decision),
+                    decision=decision,
+                    source="agent_summary",
+                    reason="The agent summary introduced a reusable product or architecture rule.",
+                )
+            )
+    return _dedupe_decisions(decisions)
+
+
+def _check_repo_memory(evidence: PREvidence) -> list[RepoMemoryCheck]:
+    if not evidence.repo_memory_exists or not evidence.repo_memory_items:
+        return [
+            RepoMemoryCheck(
+                memory_id="repo_memory_missing",
+                memory="No approved repo memory was provided.",
+                verdict="no_relevant_memory",
+                reason="Missing approved repo memory is not a failure for v0.9.",
+            )
+        ]
+
+    combined = _normalize("\n".join([evidence.agent_summary_text, evidence.diff_text, evidence.task_text]))
+    checks: list[RepoMemoryCheck] = []
+    for item in evidence.repo_memory_items:
+        memory_text = f"{item.title} {item.summary}"
+        normalized_memory = _normalize(memory_text)
+        if "append only" in normalized_memory and re.search(r"\boverwrite|only the latest|json \[ action \]", combined):
+            checks.append(
+                RepoMemoryCheck(
+                    memory_id=item.memory_id,
+                    memory=item.title,
+                    verdict="contradicted",
+                    reason="The PR evidence suggests overwriting review actions, contradicting append-only repo memory.",
+                    evidence_quote=_first_matching_line(evidence.agent_summary_text + "\n" + evidence.diff_text, ["overwrite", "latest", "json([action])"]),
+                )
+            )
+        elif _memory_keywords_overlap(normalized_memory, combined):
+            checks.append(
+                RepoMemoryCheck(
+                    memory_id=item.memory_id,
+                    memory=item.title,
+                    verdict="supported",
+                    reason="The PR evidence appears aligned with this approved repo memory.",
+                )
+            )
+        else:
+            checks.append(
+                RepoMemoryCheck(
+                    memory_id=item.memory_id,
+                    memory=item.title,
+                    verdict="no_relevant_memory",
+                    reason="No relevant evidence matched this approved repo memory item.",
+                )
+            )
+    return checks
+
+
+def _overall_verdict(
+    scope: ScopeReport,
+    claims: list[TrustClaim],
+    buried_decisions: list[BuriedDecision],
+    repo_memory_check: list[RepoMemoryCheck],
+) -> str:
+    if scope.forbidden_violations or any(item.verdict == "contradicted" for item in repo_memory_check):
+        return "stop"
+    if scope.scope_violations or any(claim.verdict == "contradicted" for claim in claims):
+        return "repair"
+    if buried_decisions or any(claim.verdict in {"missing_evidence", "weakly_supported", "needs_review"} for claim in claims):
+        return "human_review"
+    return "continue"
+
+
+def _weak_or_missing_evidence(claims: list[TrustClaim]) -> list[str]:
+    result: list[str] = []
+    for claim in claims:
+        if claim.verdict in {"missing_evidence", "weakly_supported", "needs_review"}:
+            result.append(claim.reason or claim.claim)
+    return result
+
+
+def _risks(
+    scope: ScopeReport,
+    claims: list[TrustClaim],
+    buried_decisions: list[BuriedDecision],
+    repo_memory_check: list[RepoMemoryCheck],
+) -> list[str]:
+    risks: list[str] = []
+    if scope.scope_violations:
+        risks.append(f"Changed files outside the approved task boundary: {', '.join(scope.scope_violations)}.")
+    if scope.forbidden_violations:
+        risks.append(f"Changed forbidden paths: {', '.join(scope.forbidden_violations)}.")
+    if any(claim.verdict == "missing_evidence" for claim in claims):
+        risks.append("Validation claims are missing supporting test output.")
+    if buried_decisions:
+        risks.append("The agent introduced durable decisions that need reviewer approval.")
+    if any(item.verdict == "contradicted" for item in repo_memory_check):
+        risks.append("The PR appears to conflict with approved repo memory.")
+    return risks
+
+
+def _reviewer_actions(verdict: str, decisions: list[BuriedDecision], repo_memory: list[RepoMemoryCheck]) -> list[str]:
+    actions = []
+    if verdict == "continue":
+        actions.append("continue")
+    elif verdict == "repair":
+        actions.append("request repair")
+    elif verdict == "stop":
+        actions.append("human review required")
+        actions.append("stop merge until conflict or violation is resolved")
+    else:
+        actions.append("human review required")
+    if decisions:
+        actions.append("approve decision into repo memory or reject it")
+    if any(item.verdict == "contradicted" for item in repo_memory):
+        actions.append("resolve repo memory conflict")
+    return actions
+
+
+def _summary_claim_lines(text: str) -> list[str]:
+    result: list[str] = []
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        stripped = re.sub(r"^[-*]\s+", "", stripped).strip()
+        if stripped:
+            result.append(_clean_sentence(stripped))
+    return result
+
+
+def _is_test_pass_claim(text: str) -> bool:
+    return bool(re.search(r"\btests?\s+(?:passed|pass|are passing)\b", text, re.IGNORECASE))
+
+
+def _test_output_passed(text: str) -> bool:
+    return bool(re.search(r"(^|\n)\s*OK\s*(\n|$)|\b\d+\s+passed\b|\bPASS\b", text, re.IGNORECASE))
+
+
+def _paths_from_text(text: str) -> list[str]:
+    paths = re.findall(r"`([^`]+\.[A-Za-z0-9]+)`", text)
+    paths.extend(re.findall(r"\b(?:src|tests|app|docs|README)[A-Za-z0-9_./-]*\.[A-Za-z0-9]+\b", text))
+    return _dedupe([path.strip() for path in paths if path.strip()])
+
+
+def _is_low_value_memory_candidate(text: str) -> bool:
+    lower = text.lower()
+    if re.search(r"\b(added|updated|changed|modified)\s+`?[\w./-]+\.(?:py|md|json)`?", lower):
+        return True
+    if "tests passed" in lower or "readme.md was updated" in lower:
+        return True
+    return False
+
+
+def _claim(
+    text: str,
+    claim_type: str,
+    evidence_target: str,
+    verdict: str,
+    *,
+    evidence_quote: str = "",
+    reason: str = "",
+) -> TrustClaim:
+    claim = _clean_sentence(text)
+    return TrustClaim(
+        claim_id=_id(claim_type, claim),
+        claim=claim,
+        claim_type=claim_type,
+        verdict=verdict if verdict in CLAIM_VERDICTS else "needs_review",
+        evidence_target=evidence_target,
+        evidence_quote=evidence_quote,
+        reason=reason,
+    )
+
+
+def _diff_header_for_path(diff_text: str, path: str) -> str:
+    for line in diff_text.splitlines():
+        if line.startswith("diff --git ") and f" b/{path}" in line:
+            return line
+    return path
+
+
+def _first_test_evidence_line(text: str) -> str:
+    for line in text.splitlines():
+        if line.strip():
+            return line.strip()
+    return ""
+
+
+def _first_matching_line(text: str, terms: list[str]) -> str:
+    normalized_terms = [_normalize(term) for term in terms]
+    for line in text.splitlines():
+        normalized_line = _normalize(line)
+        if any(term and term in normalized_line for term in normalized_terms):
+            return line.strip()
+    return ""
+
+
+def _memory_keywords_overlap(memory: str, combined: str) -> bool:
+    keywords = [word for word in memory.split() if len(word) > 5]
+    return any(keyword in combined for keyword in keywords[:4])
+
+
+def _clean_sentence(text: str) -> str:
+    clean = re.sub(r"\s+", " ", text).strip()
+    if not clean:
+        return ""
+    return clean if clean.endswith((".", "?", "!")) else f"{clean}."
+
+
+def _normalize(text: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", str(text).lower())).strip()
+
+
+def _id(prefix: str, text: str) -> str:
+    return f"{prefix}_{hashlib.sha1(text.encode('utf-8')).hexdigest()[:12]}"
+
+
+def _dedupe(values: list[str]) -> list[str]:
+    result: list[str] = []
+    for value in values:
+        if value not in result:
+            result.append(value)
+    return result
+
+
+def _dedupe_claims(claims: list[TrustClaim]) -> list[TrustClaim]:
+    result: list[TrustClaim] = []
+    seen: set[tuple[str, str]] = set()
+    for claim in claims:
+        key = (claim.claim_type, _normalize(claim.claim))
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(claim)
+    return result
+
+
+def _dedupe_decisions(decisions: list[BuriedDecision]) -> list[BuriedDecision]:
+    result: list[BuriedDecision] = []
+    seen: set[str] = set()
+    for decision in decisions:
+        key = _normalize(decision.decision)
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(decision)
+    return result

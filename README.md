@@ -179,6 +179,29 @@ python3 extract_decisions.py path/to/file.pdf outputs/decisions.json --mode llm 
 
 PDF text extraction uses `pypdf`; image-only PDFs raise a clear OCR-not-supported error. DOCX parsing uses `python-docx`.
 
+## Agent Change Packets
+
+An agent change packet is a Markdown artifact containing the original implementation request, the agent implementation summary, claimed validation, git stat, and git diff. Spool classifies these documents as `agent_change_packet` when the headings and packet language are present.
+
+Spool audits the agent's story against deterministic packet evidence: what files or capabilities were claimed, whether the git stat/diff supports those claims, which validation claims are only weakly supported, and whether obvious out-of-scope additions appear. This is not a GitHub integration and it is not AI code review; it verifies the agent's claims, scope, and technical decisions.
+
+Agent packet runs still write the standard run-folder artifacts. They also write:
+
+```text
+agent_change_packet_debug.json
+agent_claims.json
+agent_audit_report.json
+agent_audit_report.md
+```
+
+Candidate technical decisions, risks, open questions, and important implementation claims are projected into `candidate_memory.json` for review. `approved_memory.json` remains empty by default unless an explicit review action approves memory.
+
+Example:
+
+```bash
+python3 extract_decisions.py data/agent_change_packet_v081.md outputs/decisions.json --mode heuristic --pipeline candidates-shadow --pretty
+```
+
 ## Meeting Minutes
 
 Uploaded `.md`, `.txt`, `.docx`, and `.pdf` documents are classified before extraction. Documents that look like meeting minutes, for example notes with `Present`, `Absent`, `Action Items`, agenda numbering, or `To be Discussed Next Time`, get a meeting-memory pass in addition to the existing decision pipeline.

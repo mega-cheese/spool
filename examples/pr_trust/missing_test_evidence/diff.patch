@@ -1,0 +1,9 @@
+diff --git a/src/pricing.py b/src/pricing.py
+index 4444444..5555555 100644
+--- a/src/pricing.py
++++ b/src/pricing.py
+@@ -2,5 +2,7 @@ def validate_price(price):
+-    return price > 0
++    if price <= 0:
++        return False
++    return price <= 999

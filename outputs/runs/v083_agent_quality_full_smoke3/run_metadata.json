@@ -1,0 +1,33 @@
+{
+  "run_id": "v083_agent_quality_full_smoke3",
+  "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+  "pipeline": "candidates-shadow",
+  "mode": "heuristic",
+  "created_at": "2026-07-01T05:30:47.735416+00:00",
+  "artifacts": {
+    "decisions": "outputs/runs/v083_agent_quality_full_smoke3/decisions.json",
+    "normalized_events_debug": "outputs/runs/v083_agent_quality_full_smoke3/normalized_events_debug.json",
+    "source_bundles_debug": "outputs/runs/v083_agent_quality_full_smoke3/source_bundles_debug.json",
+    "candidates_debug": "outputs/runs/v083_agent_quality_full_smoke3/candidates_debug.json",
+    "state_resolution_debug": "outputs/runs/v083_agent_quality_full_smoke3/state_resolution_debug.json",
+    "conflicts_debug": "outputs/runs/v083_agent_quality_full_smoke3/conflicts_debug.json",
+    "meeting_metadata": "outputs/runs/v083_agent_quality_full_smoke3/meeting_metadata.json",
+    "clean_memory": "outputs/runs/v083_agent_quality_full_smoke3/clean_memory.json",
+    "action_items": "outputs/runs/v083_agent_quality_full_smoke3/action_items.json",
+    "open_questions": "outputs/runs/v083_agent_quality_full_smoke3/open_questions.json",
+    "document_memory_debug": "outputs/runs/v083_agent_quality_full_smoke3/document_memory_debug.json",
+    "block_classification_debug": "outputs/runs/v083_agent_quality_full_smoke3/block_classification_debug.json",
+    "agent_change_packet_debug": "outputs/runs/v083_agent_quality_full_smoke3/agent_change_packet_debug.json",
+    "agent_claims": "outputs/runs/v083_agent_quality_full_smoke3/agent_claims.json",
+    "agent_audit_report": "outputs/runs/v083_agent_quality_full_smoke3/agent_audit_report.json",
+    "agent_audit_report_md": "outputs/runs/v083_agent_quality_full_smoke3/agent_audit_report.md",
+    "review_queue": "outputs/runs/v083_agent_quality_full_smoke3/review_queue.json",
+    "candidate_memory": "outputs/runs/v083_agent_quality_full_smoke3/candidate_memory.json",
+    "approved_memory": "outputs/runs/v083_agent_quality_full_smoke3/approved_memory.json",
+    "rejected_memory": "outputs/runs/v083_agent_quality_full_smoke3/rejected_memory.json",
+    "review_actions": "outputs/runs/v083_agent_quality_full_smoke3/review_actions.json",
+    "memory_state_debug": "outputs/runs/v083_agent_quality_full_smoke3/memory_state_debug.json",
+    "review_queue_md": "outputs/runs/v083_agent_quality_full_smoke3/review_queue.md",
+    "raw_decisions": null
+  }
+}

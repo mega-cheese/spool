@@ -1,0 +1,12 @@
+{
+  "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+  "mode": "heuristic",
+  "pipeline": "candidates-shadow",
+  "classification": "agent_change_packet",
+  "generated_at": "2026-07-01T00:07:10.539698+00:00",
+  "meeting_date": null,
+  "location": null,
+  "present": [],
+  "absent": [],
+  "source_event_count": 18
+}

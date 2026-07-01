@@ -1,0 +1,83 @@
+{
+  "overall_verdict": "continue",
+  "scope": {
+    "task_source": "examples/pr_trust/basic_supported/task.md",
+    "approved_task": "Update review action persistence so review actions append to `review_actions.json`.",
+    "allowed_files": [
+      "src/review_actions.py",
+      "tests/test_review_actions.py"
+    ],
+    "forbidden_paths": [
+      "README.md"
+    ],
+    "changed_files": [
+      {
+        "path": "src/review_actions.py",
+        "change_type": "modified",
+        "old_path": "src/review_actions.py",
+        "new_path": "src/review_actions.py"
+      },
+      {
+        "path": "tests/test_review_actions.py",
+        "change_type": "added",
+        "old_path": "/dev/null",
+        "new_path": "tests/test_review_actions.py"
+      }
+    ],
+    "scope_violations": [],
+    "forbidden_violations": []
+  },
+  "agent_claims": [
+    {
+      "claim_id": "capability_claim_0074ddd925fd",
+      "claim": "Updated `src/review_actions.py` so review actions append to `review_actions.json`.",
+      "claim_type": "capability_claim",
+      "verdict": "supported",
+      "evidence_target": "diff.patch",
+      "evidence_quote": "+def append_review_action(path, action):",
+      "reason": "The diff shows append behavior for review actions."
+    },
+    {
+      "claim_id": "file_modified_0074ddd925fd",
+      "claim": "Updated `src/review_actions.py` so review actions append to `review_actions.json`.",
+      "claim_type": "file_modified",
+      "verdict": "supported",
+      "evidence_target": "diff.patch",
+      "evidence_quote": "diff --git a/src/review_actions.py b/src/review_actions.py",
+      "reason": "src/review_actions.py appears in the PR diff."
+    },
+    {
+      "claim_id": "file_added_150640404d4d",
+      "claim": "Added `tests/test_review_actions.py` coverage for append behavior.",
+      "claim_type": "file_added",
+      "verdict": "supported",
+      "evidence_target": "diff.patch",
+      "evidence_quote": "diff --git a/tests/test_review_actions.py b/tests/test_review_actions.py",
+      "reason": "tests/test_review_actions.py appears in the PR diff."
+    },
+    {
+      "claim_id": "test_result_claim_4f24117573c2",
+      "claim": "Tests passed.",
+      "claim_type": "test_result_claim",
+      "verdict": "supported",
+      "evidence_target": "test_output.txt",
+      "evidence_quote": "venv/bin/python -m unittest tests.test_review_actions",
+      "reason": "The provided test output contains a passing result."
+    }
+  ],
+  "weak_or_missing_evidence": [],
+  "buried_decisions": [],
+  "repo_memory_check": [
+    {
+      "memory_id": "repo_memory_missing",
+      "memory": "No approved repo memory was provided.",
+      "verdict": "no_relevant_memory",
+      "reason": "Missing approved repo memory is not a failure for v0.9.",
+      "evidence_quote": ""
+    }
+  ],
+  "risks": [],
+  "reviewer_actions": [
+    "continue"
+  ]
+}

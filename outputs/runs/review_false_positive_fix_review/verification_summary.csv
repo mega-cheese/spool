@@ -1,4 +1,0 @@
-scenario_type,scenario_name,variant,expected_count,actual_count,count_pass,invariant_pass,verdict,failure_count,review_item_count,review_reasons
-review_queue,review_proposal_no_approval,review,0,0,True,False,FAIL,1,0,
-review_queue,review_missing_owner,review,1,1,True,True,PASS,0,1,owner_missing
-review_queue,review_low_confidence_ambiguous,review,0,0,True,True,PASS,0,1,ambiguous_decision

@@ -1,1 +1,0 @@
-{"input_file": "data/block_task_vymun_todo.md", "mode": "llm", "pipeline": "candidates-shadow", "classification": "meeting_minutes", "generated_at": "2026-06-30T08:18:05.216948+00:00", "meeting_date": "2025-05-13", "location": "Zoom: Mrs. Haider's zoom room", "present": [], "absent": [], "source_event_count": 4}

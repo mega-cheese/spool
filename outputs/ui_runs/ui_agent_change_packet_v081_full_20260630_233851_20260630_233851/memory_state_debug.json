@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+    "candidate_count": 2,
+    "approved_count": 0,
+    "needs_review_count": 2,
+    "rejected_count": 0
+  },
+  "items": [
+    {
+      "memory_id": "mem_3be3d09bcbe1",
+      "type": "context",
+      "title": "Task table may have been under-extracted",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.79,
+      "reason_codes": [
+        "extraction_warning",
+        "coverage_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "```text\nImplemented v0.8.1 review action application layer.\nChanged:\nAdded src/review_actions.py\nAdded review_memory.py\nExtended src/memory_store.py\nUpdated src/review_policy.py\nAdded tests/test_review_actions.py\nUpdated README review-action docs\n\nWhat now works:\n- Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale\n- Update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json\n- Append actions to review_actions.json\n- Preserve source evidence through edits\n- Prevent silent approval of unsupported/contradicted memory\n- Avoid duplicate approved/rejected entries by memory_id\n\nCLI example:\nvenv/bin/python review_memory.py --run-dir outputs/runs/<run_id> --memory-id mem_123 --action approve --reviewer Owen\n\nValidation:\nvenv/bin/python -m unittest discover -s tests: PASS, 212 tests\nmeeting_minutes heuristic: PASS\nmeeting_minutes LLM: PASS\ndocs LLM: PASS\nreview LLM: PASS\nconflict LLM: PASS\n\nManual smoke:\nCreated a fresh Meeting #12 run.\nApproved one commitment into approved_memory.json.\nRejected one candidate into rejected_memory.json.\nEdited one weak item while preserving source quote/evidence.\nConfirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state.\n\n```\n\n---"
+    },
+    {
+      "memory_id": "mem_a5e04d8031f5",
+      "type": "context",
+      "title": "Owner-task lines may have been missed",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.79,
+      "reason_codes": [
+        "extraction_warning",
+        "coverage_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Generated: 2026-06-30T23:37:39.330788+00:00"
+    }
+  ]
+}

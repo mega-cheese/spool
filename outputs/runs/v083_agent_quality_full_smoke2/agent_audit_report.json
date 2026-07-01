@@ -1,0 +1,1294 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+    "generated_at": "2026-07-01T05:28:50.751552+00:00",
+    "classification": "agent_change_packet"
+  },
+  "summary": {
+    "overall_verdict": "needs_review",
+    "supported_claim_count": 14,
+    "weakly_supported_claim_count": 38,
+    "unsupported_claim_count": 0,
+    "contradicted_claim_count": 0,
+    "needs_review_count": 7
+  },
+  "scope_audit": {
+    "scope_verdict": "partially_out_of_scope",
+    "requested_features": [
+      "review action model",
+      "review action CLI",
+      "candidate/approved/rejected/review_actions artifact updates",
+      "memory_state_debug latest action fields",
+      "tests",
+      "README docs",
+      "source evidence preservation",
+      "unsupported approval guard"
+    ],
+    "explicit_non_goals": [
+      "browser extension",
+      "integrations",
+      "database",
+      "auth",
+      "AI answer verifier",
+      "large UI redesign",
+      "task reminder system",
+      "todo tracker features",
+      "automatic approval by default"
+    ],
+    "implemented_features": [
+      "The implementation added src/review_actions.py.",
+      "The implementation added review_memory.py.",
+      "The implementation modified src/memory_store.py.",
+      "The implementation modified src/review_policy.py.",
+      "The implementation added tests/test_review_actions.py.",
+      "The implementation modified README.md.",
+      "The CLI supports approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale.",
+      "Review actions update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json.",
+      "review_actions.json is append-only."
+    ],
+    "non_goals_checked": [
+      {
+        "term": "github integration",
+        "found_in_implementation_evidence": false
+      },
+      {
+        "term": "browser extension",
+        "found_in_implementation_evidence": false
+      },
+      {
+        "term": "database",
+        "found_in_implementation_evidence": true
+      },
+      {
+        "term": "auth",
+        "found_in_implementation_evidence": true
+      },
+      {
+        "term": "cloud sync",
+        "found_in_implementation_evidence": false
+      },
+      {
+        "term": "slack api",
+        "found_in_implementation_evidence": false
+      },
+      {
+        "term": "drive api",
+        "found_in_implementation_evidence": false
+      },
+      {
+        "term": "gmail integration",
+        "found_in_implementation_evidence": false
+      },
+      {
+        "term": "kanban",
+        "found_in_implementation_evidence": false
+      },
+      {
+        "term": "reminder",
+        "found_in_implementation_evidence": false
+      },
+      {
+        "term": "task tracker",
+        "found_in_implementation_evidence": false
+      },
+      {
+        "term": "auto-approve",
+        "found_in_implementation_evidence": false
+      },
+      {
+        "term": "automatic approval",
+        "found_in_implementation_evidence": false
+      }
+    ],
+    "possible_scope_issues": [
+      "Possible out-of-scope addition mentions database.",
+      "Possible out-of-scope addition mentions auth."
+    ],
+    "requested": [
+      "review action model",
+      "review action CLI",
+      "candidate/approved/rejected/review_actions artifact updates",
+      "memory_state_debug latest action fields",
+      "tests",
+      "README docs",
+      "source evidence preservation",
+      "unsupported approval guard"
+    ],
+    "implemented": [
+      "The implementation added src/review_actions.py.",
+      "The implementation added review_memory.py.",
+      "The implementation modified src/memory_store.py.",
+      "The implementation modified src/review_policy.py.",
+      "The implementation added tests/test_review_actions.py.",
+      "The implementation modified README.md.",
+      "The CLI supports approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale.",
+      "Review actions update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json.",
+      "review_actions.json is append-only."
+    ]
+  },
+  "claims": [
+    {
+      "claim_id": "claim_6d3617fe0d0c",
+      "claim": "The implementation added src/review_actions.py.",
+      "claim_type": "file_added",
+      "source_section": "Agent Implementation Summary",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.92,
+      "reason": "The git stat/diff contains the claimed file change.",
+      "source_quote": "`src/review_actions.py`",
+      "evidence_quote": "diff --git a/src/review_actions.py b/src/review_actions.py\nnew file mode 100644\nindex 0000000..282ff2c\n--- /dev/null\n+++ b/src/review_actions.py\n@@ -0,0 +1,274 @@\n+from __future__ import annotations\n+\n+import copy\n+import hashlib\n+from dataclasses import dataclass, field\n+from datetime import datetime, timezone\n+from typing import Any\n+\n+from .memory_objects import MEMORY_STATUSES, MEMORY_TYPES, REVIEW_STATES, MemoryObject\n+\n+\n+ALLOWED_ACTIONS = {\n+    \"approve\",\n+    \"reject\",\n+    \"edit\",\n+    \"mark_needs_review\",\n+    \"mark_resolved\",\n+    \"mark_unresolved\",\n+    \"mark_superseded\",\n+    \"mark_stale\",\n+}\n+SAFE_EDIT_FIELDS = {\"title\", \"summary\", \"owner_names\", \"status\", \"type\", \"metadata\", "
+    },
+    {
+      "claim_id": "claim_cca402284ea7",
+      "claim": "The implementation added review_memory.py.",
+      "claim_type": "file_added",
+      "source_section": "Agent Implementation Summary",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.92,
+      "reason": "The git stat/diff contains the claimed file change.",
+      "source_quote": "`review_memory.py`",
+      "evidence_quote": "diff --git a/review_memory.py b/review_memory.py\nnew file mode 100644\nindex 0000000..00469ff\n--- /dev/null\n+++ b/review_memory.py\n@@ -0,0 +1,74 @@\n+#!/usr/bin/env python3\n+from __future__ import annotations\n+\n+import argparse\n+import json\n+import sys\n+from pathlib import Path\n+from typing import Any\n+\n+from src.memory_store import apply_action_to_store\n+from src.review_actions import create_review_action\n+\n+\n+def main() -> int:\n+    parser = argparse.ArgumentParser(description=\"Apply a review action to a Spool run folder.\")\n+    parser.add_argument(\"--run-dir\", required=True, help=\"Path to a run folder containing candidate_memory.json.\")\n+    parser.add_argument(\"--memory-id\", required=True)"
+    },
+    {
+      "claim_id": "claim_cf73a3fe877e",
+      "claim": "The implementation modified src/memory_store.py.",
+      "claim_type": "file_modified",
+      "source_section": "Agent Implementation Summary",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.86,
+      "reason": "The git stat/diff contains the claimed file change.",
+      "source_quote": "`src/memory_store.py`",
+      "evidence_quote": "diff --git a/src/memory_store.py b/src/memory_store.py\nindex 8e3a796..d5b79b4 100644\n--- a/src/memory_store.py\n+++ b/src/memory_store.py\n@@ -2,12 +2,13 @@ from __future__ import annotations\n\n import copy\n import json\n-import hashlib\n from datetime import datetime, timezone\n from pathlib import Path\n from typing import Any\n\n from .memory_objects import MemoryObject\n+from .review_actions import apply_review_action, create_review_action, find_memory_by_id\n+from .review_policy import build_memory_state_debug\n\n\n def load_approved_memory(path: str | Path) -> list[MemoryObject]:\n@@ -18,6 +19,21 @@ def load_rejected_memory(path: str | Path) -> list[MemoryObject]:\n     return _load_memory_list(path, "
+    },
+    {
+      "claim_id": "claim_33cabeb8fdde",
+      "claim": "The implementation modified src/review_policy.py.",
+      "claim_type": "file_modified",
+      "source_section": "Agent Implementation Summary",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.86,
+      "reason": "The git stat/diff contains the claimed file change.",
+      "source_quote": "`src/review_policy.py`",
+      "evidence_quote": "diff --git a/src/review_policy.py b/src/review_policy.py\nindex 8f4ee31..72c981d 100644\n--- a/src/review_policy.py\n+++ b/src/review_policy.py\n@@ -83,7 +83,19 @@ def classify_memory(\n     return candidate\n\n\n-def build_memory_state_debug(candidates: list[MemoryObject], *, input_file: str | None = None) -> dict[str, Any]:\n+def build_memory_state_debug(\n+    candidates: list[MemoryObject],\n+    *,\n+    input_file: str | None = None,\n+    review_actions: list[dict[str, Any]] | None = None,\n+) -> dict[str, Any]:\n+    latest_actions = {}\n+    for action in review_actions or []:\n+        memory_id = str(action.get(\"memory_id\") or \"\")\n+        if not memory_id:\n+            continue\n+        if memory"
+    },
+    {
+      "claim_id": "claim_92ba52344b71",
+      "claim": "The implementation added tests/test_review_actions.py.",
+      "claim_type": "file_added",
+      "source_section": "Agent Implementation Summary",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.92,
+      "reason": "The git stat/diff contains the claimed file change.",
+      "source_quote": "`tests/test_review_actions.py`",
+      "evidence_quote": "diff --git a/tests/test_review_actions.py b/tests/test_review_actions.py\nnew file mode 100644\nindex 0000000..653efe4\n--- /dev/null\n+++ b/tests/test_review_actions.py\n@@ -0,0 +1,274 @@\n+from __future__ import annotations\n+\n+import json\n+import subprocess\n+import sys\n+import tempfile\n+import unittest\n+from pathlib import Path\n+\n+from src.memory_objects import MemoryObject\n+from src.memory_store import apply_action_to_store\n+from src.review_actions import apply_review_action, create_review_action, validate_review_action\n+from src.review_policy import build_memory_state_debug\n+\n+\n+class ReviewActionsTest(unittest.TestCase):\n+    def test_approve_candidate_writes_to_approved_memory(self) -> None:"
+    },
+    {
+      "claim_id": "claim_b3ba3828d55b",
+      "claim": "The implementation modified README.md.",
+      "claim_type": "file_modified",
+      "source_section": "Agent Implementation Summary",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.86,
+      "reason": "The git stat/diff contains the claimed file change.",
+      "source_quote": "`README`",
+      "evidence_quote": "diff --git a/README.md b/README.md\nindex 8e79610..7dedd59 100644\n--- a/README.md\n+++ b/README.md\n@@ -216,7 +216,22 @@ review_actions.json\n memory_state_debug.json\n ```\n\n-`approved_memory.json` and `rejected_memory.json` are local JSON stores for v0.8.0. They may be empty until a human or explicit review action approves/rejects candidates.\n+`approved_memory.json` and `rejected_memory.json` are local JSON stores. They may be empty until a human or explicit review action approves/rejects candidates.\n+\n+## Review Actions\n+\n+Use `review_memory.py` to apply review actions to a run folder without Streamlit or a database:\n+\n+```bash\n+venv/bin/python review_memory.py --run-dir outputs/runs/<run_id> -"
+    },
+    {
+      "claim_id": "claim_3342eac7f6a0",
+      "claim": "The CLI supports approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff"
+      ],
+      "verdict": "supported",
+      "confidence": 0.86,
+      "reason": "Action names appear in ALLOWED_ACTIONS/CLI choices and tests cover review-action behavior.",
+      "source_quote": "Applying review actions",
+      "evidence_quote": "```diff\ncommit ab2c6a69b172fb3d9da86633f6a666a334f298be\nAuthor: Owen Qu <admin@MacBook-Pro-8.hitronhub.home>\nDate:   Tue Jun 30 16:02:45 2026 -0700\n\n    Add review action application layer\n\ndiff --git a/README.md b/README.md\nindex 8e79610..7dedd59 100644\n--- a/README.md\n+++ b/README.md\n@@ -216,7 +216,22 @@ review_actions.json\n memory_state_debug.json\n ```\n\n-`approved_memory.json` and `rejected_memory.json` are local JSON stores for v0.8.0. They may be empty until a human or explicit review actio"
+    },
+    {
+      "claim_id": "claim_e595b61bc15d",
+      "claim": "Review actions update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "Updating review-state artifacts",
+      "evidence_quote": "+Review actions update `candidate_memory.json`, `approved_memory.json`, `rejected_memory.json`, and `memory_state_debug.json`. They append to `review_actions.json` as an audit history rather than overwriting it."
+    },
+    {
+      "claim_id": "claim_f8dca1a87922",
+      "claim": "review_actions.json is append-only.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff"
+      ],
+      "verdict": "supported",
+      "confidence": 0.86,
+      "reason": "Append logic appears in code or tests.",
+      "source_quote": "Appending to review_actions.json",
+      "evidence_quote": "+Review actions update `candidate_memory.json`, `approved_memory.json`, `rejected_memory.json`, and `memory_state_debug.json`. They append to `review_actions.json` as an audit history rather than overwriting it."
+    },
+    {
+      "claim_id": "claim_a2e5b6b7a18a",
+      "claim": "Unit tests passed with 212 tests.",
+      "claim_type": "test_result",
+      "source_section": "Validation Claimed by Agent",
+      "evidence_sections": [
+        "Validation Claimed by Agent"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.64,
+      "reason": "The validation section states this, but no independent log artifact is available.",
+      "source_quote": "PASS, 212 tests",
+      "evidence_quote": "PASS, 212 tests"
+    },
+    {
+      "claim_id": "claim_8aa39751d567",
+      "claim": "venv/bin/python -m unittest discover -s tests: PASS.",
+      "claim_type": "test_result",
+      "source_section": "Validation Claimed by Agent",
+      "evidence_sections": [
+        "Validation Claimed by Agent"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.64,
+      "reason": "The validation section states this, but no independent log artifact is available.",
+      "source_quote": "venv/bin/python -m unittest discover -s tests: PASS",
+      "evidence_quote": "venv/bin/python -m unittest discover -s tests: PASS"
+    },
+    {
+      "claim_id": "claim_7ffa4b3805bf",
+      "claim": "meeting_minutes heuristic: PASS.",
+      "claim_type": "test_result",
+      "source_section": "Validation Claimed by Agent",
+      "evidence_sections": [
+        "Validation Claimed by Agent"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.64,
+      "reason": "The validation section states this, but no independent log artifact is available.",
+      "source_quote": "meeting_minutes heuristic: PASS",
+      "evidence_quote": "meeting_minutes heuristic: PASS"
+    },
+    {
+      "claim_id": "claim_e62a70cd1157",
+      "claim": "meeting_minutes LLM: PASS.",
+      "claim_type": "test_result",
+      "source_section": "Validation Claimed by Agent",
+      "evidence_sections": [
+        "Validation Claimed by Agent"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.64,
+      "reason": "The validation section states this, but no independent log artifact is available.",
+      "source_quote": "meeting_minutes LLM: PASS",
+      "evidence_quote": "meeting_minutes LLM: PASS"
+    },
+    {
+      "claim_id": "claim_afbc3eb90283",
+      "claim": "docs LLM: PASS.",
+      "claim_type": "test_result",
+      "source_section": "Validation Claimed by Agent",
+      "evidence_sections": [
+        "Validation Claimed by Agent"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.64,
+      "reason": "The validation section states this, but no independent log artifact is available.",
+      "source_quote": "docs LLM: PASS",
+      "evidence_quote": "docs LLM: PASS"
+    },
+    {
+      "claim_id": "claim_5c0660a2753a",
+      "claim": "review LLM: PASS.",
+      "claim_type": "test_result",
+      "source_section": "Validation Claimed by Agent",
+      "evidence_sections": [
+        "Validation Claimed by Agent"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.64,
+      "reason": "The validation section states this, but no independent log artifact is available.",
+      "source_quote": "review LLM: PASS",
+      "evidence_quote": "review LLM: PASS"
+    },
+    {
+      "claim_id": "claim_444d8570d10a",
+      "claim": "conflict LLM: PASS.",
+      "claim_type": "test_result",
+      "source_section": "Validation Claimed by Agent",
+      "evidence_sections": [
+        "Validation Claimed by Agent"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.64,
+      "reason": "The validation section states this, but no independent log artifact is available.",
+      "source_quote": "conflict LLM: PASS",
+      "evidence_quote": "conflict LLM: PASS"
+    },
+    {
+      "claim_id": "claim_69b51fe2b9b7",
+      "claim": "Created a fresh Meeting #12 run.",
+      "claim_type": "manual_smoke",
+      "source_section": "Validation Claimed by Agent",
+      "evidence_sections": [
+        "Validation Claimed by Agent"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.64,
+      "reason": "The validation section states this, but no independent log artifact is available.",
+      "source_quote": "Created a fresh Meeting #12 run.",
+      "evidence_quote": "Created a fresh Meeting #12 run."
+    },
+    {
+      "claim_id": "claim_1863a233f515",
+      "claim": "Approved one commitment into approved_memory.json.",
+      "claim_type": "manual_smoke",
+      "source_section": "Validation Claimed by Agent",
+      "evidence_sections": [
+        "Validation Claimed by Agent"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.64,
+      "reason": "The validation section states this, but no independent log artifact is available.",
+      "source_quote": "Approved one commitment into approved_memory.json.",
+      "evidence_quote": "Approved one commitment into approved_memory.json."
+    },
+    {
+      "claim_id": "claim_2f7878433fdd",
+      "claim": "Rejected one candidate into rejected_memory.json.",
+      "claim_type": "manual_smoke",
+      "source_section": "Validation Claimed by Agent",
+      "evidence_sections": [
+        "Validation Claimed by Agent"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.64,
+      "reason": "The validation section states this, but no independent log artifact is available.",
+      "source_quote": "Rejected one candidate into rejected_memory.json.",
+      "evidence_quote": "Rejected one candidate into rejected_memory.json."
+    },
+    {
+      "claim_id": "claim_58936ce61782",
+      "claim": "Edited one weak item while preserving source quote/evidence.",
+      "claim_type": "manual_smoke",
+      "source_section": "Validation Claimed by Agent",
+      "evidence_sections": [
+        "Validation Claimed by Agent"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.64,
+      "reason": "The validation section states this, but no independent log artifact is available.",
+      "source_quote": "Edited one weak item while preserving source quote/evidence.",
+      "evidence_quote": "Edited one weak item while preserving source quote/evidence."
+    },
+    {
+      "claim_id": "claim_de117b389bc4",
+      "claim": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state.",
+      "claim_type": "manual_smoke",
+      "source_section": "Validation Claimed by Agent",
+      "evidence_sections": [
+        "Validation Claimed by Agent"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.64,
+      "reason": "The validation section states this, but no independent log artifact is available.",
+      "source_quote": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state.",
+      "evidence_quote": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state."
+    },
+    {
+      "claim_id": "claim_d2bb40c4d372",
+      "claim": "",
+      "claim_type": "manual_smoke",
+      "source_section": "Validation Claimed by Agent",
+      "evidence_sections": [
+        "Validation Claimed by Agent"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.64,
+      "reason": "The validation section states this, but no independent log artifact is available.",
+      "source_quote": "---",
+      "evidence_quote": "---"
+    },
+    {
+      "claim_id": "claim_7a3b59bdca16",
+      "claim": "Raw extraction is not trusted memory.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Raw extraction is not trusted memory.",
+      "evidence_quote": "Raw extraction is not trusted memory."
+    },
+    {
+      "claim_id": "claim_93fc4b0b4157",
+      "claim": "Candidate memory must not become approved memory automatically.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Candidate memory must not become approved memory automatically.",
+      "evidence_quote": "Candidate memory must not become approved memory automatically."
+    },
+    {
+      "claim_id": "claim_9a502c915e83",
+      "claim": "Approved memory is the trusted store for reviewed items.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Approved memory is the trusted store for reviewed items.",
+      "evidence_quote": "Approved memory is the trusted store for reviewed items."
+    },
+    {
+      "claim_id": "claim_302b8a8967ab",
+      "claim": "Review actions should be append-only.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Review actions should be append-only.",
+      "evidence_quote": "Review actions should be append-only."
+    },
+    {
+      "claim_id": "claim_fc34ffa2515b",
+      "claim": "Source evidence must be preserved through edits.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff"
+      ],
+      "verdict": "supported",
+      "confidence": 0.86,
+      "reason": "Evidence fields are preserved in edit logic.",
+      "source_quote": "Source evidence must be preserved through edits.",
+      "evidence_quote": "+        return [_error(\"source_evidence_required\", \"Edit cannot remove all source evidence.\")]"
+    },
+    {
+      "claim_id": "claim_3dd1cdd5675a",
+      "claim": "Spool is not a todo tracker.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Spool is not a todo tracker.",
+      "evidence_quote": "Spool is not a todo tracker."
+    },
+    {
+      "claim_id": "claim_7f1e32f6bdc9",
+      "claim": "Action items are represented as commitments in candidate/approved memory.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Action items are represented as commitments in candidate/approved memory.",
+      "evidence_quote": "Action items are represented as commitments in candidate/approved memory."
+    },
+    {
+      "claim_id": "claim_bd3b4613be2e",
+      "claim": "Commitment statuses are memory states, not productivity states:.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Commitment statuses are memory states, not productivity states:",
+      "evidence_quote": "Commitment statuses are memory states, not productivity states:"
+    },
+    {
+      "claim_id": "claim_83d71a278683",
+      "claim": "unresolved.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "unresolved",
+      "evidence_quote": "unresolved"
+    },
+    {
+      "claim_id": "claim_202b79ed4001",
+      "claim": "resolved.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "resolved",
+      "evidence_quote": "resolved"
+    },
+    {
+      "claim_id": "claim_5e1d3f1391db",
+      "claim": "superseded.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "superseded",
+      "evidence_quote": "superseded"
+    },
+    {
+      "claim_id": "claim_e01f4c2eb927",
+      "claim": "stale.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "stale",
+      "evidence_quote": "stale"
+    },
+    {
+      "claim_id": "claim_1e7e695cda69",
+      "claim": "unknown.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "unknown",
+      "evidence_quote": "unknown"
+    },
+    {
+      "claim_id": "claim_c2ec39d2cdd0",
+      "claim": "v0.8.1 should not implement:.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "v0.8.1 should not implement:",
+      "evidence_quote": "v0.8.1 should not implement:"
+    },
+    {
+      "claim_id": "claim_7a23e617a730",
+      "claim": "AI answer verification.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "AI answer verification",
+      "evidence_quote": "AI answer verification"
+    },
+    {
+      "claim_id": "claim_e216e233a198",
+      "claim": "browser extension.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "browser extension",
+      "evidence_quote": "browser extension"
+    },
+    {
+      "claim_id": "claim_a9a0dc4f0067",
+      "claim": "user auth.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "user auth",
+      "evidence_quote": "user auth"
+    },
+    {
+      "claim_id": "claim_ddf4b87df351",
+      "claim": "database.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "database",
+      "evidence_quote": "database"
+    },
+    {
+      "claim_id": "claim_2692084f6b3a",
+      "claim": "cloud sync.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "cloud sync",
+      "evidence_quote": "cloud sync"
+    },
+    {
+      "claim_id": "claim_28707fdeb444",
+      "claim": "Slack/Drive/Gmail integrations.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Slack/Drive/Gmail integrations",
+      "evidence_quote": "Slack/Drive/Gmail integrations"
+    },
+    {
+      "claim_id": "claim_83a8aabb1c1f",
+      "claim": "polished UI.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "polished UI",
+      "evidence_quote": "polished UI"
+    },
+    {
+      "claim_id": "claim_f0bfb51e65f9",
+      "claim": "Kanban/task tracker/reminders.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Kanban/task tracker/reminders",
+      "evidence_quote": "Kanban/task tracker/reminders"
+    },
+    {
+      "claim_id": "claim_c66c9db16619",
+      "claim": "automatic approval by default.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "automatic approval by default",
+      "evidence_quote": "automatic approval by default"
+    },
+    {
+      "claim_id": "claim_2bd80f6a6679",
+      "claim": "Spool added a review action application layer as system infrastructure.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Spool added a review action application layer as system infrastructure.",
+      "evidence_quote": "Spool added a review action application layer as system infrastructure."
+    },
+    {
+      "claim_id": "claim_3148f311755a",
+      "claim": "Spool stores reviewed memory using JSON artifacts rather than a database.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Spool stores reviewed memory using JSON artifacts rather than a database.",
+      "evidence_quote": "Spool stores reviewed memory using JSON artifacts rather than a database."
+    },
+    {
+      "claim_id": "claim_b468ce8fc400",
+      "claim": "Review actions are append-only in review_actions.json.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff"
+      ],
+      "verdict": "supported",
+      "confidence": 0.86,
+      "reason": "Append logic appears in code or tests.",
+      "source_quote": "Review actions are append-only in `review_actions.json`.",
+      "evidence_quote": "@@ -216,7 +216,22 @@ review_actions.json"
+    },
+    {
+      "claim_id": "claim_97b4f8cb2a88",
+      "claim": "Approved memory should not be created automatically from extraction.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Approved memory should not be created automatically from extraction.",
+      "evidence_quote": "Approved memory should not be created automatically from extraction."
+    },
+    {
+      "claim_id": "claim_d34e16f7a91f",
+      "claim": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "claim_type": "risk",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "needs_review",
+      "confidence": 0.54,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "evidence_quote": "Review actions could corrupt JSON artifacts if writes are not atomic."
+    },
+    {
+      "claim_id": "claim_020b11837288",
+      "claim": "Edits could accidentally allow source evidence to be removed.",
+      "claim_type": "risk",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "needs_review",
+      "confidence": 0.54,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Edits could accidentally allow source evidence to be removed.",
+      "evidence_quote": "Edits could accidentally allow source evidence to be removed."
+    },
+    {
+      "claim_id": "claim_d962bd9a66e9",
+      "claim": "memory_state_debug.json could diverge from actual approved/rejected state.",
+      "claim_type": "risk",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "`memory_state_debug.json` could diverge from actual approved/rejected state.",
+      "evidence_quote": "memory_state_debug.json"
+    },
+    {
+      "claim_id": "claim_17b98ec05a64",
+      "claim": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "claim_type": "risk",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff"
+      ],
+      "verdict": "supported",
+      "confidence": 0.86,
+      "reason": "Upsert/no-duplicate logic appears in the diff/tests.",
+      "source_quote": "Duplicate handling by `memory_id` could incorrectly overwrite edited objects.",
+      "evidence_quote": "```diff\ncommit ab2c6a69b172fb3d9da86633f6a666a334f298be\nAuthor: Owen Qu <admin@MacBook-Pro-8.hitronhub.home>\nDate:   Tue Jun 30 16:02:45 2026 -0700\n\n    Add review action application layer\n\ndiff --git a/README.md b/README.md\nindex 8e79610..7dedd59 100644\n--- a/README.md\n+++ b/README.md\n@@ -216,7 +216,22 @@ review_actions.json\n memory_state_debug.json\n ```\n\n-`approved_memory.json` and `rejected_memory.json` are local JSON stores for v0.8.0. They may be empty until a human or explicit review actio"
+    },
+    {
+      "claim_id": "claim_d5994f9c1983",
+      "claim": "CLI patch parsing could accept unsafe or invalid fields.",
+      "claim_type": "risk",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "needs_review",
+      "confidence": 0.54,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "CLI patch parsing could accept unsafe or invalid fields.",
+      "evidence_quote": "CLI patch parsing could accept unsafe or invalid fields."
+    },
+    {
+      "claim_id": "claim_938b48473095",
+      "claim": "Should weakly_supported memory be approvable?",
+      "claim_type": "open_question",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "needs_review",
+      "confidence": 0.54,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Should weakly_supported memory be approvable?",
+      "evidence_quote": "Should weakly_supported memory be approvable?"
+    },
+    {
+      "claim_id": "claim_6673c85ddcef",
+      "claim": "Should approved_memory become canonical in v0.8.2?",
+      "claim_type": "open_question",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "needs_review",
+      "confidence": 0.54,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Should approved_memory become canonical in v0.8.2?",
+      "evidence_quote": "Should approved_memory become canonical in v0.8.2?"
+    },
+    {
+      "claim_id": "claim_cd89958e89d5",
+      "claim": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "claim_type": "open_question",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "needs_review",
+      "confidence": 0.54,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "evidence_quote": "Should review actions eventually support reviewer identity beyond CLI strings?"
+    },
+    {
+      "claim_id": "claim_db299aa7045e",
+      "claim": "Should actions be hash-chained or tamper-evident later?",
+      "claim_type": "open_question",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Existing Product Rules / Approved Context"
+      ],
+      "verdict": "needs_review",
+      "confidence": 0.54,
+      "reason": "The packet states this directly; a reviewer should decide how it should affect memory.",
+      "source_quote": "Should actions be hash-chained or tamper-evident later?",
+      "evidence_quote": "Should actions be hash-chained or tamper-evident later?"
+    },
+    {
+      "claim_id": "claim_db604a35da30",
+      "claim": "Should Streamlit expose approve/reject/edit actions?",
+      "claim_type": "open_question",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff"
+      ],
+      "verdict": "supported",
+      "confidence": 0.86,
+      "reason": "Action names appear in ALLOWED_ACTIONS/CLI choices and tests cover review-action behavior.",
+      "source_quote": "Should Streamlit expose approve/reject/edit actions?",
+      "evidence_quote": "```diff\ncommit ab2c6a69b172fb3d9da86633f6a666a334f298be\nAuthor: Owen Qu <admin@MacBook-Pro-8.hitronhub.home>\nDate:   Tue Jun 30 16:02:45 2026 -0700\n\n    Add review action application layer\n\ndiff --git a/README.md b/README.md\nindex 8e79610..7dedd59 100644\n--- a/README.md\n+++ b/README.md\n@@ -216,7 +216,22 @@ review_actions.json\n memory_state_debug.json\n ```\n\n-`approved_memory.json` and `rejected_memory.json` are local JSON stores for v0.8.0. They may be empty until a human or explicit review actio"
+    }
+  ],
+  "technical_decisions": [
+    {
+      "claim_id": "claim_7a3b59bdca16",
+      "claim": "Raw extraction is not trusted memory.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "Raw extraction is not trusted memory."
+    },
+    {
+      "claim_id": "claim_93fc4b0b4157",
+      "claim": "Candidate memory must not become approved memory automatically.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "Candidate memory must not become approved memory automatically."
+    },
+    {
+      "claim_id": "claim_9a502c915e83",
+      "claim": "Approved memory is the trusted store for reviewed items.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "Approved memory is the trusted store for reviewed items."
+    },
+    {
+      "claim_id": "claim_302b8a8967ab",
+      "claim": "Review actions should be append-only.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "Review actions should be append-only."
+    },
+    {
+      "claim_id": "claim_fc34ffa2515b",
+      "claim": "Source evidence must be preserved through edits.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "supported",
+      "confidence": 0.86,
+      "source_quote": "Source evidence must be preserved through edits."
+    },
+    {
+      "claim_id": "claim_3dd1cdd5675a",
+      "claim": "Spool is not a todo tracker.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "Spool is not a todo tracker."
+    },
+    {
+      "claim_id": "claim_7f1e32f6bdc9",
+      "claim": "Action items are represented as commitments in candidate/approved memory.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "Action items are represented as commitments in candidate/approved memory."
+    },
+    {
+      "claim_id": "claim_bd3b4613be2e",
+      "claim": "Commitment statuses are memory states, not productivity states:.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "Commitment statuses are memory states, not productivity states:"
+    },
+    {
+      "claim_id": "claim_83d71a278683",
+      "claim": "unresolved.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "unresolved"
+    },
+    {
+      "claim_id": "claim_202b79ed4001",
+      "claim": "resolved.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "resolved"
+    },
+    {
+      "claim_id": "claim_5e1d3f1391db",
+      "claim": "superseded.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "superseded"
+    },
+    {
+      "claim_id": "claim_e01f4c2eb927",
+      "claim": "stale.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "stale"
+    },
+    {
+      "claim_id": "claim_1e7e695cda69",
+      "claim": "unknown.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "unknown"
+    },
+    {
+      "claim_id": "claim_c2ec39d2cdd0",
+      "claim": "v0.8.1 should not implement:.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "v0.8.1 should not implement:"
+    },
+    {
+      "claim_id": "claim_7a23e617a730",
+      "claim": "AI answer verification.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "AI answer verification"
+    },
+    {
+      "claim_id": "claim_e216e233a198",
+      "claim": "browser extension.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "browser extension"
+    },
+    {
+      "claim_id": "claim_a9a0dc4f0067",
+      "claim": "user auth.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "user auth"
+    },
+    {
+      "claim_id": "claim_ddf4b87df351",
+      "claim": "database.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "database"
+    },
+    {
+      "claim_id": "claim_2692084f6b3a",
+      "claim": "cloud sync.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "cloud sync"
+    },
+    {
+      "claim_id": "claim_28707fdeb444",
+      "claim": "Slack/Drive/Gmail integrations.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "Slack/Drive/Gmail integrations"
+    },
+    {
+      "claim_id": "claim_83a8aabb1c1f",
+      "claim": "polished UI.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "polished UI"
+    },
+    {
+      "claim_id": "claim_f0bfb51e65f9",
+      "claim": "Kanban/task tracker/reminders.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "Kanban/task tracker/reminders"
+    },
+    {
+      "claim_id": "claim_c66c9db16619",
+      "claim": "automatic approval by default.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "automatic approval by default"
+    },
+    {
+      "claim_id": "claim_2bd80f6a6679",
+      "claim": "Spool added a review action application layer as system infrastructure.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "Spool added a review action application layer as system infrastructure."
+    },
+    {
+      "claim_id": "claim_3148f311755a",
+      "claim": "Spool stores reviewed memory using JSON artifacts rather than a database.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "Spool stores reviewed memory using JSON artifacts rather than a database."
+    },
+    {
+      "claim_id": "claim_b468ce8fc400",
+      "claim": "Review actions are append-only in review_actions.json.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "supported",
+      "confidence": 0.86,
+      "source_quote": "Review actions are append-only in `review_actions.json`."
+    },
+    {
+      "claim_id": "claim_97b4f8cb2a88",
+      "claim": "Approved memory should not be created automatically from extraction.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "weakly_supported",
+      "confidence": 0.62,
+      "source_quote": "Approved memory should not be created automatically from extraction."
+    }
+  ],
+  "risks": [
+    {
+      "claim_id": "claim_d34e16f7a91f",
+      "claim": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "needs_review",
+      "confidence": 0.54,
+      "source_quote": "Review actions could corrupt JSON artifacts if writes are not atomic."
+    },
+    {
+      "claim_id": "claim_020b11837288",
+      "claim": "Edits could accidentally allow source evidence to be removed.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "needs_review",
+      "confidence": 0.54,
+      "source_quote": "Edits could accidentally allow source evidence to be removed."
+    },
+    {
+      "claim_id": "claim_d962bd9a66e9",
+      "claim": "memory_state_debug.json could diverge from actual approved/rejected state.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "supported",
+      "confidence": 0.82,
+      "source_quote": "`memory_state_debug.json` could diverge from actual approved/rejected state."
+    },
+    {
+      "claim_id": "claim_17b98ec05a64",
+      "claim": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "supported",
+      "confidence": 0.86,
+      "source_quote": "Duplicate handling by `memory_id` could incorrectly overwrite edited objects."
+    },
+    {
+      "claim_id": "claim_d5994f9c1983",
+      "claim": "CLI patch parsing could accept unsafe or invalid fields.",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "needs_review",
+      "confidence": 0.54,
+      "source_quote": "CLI patch parsing could accept unsafe or invalid fields."
+    }
+  ],
+  "open_questions": [
+    {
+      "claim_id": "claim_938b48473095",
+      "claim": "Should weakly_supported memory be approvable?",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "needs_review",
+      "confidence": 0.54,
+      "source_quote": "Should weakly_supported memory be approvable?"
+    },
+    {
+      "claim_id": "claim_6673c85ddcef",
+      "claim": "Should approved_memory become canonical in v0.8.2?",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "needs_review",
+      "confidence": 0.54,
+      "source_quote": "Should approved_memory become canonical in v0.8.2?"
+    },
+    {
+      "claim_id": "claim_cd89958e89d5",
+      "claim": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "needs_review",
+      "confidence": 0.54,
+      "source_quote": "Should review actions eventually support reviewer identity beyond CLI strings?"
+    },
+    {
+      "claim_id": "claim_db299aa7045e",
+      "claim": "Should actions be hash-chained or tamper-evident later?",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "needs_review",
+      "confidence": 0.54,
+      "source_quote": "Should actions be hash-chained or tamper-evident later?"
+    },
+    {
+      "claim_id": "claim_db604a35da30",
+      "claim": "Should Streamlit expose approve/reject/edit actions?",
+      "source_section": "Existing Product Rules / Approved Context",
+      "verdict": "supported",
+      "confidence": 0.86,
+      "source_quote": "Should Streamlit expose approve/reject/edit actions?"
+    }
+  ],
+  "review_checklist": [
+    "Verify weakly supported claim: Unit tests passed with 212 tests.",
+    "Verify weakly supported claim: venv/bin/python -m unittest discover -s tests: PASS.",
+    "Verify weakly supported claim: meeting_minutes heuristic: PASS.",
+    "Verify weakly supported claim: meeting_minutes LLM: PASS.",
+    "Verify weakly supported claim: docs LLM: PASS.",
+    "Verify weakly supported claim: review LLM: PASS.",
+    "Verify weakly supported claim: conflict LLM: PASS.",
+    "Verify weakly supported claim: Created a fresh Meeting #12 run.",
+    "Verify weakly supported claim: Approved one commitment into approved_memory.json.",
+    "Verify weakly supported claim: Rejected one candidate into rejected_memory.json.",
+    "Verify weakly supported claim: Edited one weak item while preserving source quote/evidence.",
+    "Verify weakly supported claim: Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state.",
+    "Verify weakly supported claim: ",
+    "Possible out-of-scope addition mentions database.",
+    "Possible out-of-scope addition mentions auth.",
+    "Review audit risk: Review actions could corrupt JSON artifacts if writes are not atomic.",
+    "Review audit risk: Edits could accidentally allow source evidence to be removed.",
+    "Review audit risk: memory_state_debug.json could diverge from actual approved/rejected state.",
+    "Review audit risk: Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+    "Review audit risk: CLI patch parsing could accept unsafe or invalid fields.",
+    "Answer open question: Should weakly_supported memory be approvable?",
+    "Answer open question: Should approved_memory become canonical in v0.8.2?",
+    "Answer open question: Should review actions eventually support reviewer identity beyond CLI strings?",
+    "Answer open question: Should actions be hash-chained or tamper-evident later?",
+    "Answer open question: Should Streamlit expose approve/reject/edit actions?"
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "generated_at": "2026-07-01T05:27:12.719392+00:00",
+    "review_item_count": 6
+  },
+  "items": [
+    {
+      "review_id": "review_a4b95cbb0175",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim lacks deterministic support.",
+      "candidate_decision": "The CLI supports approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale.",
+      "reason": "unsupported_agent_claim",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Applying review actions",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_3342eac7f6a0"
+      ],
+      "created_at": "2026-07-01T05:27:12.719392+00:00"
+    },
+    {
+      "review_id": "review_39ebf313e770",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim lacks deterministic support.",
+      "candidate_decision": "review_actions.json is append-only.",
+      "reason": "unsupported_agent_claim",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_6"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_6",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Claimed Capabilities",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Appending to review_actions.json",
+          "locator": "file_ed7d1d643b83d319#section-6",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_f8dca1a87922"
+      ],
+      "created_at": "2026-07-01T05:27:12.719392+00:00"
+    },
+    {
+      "review_id": "review_f75ba0707503",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Agent claim needs review",
+      "summary": "Agent claim lacks deterministic support.",
+      "candidate_decision": "Source evidence must be preserved through edits.",
+      "reason": "unsupported_agent_claim",
+      "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Source evidence must be preserved through edits.",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_fc34ffa2515b"
+      ],
+      "created_at": "2026-07-01T05:27:12.719392+00:00"
+    },
+    {
+      "review_id": "review_305ed76286f2",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Validation claims need evidence",
+      "summary": "Validation claims are self-reported and need log evidence.",
+      "candidate_decision": "Validation claims are self-reported",
+      "reason": "weak_validation_evidence",
+      "recommended_action": "Attach or inspect the actual test/scenario logs before relying on these validation claims.",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_7"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_7",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Validation Claimed by Agent",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "PASS, 212 tests",
+          "locator": "file_ed7d1d643b83d319#section-7",
+          "page": null,
+          "url": null
+        }
+      ],
+      "related_candidate_ids": [
+        "claim_a2e5b6b7a18a",
+        "claim_8aa39751d567",
+        "claim_7ffa4b3805bf",
+        "claim_e62a70cd1157",
+        "claim_afbc3eb90283",
+        "claim_5c0660a2753a",
+        "claim_444d8570d10a",
+        "claim_69b51fe2b9b7",
+        "claim_1863a233f515",
+        "claim_2f7878433fdd",
+        "claim_58936ce61782",
+        "claim_de117b389bc4",
+        "claim_d2bb40c4d372"
+      ],
+      "created_at": "2026-07-01T05:27:12.719392+00:00"
+    },
+    {
+      "review_id": "review_4d7c1a466a20",
+      "type": "needs_human_review",
+      "severity": "medium",
+      "status": "open",
+      "title": "Agent packet is missing expected sections",
+      "summary": "Missing sections: Questions for Spool Audit, Expected Useful Spool Output.",
+      "candidate_decision": "Agent packet is missing expected sections",
+      "reason": "missing_source_evidence",
+      "recommended_action": "Review whether the packet has enough evidence for audit.",
+      "source_event_ids": [],
+      "sources": [],
+      "related_candidate_ids": [],
+      "created_at": "2026-07-01T05:27:12.719392+00:00"
+    },
+    {
+      "review_id": "review_985312c67bf1",
+      "type": "needs_human_review",
+      "severity": "high",
+      "status": "open",
+      "title": "Possible agent scope drift",
+      "summary": "Possible out-of-scope addition mentions database.",
+      "candidate_decision": "Possible agent scope drift",
+      "reason": "possible_scope_drift",
+      "recommended_action": "Inspect the diff for out-of-scope additions.",
+      "source_event_ids": [],
+      "sources": [],
+      "related_candidate_ids": [],
+      "created_at": "2026-07-01T05:27:12.719392+00:00"
+    }
+  ]
+}

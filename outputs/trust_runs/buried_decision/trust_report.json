@@ -1,0 +1,74 @@
+{
+  "overall_verdict": "human_review",
+  "scope": {
+    "task_source": "examples/pr_trust/buried_decision/task.md",
+    "approved_task": "Hide image upload for unsupported chat playground models.",
+    "allowed_files": [
+      "src/playground/models.py",
+      "tests/test_playground_models.py"
+    ],
+    "forbidden_paths": [],
+    "changed_files": [
+      {
+        "path": "src/playground/models.py",
+        "change_type": "modified",
+        "old_path": "src/playground/models.py",
+        "new_path": "src/playground/models.py"
+      },
+      {
+        "path": "tests/test_playground_models.py",
+        "change_type": "added",
+        "old_path": "/dev/null",
+        "new_path": "tests/test_playground_models.py"
+      }
+    ],
+    "scope_violations": [],
+    "forbidden_violations": []
+  },
+  "agent_claims": [
+    {
+      "claim_id": "file_modified_12c79e7ce784",
+      "claim": "Updated `src/playground/models.py` to hide image upload for unsupported models.",
+      "claim_type": "file_modified",
+      "verdict": "supported",
+      "evidence_target": "diff.patch",
+      "evidence_quote": "diff --git a/src/playground/models.py b/src/playground/models.py",
+      "reason": "src/playground/models.py appears in the PR diff."
+    },
+    {
+      "claim_id": "test_result_claim_4f24117573c2",
+      "claim": "Tests passed.",
+      "claim_type": "test_result_claim",
+      "verdict": "supported",
+      "evidence_target": "test_output.txt",
+      "evidence_quote": "Ran 8 tests in 0.08s",
+      "reason": "The provided test output contains a passing result."
+    }
+  ],
+  "weak_or_missing_evidence": [],
+  "buried_decisions": [
+    {
+      "decision_id": "decision_954981b1fccd",
+      "decision": "qwen/glm/deepseek models should not expose image upload in the chat playground.",
+      "source": "agent_summary",
+      "reason": "The agent summary introduced a reusable product or architecture rule.",
+      "verdict": "needs_review"
+    }
+  ],
+  "repo_memory_check": [
+    {
+      "memory_id": "repo_memory_missing",
+      "memory": "No approved repo memory was provided.",
+      "verdict": "no_relevant_memory",
+      "reason": "Missing approved repo memory is not a failure for v0.9.",
+      "evidence_quote": ""
+    }
+  ],
+  "risks": [
+    "The agent introduced durable decisions that need reviewer approval."
+  ],
+  "reviewer_actions": [
+    "human review required",
+    "approve decision into repo memory or reject it"
+  ]
+}

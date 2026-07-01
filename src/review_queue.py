@@ -19,6 +19,10 @@ REVIEW_REASONS = {
     "low_confidence",
     "ambiguous_decision",
     "extraction_warning",
+    "unsupported_agent_claim",
+    "weak_validation_evidence",
+    "possible_scope_drift",
+    "missing_source_evidence",
 }
 
 

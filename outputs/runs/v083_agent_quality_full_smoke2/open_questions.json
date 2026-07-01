@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "classification": "agent_change_packet",
+    "generated_at": "2026-07-01T05:28:50.706062+00:00",
+    "open_question_count": 5
+  },
+  "open_questions": [
+    {
+      "object_id": "memory_90a62b96b089",
+      "type": "open_question",
+      "title": "Should weakly_supported memory be approvable?",
+      "summary": "Should weakly_supported memory be approvable?",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should weakly_supported memory be approvable?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should weakly_supported memory be approvable?",
+      "confidence": 0.54,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_938b48473095",
+        "claim_type": "open_question",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "memory_9e70679eb6d6",
+      "type": "open_question",
+      "title": "Should approved_memory become canonical in v0.8.2?",
+      "summary": "Should approved_memory become canonical in v0.8.2?",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should approved_memory become canonical in v0.8.2?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should approved_memory become canonical in v0.8.2?",
+      "confidence": 0.54,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_6673c85ddcef",
+        "claim_type": "open_question",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "memory_086795fb4326",
+      "type": "open_question",
+      "title": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "summary": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should review actions eventually support reviewer identity beyond CLI strings?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "confidence": 0.54,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_cd89958e89d5",
+        "claim_type": "open_question",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "memory_b2e851399f74",
+      "type": "open_question",
+      "title": "Should actions be hash-chained or tamper-evident later?",
+      "summary": "Should actions be hash-chained or tamper-evident later?",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should actions be hash-chained or tamper-evident later?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should actions be hash-chained or tamper-evident later?",
+      "confidence": 0.54,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_db299aa7045e",
+        "claim_type": "open_question",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    },
+    {
+      "object_id": "memory_41df74a23ad9",
+      "type": "open_question",
+      "title": "Should Streamlit expose approve/reject/edit actions?",
+      "summary": "Should Streamlit expose approve/reject/edit actions?",
+      "owner_names": [],
+      "due_date": null,
+      "date": null,
+      "status": "open",
+      "source_event_ids": [
+        "uploaded_document_file_ed7d1d643b83d319_section_8"
+      ],
+      "sources": [
+        {
+          "source_event_id": "uploaded_document_file_ed7d1d643b83d319_section_8",
+          "source_type": "uploaded_document",
+          "source_subtype": "document_section",
+          "workspace": "local_upload",
+          "document_id": "file_ed7d1d643b83d319",
+          "document_title": "agent_change_packet_v081_full_20260630_233851.md",
+          "section_heading": "Existing Product Rules / Approved Context",
+          "actor": "Unknown",
+          "actor_role": null,
+          "quote": "Should Streamlit expose approve/reject/edit actions?",
+          "locator": "file_ed7d1d643b83d319#section-8",
+          "page": null,
+          "url": null
+        }
+      ],
+      "quote": "Should Streamlit expose approve/reject/edit actions?",
+      "confidence": 0.86,
+      "metadata": {
+        "packet_type": "agent_change_packet",
+        "claim_id": "claim_db604a35da30",
+        "claim_type": "open_question",
+        "source_section": "Existing Product Rules / Approved Context"
+      }
+    }
+  ]
+}

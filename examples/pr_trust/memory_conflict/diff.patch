@@ -1,0 +1,9 @@
+diff --git a/src/review_actions.py b/src/review_actions.py
+index ddddddd..eeeeeee 100644
+--- a/src/review_actions.py
++++ b/src/review_actions.py
+@@ -10,8 +10,6 @@ def save_action(path, action):
+-    actions = load_actions(path)
+-    actions.append(action)
+-    path.write_text(json.dumps(actions))
++    path.write_text(json.dumps([action]))

@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "repo": "spool-example"
+  },
+  "approved_memory": [
+    {
+      "memory_id": "mem_append_only",
+      "type": "decision",
+      "title": "Review actions are append-only.",
+      "summary": "Review actions must append to review_actions.json rather than overwrite prior actions.",
+      "status": "approved"
+    }
+  ]
+}

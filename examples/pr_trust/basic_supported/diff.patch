@@ -1,0 +1,21 @@
+diff --git a/src/review_actions.py b/src/review_actions.py
+index 1111111..2222222 100644
+--- a/src/review_actions.py
++++ b/src/review_actions.py
+@@ -8,6 +8,9 @@ def load_actions(path):
+     return json.loads(path.read_text())
+ 
++def append_review_action(path, action):
++    actions = load_actions(path)
++    actions.append(action)
++    path.write_text(json.dumps(actions, indent=2) + "\n")
+diff --git a/tests/test_review_actions.py b/tests/test_review_actions.py
+new file mode 100644
+index 0000000..3333333
+--- /dev/null
++++ b/tests/test_review_actions.py
+@@ -0,0 +1,6 @@
++def test_actions_append_to_review_actions():
++    append_review_action(path, {"action": "approve"})
++    append_review_action(path, {"action": "reject"})
++    assert [item["action"] for item in load_actions(path)] == ["approve", "reject"]

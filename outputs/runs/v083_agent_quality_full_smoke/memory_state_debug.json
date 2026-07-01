@@ -1,0 +1,244 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+    "candidate_count": 16,
+    "approved_count": 0,
+    "needs_review_count": 9,
+    "rejected_count": 0
+  },
+  "items": [
+    {
+      "memory_id": "mem_d645b2b61d9c",
+      "type": "context",
+      "title": "The CLI supports approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "unsupported_agent_claim"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Applying review actions"
+    },
+    {
+      "memory_id": "mem_39aa406456e7",
+      "type": "context",
+      "title": "review_actions.json is append-only.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "unsupported_agent_claim"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Appending to review_actions.json"
+    },
+    {
+      "memory_id": "mem_78947860bf91",
+      "type": "context",
+      "title": "Source evidence must be preserved through edits.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "unsupported_agent_claim"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Source evidence must be preserved through edits."
+    },
+    {
+      "memory_id": "mem_4684dadf99fa",
+      "type": "context",
+      "title": "Validation claims are self-reported",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "weak_validation_evidence"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "PASS, 212 tests"
+    },
+    {
+      "memory_id": "mem_b7c13d40ffda",
+      "type": "context",
+      "title": "Agent packet is missing expected sections",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.31,
+      "reason_codes": [
+        "missing_source_evidence",
+        "missing_source",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Agent packet is missing expected sections"
+    },
+    {
+      "memory_id": "mem_807bd2a5bf82",
+      "type": "context",
+      "title": "Possible agent scope drift",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.31,
+      "reason_codes": [
+        "possible_scope_drift",
+        "missing_source",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Possible agent scope drift"
+    },
+    {
+      "memory_id": "mem_c063eb5333ed",
+      "type": "context",
+      "title": "The implementation added src/review_actions.py.",
+      "review_state": "unreviewed",
+      "status": "candidate",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`src/review_actions.py`"
+    },
+    {
+      "memory_id": "mem_d23555a4f7aa",
+      "type": "context",
+      "title": "The implementation added review_memory.py.",
+      "review_state": "unreviewed",
+      "status": "candidate",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`review_memory.py`"
+    },
+    {
+      "memory_id": "mem_d551e6bc91d5",
+      "type": "context",
+      "title": "The implementation modified src/memory_store.py.",
+      "review_state": "unreviewed",
+      "status": "candidate",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`src/memory_store.py`"
+    },
+    {
+      "memory_id": "mem_74dec0f5f478",
+      "type": "context",
+      "title": "The implementation modified src/review_policy.py.",
+      "review_state": "unreviewed",
+      "status": "candidate",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`src/review_policy.py`"
+    },
+    {
+      "memory_id": "mem_b73c6c137852",
+      "type": "context",
+      "title": "The implementation added tests/test_review_actions.py.",
+      "review_state": "unreviewed",
+      "status": "candidate",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`tests/test_review_actions.py`"
+    },
+    {
+      "memory_id": "mem_13e40b84b64d",
+      "type": "context",
+      "title": "The implementation modified README.md.",
+      "review_state": "unreviewed",
+      "status": "candidate",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`README`"
+    },
+    {
+      "memory_id": "mem_e1eab26617bf",
+      "type": "context",
+      "title": "Review actions update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json.",
+      "review_state": "unreviewed",
+      "status": "candidate",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Updating review-state artifacts"
+    },
+    {
+      "memory_id": "mem_777ec3f5e78a",
+      "type": "decision",
+      "title": "Raw extraction is not trusted memory.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Raw extraction is not trusted memory."
+    },
+    {
+      "memory_id": "mem_720db365e999",
+      "type": "decision",
+      "title": "Candidate memory must not become approved memory automatically.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Candidate memory must not become approved memory automatically."
+    },
+    {
+      "memory_id": "mem_507eff6ae5a7",
+      "type": "decision",
+      "title": "Approved memory is the trusted store for reviewed items.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Approved memory is the trusted store for reviewed items."
+    }
+  ]
+}

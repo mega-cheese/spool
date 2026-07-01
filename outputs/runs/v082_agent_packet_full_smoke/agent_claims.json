@@ -1,0 +1,618 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+    "generated_at": "2026-06-30T23:59:49.095763+00:00",
+    "claim_count": 42
+  },
+  "claims": [
+    {
+      "claim_id": "claim_0ebe87064d32",
+      "claim": "Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale.",
+      "claim_type": "capability",
+      "source_section": "Agent Implementation Summary",
+      "evidence_sections": [],
+      "verdict": "unsupported",
+      "confidence": 0.25,
+      "reason": "The expected deterministic evidence was not found.",
+      "source_quote": "Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale",
+      "evidence_quote": ""
+    },
+    {
+      "claim_id": "claim_60209127709a",
+      "claim": "Update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json.",
+      "claim_type": "capability",
+      "source_section": "Agent Implementation Summary",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "Update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json",
+      "evidence_quote": "+Review actions update `candidate_memory.json`, `approved_memory.json`, `rejected_memory.json`, and `memory_state_debug.json`. They append to `review_actions.json` as an audit history rather than overwriting it."
+    },
+    {
+      "claim_id": "claim_9e9edbd4a77e",
+      "claim": "Append actions to review_actions.json.",
+      "claim_type": "capability",
+      "source_section": "Agent Implementation Summary",
+      "evidence_sections": [],
+      "verdict": "unsupported",
+      "confidence": 0.25,
+      "reason": "The expected deterministic evidence was not found.",
+      "source_quote": "Append actions to review_actions.json",
+      "evidence_quote": ""
+    },
+    {
+      "claim_id": "claim_c2b712cd22a3",
+      "claim": "Preserve source evidence through edits.",
+      "claim_type": "capability",
+      "source_section": "Agent Implementation Summary",
+      "evidence_sections": [],
+      "verdict": "unsupported",
+      "confidence": 0.25,
+      "reason": "The expected deterministic evidence was not found.",
+      "source_quote": "Preserve source evidence through edits",
+      "evidence_quote": ""
+    },
+    {
+      "claim_id": "claim_d41aa401f323",
+      "claim": "Prevent silent approval of unsupported/contradicted memory.",
+      "claim_type": "capability",
+      "source_section": "Agent Implementation Summary",
+      "evidence_sections": [],
+      "verdict": "unsupported",
+      "confidence": 0.25,
+      "reason": "The expected deterministic evidence was not found.",
+      "source_quote": "Prevent silent approval of unsupported/contradicted memory",
+      "evidence_quote": ""
+    },
+    {
+      "claim_id": "claim_ba8546106cb6",
+      "claim": "Avoid duplicate approved/rejected entries by memory_id.",
+      "claim_type": "capability",
+      "source_section": "Agent Implementation Summary",
+      "evidence_sections": [],
+      "verdict": "unsupported",
+      "confidence": 0.25,
+      "reason": "The expected deterministic evidence was not found.",
+      "source_quote": "Avoid duplicate approved/rejected entries by memory_id",
+      "evidence_quote": ""
+    },
+    {
+      "claim_id": "claim_39bff516f986",
+      "claim": "approve.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "approve",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_d5a89c4ae99a",
+      "claim": "reject.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "reject",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_c79413a3024a",
+      "claim": "edit.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "edit",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_48c304005bfa",
+      "claim": "mark_needs_review.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [],
+      "verdict": "unsupported",
+      "confidence": 0.25,
+      "reason": "The expected deterministic evidence was not found.",
+      "source_quote": "mark_needs_review",
+      "evidence_quote": ""
+    },
+    {
+      "claim_id": "claim_28bc723750b3",
+      "claim": "mark_resolved.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "mark_resolved",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_90bf3631f86c",
+      "claim": "mark_unresolved.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "mark_unresolved",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_bb2be4b0e76c",
+      "claim": "mark_superseded.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "mark_superseded",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_fefc20e21988",
+      "claim": "mark_stale.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "mark_stale",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_3d73fb09154d",
+      "claim": "candidate_memory.json.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "`candidate_memory.json`",
+      "evidence_quote": "+Review actions update `candidate_memory.json`, `approved_memory.json`, `rejected_memory.json`, and `memory_state_debug.json`. They append to `review_actions.json` as an audit history rather than overwriting it."
+    },
+    {
+      "claim_id": "claim_a004050f222d",
+      "claim": "approved_memory.json.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "`approved_memory.json`",
+      "evidence_quote": "-`approved_memory.json` and `rejected_memory.json` are local JSON stores for v0.8.0. They may be empty until a human or explicit review action approves/rejects candidates."
+    },
+    {
+      "claim_id": "claim_0c49e8af3008",
+      "claim": "rejected_memory.json.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "`rejected_memory.json`",
+      "evidence_quote": "-`approved_memory.json` and `rejected_memory.json` are local JSON stores for v0.8.0. They may be empty until a human or explicit review action approves/rejects candidates."
+    },
+    {
+      "claim_id": "claim_c339708c8f1e",
+      "claim": "memory_state_debug.json.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "`memory_state_debug.json`",
+      "evidence_quote": "memory_state_debug.json"
+    },
+    {
+      "claim_id": "claim_9208c1032dc9",
+      "claim": "review_actions.json.",
+      "claim_type": "capability",
+      "source_section": "Claimed Capabilities",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "`review_actions.json`",
+      "evidence_quote": "@@ -216,7 +216,22 @@ review_actions.json"
+    },
+    {
+      "claim_id": "claim_7a3b59bdca16",
+      "claim": "Raw extraction is not trusted memory.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "Raw extraction is not trusted memory.",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_93fc4b0b4157",
+      "claim": "Candidate memory must not become approved memory automatically.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "Candidate memory must not become approved memory automatically.",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_9a502c915e83",
+      "claim": "Approved memory is the trusted store for reviewed items.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "Approved memory is the trusted store for reviewed items.",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_302b8a8967ab",
+      "claim": "Review actions should be append-only.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "Review actions should be append-only.",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_fc34ffa2515b",
+      "claim": "Source evidence must be preserved through edits.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [],
+      "verdict": "unsupported",
+      "confidence": 0.25,
+      "reason": "The expected deterministic evidence was not found.",
+      "source_quote": "Source evidence must be preserved through edits.",
+      "evidence_quote": ""
+    },
+    {
+      "claim_id": "claim_3dd1cdd5675a",
+      "claim": "Spool is not a todo tracker.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "Spool is not a todo tracker.",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_7f1e32f6bdc9",
+      "claim": "Action items are represented as commitments in candidate/approved memory.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "Action items are represented as commitments in candidate/approved memory.",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_bd3b4613be2e",
+      "claim": "Commitment statuses are memory states, not productivity states:.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "Commitment statuses are memory states, not productivity states:",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_83d71a278683",
+      "claim": "unresolved.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "unresolved",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_202b79ed4001",
+      "claim": "resolved.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "resolved",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_5e1d3f1391db",
+      "claim": "superseded.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "superseded",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_e01f4c2eb927",
+      "claim": "stale.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "stale",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_1e7e695cda69",
+      "claim": "unknown.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "unknown",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_c2ec39d2cdd0",
+      "claim": "v0.8.1 should not implement:.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "v0.8.1 should not implement:",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_7a23e617a730",
+      "claim": "AI answer verification.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "AI answer verification",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_e216e233a198",
+      "claim": "browser extension.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "browser extension",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_a9a0dc4f0067",
+      "claim": "user auth.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "user auth",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_ddf4b87df351",
+      "claim": "database.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "database",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_2692084f6b3a",
+      "claim": "cloud sync.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "cloud sync",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_28707fdeb444",
+      "claim": "Slack/Drive/Gmail integrations.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "Slack/Drive/Gmail integrations",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_83a8aabb1c1f",
+      "claim": "polished UI.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "polished UI",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_f0bfb51e65f9",
+      "claim": "Kanban/task tracker/reminders.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "Kanban/task tracker/reminders",
+      "evidence_quote": "```diff"
+    },
+    {
+      "claim_id": "claim_c66c9db16619",
+      "claim": "automatic approval by default.",
+      "claim_type": "technical_decision",
+      "source_section": "Existing Product Rules / Approved Context",
+      "evidence_sections": [
+        "Git Diff",
+        "Git Stat"
+      ],
+      "verdict": "supported",
+      "confidence": 0.82,
+      "reason": "Referenced artifacts appear in git evidence.",
+      "source_quote": "automatic approval by default",
+      "evidence_quote": "```diff"
+    }
+  ]
+}

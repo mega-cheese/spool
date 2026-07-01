@@ -1,1 +1,0 @@
-{"input_file": "data/block_task_training_notes.md", "mode": "llm", "pipeline": "candidates-shadow", "classification": "meeting_minutes", "generated_at": "2026-06-30T08:18:07.443632+00:00", "meeting_date": null, "location": null, "present": [], "absent": [], "source_event_count": 4}

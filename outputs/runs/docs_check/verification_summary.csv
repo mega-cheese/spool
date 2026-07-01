@@ -1,4 +1,0 @@
-scenario_type,scenario_name,variant,expected_count,actual_count,count_pass,invariant_pass,verdict,failure_count
-document_vendor_selection,google_doc_vendor_selection,original,1,1,True,True,PASS,0
-document_vendor_selection,mixed_slack_doc_vendor_selection,original,1,1,True,False,FAIL,1
-document_vendor_selection,uploaded_doc_vendor_selection,original,1,1,True,True,PASS,0

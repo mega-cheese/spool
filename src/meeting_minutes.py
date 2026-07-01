@@ -6,6 +6,14 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import Any
 
+from .agent_change_packet import (
+    audit_agent_claims,
+    build_agent_candidate_memory_objects,
+    build_agent_change_artifact_payloads,
+    detect_agent_change_packet,
+    extract_agent_claims,
+    parse_agent_change_packet,
+)
 from .block_classifier import classify_blocks
 from .coverage_audit import audit_task_coverage, build_block_classification_debug
 from .schemas import Claim, DecisionRecord, Source
@@ -60,6 +68,11 @@ class MeetingMemoryExtraction:
     open_questions: dict[str, Any]
     document_memory_debug: dict[str, Any]
     block_classification_debug: dict[str, Any]
+    agent_change_packet_debug: dict[str, Any] | None = None
+    agent_claims: dict[str, Any] | None = None
+    agent_audit_report: dict[str, Any] | None = None
+    agent_audit_markdown: str | None = None
+    extra_candidate_memory: list[Any] | None = None
 
 
 def extract_meeting_memory(
@@ -73,6 +86,8 @@ def extract_meeting_memory(
     generated_at = datetime.now(timezone.utc).isoformat()
     metadata = _base_metadata(input_file, mode, pipeline, classification, generated_at)
     context = _document_context(normalized_events)
+    if classification == "agent_change_packet":
+        return _extract_agent_change_packet_memory(normalized_events, input_file, metadata)
     blocks = classify_blocks(normalized_events)
     task_spans = extract_explicit_task_spans(blocks)
     block_actions = extract_action_items_from_blocks(blocks, default_year=context["meeting_year"], task_spans=task_spans)
@@ -143,6 +158,8 @@ def classify_document(normalized_events: list[Any]) -> str:
         return "unknown"
     if not any(_event_source_type(event) in {"uploaded_document", "google_doc"} or _get(event, "source_subtype") == "document_section" for event in normalized_events):
         return "unknown"
+    if detect_agent_change_packet(normalized_events):
+        return "agent_change_packet"
     combined = _normalize_text("\n".join(_event_text(event) for event in normalized_events))
     headings = {_normalize_text(_section_heading(event) or "") for event in normalized_events}
     meeting_markers = {
@@ -261,6 +278,189 @@ def build_clean_memory_payload(
         "action_items": list(meeting.action_items.get("action_items", [])),
         "open_questions": list(meeting.open_questions.get("open_questions", [])),
         "review_items": review_items,
+    }
+
+
+def _extract_agent_change_packet_memory(
+    normalized_events: list[Any],
+    input_file: str,
+    metadata: dict[str, Any],
+) -> MeetingMemoryExtraction:
+    packet = parse_agent_change_packet(normalized_events)
+    claims = extract_agent_claims(packet)
+    report = audit_agent_claims(packet, claims)
+    artifact_payloads = build_agent_change_artifact_payloads(input_file, packet, claims, report)
+    extra_candidates = build_agent_candidate_memory_objects(packet, report)
+    open_questions = _agent_open_questions_payload(metadata, packet, report)
+    review_warnings = _agent_review_warnings(packet, report)
+    packet_debug = artifact_payloads["agent_change_packet_debug.json"]
+
+    return MeetingMemoryExtraction(
+        classification="agent_change_packet",
+        decisions=[],
+        meeting_metadata={
+            **metadata,
+            "meeting_date": None,
+            "location": None,
+            "present": [],
+            "absent": [],
+            "source_event_count": len(normalized_events),
+        },
+        action_items={"metadata": {**metadata, "action_item_count": 0}, "action_items": []},
+        open_questions=open_questions,
+        document_memory_debug={
+            "metadata": metadata,
+            "classification": "agent_change_packet",
+            "source_headings": [_section_heading(event) or "Document" for event in normalized_events],
+            "memory_objects": [
+                {
+                    "object_id": item.memory_id,
+                    "type": item.type,
+                    "title": item.title,
+                    "summary": item.summary,
+                    "status": item.status,
+                    "source_event_ids": item.source_event_ids,
+                    "sources": item.sources,
+                    "quote": item.quote,
+                    "confidence": item.confidence,
+                    "metadata": item.metadata,
+                }
+                for item in extra_candidates
+            ],
+            "review_warnings": review_warnings,
+        },
+        block_classification_debug={
+            "metadata": metadata,
+            "classification": "agent_change_packet",
+            "blocks": [],
+            "detected_task_spans": [],
+            "coverage_audit_warnings": [],
+            "note": "Meeting-minutes task coverage audit skipped for agent change packets.",
+        },
+        agent_change_packet_debug=packet_debug,
+        agent_claims=artifact_payloads["agent_claims.json"],
+        agent_audit_report=artifact_payloads["agent_audit_report.json"],
+        agent_audit_markdown=artifact_payloads["agent_audit_report.md"],
+        extra_candidate_memory=extra_candidates,
+    )
+
+
+def _agent_open_questions_payload(metadata: dict[str, Any], packet: Any, report: Any) -> dict[str, Any]:
+    questions = []
+    for claim in report.claims:
+        if claim.claim_type != "open_question":
+            continue
+        title = str(claim.claim or "")
+        source_ids = list(packet.section_event_ids.get(claim.source_section) or [])
+        sources = [dict(source) for source in packet.section_sources.get(claim.source_section, [])[:1]]
+        if sources:
+            sources[0]["quote"] = claim.source_quote or sources[0].get("quote", "")
+        questions.append(
+            {
+                "object_id": _object_id("open_question", title, source_ids),
+                "type": "open_question",
+                "title": title,
+                "summary": title,
+                "owner_names": [],
+                "due_date": None,
+                "date": None,
+                "status": "open",
+                "source_event_ids": source_ids,
+                "sources": sources,
+                "quote": str(claim.source_quote or title),
+                "confidence": float(claim.confidence or 0.0),
+                "metadata": {
+                    "packet_type": "agent_change_packet",
+                    "claim_id": claim.claim_id,
+                    "claim_type": claim.claim_type,
+                    "source_section": claim.source_section,
+                },
+            }
+        )
+    return {"metadata": {**metadata, "open_question_count": len(questions)}, "open_questions": questions}
+
+
+def _agent_review_warnings(packet: Any, report: Any) -> list[dict[str, Any]]:
+    warnings: list[dict[str, Any]] = []
+    validation_claims = []
+    for claim in report.claims:
+        if claim.verdict in {"unsupported", "contradicted"}:
+            warnings.append(_agent_warning(packet, claim, "unsupported_agent_claim", "high", "Agent claim lacks deterministic support."))
+        elif claim.verdict == "weakly_supported" and claim.claim_type in {"test_result", "manual_smoke"}:
+            validation_claims.append(claim)
+    if validation_claims:
+        warnings.append(_agent_grouped_validation_warning(packet, validation_claims))
+    if packet.missing_sections:
+        warnings.append(
+            {
+                "reason": "missing_source_evidence",
+                "severity": "medium",
+                "title": "Agent packet is missing expected sections",
+                "candidate_decision": "Agent packet is missing expected sections",
+                "summary": f"Missing sections: {', '.join(packet.missing_sections)}.",
+                "recommended_action": "Review whether the packet has enough evidence for audit.",
+                "source_event_ids": [],
+                "sources": [],
+            }
+        )
+    for issue in report.scope_audit.get("possible_scope_issues") or []:
+        warnings.append(
+            {
+                "reason": "possible_scope_drift",
+                "severity": "high",
+                "title": "Possible agent scope drift",
+                "candidate_decision": "Possible agent scope drift",
+                "summary": str(issue),
+                "recommended_action": "Inspect the diff for out-of-scope additions.",
+                "source_event_ids": [],
+                "sources": [],
+            }
+        )
+    return warnings
+
+
+def _agent_warning(packet: Any, claim: Any, reason: str, severity: str, summary: str) -> dict[str, Any]:
+    sources = list(packet.section_sources.get(claim.source_section) or [])
+    source_ids = list(packet.section_event_ids.get(claim.source_section) or [])
+    if sources:
+        sources = [dict(sources[0], quote=claim.source_quote or sources[0].get("quote", ""))]
+    return {
+        "reason": reason,
+        "severity": severity,
+        "title": "Agent claim needs review",
+        "candidate_decision": claim.claim,
+        "summary": summary,
+        "recommended_action": "Inspect the cited packet section and supporting git/test evidence.",
+        "source_event_ids": source_ids,
+        "sources": sources,
+        "related_candidate_ids": [claim.claim_id],
+    }
+
+
+def _agent_grouped_validation_warning(packet: Any, claims: list[Any]) -> dict[str, Any]:
+    source_ids: list[str] = []
+    sources: list[dict[str, Any]] = []
+    related_ids: list[str] = []
+    for claim in claims:
+        related_ids.append(claim.claim_id)
+        for source_id in packet.section_event_ids.get(claim.source_section) or []:
+            if source_id not in source_ids:
+                source_ids.append(source_id)
+        if not sources:
+            section_sources = [dict(source) for source in packet.section_sources.get(claim.source_section, [])[:1]]
+            if section_sources:
+                section_sources[0]["quote"] = claim.source_quote or section_sources[0].get("quote", "")
+                sources.extend(section_sources)
+    return {
+        "reason": "weak_validation_evidence",
+        "severity": "medium",
+        "title": "Validation claims need evidence",
+        "candidate_decision": "Validation claims are self-reported",
+        "summary": "Validation claims are self-reported and need log evidence.",
+        "recommended_action": "Attach or inspect the actual test/scenario logs before relying on these validation claims.",
+        "source_event_ids": source_ids,
+        "sources": sources,
+        "related_candidate_ids": related_ids,
     }
 
 

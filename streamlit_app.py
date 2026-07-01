@@ -114,6 +114,9 @@ def _render_run(result: UiRunResult) -> None:
     document_memory = load_json_if_exists(run_dir / "document_memory_debug.json")
     block_debug = load_json_if_exists(run_dir / "block_classification_debug.json")
     review_queue = load_json_if_exists(run_dir / "review_queue.json")
+    agent_packet_debug = load_json_if_exists(run_dir / "agent_change_packet_debug.json")
+    agent_claims = load_json_if_exists(run_dir / "agent_claims.json")
+    agent_audit_report = load_json_if_exists(run_dir / "agent_audit_report.json")
 
     st.caption(f"Run folder: `{run_dir}`")
     st.write(f"Input file: `{result.input_file}`")
@@ -171,6 +174,9 @@ def _render_run(result: UiRunResult) -> None:
                 "open_questions.json": open_questions,
                 "document_memory_debug.json": document_memory,
                 "block_classification_debug.json": block_debug,
+                "agent_change_packet_debug.json": agent_packet_debug,
+                "agent_claims.json": agent_claims,
+                "agent_audit_report.json": agent_audit_report,
                 "state_resolution_debug.json": state_resolution,
                 "source_bundles_debug.json": source_bundles,
                 "candidates_debug.json": candidates,

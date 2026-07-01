@@ -1,0 +1,1755 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260701_001020.md",
+    "candidate_count": 109,
+    "approved_count": 0,
+    "needs_review_count": 102,
+    "rejected_count": 1
+  },
+  "items": [
+    {
+      "memory_id": "mem_6fd895efd452",
+      "type": "open_question",
+      "title": "Should weakly_supported memory be approvable?",
+      "review_state": "needs_review",
+      "status": "unresolved",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.31,
+      "reason_codes": [
+        "missing_source",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Should weakly_supported memory be approvable?"
+    },
+    {
+      "memory_id": "mem_476400862630",
+      "type": "open_question",
+      "title": "Should approved_memory become canonical in v0.8.2?",
+      "review_state": "needs_review",
+      "status": "unresolved",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.31,
+      "reason_codes": [
+        "missing_source",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Should approved_memory become canonical in v0.8.2?"
+    },
+    {
+      "memory_id": "mem_cd68bc90b241",
+      "type": "open_question",
+      "title": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "review_state": "needs_review",
+      "status": "unresolved",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.31,
+      "reason_codes": [
+        "missing_source",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Should review actions eventually support reviewer identity beyond CLI strings?"
+    },
+    {
+      "memory_id": "mem_a6adc781ac40",
+      "type": "open_question",
+      "title": "Should actions be hash-chained or tamper-evident later?",
+      "review_state": "needs_review",
+      "status": "unresolved",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.31,
+      "reason_codes": [
+        "missing_source",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Should actions be hash-chained or tamper-evident later?"
+    },
+    {
+      "memory_id": "mem_19219ce62e3d",
+      "type": "open_question",
+      "title": "Should Streamlit expose approve/reject/edit actions?",
+      "review_state": "needs_review",
+      "status": "unresolved",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.31,
+      "reason_codes": [
+        "missing_source",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Should Streamlit expose approve/reject/edit actions?"
+    },
+    {
+      "memory_id": "mem_b9c83c4c08a7",
+      "type": "decision",
+      "title": "Implement Spool v0.8.1 review action application layer.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "approval_missing"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "```text\nImplement v0.8.1: review action application layer.\n\nContext:\nSpool v0.8.0 added approved-memory infrastructure:\n- candidate_memory.json\n- approved_memory.json\n- rejected_memory.json\n- review_actions.json\n- memory_state_debug.json\n\nIt also added:\n- src/memory_objects.py\n- src/review_policy.py\n- src/memory_store.py\n- src/memory_artifacts.py\n\nCurrent principle:\nRaw extraction is not trusted memory.\n\nArchitecture:\nraw docs\n→ extracted candidate memory\n→ review state\n→ human/system review action\n→ approved/rejected/edited memory\n→ trusted company memory later\n\nv0.8.0 created the artifacts, but the user still needs a real way to apply review actions.\n\nGoal:\nImplement the infrastructure for applying review actions to candidate memory.\n\nThis is still system infrastructure, not a polished UI.\n\nDo not build:\n- browser extension\n- integrations\n- database\n- auth\n- AI answer verifier\n- large UI redesign\n- task reminder system\n- todo tracker features\n\nDo not change extraction behavior unless absolutely necessary.\nDo not remove or break existing artifacts.\nDo not turn commitments into productivity tasks.\n\nKeep existing outputs compatible:\n- decisions.json\n- clean_memory.json\n- action_items.json\n- open_questions.json\n- review_queue.json\n- candidate_memory.json\n- approved_memory.json\n- rejected_memory.json\n- review_actions.json\n- memory_state_debug.json\n\nPart 1: Add review action model.\n\nCreate or update a module:\n\nsrc/review_actions.py\n\nDefine a normalized ReviewAction shape:\n\n{\n  \"action_id\": \"review_...\",\n  \"memory_id\": \"mem_...\",\n  \"action\": \"approve\" | \"reject\" | \"edit\" | \"mark_needs_review\" | \"mark_resolved\" | \"mark_unresolved\" | \"mark_superseded\" | \"mark_stale\",\n  \"reviewer\": \"system\" | \"human\" | \"...\",\n  \"reason\": null,\n  \"patch\": {},\n  \"created_at\": \"...\"\n}\n\nAdd helper functions:\n- create_review_action(memory_id, action, reviewer=\"human\", reason=None, patch=None)\n- validate_review_action(action)\n- apply_review_action(candidate, action) -> MemoryObject\n- apply_review_actions(candidates, existing_approved, existing_rejected, actions) -> ReviewResult\n\nReviewResult should include:\n{\n  \"approved_memory\": [...],\n  \"rejected_memory\": [...],\n  \"updated_candidates\": [...],\n  \"actions\": [...],\n  \"errors\": [...],\n  \"warnings\": [...]\n}\n\nImportant:\n- Actions should be append-only in review_actions.json.\n- Applying a review action should not delete source evidence.\n- Edited memory must preserve original source_object_id/source_event_ids/sources/quote unless patch explicitly changes allowed fields.\n- Do not allow edits to remove all source evidence unless action is reject.\n- Do not silently approve unsupported memory.\n\nPart 2: Review action semantics.\n\nApprove:\n- review_state = \"approved\"\n- status:\n  - for decisions: \"approved\"\n  - for commitments: keep \"unresolved\" unless patch/status says resolved/superseded/stale\n  - for open_questions: keep \"open\" or \"unresolved\" depending existing schema\n- evidence_state must remain supported/weakly_supported/unknown as previously assigned\n- If evidence_state is unsupported or contradicted, approval should either fail or mark warning unless force flag is present.\n- v0.8.1 does not need force approval unless easy.\n\nReject:\n- review_state = \"rejected\"\n- status = \"rejected\"\n- add rejection_reason from action.reason if available\n- move to rejected_memory.json\n- do not include in approved_memory.json\n\nEdit:\n- apply patch to safe editable fields:\n  - title\n  - summary\n  - owner_names\n  - status\n  - type\n  - metadata\n  - due_date if already present in object schema\n  - review_state if valid\n- after edit:\n  - review_state = \"edited\" unless patch explicitly sets approved/rejected/needs_review\n  - updated_at changes\n  - metadata.original_memory_id or metadata.edited_from should preserve lineage\n- preserve source evidence.\n\nMark needs review:\n- review_state = \"needs_review\"\n- status should remain current unless unsupported\n- add reason code or review note.\n\nMark resolved:\n- for commitments only:\n  - status = \"resolved\"\n  - review_state can be \"approved\" if already approved, otherwise \"needs_review\" or \"edited\"\n- do not treat this as productivity task completion; it is a memory-state update.\n- require source/evidence if possible, but for v0.8.1 allow human marking with reason.\n\nMark unresolved:\n- for commitments/open questions:\n  - status = \"unresolved\"\n\nMark superseded:\n- status = \"superseded\"\n- review_state = \"approved\" or \"edited\" depending prior state\n- require reason if possible.\n- metadata.superseded_reason = reason\n\nMark stale:\n- status = \"stale\"\n- metadata.stale_reason = reason\n\nPart 3: Update memory_store.py.\n\nExtend or update src/memory_store.py with functions:\n\n- load_candidate_memory(path)\n- save_candidate_memory(path, objects)\n- load_review_actions(path)\n- save_review_actions(path, actions)\n- append_review_action(path, action)\n- find_memory_by_id(candidates, memory_id)\n- apply_action_to_store(run_dir, action) -> updated artifacts\n\napply_action_to_store should:\n1. Load candidate_memory.json\n2. Load approved_memory.json\n3. Load rejected_memory.json\n4. Load review_actions.json\n5. Validate action\n6. Find target memory object\n7. Apply action\n8. Update approved/rejected/candidate states\n9. Append action to review_actions.json\n10. Rewrite memory_state_debug.json or update it if appropriate\n\nFor duplicate handling:\n- If approving a memory object that already exists in approved_memory by memory_id, update it instead of duplicating.\n- If rejecting an approved memory object, remove it from approved_memory and add/update rejected_memory.\n- If approving a rejected memory object, remove it from rejected_memory and add/update approved_memory.\n- Keep actions append-only.\n\nPart 4: Add CLI support for review actions.\n\nAdd lightweight CLI command support. Prefer either a new script or extending an existing script.\n\nRecommended new script:\n\nreview_memory.py\n\nUsage examples:\n\nvenv/bin/python review_memory.py --run-dir outputs/runs/<run_id> --memory-id mem_123 --action approve --reviewer Owen\n\nvenv/bin/python review_memory.py --run-dir outputs/runs/<run_id> --memory-id mem_123 --action reject --reason \"False positive\"\n\nvenv/bin/python review_memory.py --run-dir outputs/runs/<run_id> --memory-id mem_123 --action edit --patch '{\"title\":\"Owen should reach out to schools\",\"owner_names\":[\"Owen\"]}'\n\nvenv/bin/python review_memory.py --run-dir outputs/runs/<run_id> --memory-id mem_123 --action mark_resolved --reason \"Confirmed in follow-up notes\"\n\nThe script should:\n- load artifacts from run dir\n- apply action\n- write updated approved/rejected/candidate/review_actions artifacts\n- print a compact summary:\n  - memory_id\n  - action\n  - new review_state\n  - new status\n  - approved_count\n  - rejected_count\n  - action_count\n\nDo not require Streamlit to use this.\nDo not require a database.\n\nPart 5: Optional minimal Streamlit integration.\n\nIf simple and low-risk, add minimal buttons or controls in current Streamlit UI:\n- Approve\n- Reject\n- Mark needs review\n- Edit can be deferred if complex.\n\nBut do not do a major UI redesign.\nCLI support is required; Streamlit support is optional.\n\nPart 6: Add review action debug artifact.\n\nUpdate memory_state_debug.json after actions.\n\nEach item should show:\n{\n  \"memory_id\": \"...\",\n  \"type\": \"...\",\n  \"title\": \"...\",\n  \"review_state\": \"...\",\n  \"status\": \"...\",\n  \"evidence_state\": \"...\",\n  \"memory_quality_score\": 0.0,\n  \"reason_codes\": [],\n  \"latest_review_action\": \"approve\",\n  \"latest_review_action_at\": \"...\",\n  \"source_quote\": \"...\"\n}\n\nIf memory_state_debug currently only reflects initial classification, add enough action-state reflection so the latest state is visible.\n\nPart 7: Tests.\n\nAdd tests for review action infrastructure.\n\nRequired tests:\n\n1. approve candidate writes to approved_memory.\n2. approve does not duplicate already-approved memory.\n3. reject candidate writes to rejected_memory.\n4. reject removes memory from approved_memory if it was approved.\n5. approve removes memory from rejected_memory if it was previously rejected.\n6. edit updates safe fields and preserves source evidence.\n7. edit cannot remove all source evidence.\n8. mark_resolved changes commitment status to resolved.\n9. mark_superseded records superseded reason in metadata.\n10. mark_stale records stale reason in metadata.\n11. mark_needs_review sets review_state to needs_review.\n12. actions append to review_actions.json, not overwrite.\n13. invalid memory_id returns clear error.\n14. invalid action returns clear error.\n15. unsupported/contradicted memory cannot be silently approved.\n16. CLI approve command works on a temp run directory.\n17. CLI reject command works on a temp run directory.\n18. CLI edit command works with JSON patch.\n19. memory_state_debug reflects latest action state.\n20. candidate_memory remains present and source-backed after actions.\n\nPart 8: Scenario validation.\n\nRun:\n\nvenv/bin/python -m unittest discover -s tests\n\nvenv/bin/python run_scenarios.py --scenario-set meeting_minutes --mode heuristic --pipeline candidates-shadow --run-id v081_review_actions_heuristic\n\nvenv/bin/python run_scenarios.py --scenario-set meeting_minutes --mode llm --pipeline candidates-shadow --run-id v081_review_actions_llm\n\nvenv/bin/python run_scenarios.py --scenario-set docs --mode llm --pipeline candidates-shadow --run-id v081_docs_regression\n\nvenv/bin/python run_scenarios.py --scenario-set review --mode llm --pipeline candidates-shadow --run-id v081_review_regression\n\nvenv/bin/python run_scenarios.py --scenario-set conflict --mode llm --pipeline candidates-shadow --run-id v081_conflict_regression\n\nManual smoke test:\n1. Pick a run directory from Meeting #7 or Meeting #12.\n2. Open candidate_memory.json.\n3. Pick one commitment memory_id.\n4. Approve it with review_memory.py.\n5. Confirm approved_memory.json contains it.\n6. Confirm review_actions.json appended the approve action.\n7. Reject another candidate.\n8. Confirm rejected_memory.json contains it.\n9. Edit one weak item title/owner.\n10. Confirm source quote is preserved.\n11. Confirm memory_state_debug reflects latest states.\n\nPart 9: README update.\n\nUpdate README with a short section:\n\nReview actions:\n\n- v0.8.0 creates candidate memory but does not trust it automatically.\n- v0.8.1 adds review actions.\n- Use review_memory.py to approve/reject/edit/mark memory states.\n- approved_memory.json is the trusted memory store for reviewed items.\n- rejected_memory.json preserves rejected candidates.\n- review_actions.json is append-only audit history.\n\nMention:\n- Action items are represented as commitments in candidate/approved memory.\n- Spool is not a todo tracker.\n- Commitment statuses are memory states: unresolved, resolved, superseded, stale, unknown.\n\nPart 10: Non-goals reminder.\n\nDo not implement:\n- AI answer verification\n- browser extension\n- user auth\n- database\n- cloud sync\n- Slack/Drive/Gmail integrations\n- polished UI\n- Kanban/task tracker/reminders\n- automatic approval by default\n\nv0.8.1 is done when:\n- review actions can be applied from CLI\n- approved/rejected/review action artifacts update correctly\n- candidate source evidence is preserved\n- tests pass\n- existing extraction/regression scenarios still pass\n```\n\n---"
+    },
+    {
+      "memory_id": "mem_8a9123b96fe4",
+      "type": "context",
+      "title": "Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "unsupported_claim"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale"
+    },
+    {
+      "memory_id": "mem_95035c480261",
+      "type": "context",
+      "title": "Append actions to review_actions.json.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "unsupported_claim"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Append actions to review_actions.json"
+    },
+    {
+      "memory_id": "mem_f2be7a9997d6",
+      "type": "context",
+      "title": "Preserve source evidence through edits.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "unsupported_claim"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Preserve source evidence through edits"
+    },
+    {
+      "memory_id": "mem_5cf619dd1c5b",
+      "type": "context",
+      "title": "Prevent silent approval of unsupported/contradicted memory.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "unsupported_claim"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Prevent silent approval of unsupported/contradicted memory"
+    },
+    {
+      "memory_id": "mem_59f32dae6174",
+      "type": "context",
+      "title": "Avoid duplicate approved/rejected entries by memory_id.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "unsupported_claim"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Avoid duplicate approved/rejected entries by memory_id"
+    },
+    {
+      "memory_id": "mem_b473f8db2eae",
+      "type": "context",
+      "title": "Unit tests passed with 212 tests.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "extraction_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "PASS, 212 tests"
+    },
+    {
+      "memory_id": "mem_e96ebdf78d9b",
+      "type": "context",
+      "title": "venv/bin/python -m unittest discover -s tests: PASS.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "extraction_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "venv/bin/python -m unittest discover -s tests: PASS"
+    },
+    {
+      "memory_id": "mem_33c690695ec9",
+      "type": "context",
+      "title": "meeting_minutes heuristic: PASS.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "extraction_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "meeting_minutes heuristic: PASS"
+    },
+    {
+      "memory_id": "mem_f5cb2e1884fe",
+      "type": "context",
+      "title": "meeting_minutes LLM: PASS.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "extraction_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "meeting_minutes LLM: PASS"
+    },
+    {
+      "memory_id": "mem_5defeed38f13",
+      "type": "context",
+      "title": "docs LLM: PASS.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "extraction_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "docs LLM: PASS"
+    },
+    {
+      "memory_id": "mem_75ed4a2654ff",
+      "type": "context",
+      "title": "review LLM: PASS.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "extraction_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "review LLM: PASS"
+    },
+    {
+      "memory_id": "mem_d07e3d1c91e0",
+      "type": "context",
+      "title": "conflict LLM: PASS.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "extraction_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "conflict LLM: PASS"
+    },
+    {
+      "memory_id": "mem_6e0d76f9587c",
+      "type": "context",
+      "title": "Created a fresh Meeting #12 run.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "extraction_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Created a fresh Meeting #12 run."
+    },
+    {
+      "memory_id": "mem_0da5f19c3f66",
+      "type": "context",
+      "title": "Approved one commitment into approved_memory.json.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "extraction_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Approved one commitment into approved_memory.json."
+    },
+    {
+      "memory_id": "mem_8f7734e9a381",
+      "type": "context",
+      "title": "Rejected one candidate into rejected_memory.json.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "extraction_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Rejected one candidate into rejected_memory.json."
+    },
+    {
+      "memory_id": "mem_6f57d071c343",
+      "type": "context",
+      "title": "Edited one weak item while preserving source quote/evidence.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "extraction_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Edited one weak item while preserving source quote/evidence."
+    },
+    {
+      "memory_id": "mem_314b5c932223",
+      "type": "context",
+      "title": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "extraction_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state."
+    },
+    {
+      "memory_id": "mem_c7e8a47fc6db",
+      "type": "context",
+      "title": "Meeting minutes extraction warning",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "extraction_warning"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "---"
+    },
+    {
+      "memory_id": "mem_16049913f54d",
+      "type": "context",
+      "title": "Source evidence must be preserved through edits.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "unsupported_claim"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Source evidence must be preserved through edits."
+    },
+    {
+      "memory_id": "mem_a8804fd5dd95",
+      "type": "context",
+      "title": "Review actions are append-only in review_actions.json.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "unsupported_claim"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Review actions are append-only in `review_actions.json`."
+    },
+    {
+      "memory_id": "mem_fbfe00a5966c",
+      "type": "context",
+      "title": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "unsupported_claim"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Duplicate handling by `memory_id` could incorrectly overwrite edited objects."
+    },
+    {
+      "memory_id": "mem_a9e43bd17999",
+      "type": "context",
+      "title": "Should Streamlit expose approve/reject/edit actions?",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.87,
+      "reason_codes": [
+        "unsupported_claim"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Should Streamlit expose approve/reject/edit actions?"
+    },
+    {
+      "memory_id": "mem_cd0411a6748d",
+      "type": "context",
+      "title": "Possible agent scope drift",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.31,
+      "reason_codes": [
+        "extraction_warning",
+        "missing_source",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Possible agent scope drift"
+    },
+    {
+      "memory_id": "mem_d2f03fe79a7c",
+      "type": "context",
+      "title": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.31,
+      "reason_codes": [
+        "extraction_warning",
+        "missing_source",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Review actions could corrupt JSON artifacts if writes are not atomic."
+    },
+    {
+      "memory_id": "mem_02d039a5aaa1",
+      "type": "context",
+      "title": "Edits could accidentally allow source evidence to be removed.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.31,
+      "reason_codes": [
+        "extraction_warning",
+        "missing_source",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Edits could accidentally allow source evidence to be removed."
+    },
+    {
+      "memory_id": "mem_0ef7b17ceca5",
+      "type": "context",
+      "title": "memory_state_debug.json could diverge from actual approved/rejected state.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.31,
+      "reason_codes": [
+        "extraction_warning",
+        "missing_source",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "memory_state_debug.json could diverge from actual approved/rejected state."
+    },
+    {
+      "memory_id": "mem_170f5f62452d",
+      "type": "context",
+      "title": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.31,
+      "reason_codes": [
+        "extraction_warning",
+        "missing_source",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Duplicate handling by memory_id could incorrectly overwrite edited objects."
+    },
+    {
+      "memory_id": "mem_3223d9665718",
+      "type": "context",
+      "title": "CLI patch parsing could accept unsafe or invalid fields.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.31,
+      "reason_codes": [
+        "extraction_warning",
+        "missing_source",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "CLI patch parsing could accept unsafe or invalid fields."
+    },
+    {
+      "memory_id": "mem_b234e99e1306",
+      "type": "context",
+      "title": "Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unsupported",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Apply approve, reject, edit, mark_needs_review, mark_resolved, mark_unresolved, mark_superseded, and mark_stale"
+    },
+    {
+      "memory_id": "mem_ce5cfd632f5b",
+      "type": "context",
+      "title": "Update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json.",
+      "review_state": "unreviewed",
+      "status": "candidate",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Update candidate_memory.json, approved_memory.json, rejected_memory.json, and memory_state_debug.json"
+    },
+    {
+      "memory_id": "mem_9ceaa6466c90",
+      "type": "context",
+      "title": "Append actions to review_actions.json.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unsupported",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Append actions to review_actions.json"
+    },
+    {
+      "memory_id": "mem_6717f04f9ef7",
+      "type": "context",
+      "title": "Preserve source evidence through edits.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unsupported",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Preserve source evidence through edits"
+    },
+    {
+      "memory_id": "mem_fc01281b5fa6",
+      "type": "context",
+      "title": "Prevent silent approval of unsupported/contradicted memory.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unsupported",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Prevent silent approval of unsupported/contradicted memory"
+    },
+    {
+      "memory_id": "mem_8adf2902ebb4",
+      "type": "context",
+      "title": "Avoid duplicate approved/rejected entries by memory_id.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unsupported",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Avoid duplicate approved/rejected entries by memory_id"
+    },
+    {
+      "memory_id": "mem_771cf1781f8a",
+      "type": "context",
+      "title": "src/review_actions.py.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`src/review_actions.py`"
+    },
+    {
+      "memory_id": "mem_0f5f8ad38927",
+      "type": "context",
+      "title": "review_memory.py.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`review_memory.py`"
+    },
+    {
+      "memory_id": "mem_d1caf3b6a2f2",
+      "type": "context",
+      "title": "src/memory_store.py.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`src/memory_store.py`"
+    },
+    {
+      "memory_id": "mem_7bed2701b631",
+      "type": "context",
+      "title": "src/review_policy.py.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`src/review_policy.py`"
+    },
+    {
+      "memory_id": "mem_7f86b85d9a98",
+      "type": "context",
+      "title": "tests/test_review_actions.py.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`tests/test_review_actions.py`"
+    },
+    {
+      "memory_id": "mem_1f61e1aa91a9",
+      "type": "context",
+      "title": "README.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`README`"
+    },
+    {
+      "memory_id": "mem_785a79cebb2b",
+      "type": "context",
+      "title": "approve.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "approve"
+    },
+    {
+      "memory_id": "mem_765c7321e3a4",
+      "type": "context",
+      "title": "reject.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "reject"
+    },
+    {
+      "memory_id": "mem_24999f1ff0f0",
+      "type": "context",
+      "title": "edit.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "edit"
+    },
+    {
+      "memory_id": "mem_79aec7b93044",
+      "type": "context",
+      "title": "mark_needs_review.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unsupported",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "mark_needs_review"
+    },
+    {
+      "memory_id": "mem_4fc2585ad4f3",
+      "type": "context",
+      "title": "mark_resolved.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "mark_resolved"
+    },
+    {
+      "memory_id": "mem_11b031a54f40",
+      "type": "context",
+      "title": "mark_unresolved.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "mark_unresolved"
+    },
+    {
+      "memory_id": "mem_6f2d3489e174",
+      "type": "context",
+      "title": "mark_superseded.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "mark_superseded"
+    },
+    {
+      "memory_id": "mem_f0e7e25d9ebe",
+      "type": "context",
+      "title": "mark_stale.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "mark_stale"
+    },
+    {
+      "memory_id": "mem_42f6b17d5b9b",
+      "type": "context",
+      "title": "candidate_memory.json.",
+      "review_state": "unreviewed",
+      "status": "candidate",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`candidate_memory.json`"
+    },
+    {
+      "memory_id": "mem_689de2e7001f",
+      "type": "context",
+      "title": "approved_memory.json.",
+      "review_state": "unreviewed",
+      "status": "candidate",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`approved_memory.json`"
+    },
+    {
+      "memory_id": "mem_e885224a4dfd",
+      "type": "context",
+      "title": "rejected_memory.json.",
+      "review_state": "unreviewed",
+      "status": "candidate",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`rejected_memory.json`"
+    },
+    {
+      "memory_id": "mem_86fd074c703b",
+      "type": "context",
+      "title": "memory_state_debug.json.",
+      "review_state": "unreviewed",
+      "status": "candidate",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`memory_state_debug.json`"
+    },
+    {
+      "memory_id": "mem_4e65b1cd764b",
+      "type": "context",
+      "title": "review_actions.json.",
+      "review_state": "unreviewed",
+      "status": "candidate",
+      "evidence_state": "supported",
+      "memory_quality_score": 1.0,
+      "reason_codes": [],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`review_actions.json`"
+    },
+    {
+      "memory_id": "mem_0b710934861b",
+      "type": "context",
+      "title": "Unit tests passed with 212 tests.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.652,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "PASS, 212 tests"
+    },
+    {
+      "memory_id": "mem_dd9d32a84f67",
+      "type": "context",
+      "title": "venv/bin/python -m unittest discover -s tests: PASS.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.652,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "venv/bin/python -m unittest discover -s tests: PASS"
+    },
+    {
+      "memory_id": "mem_3dc4124ff683",
+      "type": "context",
+      "title": "meeting_minutes heuristic: PASS.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.652,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "meeting_minutes heuristic: PASS"
+    },
+    {
+      "memory_id": "mem_a6629ea0e883",
+      "type": "context",
+      "title": "meeting_minutes LLM: PASS.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.652,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "meeting_minutes LLM: PASS"
+    },
+    {
+      "memory_id": "mem_4b168761b1b8",
+      "type": "context",
+      "title": "docs LLM: PASS.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.652,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "docs LLM: PASS"
+    },
+    {
+      "memory_id": "mem_74aff74efd6e",
+      "type": "context",
+      "title": "review LLM: PASS.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.652,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "review LLM: PASS"
+    },
+    {
+      "memory_id": "mem_7a4c4c621b4d",
+      "type": "context",
+      "title": "conflict LLM: PASS.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.652,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "conflict LLM: PASS"
+    },
+    {
+      "memory_id": "mem_5ac179c25019",
+      "type": "context",
+      "title": "Created a fresh Meeting #12 run.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.652,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Created a fresh Meeting #12 run."
+    },
+    {
+      "memory_id": "mem_346b52328bda",
+      "type": "context",
+      "title": "Approved one commitment into approved_memory.json.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.652,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Approved one commitment into approved_memory.json."
+    },
+    {
+      "memory_id": "mem_b3c97ad3c45c",
+      "type": "context",
+      "title": "Rejected one candidate into rejected_memory.json.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.652,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Rejected one candidate into rejected_memory.json."
+    },
+    {
+      "memory_id": "mem_b4fc1b060e3a",
+      "type": "context",
+      "title": "Edited one weak item while preserving source quote/evidence.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.652,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Edited one weak item while preserving source quote/evidence."
+    },
+    {
+      "memory_id": "mem_c7a1974c4b7e",
+      "type": "context",
+      "title": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.652,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Confirmed review_actions.json appended actions and memory_state_debug.json reflects latest action state."
+    },
+    {
+      "memory_id": "mem_d3b9007aeaf4",
+      "type": "context",
+      "title": "",
+      "review_state": "rejected",
+      "status": "rejected",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.572,
+      "reason_codes": [
+        "empty_title",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "---"
+    },
+    {
+      "memory_id": "mem_777ec3f5e78a",
+      "type": "decision",
+      "title": "Raw extraction is not trusted memory.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Raw extraction is not trusted memory."
+    },
+    {
+      "memory_id": "mem_720db365e999",
+      "type": "decision",
+      "title": "Candidate memory must not become approved memory automatically.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Candidate memory must not become approved memory automatically."
+    },
+    {
+      "memory_id": "mem_507eff6ae5a7",
+      "type": "decision",
+      "title": "Approved memory is the trusted store for reviewed items.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Approved memory is the trusted store for reviewed items."
+    },
+    {
+      "memory_id": "mem_5a30638da7ed",
+      "type": "decision",
+      "title": "Review actions should be append-only.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Review actions should be append-only."
+    },
+    {
+      "memory_id": "mem_363be5817aba",
+      "type": "decision",
+      "title": "Source evidence must be preserved through edits.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unsupported",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Source evidence must be preserved through edits."
+    },
+    {
+      "memory_id": "mem_a7f9d32e48b2",
+      "type": "decision",
+      "title": "Spool is not a todo tracker.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Spool is not a todo tracker."
+    },
+    {
+      "memory_id": "mem_bce4d7e25c8f",
+      "type": "decision",
+      "title": "Action items are represented as commitments in candidate/approved memory.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Action items are represented as commitments in candidate/approved memory."
+    },
+    {
+      "memory_id": "mem_3a85a93827ce",
+      "type": "decision",
+      "title": "Commitment statuses are memory states, not productivity states:.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Commitment statuses are memory states, not productivity states:"
+    },
+    {
+      "memory_id": "mem_12c361acb60c",
+      "type": "decision",
+      "title": "unresolved.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "unresolved"
+    },
+    {
+      "memory_id": "mem_3a691d6fe9c5",
+      "type": "decision",
+      "title": "resolved.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "resolved"
+    },
+    {
+      "memory_id": "mem_0d96bb044b4d",
+      "type": "decision",
+      "title": "superseded.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "superseded"
+    },
+    {
+      "memory_id": "mem_a98e34814852",
+      "type": "decision",
+      "title": "stale.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "stale"
+    },
+    {
+      "memory_id": "mem_c91c4431ecb5",
+      "type": "decision",
+      "title": "unknown.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "unknown"
+    },
+    {
+      "memory_id": "mem_a38142386920",
+      "type": "decision",
+      "title": "v0.8.1 should not implement:.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "v0.8.1 should not implement:"
+    },
+    {
+      "memory_id": "mem_a12bc23deda9",
+      "type": "decision",
+      "title": "AI answer verification.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "AI answer verification"
+    },
+    {
+      "memory_id": "mem_1b5118ef541c",
+      "type": "decision",
+      "title": "browser extension.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "browser extension"
+    },
+    {
+      "memory_id": "mem_3c92abb3ee1b",
+      "type": "decision",
+      "title": "user auth.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "user auth"
+    },
+    {
+      "memory_id": "mem_782aea17a938",
+      "type": "decision",
+      "title": "database.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "database"
+    },
+    {
+      "memory_id": "mem_c41a396f1a5d",
+      "type": "decision",
+      "title": "cloud sync.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "cloud sync"
+    },
+    {
+      "memory_id": "mem_ef785911f36f",
+      "type": "decision",
+      "title": "Slack/Drive/Gmail integrations.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Slack/Drive/Gmail integrations"
+    },
+    {
+      "memory_id": "mem_67537dcce3e2",
+      "type": "decision",
+      "title": "polished UI.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "polished UI"
+    },
+    {
+      "memory_id": "mem_7f6db653505c",
+      "type": "decision",
+      "title": "Kanban/task tracker/reminders.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Kanban/task tracker/reminders"
+    },
+    {
+      "memory_id": "mem_3a4a9277e7c7",
+      "type": "decision",
+      "title": "automatic approval by default.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "automatic approval by default"
+    },
+    {
+      "memory_id": "mem_7e183262851d",
+      "type": "decision",
+      "title": "Spool added a review action application layer as system infrastructure.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Spool added a review action application layer as system infrastructure."
+    },
+    {
+      "memory_id": "mem_d94245d1b7e3",
+      "type": "decision",
+      "title": "Spool stores reviewed memory using JSON artifacts rather than a database.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Spool stores reviewed memory using JSON artifacts rather than a database."
+    },
+    {
+      "memory_id": "mem_5689b8081733",
+      "type": "decision",
+      "title": "Review actions are append-only in review_actions.json.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unsupported",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Review actions are append-only in `review_actions.json`."
+    },
+    {
+      "memory_id": "mem_c592ec968c2b",
+      "type": "decision",
+      "title": "Approved memory should not be created automatically from extraction.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "weakly_supported",
+      "memory_quality_score": 0.646,
+      "reason_codes": [
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Approved memory should not be created automatically from extraction."
+    },
+    {
+      "memory_id": "mem_2cc5edcacbe6",
+      "type": "risk",
+      "title": "Review actions could corrupt JSON artifacts if writes are not atomic.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Review actions could corrupt JSON artifacts if writes are not atomic."
+    },
+    {
+      "memory_id": "mem_8a177ec30b28",
+      "type": "risk",
+      "title": "Edits could accidentally allow source evidence to be removed.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Edits could accidentally allow source evidence to be removed."
+    },
+    {
+      "memory_id": "mem_5440e711bfa9",
+      "type": "risk",
+      "title": "memory_state_debug.json could diverge from actual approved/rejected state.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "supported",
+      "memory_quality_score": 0.92,
+      "reason_codes": [
+        "agent_audit_needs_review"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "`memory_state_debug.json` could diverge from actual approved/rejected state."
+    },
+    {
+      "memory_id": "mem_a4f146cedd38",
+      "type": "risk",
+      "title": "Duplicate handling by memory_id could incorrectly overwrite edited objects.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unsupported",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Duplicate handling by `memory_id` could incorrectly overwrite edited objects."
+    },
+    {
+      "memory_id": "mem_0d6bd9155170",
+      "type": "risk",
+      "title": "CLI patch parsing could accept unsafe or invalid fields.",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "CLI patch parsing could accept unsafe or invalid fields."
+    },
+    {
+      "memory_id": "mem_19fb34ddde26",
+      "type": "open_question",
+      "title": "Should weakly_supported memory be approvable?",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Should weakly_supported memory be approvable?"
+    },
+    {
+      "memory_id": "mem_e9b65b0a1ab2",
+      "type": "open_question",
+      "title": "Should approved_memory become canonical in v0.8.2?",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Should approved_memory become canonical in v0.8.2?"
+    },
+    {
+      "memory_id": "mem_fac6794aceca",
+      "type": "open_question",
+      "title": "Should review actions eventually support reviewer identity beyond CLI strings?",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Should review actions eventually support reviewer identity beyond CLI strings?"
+    },
+    {
+      "memory_id": "mem_032a5a6a37f3",
+      "type": "open_question",
+      "title": "Should actions be hash-chained or tamper-evident later?",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unknown",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Should actions be hash-chained or tamper-evident later?"
+    },
+    {
+      "memory_id": "mem_ba864ff01014",
+      "type": "open_question",
+      "title": "Should Streamlit expose approve/reject/edit actions?",
+      "review_state": "needs_review",
+      "status": "needs_review",
+      "evidence_state": "unsupported",
+      "memory_quality_score": 0.56,
+      "reason_codes": [
+        "agent_audit_needs_review",
+        "low_confidence",
+        "evidence_not_supported"
+      ],
+      "latest_review_action": null,
+      "latest_review_action_at": null,
+      "source_quote": "Should Streamlit expose approve/reject/edit actions?"
+    }
+  ]
+}

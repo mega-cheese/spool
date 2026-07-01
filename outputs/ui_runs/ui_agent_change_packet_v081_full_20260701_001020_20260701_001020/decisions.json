@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260701_001020.md",
+    "decision_count": 0,
+    "extractor_version": "skeletal-0.4.1",
+    "mode": "llm",
+    "model": "gpt-4.1-mini",
+    "verified": true,
+    "generated_at": "2026-07-01T00:10:52.251627+00:00",
+    "raw_validation_issue_count": 0,
+    "clean_validation_issue_count": 0,
+    "removed_claim_count": 2,
+    "repair_count": 0,
+    "postprocessing_change_count": 2
+  },
+  "decisions": []
+}

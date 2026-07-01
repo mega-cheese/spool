@@ -1,0 +1,60 @@
+{
+  "overall_verdict": "human_review",
+  "scope": {
+    "task_source": "examples/pr_trust/missing_test_evidence/task.md",
+    "approved_task": "Update pricing validation in `src/pricing.py`.",
+    "allowed_files": [
+      "src/pricing.py"
+    ],
+    "forbidden_paths": [],
+    "changed_files": [
+      {
+        "path": "src/pricing.py",
+        "change_type": "modified",
+        "old_path": "src/pricing.py",
+        "new_path": "src/pricing.py"
+      }
+    ],
+    "scope_violations": [],
+    "forbidden_violations": []
+  },
+  "agent_claims": [
+    {
+      "claim_id": "file_modified_009475264809",
+      "claim": "Updated `src/pricing.py` to reject invalid Team pricing values.",
+      "claim_type": "file_modified",
+      "verdict": "supported",
+      "evidence_target": "diff.patch",
+      "evidence_quote": "diff --git a/src/pricing.py b/src/pricing.py",
+      "reason": "src/pricing.py appears in the PR diff."
+    },
+    {
+      "claim_id": "test_result_claim_4f24117573c2",
+      "claim": "Tests passed.",
+      "claim_type": "test_result_claim",
+      "verdict": "missing_evidence",
+      "evidence_target": "test_output.txt",
+      "evidence_quote": "",
+      "reason": "The agent says tests passed, but no test output was provided."
+    }
+  ],
+  "weak_or_missing_evidence": [
+    "The agent says tests passed, but no test output was provided."
+  ],
+  "buried_decisions": [],
+  "repo_memory_check": [
+    {
+      "memory_id": "repo_memory_missing",
+      "memory": "No approved repo memory was provided.",
+      "verdict": "no_relevant_memory",
+      "reason": "Missing approved repo memory is not a failure for v0.9.",
+      "evidence_quote": ""
+    }
+  ],
+  "risks": [
+    "Validation claims are missing supporting test output."
+  ],
+  "reviewer_actions": [
+    "human review required"
+  ]
+}

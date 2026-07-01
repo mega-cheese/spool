@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+    "generated_at": "2026-07-01T05:27:12.693872+00:00",
+    "classification": "agent_change_packet"
+  },
+  "sections_found": [
+    "Original Request",
+    "Agent Implementation Summary",
+    "Claimed Capabilities",
+    "Validation Claimed by Agent",
+    "Existing Product Rules / Approved Context",
+    "Git Stat",
+    "Git Diff"
+  ],
+  "missing_sections": [
+    "Questions for Spool Audit",
+    "Expected Useful Spool Output"
+  ],
+  "detector_signals": [
+    "heading:agent_change_packet",
+    "heading:agent_change_packet",
+    "heading:agent_change_packet",
+    "section:Original Request",
+    "section:Agent Implementation Summary",
+    "section:Agent Implementation Summary",
+    "section:Claimed Capabilities",
+    "section:Validation Claimed by Agent",
+    "section:Existing Product Rules / Approved Context",
+    "section:Git Stat",
+    "section:Git Diff",
+    "phrase:pseudo-pr",
+    "phrase:agent-change audit",
+    "phrase:implementation claims",
+    "phrase:scope adherence",
+    "phrase:unsupported or contradicted claims"
+  ],
+  "raw_section_lengths": {
+    "original_request": 11168,
+    "agent_implementation_summary": 1468,
+    "claimed_capabilities": 756,
+    "validation_claimed": 530,
+    "existing_product_rules": 804,
+    "git_stat": 613,
+    "git_diff": 1839,
+    "questions_for_audit": 0,
+    "expected_useful_output": 0
+  },
+  "claim_extraction_counts": {
+    "file_added": 3,
+    "file_modified": 3,
+    "capability": 3,
+    "test_result": 7,
+    "manual_smoke": 6,
+    "technical_decision": 23
+  },
+  "evidence_matching_counts": {
+    "supported": 7,
+    "unsupported": 3,
+    "weakly_supported": 35
+  }
+}

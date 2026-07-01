@@ -1,0 +1,11 @@
+{
+  "metadata": {
+    "input_file": "outputs/ui_uploads/agent_change_packet_v081_full_20260630_233851.md",
+    "mode": "heuristic",
+    "pipeline": "candidates-shadow",
+    "classification": "agent_change_packet",
+    "generated_at": "2026-06-30T23:59:49.077840+00:00",
+    "open_question_count": 0
+  },
+  "open_questions": []
+}
