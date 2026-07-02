@@ -209,6 +209,12 @@ def _parse_supported_yaml(text: str) -> dict[str, Any]:
             continue
         indent = len(raw_line) - len(raw_line.lstrip(" "))
         stripped = raw_line.strip()
+        if indent == 0 and stripped == "decisions: []":
+            result["decisions"] = decisions
+            current = None
+            active_list = None
+            active_evidence = None
+            continue
         if indent == 0 and stripped == "decisions:":
             result["decisions"] = decisions
             current = None
@@ -285,4 +291,6 @@ def _as_string_list(value: Any) -> list[str]:
     if isinstance(value, list):
         return [str(item).strip() for item in value if str(item).strip()]
     clean = str(value).strip()
+    if clean == "[]":
+        return []
     return [clean] if clean else []

@@ -8,6 +8,7 @@ from .scope_gate import ScopeReport, evaluate_scope, parse_changed_files
 from .decision_memory import ApprovedDecision, DecisionMemory, load_approved_decisions
 from .evidence_coverage import EvidenceCoverage, build_evidence_coverage
 from .memory_update_plan import DecisionMemoryUpdatePlan, build_memory_update_plan
+from .memory_update_writer import write_memory_update_plan
 from .merge_authorization_result import MergeAuthorizationResult
 from .review_session import ReviewSession
 from .reviewer_actions import ReviewerAction
@@ -33,4 +34,5 @@ __all__ = [
     "load_pr_evidence",
     "parse_changed_files",
     "write_trust_report",
+    "write_memory_update_plan",
 ]
