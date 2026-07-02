@@ -39,7 +39,7 @@ def build_evidence_coverage(evidence: PREvidence, changed_files: list[object]) -
         pr_body=_text_status(evidence.agent_summary_text),
         diff=_text_status(evidence.diff_text),
         changed_files="available" if changed_files else "missing",
-        assignment=_text_status(evidence.task_text),
+        assignment=_assignment_status(evidence),
         test_output=_test_output_status(evidence),
         approved_decisions=_decision_memory_status(evidence),
         legacy_repo_memory=_legacy_memory_status(evidence),
@@ -48,7 +48,12 @@ def build_evidence_coverage(evidence: PREvidence, changed_files: list[object]) -
     coverage.notes.append("CI checks are not available in local file mode.")
     if coverage.test_output in {"not_provided", "empty"}:
         coverage.notes.append("No test output was provided, so test-pass claims cannot be verified from external evidence.")
-    if coverage.assignment == "empty":
+    if coverage.assignment == "not_provided":
+        coverage.notes.append(
+            "Assignment evidence was not provided, so Spool could not verify full task authorization. "
+            "This partial report checks the PR body against the diff and flags available evidence gaps."
+        )
+    elif coverage.assignment == "empty":
         coverage.notes.append("Assignment file was provided but empty, so assignment review is partial.")
     elif coverage.assignment == "missing":
         coverage.notes.append("Assignment was expected but could not be found, so assignment review is partial.")
@@ -61,6 +66,14 @@ def build_evidence_coverage(evidence: PREvidence, changed_files: list[object]) -
 
 def _text_status(text: str) -> str:
     return "available" if text.strip() else "empty"
+
+
+def _assignment_status(evidence: PREvidence) -> str:
+    if evidence.task_path is None:
+        return "not_provided"
+    if not Path(evidence.task_path).exists():
+        return "missing"
+    return _text_status(evidence.task_text)
 
 
 def _test_output_status(evidence: PREvidence) -> str:

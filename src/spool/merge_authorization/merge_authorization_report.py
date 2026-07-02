@@ -38,16 +38,9 @@ def trust_report_to_markdown(report: PRTrustReport) -> str:
         "",
         "## Scope / Authorization",
         "",
-        f"- Task source: {scope.get('task_source') or 'task'}",
-        f"- Approved task: {scope.get('approved_task') or 'Not specified'}",
-        f"- Allowed files: {_join_or_none(scope.get('allowed_files') or [])}",
-        f"- Changed files: {_join_or_none([item.get('path') for item in scope.get('changed_files') or []])}",
-        f"- Scope violations: {_join_or_none(scope.get('scope_violations') or [])}",
-        f"- Forbidden path violations: {_join_or_none(scope.get('forbidden_violations') or [])}",
-        "",
-        "## Evidence Coverage",
-        "",
     ]
+    lines.extend(_scope_lines(scope))
+    lines.extend(["", "## Evidence Coverage", ""])
     lines.extend(_evidence_coverage_lines(payload.get("evidence_coverage") or {}))
     lines.extend([
         "",
@@ -104,6 +97,37 @@ def _evidence_coverage_lines(coverage: dict[str, Any]) -> list[str]:
     if notes:
         lines.append(f"- Notes: {_join_or_none(notes)}")
     return lines
+
+
+def _scope_lines(scope: dict[str, Any]) -> list[str]:
+    assignment_status = scope.get("assignment_status")
+    changed_files = _join_or_none([item.get("path") for item in scope.get("changed_files") or []])
+    if assignment_status in {"not_provided", "empty", "missing"}:
+        if assignment_status == "not_provided":
+            message = (
+                "Assignment evidence was not provided, so Spool could not verify full task authorization. "
+                "This report checks the PR body against the diff and flags available evidence gaps."
+            )
+        elif assignment_status == "empty":
+            message = "Assignment evidence was provided but empty, so Spool could not verify full task authorization."
+        else:
+            message = "Assignment evidence was expected but missing, so Spool could not verify full task authorization."
+        return [
+            f"- Assignment status: {assignment_status}",
+            f"- Partial review: {message}",
+            "- Allowed files: Not verified without assignment evidence",
+            f"- Changed files: {changed_files}",
+            "- Scope authorization: Partial; no allowed scope was inferred",
+            f"- Forbidden path violations: {_join_or_none(scope.get('forbidden_violations') or [])}",
+        ]
+    return [
+        f"- Task source: {scope.get('task_source') or 'task'}",
+        f"- Approved task: {scope.get('approved_task') or 'Not specified'}",
+        f"- Allowed files: {_join_or_none(scope.get('allowed_files') or [])}",
+        f"- Changed files: {changed_files}",
+        f"- Scope violations: {_join_or_none(scope.get('scope_violations') or [])}",
+        f"- Forbidden path violations: {_join_or_none(scope.get('forbidden_violations') or [])}",
+    ]
 
 
 def _candidate_decision_lines(decisions: list[dict[str, Any]]) -> list[str]:

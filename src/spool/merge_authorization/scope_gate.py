@@ -24,6 +24,7 @@ class FileChange:
 class ScopeReport:
     task_source: str
     approved_task: str
+    assignment_status: str = "available"
     allowed_files: list[str] = field(default_factory=list)
     forbidden_paths: list[str] = field(default_factory=list)
     changed_files: list[FileChange] = field(default_factory=list)
@@ -35,6 +36,7 @@ class ScopeReport:
         return {
             "task_source": self.task_source,
             "approved_task": self.approved_task,
+            "assignment_status": self.assignment_status,
             "allowed_files": list(self.allowed_files),
             "forbidden_paths": list(self.forbidden_paths),
             "changed_files": [change.to_dict() for change in self.changed_files],
@@ -87,18 +89,31 @@ def parse_changed_files(diff_text: str) -> list[FileChange]:
     return _dedupe_changes(changes)
 
 
-def evaluate_scope(task_text: str, changed_files: list[FileChange], *, task_source: str = "task") -> ScopeReport:
+def evaluate_scope(
+    task_text: str,
+    changed_files: list[FileChange],
+    *,
+    task_source: str = "task",
+    assignment_status: str = "available",
+) -> ScopeReport:
     allowed_files = _extract_allowed_files(task_text)
     forbidden_paths = _extract_forbidden_paths(task_text)
     changed_paths = [change.path for change in changed_files]
     scope_violations = [path for path in changed_paths if allowed_files and path not in allowed_files]
     forbidden_violations = [path for path in changed_paths if _matches_any_path(path, forbidden_paths)]
     scope_risks = []
+    if assignment_status == "not_provided":
+        scope_risks.append("Assignment evidence was not provided; scope authorization review is partial.")
+    elif assignment_status == "empty":
+        scope_risks.append("Assignment evidence was empty; scope authorization review is partial.")
+    elif assignment_status == "missing":
+        scope_risks.append("Assignment evidence was expected but missing; scope authorization review is partial.")
     if not allowed_files and _has_explicit_scope_language(task_text):
         scope_risks.append("Could not determine approved file scope from task.")
     return ScopeReport(
         task_source=task_source,
         approved_task=_first_nonempty_line(task_text),
+        assignment_status=assignment_status,
         allowed_files=allowed_files,
         forbidden_paths=forbidden_paths,
         changed_files=changed_files,

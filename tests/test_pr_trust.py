@@ -14,6 +14,7 @@ from src.spool.merge_authorization.scope_gate import evaluate_scope, parse_chang
 
 
 EXAMPLES = Path("examples/pr_trust")
+ADVERSARIAL_EXAMPLES = Path("examples/pr_trust_adversarial")
 
 
 class PRTrustTest(unittest.TestCase):
@@ -22,17 +23,19 @@ class PRTrustTest(unittest.TestCase):
         temp_dir: str,
         *,
         diff: str,
-        task: str,
+        task: str | None,
         summary: str,
         test_output: str | None = None,
         repo_memory: dict | list | None = None,
     ):
         root = Path(temp_dir)
         diff_path = root / "diff.patch"
-        task_path = root / "task.md"
         summary_path = root / "agent_summary.md"
         diff_path.write_text(diff, encoding="utf-8")
-        task_path.write_text(task, encoding="utf-8")
+        task_path = None
+        if task is not None:
+            task_path = root / "task.md"
+            task_path.write_text(task, encoding="utf-8")
         summary_path.write_text(summary, encoding="utf-8")
         test_path = None
         if test_output is not None:
@@ -545,7 +548,7 @@ decisions:
             report = analyze_pr_trust(evidence)
 
         payload = report.to_dict()
-        self.assertEqual(payload["decision_memory"]["status"], "missing")
+        self.assertEqual(payload["decision_memory"]["status"], "not_configured")
         self.assertEqual(payload["decision_memory"]["approved_decisions_count"], 0)
         self.assertTrue(all(item.verdict != "unsupported" for item in report.repo_memory_check))
 
@@ -597,6 +600,189 @@ decisions:
         self.assertEqual(payload["evidence_coverage"]["test_output"], "not_provided")
         self.assertTrue(any(claim.verdict == "missing_evidence" for claim in report.claims))
         self.assertEqual(report.overall_verdict, "human_review")
+
+    def test_loads_pr_evidence_without_task_as_partial_review(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["actions.append(action)"]),
+                task=None,
+                summary="Updated `src/review_actions.py`.",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        payload = report.to_dict()
+        self.assertIsNone(evidence.task_path)
+        self.assertEqual(payload["evidence_coverage"]["assignment"], "not_provided")
+        self.assertEqual(payload["summary"]["allowed_scope_status"], "partial_assignment_review")
+        self.assertEqual(payload["scope"]["approved_task"], "")
+        self.assertEqual(payload["scope"]["allowed_files"], [])
+        self.assertEqual(payload["scope"]["scope_violations"], [])
+        self.assertTrue(any("partial" in note.lower() for note in payload["evidence_coverage"]["notes"]))
+        self.assertNotEqual(report.overall_verdict, "stop")
+
+    def test_empty_task_marks_assignment_empty_without_scope_certainty(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["actions.append(action)"]),
+                task="",
+                summary="Updated `src/review_actions.py`.",
+                test_output="OK\n",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        payload = report.to_dict()
+        self.assertEqual(payload["evidence_coverage"]["assignment"], "empty")
+        self.assertEqual(payload["summary"]["allowed_scope_status"], "partial_assignment_review")
+        self.assertEqual(payload["scope"]["allowed_files"], [])
+        self.assertEqual(payload["scope"]["scope_violations"], [])
+        self.assertTrue(any("partial" in risk.lower() for risk in payload["risks"]))
+
+    def test_no_test_output_without_test_claim_does_not_create_missing_evidence(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["actions.append(action)"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Updated `src/review_actions.py`.",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        payload = report.to_dict()
+        self.assertEqual(payload["evidence_coverage"]["test_output"], "not_provided")
+        self.assertFalse(any(claim.verdict == "missing_evidence" for claim in report.claims))
+        self.assertFalse(any("Validation claims are missing" in risk for risk in report.risks))
+        self.assertNotEqual(report.overall_verdict, "human_review")
+
+    def test_cli_runs_without_task_or_test_output(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    "spool_trust.py",
+                    "--diff",
+                    str(EXAMPLES / "basic_supported" / "diff.patch"),
+                    "--agent-summary",
+                    str(EXAMPLES / "basic_supported" / "agent_summary.md"),
+                    "--out",
+                    temp_dir,
+                    "--pretty",
+                ],
+                cwd=Path(__file__).resolve().parents[1],
+                text=True,
+                capture_output=True,
+                check=True,
+            )
+
+            payload = json.loads((Path(temp_dir) / "trust_report.json").read_text(encoding="utf-8"))
+            markdown = (Path(temp_dir) / "trust_report.md").read_text(encoding="utf-8")
+
+        self.assertIn("Overall verdict:", result.stdout)
+        self.assertEqual(payload["evidence_coverage"]["assignment"], "not_provided")
+        self.assertEqual(payload["evidence_coverage"]["test_output"], "not_provided")
+        self.assertEqual(payload["evidence_coverage"]["approved_decisions"], "not_configured")
+        self.assertIn("Assignment evidence was not provided", markdown)
+
+    def test_cli_runs_without_test_output_when_task_is_present(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            subprocess.run(
+                [
+                    sys.executable,
+                    "spool_trust.py",
+                    "--diff",
+                    str(EXAMPLES / "basic_supported" / "diff.patch"),
+                    "--task",
+                    str(EXAMPLES / "basic_supported" / "task.md"),
+                    "--agent-summary",
+                    str(EXAMPLES / "basic_supported" / "agent_summary.md"),
+                    "--out",
+                    temp_dir,
+                ],
+                cwd=Path(__file__).resolve().parents[1],
+                text=True,
+                capture_output=True,
+                check=True,
+            )
+
+            payload = json.loads((Path(temp_dir) / "trust_report.json").read_text(encoding="utf-8"))
+
+        self.assertEqual(payload["evidence_coverage"]["assignment"], "available")
+        self.assertEqual(payload["evidence_coverage"]["test_output"], "not_provided")
+        self.assertTrue(any(claim["verdict"] == "missing_evidence" for claim in payload["agent_claims"]))
+
+    def test_no_memory_reports_not_configured_decision_memory(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["actions.append(action)"]),
+                task=None,
+                summary="Updated `src/review_actions.py`.",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        payload = report.to_dict()
+        self.assertEqual(payload["evidence_coverage"]["approved_decisions"], "not_configured")
+        self.assertEqual(payload["evidence_coverage"]["legacy_repo_memory"], "not_configured")
+        self.assertEqual(payload["decision_memory"]["status"], "not_configured")
+        self.assertIn("No approved decision memory was configured", " ".join(payload["decision_memory"]["notes"]))
+
+    def test_pr_body_diff_only_adversarial_fixtures(self) -> None:
+        cases = {
+            "pr_body_diff_only_clean": {
+                "assignment": "not_provided",
+                "test_output": "not_provided",
+                "verdict": {"human_review", "continue"},
+                "missing_test_claim": False,
+            },
+            "pr_body_diff_only_tests_claimed": {
+                "assignment": "not_provided",
+                "test_output": "not_provided",
+                "verdict": {"human_review"},
+                "missing_test_claim": True,
+            },
+            "empty_task_partial_review": {
+                "assignment": "empty",
+                "test_output": "not_provided",
+                "verdict": {"human_review"},
+                "missing_test_claim": False,
+            },
+            "no_test_claim_no_test_output": {
+                "assignment": "available",
+                "test_output": "not_provided",
+                "verdict": {"continue"},
+                "missing_test_claim": False,
+            },
+        }
+        for name, expected in cases.items():
+            with self.subTest(name=name):
+                fixture = ADVERSARIAL_EXAMPLES / name
+                task_path = fixture / "task.md"
+                evidence = load_pr_evidence(
+                    diff_path=fixture / "diff.patch",
+                    task_path=task_path if task_path.exists() else None,
+                    agent_summary_path=fixture / "agent_summary.md",
+                )
+
+                report = analyze_pr_trust(evidence)
+                payload = report.to_dict()
+
+                self.assertIn(report.overall_verdict, expected["verdict"])
+                self.assertNotEqual(report.overall_verdict, "stop")
+                self.assertEqual(payload["evidence_coverage"]["assignment"], expected["assignment"])
+                self.assertEqual(payload["evidence_coverage"]["test_output"], expected["test_output"])
+                self.assertEqual(payload["evidence_coverage"]["approved_decisions"], "not_configured")
+                self.assertEqual(
+                    any(claim.verdict == "missing_evidence" for claim in report.claims),
+                    expected["missing_test_claim"],
+                )
+                if expected["assignment"] in {"not_provided", "empty"}:
+                    self.assertEqual(payload["summary"]["allowed_scope_status"], "partial_assignment_review")
+                    self.assertEqual(payload["scope"]["allowed_files"], [])
 
 
 if __name__ == "__main__":

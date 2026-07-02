@@ -12,7 +12,7 @@ from src.spool.merge_authorization.pr_context import load_pr_evidence
 def main() -> int:
     parser = argparse.ArgumentParser(description="Generate a PR-native Spool trust report.")
     parser.add_argument("--diff", required=True, help="Path to a git diff patch file.")
-    parser.add_argument("--task", required=True, help="Path to the task or mandate file.")
+    parser.add_argument("--task", help="Optional path to the task or mandate file.")
     parser.add_argument("--agent-summary", required=True, help="Path to the agent summary or transcript.")
     parser.add_argument("--out", required=True, help="Output directory for trust_report.json and trust_report.md.")
     parser.add_argument("--test-output", help="Optional test or CI output file.")

@@ -128,8 +128,13 @@ def analyze_pr_trust(evidence: PREvidence, *, mode: str = "heuristic") -> PRTrus
     if mode != "heuristic":
         raise NotImplementedError("spool_trust v0.9.1 supports only --mode heuristic.")
     changed_files = parse_changed_files(evidence.diff_text)
-    scope = evaluate_scope(evidence.task_text, changed_files, task_source=evidence.task_path)
     evidence_coverage = build_evidence_coverage(evidence, changed_files)
+    scope = evaluate_scope(
+        evidence.task_text,
+        changed_files,
+        task_source=evidence.task_path or "not_provided",
+        assignment_status=str(evidence_coverage.assignment),
+    )
     claims = _extract_and_verify_claims(evidence, changed_files)
     candidate_decisions = extract_candidate_decisions(evidence.agent_summary_text, source="agent_summary")
     buried_decisions = _candidate_decisions_to_buried(candidate_decisions)
@@ -458,6 +463,8 @@ def _reviewer_actions(verdict: str, decisions: list[BuriedDecision], repo_memory
 
 
 def _allowed_scope_status(scope: ScopeReport) -> str:
+    if scope.assignment_status in {"not_provided", "empty", "missing"}:
+        return "partial_assignment_review"
     if scope.forbidden_violations:
         return "forbidden_violation"
     if scope.scope_violations:
