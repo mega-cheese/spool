@@ -139,18 +139,20 @@ class PRTrustTest(unittest.TestCase):
         self.assertIn("agent_claims", payload)
         self.assertIn("scope", payload)
         self.assertIn("Update review action persistence", payload["scope"]["approved_task"])
-        self.assertIn("# Spool Trust Report", markdown)
+        self.assertIn("# Spool Merge Authorization Report", markdown)
         for heading in (
             "## Overall Verdict",
             "## Scope / Authorization",
+            "## Evidence Coverage",
             "## Agent Claims",
             "## Weak or Missing Evidence",
-            "## Buried Decisions",
+            "## Candidate Decisions Requiring Approval",
             "## Repo Memory Check",
             "## Risks",
             "## Reviewer Actions",
         ):
             self.assertIn(heading, markdown)
+        self.assertNotIn("## Buried Decisions", markdown)
 
     def test_detects_buried_decision_as_candidate_repo_memory(self) -> None:
         evidence = load_pr_evidence(
@@ -348,6 +350,7 @@ class PRTrustTest(unittest.TestCase):
             report = analyze_pr_trust(evidence)
 
         self.assertTrue(any("Candidate memory" in decision.decision for decision in report.buried_decisions))
+        self.assertTrue(any("Candidate memory" in decision.title for decision in report.candidate_decisions))
         self.assertEqual(report.overall_verdict, "human_review")
 
     def test_ambiguous_scope_language_creates_scope_risk(self) -> None:
@@ -545,6 +548,55 @@ decisions:
         self.assertEqual(payload["decision_memory"]["status"], "missing")
         self.assertEqual(payload["decision_memory"]["approved_decisions_count"], 0)
         self.assertTrue(all(item.verdict != "unsupported" for item in report.repo_memory_check))
+
+    def test_report_contains_evidence_coverage_and_candidate_decisions(self) -> None:
+        evidence = load_pr_evidence(
+            diff_path=EXAMPLES / "buried_decision" / "diff.patch",
+            task_path=EXAMPLES / "buried_decision" / "task.md",
+            agent_summary_path=EXAMPLES / "buried_decision" / "agent_summary.md",
+            test_output_path=EXAMPLES / "buried_decision" / "test_output.txt",
+        )
+
+        report = analyze_pr_trust(evidence)
+        payload = report.to_dict()
+
+        self.assertIn("evidence_coverage", payload)
+        self.assertEqual(payload["evidence_coverage"]["pr_body"], "available")
+        self.assertEqual(payload["evidence_coverage"]["assignment"], "available")
+        self.assertIn("candidate_decisions", payload)
+        self.assertGreaterEqual(len(payload["candidate_decisions"]), 1)
+
+    def test_empty_assignment_reports_partial_review(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["actions.append(action)"]),
+                task="",
+                summary="Updated `src/review_actions.py`.",
+                test_output="OK\n",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        payload = report.to_dict()
+        self.assertEqual(payload["evidence_coverage"]["assignment"], "empty")
+        self.assertTrue(any("partial" in note.lower() for note in payload["evidence_coverage"]["notes"]))
+
+    def test_missing_test_output_coverage_matches_missing_evidence_claim(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["actions.append(action)"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Tests passed.",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        payload = report.to_dict()
+        self.assertEqual(payload["evidence_coverage"]["test_output"], "not_provided")
+        self.assertTrue(any(claim.verdict == "missing_evidence" for claim in report.claims))
+        self.assertEqual(report.overall_verdict, "human_review")
 
 
 if __name__ == "__main__":

@@ -4,7 +4,9 @@ import hashlib
 import re
 from dataclasses import dataclass, field
 
+from .candidate_decisions import CandidateDecision, extract_candidate_decisions
 from .decision_memory import DecisionMemory
+from .evidence_coverage import EvidenceCoverage, build_evidence_coverage
 from .pr_context import PREvidence
 from .scope_gate import ScopeReport, evaluate_scope, parse_changed_files
 
@@ -86,8 +88,10 @@ class PRTrustReport:
     claims: list[TrustClaim] = field(default_factory=list)
     weak_or_missing_evidence: list[str] = field(default_factory=list)
     buried_decisions: list[BuriedDecision] = field(default_factory=list)
+    candidate_decisions: list[CandidateDecision] = field(default_factory=list)
     repo_memory_check: list[RepoMemoryCheck] = field(default_factory=list)
     decision_memory: DecisionMemory = field(default_factory=lambda: DecisionMemory(source=None, status="missing"))
+    evidence_coverage: EvidenceCoverage = field(default_factory=EvidenceCoverage)
     risks: list[str] = field(default_factory=list)
     reviewer_actions: list[str] = field(default_factory=list)
 
@@ -105,8 +109,10 @@ class PRTrustReport:
                 "decision_memory_status": self.decision_memory.status,
             },
             "scope": self.scope_report.to_dict(),
+            "evidence_coverage": self.evidence_coverage.to_dict(),
             "agent_claims": [claim.to_dict() for claim in self.claims],
             "weak_or_missing_evidence": list(self.weak_or_missing_evidence),
+            "candidate_decisions": [decision.to_dict() for decision in self.candidate_decisions],
             "buried_decisions": [decision.to_dict() for decision in self.buried_decisions],
             "decision_memory": self.decision_memory.to_report_dict(
                 matched_decisions=matched_decisions,
@@ -123,8 +129,10 @@ def analyze_pr_trust(evidence: PREvidence, *, mode: str = "heuristic") -> PRTrus
         raise NotImplementedError("spool_trust v0.9.1 supports only --mode heuristic.")
     changed_files = parse_changed_files(evidence.diff_text)
     scope = evaluate_scope(evidence.task_text, changed_files, task_source=evidence.task_path)
+    evidence_coverage = build_evidence_coverage(evidence, changed_files)
     claims = _extract_and_verify_claims(evidence, changed_files)
-    buried_decisions = _detect_buried_decisions(evidence.agent_summary_text)
+    candidate_decisions = extract_candidate_decisions(evidence.agent_summary_text, source="agent_summary")
+    buried_decisions = _candidate_decisions_to_buried(candidate_decisions)
     repo_memory_check = _check_repo_memory(evidence)
     weak_or_missing = _weak_or_missing_evidence(claims)
     risks = _risks(scope, claims, buried_decisions, repo_memory_check)
@@ -136,8 +144,10 @@ def analyze_pr_trust(evidence: PREvidence, *, mode: str = "heuristic") -> PRTrus
         claims=claims,
         weak_or_missing_evidence=weak_or_missing,
         buried_decisions=buried_decisions,
+        candidate_decisions=candidate_decisions,
         repo_memory_check=repo_memory_check,
         decision_memory=evidence.decision_memory,
+        evidence_coverage=evidence_coverage,
         risks=risks,
         reviewer_actions=reviewer_actions,
     )
@@ -288,6 +298,23 @@ def _detect_buried_decisions(summary_text: str) -> list[BuriedDecision]:
                 )
             )
     return _dedupe_decisions(decisions)
+
+
+def _candidate_decisions_to_buried(candidates: list[CandidateDecision]) -> list[BuriedDecision]:
+    return [
+        BuriedDecision(
+            decision_id=candidate.id,
+            decision=_legacy_buried_decision_text(candidate.quote),
+            source=candidate.source,
+            reason=candidate.reason,
+            verdict="needs_review",
+        )
+        for candidate in candidates
+    ]
+
+
+def _legacy_buried_decision_text(quote: str) -> str:
+    return re.sub(r"^\s*(going forward|from now on),?\s*", "", quote, flags=re.IGNORECASE).strip().rstrip(".")
 
 
 def _check_repo_memory(evidence: PREvidence) -> list[RepoMemoryCheck]:

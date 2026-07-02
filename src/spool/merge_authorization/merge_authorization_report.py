@@ -22,7 +22,7 @@ def trust_report_to_markdown(report: PRTrustReport) -> str:
     scope = payload["scope"]
     summary = payload.get("summary") or {}
     lines = [
-        "# Spool Trust Report",
+        "# Spool Merge Authorization Report",
         "",
         "## Overall Verdict",
         "",
@@ -45,14 +45,20 @@ def trust_report_to_markdown(report: PRTrustReport) -> str:
         f"- Scope violations: {_join_or_none(scope.get('scope_violations') or [])}",
         f"- Forbidden path violations: {_join_or_none(scope.get('forbidden_violations') or [])}",
         "",
-        "## Agent Claims",
+        "## Evidence Coverage",
         "",
     ]
+    lines.extend(_evidence_coverage_lines(payload.get("evidence_coverage") or {}))
+    lines.extend([
+        "",
+        "## Agent Claims",
+        "",
+    ])
     lines.extend(_claim_lines(payload.get("agent_claims") or []))
     lines.extend(["", "## Weak or Missing Evidence", ""])
     lines.extend(_simple_lines(payload.get("weak_or_missing_evidence") or []))
-    lines.extend(["", "## Buried Decisions", ""])
-    lines.extend(_decision_lines(payload.get("buried_decisions") or []))
+    lines.extend(["", "## Candidate Decisions Requiring Approval", ""])
+    lines.extend(_candidate_decision_lines(payload.get("candidate_decisions") or []))
     lines.extend(["", "## Decision Memory", ""])
     lines.extend(_decision_memory_lines(payload.get("decision_memory") or {}))
     lines.extend(["", "## Repo Memory Check", ""])
@@ -77,6 +83,38 @@ def _claim_lines(claims: list[dict[str, Any]]) -> list[str]:
             lines.append(f"  - Evidence: {claim.get('evidence_quote')}")
         if claim.get("reason"):
             lines.append(f"  - Reason: {claim.get('reason')}")
+    return lines
+
+
+def _evidence_coverage_lines(coverage: dict[str, Any]) -> list[str]:
+    if not coverage:
+        return ["- None"]
+    lines = [
+        f"- PR title: {coverage.get('pr_title')}",
+        f"- PR body / agent summary: {coverage.get('pr_body')}",
+        f"- Diff: {coverage.get('diff')}",
+        f"- Changed files: {coverage.get('changed_files')}",
+        f"- Assignment: {coverage.get('assignment')}",
+        f"- Test output: {coverage.get('test_output')}",
+        f"- CI checks: {coverage.get('ci_checks')}",
+        f"- Approved decisions: {coverage.get('approved_decisions')}",
+        f"- Legacy repo memory: {coverage.get('legacy_repo_memory')}",
+    ]
+    notes = coverage.get("notes") or []
+    if notes:
+        lines.append(f"- Notes: {_join_or_none(notes)}")
+    return lines
+
+
+def _candidate_decision_lines(decisions: list[dict[str, Any]]) -> list[str]:
+    if not decisions:
+        return ["- None"]
+    lines: list[str] = []
+    for decision in decisions:
+        lines.append(f"- {decision.get('id')}: {decision.get('title')} ({decision.get('decision_type')})")
+        lines.append(f"  - Source: {decision.get('source')}")
+        lines.append(f"  - Recommended action: {decision.get('recommended_action')}")
+        lines.append(f"  - Quote: {decision.get('quote')}")
     return lines
 
 

@@ -35,6 +35,18 @@ venv/bin/python scripts/run_pr_trust_adversarial.py
 
 Approved repo decisions are the primary merge-time memory primitive for the PR-native path. By default Spool looks for `.spool/approved_decisions.yml`, and `--repo-memory` can point to either that YAML shape or the legacy `approved_repo_memory.json` fixture shape while compatibility remains in place.
 
+Merge authorization reports now include `evidence_coverage` and `candidate_decisions`. Evidence coverage shows which local PR sources were available, such as assignment, agent summary, diff, changed files, test output, and approved decision memory. Candidate decisions surface durable product, security, architecture, process, or implementation rules introduced by a PR so a reviewer can approve or reject them before they become future guardrails.
+
+Evidence coverage uses a small status vocabulary:
+
+- `available`: the source exists and Spool used it.
+- `empty`: the source was provided but contained no meaningful content.
+- `not_provided`: the source is supported by the current input mode, but the user did not provide it.
+- `not_supported`: the source is not supported by the current input mode, such as PR title or CI checks in local file mode.
+- `not_configured`: the repo or project has not configured an optional source, such as approved decision memory.
+- `missing`: a source was expected or explicitly referenced, but could not be found.
+- `malformed`: the source exists, but could not be parsed.
+
 ## Legacy prototype
 
 This repository still contains the earlier company-memory prototype. That code ingests fake Slack JSON, local documents, and meeting notes; extracts source-backed decisions and memory candidates; and provides a local Streamlit review UI. It is temporarily kept in place while the PR-native Spool architecture is separated.

@@ -1,0 +1,8 @@
+diff --git a/tests/test_helper.py b/tests/test_helper.py
+new file mode 100644
+index 0000000..2222222
+--- /dev/null
++++ b/tests/test_helper.py
+@@ -0,0 +1,2 @@
++def test_invalid_input():
++    assert helper(None) is None
