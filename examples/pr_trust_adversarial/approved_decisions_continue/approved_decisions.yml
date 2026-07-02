@@ -1,0 +1,23 @@
+decisions:
+  - id: DEC-001
+    status: approved
+    title: Review actions are append-only
+    type: implementation_constraint
+    scope:
+      applies_to_paths:
+        - src/review_actions.py
+      applies_to_concepts:
+        - review actions
+    must:
+      - Review actions must be appended to review_actions.json.
+      - Existing review action history must be preserved.
+    must_not:
+      - Overwrite review_actions.json with only the latest action.
+    requires_approval_for:
+      - Changing review action persistence behavior
+    approved_by:
+      - Owen
+    evidence:
+      - source_type: repo_decision
+        quote: Review actions are append-only.
+    created_at: 2026-07-01

@@ -1,10 +1,45 @@
-# Decision Memory / Decision Provenance OS
+# Spool
 
-A lightweight prototype that turns fake Slack conversations into structured, source-backed decision records.
+Spool is a merge authorization layer for AI-generated pull requests.
 
-The product idea is deliberately narrow: messy workplace conversation becomes a decision card with cited source messages, then a human can approve, edit, or reject it. This is not Slack OAuth, enterprise search, billing, SSO, or a production database. The MVP proves the path from conversation to provenance.
+It checks whether an AI agent's proposed change can be trusted to merge given the assignment, the PR's own claims, the actual diff, available test evidence, and approved repo decisions. Spool is not trying to be a general AI code reviewer. It focuses on merge authorization: scope, claim support, evidence coverage, decision conflicts, and candidate repo decisions that need human approval.
 
-## Pipeline
+The PR-native path currently lives under:
+
+```text
+spool_trust.py
+src/spool/merge_authorization/
+examples/pr_trust/
+examples/pr_trust_adversarial/
+tests/test_pr_trust.py
+```
+
+Run a local merge authorization report with:
+
+```bash
+venv/bin/python spool_trust.py \
+  --diff examples/pr_trust/basic_supported/diff.patch \
+  --task examples/pr_trust/basic_supported/task.md \
+  --agent-summary examples/pr_trust/basic_supported/agent_summary.md \
+  --test-output examples/pr_trust/basic_supported/test_output.txt \
+  --repo-memory examples/pr_trust/memory_conflict/approved_repo_memory.json \
+  --out outputs/trust_runs/basic_supported \
+  --pretty
+```
+
+Run the adversarial PR-trust fixture suite with:
+
+```bash
+venv/bin/python scripts/run_pr_trust_adversarial.py
+```
+
+Approved repo decisions are the primary merge-time memory primitive for the PR-native path. By default Spool looks for `.spool/approved_decisions.yml`, and `--repo-memory` can point to either that YAML shape or the legacy `approved_repo_memory.json` fixture shape while compatibility remains in place.
+
+## Legacy prototype
+
+This repository still contains the earlier company-memory prototype. That code ingests fake Slack JSON, local documents, and meeting notes; extracts source-backed decisions and memory candidates; and provides a local Streamlit review UI. It is temporarily kept in place while the PR-native Spool architecture is separated.
+
+The legacy pipeline is:
 
 ```text
 Fake Slack JSON
@@ -535,3 +570,12 @@ If LLM mode fails, check that `OPENAI_API_KEY` is set. Heuristic mode does not n
 - v0.5: human review UI.
 - v0.6: keyword query over approved records.
 - v1.0 later: real integrations such as Slack, GitHub, Notion, Google Drive, Jira, Linear, and meeting transcripts.
+## PR trust adversarial runner
+
+Run all local PR trust adversarial fixtures with:
+
+```bash
+venv/bin/python scripts/run_pr_trust_adversarial.py
+```
+
+The runner uses each fixture directory under `examples/pr_trust_adversarial/`, passes fixture-local `approved_decisions.yml` when present, falls back to `approved_repo_memory.json` for legacy fixtures, and writes reports to `outputs/trust_runs_adversarial/<fixture_name>/`.

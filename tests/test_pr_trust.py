@@ -7,10 +7,10 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.pr_evidence import load_pr_evidence
-from src.pr_trust import analyze_pr_trust
-from src.scope_gate import evaluate_scope, parse_changed_files
-from src.trust_report import write_trust_report
+from src.spool.merge_authorization.merge_authorization import analyze_pr_trust
+from src.spool.merge_authorization.merge_authorization_report import write_trust_report
+from src.spool.merge_authorization.pr_context import load_pr_evidence
+from src.spool.merge_authorization.scope_gate import evaluate_scope, parse_changed_files
 
 
 EXAMPLES = Path("examples/pr_trust")
@@ -432,6 +432,119 @@ class PRTrustTest(unittest.TestCase):
 
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("heuristic", result.stderr.lower())
+
+    def test_adversarial_runner_uses_fixture_local_repo_memory(self) -> None:
+        output_root = Path("outputs/trust_runs_adversarial")
+        target_report = output_root / "memory_contradiction_append_only" / "trust_report.json"
+        if target_report.exists():
+            target_report.unlink()
+
+        result = subprocess.run(
+            [sys.executable, "scripts/run_pr_trust_adversarial.py"],
+            cwd=Path(__file__).resolve().parents[1],
+            text=True,
+            capture_output=True,
+            check=True,
+        )
+
+        self.assertIn("memory_contradiction_append_only", result.stdout)
+        self.assertIn("stop", result.stdout.lower())
+        self.assertIn("expected: stop", result.stdout.lower())
+        self.assertTrue(target_report.exists())
+        payload = json.loads(target_report.read_text(encoding="utf-8"))
+        self.assertEqual(payload["overall_verdict"], "stop")
+        self.assertEqual(payload["summary"]["repo_memory_status"], "contradicted")
+
+    def test_approved_decisions_yaml_violation_stops_report(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            memory_path = root / "approved_decisions.yml"
+            memory_path.write_text(
+                """
+decisions:
+  - id: DEC-001
+    status: approved
+    title: Review actions are append-only
+    type: implementation_constraint
+    must:
+      - Review actions must be appended to review_actions.json.
+    must_not:
+      - Overwrite review_actions.json with only the latest action.
+""".lstrip(),
+                encoding="utf-8",
+            )
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["path.write_text(json.dumps([action]))"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Review actions now overwrite existing action history.",
+                test_output="OK\n",
+            )
+            evidence = load_pr_evidence(
+                diff_path=evidence.diff_path,
+                task_path=evidence.task_path,
+                agent_summary_path=evidence.agent_summary_path,
+                test_output_path=evidence.test_output_path,
+                repo_memory_path=memory_path,
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        payload = report.to_dict()
+        self.assertEqual(report.overall_verdict, "stop")
+        self.assertEqual(payload["decision_memory"]["status"], "available")
+        self.assertEqual(payload["decision_memory"]["approved_decisions_count"], 1)
+        self.assertEqual(payload["decision_memory"]["conflicts"], ["DEC-001"])
+
+    def test_cli_accepts_approved_decisions_yaml_fixture(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            fixture = Path("examples/pr_trust_adversarial/approved_decisions_violation")
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    "spool_trust.py",
+                    "--diff",
+                    str(fixture / "diff.patch"),
+                    "--task",
+                    str(fixture / "task.md"),
+                    "--agent-summary",
+                    str(fixture / "agent_summary.md"),
+                    "--test-output",
+                    str(fixture / "test_output.txt"),
+                    "--repo-memory",
+                    str(fixture / "approved_decisions.yml"),
+                    "--out",
+                    temp_dir,
+                    "--pretty",
+                ],
+                cwd=Path(__file__).resolve().parents[1],
+                text=True,
+                capture_output=True,
+                check=True,
+            )
+
+            payload = json.loads((Path(temp_dir) / "trust_report.json").read_text(encoding="utf-8"))
+
+        self.assertIn("Overall verdict: stop", result.stdout)
+        self.assertEqual(payload["decision_memory"]["source"], str(fixture / "approved_decisions.yml"))
+        self.assertEqual(payload["decision_memory"]["conflicts"], ["DEC-001"])
+
+    def test_missing_decision_memory_report_metadata_is_not_unsupported(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["actions.append(action)"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Updated `src/review_actions.py`.",
+                test_output="OK\n",
+            )
+
+            report = analyze_pr_trust(evidence)
+
+        payload = report.to_dict()
+        self.assertEqual(payload["decision_memory"]["status"], "missing")
+        self.assertEqual(payload["decision_memory"]["approved_decisions_count"], 0)
+        self.assertTrue(all(item.verdict != "unsupported" for item in report.repo_memory_check))
 
 
 if __name__ == "__main__":
