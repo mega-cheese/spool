@@ -123,11 +123,17 @@ def _scope_lines(scope: dict[str, Any]) -> list[str]:
     return [
         f"- Task source: {scope.get('task_source') or 'task'}",
         f"- Approved task: {scope.get('approved_task') or 'Not specified'}",
-        f"- Allowed files: {_join_or_none(scope.get('allowed_files') or [])}",
+        *_allowed_scope_lines(scope.get("allowed_files") or []),
         f"- Changed files: {changed_files}",
         f"- Scope violations: {_join_or_none(scope.get('scope_violations') or [])}",
         f"- Forbidden path violations: {_join_or_none(scope.get('forbidden_violations') or [])}",
     ]
+
+
+def _allowed_scope_lines(allowed: list[Any]) -> list[str]:
+    if not allowed:
+        return ["- Allowed files/areas: None"]
+    return ["Allowed files/areas:", *[f"- {item}" for item in allowed]]
 
 
 def _candidate_decision_lines(decisions: list[dict[str, Any]]) -> list[str]:

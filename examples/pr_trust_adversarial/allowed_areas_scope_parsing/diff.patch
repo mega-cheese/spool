@@ -1,0 +1,25 @@
+diff --git a/spool_trust.py b/spool_trust.py
+index 1111111..2222222 100644
+--- a/spool_trust.py
++++ b/spool_trust.py
+@@ -1,3 +1,4 @@
+ def main():
++    task_required = False
+     return 0
+diff --git a/src/spool/merge_authorization/scope_gate.py b/src/spool/merge_authorization/scope_gate.py
+index 1111111..2222222 100644
+--- a/src/spool/merge_authorization/scope_gate.py
++++ b/src/spool/merge_authorization/scope_gate.py
+@@ -1,3 +1,4 @@
+ def evaluate_scope(task_text, changed_files):
++    allowed_areas = []
+     return None
+diff --git a/examples/pr_trust_adversarial/allowed_areas_scope_parsing/task.md b/examples/pr_trust_adversarial/allowed_areas_scope_parsing/task.md
+new file mode 100644
+index 0000000..1111111
+--- /dev/null
++++ b/examples/pr_trust_adversarial/allowed_areas_scope_parsing/task.md
+@@ -0,0 +1,3 @@
++Allowed files/areas:
++- src/spool/merge_authorization/
++- examples/pr_trust_adversarial/

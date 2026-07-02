@@ -124,6 +124,130 @@ class PRTrustTest(unittest.TestCase):
         self.assertEqual(report.overall_verdict, "stop")
         self.assertIn("src/auth.py", report.scope_report.scope_violations)
 
+    def test_parses_allowed_files_areas_heading_with_files_and_directories(self) -> None:
+        task = """
+Make local PR-body/diff-only mode work naturally.
+
+Allowed files/areas:
+- AGENTS.md
+- spool_trust.py
+- src/spool/merge_authorization/
+- tests/test_pr_trust.py
+- scripts/run_pr_trust_adversarial.py
+- examples/pr_trust_adversarial/
+""".lstrip()
+        changes = [
+            *parse_changed_files(self._simple_diff("AGENTS.md", ["scope guidance"])),
+            *parse_changed_files(self._simple_diff("spool_trust.py", ["parser.add_argument('--task')"])),
+            *parse_changed_files(self._simple_diff("src/spool/merge_authorization/scope_gate.py", ["value = 1"])),
+            *parse_changed_files(self._simple_diff("examples/pr_trust_adversarial/new/diff.patch", ["diff text"])),
+        ]
+
+        scope = evaluate_scope(task, changes)
+
+        self.assertEqual(
+            scope.allowed_files,
+            [
+                "AGENTS.md",
+                "spool_trust.py",
+                "src/spool/merge_authorization/",
+                "tests/test_pr_trust.py",
+                "scripts/run_pr_trust_adversarial.py",
+                "examples/pr_trust_adversarial/",
+            ],
+        )
+        self.assertEqual(scope.scope_violations, [])
+        self.assertEqual(scope.scope_risks, [])
+
+    def test_parses_allowed_directories_heading_and_numbered_plain_bullets(self) -> None:
+        task = """
+Allowed directories:
+1. src/spool/merge_authorization/
+* examples/pr_trust_adversarial/
+tests/test_pr_trust.py
+""".lstrip()
+        changes = [
+            *parse_changed_files(self._simple_diff("src/spool/merge_authorization/pr_context.py", ["value = 1"])),
+            *parse_changed_files(self._simple_diff("examples/pr_trust_adversarial/x/task.md", ["Task"])),
+            *parse_changed_files(self._simple_diff("tests/test_pr_trust.py", ["assert True"])),
+        ]
+
+        scope = evaluate_scope(task, changes)
+
+        self.assertEqual(
+            scope.allowed_files,
+            ["src/spool/merge_authorization/", "examples/pr_trust_adversarial/", "tests/test_pr_trust.py"],
+        )
+        self.assertEqual(scope.scope_violations, [])
+
+    def test_changed_file_outside_allowed_area_is_scope_violation(self) -> None:
+        task = """
+Allowed scope:
+- src/spool/merge_authorization/
+- tests/test_pr_trust.py
+""".lstrip()
+        changes = [
+            *parse_changed_files(self._simple_diff("src/spool/merge_authorization/scope_gate.py", ["value = 1"])),
+            *parse_changed_files(self._simple_diff("src/legacy_memory.py", ["value = 1"])),
+        ]
+
+        scope = evaluate_scope(task, changes)
+
+        self.assertEqual(scope.scope_violations, ["src/legacy_memory.py"])
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=(
+                    self._simple_diff("src/spool/merge_authorization/scope_gate.py", ["value = 1"])
+                    + self._simple_diff("src/legacy_memory.py", ["value = 1"])
+                ),
+                task=task,
+                summary="Updated scope parsing.",
+                test_output="OK\n",
+            )
+            report = analyze_pr_trust(evidence)
+
+        self.assertEqual(report.to_dict()["summary"]["allowed_scope_status"], "outside_allowed_scope")
+
+    def test_dogfood_allowed_areas_report_is_within_allowed_scope(self) -> None:
+        task = """
+Make local PR-body/diff-only mode work naturally.
+
+Allowed files/areas:
+- AGENTS.md
+- spool_trust.py
+- src/spool/merge_authorization/
+- tests/test_pr_trust.py
+- scripts/run_pr_trust_adversarial.py
+- examples/pr_trust_adversarial/
+
+Do not add GitHub integration, dashboard, Streamlit, Slack/docs ingestion, meeting ingestion, broad LLM mode, compliance exports, or web server.
+""".lstrip()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=(
+                    self._simple_diff("spool_trust.py", ["parser.add_argument('--task')"])
+                    + self._simple_diff("src/spool/merge_authorization/scope_gate.py", ["value = 1"])
+                    + self._simple_diff("examples/pr_trust_adversarial/allowed_areas_scope_parsing/task.md", ["Allowed files/areas:"])
+                ),
+                task=task,
+                summary="Updated scope parsing for local assignment text.",
+                test_output="OK\n",
+            )
+
+            report = analyze_pr_trust(evidence)
+            paths = write_trust_report(report, temp_dir, pretty=True)
+            payload = json.loads(Path(paths["trust_report_json"]).read_text(encoding="utf-8"))
+            markdown = Path(paths["trust_report_md"]).read_text(encoding="utf-8")
+
+        self.assertEqual(payload["summary"]["allowed_scope_status"], "within_allowed_scope")
+        self.assertEqual(payload["scope"]["scope_violations"], [])
+        self.assertFalse(any("Could not determine approved file scope" in risk for risk in payload["risks"]))
+        self.assertEqual(report.overall_verdict, "continue")
+        self.assertIn("Allowed files/areas:", markdown)
+        self.assertIn("- src/spool/merge_authorization/", markdown)
+
     def test_generates_json_and_markdown_trust_report(self) -> None:
         evidence = load_pr_evidence(
             diff_path=EXAMPLES / "basic_supported" / "diff.patch",
@@ -757,15 +881,24 @@ decisions:
                 "verdict": {"continue"},
                 "missing_test_claim": False,
             },
+            "allowed_areas_scope_parsing": {
+                "assignment": "available",
+                "test_output": "available",
+                "verdict": {"continue"},
+                "missing_test_claim": False,
+                "allowed_scope_status": "within_allowed_scope",
+            },
         }
         for name, expected in cases.items():
             with self.subTest(name=name):
                 fixture = ADVERSARIAL_EXAMPLES / name
                 task_path = fixture / "task.md"
+                test_output_path = fixture / "test_output.txt"
                 evidence = load_pr_evidence(
                     diff_path=fixture / "diff.patch",
                     task_path=task_path if task_path.exists() else None,
                     agent_summary_path=fixture / "agent_summary.md",
+                    test_output_path=test_output_path if test_output_path.exists() else None,
                 )
 
                 report = analyze_pr_trust(evidence)
@@ -783,6 +916,10 @@ decisions:
                 if expected["assignment"] in {"not_provided", "empty"}:
                     self.assertEqual(payload["summary"]["allowed_scope_status"], "partial_assignment_review")
                     self.assertEqual(payload["scope"]["allowed_files"], [])
+                if expected.get("allowed_scope_status"):
+                    self.assertEqual(payload["summary"]["allowed_scope_status"], expected["allowed_scope_status"])
+                    self.assertEqual(payload["scope"]["scope_violations"], [])
+                    self.assertFalse(any("Could not determine approved file scope" in risk for risk in payload["risks"]))
 
 
 if __name__ == "__main__":

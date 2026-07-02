@@ -468,7 +468,7 @@ def _allowed_scope_status(scope: ScopeReport) -> str:
     if scope.forbidden_violations:
         return "forbidden_violation"
     if scope.scope_violations:
-        return "scope_violation"
+        return "outside_allowed_scope"
     if scope.scope_risks:
         return "unbounded_or_ambiguous"
     if scope.allowed_files:

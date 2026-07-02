@@ -99,7 +99,7 @@ def evaluate_scope(
     allowed_files = _extract_allowed_files(task_text)
     forbidden_paths = _extract_forbidden_paths(task_text)
     changed_paths = [change.path for change in changed_files]
-    scope_violations = [path for path in changed_paths if allowed_files and path not in allowed_files]
+    scope_violations = [path for path in changed_paths if allowed_files and not _matches_any_path(path, allowed_files)]
     forbidden_violations = [path for path in changed_paths if _matches_any_path(path, forbidden_paths)]
     scope_risks = []
     if assignment_status == "not_provided":
@@ -129,23 +129,38 @@ def _extract_allowed_files(task_text: str) -> list[str]:
     in_allowed_block = False
     for line in lines:
         stripped = line.strip()
-        if re.match(r"^(allowed files|allowed paths|only modify)\s*:", stripped, re.IGNORECASE):
+        if _is_allowed_scope_heading(stripped):
             in_allowed_block = True
-            allowed.extend(_paths_from_text(stripped))
+            allowed.extend(_paths_from_text(stripped.split(":", 1)[1]))
             continue
         if in_allowed_block:
             if not stripped:
                 in_allowed_block = False
                 continue
-            bullet_match = re.match(r"^[-*]\s+(.+)$", stripped)
-            if bullet_match:
-                allowed.extend(_paths_from_text(bullet_match.group(1)))
-            elif re.match(r"^[A-Za-z].+:", stripped):
+            if re.match(r"^[A-Za-z][A-Za-z /_-]+:", stripped):
+                in_allowed_block = False
+                continue
+            allowed.extend(_paths_from_text(_strip_list_marker(stripped)))
+            if not _paths_from_text(stripped) and not re.match(r"^[-*]|\d+\.", stripped):
                 in_allowed_block = False
     inline_match = re.search(r"\bonly\s+(?:modify|change|edit)\s+(.+?)(?:\.|\n|$)", task_text, re.IGNORECASE | re.DOTALL)
     if inline_match:
         allowed.extend(_paths_from_text(inline_match.group(1)))
     return _dedupe(allowed)
+
+
+def _is_allowed_scope_heading(text: str) -> bool:
+    return bool(
+        re.match(
+            r"^(?:allowed\s+(?:file|files|path|paths|director(?:y|ies)|area|areas|scope|files\s*/\s*areas|files\s+and\s+areas)|only\s+modify)\s*:",
+            text,
+            re.IGNORECASE,
+        )
+    )
+
+
+def _strip_list_marker(text: str) -> str:
+    return re.sub(r"^(?:[-*]\s+|\d+\.\s+)", "", text).strip()
 
 
 def _extract_forbidden_paths(task_text: str) -> list[str]:
@@ -158,9 +173,25 @@ def _extract_forbidden_paths(task_text: str) -> list[str]:
 
 
 def _paths_from_text(text: str) -> list[str]:
-    paths = re.findall(r"`([^`]+\.[A-Za-z0-9]+)`", text)
-    paths.extend(re.findall(r"\b(?:src|tests|app|docs|README)[A-Za-z0-9_./-]*\.[A-Za-z0-9]+\b", text))
-    return [path.strip() for path in paths if path.strip()]
+    paths: list[str] = []
+    for candidate in re.findall(r"`([^`]+)`", text):
+        paths.extend(_path_candidates(candidate))
+    unquoted = re.sub(r"`[^`]+`", " ", text)
+    paths.extend(_path_candidates(unquoted))
+    return _dedupe(paths)
+
+
+def _path_candidates(text: str) -> list[str]:
+    candidates: list[str] = []
+    path_pattern = re.compile(
+        r"(?<![\w./-])(?:\.?[A-Za-z0-9_-]+/)+(?:[A-Za-z0-9_.-]+/?)?"
+        r"|(?<![\w./-])(?:[A-Za-z0-9_-]+\.)+[A-Za-z0-9][A-Za-z0-9_.-]*(?![\w/-])"
+    )
+    for match in path_pattern.finditer(text):
+        candidate = match.group(0).strip("`'\" ,;:)")
+        if candidate and not candidate.startswith(("-", "*")):
+            candidates.append(candidate)
+    return candidates
 
 
 def _matches_any_path(path: str, candidates: list[str]) -> bool:
