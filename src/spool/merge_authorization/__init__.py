@@ -1,6 +1,7 @@
 """Merge authorization primitives for AI-generated pull requests."""
 
 from .candidate_decisions import CandidateDecision, extract_candidate_decisions
+from .check_pr import PRCheckResult, PRIngestionError, run_pr_check
 from .merge_authorization import PRTrustReport, analyze_pr_trust
 from .merge_authorization_report import write_trust_report
 from .pr_context import PREvidence, load_pr_evidence
@@ -21,6 +22,8 @@ __all__ = [
     "EvidenceCoverage",
     "MergeAuthorizationResult",
     "PREvidence",
+    "PRCheckResult",
+    "PRIngestionError",
     "PRTrustReport",
     "ReviewSession",
     "ReviewerAction",
@@ -33,6 +36,7 @@ __all__ = [
     "load_approved_decisions",
     "load_pr_evidence",
     "parse_changed_files",
+    "run_pr_check",
     "write_trust_report",
     "write_memory_update_plan",
 ]

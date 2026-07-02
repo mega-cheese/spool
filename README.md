@@ -33,6 +33,17 @@ Run the adversarial PR-trust fixture suite with:
 venv/bin/python scripts/run_pr_trust_adversarial.py
 ```
 
+Run Spool against a local GitHub PR with the GitHub CLI:
+
+```bash
+venv/bin/python scripts/spool_check_pr.py 123 \
+  --task path/to/task.md \
+  --repo-memory .spool/approved_decisions.yml \
+  --out outputs/spool/pr-123
+```
+
+This is a read-only local design-partner workflow. It uses `gh pr view` to write `pr_metadata.json` and `pr_body.md`, uses `gh pr diff` to write `diff.patch`, treats the PR body as the agent summary, then writes the normal `trust_report.json` and `trust_report.md`. `--task` and `--repo-memory` are optional; omitting `--task` keeps the existing partial-review behavior. The command does not post PR comments, does not mutate approved decision memory, and does not require manually preparing `agent_summary.md`.
+
 Approved repo decisions are the primary merge-time memory primitive for the PR-native path. By default Spool looks for `.spool/approved_decisions.yml`, and `--repo-memory` can point to either that YAML shape or the legacy `approved_repo_memory.json` fixture shape while compatibility remains in place.
 
 Merge authorization reports now include `evidence_coverage` and `candidate_decisions`. Evidence coverage shows which local PR sources were available, such as assignment, agent summary, diff, changed files, test output, and approved decision memory. Candidate decisions surface durable product, security, architecture, process, or implementation rules introduced by a PR so a reviewer can approve or reject them before they become future guardrails.
