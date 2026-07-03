@@ -41,6 +41,17 @@ venv/bin/python scripts/spool_init.py
 
 This creates `.spool/config.yml`, `.spool/approved_decisions.yml`, `.spool/agent_instructions.md`, and `.github/pull_request_template.md` when they are absent, and creates or appends a short Spool PR evidence section in `AGENTS.md`. Existing files are not overwritten. Use `--no-agents-md` or `--no-pr-template` to skip those optional files.
 
+Generate compact Codex-ready prompts:
+
+```bash
+venv/bin/python scripts/spool_codex_prompt.py \
+  "Implement a small change" \
+  --allowed src/spool/merge_authorization/ \
+  --copy
+```
+
+This helper does not depend on Codex internals. It simply generates a prompt with a short Spool reminder so users can paste it into Codex. Default mode is compact to reduce token overhead; pass `--full` when detailed Spool PR evidence instructions are useful. Deeper Codex integration can come later if a stable Codex plugin or hook API is available.
+
 Run Spool against a local GitHub PR with the GitHub CLI:
 
 ```bash

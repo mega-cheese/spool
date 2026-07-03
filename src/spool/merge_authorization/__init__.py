@@ -2,6 +2,7 @@
 
 from .candidate_decisions import CandidateDecision, extract_candidate_decisions
 from .check_pr import PRCheckResult, PRIngestionError, run_pr_check
+from .codex_prompt import render_codex_prompt
 from .merge_authorization import PRTrustReport, analyze_pr_trust
 from .merge_authorization_report import write_trust_report
 from .pr_body_sections import PRBodySections, parse_pr_body_sections
@@ -44,6 +45,7 @@ __all__ = [
     "load_trust_report",
     "parse_changed_files",
     "parse_pr_body_sections",
+    "render_codex_prompt",
     "render_pr_comment",
     "run_pr_check",
     "write_trust_report",
