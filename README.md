@@ -33,6 +33,98 @@ Run the adversarial PR-trust fixture suite with:
 venv/bin/python scripts/run_pr_trust_adversarial.py
 ```
 
+Initialize a repository for the local design-partner workflow with:
+
+```bash
+venv/bin/python scripts/spool_init.py
+```
+
+This creates `.spool/config.yml`, `.spool/approved_decisions.yml`, `.spool/agent_instructions.md`, and `.github/pull_request_template.md` when they are absent, and creates or appends a short Spool PR evidence section in `AGENTS.md`. Existing files are not overwritten. Use `--no-agents-md` or `--no-pr-template` to skip those optional files.
+
+Run Spool against a local GitHub PR with the GitHub CLI:
+
+```bash
+venv/bin/python scripts/spool_check_pr.py 123 \
+  --task path/to/task.md \
+  --repo-memory .spool/approved_decisions.yml \
+  --out outputs/spool/pr-123
+```
+
+This is a read-only local design-partner workflow. It uses `gh pr view` to write `pr_metadata.json` and `pr_body.md`, uses `gh pr diff` to write `diff.patch`, and attempts `gh pr checks` to write `checks.json` with GitHub checks/CI evidence when available. Checks use the stable `gh pr checks --json bucket,completedAt,description,event,link,name,startedAt,state,workflow` shape. It treats the PR body as the agent summary, then writes the normal `trust_report.json` and `trust_report.md`. `--task` and `--repo-memory` are optional; omitting `--task` keeps the existing partial-review behavior. The command does not post PR comments, does not update checks, does not mutate approved decision memory, and does not require manually preparing `agent_summary.md`.
+
+If the PR body includes Spool sections, the same command can extract assignment, agent summary, and test evidence directly:
+
+```bash
+venv/bin/python scripts/spool_check_pr.py 123 \
+  --out outputs/spool/pr-123
+```
+
+Render or explicitly post a concise Spool PR comment from an existing report:
+
+```bash
+venv/bin/python scripts/spool_check_pr.py 123 \
+  --out outputs/spool/pr-123
+
+venv/bin/python scripts/spool_comment_pr.py 123 \
+  --report outputs/spool/pr-123/trust_report.json \
+  --dry-run
+
+venv/bin/python scripts/spool_comment_pr.py 123 \
+  --report outputs/spool/pr-123/trust_report.json \
+  --post
+```
+
+`spool_comment_pr.py` is local and explicit. It does not post anything unless `--post` is passed, uses `gh pr comment --body-file ...` for posting, does not require a GitHub App, and does not mutate approved decision memory.
+
+Run Spool automatically with GitHub Actions:
+
+```bash
+venv/bin/python scripts/spool_check_pr.py 123 \
+  --out outputs/spool/pr-123
+
+venv/bin/python scripts/spool_comment_pr.py 123 \
+  --report outputs/spool/pr-123/trust_report.json \
+  --dry-run
+
+venv/bin/python scripts/spool_comment_pr.py 123 \
+  --report outputs/spool/pr-123/trust_report.json \
+  --post
+```
+
+The workflow in [.github/workflows/spool.yml](/Users/admin/Desktop/spool/.github/workflows/spool.yml) runs on pull request open, update, reopen, and edit events. It uses the repository `github.token` with `gh`, runs `scripts/spool_check_pr.py`, then posts a Spool Merge Authorization comment with `scripts/spool_comment_pr.py`. This workflow is comment-only and non-blocking for Spool verdicts right now. It does not require a GitHub App and does not mutate approved decision memory. Branch protection can later require a dedicated Spool check once Spool emits an actual status/check outcome.
+
+Suggested PR body template:
+
+```markdown
+## Spool Task
+
+Describe the assignment.
+
+Allowed files/areas:
+- README.md
+- scripts/spool_check_pr.py
+- src/spool/merge_authorization/
+- tests/test_spool_check_pr.py
+
+Do not add GitHub App integration, dashboard, Streamlit, Slack/docs ingestion, web server, or implicit approved-memory mutation.
+
+## Agent Summary
+
+Summarize what changed. Spool treats this as an agent claim source and checks it against the diff and available evidence.
+
+## Tests Run
+
+PYTHONDONTWRITEBYTECODE=1 venv/bin/python -m unittest discover -s tests
+
+Result: tests OK
+
+## Candidate Decisions
+
+None.
+```
+
+Recognized section headings are deterministic and case-insensitive: `Spool Task`, `Task`, or `Assignment`; `Agent Summary`, `Summary`, or `Implementation Summary`; `Tests Run`, `Test Evidence`, or `Testing`; and `Candidate Decisions` or `Decisions`. An explicit `--task` file still takes priority over any PR body task section.
+
 Approved repo decisions are the primary merge-time memory primitive for the PR-native path. By default Spool looks for `.spool/approved_decisions.yml`, and `--repo-memory` can point to either that YAML shape or the legacy `approved_repo_memory.json` fixture shape while compatibility remains in place.
 
 Merge authorization reports now include `evidence_coverage` and `candidate_decisions`. Evidence coverage shows which local PR sources were available, such as assignment, agent summary, diff, changed files, test output, and approved decision memory. Candidate decisions surface durable product, security, architecture, process, or implementation rules introduced by a PR so a reviewer can approve or reject them before they become future guardrails.
