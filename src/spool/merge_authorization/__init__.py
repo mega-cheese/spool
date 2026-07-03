@@ -9,6 +9,7 @@ from .pr_context import PREvidence, load_pr_evidence
 from .scope_gate import ScopeReport, evaluate_scope, parse_changed_files
 from .decision_memory import ApprovedDecision, DecisionMemory, load_approved_decisions
 from .evidence_coverage import EvidenceCoverage, build_evidence_coverage
+from .init_repo import init_repo
 from .memory_update_plan import DecisionMemoryUpdatePlan, build_memory_update_plan
 from .memory_update_writer import write_memory_update_plan
 from .merge_authorization_result import MergeAuthorizationResult
@@ -35,6 +36,7 @@ __all__ = [
     "build_memory_update_plan",
     "evaluate_scope",
     "extract_candidate_decisions",
+    "init_repo",
     "load_approved_decisions",
     "load_pr_evidence",
     "parse_changed_files",

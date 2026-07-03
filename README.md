@@ -33,6 +33,14 @@ Run the adversarial PR-trust fixture suite with:
 venv/bin/python scripts/run_pr_trust_adversarial.py
 ```
 
+Initialize a repository for the local design-partner workflow with:
+
+```bash
+venv/bin/python scripts/spool_init.py
+```
+
+This creates `.spool/config.yml`, `.spool/approved_decisions.yml`, `.spool/agent_instructions.md`, and `.github/pull_request_template.md` when they are absent, and creates or appends a short Spool PR evidence section in `AGENTS.md`. Existing files are not overwritten. Use `--no-agents-md` or `--no-pr-template` to skip those optional files.
+
 Run Spool against a local GitHub PR with the GitHub CLI:
 
 ```bash
