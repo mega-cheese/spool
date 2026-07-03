@@ -141,6 +141,7 @@ def _scope_lines(scope: dict[str, Any]) -> list[str]:
             f"- Partial review: {message}",
             "- Allowed files: Not verified without assignment evidence",
             f"- Changed files: {changed_files}",
+            *_scope_classification_lines(scope.get("scope_classifications") or []),
             "- Scope authorization: Partial; no allowed scope was inferred",
             f"- Forbidden path violations: {_join_or_none(scope.get('forbidden_violations') or [])}",
         ]
@@ -149,6 +150,9 @@ def _scope_lines(scope: dict[str, Any]) -> list[str]:
         f"- Approved task: {scope.get('approved_task') or 'Not specified'}",
         *_allowed_scope_lines(scope.get("allowed_files") or []),
         f"- Changed files: {changed_files}",
+        *_scope_classification_lines(scope.get("scope_classifications") or []),
+        f"- Supporting changes: {_join_or_none(scope.get('supporting_changes') or [])}",
+        f"- Risky expansions: {_join_or_none(scope.get('risky_expansions') or [])}",
         f"- Scope violations: {_join_or_none(scope.get('scope_violations') or [])}",
         f"- Forbidden path violations: {_join_or_none(scope.get('forbidden_violations') or [])}",
     ]
@@ -158,6 +162,21 @@ def _allowed_scope_lines(allowed: list[Any]) -> list[str]:
     if not allowed:
         return ["- Allowed files/areas: None"]
     return ["Allowed files/areas:", *[f"- {item}" for item in allowed]]
+
+
+def _scope_classification_lines(classifications: list[dict[str, Any]]) -> list[str]:
+    if not classifications:
+        return ["Scope classification:", "- None"]
+    lines = ["Scope classification:"]
+    for item in classifications:
+        path = item.get("path")
+        classification = item.get("classification")
+        reason = item.get("reason")
+        line = f"- {path}: {classification}"
+        if reason:
+            line += f" - {reason}"
+        lines.append(line)
+    return lines
 
 
 def _candidate_decision_lines(decisions: list[dict[str, Any]]) -> list[str]:

@@ -21,6 +21,20 @@ class FileChange:
 
 
 @dataclass
+class ScopeClassification:
+    path: str
+    classification: str
+    reason: str
+
+    def to_dict(self) -> dict[str, str]:
+        return {
+            "path": self.path,
+            "classification": self.classification,
+            "reason": self.reason,
+        }
+
+
+@dataclass
 class ScopeReport:
     task_source: str
     approved_task: str
@@ -28,6 +42,9 @@ class ScopeReport:
     allowed_files: list[str] = field(default_factory=list)
     forbidden_paths: list[str] = field(default_factory=list)
     changed_files: list[FileChange] = field(default_factory=list)
+    scope_classifications: list[ScopeClassification] = field(default_factory=list)
+    supporting_changes: list[str] = field(default_factory=list)
+    risky_expansions: list[str] = field(default_factory=list)
     scope_violations: list[str] = field(default_factory=list)
     forbidden_violations: list[str] = field(default_factory=list)
     scope_risks: list[str] = field(default_factory=list)
@@ -40,6 +57,9 @@ class ScopeReport:
             "allowed_files": list(self.allowed_files),
             "forbidden_paths": list(self.forbidden_paths),
             "changed_files": [change.to_dict() for change in self.changed_files],
+            "scope_classifications": [item.to_dict() for item in self.scope_classifications],
+            "supporting_changes": list(self.supporting_changes),
+            "risky_expansions": list(self.risky_expansions),
             "scope_violations": list(self.scope_violations),
             "forbidden_violations": list(self.forbidden_violations),
             "scope_risks": list(self.scope_risks),
@@ -99,7 +119,18 @@ def evaluate_scope(
     allowed_files = _extract_allowed_files(task_text)
     forbidden_paths = _extract_forbidden_paths(task_text)
     changed_paths = [change.path for change in changed_files]
-    scope_violations = [path for path in changed_paths if allowed_files and not _matches_any_path(path, allowed_files)]
+    scope_classifications = [_classify_path(path, allowed_files) for path in changed_paths]
+    supporting_changes = [
+        item.path for item in scope_classifications if item.classification == "supporting_change"
+    ]
+    risky_expansions = [
+        item.path for item in scope_classifications if item.classification == "risky_expansion"
+    ]
+    scope_violations = [
+        item.path
+        for item in scope_classifications
+        if allowed_files and item.classification == "outside_scope"
+    ]
     forbidden_violations = [path for path in changed_paths if _matches_any_path(path, forbidden_paths)]
     scope_risks = []
     if assignment_status == "not_provided":
@@ -110,6 +141,10 @@ def evaluate_scope(
         scope_risks.append("Assignment evidence was expected but missing; scope authorization review is partial.")
     if not allowed_files and _has_explicit_scope_language(task_text):
         scope_risks.append("Could not determine approved file scope from task.")
+    if risky_expansions:
+        scope_risks.append(
+            f"Risky scope expansions need review: {', '.join(risky_expansions)}."
+        )
     return ScopeReport(
         task_source=task_source,
         approved_task=_first_nonempty_line(task_text),
@@ -117,6 +152,9 @@ def evaluate_scope(
         allowed_files=allowed_files,
         forbidden_paths=forbidden_paths,
         changed_files=changed_files,
+        scope_classifications=scope_classifications,
+        supporting_changes=supporting_changes,
+        risky_expansions=risky_expansions,
         scope_violations=scope_violations,
         forbidden_violations=forbidden_violations,
         scope_risks=scope_risks,
@@ -196,6 +234,44 @@ def _path_candidates(text: str) -> list[str]:
 
 def _matches_any_path(path: str, candidates: list[str]) -> bool:
     return any(path == candidate or path.startswith(candidate.rstrip("/") + "/") for candidate in candidates)
+
+
+def _classify_path(path: str, allowed_files: list[str]) -> ScopeClassification:
+    if _matches_any_path(path, allowed_files):
+        return ScopeClassification(
+            path=path,
+            classification="explicitly_allowed",
+            reason="The changed file matches an explicit allowed file or directory.",
+        )
+    if _is_supporting_change(path):
+        return ScopeClassification(
+            path=path,
+            classification="supporting_change",
+            reason="The changed file is a deterministic low-risk supporting docs or tests path.",
+        )
+    if _is_risky_expansion(path):
+        return ScopeClassification(
+            path=path,
+            classification="risky_expansion",
+            reason="The changed file affects scripts, CI workflow, or dependency/project configuration and needs explicit review.",
+        )
+    return ScopeClassification(
+        path=path,
+        classification="outside_scope",
+        reason="The changed file does not match explicit allowed scope or a recognized supporting/risky category.",
+    )
+
+
+def _is_supporting_change(path: str) -> bool:
+    return path == "README.md" or path.startswith("docs/") or path.startswith("tests/")
+
+
+def _is_risky_expansion(path: str) -> bool:
+    return (
+        path.startswith("scripts/")
+        or path.startswith(".github/workflows/")
+        or path in {"requirements.txt", "pyproject.toml", "package.json"}
+    )
 
 
 def _has_explicit_scope_language(task_text: str) -> bool:
