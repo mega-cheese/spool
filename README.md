@@ -76,6 +76,23 @@ venv/bin/python scripts/spool_comment_pr.py 123 \
 
 `spool_comment_pr.py` is local and explicit. It does not post anything unless `--post` is passed, uses `gh pr comment --body-file ...` for posting, does not require a GitHub App, and does not mutate approved decision memory.
 
+Run Spool automatically with GitHub Actions:
+
+```bash
+venv/bin/python scripts/spool_check_pr.py 123 \
+  --out outputs/spool/pr-123
+
+venv/bin/python scripts/spool_comment_pr.py 123 \
+  --report outputs/spool/pr-123/trust_report.json \
+  --dry-run
+
+venv/bin/python scripts/spool_comment_pr.py 123 \
+  --report outputs/spool/pr-123/trust_report.json \
+  --post
+```
+
+The workflow in [.github/workflows/spool.yml](/Users/admin/Desktop/spool/.github/workflows/spool.yml) runs on pull request open, update, reopen, and edit events. It uses the repository `github.token` with `gh`, runs `scripts/spool_check_pr.py`, then posts a Spool Merge Authorization comment with `scripts/spool_comment_pr.py`. This workflow is comment-only and non-blocking for Spool verdicts right now. It does not require a GitHub App and does not mutate approved decision memory. Branch protection can later require a dedicated Spool check once Spool emits an actual status/check outcome.
+
 Suggested PR body template:
 
 ```markdown

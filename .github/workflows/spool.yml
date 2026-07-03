@@ -1,0 +1,50 @@
+name: Spool PR Comment
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - edited
+
+permissions:
+  contents: read
+  pull-requests: write
+
+env:
+  PYTHONPATH: ${{ github.workspace }}/src
+
+jobs:
+  spool:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Verify GitHub CLI
+        run: gh --version
+
+      - name: Run Spool merge authorization
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/spool_check_pr.py "${{ github.event.pull_request.number }}" \
+            --out "outputs/spool/pr-${{ github.event.pull_request.number }}"
+
+      - name: Post Spool comment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/spool_comment_pr.py "${{ github.event.pull_request.number }}" \
+            --report "outputs/spool/pr-${{ github.event.pull_request.number }}/trust_report.json" \
+            --post
