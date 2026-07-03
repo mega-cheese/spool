@@ -105,6 +105,7 @@ class PRTrustReport:
                 "changed_files_checked": len(self.scope_report.changed_files),
                 "allowed_scope_status": _allowed_scope_status(self.scope_report),
                 "supported_claims_count": sum(1 for claim in self.claims if claim.verdict == "supported"),
+                "unsupported_claims_count": sum(1 for claim in self.claims if claim.verdict == "unsupported"),
                 "test_evidence_status": _test_evidence_status(self.claims),
                 "repo_memory_status": _repo_memory_status(self.repo_memory_check),
                 "decision_memory_status": self.decision_memory.status,

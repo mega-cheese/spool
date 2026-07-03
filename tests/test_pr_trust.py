@@ -265,6 +265,8 @@ Do not add GitHub integration, dashboard, Streamlit, Slack/docs ingestion, meeti
         self.assertEqual(payload["overall_verdict"], "continue")
         self.assertIn("agent_claims", payload)
         self.assertIn("scope", payload)
+        self.assertEqual(payload["summary"]["unsupported_claims_count"], 0)
+        self.assertEqual(payload["scope"]["scope_violations"], [])
         self.assertIn("Update review action persistence", payload["scope"]["approved_task"])
         self.assertIn("# Spool Merge Authorization Report", markdown)
         for heading in (
@@ -280,6 +282,19 @@ Do not add GitHub integration, dashboard, Streamlit, Slack/docs ingestion, meeti
         ):
             self.assertIn(heading, markdown)
         self.assertNotIn("## Buried Decisions", markdown)
+
+    def test_local_file_mode_pr_title_remains_not_supported(self) -> None:
+        evidence = load_pr_evidence(
+            diff_path=EXAMPLES / "basic_supported" / "diff.patch",
+            task_path=EXAMPLES / "basic_supported" / "task.md",
+            agent_summary_path=EXAMPLES / "basic_supported" / "agent_summary.md",
+            test_output_path=EXAMPLES / "basic_supported" / "test_output.txt",
+        )
+
+        payload = analyze_pr_trust(evidence).to_dict()
+
+        self.assertEqual(payload["evidence_coverage"]["pr_title"], "not_supported")
+        self.assertEqual(payload["summary"]["unsupported_claims_count"], 0)
 
     def test_detects_buried_decision_as_candidate_repo_memory(self) -> None:
         evidence = load_pr_evidence(

@@ -1,0 +1,8 @@
+# Spool generated/local artifacts
+outputs/
+dogfood/
+examples.zip
+examples/pr_trust_real/
+*.pyc
+__pycache__/
+.spool/local/

@@ -36,6 +36,7 @@ class EvidenceCoverage:
 
 def build_evidence_coverage(evidence: PREvidence, changed_files: list[object]) -> EvidenceCoverage:
     coverage = EvidenceCoverage(
+        pr_title=_pr_title_status(evidence),
         pr_body=_text_status(evidence.agent_summary_text),
         diff=_text_status(evidence.diff_text),
         changed_files="available" if changed_files else "missing",
@@ -45,13 +46,18 @@ def build_evidence_coverage(evidence: PREvidence, changed_files: list[object]) -
         approved_decisions=_decision_memory_status(evidence),
         legacy_repo_memory=_legacy_memory_status(evidence),
     )
-    coverage.notes.append("PR title is not available in local file mode.")
+    if coverage.pr_title == "not_supported":
+        coverage.notes.append("PR title is not available in local file mode.")
+    elif coverage.pr_title == "empty":
+        coverage.notes.append("GitHub PR metadata was fetched, but the PR title was empty.")
     if coverage.ci_checks == "not_supported":
         coverage.notes.append("CI checks are not available in local file mode.")
     elif coverage.ci_checks == "empty":
         coverage.notes.append("GitHub checks were fetched, but no checks were returned for this PR.")
     elif coverage.ci_checks == "unavailable":
         coverage.notes.append("GitHub checks could not be fetched for this PR.")
+    elif coverage.ci_checks == "malformed":
+        coverage.notes.append("GitHub checks were fetched, but the checks payload could not be parsed.")
     if coverage.test_output in {"not_provided", "empty"}:
         coverage.notes.append("No test output was provided, so test-pass claims cannot be verified from external evidence.")
     if coverage.assignment == "not_provided":
@@ -72,6 +78,12 @@ def build_evidence_coverage(evidence: PREvidence, changed_files: list[object]) -
 
 def _text_status(text: str) -> str:
     return "available" if text.strip() else "empty"
+
+
+def _pr_title_status(evidence: PREvidence) -> str:
+    if evidence.pr_metadata_path is None:
+        return "not_supported"
+    return _text_status(evidence.pr_title_text)
 
 
 def _assignment_status(evidence: PREvidence) -> str:

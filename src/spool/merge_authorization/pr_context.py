@@ -126,10 +126,12 @@ class PREvidence:
     task_path: str | None
     agent_summary_path: str
     test_output_path: str | None
+    pr_metadata_path: str | None
     repo_memory_path: str | None
     diff_text: str
     task_text: str
     agent_summary_text: str
+    pr_title_text: str = ""
     test_output_text: str = ""
     repo_memory_exists: bool = False
     repo_memory_items: list[RepoMemoryItem] = field(default_factory=list)
@@ -153,6 +155,8 @@ def load_pr_evidence(
     task_path: str | Path | None = None,
     agent_summary_path: str | Path,
     test_output_path: str | Path | None = None,
+    pr_metadata_path: str | Path | None = None,
+    pr_title_text: str | None = None,
     ci_checks_path: str | Path | None = None,
     repo_memory_path: str | Path | None = None,
 ) -> PREvidence:
@@ -160,6 +164,7 @@ def load_pr_evidence(
     task = Path(task_path) if task_path else None
     summary = Path(agent_summary_path)
     test_output = Path(test_output_path) if test_output_path else None
+    metadata = Path(pr_metadata_path) if pr_metadata_path else None
     ci_checks_file = Path(ci_checks_path) if ci_checks_path else None
     memory_path = resolve_decision_memory_path(repo_memory_path)
 
@@ -197,10 +202,12 @@ def load_pr_evidence(
         task_path=str(task) if task else None,
         agent_summary_path=str(summary),
         test_output_path=str(test_output) if test_output else None,
+        pr_metadata_path=str(metadata) if metadata else None,
         repo_memory_path=str(memory_path),
         diff_text=diff.read_text(encoding="utf-8"),
         task_text=task_text,
         agent_summary_text=summary.read_text(encoding="utf-8"),
+        pr_title_text=str(pr_title_text or ""),
         test_output_text=test_text,
         repo_memory_exists=memory_exists,
         repo_memory_items=memory_items,

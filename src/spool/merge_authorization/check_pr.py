@@ -54,6 +54,8 @@ def run_pr_check(
         task_path=assignment_path,
         agent_summary_path=agent_summary_path,
         test_output_path=test_output_path,
+        pr_metadata_path=evidence_paths.get("pr_metadata"),
+        pr_title_text=str(metadata.get("title") or ""),
         ci_checks_path=evidence_paths.get("ci_checks"),
         repo_memory_path=repo_memory_path,
     )
@@ -146,7 +148,7 @@ def print_summary(result: PRCheckResult) -> None:
     claims = payload.get("agent_claims") or []
     scope = payload.get("scope") or {}
     scope_violations = scope.get("scope_violations") or []
-    unsupported_count = sum(1 for claim in claims if claim.get("verdict") == "unsupported")
+    unsupported_count = int(summary.get("unsupported_claims_count", sum(1 for claim in claims if claim.get("verdict") == "unsupported")))
     weak_missing_count = len(payload.get("weak_or_missing_evidence") or [])
     checks = payload.get("ci_checks") or {}
     report_path = result.report_paths.get("trust_report_md") or result.report_paths.get("trust_report_json")

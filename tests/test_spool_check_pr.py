@@ -113,7 +113,9 @@ None.
 
         self.assertEqual(result.report.overall_verdict, "continue")
         self.assertEqual(payload["summary"]["allowed_scope_status"], "within_allowed_scope")
+        self.assertEqual(payload["summary"]["unsupported_claims_count"], 0)
         self.assertEqual(payload["evidence_coverage"]["test_output"], "not_provided")
+        self.assertEqual(payload["evidence_coverage"]["pr_title"], "available")
         self.assertEqual(payload["evidence_coverage"]["ci_checks"], "empty")
         self.assertEqual(metadata["number"], 123)
         self.assertIn("# Update review actions", pr_body)
@@ -125,6 +127,19 @@ None.
         self.assertEqual(mocked_run.call_args_list[0].args[0][:3], ["gh", "pr", "view"])
         self.assertEqual(mocked_run.call_args_list[1].args[0][:3], ["gh", "pr", "diff"])
         self.assertEqual(mocked_run.call_args_list[2].args[0][:3], ["gh", "pr", "checks"])
+
+    def test_github_pr_ingestion_does_not_report_pr_title_as_local_file_mode(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            out_dir = Path(temp_dir) / "spool-pr-123"
+            with mock.patch("subprocess.run", self._mock_gh()):
+                run_pr_check("123", out_dir=out_dir)
+
+            payload = json.loads((out_dir / "trust_report.json").read_text(encoding="utf-8"))
+            markdown = (out_dir / "trust_report.md").read_text(encoding="utf-8")
+
+        notes = payload["evidence_coverage"]["notes"]
+        self.assertIn("PR title: available", markdown)
+        self.assertFalse(any("PR title is not available in local file mode." == note for note in notes))
 
     def test_task_is_optional_and_repo_memory_can_be_passed(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

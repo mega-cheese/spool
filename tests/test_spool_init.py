@@ -102,6 +102,19 @@ class SpoolInitTest(unittest.TestCase):
         self.assertNotIn("AGENTS.md", summary["created"])
         self.assertNotIn(".github/pull_request_template.md", summary["created"])
 
+    def test_repo_gitignore_ignores_local_spool_outputs_but_not_committed_spool_files(self) -> None:
+        gitignore = Path(".gitignore").read_text(encoding="utf-8")
+        lines = {line.strip() for line in gitignore.splitlines() if line.strip() and not line.strip().startswith("#")}
+
+        self.assertIn("outputs/", lines)
+        self.assertIn("dogfood/", lines)
+        self.assertIn("examples.zip", lines)
+        self.assertIn("examples/pr_trust_real/", lines)
+        self.assertIn("__pycache__/", lines)
+        self.assertIn("*.pyc", lines)
+        self.assertIn(".spool/local/", lines)
+        self.assertNotIn(".spool/", lines)
+
 
 if __name__ == "__main__":
     unittest.main()
