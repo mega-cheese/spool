@@ -59,6 +59,23 @@ venv/bin/python scripts/spool_check_pr.py 123 \
   --out outputs/spool/pr-123
 ```
 
+Render or explicitly post a concise Spool PR comment from an existing report:
+
+```bash
+venv/bin/python scripts/spool_check_pr.py 123 \
+  --out outputs/spool/pr-123
+
+venv/bin/python scripts/spool_comment_pr.py 123 \
+  --report outputs/spool/pr-123/trust_report.json \
+  --dry-run
+
+venv/bin/python scripts/spool_comment_pr.py 123 \
+  --report outputs/spool/pr-123/trust_report.json \
+  --post
+```
+
+`spool_comment_pr.py` is local and explicit. It does not post anything unless `--post` is passed, uses `gh pr comment --body-file ...` for posting, does not require a GitHub App, and does not mutate approved decision memory.
+
 Suggested PR body template:
 
 ```markdown
