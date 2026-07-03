@@ -44,6 +44,45 @@ venv/bin/python scripts/spool_check_pr.py 123 \
 
 This is a read-only local design-partner workflow. It uses `gh pr view` to write `pr_metadata.json` and `pr_body.md`, uses `gh pr diff` to write `diff.patch`, treats the PR body as the agent summary, then writes the normal `trust_report.json` and `trust_report.md`. `--task` and `--repo-memory` are optional; omitting `--task` keeps the existing partial-review behavior. The command does not post PR comments, does not mutate approved decision memory, and does not require manually preparing `agent_summary.md`.
 
+If the PR body includes Spool sections, the same command can extract assignment, agent summary, and test evidence directly:
+
+```bash
+venv/bin/python scripts/spool_check_pr.py 123 \
+  --out outputs/spool/pr-123
+```
+
+Suggested PR body template:
+
+```markdown
+## Spool Task
+
+Describe the assignment.
+
+Allowed files/areas:
+- README.md
+- scripts/spool_check_pr.py
+- src/spool/merge_authorization/
+- tests/test_spool_check_pr.py
+
+Do not add GitHub App integration, dashboard, Streamlit, Slack/docs ingestion, web server, or implicit approved-memory mutation.
+
+## Agent Summary
+
+Summarize what changed. Spool treats this as an agent claim source and checks it against the diff and available evidence.
+
+## Tests Run
+
+PYTHONDONTWRITEBYTECODE=1 venv/bin/python -m unittest discover -s tests
+
+Result: tests OK
+
+## Candidate Decisions
+
+None.
+```
+
+Recognized section headings are deterministic and case-insensitive: `Spool Task`, `Task`, or `Assignment`; `Agent Summary`, `Summary`, or `Implementation Summary`; `Tests Run`, `Test Evidence`, or `Testing`; and `Candidate Decisions` or `Decisions`. An explicit `--task` file still takes priority over any PR body task section.
+
 Approved repo decisions are the primary merge-time memory primitive for the PR-native path. By default Spool looks for `.spool/approved_decisions.yml`, and `--repo-memory` can point to either that YAML shape or the legacy `approved_repo_memory.json` fixture shape while compatibility remains in place.
 
 Merge authorization reports now include `evidence_coverage` and `candidate_decisions`. Evidence coverage shows which local PR sources were available, such as assignment, agent summary, diff, changed files, test output, and approved decision memory. Candidate decisions surface durable product, security, architecture, process, or implementation rules introduced by a PR so a reviewer can approve or reject them before they become future guardrails.

@@ -10,6 +10,7 @@ from typing import Any
 
 from .merge_authorization import PRTrustReport, analyze_pr_trust
 from .merge_authorization_report import write_trust_report
+from .pr_body_sections import parse_pr_body_sections
 from .pr_context import load_pr_evidence
 
 
@@ -42,11 +43,15 @@ def run_pr_check(
     metadata = fetch_pr_metadata(pr_ref)
     diff_text = fetch_pr_diff(pr_ref)
     evidence_paths = write_pr_evidence_files(metadata, diff_text, output_dir)
+    assignment_path = str(task_path) if task_path else evidence_paths.get("assignment")
+    agent_summary_path = evidence_paths.get("agent_summary") or evidence_paths["pr_body"]
+    test_output_path = evidence_paths.get("test_output")
 
     evidence = load_pr_evidence(
         diff_path=evidence_paths["diff"],
-        task_path=task_path,
-        agent_summary_path=evidence_paths["pr_body"],
+        task_path=assignment_path,
+        agent_summary_path=agent_summary_path,
+        test_output_path=test_output_path,
         repo_memory_path=repo_memory_path,
     )
     report = analyze_pr_trust(evidence)
@@ -56,7 +61,7 @@ def run_pr_check(
         report_paths=report_paths,
         evidence_paths={
             **evidence_paths,
-            "task": str(task_path) if task_path else None,
+            "task": assignment_path,
             "repo_memory": str(repo_memory_path) if repo_memory_path else None,
         },
         pr_metadata=metadata,
@@ -81,7 +86,7 @@ def fetch_pr_diff(pr_ref: str) -> str:
     return _run_gh(["pr", "diff", pr_ref], fetch_label="PR diff")
 
 
-def write_pr_evidence_files(metadata: dict[str, Any], diff_text: str, output_dir: Path) -> dict[str, str]:
+def write_pr_evidence_files(metadata: dict[str, Any], diff_text: str, output_dir: Path) -> dict[str, str | None]:
     metadata_path = output_dir / "pr_metadata.json"
     pr_body_path = output_dir / "pr_body.md"
     diff_path = output_dir / "diff.patch"
@@ -91,11 +96,18 @@ def write_pr_evidence_files(metadata: dict[str, Any], diff_text: str, output_dir
     body = str(metadata.get("body") or "").strip()
     pr_body_path.write_text(_pr_body_text(title, body), encoding="utf-8")
     diff_path.write_text(diff_text, encoding="utf-8")
+    sections = parse_pr_body_sections(body)
+    assignment_path = _write_optional_section(output_dir / "assignment.md", sections.assignment_text)
+    agent_summary_path = _write_optional_section(output_dir / "agent_summary.md", sections.agent_summary_text)
+    test_output_path = _write_optional_section(output_dir / "test_output.txt", sections.test_evidence_text)
 
     return {
         "pr_metadata": str(metadata_path),
         "pr_body": str(pr_body_path),
         "diff": str(diff_path),
+        "assignment": str(assignment_path) if assignment_path else None,
+        "agent_summary": str(agent_summary_path) if agent_summary_path else None,
+        "test_output": str(test_output_path) if test_output_path else None,
     }
 
 
@@ -168,6 +180,13 @@ def _pr_body_text(title: str, body: str) -> str:
     if body:
         parts.append(body)
     return "\n\n".join(parts).rstrip() + "\n"
+
+
+def _write_optional_section(path: Path, text: str) -> Path | None:
+    if not text.strip():
+        return None
+    path.write_text(text.strip() + "\n", encoding="utf-8")
+    return path
 
 
 if __name__ == "__main__":

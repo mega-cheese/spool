@@ -38,6 +38,28 @@ index 1111111..2222222 100644
 """.lstrip()
         return mock.Mock(side_effect=[self._gh_completed(json.dumps(metadata)), self._gh_completed(diff)])
 
+    def _sectioned_body(self) -> str:
+        return """
+## Spool Task
+
+Add local read-only GitHub PR ingestion for Spool.
+
+Allowed files/areas:
+- src/review_actions.py
+
+## Agent Summary
+
+Updated `src/review_actions.py`.
+
+## Tests Run
+
+OK
+
+## Candidate Decisions
+
+None.
+""".lstrip()
+
     def test_run_pr_check_collects_github_evidence_and_writes_report(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
@@ -83,6 +105,61 @@ index 1111111..2222222 100644
         self.assertEqual(result.report.overall_verdict, "human_review")
         self.assertEqual(payload["evidence_coverage"]["assignment"], "not_provided")
         self.assertEqual(payload["evidence_coverage"]["approved_decisions"], "available")
+
+    def test_pr_body_task_section_is_used_when_task_is_absent(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            out_dir = root / "spool-pr-123"
+
+            with mock.patch("subprocess.run", self._mock_gh(body=self._sectioned_body())):
+                result = run_pr_check("123", out_dir=out_dir)
+
+            payload = json.loads((out_dir / "trust_report.json").read_text(encoding="utf-8"))
+            assignment_text = (out_dir / "assignment.md").read_text(encoding="utf-8")
+            agent_summary_text = (out_dir / "agent_summary.md").read_text(encoding="utf-8")
+            test_output_text = (out_dir / "test_output.txt").read_text(encoding="utf-8")
+
+        self.assertEqual(result.report.overall_verdict, "continue")
+        self.assertEqual(payload["evidence_coverage"]["assignment"], "available")
+        self.assertEqual(payload["evidence_coverage"]["test_output"], "available")
+        self.assertEqual(payload["summary"]["allowed_scope_status"], "within_allowed_scope")
+        self.assertIn("Allowed files/areas", assignment_text)
+        self.assertEqual(agent_summary_text.strip(), "Updated `src/review_actions.py`.")
+        self.assertEqual(test_output_text.strip(), "OK")
+
+    def test_task_file_overrides_pr_body_task_section(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            task = root / "task.md"
+            out_dir = root / "spool-pr-123"
+            task.write_text("Allowed files:\n- `src/other.py`\n", encoding="utf-8")
+
+            with mock.patch("subprocess.run", self._mock_gh(body=self._sectioned_body())):
+                result = run_pr_check("123", out_dir=out_dir, task_path=task)
+
+            payload = json.loads((out_dir / "trust_report.json").read_text(encoding="utf-8"))
+
+        self.assertEqual(result.report.overall_verdict, "repair")
+        self.assertEqual(payload["scope"]["task_source"], str(task))
+        self.assertEqual(payload["scope"]["scope_violations"], ["src/review_actions.py"])
+        self.assertFalse((out_dir / "assignment.md").exists())
+
+    def test_no_sections_preserves_full_pr_body_summary_fallback(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            out_dir = Path(temp_dir) / "spool-pr-123"
+
+            with mock.patch("subprocess.run", self._mock_gh(body="Updated `src/review_actions.py`.")):
+                run_pr_check("123", out_dir=out_dir)
+
+            payload = json.loads((out_dir / "trust_report.json").read_text(encoding="utf-8"))
+            pr_body = (out_dir / "pr_body.md").read_text(encoding="utf-8")
+
+        self.assertEqual(payload["evidence_coverage"]["assignment"], "not_provided")
+        self.assertEqual(payload["evidence_coverage"]["test_output"], "not_provided")
+        self.assertFalse((out_dir / "assignment.md").exists())
+        self.assertFalse((out_dir / "agent_summary.md").exists())
+        self.assertFalse((out_dir / "test_output.txt").exists())
+        self.assertIn("Updated `src/review_actions.py`.", pr_body)
 
     def test_cli_prints_concise_summary(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
