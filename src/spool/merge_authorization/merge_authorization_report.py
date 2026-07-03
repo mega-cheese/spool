@@ -42,6 +42,8 @@ def trust_report_to_markdown(report: PRTrustReport) -> str:
     lines.extend(_scope_lines(scope))
     lines.extend(["", "## Evidence Coverage", ""])
     lines.extend(_evidence_coverage_lines(payload.get("evidence_coverage") or {}))
+    lines.extend(["", "## CI Checks", ""])
+    lines.extend(_ci_check_lines(payload.get("ci_checks") or {}))
     lines.extend([
         "",
         "## Agent Claims",
@@ -96,6 +98,27 @@ def _evidence_coverage_lines(coverage: dict[str, Any]) -> list[str]:
     notes = coverage.get("notes") or []
     if notes:
         lines.append(f"- Notes: {_join_or_none(notes)}")
+    return lines
+
+
+def _ci_check_lines(checks: dict[str, Any]) -> list[str]:
+    if not checks:
+        return ["- Status: not_supported"]
+    lines = [
+        f"- Status: {checks.get('status')}",
+        f"- Total: {checks.get('total_count', 0)}",
+        f"- Passed: {checks.get('passed_count', 0)}",
+        f"- Failed: {checks.get('failed_count', 0)}",
+        f"- Pending: {checks.get('pending_count', 0)}",
+    ]
+    failed = checks.get("failed_checks") or []
+    if failed:
+        lines.append(f"- Failed checks: {_join_or_none(failed)}")
+    pending = checks.get("pending_checks") or []
+    if pending:
+        lines.append(f"- Pending checks: {_join_or_none(pending)}")
+    if checks.get("error"):
+        lines.append(f"- Error: {checks.get('error')}")
     return lines
 
 

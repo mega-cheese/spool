@@ -50,7 +50,7 @@ venv/bin/python scripts/spool_check_pr.py 123 \
   --out outputs/spool/pr-123
 ```
 
-This is a read-only local design-partner workflow. It uses `gh pr view` to write `pr_metadata.json` and `pr_body.md`, uses `gh pr diff` to write `diff.patch`, treats the PR body as the agent summary, then writes the normal `trust_report.json` and `trust_report.md`. `--task` and `--repo-memory` are optional; omitting `--task` keeps the existing partial-review behavior. The command does not post PR comments, does not mutate approved decision memory, and does not require manually preparing `agent_summary.md`.
+This is a read-only local design-partner workflow. It uses `gh pr view` to write `pr_metadata.json` and `pr_body.md`, uses `gh pr diff` to write `diff.patch`, and attempts `gh pr checks` to write `checks.json` with GitHub checks/CI evidence when available. Checks use the stable `gh pr checks --json bucket,completedAt,description,event,link,name,startedAt,state,workflow` shape. It treats the PR body as the agent summary, then writes the normal `trust_report.json` and `trust_report.md`. `--task` and `--repo-memory` are optional; omitting `--task` keeps the existing partial-review behavior. The command does not post PR comments, does not update checks, does not mutate approved decision memory, and does not require manually preparing `agent_summary.md`.
 
 If the PR body includes Spool sections, the same command can extract assignment, agent summary, and test evidence directly:
 

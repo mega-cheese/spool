@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 from .candidate_decisions import CandidateDecision, extract_candidate_decisions
 from .decision_memory import DecisionMemory
 from .evidence_coverage import EvidenceCoverage, build_evidence_coverage
-from .pr_context import PREvidence
+from .pr_context import PREvidence, PRChecksEvidence
 from .scope_gate import ScopeReport, evaluate_scope, parse_changed_files
 
 
@@ -92,6 +92,7 @@ class PRTrustReport:
     repo_memory_check: list[RepoMemoryCheck] = field(default_factory=list)
     decision_memory: DecisionMemory = field(default_factory=lambda: DecisionMemory(source=None, status="missing"))
     evidence_coverage: EvidenceCoverage = field(default_factory=EvidenceCoverage)
+    ci_checks: PRChecksEvidence = field(default_factory=PRChecksEvidence)
     risks: list[str] = field(default_factory=list)
     reviewer_actions: list[str] = field(default_factory=list)
 
@@ -110,6 +111,7 @@ class PRTrustReport:
             },
             "scope": self.scope_report.to_dict(),
             "evidence_coverage": self.evidence_coverage.to_dict(),
+            "ci_checks": self.ci_checks.to_dict(),
             "agent_claims": [claim.to_dict() for claim in self.claims],
             "weak_or_missing_evidence": list(self.weak_or_missing_evidence),
             "candidate_decisions": [decision.to_dict() for decision in self.candidate_decisions],
@@ -153,6 +155,7 @@ def analyze_pr_trust(evidence: PREvidence, *, mode: str = "heuristic") -> PRTrus
         repo_memory_check=repo_memory_check,
         decision_memory=evidence.decision_memory,
         evidence_coverage=evidence_coverage,
+        ci_checks=evidence.ci_checks,
         risks=risks,
         reviewer_actions=reviewer_actions,
     )
@@ -260,6 +263,43 @@ def _behavior_claim(line: str, evidence: PREvidence) -> TrustClaim:
 
 
 def _test_claim(line: str, evidence: PREvidence) -> TrustClaim:
+    if evidence.ci_checks.status == "available" and evidence.ci_checks.total_count > 0:
+        if evidence.ci_checks.failed_count:
+            failed = ", ".join(evidence.ci_checks.failed_checks)
+            return _claim(
+                "Tests passed.",
+                "test_result_claim",
+                "checks.json",
+                "contradicted",
+                evidence_quote=failed,
+                reason=f"The agent says tests passed, but GitHub checks include failing GitHub checks: {failed}.",
+            )
+        if evidence.ci_checks.pending_count:
+            pending = ", ".join(evidence.ci_checks.pending_checks)
+            return _claim(
+                "Tests passed.",
+                "test_result_claim",
+                "checks.json",
+                "needs_review",
+                evidence_quote=pending,
+                reason=f"The agent says tests passed, but pending GitHub checks are still unresolved: {pending}.",
+            )
+        if evidence.ci_checks.all_passing:
+            return _claim(
+                "Tests passed.",
+                "test_result_claim",
+                "checks.json",
+                "supported",
+                evidence_quote=_first_check_evidence_line(evidence.ci_checks),
+                reason="GitHub checks were fetched and all returned checks are passing.",
+            )
+        return _claim(
+            "Tests passed.",
+            "test_result_claim",
+            "checks.json",
+            "needs_review",
+            reason="GitHub checks were fetched, but their statuses were inconclusive.",
+        )
     if not evidence.has_test_output:
         return _claim(
             "Tests passed.",
@@ -517,6 +557,14 @@ def _is_test_pass_claim(text: str) -> bool:
 
 def _test_output_passed(text: str) -> bool:
     return bool(re.search(r"(^|\n)\s*OK\s*(\n|$)|\b\d+\s+passed\b|\bPASS\b", text, re.IGNORECASE))
+
+
+def _first_check_evidence_line(checks: PRChecksEvidence) -> str:
+    if not checks.checks:
+        return ""
+    first = checks.checks[0]
+    status = first.conclusion or first.state
+    return f"{first.name}: {status}".strip()
 
 
 def _paths_from_text(text: str) -> list[str]:

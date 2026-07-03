@@ -41,11 +41,17 @@ def build_evidence_coverage(evidence: PREvidence, changed_files: list[object]) -
         changed_files="available" if changed_files else "missing",
         assignment=_assignment_status(evidence),
         test_output=_test_output_status(evidence),
+        ci_checks=evidence.ci_checks.status,
         approved_decisions=_decision_memory_status(evidence),
         legacy_repo_memory=_legacy_memory_status(evidence),
     )
     coverage.notes.append("PR title is not available in local file mode.")
-    coverage.notes.append("CI checks are not available in local file mode.")
+    if coverage.ci_checks == "not_supported":
+        coverage.notes.append("CI checks are not available in local file mode.")
+    elif coverage.ci_checks == "empty":
+        coverage.notes.append("GitHub checks were fetched, but no checks were returned for this PR.")
+    elif coverage.ci_checks == "unavailable":
+        coverage.notes.append("GitHub checks could not be fetched for this PR.")
     if coverage.test_output in {"not_provided", "empty"}:
         coverage.notes.append("No test output was provided, so test-pass claims cannot be verified from external evidence.")
     if coverage.assignment == "not_provided":
