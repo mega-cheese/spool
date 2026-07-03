@@ -5,11 +5,32 @@ import json
 import re
 import subprocess
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 
 
 FIXTURES_DIR = Path("examples/pr_trust_adversarial")
 OUTPUT_ROOT = Path("outputs/trust_runs_adversarial")
+
+
+@dataclass(frozen=True)
+class FixtureResult:
+    name: str
+    actual_verdict: str
+    expected_verdict: str | None
+
+    @property
+    def is_informational(self) -> bool:
+        return self.expected_verdict is None
+
+    @property
+    def is_mismatch(self) -> bool:
+        return self.expected_verdict is not None and self.actual_verdict != self.expected_verdict
+
+    def summary_line(self) -> str:
+        if self.expected_verdict:
+            return f"{self.name}: {self.actual_verdict} (expected: {self.expected_verdict})"
+        return f"{self.name}: {self.actual_verdict} (no expected verdict)"
 
 
 def main() -> int:
@@ -21,13 +42,34 @@ def main() -> int:
         print(f"Fixture directory not found: {fixtures_root}", file=sys.stderr)
         return 1
 
+    results: list[FixtureResult] = []
     for fixture_dir in sorted(path for path in fixtures_root.iterdir() if path.is_dir()):
-        run_fixture(repo_root, output_root, fixture_dir)
+        result = run_fixture(repo_root, output_root, fixture_dir)
+        results.append(result)
+        print(result.summary_line())
 
+    mismatches = [result for result in results if result.is_mismatch]
+    informational_count = sum(1 for result in results if result.is_informational)
+    checked_count = len(results) - informational_count
+
+    if mismatches:
+        print(f"Adversarial PR trust mismatches: {len(mismatches)}", file=sys.stderr)
+        for result in mismatches:
+            print(
+                f"- {result.name}: expected {result.expected_verdict}, got {result.actual_verdict}",
+                file=sys.stderr,
+            )
+        return 1
+
+    print(
+        "Adversarial PR trust fixtures passed: "
+        f"{checked_count} expected verdicts matched; "
+        f"{informational_count} informational fixtures."
+    )
     return 0
 
 
-def run_fixture(repo_root: Path, output_root: Path, fixture_dir: Path) -> None:
+def run_fixture(repo_root: Path, output_root: Path, fixture_dir: Path) -> FixtureResult:
     out_dir = output_root / fixture_dir.name
     command = [
         sys.executable,
@@ -62,10 +104,11 @@ def run_fixture(repo_root: Path, output_root: Path, fixture_dir: Path) -> None:
     verdict = str(payload.get("overall_verdict") or "unknown")
     expected = parse_expected_verdict(fixture_dir / "expected_notes.md")
 
-    summary = f"{fixture_dir.name}: {verdict}"
-    if expected:
-        summary += f" (expected: {expected})"
-    print(summary)
+    return FixtureResult(
+        name=fixture_dir.name,
+        actual_verdict=verdict,
+        expected_verdict=expected,
+    )
 
 
 def parse_expected_verdict(path: Path) -> str | None:
