@@ -56,8 +56,12 @@ When opening or updating a pull request, fill out the Spool sections in the PR b
 - List important files changed.
 - List exact test commands and results in `## Tests Run`.
 - If no tests were run, write `Not run`.
-- List durable product, architecture, security, privacy, API, or process decisions in `## Candidate Decisions`.
+- Candidate decisions are proposed project memory, not a change summary.
+- List only durable product, architecture, security, API, policy, or process decisions that future PRs should respect.
+- Do not list normal implementation details as candidate decisions.
+- Do not list tests, docs, refactors, bug fixes, or file additions as candidate decisions.
 - If there are no candidate decisions, write `None`.
+- If the PR only implements an already-approved decision, write `None` or explain that no new durable decisions are introduced.
 - Do not claim tests passed unless tests or CI actually passed.
 - Do not claim a file changed unless it appears in the diff.
 - Do not approve candidate decisions yourself.
@@ -86,7 +90,13 @@ Files changed:
 
 ## Candidate Decisions
 
-<!-- List durable product, architecture, security, privacy, API, or process decisions introduced by this PR. If none, write "None." -->
+<!--
+List only durable product, architecture, security, API, policy, or process decisions that future PRs should respect.
+
+Do not list ordinary implementation details, tests, docs, refactors, bug fixes, or file additions.
+
+If this PR introduces no new durable decisions, write "None."
+-->
 """
 
 AGENTS_SPOOL_SECTION = f"""{SPOOL_AGENTS_MARKER}

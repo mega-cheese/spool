@@ -113,6 +113,23 @@ class SpoolCommentPRTest(unittest.TestCase):
         self.assertIn("**Weak/missing evidence:** 1", comment)
         self.assertIn("Spool found 1 weak or missing evidence item.", comment)
 
+    def test_renders_candidate_decision_risk_with_clear_project_level_wording(self) -> None:
+        risk = (
+            "This PR proposes project-level decisions that may affect future Spool behavior. "
+            "A reviewer should approve or reject them before they are added to repo memory."
+        )
+        payload = self._report_payload(
+            overall_verdict="human_review",
+            risks=[risk],
+            reviewer_actions=["approve or reject proposed project-level decisions before adding them to repo memory"],
+        )
+
+        comment = render_pr_comment(payload)
+
+        self.assertIn(risk, comment)
+        self.assertIn("approve or reject proposed project-level decisions", comment)
+        self.assertNotIn("introduced durable decisions", comment)
+
     def test_handles_missing_optional_fields(self) -> None:
         comment = render_pr_comment({"overall_verdict": "continue"})
 

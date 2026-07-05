@@ -477,7 +477,10 @@ def _risks(
     if any(claim.verdict == "missing_evidence" for claim in claims):
         risks.append("Validation claims are missing supporting test output.")
     if buried_decisions:
-        risks.append("The agent introduced durable decisions that need reviewer approval.")
+        risks.append(
+            "This PR proposes project-level decisions that may affect future Spool behavior. "
+            "A reviewer should approve or reject them before they are added to repo memory."
+        )
     if any(item.verdict == "contradicted" for item in repo_memory_check):
         risks.append("The PR appears to conflict with approved repo memory.")
     if any(item.verdict == "needs_review" for item in repo_memory_check):
@@ -497,7 +500,7 @@ def _reviewer_actions(verdict: str, decisions: list[BuriedDecision], repo_memory
     else:
         actions.append("human review required")
     if decisions:
-        actions.append("approve decision into repo memory or reject it")
+        actions.append("approve or reject proposed project-level decisions before adding them to repo memory")
     if any(item.verdict == "contradicted" for item in repo_memory):
         actions.append("resolve repo memory conflict")
     return actions
@@ -510,6 +513,8 @@ def _allowed_scope_status(scope: ScopeReport) -> str:
         return "forbidden_violation"
     if scope.scope_violations:
         return "outside_allowed_scope"
+    if scope.risky_expansions:
+        return "risky_expansion_review"
     if scope.scope_risks:
         return "unbounded_or_ambiguous"
     if scope.allowed_files:

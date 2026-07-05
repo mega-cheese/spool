@@ -140,21 +140,29 @@ An agent must not approve its own future authority by modifying memory in the sa
 
 ## Candidate Decisions
 
-A candidate decision is a durable product, technical, security, privacy, data, architecture, or process decision introduced by the PR or agent summary.
+A candidate durable decision is a product, architecture, security, API, policy, or process choice that future PRs should continue to respect.
+
+A candidate decision is proposed project memory, not a change summary. Do not list ordinary implementation details, tests, documentation updates, refactors, bug fixes, or file additions as candidate decisions.
 
 Examples:
 
 * "Going forward, all unsupported models should hide upload by default."
-* "Candidate memory should automatically become approved after tests pass."
 * "Billing retry policy should now default to three attempts."
 * "Auth config changes should be allowed from UI tasks if tests pass."
+* "Report JSON schema changes must remain backward compatible."
+* "Merge enforcement policy should require explicit approval for dependency changes."
 
 Non-examples:
 
+* "Added tests."
+* "Updated README."
+* "Added a helper function."
+* "Refactored a module."
+* "Fixed a parser bug."
+* "Added a normal implementation file."
 * "Tests should pass."
 * "This function should return null."
 * "Should update README."
-* Ordinary local implementation details.
 
 Candidate decisions should be surfaced as:
 

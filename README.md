@@ -41,6 +41,17 @@ venv/bin/python scripts/spool_init.py
 
 This creates `.spool/config.yml`, `.spool/approved_decisions.yml`, `.spool/agent_instructions.md`, and `.github/pull_request_template.md` when they are absent, and creates or appends a short Spool PR evidence section in `AGENTS.md`. Existing files are not overwritten. Use `--no-agents-md` or `--no-pr-template` to skip those optional files.
 
+Generate compact Codex-ready prompts:
+
+```bash
+venv/bin/python scripts/spool_codex_prompt.py \
+  "Implement a small change" \
+  --allowed src/spool/merge_authorization/ \
+  --copy
+```
+
+This helper does not depend on Codex internals. It simply generates a prompt with a short Spool reminder so users can paste it into Codex. Default mode is compact to reduce token overhead; pass `--full` when detailed Spool PR evidence instructions are useful. Deeper Codex integration can come later if a stable Codex plugin or hook API is available.
+
 Run Spool against a local GitHub PR with the GitHub CLI:
 
 ```bash
@@ -125,9 +136,15 @@ None.
 
 Recognized section headings are deterministic and case-insensitive: `Spool Task`, `Task`, or `Assignment`; `Agent Summary`, `Summary`, or `Implementation Summary`; `Tests Run`, `Test Evidence`, or `Testing`; and `Candidate Decisions` or `Decisions`. An explicit `--task` file still takes priority over any PR body task section.
 
+`Allowed files/areas` can list broad directories, not every exact file an agent might create. Spool classifies changed files deterministically: files under approved paths are `explicitly_allowed`; `README.md`, `docs/`, and `tests/` are reported as low-risk `supporting_change`; scripts, GitHub workflows, and dependency or project config files are `risky_expansion` unless explicitly authorized. New files are acceptable when they fall under approved areas or the supporting categories, but dependency, workflow, script, auth, billing, and migration changes should be explicitly authorized in the task.
+
 Approved repo decisions are the primary merge-time memory primitive for the PR-native path. By default Spool looks for `.spool/approved_decisions.yml`, and `--repo-memory` can point to either that YAML shape or the legacy `approved_repo_memory.json` fixture shape while compatibility remains in place.
 
-Merge authorization reports now include `evidence_coverage` and `candidate_decisions`. Evidence coverage shows which local PR sources were available, such as assignment, agent summary, diff, changed files, test output, and approved decision memory. Candidate decisions surface durable product, security, architecture, process, or implementation rules introduced by a PR so a reviewer can approve or reject them before they become future guardrails.
+Merge authorization reports now include `evidence_coverage` and `candidate_decisions`. Evidence coverage shows which local PR sources were available, such as assignment, agent summary, diff, changed files, test output, and approved decision memory. Candidate durable decisions are long-lived product, architecture, security, API, policy, or process choices that future PRs should respect. They are different from ordinary implementation details.
+
+Good candidate decision examples include changing verdict policy, adding public CLI/API behavior, changing report JSON schema, changing security/privacy assumptions, changing merge enforcement policy, or changing approved-memory behavior.
+
+Bad candidate decision examples include adding tests, updating README, adding a helper function, refactoring a module, fixing a parser bug, or adding a normal implementation file.
 
 Evidence coverage uses a small status vocabulary:
 

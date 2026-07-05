@@ -34,6 +34,30 @@ class SpoolInitTest(unittest.TestCase):
         for heading in ("## Spool Task", "## Agent Summary", "## Tests Run", "## Candidate Decisions"):
             self.assertIn(heading, template)
 
+        self.assertIn(
+            "List only durable product, architecture, security, API, policy, or process decisions "
+            "that future PRs should respect.",
+            template,
+        )
+        self.assertIn(
+            "Do not list ordinary implementation details, tests, docs, refactors, bug fixes, or file additions.",
+            template,
+        )
+        self.assertIn('If this PR introduces no new durable decisions, write "None."', template)
+
+    def test_generated_agent_instructions_define_candidate_decisions_as_project_memory(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            init_repo(root)
+            instructions = (root / ".spool" / "agent_instructions.md").read_text(encoding="utf-8")
+
+        self.assertIn("Candidate decisions are proposed project memory, not a change summary.", instructions)
+        self.assertIn("Do not list normal implementation details as candidate decisions.", instructions)
+        self.assertIn(
+            "If the PR only implements an already-approved decision, write `None` or explain that no new durable decisions are introduced.",
+            instructions,
+        )
+
     def test_init_creates_or_appends_agents_md_section(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)

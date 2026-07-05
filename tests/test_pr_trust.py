@@ -1,11 +1,15 @@
 from __future__ import annotations
 
+import importlib.util
+import io
 import json
 import subprocess
 import sys
 import tempfile
 import unittest
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
+from unittest import mock
 
 from src.spool.merge_authorization.merge_authorization import analyze_pr_trust
 from src.spool.merge_authorization.merge_authorization_report import write_trust_report
@@ -15,6 +19,15 @@ from src.spool.merge_authorization.scope_gate import evaluate_scope, parse_chang
 
 EXAMPLES = Path("examples/pr_trust")
 ADVERSARIAL_EXAMPLES = Path("examples/pr_trust_adversarial")
+
+
+def _classifications_by_path(payload: dict[str, object]) -> dict[str, str]:
+    scope = payload["scope"]
+    assert isinstance(scope, dict)
+    return {
+        str(item["path"]): str(item["classification"])
+        for item in scope.get("scope_classifications", [])
+    }
 
 
 class PRTrustTest(unittest.TestCase):
@@ -209,6 +222,148 @@ Allowed scope:
 
         self.assertEqual(report.to_dict()["summary"]["allowed_scope_status"], "outside_allowed_scope")
 
+    def test_unlisted_test_file_is_supporting_change_not_repair(self) -> None:
+        task = "Allowed files/areas:\n- src/spool/merge_authorization/\n"
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=(
+                    self._simple_diff("src/spool/merge_authorization/pr_comment.py", ["value = 1"])
+                    + self._simple_diff("tests/test_spool_comment_pr.py", ["assert True"])
+                ),
+                task=task,
+                summary="Added PR comment workflow tests.",
+                test_output="OK\n",
+            )
+            report = analyze_pr_trust(evidence)
+            payload = report.to_dict()
+
+        self.assertEqual(report.overall_verdict, "continue")
+        self.assertEqual(payload["scope"]["supporting_changes"], ["tests/test_spool_comment_pr.py"])
+        self.assertEqual(payload["scope"]["scope_violations"], [])
+        self.assertEqual(
+            _classifications_by_path(payload),
+            {
+                "src/spool/merge_authorization/pr_comment.py": "explicitly_allowed",
+                "tests/test_spool_comment_pr.py": "supporting_change",
+            },
+        )
+
+    def test_unlisted_readme_is_supporting_change_not_repair(self) -> None:
+        task = "Allowed files:\n- src/spool/merge_authorization/pr_comment.py\n"
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=(
+                    self._simple_diff("src/spool/merge_authorization/pr_comment.py", ["value = 1"])
+                    + self._simple_diff("README.md", ["Spool comment workflow"])
+                ),
+                task=task,
+                summary="Documented the PR comment workflow.",
+                test_output="OK\n",
+            )
+            report = analyze_pr_trust(evidence)
+            payload = report.to_dict()
+
+        self.assertEqual(report.overall_verdict, "continue")
+        self.assertEqual(payload["scope"]["supporting_changes"], ["README.md"])
+        self.assertEqual(payload["scope"]["scope_violations"], [])
+
+    def test_unlisted_scripts_path_is_risky_expansion_not_scope_violation(self) -> None:
+        task = "Allowed files/areas:\n- src/spool/merge_authorization/\n"
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=(
+                    self._simple_diff("src/spool/merge_authorization/pr_comment.py", ["value = 1"])
+                    + self._simple_diff("scripts/new_tool.py", ["print('comment')"])
+                ),
+                task=task,
+                summary="Added PR comment workflow helper.",
+                test_output="OK\n",
+            )
+            report = analyze_pr_trust(evidence)
+            payload = report.to_dict()
+            paths = write_trust_report(report, temp_dir, pretty=True)
+            markdown = Path(paths["trust_report_md"]).read_text(encoding="utf-8")
+
+        self.assertEqual(report.overall_verdict, "human_review")
+        self.assertEqual(payload["scope"]["risky_expansions"], ["scripts/new_tool.py"])
+        self.assertEqual(payload["scope"]["scope_violations"], [])
+        self.assertEqual(_classifications_by_path(payload)["scripts/new_tool.py"], "risky_expansion")
+        self.assertTrue(any("Risky scope expansions" in risk for risk in payload["risks"]))
+        self.assertIn("Scope classification:", markdown)
+        self.assertIn("- scripts/new_tool.py: risky_expansion", markdown)
+
+    def test_unlisted_workflow_and_requirements_are_risky_expansions(self) -> None:
+        task = "Allowed files/areas:\n- src/spool/merge_authorization/\n"
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=(
+                    self._simple_diff("src/spool/merge_authorization/pr_comment.py", ["value = 1"])
+                    + self._simple_diff(".github/workflows/spool.yml", ["name: spool"])
+                    + self._simple_diff("requirements.txt", ["PyYAML==6.0.2"])
+                ),
+                task=task,
+                summary="Added PR comment workflow support.",
+                test_output="OK\n",
+            )
+            report = analyze_pr_trust(evidence)
+            payload = report.to_dict()
+
+        self.assertEqual(report.overall_verdict, "human_review")
+        self.assertEqual(
+            payload["scope"]["risky_expansions"],
+            [".github/workflows/spool.yml", "requirements.txt"],
+        )
+        self.assertEqual(payload["scope"]["scope_violations"], [])
+
+    def test_unlisted_unrelated_source_path_remains_outside_scope_violation(self) -> None:
+        task = "Allowed files/areas:\n- src/spool/merge_authorization/\n"
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=(
+                    self._simple_diff("src/spool/merge_authorization/pr_comment.py", ["value = 1"])
+                    + self._simple_diff("src/unrelated_area/foo.py", ["value = 1"])
+                ),
+                task=task,
+                summary="Added PR comment workflow support.",
+                test_output="OK\n",
+            )
+            report = analyze_pr_trust(evidence)
+            payload = report.to_dict()
+
+        self.assertEqual(report.overall_verdict, "repair")
+        self.assertEqual(payload["scope"]["scope_violations"], ["src/unrelated_area/foo.py"])
+        self.assertEqual(_classifications_by_path(payload)["src/unrelated_area/foo.py"], "outside_scope")
+
+    def test_explicitly_listed_risky_path_is_not_risky_expansion(self) -> None:
+        task = """
+Allowed files/areas:
+- src/spool/merge_authorization/
+- scripts/new_tool.py
+""".lstrip()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=(
+                    self._simple_diff("src/spool/merge_authorization/pr_comment.py", ["value = 1"])
+                    + self._simple_diff("scripts/new_tool.py", ["print('comment')"])
+                ),
+                task=task,
+                summary="Added PR comment workflow helper.",
+                test_output="OK\n",
+            )
+            report = analyze_pr_trust(evidence)
+            payload = report.to_dict()
+
+        self.assertEqual(report.overall_verdict, "continue")
+        self.assertEqual(payload["scope"]["risky_expansions"], [])
+        self.assertEqual(payload["scope"]["scope_violations"], [])
+        self.assertEqual(_classifications_by_path(payload)["scripts/new_tool.py"], "explicitly_allowed")
+
     def test_dogfood_allowed_areas_report_is_within_allowed_scope(self) -> None:
         task = """
 Make local PR-body/diff-only mode work naturally.
@@ -311,6 +466,34 @@ Do not add GitHub integration, dashboard, Streamlit, Slack/docs ingestion, meeti
             any("qwen/glm/deepseek" in decision.decision for decision in report.buried_decisions)
         )
         self.assertTrue(all("README.md was updated" not in decision.decision for decision in report.buried_decisions))
+
+    def test_candidate_decision_risk_wording_explains_project_level_decisions(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["value = 1"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Going forward, review actions must remain append-only.",
+                test_output="OK\n",
+            )
+            report = analyze_pr_trust(evidence)
+            paths = write_trust_report(report, temp_dir, pretty=True)
+            markdown = Path(paths["trust_report_md"]).read_text(encoding="utf-8")
+
+        self.assertEqual(report.overall_verdict, "human_review")
+        self.assertIn(
+            "This PR proposes project-level decisions that may affect future Spool behavior. "
+            "A reviewer should approve or reject them before they are added to repo memory.",
+            report.risks,
+        )
+        self.assertNotIn(
+            "The agent introduced durable decisions that need reviewer approval.",
+            report.risks,
+        )
+        self.assertIn(
+            "Candidate decisions are proposed project memory, not a change summary.",
+            markdown,
+        )
 
     def test_repo_memory_conflict_stops_report(self) -> None:
         evidence = load_pr_evidence(
@@ -599,6 +782,47 @@ Do not add GitHub integration, dashboard, Streamlit, Slack/docs ingestion, meeti
         payload = json.loads(target_report.read_text(encoding="utf-8"))
         self.assertEqual(payload["overall_verdict"], "stop")
         self.assertEqual(payload["summary"]["repo_memory_status"], "contradicted")
+
+    def test_adversarial_runner_returns_nonzero_after_expected_verdict_mismatch(self) -> None:
+        runner_path = Path(__file__).resolve().parents[1] / "scripts" / "run_pr_trust_adversarial.py"
+        spec = importlib.util.spec_from_file_location("run_pr_trust_adversarial_for_test", runner_path)
+        self.assertIsNotNone(spec)
+        self.assertIsNotNone(spec.loader)
+        runner = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = runner
+        try:
+            spec.loader.exec_module(runner)
+        finally:
+            sys.modules.pop(spec.name, None)
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            fixtures_root = Path(temp_dir) / "fixtures"
+            (fixtures_root / "a_match").mkdir(parents=True)
+            (fixtures_root / "b_mismatch").mkdir()
+            runner.FIXTURES_DIR = fixtures_root
+            runner.OUTPUT_ROOT = Path(temp_dir) / "out"
+            calls: list[str] = []
+
+            def fake_run_fixture(repo_root: Path, output_root: Path, fixture_dir: Path):
+                calls.append(fixture_dir.name)
+                if fixture_dir.name == "b_mismatch":
+                    return runner.FixtureResult(fixture_dir.name, "repair", "continue")
+                return runner.FixtureResult(fixture_dir.name, "continue", "continue")
+
+            stdout = io.StringIO()
+            stderr = io.StringIO()
+            with mock.patch.object(runner, "run_fixture", side_effect=fake_run_fixture):
+                with redirect_stdout(stdout), redirect_stderr(stderr):
+                    exit_code = runner.main()
+            stdout_text = stdout.getvalue()
+            stderr_text = stderr.getvalue()
+
+        self.assertEqual(exit_code, 1)
+        self.assertEqual(calls, ["a_match", "b_mismatch"])
+        self.assertIn("a_match: continue (expected: continue)", stdout_text)
+        self.assertIn("b_mismatch: repair (expected: continue)", stdout_text)
+        self.assertIn("Adversarial PR trust mismatches: 1", stderr_text)
+        self.assertIn("b_mismatch: expected continue, got repair", stderr_text)
 
     def test_approved_decisions_yaml_violation_stops_report(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
