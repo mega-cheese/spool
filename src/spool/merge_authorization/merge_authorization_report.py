@@ -182,7 +182,10 @@ def _scope_classification_lines(classifications: list[dict[str, Any]]) -> list[s
 def _candidate_decision_lines(decisions: list[dict[str, Any]]) -> list[str]:
     if not decisions:
         return ["- None"]
-    lines: list[str] = []
+    lines: list[str] = [
+        "- Candidate decisions are proposed project memory, not a change summary.",
+        "- They should be long-lived product, architecture, security, API, policy, or process choices that future PRs should respect.",
+    ]
     for decision in decisions:
         lines.append(f"- {decision.get('id')}: {decision.get('title')} ({decision.get('decision_type')})")
         lines.append(f"  - Source: {decision.get('source')}")

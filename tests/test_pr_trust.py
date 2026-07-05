@@ -467,6 +467,34 @@ Do not add GitHub integration, dashboard, Streamlit, Slack/docs ingestion, meeti
         )
         self.assertTrue(all("README.md was updated" not in decision.decision for decision in report.buried_decisions))
 
+    def test_candidate_decision_risk_wording_explains_project_level_decisions(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["value = 1"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Going forward, review actions must remain append-only.",
+                test_output="OK\n",
+            )
+            report = analyze_pr_trust(evidence)
+            paths = write_trust_report(report, temp_dir, pretty=True)
+            markdown = Path(paths["trust_report_md"]).read_text(encoding="utf-8")
+
+        self.assertEqual(report.overall_verdict, "human_review")
+        self.assertIn(
+            "This PR proposes project-level decisions that may affect future Spool behavior. "
+            "A reviewer should approve or reject them before they are added to repo memory.",
+            report.risks,
+        )
+        self.assertNotIn(
+            "The agent introduced durable decisions that need reviewer approval.",
+            report.risks,
+        )
+        self.assertIn(
+            "Candidate decisions are proposed project memory, not a change summary.",
+            markdown,
+        )
+
     def test_repo_memory_conflict_stops_report(self) -> None:
         evidence = load_pr_evidence(
             diff_path=EXAMPLES / "memory_conflict" / "diff.patch",

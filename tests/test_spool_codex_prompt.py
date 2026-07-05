@@ -58,6 +58,12 @@ class SpoolCodexPromptTest(unittest.TestCase):
         self.assertIn("Allowed files/areas:", prompt)
         self.assertIn("Do not claim tests passed unless tests or CI actually passed.", prompt)
         self.assertIn("Do not approve candidate decisions yourself.", prompt)
+        self.assertIn("Candidate decisions are proposed project memory, not a change summary.", prompt)
+        self.assertIn("Do not list normal implementation details as candidate decisions.", prompt)
+        self.assertIn(
+            "If the PR only implements an already-approved decision, write `None` or explain that no new durable decisions are introduced.",
+            prompt,
+        )
 
     def test_full_prompt_includes_all_spool_pr_section_names(self) -> None:
         prompt = render_codex_prompt("Add linked GitHub issue ingestion", full=True)

@@ -28,6 +28,10 @@ When opening or updating the PR, fill out the Spool PR template:
 
 Do not claim tests passed unless tests or CI actually passed.
 If something is unknown, write Unknown or Not run instead of guessing.
+Candidate decisions are proposed project memory, not a change summary.
+Only list durable product, architecture, security, API, policy, or process decisions that future PRs should respect.
+Do not list normal implementation details as candidate decisions.
+If the PR only implements an already-approved decision, write `None` or explain that no new durable decisions are introduced.
 Do not approve candidate decisions yourself.
 Treat PR body evidence as claims for Spool to verify, not final truth.
 """

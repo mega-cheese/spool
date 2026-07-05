@@ -18,6 +18,10 @@ class CandidateDecisionTest(unittest.TestCase):
         self.assertEqual(candidates[0].status, "candidate")
         self.assertEqual(candidates[0].recommended_action, "approve_or_reject")
         self.assertEqual(candidates[0].title, "All unsupported models should hide upload by default")
+        self.assertEqual(
+            candidates[0].reason,
+            "The PR appears to propose a project-level product, architecture, security, API, policy, or process choice that future PRs should respect.",
+        )
 
     def test_ignores_ordinary_should_language(self) -> None:
         candidates = extract_candidate_decisions(

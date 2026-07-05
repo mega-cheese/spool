@@ -140,7 +140,11 @@ Recognized section headings are deterministic and case-insensitive: `Spool Task`
 
 Approved repo decisions are the primary merge-time memory primitive for the PR-native path. By default Spool looks for `.spool/approved_decisions.yml`, and `--repo-memory` can point to either that YAML shape or the legacy `approved_repo_memory.json` fixture shape while compatibility remains in place.
 
-Merge authorization reports now include `evidence_coverage` and `candidate_decisions`. Evidence coverage shows which local PR sources were available, such as assignment, agent summary, diff, changed files, test output, and approved decision memory. Candidate decisions surface durable product, security, architecture, process, or implementation rules introduced by a PR so a reviewer can approve or reject them before they become future guardrails.
+Merge authorization reports now include `evidence_coverage` and `candidate_decisions`. Evidence coverage shows which local PR sources were available, such as assignment, agent summary, diff, changed files, test output, and approved decision memory. Candidate durable decisions are long-lived product, architecture, security, API, policy, or process choices that future PRs should respect. They are different from ordinary implementation details.
+
+Good candidate decision examples include changing verdict policy, adding public CLI/API behavior, changing report JSON schema, changing security/privacy assumptions, changing merge enforcement policy, or changing approved-memory behavior.
+
+Bad candidate decision examples include adding tests, updating README, adding a helper function, refactoring a module, fixing a parser bug, or adding a normal implementation file.
 
 Evidence coverage uses a small status vocabulary:
 

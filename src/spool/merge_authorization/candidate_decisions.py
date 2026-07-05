@@ -42,7 +42,10 @@ def extract_candidate_decisions(text: str, *, source: str = "agent_summary") -> 
                 decision_type=_decision_type(line),
                 source=source,
                 quote=line,
-                reason="The PR introduces durable future-facing product, technical, or process behavior.",
+                reason=(
+                    "The PR appears to propose a project-level product, architecture, security, API, "
+                    "policy, or process choice that future PRs should respect."
+                ),
             )
         )
     return _dedupe_candidates(candidates)
