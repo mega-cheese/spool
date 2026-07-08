@@ -57,11 +57,10 @@ Run Spool against a local GitHub PR with the GitHub CLI:
 ```bash
 venv/bin/python scripts/spool_check_pr.py 123 \
   --task path/to/task.md \
-  --repo-memory .spool/approved_decisions.yml \
   --out outputs/spool/pr-123
 ```
 
-This is a read-only local design-partner workflow. It uses `gh pr view` to write `pr_metadata.json` and `pr_body.md`, uses `gh pr diff` to write `diff.patch`, and attempts `gh pr checks` to write `checks.json` with GitHub checks/CI evidence when available. Checks use the stable `gh pr checks --json bucket,completedAt,description,event,link,name,startedAt,state,workflow` shape. It treats the PR body as the agent summary, then writes the normal `trust_report.json` and `trust_report.md`. `--task` and `--repo-memory` are optional; omitting `--task` keeps the existing partial-review behavior. The command does not post PR comments, does not update checks, does not mutate approved decision memory, and does not require manually preparing `agent_summary.md`.
+This is a read-only local design-partner workflow. It uses `gh pr view` to write `pr_metadata.json` and `pr_body.md`, uses `gh pr diff` to write `diff.patch`, and attempts `gh pr checks` to write `checks.json` with GitHub checks/CI evidence when available. Checks use the stable `gh pr checks --json bucket,completedAt,description,event,link,name,startedAt,state,workflow` shape. It treats the PR body as the agent summary, then writes the normal `trust_report.json` and `trust_report.md`. `--task` and `--repo-memory` are optional; omitting `--task` keeps the existing partial-review behavior. `spool_init.py` creates `.spool/approved_decisions.yml`, and `spool_check_pr.py` loads that file by default when it exists. Explicit `--repo-memory` still overrides the default. The command does not post PR comments, does not update checks, does not mutate approved decision memory, does not automatically approve candidate decisions, and does not require manually preparing `agent_summary.md`.
 
 If the PR body includes Spool sections, the same command can extract assignment, agent summary, and test evidence directly:
 
@@ -69,6 +68,22 @@ If the PR body includes Spool sections, the same command can extract assignment,
 venv/bin/python scripts/spool_check_pr.py 123 \
   --out outputs/spool/pr-123
 ```
+
+Approve proposed project-level decisions:
+
+```bash
+venv/bin/python scripts/spool_approve_decisions.py \
+  --report outputs/spool/pr-123/trust_report.json
+```
+
+```bash
+venv/bin/python scripts/spool_approve_decisions.py \
+  --report outputs/spool/pr-123/trust_report.json \
+  --approve all \
+  --write
+```
+
+Spool PR checks are read-only. Candidate decisions are not automatically approved. Reviewers can inspect and approve selected candidate decisions into `.spool/approved_decisions.yml` with `scripts/spool_approve_decisions.py`. Default mode is dry-run, and `--write` is required to mutate repo memory.
 
 Render or explicitly post a concise Spool PR comment from an existing report:
 

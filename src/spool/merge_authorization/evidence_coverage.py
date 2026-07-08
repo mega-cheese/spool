@@ -71,6 +71,8 @@ def build_evidence_coverage(evidence: PREvidence, changed_files: list[object]) -
         coverage.notes.append("Assignment was expected but could not be found, so assignment review is partial.")
     if coverage.approved_decisions == "not_configured":
         coverage.notes.append("No approved decision memory was configured for this run.")
+    if coverage.approved_decisions == "missing":
+        coverage.notes.append("Approved decision memory was requested but could not be found.")
     if coverage.approved_decisions == "malformed":
         coverage.notes.append("Approved decision memory is malformed.")
     return coverage
@@ -103,6 +105,8 @@ def _test_output_status(evidence: PREvidence) -> str:
 def _decision_memory_status(evidence: PREvidence) -> str:
     if evidence.decision_memory.status == "available":
         return "available"
+    if evidence.decision_memory.status == "missing":
+        return "missing"
     if evidence.decision_memory.status == "malformed":
         return "malformed"
     return "not_configured"

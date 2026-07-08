@@ -97,9 +97,9 @@ def load_approved_decisions(path: str | Path) -> DecisionMemory:
     memory_path = Path(path)
     if not memory_path.exists():
         return DecisionMemory(
-            source=None,
+            source=str(memory_path),
             status="missing",
-            notes=["No approved decision memory was provided."],
+            notes=[f"No approved decision memory was found at: {memory_path}."],
         )
 
     try:

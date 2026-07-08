@@ -108,7 +108,7 @@ class PRTrustReport:
                 "unsupported_claims_count": sum(1 for claim in self.claims if claim.verdict == "unsupported"),
                 "test_evidence_status": _test_evidence_status(self.claims),
                 "repo_memory_status": _repo_memory_status(self.repo_memory_check),
-                "decision_memory_status": self.decision_memory.status,
+                "decision_memory_status": _decision_memory_summary_status(self.decision_memory),
             },
             "scope": self.scope_report.to_dict(),
             "evidence_coverage": self.evidence_coverage.to_dict(),
@@ -543,6 +543,14 @@ def _repo_memory_status(items: list[RepoMemoryCheck]) -> str:
     if any(item.verdict == "supported" for item in items):
         return "supported"
     return "no_relevant_memory"
+
+
+def _decision_memory_summary_status(memory: DecisionMemory) -> str:
+    if memory.status == "available":
+        return "configured"
+    if memory.status in {"missing", "malformed"}:
+        return "unavailable"
+    return "not_configured"
 
 
 def _summary_claim_lines(text: str) -> list[str]:

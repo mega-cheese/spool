@@ -211,7 +211,7 @@ def _decision_memory_lines(memory: dict[str, Any]) -> list[str]:
         return ["- None"]
     return [
         f"- Source: {memory.get('source') or 'None'}",
-        f"- Status: {memory.get('status') or 'unknown'}",
+        f"- Status: {_display_decision_memory_status(memory.get('status'))}",
         f"- Approved decisions: {memory.get('approved_decisions_count', 0)}",
         f"- Matched decisions: {_join_or_none(memory.get('matched_decisions') or [])}",
         f"- Conflicts: {_join_or_none(memory.get('conflicts') or [])}",
@@ -223,6 +223,15 @@ def _simple_lines(items: list[Any]) -> list[str]:
     if not items:
         return ["- None"]
     return [f"- {item}" for item in items]
+
+
+def _display_decision_memory_status(status: Any) -> str:
+    text = str(status or "unknown")
+    if text == "available":
+        return "configured"
+    if text in {"missing", "malformed"}:
+        return "unavailable"
+    return text
 
 
 def _join_or_none(items: list[Any]) -> str:
