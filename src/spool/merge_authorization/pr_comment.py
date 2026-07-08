@@ -13,6 +13,9 @@ class PRCommentError(RuntimeError):
     pass
 
 
+MARKER = "<!-- spool:trust-report -->"
+
+
 VERDICT_LABELS = {
     "continue": "Ready to continue",
     "human_review": "Needs human review",
@@ -54,6 +57,8 @@ def render_pr_comment(payload: dict[str, Any]) -> str:
     scope_violations = [str(item) for item in scope.get("scope_violations") or [] if item]
 
     lines = [
+        MARKER,
+        "",
         "## Spool Merge Authorization",
         "",
         f"**Verdict:** {VERDICT_LABELS.get(verdict, 'Unknown')} (`{verdict}`)  ",
@@ -99,14 +104,92 @@ def post_comment(pr_ref: str, body_file: str | Path) -> None:
         raise PRCommentError(f"Could not post PR comment with `gh pr comment`{detail}") from exc
 
 
+def _resolve_pr_number(pr_ref: str) -> str:
+    text = str(pr_ref)
+    if text.lstrip("-").isdigit():
+        return text
+    command = ["gh", "pr", "view", text, "--json", "number", "-q", ".number"]
+    try:
+        result = subprocess.run(command, text=True, capture_output=True, check=True)
+    except FileNotFoundError as exc:
+        raise PRCommentError("GitHub CLI `gh` is not installed or is not on PATH.") from exc
+    except subprocess.CalledProcessError as exc:
+        message = (exc.stderr or exc.stdout or "").strip()
+        detail = f": {message}" if message else ""
+        raise PRCommentError(f"Could not resolve PR number with `gh pr view`{detail}") from exc
+    return result.stdout.strip()
+
+
+def find_marker_comment_id(pr_ref: str, marker: str = MARKER) -> str | None:
+    """Return the id of an existing PR comment whose body starts with `marker`, if any."""
+    pr_number = _resolve_pr_number(pr_ref)
+    command = ["gh", "api", "repos/{owner}/{repo}/issues/comments"]
+    try:
+        result = subprocess.run(command, text=True, capture_output=True, check=True)
+    except FileNotFoundError as exc:
+        raise PRCommentError("GitHub CLI `gh` is not installed or is not on PATH.") from exc
+    except subprocess.CalledProcessError as exc:
+        message = (exc.stderr or exc.stdout or "").strip()
+        detail = f": {message}" if message else ""
+        raise PRCommentError(f"Could not list PR comments with `gh api`{detail}") from exc
+
+    try:
+        comments = json.loads(result.stdout or "[]")
+    except json.JSONDecodeError:
+        comments = []
+
+    issue_suffix = f"/issues/{pr_number}"
+    for item in comments or []:
+        if not isinstance(item, dict):
+            continue
+        issue_url = str(item.get("issue_url") or "")
+        if not issue_url.endswith(issue_suffix):
+            continue
+        body = str(item.get("body") or "")
+        if body.startswith(marker):
+            comment_id = item.get("id")
+            if comment_id is not None:
+                return str(comment_id)
+    return None
+
+
+def update_comment(comment_id: str, body_file: str | Path) -> None:
+    command = [
+        "gh",
+        "api",
+        f"repos/{{owner}}/{{repo}}/issues/comments/{comment_id}",
+        "-X",
+        "PATCH",
+        "-f",
+        f"body=@{body_file}",
+    ]
+    try:
+        subprocess.run(command, text=True, capture_output=True, check=True)
+    except FileNotFoundError as exc:
+        raise PRCommentError("GitHub CLI `gh` is not installed or is not on PATH.") from exc
+    except subprocess.CalledProcessError as exc:
+        message = (exc.stderr or exc.stdout or "").strip()
+        detail = f": {message}" if message else ""
+        raise PRCommentError(f"Could not update PR comment with `gh api`{detail}") from exc
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Render or post a concise Spool PR comment from trust_report.json.")
     parser.add_argument("pr", help="GitHub PR number, URL, or branch understood by `gh pr comment`.")
     parser.add_argument("--report", required=True, help="Path to trust_report.json.")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--dry-run", action="store_true", help="Print the rendered comment and never call GitHub.")
-    mode.add_argument("--post", action="store_true", help="Post the rendered comment with `gh pr comment`.")
+    mode.add_argument(
+        "--post",
+        action="store_true",
+        help="Post the rendered comment with `gh pr comment`, updating an existing Spool comment if one exists.",
+    )
     parser.add_argument("--out", help="Optional file path to write the rendered comment Markdown.")
+    parser.add_argument(
+        "--force-new",
+        action="store_true",
+        help="Skip the existing-comment lookup and always create a new comment instead of updating one.",
+    )
     args = parser.parse_args(argv)
 
     try:
@@ -115,13 +198,35 @@ def main(argv: list[str] | None = None) -> int:
         output_path = Path(args.out) if args.out else None
         if output_path is not None:
             write_comment(output_path, comment)
+
         if args.post:
             body_file = output_path or _write_temp_comment(comment)
-            post_comment(args.pr, body_file)
-            print(f"posted_comment_pr: {args.pr}")
+            existing_comment_id = None if args.force_new else find_marker_comment_id(args.pr)
+            if existing_comment_id:
+                update_comment(existing_comment_id, body_file)
+                print(f"updated_comment_pr: {args.pr}")
+                print(f"comment_id: {existing_comment_id}")
+            else:
+                post_comment(args.pr, body_file)
+                print(f"posted_comment_pr: {args.pr}")
             print(f"comment_path: {Path(body_file).resolve()}")
             return 0
-        if args.dry_run or output_path is None:
+
+        if args.dry_run:
+            if args.force_new:
+                action = "would create a new comment (--force-new; no existing-comment lookup performed)"
+            else:
+                action = (
+                    "would update the existing Spool comment if one exists, otherwise create a new comment "
+                    "(no GitHub calls made in --dry-run)"
+                )
+            print(f"dry_run: {action}")
+            print(comment, end="")
+            if output_path is not None:
+                print(f"comment_path: {output_path.resolve()}")
+            return 0
+
+        if output_path is None:
             print(comment, end="")
         if output_path is not None:
             print(f"comment_path: {output_path.resolve()}")
