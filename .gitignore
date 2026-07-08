@@ -6,3 +6,5 @@ examples/pr_trust_real/
 *.pyc
 __pycache__/
 .spool/local/
+__pycache__/
+*.pyc
