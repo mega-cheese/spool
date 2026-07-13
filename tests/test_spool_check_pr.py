@@ -157,6 +157,86 @@ None.
         self.assertEqual(payload["evidence_coverage"]["assignment"], "not_provided")
         self.assertEqual(payload["evidence_coverage"]["approved_decisions"], "available")
 
+    def test_run_pr_check_loads_default_spool_approved_decisions_when_present(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            out_dir = root / "spool-pr-123"
+            memory = root / ".spool" / "approved_decisions.yml"
+            memory.parent.mkdir(parents=True)
+            memory.write_text("decisions: []\n", encoding="utf-8")
+
+            with mock.patch("subprocess.run", self._mock_gh()):
+                result = run_pr_check("123", out_dir=out_dir)
+
+            payload = json.loads((out_dir / "trust_report.json").read_text(encoding="utf-8"))
+
+        self.assertEqual(payload["summary"]["decision_memory_status"], "configured")
+        self.assertEqual(payload["decision_memory"]["source"], str(memory))
+        self.assertEqual(payload["decision_memory"]["status"], "available")
+        self.assertEqual(payload["evidence_coverage"]["approved_decisions"], "available")
+        self.assertEqual(result.evidence_paths["repo_memory"], str(memory))
+
+    def test_explicit_repo_memory_overrides_default_spool_memory(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            default_memory = root / ".spool" / "approved_decisions.yml"
+            explicit_memory = root / "custom_approved_decisions.yml"
+            out_dir = root / "spool-pr-123"
+            default_memory.parent.mkdir(parents=True)
+            default_memory.write_text("decisions: []\n", encoding="utf-8")
+            explicit_memory.write_text(
+                """
+decisions:
+  - id: DEC-123
+    status: approved
+    title: Explicit memory wins
+""".lstrip(),
+                encoding="utf-8",
+            )
+
+            with mock.patch("subprocess.run", self._mock_gh()):
+                result = run_pr_check("123", out_dir=out_dir, repo_memory_path=explicit_memory)
+
+            payload = json.loads((out_dir / "trust_report.json").read_text(encoding="utf-8"))
+
+        self.assertEqual(payload["summary"]["decision_memory_status"], "configured")
+        self.assertEqual(payload["decision_memory"]["source"], str(explicit_memory))
+        self.assertEqual(payload["decision_memory"]["approved_decisions_count"], 1)
+        self.assertEqual(result.evidence_paths["repo_memory"], str(explicit_memory))
+
+    def test_missing_default_memory_preserves_not_configured_behavior(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            out_dir = Path(temp_dir) / "spool-pr-123"
+
+            with mock.patch("subprocess.run", self._mock_gh()):
+                result = run_pr_check("123", out_dir=out_dir)
+
+            payload = json.loads((out_dir / "trust_report.json").read_text(encoding="utf-8"))
+
+        self.assertEqual(payload["summary"]["decision_memory_status"], "not_configured")
+        self.assertEqual(payload["decision_memory"]["status"], "not_configured")
+        self.assertEqual(payload["evidence_coverage"]["approved_decisions"], "not_configured")
+        self.assertIsNone(result.evidence_paths["repo_memory"])
+
+    def test_explicit_missing_memory_path_is_reported_as_unavailable(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            out_dir = root / "spool-pr-123"
+            missing_memory = root / "missing-approved-decisions.yml"
+
+            with mock.patch("subprocess.run", self._mock_gh()):
+                result = run_pr_check("123", out_dir=out_dir, repo_memory_path=missing_memory)
+
+            payload = json.loads((out_dir / "trust_report.json").read_text(encoding="utf-8"))
+            markdown = (out_dir / "trust_report.md").read_text(encoding="utf-8")
+
+        self.assertEqual(payload["summary"]["decision_memory_status"], "unavailable")
+        self.assertEqual(payload["decision_memory"]["status"], "missing")
+        self.assertEqual(payload["decision_memory"]["source"], str(missing_memory))
+        self.assertEqual(payload["evidence_coverage"]["approved_decisions"], "missing")
+        self.assertIn("Decision memory: unavailable", markdown)
+        self.assertEqual(result.evidence_paths["repo_memory"], str(missing_memory))
+
     def test_pr_body_task_section_is_used_when_task_is_absent(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)

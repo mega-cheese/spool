@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-from .decision_memory import DecisionMemory, load_approved_decisions, resolve_decision_memory_path
+from .decision_memory import DecisionMemory, load_approved_decisions
 
 
 DEFAULT_REPO_MEMORY_PATH = Path(".spool/approved_repo_memory.json")
@@ -166,7 +166,7 @@ def load_pr_evidence(
     test_output = Path(test_output_path) if test_output_path else None
     metadata = Path(pr_metadata_path) if pr_metadata_path else None
     ci_checks_file = Path(ci_checks_path) if ci_checks_path else None
-    memory_path = resolve_decision_memory_path(repo_memory_path)
+    memory_path = Path(repo_memory_path) if repo_memory_path is not None else None
 
     task_text = ""
     if task is not None and task.exists():
@@ -176,7 +176,7 @@ def load_pr_evidence(
         test_text = test_output.read_text(encoding="utf-8")
     ci_checks = _load_ci_checks(ci_checks_file)
 
-    if repo_memory_path is None and not memory_path.exists():
+    if memory_path is None:
         decision_memory = DecisionMemory(
             source=None,
             status="not_configured",

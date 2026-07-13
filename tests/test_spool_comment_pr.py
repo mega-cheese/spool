@@ -237,8 +237,24 @@ class SpoolCommentPRTest(unittest.TestCase):
         comment = render_pr_comment(payload)
 
         self.assertIn("**Test evidence:** GitHub checks failing", comment)
-        self.assertIn("**Decision memory:** available", comment)
+        self.assertIn("**Decision memory:** configured", comment)
         self.assertIn("GitHub checks include failures: `unit`.", comment)
+
+    def test_generated_comment_surfaces_unavailable_decision_memory(self) -> None:
+        payload = self._report_payload(
+            summary={
+                "allowed_scope_status": "within_allowed_scope",
+                "supported_claims_count": 8,
+                "unsupported_claims_count": 0,
+                "test_evidence_status": "supported",
+                "decision_memory_status": "unavailable",
+            },
+            decision_memory={"status": "missing"},
+        )
+
+        comment = render_pr_comment(payload)
+
+        self.assertIn("**Decision memory:** unavailable", comment)
 
     def test_load_report_raises_clear_error_for_missing_file(self) -> None:
         with self.assertRaisesRegex(PRCommentError, "Could not read trust report"):

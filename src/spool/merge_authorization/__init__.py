@@ -3,6 +3,7 @@
 from .candidate_decisions import CandidateDecision, extract_candidate_decisions
 from .check_pr import PRCheckResult, PRIngestionError, run_pr_check
 from .codex_prompt import render_codex_prompt
+from .decision_approval import DecisionApprovalError, write_approved_decisions
 from .merge_authorization import PRTrustReport, analyze_pr_trust
 from .merge_authorization_report import write_trust_report
 from .pr_body_sections import PRBodySections, parse_pr_body_sections
@@ -21,6 +22,7 @@ from .reviewer_actions import ReviewerAction
 __all__ = [
     "ApprovedDecision",
     "CandidateDecision",
+    "DecisionApprovalError",
     "DecisionMemory",
     "DecisionMemoryUpdatePlan",
     "EvidenceCoverage",
@@ -48,6 +50,7 @@ __all__ = [
     "render_codex_prompt",
     "render_pr_comment",
     "run_pr_check",
+    "write_approved_decisions",
     "write_trust_report",
     "write_memory_update_plan",
 ]

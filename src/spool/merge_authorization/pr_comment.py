@@ -49,7 +49,7 @@ def render_pr_comment(payload: dict[str, Any]) -> str:
     unsupported_claims = _int_value(summary.get("unsupported_claims_count"))
     weak_count = len(weak_or_missing)
     allowed_scope_status = str(summary.get("allowed_scope_status") or "unknown")
-    decision_memory_status = str(
+    decision_memory_status = _display_decision_memory_status(
         summary.get("decision_memory_status")
         or decision_memory.get("status")
         or "unknown"
@@ -334,6 +334,15 @@ def _why_bullets(payload: dict[str, Any]) -> list[str]:
     if not bullets:
         bullets.append("Spool rendered this summary from the available merge authorization report fields.")
     return bullets[:5]
+
+
+def _display_decision_memory_status(status: Any) -> str:
+    text = str(status or "unknown")
+    if text == "available":
+        return "configured"
+    if text in {"missing", "malformed"}:
+        return "unavailable"
+    return text
 
 
 if __name__ == "__main__":

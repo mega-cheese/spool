@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from .decision_memory import DEFAULT_DECISION_MEMORY_PATH
 from .merge_authorization import PRTrustReport, analyze_pr_trust
 from .merge_authorization_report import write_trust_report
 from .pr_body_sections import parse_pr_body_sections
@@ -48,6 +49,11 @@ def run_pr_check(
     assignment_path = str(task_path) if task_path else evidence_paths.get("assignment")
     agent_summary_path = evidence_paths.get("agent_summary") or evidence_paths["pr_body"]
     test_output_path = evidence_paths.get("test_output")
+    resolved_repo_memory_path = _resolve_repo_memory_path(
+        explicit_path=repo_memory_path,
+        out_dir=output_dir,
+        task_path=task_path,
+    )
 
     evidence = load_pr_evidence(
         diff_path=evidence_paths["diff"],
@@ -57,7 +63,7 @@ def run_pr_check(
         pr_metadata_path=evidence_paths.get("pr_metadata"),
         pr_title_text=str(metadata.get("title") or ""),
         ci_checks_path=evidence_paths.get("ci_checks"),
-        repo_memory_path=repo_memory_path,
+        repo_memory_path=resolved_repo_memory_path,
     )
     report = analyze_pr_trust(evidence)
     report_paths = write_trust_report(report, output_dir, pretty=pretty)
@@ -67,7 +73,7 @@ def run_pr_check(
         evidence_paths={
             **evidence_paths,
             "task": assignment_path,
-            "repo_memory": str(repo_memory_path) if repo_memory_path else None,
+            "repo_memory": str(resolved_repo_memory_path) if resolved_repo_memory_path else None,
         },
         pr_metadata=metadata,
     )
@@ -228,6 +234,32 @@ def _write_optional_section(path: Path, text: str) -> Path | None:
         return None
     path.write_text(text.strip() + "\n", encoding="utf-8")
     return path
+
+
+def _resolve_repo_memory_path(
+    *,
+    explicit_path: str | Path | None,
+    out_dir: Path,
+    task_path: str | Path | None,
+) -> Path | None:
+    if explicit_path is not None:
+        return Path(explicit_path)
+
+    search_roots: list[Path] = [out_dir]
+    if task_path is not None:
+        search_roots.append(Path(task_path))
+
+    seen: set[Path] = set()
+    for root in search_roots:
+        base = root if root.is_dir() else root.parent
+        for candidate_root in [base, *base.parents]:
+            if candidate_root in seen:
+                continue
+            seen.add(candidate_root)
+            preferred = candidate_root / DEFAULT_DECISION_MEMORY_PATH
+            if preferred.exists():
+                return preferred
+    return None
 
 
 if __name__ == "__main__":
