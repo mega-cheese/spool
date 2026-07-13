@@ -46,6 +46,28 @@ class TrustClaim:
 
 
 @dataclass
+class ClaimDiagnostic:
+    claim: str
+    source: str
+    status: str
+    claim_type: str
+    why: str
+    evidence_checked: list[str] = field(default_factory=list)
+    reviewer_action: str = ""
+
+    def to_dict(self) -> dict[str, object]:
+        return {
+            "claim": self.claim,
+            "source": self.source,
+            "status": self.status,
+            "claim_type": self.claim_type,
+            "why": self.why,
+            "evidence_checked": list(self.evidence_checked),
+            "reviewer_action": self.reviewer_action,
+        }
+
+
+@dataclass
 class BuriedDecision:
     decision_id: str
     decision: str
@@ -114,6 +136,7 @@ class PRTrustReport:
             "evidence_coverage": self.evidence_coverage.to_dict(),
             "ci_checks": self.ci_checks.to_dict(),
             "agent_claims": [claim.to_dict() for claim in self.claims],
+            "claim_diagnostics": [diagnostic.to_dict() for diagnostic in _claim_diagnostics(self.claims)],
             "weak_or_missing_evidence": list(self.weak_or_missing_evidence),
             "candidate_decisions": [decision.to_dict() for decision in self.candidate_decisions],
             "buried_decisions": [decision.to_dict() for decision in self.buried_decisions],
@@ -460,6 +483,58 @@ def _weak_or_missing_evidence(claims: list[TrustClaim]) -> list[str]:
         if claim.verdict in {"missing_evidence", "weakly_supported", "needs_review"}:
             result.append(claim.reason or claim.claim)
     return result
+
+
+def _claim_diagnostics(claims: list[TrustClaim]) -> list[ClaimDiagnostic]:
+    diagnostic_statuses = {"unsupported", "missing_evidence", "weakly_supported", "needs_review"}
+    return [
+        ClaimDiagnostic(
+            claim=claim.claim,
+            source="agent_summary",
+            status=claim.verdict,
+            claim_type=claim.claim_type,
+            why=claim.reason or _default_claim_diagnostic_reason(claim),
+            evidence_checked=_claim_evidence_checked(claim),
+            reviewer_action=_claim_reviewer_action(claim),
+        )
+        for claim in claims
+        if claim.verdict in diagnostic_statuses
+    ]
+
+
+def _claim_evidence_checked(claim: TrustClaim) -> list[str]:
+    checked: list[str] = ["agent_summary.md"]
+    if claim.claim_type == "test_result_claim":
+        checked.extend(["checks.json", "test_output.txt"])
+    elif claim.claim_type in {"file_added", "file_modified", "capability_claim"}:
+        checked.append("diff.patch")
+    if claim.evidence_target:
+        checked.append(claim.evidence_target)
+    return _dedupe(checked)
+
+
+def _claim_reviewer_action(claim: TrustClaim) -> str:
+    if claim.verdict == "unsupported":
+        return "Ask the agent to point to the supporting diff or revise/remove this claim."
+    if claim.verdict == "missing_evidence":
+        return "Ask the agent to provide the missing evidence or revise this claim."
+    if claim.verdict == "weakly_supported":
+        return "Inspect the referenced evidence and ask the agent to strengthen this claim if needed."
+    if claim.verdict == "needs_review":
+        return "Review this claim against the PR evidence before merging."
+    return "Review this claim against the PR evidence."
+
+
+def _default_claim_diagnostic_reason(claim: TrustClaim) -> str:
+    if claim.verdict == "unsupported":
+        return "No deterministic PR evidence supported this agent claim."
+    if claim.verdict == "missing_evidence":
+        return "Required evidence for this claim was not provided."
+    if claim.verdict == "weakly_supported":
+        return "Only weak deterministic evidence supported this claim."
+    if claim.verdict == "needs_review":
+        return "Spool could not deterministically verify this claim."
+    return claim.claim
 
 
 def _risks(

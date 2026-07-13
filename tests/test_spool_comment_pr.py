@@ -99,6 +99,16 @@ class SpoolCommentPRTest(unittest.TestCase):
         payload = self._report_payload(
             overall_verdict="human_review",
             weak_or_missing_evidence=["The agent says tests passed, but no test output was provided."],
+            claim_diagnostics=[
+                {
+                    "claim": "Tests passed.",
+                    "source": "agent_summary",
+                    "status": "missing_evidence",
+                    "why": "The agent says tests passed, but no test output was provided.",
+                    "evidence_checked": ["agent_summary.md", "checks.json", "test_output.txt"],
+                    "reviewer_action": "Ask the agent to provide the missing evidence or revise this claim.",
+                }
+            ],
             reviewer_actions=["human review required"],
             evidence_coverage={
                 "assignment": "available",
@@ -112,6 +122,80 @@ class SpoolCommentPRTest(unittest.TestCase):
         self.assertIn("**Verdict:** Needs human review (`human_review`)", comment)
         self.assertIn("**Weak/missing evidence:** 1", comment)
         self.assertIn("Spool found 1 weak or missing evidence item.", comment)
+        self.assertIn("### Weak or missing evidence", comment)
+        self.assertIn("- Tests passed. (`missing_evidence`) - The agent says tests passed, but no test output was provided.", comment)
+        self.assertIn("Action: Ask the agent to provide the missing evidence or revise this claim.", comment)
+
+    def test_renders_unsupported_claim_details_in_comment(self) -> None:
+        payload = self._report_payload(
+            overall_verdict="repair",
+            summary={
+                "allowed_scope_status": "within_allowed_scope",
+                "supported_claims_count": 1,
+                "unsupported_claims_count": 2,
+                "test_evidence_status": "supported",
+                "decision_memory_status": "not_configured",
+            },
+            claim_diagnostics=[
+                {
+                    "claim": "Added `src/missing_a.py`.",
+                    "source": "agent_summary",
+                    "status": "unsupported",
+                    "why": "src/missing_a.py does not appear in the PR diff.",
+                    "evidence_checked": ["agent_summary.md", "diff.patch"],
+                    "reviewer_action": "Ask the agent to point to the supporting diff or revise/remove this claim.",
+                },
+                {
+                    "claim": "Added `src/missing_b.py`.",
+                    "source": "agent_summary",
+                    "status": "unsupported",
+                    "why": "src/missing_b.py does not appear in the PR diff.",
+                    "evidence_checked": ["agent_summary.md", "diff.patch"],
+                    "reviewer_action": "Ask the agent to point to the supporting diff or revise/remove this claim.",
+                },
+            ],
+            reviewer_actions=["request repair"],
+        )
+
+        comment = render_pr_comment(payload)
+
+        self.assertIn("**Agent claims:** 1 supported, 2 unsupported", comment)
+        self.assertIn("### Unsupported claims", comment)
+        self.assertIn("- Added `src/missing_a.py`. - src/missing_a.py does not appear in the PR diff.", comment)
+        self.assertIn("Action: Ask the agent to point to the supporting diff or revise/remove this claim.", comment)
+        self.assertIn("- Added `src/missing_b.py`. - src/missing_b.py does not appear in the PR diff.", comment)
+
+    def test_renders_unsupported_claim_details_with_cap(self) -> None:
+        diagnostics = [
+            {
+                "claim": f"Added `src/missing_{index}.py`.",
+                "source": "agent_summary",
+                "status": "unsupported",
+                "why": f"src/missing_{index}.py does not appear in the PR diff.",
+                "evidence_checked": ["agent_summary.md", "diff.patch"],
+                "reviewer_action": "Ask the agent to point to the supporting diff or revise/remove this claim.",
+            }
+            for index in range(6)
+        ]
+        payload = self._report_payload(
+            overall_verdict="repair",
+            summary={
+                "allowed_scope_status": "within_allowed_scope",
+                "supported_claims_count": 0,
+                "unsupported_claims_count": 6,
+                "test_evidence_status": "supported",
+                "decision_memory_status": "not_configured",
+            },
+            claim_diagnostics=diagnostics,
+            reviewer_actions=["request repair"],
+        )
+
+        comment = render_pr_comment(payload)
+
+        self.assertIn("Added `src/missing_0.py`.", comment)
+        self.assertIn("Added `src/missing_4.py`.", comment)
+        self.assertNotIn("Added `src/missing_5.py`.", comment)
+        self.assertIn("1 more unsupported claim in `trust_report.md` / `trust_report.json`.", comment)
 
     def test_renders_candidate_decision_risk_with_clear_project_level_wording(self) -> None:
         risk = (

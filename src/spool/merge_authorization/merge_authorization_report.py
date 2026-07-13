@@ -51,8 +51,15 @@ def trust_report_to_markdown(report: PRTrustReport) -> str:
         "",
     ])
     lines.extend(_claim_lines(payload.get("agent_claims") or []))
+    lines.extend(["", "## Unsupported claims", ""])
+    lines.extend(_unsupported_claim_lines(payload.get("claim_diagnostics") or []))
     lines.extend(["", "## Weak or Missing Evidence", ""])
-    lines.extend(_simple_lines(payload.get("weak_or_missing_evidence") or []))
+    lines.extend(
+        _weak_or_missing_lines(
+            payload.get("claim_diagnostics") or [],
+            payload.get("weak_or_missing_evidence") or [],
+        )
+    )
     lines.extend(["", "## Candidate Decisions Requiring Approval", ""])
     lines.extend(_candidate_decision_lines(payload.get("candidate_decisions") or []))
     lines.extend(["", "## Decision Memory", ""])
@@ -79,6 +86,36 @@ def _claim_lines(claims: list[dict[str, Any]]) -> list[str]:
             lines.append(f"  - Evidence: {claim.get('evidence_quote')}")
         if claim.get("reason"):
             lines.append(f"  - Reason: {claim.get('reason')}")
+    return lines
+
+
+def _unsupported_claim_lines(diagnostics: list[dict[str, Any]]) -> list[str]:
+    unsupported = [item for item in diagnostics if item.get("status") == "unsupported"]
+    if not unsupported:
+        return ["Unsupported claims: None"]
+    lines: list[str] = []
+    for index, item in enumerate(unsupported, start=1):
+        lines.append(f"{index}. Claim: {item.get('claim')}")
+        lines.append(f"   Source: {_display_source(item.get('source'))}")
+        lines.append(f"   Reason: {item.get('why') or 'No deterministic PR evidence supported this claim.'}")
+        lines.append(f"   Evidence checked: {_join_or_none(item.get('evidence_checked') or [])}")
+        lines.append(f"   Reviewer action: {item.get('reviewer_action') or 'Review this claim against the PR evidence.'}")
+    return lines
+
+
+def _weak_or_missing_lines(diagnostics: list[dict[str, Any]], fallback_items: list[Any]) -> list[str]:
+    statuses = {"missing_evidence", "weakly_supported", "needs_review"}
+    weak_items = [item for item in diagnostics if item.get("status") in statuses]
+    if not weak_items:
+        return _simple_lines(fallback_items)
+    lines: list[str] = []
+    for item in weak_items:
+        lines.append(f"- Claim: {item.get('claim')}")
+        lines.append(f"  - Status: {item.get('status')}")
+        lines.append(f"  - Source: {_display_source(item.get('source'))}")
+        lines.append(f"  - Reason: {item.get('why') or 'Spool could not deterministically verify this claim.'}")
+        lines.append(f"  - Evidence checked: {_join_or_none(item.get('evidence_checked') or [])}")
+        lines.append(f"  - Reviewer action: {item.get('reviewer_action') or 'Review this claim against the PR evidence.'}")
     return lines
 
 
@@ -231,6 +268,13 @@ def _display_decision_memory_status(status: Any) -> str:
         return "configured"
     if text in {"missing", "malformed"}:
         return "unavailable"
+    return text
+
+
+def _display_source(source: Any) -> str:
+    text = str(source or "unknown")
+    if text == "agent_summary":
+        return "Agent Summary"
     return text
 
 

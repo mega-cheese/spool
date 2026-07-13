@@ -43,6 +43,7 @@ def render_pr_comment(payload: dict[str, Any]) -> str:
     decision_memory = dict(payload.get("decision_memory") or {})
     reviewer_actions = list(payload.get("reviewer_actions") or [])
     weak_or_missing = list(payload.get("weak_or_missing_evidence") or [])
+    claim_diagnostics = list(payload.get("claim_diagnostics") or [])
     risks = list(payload.get("risks") or [])
 
     supported_claims = _int_value(summary.get("supported_claims_count"))
@@ -73,6 +74,8 @@ def render_pr_comment(payload: dict[str, Any]) -> str:
     lines.append(f"**Decision memory:** {decision_memory_status}  ")
     lines.extend(["", "### Why this verdict?", ""])
     lines.extend([f"- {bullet}" for bullet in _why_bullets(payload)])
+    lines.extend(_unsupported_claim_section(claim_diagnostics))
+    lines.extend(_weak_or_missing_claim_section(claim_diagnostics, weak_or_missing))
     if risks:
         lines.extend(["", "### Risks", ""])
         lines.extend([f"- {risk}" for risk in risks[:3]])
@@ -278,6 +281,55 @@ def _test_evidence_line(evidence: dict[str, Any], checks: dict[str, Any]) -> str
     if test_output_status in {"not_provided", "empty"} and checks_status == "unavailable":
         return "No PR body tests available; GitHub checks unavailable"
     return "unknown"
+
+
+def _unsupported_claim_section(diagnostics: list[Any]) -> list[str]:
+    unsupported = [
+        item for item in diagnostics
+        if isinstance(item, dict) and item.get("status") == "unsupported"
+    ]
+    if not unsupported:
+        return []
+    lines = ["", "### Unsupported claims", ""]
+    for item in unsupported[:5]:
+        lines.append(
+            f"- {item.get('claim')} - {item.get('why') or 'No deterministic PR evidence supported this claim.'} "
+            f"Action: {item.get('reviewer_action') or 'Review this claim against the PR evidence.'}"
+        )
+    if len(unsupported) > 5:
+        remaining = len(unsupported) - 5
+        lines.append(f"- {remaining} more unsupported claim{'s' if remaining != 1 else ''} in `trust_report.md` / `trust_report.json`.")
+    return lines
+
+
+def _weak_or_missing_claim_section(diagnostics: list[Any], fallback_items: list[Any]) -> list[str]:
+    statuses = {"missing_evidence", "weakly_supported", "needs_review"}
+    weak_items = [
+        item for item in diagnostics
+        if isinstance(item, dict) and item.get("status") in statuses
+    ]
+    if not weak_items:
+        if not fallback_items:
+            return []
+        lines = ["", "### Weak or missing evidence", ""]
+        for item in fallback_items[:5]:
+            lines.append(f"- {item}")
+        if len(fallback_items) > 5:
+            remaining = len(fallback_items) - 5
+            lines.append(f"- {remaining} more weak/missing evidence item{'s' if remaining != 1 else ''} in `trust_report.md` / `trust_report.json`.")
+        return lines
+
+    lines = ["", "### Weak or missing evidence", ""]
+    for item in weak_items[:5]:
+        lines.append(
+            f"- {item.get('claim')} (`{item.get('status')}`) - "
+            f"{item.get('why') or 'Spool could not deterministically verify this claim.'} "
+            f"Action: {item.get('reviewer_action') or 'Review this claim against the PR evidence.'}"
+        )
+    if len(weak_items) > 5:
+        remaining = len(weak_items) - 5
+        lines.append(f"- {remaining} more weak/missing evidence item{'s' if remaining != 1 else ''} in `trust_report.md` / `trust_report.json`.")
+    return lines
 
 
 def _why_bullets(payload: dict[str, Any]) -> list[str]:
