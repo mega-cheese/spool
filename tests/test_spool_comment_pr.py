@@ -284,6 +284,32 @@ class SpoolCommentPRTest(unittest.TestCase):
         self.assertIn("repos/{owner}/{repo}/issues/comments/555", patch_commands[0])
         self.assertEqual(create_commands, [])
 
+    def test_post_update_uses_field_form_for_body_file_contents(self) -> None:
+        existing_comments = json.dumps(
+            [
+                {
+                    "id": 555,
+                    "issue_url": "https://api.github.com/repos/acme/widgets/issues/1",
+                    "body": f"{MARKER}\nstale report",
+                }
+            ]
+        )
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            report_path = self._write_report(root, self._report_payload())
+            out_path = root / "spool_comment.md"
+
+            mocked_run = mock.Mock(side_effect=self._gh_side_effect(existing_comments))
+            with mock.patch("subprocess.run", mocked_run):
+                exit_code = main(["1", "--report", str(report_path), "--out", str(out_path), "--post"])
+
+        self.assertEqual(exit_code, 0)
+        commands = [call.args[0] for call in mocked_run.call_args_list]
+        patch_command = next(cmd for cmd in commands if "-X" in cmd and "PATCH" in cmd)
+        self.assertIn("-F", patch_command)
+        self.assertIn(f"body=@{out_path}", patch_command)
+        self.assertNotIn("-f", patch_command)
+
     def test_post_falls_back_to_create_when_no_marker_comment_found(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)

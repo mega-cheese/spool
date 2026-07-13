@@ -160,7 +160,7 @@ def update_comment(comment_id: str, body_file: str | Path) -> None:
         f"repos/{{owner}}/{{repo}}/issues/comments/{comment_id}",
         "-X",
         "PATCH",
-        "-f",
+        "-F",
         f"body=@{body_file}",
     ]
     try:
