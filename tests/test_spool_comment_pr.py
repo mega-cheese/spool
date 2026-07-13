@@ -9,7 +9,7 @@ from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 from unittest import mock
 
-from src.spool.merge_authorization.pr_comment import PRCommentError, load_report, main, render_pr_comment
+from src.spool.merge_authorization.pr_comment import MARKER, PRCommentError, load_report, main, render_pr_comment
 
 
 class SpoolCommentPRTest(unittest.TestCase):
@@ -183,6 +183,23 @@ class SpoolCommentPRTest(unittest.TestCase):
 
     def test_post_surfaces_gh_failure_clearly(self) -> None:
         error = subprocess.CalledProcessError(returncode=1, cmd=["gh", "pr", "comment"], stderr="not authenticated")
+
+        def _run(command, **kwargs):
+            if command[:2] == ["gh", "api"] and "-X" not in command:
+                return subprocess.CompletedProcess(args=command, returncode=0, stdout="[]", stderr="")
+            raise error
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            report_path = self._write_report(Path(temp_dir), self._report_payload())
+            stderr = io.StringIO()
+            with mock.patch("subprocess.run", side_effect=_run), redirect_stderr(stderr):
+                exit_code = main(["1", "--report", str(report_path), "--post"])
+
+        self.assertEqual(exit_code, 1)
+        self.assertIn("Could not post PR comment", stderr.getvalue())
+
+    def test_post_surfaces_lookup_failure_clearly(self) -> None:
+        error = subprocess.CalledProcessError(returncode=1, cmd=["gh", "api"], stderr="not authenticated")
         with tempfile.TemporaryDirectory() as temp_dir:
             report_path = self._write_report(Path(temp_dir), self._report_payload())
             stderr = io.StringIO()
@@ -190,7 +207,7 @@ class SpoolCommentPRTest(unittest.TestCase):
                 exit_code = main(["1", "--report", str(report_path), "--post"])
 
         self.assertEqual(exit_code, 1)
-        self.assertIn("Could not post PR comment", stderr.getvalue())
+        self.assertIn("Could not list PR comments", stderr.getvalue())
 
     def test_generated_comment_includes_checks_and_decision_memory_details(self) -> None:
         payload = self._report_payload(
@@ -226,6 +243,142 @@ class SpoolCommentPRTest(unittest.TestCase):
     def test_load_report_raises_clear_error_for_missing_file(self) -> None:
         with self.assertRaisesRegex(PRCommentError, "Could not read trust report"):
             load_report(Path("/tmp/definitely-missing-trust-report.json"))
+
+    def test_rendered_comment_starts_with_hidden_marker(self) -> None:
+        comment = render_pr_comment(self._report_payload())
+
+        self.assertTrue(comment.startswith(MARKER))
+
+    def _gh_side_effect(self, list_stdout: str):
+        def _run(command, **kwargs):
+            if command[:2] == ["gh", "api"] and "-X" not in command:
+                return subprocess.CompletedProcess(args=command, returncode=0, stdout=list_stdout, stderr="")
+            return subprocess.CompletedProcess(args=command, returncode=0, stdout="", stderr="")
+
+        return _run
+
+    def test_post_updates_existing_marker_comment_instead_of_creating(self) -> None:
+        existing_comments = json.dumps(
+            [
+                {
+                    "id": 555,
+                    "issue_url": "https://api.github.com/repos/acme/widgets/issues/1",
+                    "body": f"{MARKER}\nstale report",
+                }
+            ]
+        )
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            report_path = self._write_report(root, self._report_payload())
+            out_path = root / "spool_comment.md"
+
+            mocked_run = mock.Mock(side_effect=self._gh_side_effect(existing_comments))
+            with mock.patch("subprocess.run", mocked_run):
+                exit_code = main(["1", "--report", str(report_path), "--out", str(out_path), "--post"])
+
+        self.assertEqual(exit_code, 0)
+        commands = [call.args[0] for call in mocked_run.call_args_list]
+        patch_commands = [cmd for cmd in commands if "-X" in cmd and "PATCH" in cmd]
+        create_commands = [cmd for cmd in commands if cmd[:3] == ["gh", "pr", "comment"]]
+        self.assertEqual(len(patch_commands), 1)
+        self.assertIn("repos/{owner}/{repo}/issues/comments/555", patch_commands[0])
+        self.assertEqual(create_commands, [])
+
+    def test_post_update_uses_field_form_for_body_file_contents(self) -> None:
+        existing_comments = json.dumps(
+            [
+                {
+                    "id": 555,
+                    "issue_url": "https://api.github.com/repos/acme/widgets/issues/1",
+                    "body": f"{MARKER}\nstale report",
+                }
+            ]
+        )
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            report_path = self._write_report(root, self._report_payload())
+            out_path = root / "spool_comment.md"
+
+            mocked_run = mock.Mock(side_effect=self._gh_side_effect(existing_comments))
+            with mock.patch("subprocess.run", mocked_run):
+                exit_code = main(["1", "--report", str(report_path), "--out", str(out_path), "--post"])
+
+        self.assertEqual(exit_code, 0)
+        commands = [call.args[0] for call in mocked_run.call_args_list]
+        patch_command = next(cmd for cmd in commands if "-X" in cmd and "PATCH" in cmd)
+        self.assertIn("-F", patch_command)
+        self.assertIn(f"body=@{out_path}", patch_command)
+        self.assertNotIn("-f", patch_command)
+
+    def test_post_falls_back_to_create_when_no_marker_comment_found(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            report_path = self._write_report(root, self._report_payload())
+            out_path = root / "spool_comment.md"
+
+            mocked_run = mock.Mock(side_effect=self._gh_side_effect(json.dumps([])))
+            with mock.patch("subprocess.run", mocked_run):
+                exit_code = main(["1", "--report", str(report_path), "--out", str(out_path), "--post"])
+
+        self.assertEqual(exit_code, 0)
+        commands = [call.args[0] for call in mocked_run.call_args_list]
+        patch_commands = [cmd for cmd in commands if "-X" in cmd and "PATCH" in cmd]
+        create_commands = [cmd for cmd in commands if cmd[:3] == ["gh", "pr", "comment"]]
+        self.assertEqual(patch_commands, [])
+        self.assertEqual(len(create_commands), 1)
+
+    def test_force_new_always_creates_even_when_marker_comment_exists(self) -> None:
+        existing_comments = json.dumps(
+            [
+                {
+                    "id": 555,
+                    "issue_url": "https://api.github.com/repos/acme/widgets/issues/1",
+                    "body": f"{MARKER}\nstale report",
+                }
+            ]
+        )
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            report_path = self._write_report(root, self._report_payload())
+            out_path = root / "spool_comment.md"
+
+            mocked_run = mock.Mock(side_effect=self._gh_side_effect(existing_comments))
+            with mock.patch("subprocess.run", mocked_run):
+                exit_code = main(
+                    ["1", "--report", str(report_path), "--out", str(out_path), "--post", "--force-new"]
+                )
+
+        self.assertEqual(exit_code, 0)
+        commands = [call.args[0] for call in mocked_run.call_args_list]
+        list_commands = [cmd for cmd in commands if cmd[:2] == ["gh", "api"] and "-X" not in cmd]
+        patch_commands = [cmd for cmd in commands if "-X" in cmd and "PATCH" in cmd]
+        create_commands = [cmd for cmd in commands if cmd[:3] == ["gh", "pr", "comment"]]
+        self.assertEqual(list_commands, [])
+        self.assertEqual(patch_commands, [])
+        self.assertEqual(len(create_commands), 1)
+
+    def test_dry_run_never_invokes_gh_subprocess(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            report_path = self._write_report(Path(temp_dir), self._report_payload())
+            stdout = io.StringIO()
+            with mock.patch("subprocess.run") as mocked_run, redirect_stdout(stdout):
+                exit_code = main(["1", "--report", str(report_path), "--dry-run"])
+
+        self.assertEqual(exit_code, 0)
+        mocked_run.assert_not_called()
+        self.assertIn(MARKER, stdout.getvalue())
+        self.assertIn("dry_run:", stdout.getvalue())
+
+    def test_dry_run_with_force_new_never_invokes_gh_subprocess(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            report_path = self._write_report(Path(temp_dir), self._report_payload())
+            stdout = io.StringIO()
+            with mock.patch("subprocess.run") as mocked_run, redirect_stdout(stdout):
+                exit_code = main(["1", "--report", str(report_path), "--dry-run", "--force-new"])
+
+        self.assertEqual(exit_code, 0)
+        mocked_run.assert_not_called()
+        self.assertIn("--force-new", stdout.getvalue())
 
 
 if __name__ == "__main__":
