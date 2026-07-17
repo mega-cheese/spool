@@ -11,7 +11,7 @@ from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 from unittest import mock
 
-from src.spool.merge_authorization.merge_authorization import analyze_pr_trust
+from src.spool.merge_authorization.merge_authorization import TrustClaim, _claim_diagnostics, analyze_pr_trust
 from src.spool.merge_authorization.merge_authorization_report import write_trust_report
 from src.spool.merge_authorization.pr_context import load_pr_evidence
 from src.spool.merge_authorization.scope_gate import evaluate_scope, parse_changed_files
@@ -30,6 +30,13 @@ def _classifications_by_path(payload: dict[str, object]) -> dict[str, str]:
     }
 
 
+def _diagnostics_by_claim(payload: dict[str, object]) -> dict[str, dict[str, object]]:
+    return {
+        str(item["claim"]): item
+        for item in payload.get("claim_diagnostics", [])
+    }
+
+
 class PRTrustTest(unittest.TestCase):
     def _evidence_from_text(
         self,
@@ -40,6 +47,8 @@ class PRTrustTest(unittest.TestCase):
         summary: str,
         test_output: str | None = None,
         repo_memory: dict | list | None = None,
+        ci_checks: dict | list | None = None,
+        test_output_source: str | None = None,
     ):
         root = Path(temp_dir)
         diff_path = root / "diff.patch"
@@ -58,11 +67,17 @@ class PRTrustTest(unittest.TestCase):
         if repo_memory is not None:
             memory_path = root / "approved_repo_memory.json"
             memory_path.write_text(json.dumps(repo_memory), encoding="utf-8")
+        checks_path = None
+        if ci_checks is not None:
+            checks_path = root / "checks.json"
+            checks_path.write_text(json.dumps(ci_checks), encoding="utf-8")
         return load_pr_evidence(
             diff_path=diff_path,
             task_path=task_path,
             agent_summary_path=summary_path,
             test_output_path=test_path,
+            test_output_source=test_output_source,
+            ci_checks_path=checks_path,
             repo_memory_path=memory_path,
         )
 
@@ -439,6 +454,197 @@ Do not add GitHub integration, dashboard, Streamlit, Slack/docs ingestion, meeti
             self.assertIn(heading, markdown)
         self.assertNotIn("## Buried Decisions", markdown)
 
+    def test_claim_diagnostics_are_complete_ledger_for_supported_claims(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["actions.append(action)"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Updated `src/review_actions.py`.\nTests passed.",
+                test_output="Ran 1 test\nOK\n",
+            )
+            report = analyze_pr_trust(evidence)
+            payload = report.to_dict()
+
+        self.assertEqual(len(payload["claim_diagnostics"]), len(payload["agent_claims"]))
+        diagnostics = _diagnostics_by_claim(payload)
+        file_diag = diagnostics["Updated `src/review_actions.py`."]
+        test_diag = diagnostics["Tests passed."]
+        self.assertEqual(file_diag["status"], "supported")
+        self.assertEqual(file_diag["reason"], "src/review_actions.py appears in the PR diff.")
+        self.assertEqual(file_diag["evidence_strength"], "direct")
+        self.assertEqual(
+            file_diag["supporting_evidence"],
+            [
+                {
+                    "type": "changed_file",
+                    "path": "src/review_actions.py",
+                    "explanation": "The claimed path appears in the PR diff.",
+                }
+            ],
+        )
+        self.assertEqual(file_diag["missing_evidence"], [])
+        self.assertIn("diff.patch", file_diag["evidence_checked"])
+        self.assertEqual(file_diag["reviewer_action"], "No claim-specific action required.")
+        self.assertEqual(test_diag["status"], "supported")
+        self.assertEqual(test_diag["evidence_strength"], "direct")
+        self.assertEqual(test_diag["supporting_evidence"][0]["type"], "test_output")
+        self.assertIn("OK", test_diag["supporting_evidence"][0]["quote"])
+
+    def test_supported_capability_claim_is_not_labeled_direct(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["def append_review_action(path, action):", "    actions.append(action)"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Review actions persist in `review_actions.json` without replacing previous actions.",
+                test_output="OK\n",
+            )
+            payload = analyze_pr_trust(evidence).to_dict()
+
+        diagnostic = payload["claim_diagnostics"][0]
+        self.assertEqual(diagnostic["status"], "supported")
+        self.assertNotEqual(diagnostic["evidence_strength"], "direct")
+        self.assertEqual(diagnostic["evidence_strength"], "corroborated")
+        self.assertEqual(diagnostic["supporting_evidence"][0]["type"], "diff_pattern")
+
+    def test_claim_diagnostics_preserve_source_order_with_source_index(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["value = 1"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Updated `src/review_actions.py`.\nAdded `src/missing.py`.\nTests passed.",
+            )
+            payload = analyze_pr_trust(evidence).to_dict()
+
+        self.assertEqual(
+            [item["claim"] for item in payload["claim_diagnostics"]],
+            ["Updated `src/review_actions.py`.", "Added `src/missing.py`.", "Tests passed."],
+        )
+        self.assertEqual([item["source_index"] for item in payload["claim_diagnostics"]], [0, 1, 2])
+
+    def test_contradicted_claims_sort_first_in_reviewer_facing_ledger(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=(
+                    self._simple_diff("src/review_actions.py", ["value = 1"])
+                    + self._simple_diff("src/auth.py", ["def allow(): return True"])
+                ),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Updated `src/review_actions.py`.\nAdded `src/missing.py`.\nTests passed.",
+                test_output="FAILED (failures=1)\n",
+            )
+            report = analyze_pr_trust(evidence)
+            paths = write_trust_report(report, temp_dir, pretty=True)
+            markdown = Path(paths["trust_report_md"]).read_text(encoding="utf-8")
+
+        self.assertLess(markdown.index("### 1. Tests passed."), markdown.index("### 2. Added `src/missing.py`."))
+        self.assertLess(markdown.index("### 2. Added `src/missing.py`."), markdown.index("### 3. Updated `src/review_actions.py`."))
+
+    def test_diagnostic_evidence_strength_invariants(self) -> None:
+        diagnostics = [
+            item.to_dict()
+            for item in _claim_diagnostics(
+                [
+                    TrustClaim(
+                        claim_id="weak",
+                        claim="Weak claim.",
+                        claim_type="capability_claim",
+                        verdict="weakly_supported",
+                        evidence_target="diff.patch",
+                    ),
+                    TrustClaim(
+                        claim_id="review",
+                        claim="Review claim.",
+                        claim_type="capability_claim",
+                        verdict="needs_review",
+                        evidence_target="diff.patch",
+                    ),
+                    TrustClaim(
+                        claim_id="unsupported",
+                        claim="Added `src/missing.py`.",
+                        claim_type="file_added",
+                        verdict="unsupported",
+                        evidence_target="diff.patch",
+                    ),
+                    TrustClaim(
+                        claim_id="direct",
+                        claim="Updated `src/review_actions.py`.",
+                        claim_type="file_modified",
+                        verdict="supported",
+                        evidence_target="diff.patch",
+                        evidence_quote="diff --git a/src/review_actions.py b/src/review_actions.py",
+                    ),
+                ]
+            )
+        ]
+
+        by_status = {item["status"]: item for item in diagnostics}
+        self.assertEqual(by_status["weakly_supported"]["evidence_strength"], "weak")
+        self.assertEqual(by_status["needs_review"]["evidence_strength"], "none")
+        self.assertEqual(by_status["unsupported"]["evidence_strength"], "none")
+        self.assertEqual(by_status["unsupported"]["supporting_evidence"], [])
+        self.assertEqual(by_status["supported"]["evidence_strength"], "direct")
+        self.assertTrue(by_status["supported"]["supporting_evidence"])
+        self.assertTrue(all(isinstance(evidence, dict) for item in diagnostics for evidence in item["supporting_evidence"]))
+        self.assertTrue(all(item["reason"] == item["why"] for item in diagnostics))
+
+    def test_pr_body_reported_tests_are_not_direct_evidence(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["value = 1"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Tests passed.",
+                test_output="Ran 388 tests\nOK\n",
+                test_output_source="pr_body_tests_run",
+            )
+            payload = analyze_pr_trust(evidence).to_dict()
+
+        diagnostic = payload["claim_diagnostics"][0]
+        self.assertEqual(diagnostic["status"], "supported")
+        self.assertEqual(diagnostic["evidence_strength"], "corroborated")
+        self.assertEqual(diagnostic["supporting_evidence"][0]["type"], "agent_reported_test")
+        self.assertEqual(diagnostic["supporting_evidence"][0]["path"], "pr_body")
+        self.assertIn("agent reported", diagnostic["supporting_evidence"][0]["explanation"].lower())
+
+    def test_github_check_backed_test_claim_is_direct(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["value = 1"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Tests passed.",
+                ci_checks={
+                    "status": "available",
+                    "checks": [{"name": "unit", "state": "completed", "conclusion": "success"}],
+                },
+            )
+            payload = analyze_pr_trust(evidence).to_dict()
+
+        diagnostic = payload["claim_diagnostics"][0]
+        self.assertEqual(diagnostic["status"], "supported")
+        self.assertEqual(diagnostic["evidence_strength"], "direct")
+        self.assertEqual(diagnostic["supporting_evidence"][0]["type"], "ci_check")
+
+    def test_captured_test_output_claim_is_direct(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["value = 1"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Tests passed.",
+                test_output="Ran 388 tests\nOK\n",
+            )
+            payload = analyze_pr_trust(evidence).to_dict()
+
+        diagnostic = payload["claim_diagnostics"][0]
+        self.assertEqual(diagnostic["status"], "supported")
+        self.assertEqual(diagnostic["evidence_strength"], "direct")
+        self.assertEqual(diagnostic["supporting_evidence"][0]["type"], "test_output")
+
     def test_claim_diagnostics_explain_unsupported_claims_in_json_and_markdown(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             evidence = self._evidence_from_text(
@@ -459,16 +665,23 @@ Do not add GitHub integration, dashboard, Streamlit, Slack/docs ingestion, meeti
         self.assertEqual(diagnostics[0]["claim"], "Added `src/missing.py`.")
         self.assertEqual(diagnostics[0]["source"], "agent_summary")
         self.assertEqual(diagnostics[0]["status"], "unsupported")
-        self.assertIn("src/missing.py does not appear in the PR diff.", diagnostics[0]["why"])
+        self.assertIn("src/missing.py does not appear in the PR diff.", diagnostics[0]["reason"])
+        self.assertEqual(diagnostics[0]["evidence_strength"], "none")
+        self.assertEqual(diagnostics[0]["supporting_evidence"], [])
+        self.assertEqual(
+            diagnostics[0]["missing_evidence"],
+            ["No changed file matching `src/missing.py` was found in the PR diff."],
+        )
         self.assertEqual(diagnostics[0]["evidence_checked"], ["agent_summary.md", "diff.patch"])
         self.assertIn("revise/remove this claim", diagnostics[0]["reviewer_action"])
         self.assertIn("## Unsupported claims", markdown)
+        self.assertIn("## Agent claim ledger", markdown)
         self.assertIn("Claim: Added `src/missing.py`.", markdown)
         self.assertIn("Source: Agent Summary", markdown)
         self.assertIn("Reason: src/missing.py does not appear in the PR diff.", markdown)
         self.assertIn("Reviewer action: Ask the agent to point to the supporting diff or revise/remove this claim.", markdown)
 
-    def test_markdown_reports_no_unsupported_claims_concisely(self) -> None:
+    def test_markdown_reports_supported_claims_in_claim_ledger(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             evidence = self._evidence_from_text(
                 temp_dir,
@@ -483,9 +696,15 @@ Do not add GitHub integration, dashboard, Streamlit, Slack/docs ingestion, meeti
             markdown = Path(paths["trust_report_md"]).read_text(encoding="utf-8")
 
         self.assertEqual(payload["summary"]["unsupported_claims_count"], 0)
-        self.assertEqual(payload["claim_diagnostics"], [])
+        self.assertEqual(len(payload["claim_diagnostics"]), 1)
+        self.assertEqual(payload["claim_diagnostics"][0]["status"], "supported")
         self.assertIn("## Unsupported claims", markdown)
         self.assertIn("Unsupported claims: None", markdown)
+        self.assertIn("## Agent claim ledger", markdown)
+        self.assertIn("### 1. Updated `src/review_actions.py`.", markdown)
+        self.assertIn("- **Status:** Supported", markdown)
+        self.assertIn("- **Evidence strength:** Direct", markdown)
+        self.assertIn("`src/review_actions.py` - The claimed path appears in the PR diff.", markdown)
 
     def test_multiple_unsupported_claim_diagnostics_are_deterministic(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -522,12 +741,30 @@ Do not add GitHub integration, dashboard, Streamlit, Slack/docs ingestion, meeti
         self.assertEqual(len(diagnostics), 1)
         self.assertEqual(diagnostics[0]["claim"], "Tests passed.")
         self.assertEqual(diagnostics[0]["status"], "missing_evidence")
+        self.assertEqual(diagnostics[0]["evidence_strength"], "none")
+        self.assertEqual(diagnostics[0]["supporting_evidence"], [])
+        self.assertIn("Test output was not provided.", diagnostics[0]["missing_evidence"])
         self.assertEqual(diagnostics[0]["evidence_checked"], ["agent_summary.md", "checks.json", "test_output.txt"])
         self.assertIn("provide the missing evidence", diagnostics[0]["reviewer_action"])
         self.assertIn("## Weak or Missing Evidence", markdown)
         self.assertIn("- Claim: Tests passed.", markdown)
         self.assertIn("- Status: missing_evidence", markdown)
         self.assertIn("- Reviewer action: Ask the agent to provide the missing evidence or revise this claim.", markdown)
+
+    def test_claim_ledger_orders_unsupported_and_weak_before_supported(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["value = 1"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Updated `src/review_actions.py`.\nAdded `src/missing.py`.\nTests passed.",
+            )
+            report = analyze_pr_trust(evidence)
+            paths = write_trust_report(report, temp_dir, pretty=True)
+            markdown = Path(paths["trust_report_md"]).read_text(encoding="utf-8")
+
+        self.assertLess(markdown.index("### 1. Added `src/missing.py`."), markdown.index("### 3. Updated `src/review_actions.py`."))
+        self.assertLess(markdown.index("### 2. Tests passed."), markdown.index("### 3. Updated `src/review_actions.py`."))
 
     def test_local_file_mode_pr_title_remains_not_supported(self) -> None:
         evidence = load_pr_evidence(

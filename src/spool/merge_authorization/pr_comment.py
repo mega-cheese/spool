@@ -8,6 +8,8 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
+from .merge_authorization import _claim_status_rank
+
 
 class PRCommentError(RuntimeError):
     pass
@@ -74,8 +76,7 @@ def render_pr_comment(payload: dict[str, Any]) -> str:
     lines.append(f"**Decision memory:** {decision_memory_status}  ")
     lines.extend(["", "### Why this verdict?", ""])
     lines.extend([f"- {bullet}" for bullet in _why_bullets(payload)])
-    lines.extend(_unsupported_claim_section(claim_diagnostics))
-    lines.extend(_weak_or_missing_claim_section(claim_diagnostics, weak_or_missing))
+    lines.extend(_claim_summary_section(claim_diagnostics, weak_or_missing))
     if risks:
         lines.extend(["", "### Risks", ""])
         lines.extend([f"- {risk}" for risk in risks[:3]])
@@ -283,53 +284,66 @@ def _test_evidence_line(evidence: dict[str, Any], checks: dict[str, Any]) -> str
     return "unknown"
 
 
-def _unsupported_claim_section(diagnostics: list[Any]) -> list[str]:
-    unsupported = [
-        item for item in diagnostics
-        if isinstance(item, dict) and item.get("status") == "unsupported"
-    ]
-    if not unsupported:
-        return []
-    lines = ["", "### Unsupported claims", ""]
-    for item in unsupported[:5]:
-        lines.append(
-            f"- {item.get('claim')} - {item.get('why') or 'No deterministic PR evidence supported this claim.'} "
-            f"Action: {item.get('reviewer_action') or 'Review this claim against the PR evidence.'}"
-        )
-    if len(unsupported) > 5:
-        remaining = len(unsupported) - 5
-        lines.append(f"- {remaining} more unsupported claim{'s' if remaining != 1 else ''} in `trust_report.md` / `trust_report.json`.")
-    return lines
-
-
-def _weak_or_missing_claim_section(diagnostics: list[Any], fallback_items: list[Any]) -> list[str]:
-    statuses = {"missing_evidence", "weakly_supported", "needs_review"}
-    weak_items = [
-        item for item in diagnostics
-        if isinstance(item, dict) and item.get("status") in statuses
-    ]
-    if not weak_items:
+def _claim_summary_section(diagnostics: list[Any], fallback_items: list[Any]) -> list[str]:
+    claim_items = [item for item in diagnostics if isinstance(item, dict)]
+    if not claim_items:
         if not fallback_items:
             return []
-        lines = ["", "### Weak or missing evidence", ""]
+        lines = ["", "### Claim summary", ""]
         for item in fallback_items[:5]:
             lines.append(f"- {item}")
         if len(fallback_items) > 5:
             remaining = len(fallback_items) - 5
-            lines.append(f"- {remaining} more weak/missing evidence item{'s' if remaining != 1 else ''} in `trust_report.md` / `trust_report.json`.")
+            lines.append(f"- {remaining} more claim{'s' if remaining != 1 else ''} in the full claim ledger in `trust_report.md` / `trust_report.json`.")
         return lines
 
-    lines = ["", "### Weak or missing evidence", ""]
-    for item in weak_items[:5]:
-        lines.append(
-            f"- {item.get('claim')} (`{item.get('status')}`) - "
-            f"{item.get('why') or 'Spool could not deterministically verify this claim.'} "
-            f"Action: {item.get('reviewer_action') or 'Review this claim against the PR evidence.'}"
-        )
-    if len(weak_items) > 5:
-        remaining = len(weak_items) - 5
-        lines.append(f"- {remaining} more weak/missing evidence item{'s' if remaining != 1 else ''} in `trust_report.md` / `trust_report.json`.")
+    ordered = _ordered_claim_diagnostics(claim_items)
+    lines = ["", "### Claim summary", ""]
+    for item in ordered[:5]:
+        status = str(item.get("status") or "unknown")
+        strength = str(item.get("evidence_strength") or "unknown")
+        evidence = _diagnostic_evidence_paths(item)
+        action = _diagnostic_action(item)
+        line = f"- {_truncate(str(item.get('claim') or ''))} (`{status}`, {strength}) - {_truncate(_diagnostic_reason(item))}"
+        if evidence:
+            line += f" Evidence: {evidence}."
+        if action:
+            line += f" Action: {_truncate(action)}"
+        lines.append(line)
+    if len(ordered) > 5:
+        remaining = len(ordered) - 5
+        lines.append(f"- {remaining} more claim{'s' if remaining != 1 else ''} in the full claim ledger in `trust_report.md` / `trust_report.json`.")
     return lines
+
+
+def _ordered_claim_diagnostics(diagnostics: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [item[1] for item in sorted(enumerate(diagnostics), key=lambda item: (_claim_status_rank(str(item[1].get("status"))), item[0]))]
+
+
+def _diagnostic_reason(item: dict[str, Any]) -> str:
+    return str(item.get("reason") or item.get("why") or "Spool could not deterministically verify this claim.")
+
+
+def _diagnostic_action(item: dict[str, Any]) -> str:
+    action = str(item.get("reviewer_action") or "")
+    return "" if action.startswith("No claim-specific action required") else action
+
+
+def _diagnostic_evidence_paths(item: dict[str, Any]) -> str:
+    paths: list[str] = []
+    for evidence in item.get("supporting_evidence") or []:
+        if isinstance(evidence, dict):
+            path = evidence.get("path")
+            if path:
+                paths.append(str(path))
+    return _inline_code_join(paths[:3]) if paths else ""
+
+
+def _truncate(text: str, limit: int = 180) -> str:
+    cleaned = " ".join(str(text).split())
+    if len(cleaned) <= limit:
+        return cleaned
+    return cleaned[: limit - 3].rstrip() + "..."
 
 
 def _why_bullets(payload: dict[str, Any]) -> list[str]:

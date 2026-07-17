@@ -141,6 +141,20 @@ None.
         self.assertIn("PR title: available", markdown)
         self.assertFalse(any("PR title is not available in local file mode." == note for note in notes))
 
+    def test_pr_body_tests_run_section_is_self_reported_not_direct_evidence(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            out_dir = Path(temp_dir) / "spool-pr-123"
+            with mock.patch("subprocess.run", self._mock_gh(body=self._sectioned_body_with_test_claim())):
+                run_pr_check("123", out_dir=out_dir)
+
+            payload = json.loads((out_dir / "trust_report.json").read_text(encoding="utf-8"))
+
+        test_diagnostic = next(item for item in payload["claim_diagnostics"] if item["claim"] == "Tests passed.")
+        self.assertEqual(test_diagnostic["status"], "supported")
+        self.assertEqual(test_diagnostic["evidence_strength"], "corroborated")
+        self.assertEqual(test_diagnostic["supporting_evidence"][0]["type"], "agent_reported_test")
+        self.assertEqual(test_diagnostic["supporting_evidence"][0]["path"], "pr_body")
+
     def test_task_is_optional_and_repo_memory_can_be_passed(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
@@ -441,7 +455,10 @@ index 1111111..2222222 100644
         self.assertEqual(payload["evidence_coverage"]["ci_checks"], "empty")
         test_claims = [claim for claim in payload["agent_claims"] if claim["claim_type"] == "test_result_claim"]
         self.assertEqual(test_claims[0]["verdict"], "supported")
-        self.assertEqual(test_claims[0]["evidence_target"], "test_output.txt")
+        self.assertEqual(test_claims[0]["evidence_target"], "pr_body_tests_run")
+        test_diagnostic = next(item for item in payload["claim_diagnostics"] if item["claim"] == "Tests passed.")
+        self.assertEqual(test_diagnostic["evidence_strength"], "corroborated")
+        self.assertEqual(test_diagnostic["supporting_evidence"][0]["type"], "agent_reported_test")
 
     def test_checks_fetch_failure_writes_unavailable_evidence_and_continues(self) -> None:
         checks_error = subprocess.CalledProcessError(
@@ -466,7 +483,10 @@ index 1111111..2222222 100644
         self.assertIn("checks are not available", checks_payload["error"])
         test_claims = [claim for claim in payload["agent_claims"] if claim["claim_type"] == "test_result_claim"]
         self.assertEqual(test_claims[0]["verdict"], "supported")
-        self.assertEqual(test_claims[0]["evidence_target"], "test_output.txt")
+        self.assertEqual(test_claims[0]["evidence_target"], "pr_body_tests_run")
+        test_diagnostic = next(item for item in payload["claim_diagnostics"] if item["claim"] == "Tests passed.")
+        self.assertEqual(test_diagnostic["evidence_strength"], "corroborated")
+        self.assertEqual(test_diagnostic["supporting_evidence"][0]["type"], "agent_reported_test")
 
     def test_missing_gh_has_clear_error(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

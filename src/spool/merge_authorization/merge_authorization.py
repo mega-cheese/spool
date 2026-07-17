@@ -47,21 +47,30 @@ class TrustClaim:
 
 @dataclass
 class ClaimDiagnostic:
+    source_index: int
     claim: str
     source: str
     status: str
     claim_type: str
-    why: str
+    reason: str
+    evidence_strength: str
+    supporting_evidence: list[dict[str, str]] = field(default_factory=list)
+    missing_evidence: list[str] = field(default_factory=list)
     evidence_checked: list[str] = field(default_factory=list)
     reviewer_action: str = ""
 
     def to_dict(self) -> dict[str, object]:
         return {
             "claim": self.claim,
+            "source_index": self.source_index,
             "source": self.source,
             "status": self.status,
             "claim_type": self.claim_type,
-            "why": self.why,
+            "reason": self.reason,
+            "why": self.reason,
+            "evidence_strength": self.evidence_strength,
+            "supporting_evidence": [dict(item) for item in self.supporting_evidence],
+            "missing_evidence": list(self.missing_evidence),
             "evidence_checked": list(self.evidence_checked),
             "reviewer_action": self.reviewer_action,
         }
@@ -333,6 +342,15 @@ def _test_claim(line: str, evidence: PREvidence) -> TrustClaim:
             reason="The agent says tests passed, but no test output was provided.",
         )
     if _test_output_passed(evidence.test_output_text):
+        if evidence.test_output_source == "pr_body_tests_run":
+            return _claim(
+                "Tests passed.",
+                "test_result_claim",
+                "pr_body_tests_run",
+                "supported",
+                evidence_quote=_first_test_evidence_line(evidence.test_output_text),
+                reason="The agent reported passing tests in the PR body, but no independent test artifact or fetched check result was available.",
+            )
         return _claim(
             "Tests passed.",
             "test_result_claim",
@@ -486,20 +504,38 @@ def _weak_or_missing_evidence(claims: list[TrustClaim]) -> list[str]:
 
 
 def _claim_diagnostics(claims: list[TrustClaim]) -> list[ClaimDiagnostic]:
-    diagnostic_statuses = {"unsupported", "missing_evidence", "weakly_supported", "needs_review"}
-    return [
-        ClaimDiagnostic(
-            claim=claim.claim,
-            source="agent_summary",
-            status=claim.verdict,
-            claim_type=claim.claim_type,
-            why=claim.reason or _default_claim_diagnostic_reason(claim),
-            evidence_checked=_claim_evidence_checked(claim),
-            reviewer_action=_claim_reviewer_action(claim),
+    diagnostics: list[ClaimDiagnostic] = []
+    for index, claim in enumerate(claims):
+        diagnostics.append(
+            ClaimDiagnostic(
+                source_index=index,
+                claim=claim.claim,
+                source="agent_summary",
+                status=claim.verdict,
+                claim_type=claim.claim_type,
+                reason=claim.reason or _default_claim_diagnostic_reason(claim),
+                evidence_strength=_claim_evidence_strength(claim),
+                supporting_evidence=_claim_supporting_evidence(claim),
+                missing_evidence=_claim_missing_evidence(claim),
+                evidence_checked=_claim_evidence_checked(claim),
+                reviewer_action=_claim_reviewer_action(claim),
+            )
         )
-        for claim in claims
-        if claim.verdict in diagnostic_statuses
-    ]
+    return diagnostics
+
+
+def _claim_status_rank(status: str) -> int:
+    order = {
+        "contradicted": 0,
+        "unsupported": 1,
+        "missing_evidence": 2,
+        "weakly_supported": 3,
+        "needs_review": 4,
+        "supported": 5,
+        "not_applicable": 6,
+        "no_relevant_memory": 7,
+    }
+    return order.get(status, 8)
 
 
 def _claim_evidence_checked(claim: TrustClaim) -> list[str]:
@@ -513,7 +549,114 @@ def _claim_evidence_checked(claim: TrustClaim) -> list[str]:
     return _dedupe(checked)
 
 
+def _claim_evidence_strength(claim: TrustClaim) -> str:
+    if claim.verdict in {"unsupported", "missing_evidence"}:
+        return "none"
+    if claim.verdict == "weakly_supported":
+        return "weak"
+    if claim.verdict == "needs_review":
+        return "weak" if claim.evidence_quote else "none"
+    if claim.verdict == "supported":
+        if claim.claim_type == "test_result_claim":
+            return "corroborated" if _is_agent_reported_test_claim(claim) else "direct"
+        if claim.claim_type in {"file_added", "file_modified"}:
+            return "direct"
+        if claim.claim_type == "capability_claim":
+            return "corroborated"
+        return "corroborated"
+    if claim.verdict == "contradicted":
+        return "direct" if claim.evidence_quote else "corroborated"
+    return "none"
+
+
+def _claim_supporting_evidence(claim: TrustClaim) -> list[dict[str, str]]:
+    if claim.verdict in {"unsupported", "missing_evidence"}:
+        return []
+    path = _claim_primary_path(claim)
+    if claim.claim_type in {"file_added", "file_modified"} and path and claim.verdict == "supported":
+        return [
+            {
+                "type": "changed_file",
+                "path": path,
+                "explanation": "The claimed path appears in the PR diff.",
+            }
+        ]
+    if claim.claim_type == "test_result_claim" and claim.verdict in {"supported", "contradicted", "needs_review"}:
+        if claim.evidence_target == "checks.json":
+            return [
+                {
+                    "type": "ci_check",
+                    "path": "checks.json",
+                    "quote": claim.evidence_quote,
+                    "explanation": (
+                        "Fetched GitHub check evidence supports the test claim."
+                        if claim.verdict == "supported"
+                        else "Fetched GitHub check evidence does not directly support the test claim."
+                    ),
+                }
+            ]
+        if _is_agent_reported_test_claim(claim):
+            return [
+                {
+                    "type": "agent_reported_test",
+                    "path": "pr_body",
+                    "quote": claim.evidence_quote,
+                    "explanation": "The agent reported this result in the PR body; fetched checks or captured test output were unavailable.",
+                }
+            ]
+        return [
+            {
+                "type": "test_output",
+                "path": "test_output.txt",
+                "quote": claim.evidence_quote,
+                "explanation": (
+                    "Captured test output contains a passing result."
+                    if claim.verdict == "supported"
+                    else "Captured test output contradicts or does not directly support the test claim."
+                ),
+            }
+        ]
+    if claim.claim_type == "capability_claim" and claim.evidence_quote:
+        return [
+            {
+                "type": "diff_pattern",
+                "path": claim.evidence_target,
+                "quote": claim.evidence_quote,
+                "explanation": "A deterministic diff pattern supports this behavior claim.",
+            }
+        ]
+    if claim.evidence_quote:
+        return [
+            {
+                "type": "evidence_quote",
+                "path": claim.evidence_target,
+                "quote": claim.evidence_quote,
+                "explanation": "Deterministic evidence matched this claim.",
+            }
+        ]
+    return []
+
+
+def _claim_missing_evidence(claim: TrustClaim) -> list[str]:
+    if claim.verdict == "unsupported":
+        path = _claim_primary_path(claim)
+        if path:
+            return [f"No changed file matching `{path}` was found in the PR diff."]
+        return ["No deterministic supporting evidence was found for this claim."]
+    if claim.verdict == "missing_evidence":
+        if claim.claim_type == "test_result_claim":
+            return ["Test output was not provided.", "GitHub checks were not available as supporting evidence."]
+        return [claim.reason or "Required evidence for this claim was not provided."]
+    if claim.verdict in {"weakly_supported", "needs_review"} and not claim.evidence_quote:
+        return ["No exact deterministic evidence was found for this claim."]
+    return []
+
+
 def _claim_reviewer_action(claim: TrustClaim) -> str:
+    if claim.verdict == "supported":
+        if _claim_evidence_strength(claim) == "direct":
+            return "No claim-specific action required."
+        return "No claim-specific action required, but the support is deterministic rather than an exact proof."
     if claim.verdict == "unsupported":
         return "Ask the agent to point to the supporting diff or revise/remove this claim."
     if claim.verdict == "missing_evidence":
@@ -523,6 +666,18 @@ def _claim_reviewer_action(claim: TrustClaim) -> str:
     if claim.verdict == "needs_review":
         return "Review this claim against the PR evidence before merging."
     return "Review this claim against the PR evidence."
+
+
+def _claim_primary_path(claim: TrustClaim) -> str:
+    paths = _paths_from_text(claim.claim)
+    if paths:
+        return paths[0]
+    match = re.search(r"([\w./-]+\.[A-Za-z0-9]+)\s+(?:appears|does not appear)", claim.reason)
+    return match.group(1) if match else ""
+
+
+def _is_agent_reported_test_claim(claim: TrustClaim) -> bool:
+    return claim.claim_type == "test_result_claim" and claim.evidence_target == "pr_body_tests_run"
 
 
 def _default_claim_diagnostic_reason(claim: TrustClaim) -> str:
@@ -784,6 +939,10 @@ def _diff_header_for_path(diff_text: str, path: str) -> str:
 
 
 def _first_test_evidence_line(text: str) -> str:
+    for line in text.splitlines():
+        stripped = line.strip()
+        if re.search(r"^OK$|\b\d+\s+passed\b|\bPASS\b", stripped, re.IGNORECASE):
+            return stripped
     for line in text.splitlines():
         if line.strip():
             return line.strip()

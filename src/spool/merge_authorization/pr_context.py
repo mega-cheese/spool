@@ -133,6 +133,7 @@ class PREvidence:
     agent_summary_text: str
     pr_title_text: str = ""
     test_output_text: str = ""
+    test_output_source: str = "not_provided"
     repo_memory_exists: bool = False
     repo_memory_items: list[RepoMemoryItem] = field(default_factory=list)
     ci_checks: PRChecksEvidence = field(default_factory=PRChecksEvidence)
@@ -155,6 +156,7 @@ def load_pr_evidence(
     task_path: str | Path | None = None,
     agent_summary_path: str | Path,
     test_output_path: str | Path | None = None,
+    test_output_source: str | None = None,
     pr_metadata_path: str | Path | None = None,
     pr_title_text: str | None = None,
     ci_checks_path: str | Path | None = None,
@@ -209,6 +211,7 @@ def load_pr_evidence(
         agent_summary_text=summary.read_text(encoding="utf-8"),
         pr_title_text=str(pr_title_text or ""),
         test_output_text=test_text,
+        test_output_source=str(test_output_source or ("captured_test_output" if test_output else "not_provided")),
         repo_memory_exists=memory_exists,
         repo_memory_items=memory_items,
         ci_checks=ci_checks,
