@@ -524,6 +524,174 @@ Do not add GitHub integration, dashboard, Streamlit, Slack/docs ingestion, meeti
         )
         self.assertEqual([item["source_index"] for item in payload["claim_diagnostics"]], [0, 1, 2])
 
+    def test_retains_substantive_summary_claims_as_unassessed_with_source_sections(self) -> None:
+        summary = """\
+Key fixes:
+- Canonical JSON preserves extraction order and includes source_index.
+- PR-body tests are corroborated rather than direct.
+- Verdict policy remains unchanged.
+
+Files changed:
+- README.md
+- [src/spool/merge_authorization/merge_authorization.py](src/spool/merge_authorization/merge_authorization.py#L197)
+
+Verification:
+- Ran 396 tests OK.
+
+Process notes:
+- No commit or push.
+
+Remaining limitation:
+- PR-body tests still support current verdict policy.
+"""
+        diff = self._simple_diff("README.md", ["Claim ledger docs."]) + self._simple_diff(
+            "src/spool/merge_authorization/merge_authorization.py",
+            ["def classify_claim():", "    return 'substantive'"],
+        )
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=diff,
+                task=(
+                    "Allowed files/areas:\n"
+                    "- README.md\n"
+                    "- src/spool/merge_authorization/\n"
+                ),
+                summary=summary,
+                test_output="Ran 396 tests OK.\n",
+            )
+            report = analyze_pr_trust(evidence)
+            payload = report.to_dict()
+
+        diagnostics = payload["claim_diagnostics"]
+        self.assertEqual(report.overall_verdict, "continue")
+        self.assertEqual(payload["summary"]["supported_claims_count"], 3)
+        self.assertEqual(payload["summary"]["unsupported_claims_count"], 0)
+        self.assertEqual(payload["summary"]["unassessed_claims_count"], 3)
+        self.assertEqual(
+            [item["source_index"] for item in diagnostics],
+            list(range(len(diagnostics))),
+        )
+        self.assertEqual(
+            [item["claim"] for item in diagnostics[:3]],
+            [
+                "Canonical JSON preserves extraction order and includes source_index.",
+                "PR-body tests are corroborated rather than direct.",
+                "Verdict policy remains unchanged.",
+            ],
+        )
+        self.assertEqual(
+            [item["claim_role"] for item in diagnostics[:3]],
+            ["behavior_claim", "behavior_claim", "invariance_claim"],
+        )
+        self.assertTrue(all(item["source_section"] == "Key fixes" for item in diagnostics[:3]))
+        self.assertTrue(all(item["verification_state"] == "unassessed" for item in diagnostics[:3]))
+        self.assertTrue(all(item["status"] == "not_applicable" for item in diagnostics[:3]))
+        self.assertTrue(all(item["affects_verdict"] is False for item in diagnostics[:3]))
+        self.assertTrue(all("no deterministic verifier" in item["reason"] for item in diagnostics[:3]))
+
+        by_claim = _diagnostics_by_claim(payload)
+        self.assertEqual(by_claim["README.md."]["claim_role"], "file_inventory")
+        self.assertEqual(by_claim["README.md."]["source_section"], "Files changed")
+        self.assertEqual(
+            by_claim["[src/spool/merge_authorization/merge_authorization.py](src/spool/merge_authorization/merge_authorization.py#L197)."]["claim_role"],
+            "file_inventory",
+        )
+        self.assertEqual(by_claim["Ran 396 tests OK."]["claim_role"], "test_result_claim")
+        self.assertEqual(by_claim["Ran 396 tests OK."]["source_section"], "Verification")
+        self.assertEqual(by_claim["No commit or push."]["claim_role"], "process_claim")
+        self.assertEqual(by_claim["No commit or push."]["verification_state"], "metadata")
+        self.assertEqual(
+            by_claim["PR-body tests still support current verdict policy."]["claim_role"],
+            "limitation",
+        )
+        self.assertEqual(
+            by_claim["PR-body tests still support current verdict policy."]["verification_state"],
+            "metadata",
+        )
+
+    def test_bare_paths_are_inventory_but_substantive_file_statements_are_not(self) -> None:
+        summary = """\
+Files changed:
+- `README.md`
+- Modified: tests/test_pr_trust.py:511
+
+Key fixes:
+- Updated pr_comment.py to cap output at five claims.
+"""
+        diff = self._simple_diff("README.md", ["Docs."]) + self._simple_diff(
+            "tests/test_pr_trust.py",
+            ["def test_claims():", "    pass"],
+        ) + self._simple_diff(
+            "src/spool/merge_authorization/pr_comment.py",
+            ["CLAIM_LIMIT = 5"],
+        )
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=diff,
+                task="Allowed files/areas:\n- README.md\n- tests/\n- src/spool/merge_authorization/\n",
+                summary=summary,
+                test_output="OK\n",
+            )
+            payload = analyze_pr_trust(evidence).to_dict()
+
+        diagnostics = payload["claim_diagnostics"]
+        self.assertNotIn("Files changed.", [item["claim"] for item in diagnostics])
+        self.assertNotIn("Key fixes.", [item["claim"] for item in diagnostics])
+        self.assertEqual(diagnostics[0]["claim_role"], "file_inventory")
+        self.assertEqual(diagnostics[1]["claim_role"], "file_inventory")
+        self.assertEqual(diagnostics[2]["claim_role"], "implementation_claim")
+        self.assertEqual(diagnostics[2]["status"], "supported")
+        self.assertEqual(diagnostics[2]["evidence_strength"], "corroborated")
+
+    def test_missing_file_inventory_remains_unsupported(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("README.md", ["Docs."]),
+                task="Allowed files:\n- README.md\n",
+                summary="Files changed:\n- src/missing.py\n",
+                test_output="OK\n",
+            )
+            payload = analyze_pr_trust(evidence).to_dict()
+
+        diagnostic = payload["claim_diagnostics"][0]
+        self.assertEqual(diagnostic["claim_role"], "file_inventory")
+        self.assertEqual(diagnostic["status"], "unsupported")
+        self.assertEqual(payload["summary"]["unsupported_claims_count"], 1)
+
+    def test_markdown_groups_unassessed_inventory_and_process_metadata(self) -> None:
+        summary = """\
+Key fixes:
+- Canonical JSON preserves extraction order.
+Files changed:
+- README.md
+Process notes:
+- No commit or push.
+Remaining limitation:
+- Deterministic extraction cannot understand paraphrases.
+"""
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("README.md", ["Docs."]),
+                task="Allowed files:\n- README.md\n",
+                summary=summary,
+                test_output="OK\n",
+            )
+            report = analyze_pr_trust(evidence)
+            paths = write_trust_report(report, temp_dir, pretty=True)
+            markdown = Path(paths["trust_report_md"]).read_text(encoding="utf-8")
+
+        self.assertIn("### Substantive claims", markdown)
+        self.assertIn("**Status:** Unassessed", markdown)
+        self.assertIn("### Changed-file inventory", markdown)
+        self.assertIn("1 claimed file; 1 present in the diff", markdown)
+        self.assertIn("### Process and limitations", markdown)
+        self.assertIn("No commit or push.", markdown)
+        self.assertIn("Deterministic extraction cannot understand paraphrases.", markdown)
+
     def test_contradicted_claims_sort_first_in_reviewer_facing_ledger(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             evidence = self._evidence_from_text(
@@ -540,8 +708,8 @@ Do not add GitHub integration, dashboard, Streamlit, Slack/docs ingestion, meeti
             paths = write_trust_report(report, temp_dir, pretty=True)
             markdown = Path(paths["trust_report_md"]).read_text(encoding="utf-8")
 
-        self.assertLess(markdown.index("### 1. Tests passed."), markdown.index("### 2. Added `src/missing.py`."))
-        self.assertLess(markdown.index("### 2. Added `src/missing.py`."), markdown.index("### 3. Updated `src/review_actions.py`."))
+        self.assertLess(markdown.index("#### 1. Tests passed."), markdown.index("### Changed-file inventory"))
+        self.assertLess(markdown.index("Added `src/missing.py`. (Unsupported)"), markdown.index("Updated `src/review_actions.py`. (Supported)"))
 
     def test_diagnostic_evidence_strength_invariants(self) -> None:
         diagnostics = [
@@ -701,10 +869,9 @@ Do not add GitHub integration, dashboard, Streamlit, Slack/docs ingestion, meeti
         self.assertIn("## Unsupported claims", markdown)
         self.assertIn("Unsupported claims: None", markdown)
         self.assertIn("## Agent claim ledger", markdown)
-        self.assertIn("### 1. Updated `src/review_actions.py`.", markdown)
-        self.assertIn("- **Status:** Supported", markdown)
-        self.assertIn("- **Evidence strength:** Direct", markdown)
-        self.assertIn("`src/review_actions.py` - The claimed path appears in the PR diff.", markdown)
+        self.assertIn("### Changed-file inventory", markdown)
+        self.assertIn("1 claimed file; 1 present in the diff", markdown)
+        self.assertIn("Updated `src/review_actions.py`. (Supported)", markdown)
 
     def test_multiple_unsupported_claim_diagnostics_are_deterministic(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -763,8 +930,8 @@ Do not add GitHub integration, dashboard, Streamlit, Slack/docs ingestion, meeti
             paths = write_trust_report(report, temp_dir, pretty=True)
             markdown = Path(paths["trust_report_md"]).read_text(encoding="utf-8")
 
-        self.assertLess(markdown.index("### 1. Added `src/missing.py`."), markdown.index("### 3. Updated `src/review_actions.py`."))
-        self.assertLess(markdown.index("### 2. Tests passed."), markdown.index("### 3. Updated `src/review_actions.py`."))
+        self.assertLess(markdown.index("#### 1. Tests passed."), markdown.index("### Changed-file inventory"))
+        self.assertLess(markdown.index("Added `src/missing.py`. (Unsupported)"), markdown.index("Updated `src/review_actions.py`. (Supported)"))
 
     def test_local_file_mode_pr_title_remains_not_supported(self) -> None:
         evidence = load_pr_evidence(

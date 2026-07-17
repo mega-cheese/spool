@@ -364,6 +364,145 @@ class SpoolCommentPRTest(unittest.TestCase):
         self.assertIn("Evidence: `test_output.txt`.", comment)
         self.assertNotIn("Action: No claim-specific action required", comment)
 
+    def test_supported_inventory_does_not_consume_substantive_claim_slots(self) -> None:
+        inventory = [
+            {
+                "claim": f"src/file_{index}.py.",
+                "source": "agent_summary",
+                "source_section": "Files changed",
+                "source_index": index,
+                "status": "supported",
+                "claim_type": "file_modified",
+                "claim_role": "file_inventory",
+                "verification_state": "assessed",
+                "affects_verdict": False,
+                "reason": f"src/file_{index}.py appears in the PR diff.",
+                "evidence_strength": "direct",
+                "supporting_evidence": [
+                    {"type": "changed_file", "path": f"src/file_{index}.py", "explanation": "Path appears."}
+                ],
+                "missing_evidence": [],
+                "reviewer_action": "No claim-specific action required.",
+            }
+            for index in range(6)
+        ]
+        substantive = [
+            {
+                "claim": f"Substantive claim {index}.",
+                "source": "agent_summary",
+                "source_section": "Key fixes",
+                "source_index": index + 6,
+                "status": "not_applicable",
+                "claim_type": "implementation_claim",
+                "claim_role": "implementation_claim",
+                "verification_state": "unassessed",
+                "affects_verdict": False,
+                "reason": "Spool retained this substantive claim but has no deterministic verifier for this claim form.",
+                "evidence_strength": "none",
+                "supporting_evidence": [],
+                "missing_evidence": [],
+                "reviewer_action": "Review the relevant diff and tests manually.",
+            }
+            for index in range(6)
+        ]
+
+        comment = render_pr_comment(self._report_payload(claim_diagnostics=inventory + substantive))
+
+        self.assertIn("**Changed-file inventory:** 6 claimed files, 6 present in the diff.", comment)
+        self.assertIn("Substantive claim 0.", comment)
+        self.assertIn("Substantive claim 4.", comment)
+        self.assertLess(comment.index("Substantive claim 0."), comment.index("**Changed-file inventory:**"))
+        self.assertNotIn("Substantive claim 5.", comment)
+        self.assertNotIn("src/file_0.py.", comment)
+        self.assertIn("(`unassessed`, none)", comment)
+        self.assertIn("1 more claim", comment)
+
+    def test_unsupported_inventory_is_prominent_but_supported_inventory_is_compact(self) -> None:
+        diagnostics = [
+            {
+                "claim": "README.md.",
+                "source": "agent_summary",
+                "source_section": "Files changed",
+                "source_index": 0,
+                "status": "supported",
+                "claim_type": "file_modified",
+                "claim_role": "file_inventory",
+                "verification_state": "assessed",
+                "affects_verdict": False,
+                "reason": "README.md appears in the PR diff.",
+                "evidence_strength": "direct",
+                "supporting_evidence": [{"type": "changed_file", "path": "README.md", "explanation": "Path appears."}],
+                "missing_evidence": [],
+                "reviewer_action": "No claim-specific action required.",
+            },
+            {
+                "claim": "src/missing.py.",
+                "source": "agent_summary",
+                "source_section": "Files changed",
+                "source_index": 1,
+                "status": "unsupported",
+                "claim_type": "file_modified",
+                "claim_role": "file_inventory",
+                "verification_state": "assessed",
+                "affects_verdict": False,
+                "reason": "src/missing.py does not appear in the PR diff.",
+                "evidence_strength": "none",
+                "supporting_evidence": [],
+                "missing_evidence": ["No changed file matching `src/missing.py` was found in the PR diff."],
+                "reviewer_action": "Ask the agent to point to the supporting diff or revise/remove this claim.",
+            },
+            {
+                "claim": "Verdict policy remains unchanged.",
+                "source": "agent_summary",
+                "source_section": "Key fixes",
+                "source_index": 2,
+                "status": "not_applicable",
+                "claim_type": "invariance_claim",
+                "claim_role": "invariance_claim",
+                "verification_state": "unassessed",
+                "affects_verdict": False,
+                "reason": "Spool retained this substantive claim but has no deterministic verifier for this claim form.",
+                "evidence_strength": "none",
+                "supporting_evidence": [],
+                "missing_evidence": [],
+                "reviewer_action": "Review the relevant diff and tests manually.",
+            },
+        ]
+
+        comment = render_pr_comment(self._report_payload(claim_diagnostics=diagnostics))
+
+        self.assertIn("**Changed-file inventory:** 2 claimed files, 1 present in the diff.", comment)
+        self.assertIn("src/missing.py.", comment)
+        self.assertIn("Verdict policy remains unchanged.", comment)
+        self.assertLess(comment.index("src/missing.py."), comment.index("Verdict policy remains unchanged."))
+        self.assertNotIn("- README.md.", comment)
+
+    def test_only_supported_file_claims_render_as_concise_inventory_summary(self) -> None:
+        diagnostics = [
+            {
+                "claim": "README.md.",
+                "source": "agent_summary",
+                "source_section": "Files changed",
+                "source_index": 0,
+                "status": "supported",
+                "claim_type": "file_modified",
+                "claim_role": "file_inventory",
+                "verification_state": "assessed",
+                "affects_verdict": False,
+                "reason": "README.md appears in the PR diff.",
+                "evidence_strength": "direct",
+                "supporting_evidence": [{"type": "changed_file", "path": "README.md", "explanation": "Path appears."}],
+                "missing_evidence": [],
+                "reviewer_action": "No claim-specific action required.",
+            }
+        ]
+
+        comment = render_pr_comment(self._report_payload(claim_diagnostics=diagnostics))
+
+        self.assertIn("**Changed-file inventory:** 1 claimed file, 1 present in the diff.", comment)
+        self.assertNotIn("### Claim summary", comment)
+        self.assertNotIn("- README.md.", comment)
+
     def test_renders_candidate_decision_risk_with_clear_project_level_wording(self) -> None:
         risk = (
             "This PR proposes project-level decisions that may affect future Spool behavior. "

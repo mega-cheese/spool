@@ -22,6 +22,21 @@ CLAIM_VERDICTS = {
     "needs_review",
 }
 
+SUBSTANTIVE_CLAIM_ROLES = {
+    "implementation_claim",
+    "behavior_claim",
+    "invariance_claim",
+    "test_result_claim",
+}
+
+
+@dataclass(frozen=True)
+class SummaryStatement:
+    text: str
+    source_section: str
+    claim_role: str
+    inventory_path: str = ""
+
 
 @dataclass
 class TrustClaim:
@@ -32,8 +47,12 @@ class TrustClaim:
     evidence_target: str
     evidence_quote: str = ""
     reason: str = ""
+    claim_role: str = ""
+    source_section: str = "Agent Summary"
+    verification_state: str = "assessed"
+    affects_verdict: bool = False
 
-    def to_dict(self) -> dict[str, str]:
+    def to_dict(self) -> dict[str, object]:
         return {
             "claim_id": self.claim_id,
             "claim": self.claim,
@@ -42,6 +61,10 @@ class TrustClaim:
             "evidence_target": self.evidence_target,
             "evidence_quote": self.evidence_quote,
             "reason": self.reason,
+            "claim_role": self.claim_role or _legacy_claim_role(self),
+            "source_section": self.source_section,
+            "verification_state": self.verification_state,
+            "affects_verdict": self.affects_verdict,
         }
 
 
@@ -52,6 +75,10 @@ class ClaimDiagnostic:
     source: str
     status: str
     claim_type: str
+    claim_role: str
+    source_section: str
+    verification_state: str
+    affects_verdict: bool
     reason: str
     evidence_strength: str
     supporting_evidence: list[dict[str, str]] = field(default_factory=list)
@@ -66,6 +93,10 @@ class ClaimDiagnostic:
             "source": self.source,
             "status": self.status,
             "claim_type": self.claim_type,
+            "claim_role": self.claim_role,
+            "source_section": self.source_section,
+            "verification_state": self.verification_state,
+            "affects_verdict": self.affects_verdict,
             "reason": self.reason,
             "why": self.reason,
             "evidence_strength": self.evidence_strength,
@@ -137,6 +168,7 @@ class PRTrustReport:
                 "allowed_scope_status": _allowed_scope_status(self.scope_report),
                 "supported_claims_count": sum(1 for claim in self.claims if claim.verdict == "supported"),
                 "unsupported_claims_count": sum(1 for claim in self.claims if claim.verdict == "unsupported"),
+                "unassessed_claims_count": sum(1 for claim in self.claims if claim.verification_state == "unassessed"),
                 "test_evidence_status": _test_evidence_status(self.claims),
                 "repo_memory_status": _repo_memory_status(self.repo_memory_check),
                 "decision_memory_status": _decision_memory_summary_status(self.decision_memory),
@@ -197,41 +229,106 @@ def analyze_pr_trust(evidence: PREvidence, *, mode: str = "heuristic") -> PRTrus
 def _extract_and_verify_claims(evidence: PREvidence, changed_files: list[object]) -> list[TrustClaim]:
     changed_paths = {getattr(change, "path") for change in changed_files}
     claims: list[TrustClaim] = []
-    for line in _summary_claim_lines(evidence.agent_summary_text):
+    for statement in _summary_claim_statements(evidence.agent_summary_text):
+        line = statement.text
         lower = line.lower()
-        if _is_test_pass_claim(line):
-            claims.append(_test_claim(line, evidence))
+        if statement.claim_role == "file_inventory":
+            claims.append(
+                _file_claim(
+                    line,
+                    statement.inventory_path,
+                    changed_paths,
+                    evidence.diff_text,
+                    claim_role="file_inventory",
+                    source_section=statement.source_section,
+                )
+            )
+            continue
+        if statement.claim_role == "test_result_claim":
+            claims.append(_test_claim(line, evidence, source_section=statement.source_section))
             continue
         paths = _paths_from_text(line)
-        code_paths = [path for path in paths if "/" in path or path.startswith("README")]
+        code_paths = [path for path in paths if _resolve_changed_path(path, changed_paths) in changed_paths]
         artifact_paths = [path for path in paths if path not in code_paths]
+        claim_count = len(claims)
         if _is_behavior_claim(line, artifact_paths):
-            claims.append(_behavior_claim(line, evidence))
+            claims.append(_behavior_claim(line, evidence, source_section=statement.source_section))
         if code_paths:
             for path in code_paths:
-                claim_type = "file_added" if re.search(r"\badded\b", lower) else "file_modified"
-                if path in changed_paths:
-                    claims.append(
-                        _claim(
-                            line,
-                            claim_type,
-                            "diff.patch",
-                            "supported",
-                            evidence_quote=_diff_header_for_path(evidence.diff_text, path),
-                            reason=f"{path} appears in the PR diff.",
-                        )
+                claims.append(
+                    _file_claim(
+                        line,
+                        path,
+                        changed_paths,
+                        evidence.diff_text,
+                        claim_role=statement.claim_role,
+                        source_section=statement.source_section,
+                        added=bool(re.search(r"\badded\b", lower)),
                     )
-                else:
-                    claims.append(
-                        _claim(
-                            line,
-                            claim_type,
-                            "diff.patch",
-                            "unsupported",
-                            reason=f"{path} does not appear in the PR diff.",
-                        )
-                    )
+                )
+        if len(claims) == claim_count:
+            claims.append(_unverified_statement_claim(statement))
     return _dedupe_claims(claims)
+
+
+def _file_claim(
+    line: str,
+    path: str,
+    changed_paths: set[str],
+    diff_text: str,
+    *,
+    claim_role: str,
+    source_section: str,
+    added: bool = False,
+) -> TrustClaim:
+    resolved_path = _resolve_changed_path(path, changed_paths)
+    claim_type = "file_added" if added or re.search(r"\b(?:added|created)\b", line, re.IGNORECASE) else "file_modified"
+    if resolved_path in changed_paths:
+        return _claim(
+            line,
+            claim_type,
+            "diff.patch",
+            "supported",
+            evidence_quote=_diff_header_for_path(diff_text, resolved_path),
+            reason=f"{resolved_path} appears in the PR diff.",
+            claim_role=claim_role,
+            source_section=source_section,
+        )
+    return _claim(
+        line,
+        claim_type,
+        "diff.patch",
+        "unsupported",
+        reason=f"{path} does not appear in the PR diff.",
+        claim_role=claim_role,
+        source_section=source_section,
+    )
+
+
+def _unverified_statement_claim(statement: SummaryStatement) -> TrustClaim:
+    if statement.claim_role in SUBSTANTIVE_CLAIM_ROLES:
+        return _claim(
+            statement.text,
+            statement.claim_role,
+            "",
+            "not_applicable",
+            reason="Spool retained this substantive claim but has no deterministic verifier for this claim form.",
+            claim_role=statement.claim_role,
+            source_section=statement.source_section,
+            verification_state="unassessed",
+            affects_verdict=False,
+        )
+    return _claim(
+        statement.text,
+        statement.claim_role,
+        "agent_summary.md",
+        "not_applicable",
+        reason="This statement is reviewer context rather than a deterministic implementation claim.",
+        claim_role=statement.claim_role,
+        source_section=statement.source_section,
+        verification_state="metadata",
+        affects_verdict=False,
+    )
 
 
 def _is_behavior_claim(line: str, artifact_paths: list[str]) -> bool:
@@ -246,7 +343,7 @@ def _is_behavior_claim(line: str, artifact_paths: list[str]) -> bool:
     )
 
 
-def _behavior_claim(line: str, evidence: PREvidence) -> TrustClaim:
+def _behavior_claim(line: str, evidence: PREvidence, *, source_section: str = "Agent Summary") -> TrustClaim:
     lower = line.lower()
     diff = evidence.diff_text
     normalized_lower = _normalize(lower)
@@ -263,6 +360,8 @@ def _behavior_claim(line: str, evidence: PREvidence) -> TrustClaim:
                 if supported
                 else "No deterministic behavior matcher verified this claim."
             ),
+            claim_role="behavior_claim",
+            source_section=source_section,
         )
     if _mentions_append_or_history_preservation(normalized_lower):
         supported = _diff_shows_append(diff)
@@ -277,6 +376,8 @@ def _behavior_claim(line: str, evidence: PREvidence) -> TrustClaim:
                 if supported
                 else "No deterministic behavior matcher verified this claim."
             ),
+            claim_role="behavior_claim",
+            source_section=source_section,
         )
     if _mentions_source_evidence_preservation(normalized_lower):
         supported = _diff_shows_source_evidence_preserved(diff)
@@ -291,81 +392,108 @@ def _behavior_claim(line: str, evidence: PREvidence) -> TrustClaim:
                 if supported
                 else "No deterministic behavior matcher verified this claim."
             ),
+            claim_role="behavior_claim",
+            source_section=source_section,
         )
-    return _claim(line, "capability_claim", "diff.patch", "needs_review", reason="No deterministic behavior matcher handled this claim.")
+    return _claim(
+        line,
+        "capability_claim",
+        "diff.patch",
+        "needs_review",
+        reason="No deterministic behavior matcher handled this claim.",
+        claim_role="behavior_claim",
+        source_section=source_section,
+    )
 
 
-def _test_claim(line: str, evidence: PREvidence) -> TrustClaim:
+def _test_claim(line: str, evidence: PREvidence, *, source_section: str = "Agent Summary") -> TrustClaim:
+    claim_text = _clean_sentence(line)
     if evidence.ci_checks.status == "available" and evidence.ci_checks.total_count > 0:
         if evidence.ci_checks.failed_count:
             failed = ", ".join(evidence.ci_checks.failed_checks)
             return _claim(
-                "Tests passed.",
+                claim_text,
                 "test_result_claim",
                 "checks.json",
                 "contradicted",
                 evidence_quote=failed,
                 reason=f"The agent says tests passed, but GitHub checks include failing GitHub checks: {failed}.",
+                claim_role="test_result_claim",
+                source_section=source_section,
             )
         if evidence.ci_checks.pending_count:
             pending = ", ".join(evidence.ci_checks.pending_checks)
             return _claim(
-                "Tests passed.",
+                claim_text,
                 "test_result_claim",
                 "checks.json",
                 "needs_review",
                 evidence_quote=pending,
                 reason=f"The agent says tests passed, but pending GitHub checks are still unresolved: {pending}.",
+                claim_role="test_result_claim",
+                source_section=source_section,
             )
         if evidence.ci_checks.all_passing:
             return _claim(
-                "Tests passed.",
+                claim_text,
                 "test_result_claim",
                 "checks.json",
                 "supported",
                 evidence_quote=_first_check_evidence_line(evidence.ci_checks),
                 reason="GitHub checks were fetched and all returned checks are passing.",
+                claim_role="test_result_claim",
+                source_section=source_section,
             )
         return _claim(
-            "Tests passed.",
+            claim_text,
             "test_result_claim",
             "checks.json",
             "needs_review",
             reason="GitHub checks were fetched, but their statuses were inconclusive.",
+            claim_role="test_result_claim",
+            source_section=source_section,
         )
     if not evidence.has_test_output:
         return _claim(
-            "Tests passed.",
+            claim_text,
             "test_result_claim",
             "test_output.txt",
             "missing_evidence",
             reason="The agent says tests passed, but no test output was provided.",
+            claim_role="test_result_claim",
+            source_section=source_section,
         )
     if _test_output_passed(evidence.test_output_text):
         if evidence.test_output_source == "pr_body_tests_run":
             return _claim(
-                "Tests passed.",
+                claim_text,
                 "test_result_claim",
                 "pr_body_tests_run",
                 "supported",
                 evidence_quote=_first_test_evidence_line(evidence.test_output_text),
                 reason="The agent reported passing tests in the PR body, but no independent test artifact or fetched check result was available.",
+                claim_role="test_result_claim",
+                source_section=source_section,
             )
         return _claim(
-            "Tests passed.",
+            claim_text,
             "test_result_claim",
             "test_output.txt",
             "supported",
             evidence_quote=_first_test_evidence_line(evidence.test_output_text),
             reason="The provided test output contains a passing result.",
+            claim_role="test_result_claim",
+            source_section=source_section,
         )
     return _claim(
-        "Tests passed.",
+        claim_text,
         "test_result_claim",
         "test_output.txt",
         "contradicted",
         evidence_quote=_first_test_evidence_line(evidence.test_output_text),
         reason="The provided test output does not show a passing result.",
+        claim_role="test_result_claim",
+        source_section=source_section,
     )
 
 
@@ -513,6 +641,10 @@ def _claim_diagnostics(claims: list[TrustClaim]) -> list[ClaimDiagnostic]:
                 source="agent_summary",
                 status=claim.verdict,
                 claim_type=claim.claim_type,
+                claim_role=claim.claim_role or _legacy_claim_role(claim),
+                source_section=claim.source_section,
+                verification_state=claim.verification_state,
+                affects_verdict=claim.affects_verdict,
                 reason=claim.reason or _default_claim_diagnostic_reason(claim),
                 evidence_strength=_claim_evidence_strength(claim),
                 supporting_evidence=_claim_supporting_evidence(claim),
@@ -560,7 +692,7 @@ def _claim_evidence_strength(claim: TrustClaim) -> str:
         if claim.claim_type == "test_result_claim":
             return "corroborated" if _is_agent_reported_test_claim(claim) else "direct"
         if claim.claim_type in {"file_added", "file_modified"}:
-            return "direct"
+            return "corroborated" if claim.claim_role and claim.claim_role != "file_inventory" else "direct"
         if claim.claim_type == "capability_claim":
             return "corroborated"
         return "corroborated"
@@ -653,6 +785,10 @@ def _claim_missing_evidence(claim: TrustClaim) -> list[str]:
 
 
 def _claim_reviewer_action(claim: TrustClaim) -> str:
+    if claim.verification_state == "unassessed":
+        return "Review the relevant diff and tests manually."
+    if claim.verification_state == "metadata":
+        return "No claim-specific action required."
     if claim.verdict == "supported":
         if _claim_evidence_strength(claim) == "direct":
             return "No claim-specific action required."
@@ -669,11 +805,13 @@ def _claim_reviewer_action(claim: TrustClaim) -> str:
 
 
 def _claim_primary_path(claim: TrustClaim) -> str:
+    match = re.search(r"([\w./-]+\.[A-Za-z0-9]+)\s+(?:appears|does not appear)", claim.reason)
+    if match:
+        return match.group(1)
     paths = _paths_from_text(claim.claim)
     if paths:
         return paths[0]
-    match = re.search(r"([\w./-]+\.[A-Za-z0-9]+)\s+(?:appears|does not appear)", claim.reason)
-    return match.group(1) if match else ""
+    return ""
 
 
 def _is_agent_reported_test_claim(claim: TrustClaim) -> bool:
@@ -784,23 +922,90 @@ def _decision_memory_summary_status(memory: DecisionMemory) -> str:
 
 
 def _summary_claim_lines(text: str) -> list[str]:
-    result: list[str] = []
-    for line in text.splitlines():
-        stripped = line.strip()
-        if not stripped or stripped.startswith("#"):
+    return [statement.text for statement in _summary_claim_statements(text)]
+
+
+def _summary_claim_statements(text: str) -> list[SummaryStatement]:
+    result: list[SummaryStatement] = []
+    source_section = "Agent Summary"
+    for raw_line in text.splitlines():
+        stripped = raw_line.strip()
+        if not stripped:
             continue
-        stripped = re.sub(r"^[-*]\s+", "", stripped).strip()
-        if stripped:
-            result.append(_clean_sentence(stripped))
+        heading = re.fullmatch(r"#{1,6}\s+(.+?)(?:\s+#+)?", stripped)
+        if heading:
+            source_section = heading.group(1).strip()
+            continue
+        section_label = re.fullmatch(r"([A-Za-z][A-Za-z0-9 /&_-]{0,60}):", stripped)
+        if section_label:
+            source_section = section_label.group(1).strip()
+            continue
+        stripped = re.sub(r"^(?:[-*]|\d+\.)\s+", "", stripped).strip()
+        if not stripped:
+            continue
+        text_value = _clean_sentence(stripped)
+        inventory_path = _file_inventory_path(text_value)
+        result.append(
+            SummaryStatement(
+                text=text_value,
+                source_section=source_section,
+                claim_role=_classify_claim_role(text_value, source_section, inventory_path=inventory_path),
+                inventory_path=inventory_path,
+            )
+        )
     return result
+
+
+def _classify_claim_role(text: str, source_section: str, *, inventory_path: str = "") -> str:
+    if inventory_path:
+        return "file_inventory"
+    lower = text.lower()
+    section = source_section.lower()
+    if "limitation" in section or re.match(r"^(?:remaining\s+)?limitation\b", lower):
+        return "limitation"
+    if re.search(r"\b(process|notes?|workflow)\b", section) or _is_process_statement(lower):
+        return "process_claim"
+    if _is_test_result_claim(text):
+        return "test_result_claim"
+    if re.search(r"\b(remains? unchanged|is unchanged|are unchanged|no changes? to|same as before)\b", lower):
+        return "invariance_claim"
+    if re.match(r"^(?:added|updated|modified|implemented|introduced|created)\b", lower):
+        return "implementation_claim"
+    if re.search(
+        r"\b(preserve|preserves|corroborate|corroborated|rank|ranks|cap|caps|render|renders|classify|classifies|exclude|excludes|prevent|prevents|load|loads|match|matches)\b",
+        lower,
+    ):
+        return "behavior_claim"
+    return "implementation_claim"
+
+
+def _is_process_statement(lower_text: str) -> bool:
+    return bool(
+        re.search(r"\b(no commit|not committed|no push|not pushed|dry run|manually verified|reviewed the diff)\b", lower_text)
+    )
 
 
 def _is_test_pass_claim(text: str) -> bool:
     return bool(re.search(r"\btests?\s+(?:passed|pass|are passing)\b", text, re.IGNORECASE))
 
 
+def _is_test_result_claim(text: str) -> bool:
+    if _is_test_pass_claim(text):
+        return True
+    return bool(
+        re.search(r"\bran\b.*\btests?\b.*\b(?:ok|pass(?:ed)?)\b", text, re.IGNORECASE)
+        or re.search(r"\b\d+\s+tests?\b.*\b(?:ok|pass(?:ed)?)\b", text, re.IGNORECASE)
+    )
+
+
 def _test_output_passed(text: str) -> bool:
-    return bool(re.search(r"(^|\n)\s*OK\s*(\n|$)|\b\d+\s+passed\b|\bPASS\b", text, re.IGNORECASE))
+    return bool(
+        re.search(
+            r"(^|\n)\s*OK\s*(\n|$)|\b\d+\s+passed\b|\bPASS\b|\bran\b.*\btests?\b.*\bOK\b",
+            text,
+            re.IGNORECASE,
+        )
+    )
 
 
 def _first_check_evidence_line(checks: PRChecksEvidence) -> str:
@@ -812,9 +1017,61 @@ def _first_check_evidence_line(checks: PRChecksEvidence) -> str:
 
 
 def _paths_from_text(text: str) -> list[str]:
-    paths = re.findall(r"`([^`]+\.[A-Za-z0-9]+)`", text)
-    paths.extend(re.findall(r"\b(?:src|tests|app|docs|README)[A-Za-z0-9_./-]*\.[A-Za-z0-9]+\b", text))
-    return _dedupe([path.strip() for path in paths if path.strip()])
+    paths: list[str] = []
+    inventory_path = _file_inventory_path(text)
+    if inventory_path:
+        paths.append(inventory_path)
+    paths.extend(match for match in re.findall(r"`([^`]+)`", text) if _is_repo_file_path(_strip_line_reference(match)))
+    paths.extend(
+        label
+        for label in re.findall(r"\[([^\]]+)\]\([^)]+\)", text)
+        if _is_repo_file_path(_strip_line_reference(label.strip("`")))
+    )
+    paths.extend(
+        re.findall(
+            r"(?<![A-Za-z0-9_./-])(?:\.?[A-Za-z0-9_-]+/)*\.?[A-Za-z0-9_-]+(?:\.[A-Za-z0-9_-]+)+(?![A-Za-z0-9_/-])",
+            text,
+        )
+    )
+    return _dedupe([_strip_line_reference(path.strip().strip("`")) for path in paths if path.strip()])
+
+
+def _file_inventory_path(text: str) -> str:
+    candidate = text.strip()
+    if candidate.endswith("."):
+        candidate = candidate[:-1].rstrip()
+    candidate = re.sub(r"^(?:added|modified|updated|created|deleted|removed)\s*:?\s+", "", candidate, flags=re.IGNORECASE)
+    link = re.fullmatch(r"\[([^\]]+)\]\([^)]+\)", candidate)
+    if link:
+        candidate = link.group(1).strip()
+    candidate = _strip_line_reference(candidate.strip("`"))
+    return candidate if _is_repo_file_path(candidate) else ""
+
+
+def _strip_line_reference(path: str) -> str:
+    return re.sub(
+        r"(?:#L\d+(?:-L\d+)?|:\d+(?::\d+)?|\s+\(?lines?\s+\d+(?:-\d+)?\)?)$",
+        "",
+        path.strip(),
+        flags=re.IGNORECASE,
+    ).strip()
+
+
+def _is_repo_file_path(value: str) -> bool:
+    return bool(
+        re.fullmatch(
+            r"(?:\.?[A-Za-z0-9_-]+/)*\.?[A-Za-z0-9_-]+(?:\.[A-Za-z0-9_-]+)+",
+            value,
+        )
+    )
+
+
+def _resolve_changed_path(path: str, changed_paths: set[str]) -> str:
+    clean_path = _strip_line_reference(path).removeprefix("./")
+    if clean_path in changed_paths:
+        return clean_path
+    matches = sorted(changed for changed in changed_paths if changed.endswith(f"/{clean_path}"))
+    return matches[0] if len(matches) == 1 else clean_path
 
 
 def _is_low_value_memory_candidate(text: str) -> bool:
@@ -918,6 +1175,10 @@ def _claim(
     *,
     evidence_quote: str = "",
     reason: str = "",
+    claim_role: str = "",
+    source_section: str = "Agent Summary",
+    verification_state: str = "assessed",
+    affects_verdict: bool | None = None,
 ) -> TrustClaim:
     claim = _clean_sentence(text)
     return TrustClaim(
@@ -928,7 +1189,27 @@ def _claim(
         evidence_target=evidence_target,
         evidence_quote=evidence_quote,
         reason=reason,
+        claim_role=claim_role,
+        source_section=source_section,
+        verification_state=verification_state,
+        affects_verdict=(
+            verdict in {"contradicted", "missing_evidence", "weakly_supported", "needs_review"}
+            if affects_verdict is None
+            else affects_verdict
+        ),
     )
+
+
+def _legacy_claim_role(claim: TrustClaim) -> str:
+    if claim.claim_type == "test_result_claim":
+        return "test_result_claim"
+    if claim.claim_type == "capability_claim":
+        return "behavior_claim"
+    if claim.claim_type in {"file_added", "file_modified"}:
+        return "implementation_claim"
+    if claim.claim_type in SUBSTANTIVE_CLAIM_ROLES:
+        return claim.claim_type
+    return "implementation_claim"
 
 
 def _diff_header_for_path(diff_text: str, path: str) -> str:
@@ -941,7 +1222,7 @@ def _diff_header_for_path(diff_text: str, path: str) -> str:
 def _first_test_evidence_line(text: str) -> str:
     for line in text.splitlines():
         stripped = line.strip()
-        if re.search(r"^OK$|\b\d+\s+passed\b|\bPASS\b", stripped, re.IGNORECASE):
+        if re.search(r"^OK$|\b\d+\s+passed\b|\bPASS\b|\bran\b.*\btests?\b.*\bOK\b", stripped, re.IGNORECASE):
             return stripped
     for line in text.splitlines():
         if line.strip():

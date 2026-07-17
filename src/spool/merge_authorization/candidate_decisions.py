@@ -78,6 +78,8 @@ def _is_candidate_decision(line: str) -> bool:
 
 def _is_low_value_line(line: str) -> bool:
     lower = line.lower()
+    if re.search(r"\b(remains? unchanged|is unchanged|are unchanged|still\s+\w+\s+(?:the\s+)?current)\b", lower):
+        return True
     if re.search(r"\btests?\s+should\s+pass\b", lower):
         return True
     if re.search(r"\bshould\s+(?:return|handle|accept|raise|parse|render|call|update)\b", lower):

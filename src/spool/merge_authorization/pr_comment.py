@@ -297,10 +297,31 @@ def _claim_summary_section(diagnostics: list[Any], fallback_items: list[Any]) ->
             lines.append(f"- {remaining} more claim{'s' if remaining != 1 else ''} in the full claim ledger in `trust_report.md` / `trust_report.json`.")
         return lines
 
-    ordered = _ordered_claim_diagnostics(claim_items)
+    inventory = [item for item in claim_items if _diagnostic_role(item) == "file_inventory"]
+    metadata = [item for item in claim_items if _diagnostic_role(item) in {"process_claim", "limitation"}]
+    display_items = [
+        item
+        for item in claim_items
+        if _is_substantive_claim(item) or _metadata_claim_needs_attention(item)
+    ]
+    ordered = _ordered_claim_diagnostics(display_items)
+    metadata_lines: list[str] = []
+    if inventory:
+        metadata_lines.extend(["", _inventory_summary_line(inventory)])
+    if metadata:
+        process_count = sum(1 for item in metadata if _diagnostic_role(item) == "process_claim")
+        limitation_count = sum(1 for item in metadata if _diagnostic_role(item) == "limitation")
+        details: list[str] = []
+        if process_count:
+            details.append(f"{process_count} process note{'s' if process_count != 1 else ''}")
+        if limitation_count:
+            details.append(f"{limitation_count} limitation{'s' if limitation_count != 1 else ''}")
+        metadata_lines.append(f"**Process and limitations:** {', '.join(details)}.")
+    if not ordered:
+        return metadata_lines
     lines = ["", "### Claim summary", ""]
     for item in ordered[:5]:
-        status = str(item.get("status") or "unknown")
+        status = _diagnostic_display_status(item)
         strength = str(item.get("evidence_strength") or "unknown")
         evidence = _diagnostic_evidence_paths(item)
         action = _diagnostic_action(item)
@@ -313,11 +334,95 @@ def _claim_summary_section(diagnostics: list[Any], fallback_items: list[Any]) ->
     if len(ordered) > 5:
         remaining = len(ordered) - 5
         lines.append(f"- {remaining} more claim{'s' if remaining != 1 else ''} in the full claim ledger in `trust_report.md` / `trust_report.json`.")
+    lines.extend(metadata_lines)
     return lines
 
 
 def _ordered_claim_diagnostics(diagnostics: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    return [item[1] for item in sorted(enumerate(diagnostics), key=lambda item: (_claim_status_rank(str(item[1].get("status"))), item[0]))]
+    return [
+        item[1]
+        for item in sorted(
+            enumerate(diagnostics),
+            key=lambda item: (
+                _comment_status_rank(item[1]),
+                _claim_role_rank(_diagnostic_role(item[1])),
+                item[0],
+            ),
+        )
+    ]
+
+
+def _comment_status_rank(item: dict[str, Any]) -> int:
+    if item.get("verification_state") == "unassessed":
+        return 3
+    status = str(item.get("status") or "")
+    order = {
+        "contradicted": 0,
+        "unsupported": 1,
+        "missing_evidence": 2,
+        "weakly_supported": 4,
+        "needs_review": 4,
+        "supported": 5,
+        "not_applicable": 6,
+        "no_relevant_memory": 7,
+    }
+    return order.get(status, _claim_status_rank(status))
+
+
+def _claim_role_rank(role: str) -> int:
+    return {
+        "invariance_claim": 0,
+        "behavior_claim": 1,
+        "implementation_claim": 2,
+        "test_result_claim": 3,
+        "file_inventory": 4,
+        "process_claim": 5,
+        "limitation": 6,
+    }.get(role, 7)
+
+
+def _diagnostic_role(item: dict[str, Any]) -> str:
+    role = str(item.get("claim_role") or "")
+    if role:
+        return role
+    claim_type = str(item.get("claim_type") or "")
+    if claim_type == "test_result_claim":
+        return "test_result_claim"
+    if claim_type == "capability_claim":
+        return "behavior_claim"
+    return "implementation_claim"
+
+
+def _is_substantive_claim(item: dict[str, Any]) -> bool:
+    return _diagnostic_role(item) in {
+        "implementation_claim",
+        "behavior_claim",
+        "invariance_claim",
+        "test_result_claim",
+    }
+
+
+def _metadata_claim_needs_attention(item: dict[str, Any]) -> bool:
+    return str(item.get("status") or "") in {
+        "contradicted",
+        "unsupported",
+        "missing_evidence",
+        "weakly_supported",
+        "needs_review",
+    }
+
+
+def _diagnostic_display_status(item: dict[str, Any]) -> str:
+    if item.get("verification_state") == "unassessed":
+        return "unassessed"
+    return str(item.get("status") or "unknown")
+
+
+def _inventory_summary_line(inventory: list[dict[str, Any]]) -> str:
+    total = len(inventory)
+    present = sum(1 for item in inventory if item.get("status") == "supported")
+    file_word = "file" if total == 1 else "files"
+    return f"**Changed-file inventory:** {total} claimed {file_word}, {present} present in the diff."
 
 
 def _diagnostic_reason(item: dict[str, Any]) -> str:
