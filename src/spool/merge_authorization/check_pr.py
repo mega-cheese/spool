@@ -60,6 +60,7 @@ def run_pr_check(
         task_path=assignment_path,
         agent_summary_path=agent_summary_path,
         test_output_path=test_output_path,
+        test_output_source="pr_body_tests_run" if test_output_path else None,
         pr_metadata_path=evidence_paths.get("pr_metadata"),
         pr_title_text=str(metadata.get("title") or ""),
         ci_checks_path=evidence_paths.get("ci_checks"),

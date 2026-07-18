@@ -8,6 +8,8 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
+from .merge_authorization import _claim_status_rank
+
 
 class PRCommentError(RuntimeError):
     pass
@@ -43,10 +45,13 @@ def render_pr_comment(payload: dict[str, Any]) -> str:
     decision_memory = dict(payload.get("decision_memory") or {})
     reviewer_actions = list(payload.get("reviewer_actions") or [])
     weak_or_missing = list(payload.get("weak_or_missing_evidence") or [])
+    claim_diagnostics = list(payload.get("claim_diagnostics") or [])
     risks = list(payload.get("risks") or [])
 
     supported_claims = _int_value(summary.get("supported_claims_count"))
+    unassessed_claims = _int_value(summary.get("unassessed_claims_count"))
     unsupported_claims = _int_value(summary.get("unsupported_claims_count"))
+    contradicted_claims = _int_value(summary.get("contradicted_claims_count"))
     weak_count = len(weak_or_missing)
     allowed_scope_status = str(summary.get("allowed_scope_status") or "unknown")
     decision_memory_status = _display_decision_memory_status(
@@ -63,7 +68,10 @@ def render_pr_comment(payload: dict[str, Any]) -> str:
         "",
         f"**Verdict:** {VERDICT_LABELS.get(verdict, 'Unknown')} (`{verdict}`)  ",
         f"**Scope:** {allowed_scope_status}  ",
-        f"**Agent claims:** {supported_claims} supported, {unsupported_claims} unsupported  ",
+        (
+            f"**Agent claims:** {supported_claims} supported, {unassessed_claims} unassessed, "
+            f"{unsupported_claims} unsupported, {contradicted_claims} contradicted  "
+        ),
     ]
     if weak_count:
         lines.append(f"**Weak/missing evidence:** {weak_count}  ")
@@ -73,6 +81,7 @@ def render_pr_comment(payload: dict[str, Any]) -> str:
     lines.append(f"**Decision memory:** {decision_memory_status}  ")
     lines.extend(["", "### Why this verdict?", ""])
     lines.extend([f"- {bullet}" for bullet in _why_bullets(payload)])
+    lines.extend(_claim_summary_section(claim_diagnostics, weak_or_missing))
     if risks:
         lines.extend(["", "### Risks", ""])
         lines.extend([f"- {risk}" for risk in risks[:3]])
@@ -258,6 +267,7 @@ def _inline_code_join(items: list[str]) -> str:
 def _test_evidence_line(evidence: dict[str, Any], checks: dict[str, Any]) -> str:
     checks_status = str(checks.get("status") or evidence.get("ci_checks") or "unknown")
     test_output_status = str(evidence.get("test_output") or "unknown")
+    test_output_source = str(evidence.get("test_output_source") or "")
     failed_checks = [str(item) for item in checks.get("failed_checks") or [] if item]
     pending_checks = [str(item) for item in checks.get("pending_checks") or [] if item]
 
@@ -268,16 +278,186 @@ def _test_evidence_line(evidence: dict[str, Any], checks: dict[str, Any]) -> str
             return "GitHub checks pending"
         return "GitHub checks available and passing"
     if test_output_status == "available":
+        evidence_label = "PR body self-report" if test_output_source == "pr_body_tests_run" else "Captured test output"
+        if not test_output_source:
+            evidence_label = "PR body tests"
         if checks_status == "unavailable":
-            return "PR body tests available; GitHub checks unavailable"
+            return f"{evidence_label} available; GitHub checks unavailable"
         if checks_status == "empty":
-            return "PR body tests available; GitHub checks empty"
+            return f"{evidence_label} available; GitHub checks empty"
         if checks_status == "not_supported":
-            return "PR body tests available; GitHub checks not supported"
-        return "PR body tests available"
+            return f"{evidence_label} available; GitHub checks not supported"
+        return f"{evidence_label} available"
     if test_output_status in {"not_provided", "empty"} and checks_status == "unavailable":
         return "No PR body tests available; GitHub checks unavailable"
     return "unknown"
+
+
+def _claim_summary_section(diagnostics: list[Any], fallback_items: list[Any]) -> list[str]:
+    claim_items = [item for item in diagnostics if isinstance(item, dict)]
+    if not claim_items:
+        if not fallback_items:
+            return []
+        lines = ["", "### Claim summary", ""]
+        for item in fallback_items[:5]:
+            lines.append(f"- {item}")
+        if len(fallback_items) > 5:
+            remaining = len(fallback_items) - 5
+            lines.append(f"- {remaining} more claim{'s' if remaining != 1 else ''} in the full claim ledger in `trust_report.md` / `trust_report.json`.")
+        return lines
+
+    inventory = [item for item in claim_items if _diagnostic_role(item) == "file_inventory"]
+    metadata = [item for item in claim_items if _diagnostic_role(item) in {"process_claim", "limitation"}]
+    display_items = [
+        item
+        for item in claim_items
+        if _is_substantive_claim(item) or _metadata_claim_needs_attention(item)
+    ]
+    ordered = _ordered_claim_diagnostics(display_items)
+    metadata_lines: list[str] = []
+    if inventory:
+        metadata_lines.extend(["", _inventory_summary_line(inventory)])
+    if metadata:
+        process_count = sum(1 for item in metadata if _diagnostic_role(item) == "process_claim")
+        limitation_count = sum(1 for item in metadata if _diagnostic_role(item) == "limitation")
+        details: list[str] = []
+        if process_count:
+            details.append(f"{process_count} process note{'s' if process_count != 1 else ''}")
+        if limitation_count:
+            details.append(f"{limitation_count} limitation{'s' if limitation_count != 1 else ''}")
+        metadata_lines.append(f"**Process and limitations:** {', '.join(details)}.")
+    if not ordered:
+        return metadata_lines
+    lines = ["", "### Claim summary", ""]
+    for item in ordered[:5]:
+        status = _diagnostic_display_status(item)
+        strength = str(item.get("evidence_strength") or "unknown")
+        evidence = _diagnostic_evidence_paths(item)
+        action = _diagnostic_action(item)
+        line = f"- {_truncate(str(item.get('claim') or ''))} (`{status}`, {strength}) - {_truncate(_diagnostic_reason(item))}"
+        if evidence:
+            line += f" Evidence: {evidence}."
+        if action:
+            line += f" Action: {_truncate(action)}"
+        lines.append(line)
+    if len(ordered) > 5:
+        remaining = len(ordered) - 5
+        lines.append(f"- {remaining} more claim{'s' if remaining != 1 else ''} in the full claim ledger in `trust_report.md` / `trust_report.json`.")
+    lines.extend(metadata_lines)
+    return lines
+
+
+def _ordered_claim_diagnostics(diagnostics: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [
+        item[1]
+        for item in sorted(
+            enumerate(diagnostics),
+            key=lambda item: (
+                _comment_status_rank(item[1]),
+                _claim_role_rank(_diagnostic_role(item[1])),
+                item[0],
+            ),
+        )
+    ]
+
+
+def _comment_status_rank(item: dict[str, Any]) -> int:
+    if item.get("verification_state") in {"unassessed", "self_reported"}:
+        return 3
+    status = str(item.get("status") or "")
+    order = {
+        "contradicted": 0,
+        "unsupported": 1,
+        "missing_evidence": 2,
+        "weakly_supported": 4,
+        "needs_review": 4,
+        "supported": 5,
+        "not_applicable": 6,
+        "no_relevant_memory": 7,
+    }
+    return order.get(status, _claim_status_rank(status))
+
+
+def _claim_role_rank(role: str) -> int:
+    return {
+        "invariance_claim": 0,
+        "behavior_claim": 1,
+        "implementation_claim": 2,
+        "test_result_claim": 3,
+        "file_inventory": 4,
+        "process_claim": 5,
+        "limitation": 6,
+    }.get(role, 7)
+
+
+def _diagnostic_role(item: dict[str, Any]) -> str:
+    role = str(item.get("claim_role") or "")
+    if role:
+        return role
+    claim_type = str(item.get("claim_type") or "")
+    if claim_type == "test_result_claim":
+        return "test_result_claim"
+    if claim_type == "capability_claim":
+        return "behavior_claim"
+    return "implementation_claim"
+
+
+def _is_substantive_claim(item: dict[str, Any]) -> bool:
+    return _diagnostic_role(item) in {
+        "implementation_claim",
+        "behavior_claim",
+        "invariance_claim",
+        "test_result_claim",
+    }
+
+
+def _metadata_claim_needs_attention(item: dict[str, Any]) -> bool:
+    return str(item.get("status") or "") in {
+        "contradicted",
+        "unsupported",
+        "missing_evidence",
+        "weakly_supported",
+        "needs_review",
+    }
+
+
+def _diagnostic_display_status(item: dict[str, Any]) -> str:
+    if item.get("verification_state") in {"unassessed", "self_reported"}:
+        return "unassessed"
+    return str(item.get("status") or "unknown")
+
+
+def _inventory_summary_line(inventory: list[dict[str, Any]]) -> str:
+    total = len(inventory)
+    present = sum(1 for item in inventory if item.get("status") == "supported")
+    file_word = "file" if total == 1 else "files"
+    return f"**Changed-file inventory:** {total} claimed {file_word}, {present} present in the diff."
+
+
+def _diagnostic_reason(item: dict[str, Any]) -> str:
+    return str(item.get("reason") or item.get("why") or "Spool could not deterministically verify this claim.")
+
+
+def _diagnostic_action(item: dict[str, Any]) -> str:
+    action = str(item.get("reviewer_action") or "")
+    return "" if action.startswith("No claim-specific action required") else action
+
+
+def _diagnostic_evidence_paths(item: dict[str, Any]) -> str:
+    paths: list[str] = []
+    for evidence in item.get("supporting_evidence") or []:
+        if isinstance(evidence, dict):
+            path = evidence.get("path")
+            if path:
+                paths.append(str(path))
+    return _inline_code_join(paths[:3]) if paths else ""
+
+
+def _truncate(text: str, limit: int = 180) -> str:
+    cleaned = " ".join(str(text).split())
+    if len(cleaned) <= limit:
+        return cleaned
+    return cleaned[: limit - 3].rstrip() + "..."
 
 
 def _why_bullets(payload: dict[str, Any]) -> list[str]:
@@ -289,11 +469,26 @@ def _why_bullets(payload: dict[str, Any]) -> list[str]:
     verdict = str(payload.get("overall_verdict") or "unknown")
     supported_claims = _int_value(summary.get("supported_claims_count"))
     unsupported_claims = _int_value(summary.get("unsupported_claims_count"))
+    contradicted_claims = _int_value(summary.get("contradicted_claims_count"))
+    claim_diagnostics = [item for item in payload.get("claim_diagnostics") or [] if isinstance(item, dict)]
     allowed_scope_status = str(summary.get("allowed_scope_status") or "unknown")
     scope_violations = [str(item) for item in scope.get("scope_violations") or [] if item]
     failed_checks = [str(item) for item in checks.get("failed_checks") or [] if item]
     pending_checks = [str(item) for item in checks.get("pending_checks") or [] if item]
     bullets: list[str] = []
+
+    contradicted_test_claims = [
+        item
+        for item in claim_diagnostics
+        if item.get("status") == "contradicted" and item.get("claim_type") == "test_result_claim"
+    ]
+    verdict_affecting_claims = [item for item in claim_diagnostics if item.get("affects_verdict")]
+    if contradicted_test_claims:
+        count = len(contradicted_test_claims)
+        if count == 1:
+            bullets.append("One agent test-result claim conflicts with the available evidence.")
+        else:
+            bullets.append(f"{count} agent test-result claims conflict with the available evidence.")
 
     if verdict in {"repair", "stop"} and scope_violations:
         bullets.append(f"Scope violations were found: {_inline_code_join(scope_violations)}.")
@@ -314,13 +509,14 @@ def _why_bullets(payload: dict[str, Any]) -> list[str]:
     elif allowed_scope_status == "outside_allowed_scope" and not scope_violations:
         bullets.append("Some changed files appear to be outside the allowed files/areas.")
 
-    if unsupported_claims == 0 and supported_claims > 0:
+    if unsupported_claims == 0 and supported_claims > 0 and contradicted_claims == 0 and not verdict_affecting_claims:
         bullets.append("No unsupported agent claims were found.")
     elif unsupported_claims > 0:
         bullets.append(f"Spool found {unsupported_claims} unsupported agent claim{'s' if unsupported_claims != 1 else ''}.")
 
     checks_status = str(checks.get("status") or evidence.get("ci_checks") or "unknown")
     test_output_status = str(evidence.get("test_output") or "unknown")
+    test_output_source = str(evidence.get("test_output_source") or "")
     if checks_status == "available" and failed_checks:
         bullets.append(f"GitHub checks include failures: {_inline_code_join(failed_checks)}.")
     elif checks_status == "available" and pending_checks:
@@ -329,7 +525,10 @@ def _why_bullets(payload: dict[str, Any]) -> list[str]:
         bullets.append("GitHub checks are available and passing.")
     elif checks_status in {"unavailable", "empty"} and test_output_status == "available":
         qualifier = "unavailable" if checks_status == "unavailable" else "not reported"
-        bullets.append(f"GitHub checks were {qualifier} for this PR, so Spool used PR body test evidence.")
+        source = "PR body self-report" if test_output_source == "pr_body_tests_run" else "captured test output"
+        if not test_output_source:
+            source = "PR body test evidence"
+        bullets.append(f"GitHub checks were {qualifier} for this PR, so Spool used {source}.")
 
     if not bullets:
         bullets.append("Spool rendered this summary from the available merge authorization report fields.")

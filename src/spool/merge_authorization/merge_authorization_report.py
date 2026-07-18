@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from .merge_authorization import PRTrustReport
+from .merge_authorization import PRTrustReport, _claim_status_rank
 
 
 def write_trust_report(report: PRTrustReport, out_dir: str | Path, *, pretty: bool = False) -> dict[str, str]:
@@ -34,6 +34,8 @@ def trust_report_to_markdown(report: PRTrustReport) -> str:
         f"- Allowed scope status: {summary.get('allowed_scope_status', 'unknown')}",
         f"- Supported claims: {summary.get('supported_claims_count', 0)}",
         f"- Unsupported claims: {summary.get('unsupported_claims_count', 0)}",
+        f"- Unassessed claims: {summary.get('unassessed_claims_count', 0)}",
+        f"- Contradicted claims: {summary.get('contradicted_claims_count', 0)}",
         f"- Test evidence: {summary.get('test_evidence_status', 'unknown')}",
         f"- Decision memory: {summary.get('decision_memory_status', summary.get('repo_memory_status', 'unknown'))}",
         "",
@@ -51,8 +53,17 @@ def trust_report_to_markdown(report: PRTrustReport) -> str:
         "",
     ])
     lines.extend(_claim_lines(payload.get("agent_claims") or []))
+    lines.extend(["", "## Agent claim ledger", ""])
+    lines.extend(_claim_ledger_lines(payload.get("claim_diagnostics") or []))
+    lines.extend(["", "## Unsupported claims", ""])
+    lines.extend(_unsupported_claim_lines(payload.get("claim_diagnostics") or []))
     lines.extend(["", "## Weak or Missing Evidence", ""])
-    lines.extend(_simple_lines(payload.get("weak_or_missing_evidence") or []))
+    lines.extend(
+        _weak_or_missing_lines(
+            payload.get("claim_diagnostics") or [],
+            payload.get("weak_or_missing_evidence") or [],
+        )
+    )
     lines.extend(["", "## Candidate Decisions Requiring Approval", ""])
     lines.extend(_candidate_decision_lines(payload.get("candidate_decisions") or []))
     lines.extend(["", "## Decision Memory", ""])
@@ -73,12 +84,119 @@ def _claim_lines(claims: list[dict[str, Any]]) -> list[str]:
     for claim in claims:
         lines.append(f"- Claim: {claim.get('claim')}")
         lines.append(f"  - Type: {claim.get('claim_type')}")
+        lines.append(f"  - Role: {claim.get('claim_role') or claim.get('claim_type')}")
+        lines.append(f"  - Source section: {claim.get('source_section') or 'Agent Summary'}")
         lines.append(f"  - Verdict: {claim.get('verdict')}")
+        lines.append(f"  - Verification state: {claim.get('verification_state') or 'assessed'}")
         lines.append(f"  - Evidence target: {claim.get('evidence_target')}")
         if claim.get("evidence_quote"):
             lines.append(f"  - Evidence: {claim.get('evidence_quote')}")
         if claim.get("reason"):
             lines.append(f"  - Reason: {claim.get('reason')}")
+    return lines
+
+
+def _claim_ledger_lines(diagnostics: list[dict[str, Any]]) -> list[str]:
+    if not diagnostics:
+        return ["- None"]
+    substantive = [item for item in diagnostics if _diagnostic_role(item) in _substantive_roles()]
+    inventory = [item for item in diagnostics if _diagnostic_role(item) == "file_inventory"]
+    metadata = [item for item in diagnostics if _diagnostic_role(item) in {"process_claim", "limitation"}]
+    categorized_ids = {id(item) for item in substantive + inventory + metadata}
+    substantive.extend(item for item in diagnostics if id(item) not in categorized_ids)
+
+    lines: list[str] = []
+    lines.extend(["### Substantive claims", ""])
+    if substantive:
+        lines.extend(_claim_detail_lines(_ordered_claim_diagnostics(substantive)))
+    else:
+        lines.append("- None")
+
+    lines.extend(["", "### Changed-file inventory", ""])
+    lines.extend(_inventory_ledger_lines(inventory))
+
+    lines.extend(["", "### Process and limitations", ""])
+    if metadata:
+        for item in metadata:
+            role = _display_status(_diagnostic_role(item))
+            section = item.get("source_section") or "Agent Summary"
+            lines.append(f"- {item.get('claim')} ({role}; {section})")
+    else:
+        lines.append("- None")
+    return lines
+
+
+def _claim_detail_lines(diagnostics: list[dict[str, Any]]) -> list[str]:
+    lines: list[str] = []
+    for index, item in enumerate(diagnostics, start=1):
+        lines.append(f"#### {index}. {item.get('claim')}")
+        lines.append("")
+        lines.append(f"- **Status:** {_display_claim_status(item)}")
+        lines.append(f"- **Role:** {_display_status(_diagnostic_role(item))}")
+        lines.append(f"- **Evidence strength:** {_display_status(item.get('evidence_strength'))}")
+        lines.append(f"- **Source:** {_display_source(item.get('source'))}")
+        lines.append(f"- **Source section:** {item.get('source_section') or 'Agent Summary'}")
+        lines.append(f"- **Evidence source:** {item.get('evidence_source') or 'None'}")
+        lines.append(f"- **Independent corroboration:** {'Yes' if item.get('independent_corroboration') else 'No'}")
+        lines.append(f"- **Why:** {_diagnostic_reason(item)}")
+        lines.append("- **Supporting evidence:**")
+        evidence = item.get("supporting_evidence") or []
+        if evidence:
+            for evidence_item in evidence:
+                lines.append(f"  - {_supporting_evidence_text(evidence_item)}")
+        else:
+            lines.append("  - None")
+        missing = item.get("missing_evidence") or []
+        lines.append(f"- **Missing evidence:** {_join_or_none(missing)}")
+        lines.append(f"- **Reviewer action:** {item.get('reviewer_action') or 'Review this claim against the PR evidence.'}")
+        lines.append("")
+    while lines and lines[-1] == "":
+        lines.pop()
+    return lines
+
+
+def _inventory_ledger_lines(inventory: list[dict[str, Any]]) -> list[str]:
+    if not inventory:
+        return ["- None"]
+    present = sum(1 for item in inventory if item.get("status") == "supported")
+    total = len(inventory)
+    file_word = "file" if total == 1 else "files"
+    lines = [f"- {total} claimed {file_word}; {present} present in the diff."]
+    for item in _ordered_claim_diagnostics(inventory):
+        line = f"- {item.get('claim')} ({_display_claim_status(item)})"
+        if item.get("status") != "supported":
+            line += f" - {_diagnostic_reason(item)}"
+        lines.append(line)
+    return lines
+
+
+def _unsupported_claim_lines(diagnostics: list[dict[str, Any]]) -> list[str]:
+    unsupported = [item for item in diagnostics if item.get("status") == "unsupported"]
+    if not unsupported:
+        return ["Unsupported claims: None"]
+    lines: list[str] = []
+    for index, item in enumerate(_ordered_claim_diagnostics(unsupported), start=1):
+        lines.append(f"{index}. Claim: {item.get('claim')}")
+        lines.append(f"   Source: {_display_source(item.get('source'))}")
+        lines.append(f"   Reason: {_diagnostic_reason(item)}")
+        lines.append(f"   Evidence checked: {_join_or_none(item.get('evidence_checked') or [])}")
+        lines.append(f"   Reviewer action: {item.get('reviewer_action') or 'Review this claim against the PR evidence.'}")
+    return lines
+
+
+def _weak_or_missing_lines(diagnostics: list[dict[str, Any]], fallback_items: list[Any]) -> list[str]:
+    statuses = {"missing_evidence", "weakly_supported", "needs_review"}
+    weak_items = [item for item in diagnostics if item.get("status") in statuses]
+    if not weak_items:
+        return _simple_lines(fallback_items)
+    lines: list[str] = []
+    for item in _ordered_claim_diagnostics(weak_items):
+        lines.append(f"- Claim: {item.get('claim')}")
+        lines.append(f"  - Status: {item.get('status')}")
+        lines.append(f"  - Source: {_display_source(item.get('source'))}")
+        lines.append(f"  - Reason: {_diagnostic_reason(item)}")
+        lines.append(f"  - Evidence checked: {_join_or_none(item.get('evidence_checked') or [])}")
+        lines.append(f"  - Reviewer action: {item.get('reviewer_action') or 'Review this claim against the PR evidence.'}")
     return lines
 
 
@@ -92,6 +210,7 @@ def _evidence_coverage_lines(coverage: dict[str, Any]) -> list[str]:
         f"- Changed files: {coverage.get('changed_files')}",
         f"- Assignment: {coverage.get('assignment')}",
         f"- Test output: {coverage.get('test_output')}",
+        f"- Test evidence source: {coverage.get('test_output_source', 'unknown')}",
         f"- CI checks: {coverage.get('ci_checks')}",
         f"- Approved decisions: {coverage.get('approved_decisions')}",
         f"- Legacy repo memory: {coverage.get('legacy_repo_memory')}",
@@ -232,6 +351,69 @@ def _display_decision_memory_status(status: Any) -> str:
     if text in {"missing", "malformed"}:
         return "unavailable"
     return text
+
+
+def _display_source(source: Any) -> str:
+    text = str(source or "unknown")
+    if text == "agent_summary":
+        return "Agent Summary"
+    return text
+
+
+def _display_status(status: Any) -> str:
+    return str(status or "unknown").replace("_", " ").capitalize()
+
+
+def _display_claim_status(item: dict[str, Any]) -> str:
+    if item.get("verification_state") in {"unassessed", "self_reported"}:
+        return "Unassessed"
+    return _display_status(item.get("status"))
+
+
+def _substantive_roles() -> set[str]:
+    return {"implementation_claim", "behavior_claim", "invariance_claim", "test_result_claim"}
+
+
+def _diagnostic_role(item: dict[str, Any]) -> str:
+    role = str(item.get("claim_role") or "")
+    if role:
+        return role
+    claim_type = str(item.get("claim_type") or "")
+    if claim_type == "test_result_claim":
+        return "test_result_claim"
+    if claim_type == "capability_claim":
+        return "behavior_claim"
+    return "implementation_claim"
+
+
+def _diagnostic_reason(item: dict[str, Any]) -> str:
+    return str(item.get("reason") or item.get("why") or "Spool could not deterministically verify this claim.")
+
+
+def _supporting_evidence_text(item: Any) -> str:
+    if not isinstance(item, dict):
+        return str(item)
+    path = item.get("path")
+    quote = item.get("quote")
+    explanation = item.get("explanation")
+    subject = f"`{path}`" if path else str(item.get("type") or "evidence")
+    detail = str(explanation or quote or "").strip()
+    if quote and explanation:
+        detail = f"{explanation} Quote: {quote}"
+    return f"{subject} - {detail}" if detail else subject
+
+
+def _ordered_claim_diagnostics(diagnostics: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [
+        item[1]
+        for item in sorted(
+            enumerate(diagnostics),
+            key=lambda item: (
+                4 if item[1].get("verification_state") == "unassessed" else _claim_status_rank(str(item[1].get("status"))),
+                item[0],
+            ),
+        )
+    ]
 
 
 def _join_or_none(items: list[Any]) -> str:

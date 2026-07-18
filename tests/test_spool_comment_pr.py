@@ -58,14 +58,46 @@ class SpoolCommentPRTest(unittest.TestCase):
         return report_path
 
     def test_renders_continue_report_comment(self) -> None:
-        comment = render_pr_comment(self._report_payload())
+        comment = render_pr_comment(
+            self._report_payload(
+                summary={
+                    "allowed_scope_status": "within_allowed_scope",
+                    "supported_claims_count": 1,
+                    "unsupported_claims_count": 0,
+                    "test_evidence_status": "supported",
+                    "decision_memory_status": "not_configured",
+                },
+                claim_diagnostics=[
+                    {
+                        "claim": "Updated `src/review_actions.py`.",
+                        "source": "agent_summary",
+                        "status": "supported",
+                        "reason": "src/review_actions.py appears in the PR diff.",
+                        "evidence_strength": "direct",
+                        "supporting_evidence": [
+                            {
+                                "type": "changed_file",
+                                "path": "src/review_actions.py",
+                                "explanation": "The claimed path appears in the PR diff.",
+                            }
+                        ],
+                        "missing_evidence": [],
+                        "evidence_checked": ["agent_summary.md", "diff.patch"],
+                        "reviewer_action": "No claim-specific action required.",
+                    }
+                ],
+            )
+        )
 
         self.assertIn("## Spool Merge Authorization", comment)
         self.assertIn("**Verdict:** Ready to continue (`continue`)", comment)
         self.assertIn("**Scope:** within_allowed_scope", comment)
-        self.assertIn("**Agent claims:** 8 supported, 0 unsupported", comment)
+        self.assertIn("**Agent claims:** 1 supported, 0 unassessed, 0 unsupported, 0 contradicted", comment)
         self.assertIn("**Test evidence:** PR body tests available; GitHub checks unavailable", comment)
         self.assertIn("**Decision memory:** not_configured", comment)
+        self.assertIn("### Claim summary", comment)
+        self.assertIn("- Updated `src/review_actions.py`. (`supported`, direct) - src/review_actions.py appears in the PR diff.", comment)
+        self.assertIn("Evidence: `src/review_actions.py`.", comment)
         self.assertIn("### Reviewer actions", comment)
         self.assertIn("- continue", comment)
 
@@ -99,6 +131,19 @@ class SpoolCommentPRTest(unittest.TestCase):
         payload = self._report_payload(
             overall_verdict="human_review",
             weak_or_missing_evidence=["The agent says tests passed, but no test output was provided."],
+            claim_diagnostics=[
+                {
+                    "claim": "Tests passed.",
+                    "source": "agent_summary",
+                    "status": "missing_evidence",
+                    "reason": "The agent says tests passed, but no test output was provided.",
+                    "evidence_strength": "none",
+                    "supporting_evidence": [],
+                    "missing_evidence": ["Test output was not provided."],
+                    "evidence_checked": ["agent_summary.md", "checks.json", "test_output.txt"],
+                    "reviewer_action": "Ask the agent to provide the missing evidence or revise this claim.",
+                }
+            ],
             reviewer_actions=["human review required"],
             evidence_coverage={
                 "assignment": "available",
@@ -112,6 +157,396 @@ class SpoolCommentPRTest(unittest.TestCase):
         self.assertIn("**Verdict:** Needs human review (`human_review`)", comment)
         self.assertIn("**Weak/missing evidence:** 1", comment)
         self.assertIn("Spool found 1 weak or missing evidence item.", comment)
+        self.assertIn("### Claim summary", comment)
+        self.assertIn("- Tests passed. (`missing_evidence`, none) - The agent says tests passed, but no test output was provided.", comment)
+        self.assertIn("Action: Ask the agent to provide the missing evidence or revise this claim.", comment)
+
+    def test_contradicted_claim_is_counted_and_suppresses_no_unsupported_message(self) -> None:
+        payload = self._report_payload(
+            overall_verdict="stop",
+            summary={
+                "allowed_scope_status": "within_allowed_scope",
+                "supported_claims_count": 4,
+                "unassessed_claims_count": 5,
+                "unsupported_claims_count": 0,
+                "contradicted_claims_count": 1,
+                "test_evidence_status": "contradicted",
+                "decision_memory_status": "not_configured",
+            },
+            claim_diagnostics=[
+                {
+                    "claim": "Full suite: 403 tests passed.",
+                    "source": "agent_summary",
+                    "status": "contradicted",
+                    "claim_type": "test_result_claim",
+                    "claim_role": "test_result_claim",
+                    "verification_state": "assessed",
+                    "affects_verdict": True,
+                    "reason": "The PR body says 403 tests passed, but captured output reports 2 failures.",
+                    "evidence_strength": "direct",
+                    "supporting_evidence": [
+                        {
+                            "type": "test_output",
+                            "path": "test_output.txt",
+                            "quote": "FAILED (failures=2)",
+                            "explanation": "Captured test output reports 2 failures.",
+                        }
+                    ],
+                    "missing_evidence": [],
+                    "reviewer_action": "Stop: “Full suite: 403 tests passed.” conflicts with captured output reporting 2 failures.",
+                }
+            ],
+            reviewer_actions=["Stop: “Full suite: 403 tests passed.” conflicts with captured output reporting 2 failures."],
+        )
+
+        comment = render_pr_comment(payload)
+
+        self.assertIn("**Agent claims:** 4 supported, 5 unassessed, 0 unsupported, 1 contradicted", comment)
+        self.assertIn("One agent test-result claim conflicts with the available evidence.", comment)
+        self.assertNotIn("No unsupported agent claims were found.", comment)
+        self.assertIn("Stop: “Full suite: 403 tests passed.” conflicts with captured output reporting 2 failures.", comment)
+
+    def test_renders_unsupported_claim_details_in_comment(self) -> None:
+        payload = self._report_payload(
+            overall_verdict="repair",
+            summary={
+                "allowed_scope_status": "within_allowed_scope",
+                "supported_claims_count": 1,
+                "unsupported_claims_count": 2,
+                "test_evidence_status": "supported",
+                "decision_memory_status": "not_configured",
+            },
+            claim_diagnostics=[
+                {
+                    "claim": "Added `src/missing_a.py`.",
+                    "source": "agent_summary",
+                    "status": "unsupported",
+                    "reason": "src/missing_a.py does not appear in the PR diff.",
+                    "evidence_strength": "none",
+                    "supporting_evidence": [],
+                    "missing_evidence": ["No changed file matching `src/missing_a.py` was found in the PR diff."],
+                    "evidence_checked": ["agent_summary.md", "diff.patch"],
+                    "reviewer_action": "Ask the agent to point to the supporting diff or revise/remove this claim.",
+                },
+                {
+                    "claim": "Added `src/missing_b.py`.",
+                    "source": "agent_summary",
+                    "status": "unsupported",
+                    "reason": "src/missing_b.py does not appear in the PR diff.",
+                    "evidence_strength": "none",
+                    "supporting_evidence": [],
+                    "missing_evidence": ["No changed file matching `src/missing_b.py` was found in the PR diff."],
+                    "evidence_checked": ["agent_summary.md", "diff.patch"],
+                    "reviewer_action": "Ask the agent to point to the supporting diff or revise/remove this claim.",
+                },
+            ],
+            reviewer_actions=["request repair"],
+        )
+
+        comment = render_pr_comment(payload)
+
+        self.assertIn("**Agent claims:** 1 supported, 0 unassessed, 2 unsupported, 0 contradicted", comment)
+        self.assertIn("### Claim summary", comment)
+        self.assertIn("- Added `src/missing_a.py`. (`unsupported`, none) - src/missing_a.py does not appear in the PR diff.", comment)
+        self.assertIn("Action: Ask the agent to point to the supporting diff or revise/remove this claim.", comment)
+        self.assertIn("- Added `src/missing_b.py`. (`unsupported`, none) - src/missing_b.py does not appear in the PR diff.", comment)
+
+    def test_renders_unsupported_claim_details_with_cap(self) -> None:
+        diagnostics = [
+            {
+                "claim": f"Added `src/missing_{index}.py`.",
+                "source": "agent_summary",
+                "status": "unsupported",
+                "reason": f"src/missing_{index}.py does not appear in the PR diff.",
+                "evidence_strength": "none",
+                "supporting_evidence": [],
+                "missing_evidence": [f"No changed file matching `src/missing_{index}.py` was found in the PR diff."],
+                "evidence_checked": ["agent_summary.md", "diff.patch"],
+                "reviewer_action": "Ask the agent to point to the supporting diff or revise/remove this claim.",
+            }
+            for index in range(6)
+        ]
+        payload = self._report_payload(
+            overall_verdict="repair",
+            summary={
+                "allowed_scope_status": "within_allowed_scope",
+                "supported_claims_count": 0,
+                "unsupported_claims_count": 6,
+                "test_evidence_status": "supported",
+                "decision_memory_status": "not_configured",
+            },
+            claim_diagnostics=diagnostics,
+            reviewer_actions=["request repair"],
+        )
+
+        comment = render_pr_comment(payload)
+
+        self.assertIn("Added `src/missing_0.py`.", comment)
+        self.assertIn("Added `src/missing_4.py`.", comment)
+        self.assertNotIn("Added `src/missing_5.py`.", comment)
+        self.assertIn("1 more claim in the full claim ledger in `trust_report.md` / `trust_report.json`.", comment)
+
+    def test_claim_summary_caps_at_five_and_prioritizes_unsupported_and_weak(self) -> None:
+        diagnostics = [
+            {
+                "claim": "Supported claim 1.",
+                "source": "agent_summary",
+                "status": "supported",
+                "reason": "Direct path evidence exists.",
+                "evidence_strength": "direct",
+                "supporting_evidence": [{"type": "changed_file", "path": "src/a.py", "explanation": "Path appears."}],
+                "missing_evidence": [],
+                "reviewer_action": "No claim-specific action required.",
+            },
+            {
+                "claim": "Unsupported claim.",
+                "source": "agent_summary",
+                "status": "unsupported",
+                "reason": "No supporting evidence found.",
+                "evidence_strength": "none",
+                "supporting_evidence": [],
+                "missing_evidence": ["No matching path was found."],
+                "reviewer_action": "Ask the agent to revise/remove this claim.",
+            },
+            {
+                "claim": "Weak claim.",
+                "source": "agent_summary",
+                "status": "needs_review",
+                "reason": "Only heuristic evidence was found.",
+                "evidence_strength": "weak",
+                "supporting_evidence": [{"type": "diff_pattern", "path": "src/b.py", "explanation": "Related pattern appears."}],
+                "missing_evidence": ["No exact behavior evidence was found."],
+                "reviewer_action": "Review this claim against the PR evidence before merging.",
+            },
+            {
+                "claim": "Supported claim 2.",
+                "source": "agent_summary",
+                "status": "supported",
+                "reason": "Direct path evidence exists.",
+                "evidence_strength": "direct",
+                "supporting_evidence": [{"type": "changed_file", "path": "src/c.py", "explanation": "Path appears."}],
+                "missing_evidence": [],
+                "reviewer_action": "No claim-specific action required.",
+            },
+            {
+                "claim": "Supported claim 3.",
+                "source": "agent_summary",
+                "status": "supported",
+                "reason": "Direct path evidence exists.",
+                "evidence_strength": "direct",
+                "supporting_evidence": [{"type": "changed_file", "path": "src/d.py", "explanation": "Path appears."}],
+                "missing_evidence": [],
+                "reviewer_action": "No claim-specific action required.",
+            },
+            {
+                "claim": "Supported claim 4.",
+                "source": "agent_summary",
+                "status": "supported",
+                "reason": "Direct path evidence exists.",
+                "evidence_strength": "direct",
+                "supporting_evidence": [{"type": "changed_file", "path": "src/e.py", "explanation": "Path appears."}],
+                "missing_evidence": [],
+                "reviewer_action": "No claim-specific action required.",
+            },
+        ]
+        comment = render_pr_comment(self._report_payload(claim_diagnostics=diagnostics))
+
+        self.assertLess(comment.index("Unsupported claim."), comment.index("Weak claim."))
+        self.assertLess(comment.index("Weak claim."), comment.index("Supported claim 1."))
+        self.assertIn("Supported claim 3.", comment)
+        self.assertNotIn("Supported claim 4.", comment)
+        self.assertIn("1 more claim in the full claim ledger in `trust_report.md` / `trust_report.json`.", comment)
+
+    def test_claim_summary_caps_after_severity_order_and_truncates_long_text(self) -> None:
+        long_claim = "Supported claim " + ("with many details " * 20)
+        long_reason = "Direct path evidence exists " + ("and remains readable " * 20)
+        diagnostics = [
+            {
+                "claim": f"Supported claim {index}.",
+                "source": "agent_summary",
+                "status": "supported",
+                "reason": "Direct path evidence exists.",
+                "evidence_strength": "direct",
+                "supporting_evidence": [{"type": "changed_file", "path": f"src/{index}.py", "explanation": "Path appears."}],
+                "missing_evidence": [],
+                "reviewer_action": "No claim-specific action required.",
+            }
+            for index in range(5)
+        ]
+        diagnostics.insert(
+            0,
+            {
+                "claim": long_claim,
+                "source": "agent_summary",
+                "status": "contradicted",
+                "reason": long_reason,
+                "evidence_strength": "direct",
+                "supporting_evidence": [{"type": "test_output", "path": "test_output.txt", "quote": "FAILED", "explanation": "Captured test output contradicts the claim."}],
+                "missing_evidence": [],
+                "reviewer_action": "Review this claim against the PR evidence.",
+            }
+        )
+        diagnostics.append(
+            {
+                "claim": "Supported claim 4.",
+                "source": "agent_summary",
+                "status": "supported",
+                "reason": "Direct path evidence exists.",
+                "evidence_strength": "direct",
+                "supporting_evidence": [{"type": "changed_file", "path": "src/4.py", "explanation": "Path appears."}],
+                "missing_evidence": [],
+                "reviewer_action": "No claim-specific action required.",
+            }
+        )
+
+        comment = render_pr_comment(self._report_payload(claim_diagnostics=diagnostics))
+
+        self.assertLess(comment.index("Supported claim with many details"), comment.index("Supported claim 0."))
+        self.assertIn("Supported claim 3.", comment)
+        self.assertNotIn("Supported claim 4.", comment)
+        self.assertNotIn(long_claim, comment)
+        self.assertIn("...", comment)
+        self.assertIn("Evidence: `test_output.txt`.", comment)
+        self.assertNotIn("Action: No claim-specific action required", comment)
+
+    def test_supported_inventory_does_not_consume_substantive_claim_slots(self) -> None:
+        inventory = [
+            {
+                "claim": f"src/file_{index}.py.",
+                "source": "agent_summary",
+                "source_section": "Files changed",
+                "source_index": index,
+                "status": "supported",
+                "claim_type": "file_modified",
+                "claim_role": "file_inventory",
+                "verification_state": "assessed",
+                "affects_verdict": False,
+                "reason": f"src/file_{index}.py appears in the PR diff.",
+                "evidence_strength": "direct",
+                "supporting_evidence": [
+                    {"type": "changed_file", "path": f"src/file_{index}.py", "explanation": "Path appears."}
+                ],
+                "missing_evidence": [],
+                "reviewer_action": "No claim-specific action required.",
+            }
+            for index in range(6)
+        ]
+        substantive = [
+            {
+                "claim": f"Substantive claim {index}.",
+                "source": "agent_summary",
+                "source_section": "Key fixes",
+                "source_index": index + 6,
+                "status": "not_applicable",
+                "claim_type": "implementation_claim",
+                "claim_role": "implementation_claim",
+                "verification_state": "unassessed",
+                "affects_verdict": False,
+                "reason": "Spool retained this substantive claim but has no deterministic verifier for this claim form.",
+                "evidence_strength": "none",
+                "supporting_evidence": [],
+                "missing_evidence": [],
+                "reviewer_action": "Review the relevant diff and tests manually.",
+            }
+            for index in range(6)
+        ]
+
+        comment = render_pr_comment(self._report_payload(claim_diagnostics=inventory + substantive))
+
+        self.assertIn("**Changed-file inventory:** 6 claimed files, 6 present in the diff.", comment)
+        self.assertIn("Substantive claim 0.", comment)
+        self.assertIn("Substantive claim 4.", comment)
+        self.assertLess(comment.index("Substantive claim 0."), comment.index("**Changed-file inventory:**"))
+        self.assertNotIn("Substantive claim 5.", comment)
+        self.assertNotIn("src/file_0.py.", comment)
+        self.assertIn("(`unassessed`, none)", comment)
+        self.assertIn("1 more claim", comment)
+
+    def test_unsupported_inventory_is_prominent_but_supported_inventory_is_compact(self) -> None:
+        diagnostics = [
+            {
+                "claim": "README.md.",
+                "source": "agent_summary",
+                "source_section": "Files changed",
+                "source_index": 0,
+                "status": "supported",
+                "claim_type": "file_modified",
+                "claim_role": "file_inventory",
+                "verification_state": "assessed",
+                "affects_verdict": False,
+                "reason": "README.md appears in the PR diff.",
+                "evidence_strength": "direct",
+                "supporting_evidence": [{"type": "changed_file", "path": "README.md", "explanation": "Path appears."}],
+                "missing_evidence": [],
+                "reviewer_action": "No claim-specific action required.",
+            },
+            {
+                "claim": "src/missing.py.",
+                "source": "agent_summary",
+                "source_section": "Files changed",
+                "source_index": 1,
+                "status": "unsupported",
+                "claim_type": "file_modified",
+                "claim_role": "file_inventory",
+                "verification_state": "assessed",
+                "affects_verdict": False,
+                "reason": "src/missing.py does not appear in the PR diff.",
+                "evidence_strength": "none",
+                "supporting_evidence": [],
+                "missing_evidence": ["No changed file matching `src/missing.py` was found in the PR diff."],
+                "reviewer_action": "Ask the agent to point to the supporting diff or revise/remove this claim.",
+            },
+            {
+                "claim": "Verdict policy remains unchanged.",
+                "source": "agent_summary",
+                "source_section": "Key fixes",
+                "source_index": 2,
+                "status": "not_applicable",
+                "claim_type": "invariance_claim",
+                "claim_role": "invariance_claim",
+                "verification_state": "unassessed",
+                "affects_verdict": False,
+                "reason": "Spool retained this substantive claim but has no deterministic verifier for this claim form.",
+                "evidence_strength": "none",
+                "supporting_evidence": [],
+                "missing_evidence": [],
+                "reviewer_action": "Review the relevant diff and tests manually.",
+            },
+        ]
+
+        comment = render_pr_comment(self._report_payload(claim_diagnostics=diagnostics))
+
+        self.assertIn("**Changed-file inventory:** 2 claimed files, 1 present in the diff.", comment)
+        self.assertIn("src/missing.py.", comment)
+        self.assertIn("Verdict policy remains unchanged.", comment)
+        self.assertLess(comment.index("src/missing.py."), comment.index("Verdict policy remains unchanged."))
+        self.assertNotIn("- README.md.", comment)
+
+    def test_only_supported_file_claims_render_as_concise_inventory_summary(self) -> None:
+        diagnostics = [
+            {
+                "claim": "README.md.",
+                "source": "agent_summary",
+                "source_section": "Files changed",
+                "source_index": 0,
+                "status": "supported",
+                "claim_type": "file_modified",
+                "claim_role": "file_inventory",
+                "verification_state": "assessed",
+                "affects_verdict": False,
+                "reason": "README.md appears in the PR diff.",
+                "evidence_strength": "direct",
+                "supporting_evidence": [{"type": "changed_file", "path": "README.md", "explanation": "Path appears."}],
+                "missing_evidence": [],
+                "reviewer_action": "No claim-specific action required.",
+            }
+        ]
+
+        comment = render_pr_comment(self._report_payload(claim_diagnostics=diagnostics))
+
+        self.assertIn("**Changed-file inventory:** 1 claimed file, 1 present in the diff.", comment)
+        self.assertNotIn("### Claim summary", comment)
+        self.assertNotIn("- README.md.", comment)
 
     def test_renders_candidate_decision_risk_with_clear_project_level_wording(self) -> None:
         risk = (
@@ -135,7 +570,7 @@ class SpoolCommentPRTest(unittest.TestCase):
 
         self.assertIn("**Verdict:** Ready to continue (`continue`)", comment)
         self.assertIn("**Scope:** unknown", comment)
-        self.assertIn("**Agent claims:** 0 supported, 0 unsupported", comment)
+        self.assertIn("**Agent claims:** 0 supported, 0 unassessed, 0 unsupported, 0 contradicted", comment)
         self.assertIn("**Test evidence:** unknown", comment)
         self.assertIn("**Decision memory:** unknown", comment)
 
