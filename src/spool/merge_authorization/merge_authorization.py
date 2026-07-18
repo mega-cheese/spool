@@ -51,6 +51,8 @@ class TrustClaim:
     source_section: str = "Agent Summary"
     verification_state: str = "assessed"
     affects_verdict: bool = False
+    evidence_source: str = ""
+    independent_corroboration: bool = False
 
     def to_dict(self) -> dict[str, object]:
         return {
@@ -65,6 +67,8 @@ class TrustClaim:
             "source_section": self.source_section,
             "verification_state": self.verification_state,
             "affects_verdict": self.affects_verdict,
+            "evidence_source": self.evidence_source or self.evidence_target,
+            "independent_corroboration": self.independent_corroboration,
         }
 
 
@@ -79,6 +83,9 @@ class ClaimDiagnostic:
     source_section: str
     verification_state: str
     affects_verdict: bool
+    evidence_source: str
+    independent_corroboration: bool
+    evidence_quote: str
     reason: str
     evidence_strength: str
     supporting_evidence: list[dict[str, str]] = field(default_factory=list)
@@ -97,6 +104,9 @@ class ClaimDiagnostic:
             "source_section": self.source_section,
             "verification_state": self.verification_state,
             "affects_verdict": self.affects_verdict,
+            "evidence_source": self.evidence_source,
+            "independent_corroboration": self.independent_corroboration,
+            "evidence_quote": self.evidence_quote,
             "reason": self.reason,
             "why": self.reason,
             "evidence_strength": self.evidence_strength,
@@ -168,7 +178,10 @@ class PRTrustReport:
                 "allowed_scope_status": _allowed_scope_status(self.scope_report),
                 "supported_claims_count": sum(1 for claim in self.claims if claim.verdict == "supported"),
                 "unsupported_claims_count": sum(1 for claim in self.claims if claim.verdict == "unsupported"),
-                "unassessed_claims_count": sum(1 for claim in self.claims if claim.verification_state == "unassessed"),
+                "unassessed_claims_count": sum(
+                    1 for claim in self.claims if claim.verification_state in {"unassessed", "self_reported"}
+                ),
+                "contradicted_claims_count": sum(1 for claim in self.claims if claim.verdict == "contradicted"),
                 "test_evidence_status": _test_evidence_status(self.claims),
                 "repo_memory_status": _repo_memory_status(self.repo_memory_check),
                 "decision_memory_status": _decision_memory_summary_status(self.decision_memory),
@@ -209,7 +222,7 @@ def analyze_pr_trust(evidence: PREvidence, *, mode: str = "heuristic") -> PRTrus
     weak_or_missing = _weak_or_missing_evidence(claims)
     risks = _risks(scope, claims, buried_decisions, repo_memory_check)
     verdict = _overall_verdict(scope, claims, buried_decisions, repo_memory_check)
-    reviewer_actions = _reviewer_actions(verdict, buried_decisions, repo_memory_check)
+    reviewer_actions = _reviewer_actions(verdict, claims, buried_decisions, repo_memory_check)
     return PRTrustReport(
         overall_verdict=verdict,
         scope_report=scope,
@@ -420,6 +433,8 @@ def _test_claim(line: str, evidence: PREvidence, *, source_section: str = "Agent
                 reason=f"The agent says tests passed, but GitHub checks include failing GitHub checks: {failed}.",
                 claim_role="test_result_claim",
                 source_section=source_section,
+                evidence_source="checks.json",
+                independent_corroboration=True,
             )
         if evidence.ci_checks.pending_count:
             pending = ", ".join(evidence.ci_checks.pending_checks)
@@ -432,6 +447,8 @@ def _test_claim(line: str, evidence: PREvidence, *, source_section: str = "Agent
                 reason=f"The agent says tests passed, but pending GitHub checks are still unresolved: {pending}.",
                 claim_role="test_result_claim",
                 source_section=source_section,
+                evidence_source="checks.json",
+                independent_corroboration=True,
             )
         if evidence.ci_checks.all_passing:
             return _claim(
@@ -443,6 +460,8 @@ def _test_claim(line: str, evidence: PREvidence, *, source_section: str = "Agent
                 reason="GitHub checks were fetched and all returned checks are passing.",
                 claim_role="test_result_claim",
                 source_section=source_section,
+                evidence_source="checks.json",
+                independent_corroboration=True,
             )
         return _claim(
             claim_text,
@@ -452,6 +471,23 @@ def _test_claim(line: str, evidence: PREvidence, *, source_section: str = "Agent
             reason="GitHub checks were fetched, but their statuses were inconclusive.",
             claim_role="test_result_claim",
             source_section=source_section,
+            evidence_source="checks.json",
+            independent_corroboration=True,
+        )
+    if evidence.test_output_source == "pr_body_tests_run" and evidence.has_test_output:
+        return _claim(
+            claim_text,
+            "test_result_claim",
+            "pr_body_tests_run",
+            "not_applicable",
+            evidence_quote=_first_test_evidence_line(evidence.test_output_text),
+            reason="The result is stated in the PR body, but no independent test output or GitHub check was available.",
+            claim_role="test_result_claim",
+            source_section=source_section,
+            verification_state="self_reported",
+            affects_verdict=False,
+            evidence_source="pr_body_tests_run",
+            independent_corroboration=False,
         )
     if not evidence.has_test_output:
         return _claim(
@@ -462,38 +498,50 @@ def _test_claim(line: str, evidence: PREvidence, *, source_section: str = "Agent
             reason="The agent says tests passed, but no test output was provided.",
             claim_role="test_result_claim",
             source_section=source_section,
+            evidence_source="test_output.txt",
+            independent_corroboration=False,
         )
-    if _test_output_passed(evidence.test_output_text):
-        if evidence.test_output_source == "pr_body_tests_run":
-            return _claim(
-                claim_text,
-                "test_result_claim",
-                "pr_body_tests_run",
-                "supported",
-                evidence_quote=_first_test_evidence_line(evidence.test_output_text),
-                reason="The agent reported passing tests in the PR body, but no independent test artifact or fetched check result was available.",
-                claim_role="test_result_claim",
-                source_section=source_section,
-            )
+    assessment, detail = _assess_test_output(claim_text, evidence.test_output_text)
+    evidence_quote = _first_test_evidence_line(evidence.test_output_text)
+    if assessment == "supported":
         return _claim(
             claim_text,
             "test_result_claim",
             "test_output.txt",
             "supported",
-            evidence_quote=_first_test_evidence_line(evidence.test_output_text),
-            reason="The provided test output contains a passing result.",
+            evidence_quote=evidence_quote,
+            reason=detail,
             claim_role="test_result_claim",
             source_section=source_section,
+            evidence_source="test_output.txt",
+            independent_corroboration=True,
+        )
+    if assessment == "contradicted":
+        return _claim(
+            claim_text,
+            "test_result_claim",
+            "test_output.txt",
+            "contradicted",
+            evidence_quote=evidence_quote,
+            reason=detail,
+            claim_role="test_result_claim",
+            source_section=source_section,
+            evidence_source="test_output.txt",
+            independent_corroboration=True,
         )
     return _claim(
         claim_text,
         "test_result_claim",
         "test_output.txt",
-        "contradicted",
-        evidence_quote=_first_test_evidence_line(evidence.test_output_text),
-        reason="The provided test output does not show a passing result.",
+        "not_applicable",
+        evidence_quote=evidence_quote,
+        reason=detail,
         claim_role="test_result_claim",
         source_section=source_section,
+        verification_state="unassessed",
+        affects_verdict=False,
+        evidence_source="test_output.txt",
+        independent_corroboration=False,
     )
 
 
@@ -645,6 +693,9 @@ def _claim_diagnostics(claims: list[TrustClaim]) -> list[ClaimDiagnostic]:
                 source_section=claim.source_section,
                 verification_state=claim.verification_state,
                 affects_verdict=claim.affects_verdict,
+                evidence_source=claim.evidence_source or claim.evidence_target,
+                independent_corroboration=claim.independent_corroboration,
+                evidence_quote=claim.evidence_quote,
                 reason=claim.reason or _default_claim_diagnostic_reason(claim),
                 evidence_strength=_claim_evidence_strength(claim),
                 supporting_evidence=_claim_supporting_evidence(claim),
@@ -673,7 +724,7 @@ def _claim_status_rank(status: str) -> int:
 def _claim_evidence_checked(claim: TrustClaim) -> list[str]:
     checked: list[str] = ["agent_summary.md"]
     if claim.claim_type == "test_result_claim":
-        checked.extend(["checks.json", "test_output.txt"])
+        checked.extend(["pr_body.md", "test_output.txt", "checks.json"])
     elif claim.claim_type in {"file_added", "file_modified", "capability_claim"}:
         checked.append("diff.patch")
     if claim.evidence_target:
@@ -682,6 +733,8 @@ def _claim_evidence_checked(claim: TrustClaim) -> list[str]:
 
 
 def _claim_evidence_strength(claim: TrustClaim) -> str:
+    if claim.verification_state in {"unassessed", "self_reported"}:
+        return "none"
     if claim.verdict in {"unsupported", "missing_evidence"}:
         return "none"
     if claim.verdict == "weakly_supported":
@@ -713,7 +766,10 @@ def _claim_supporting_evidence(claim: TrustClaim) -> list[dict[str, str]]:
                 "explanation": "The claimed path appears in the PR diff.",
             }
         ]
-    if claim.claim_type == "test_result_claim" and claim.verdict in {"supported", "contradicted", "needs_review"}:
+    if claim.claim_type == "test_result_claim" and (
+        claim.verdict in {"supported", "contradicted", "needs_review"}
+        or claim.verification_state in {"unassessed", "self_reported"}
+    ):
         if claim.evidence_target == "checks.json":
             return [
                 {
@@ -730,10 +786,10 @@ def _claim_supporting_evidence(claim: TrustClaim) -> list[dict[str, str]]:
         if _is_agent_reported_test_claim(claim):
             return [
                 {
-                    "type": "agent_reported_test",
+                    "type": "pr_body_test_result",
                     "path": "pr_body",
                     "quote": claim.evidence_quote,
-                    "explanation": "The agent reported this result in the PR body; fetched checks or captured test output were unavailable.",
+                    "explanation": f"The PR body reports that {claim.claim.rstrip('.')}.",
                 }
             ]
         return [
@@ -744,7 +800,11 @@ def _claim_supporting_evidence(claim: TrustClaim) -> list[dict[str, str]]:
                 "explanation": (
                     "Captured test output contains a passing result."
                     if claim.verdict == "supported"
-                    else "Captured test output contradicts or does not directly support the test claim."
+                    else (
+                        "Captured test output affirmatively contradicts the test claim."
+                        if claim.verdict == "contradicted"
+                        else "Captured test output is incomplete or unrecognized, so it cannot confirm or contradict the claim."
+                    )
                 ),
             }
         ]
@@ -785,6 +845,8 @@ def _claim_missing_evidence(claim: TrustClaim) -> list[str]:
 
 
 def _claim_reviewer_action(claim: TrustClaim) -> str:
+    if claim.verification_state == "self_reported":
+        return "Confirm the test run independently before merge."
     if claim.verification_state == "unassessed":
         return "Review the relevant diff and tests manually."
     if claim.verification_state == "metadata":
@@ -856,15 +918,26 @@ def _risks(
     return risks
 
 
-def _reviewer_actions(verdict: str, decisions: list[BuriedDecision], repo_memory: list[RepoMemoryCheck]) -> list[str]:
+def _reviewer_actions(
+    verdict: str,
+    claims: list[TrustClaim],
+    decisions: list[BuriedDecision],
+    repo_memory: list[RepoMemoryCheck],
+) -> list[str]:
     actions = []
+    contradicted_test_claims = [
+        claim for claim in claims if claim.claim_type == "test_result_claim" and claim.verdict == "contradicted"
+    ]
+    for claim in contradicted_test_claims:
+        actions.append(_contradicted_test_reviewer_action(claim))
     if verdict == "continue":
         actions.append("continue")
     elif verdict == "repair":
         actions.append("request repair")
     elif verdict == "stop":
         actions.append("human review required")
-        actions.append("stop merge until conflict or violation is resolved")
+        if not contradicted_test_claims:
+            actions.append("stop merge until conflict or violation is resolved")
     else:
         actions.append("human review required")
     if decisions:
@@ -1001,11 +1074,79 @@ def _is_test_result_claim(text: str) -> bool:
 def _test_output_passed(text: str) -> bool:
     return bool(
         re.search(
-            r"(^|\n)\s*OK\s*(\n|$)|\b\d+\s+passed\b|\bPASS\b|\bran\b.*\btests?\b.*\bOK\b",
+            r"(^|\n)\s*OK\s*(\n|$)|\b\d+\s+(?:tests?\s+)?passed\b|\bPASS\b|\bran\b.*\btests?\b.*\bOK\b",
             text,
             re.IGNORECASE,
         )
     )
+
+
+def _assess_test_output(claim: str, text: str) -> tuple[str, str]:
+    failure_count = _reported_failure_count(text)
+    if failure_count:
+        noun = "failure" if failure_count == 1 else "failures"
+        return "contradicted", f"The claim says tests passed, but captured output reports {failure_count} {noun}."
+    error_count = _reported_error_count(text)
+    if error_count:
+        noun = "error" if error_count == 1 else "errors"
+        return "contradicted", f"The claim says tests passed, but captured output reports {error_count} {noun}."
+    nonzero_result = re.search(r"\b(?:exit|return)\s+(?:code|status)?\s*[:=]?\s*([1-9]\d*)\b", text, re.IGNORECASE)
+    if nonzero_result:
+        return "contradicted", f"The claim says tests passed, but captured output reports nonzero result {nonzero_result.group(1)}."
+    if re.search(r"(^|\n)\s*(?:FAILED|FAIL|ERROR)\b", text, re.IGNORECASE):
+        return "contradicted", "The claim says tests passed, but captured output explicitly reports failure."
+
+    claimed_total = _claimed_test_total(claim)
+    observed_total = _reported_passed_total(text)
+    if claimed_total is not None and observed_total is not None and claimed_total != observed_total:
+        return (
+            "contradicted",
+            f"The claim reports {claimed_total} tests passed, but captured output reports {observed_total} passed.",
+        )
+    if _test_output_passed(text):
+        return "supported", "The captured test output explicitly reports a passing result."
+    return (
+        "unassessed",
+        "Captured test output was provided, but it does not contain enough information to confirm or contradict the test claim.",
+    )
+
+
+def _claimed_test_total(text: str) -> int | None:
+    match = re.search(r"\b(\d+)\s+tests?\s+(?:passed|pass)\b", text, re.IGNORECASE)
+    return int(match.group(1)) if match else None
+
+
+def _reported_passed_total(text: str) -> int | None:
+    match = re.search(r"\b(\d+)\s+(?:tests?\s+)?passed\b", text, re.IGNORECASE)
+    if match:
+        return int(match.group(1))
+    ran_match = re.search(r"\bran\s+(\d+)\s+tests?\b[\s\S]*?(?:^|\n)\s*OK\s*(?:\n|$)", text, re.IGNORECASE)
+    return int(ran_match.group(1)) if ran_match else None
+
+
+def _reported_failure_count(text: str) -> int:
+    counts = [
+        int(value)
+        for pattern in (r"\bfailures?\s*[=:]\s*(\d+)\b", r"\b(\d+)\s+(?:failed|failures?)\b")
+        for value in re.findall(pattern, text, re.IGNORECASE)
+    ]
+    return max(counts, default=0)
+
+
+def _reported_error_count(text: str) -> int:
+    counts = [
+        int(value)
+        for pattern in (r"\berrors?\s*[=:]\s*(\d+)\b", r"\b(\d+)\s+errors?\b")
+        for value in re.findall(pattern, text, re.IGNORECASE)
+    ]
+    return max(counts, default=0)
+
+
+def _contradicted_test_reviewer_action(claim: TrustClaim) -> str:
+    conflict = claim.reason.split(", but ", 1)[-1].rstrip(".")
+    conflict = re.sub(r"^captured output reports\b", "captured output reporting", conflict, flags=re.IGNORECASE)
+    conflict = re.sub(r"^the captured output reports\b", "captured output reporting", conflict, flags=re.IGNORECASE)
+    return f"Stop: “{claim.claim}” conflicts with {conflict}."
 
 
 def _first_check_evidence_line(checks: PRChecksEvidence) -> str:
@@ -1179,6 +1320,8 @@ def _claim(
     source_section: str = "Agent Summary",
     verification_state: str = "assessed",
     affects_verdict: bool | None = None,
+    evidence_source: str = "",
+    independent_corroboration: bool = False,
 ) -> TrustClaim:
     claim = _clean_sentence(text)
     return TrustClaim(
@@ -1197,6 +1340,8 @@ def _claim(
             if affects_verdict is None
             else affects_verdict
         ),
+        evidence_source=evidence_source or evidence_target,
+        independent_corroboration=independent_corroboration,
     )
 
 
@@ -1222,7 +1367,12 @@ def _diff_header_for_path(diff_text: str, path: str) -> str:
 def _first_test_evidence_line(text: str) -> str:
     for line in text.splitlines():
         stripped = line.strip()
-        if re.search(r"^OK$|\b\d+\s+passed\b|\bPASS\b|\bran\b.*\btests?\b.*\bOK\b", stripped, re.IGNORECASE):
+        if re.search(
+            r"^OK$|\b\d+\s+(?:tests?\s+)?passed\b|\bPASS\b|\bran\b.*\btests?\b.*\bOK\b|"
+            r"\b(?:FAILED|FAIL|ERROR)\b|\b(?:failures?|errors?)\s*[=:]\s*[1-9]\d*\b",
+            stripped,
+            re.IGNORECASE,
+        ):
             return stripped
     for line in text.splitlines():
         if line.strip():

@@ -35,6 +35,7 @@ def trust_report_to_markdown(report: PRTrustReport) -> str:
         f"- Supported claims: {summary.get('supported_claims_count', 0)}",
         f"- Unsupported claims: {summary.get('unsupported_claims_count', 0)}",
         f"- Unassessed claims: {summary.get('unassessed_claims_count', 0)}",
+        f"- Contradicted claims: {summary.get('contradicted_claims_count', 0)}",
         f"- Test evidence: {summary.get('test_evidence_status', 'unknown')}",
         f"- Decision memory: {summary.get('decision_memory_status', summary.get('repo_memory_status', 'unknown'))}",
         "",
@@ -135,6 +136,8 @@ def _claim_detail_lines(diagnostics: list[dict[str, Any]]) -> list[str]:
         lines.append(f"- **Evidence strength:** {_display_status(item.get('evidence_strength'))}")
         lines.append(f"- **Source:** {_display_source(item.get('source'))}")
         lines.append(f"- **Source section:** {item.get('source_section') or 'Agent Summary'}")
+        lines.append(f"- **Evidence source:** {item.get('evidence_source') or 'None'}")
+        lines.append(f"- **Independent corroboration:** {'Yes' if item.get('independent_corroboration') else 'No'}")
         lines.append(f"- **Why:** {_diagnostic_reason(item)}")
         lines.append("- **Supporting evidence:**")
         evidence = item.get("supporting_evidence") or []
@@ -207,6 +210,7 @@ def _evidence_coverage_lines(coverage: dict[str, Any]) -> list[str]:
         f"- Changed files: {coverage.get('changed_files')}",
         f"- Assignment: {coverage.get('assignment')}",
         f"- Test output: {coverage.get('test_output')}",
+        f"- Test evidence source: {coverage.get('test_output_source', 'unknown')}",
         f"- CI checks: {coverage.get('ci_checks')}",
         f"- Approved decisions: {coverage.get('approved_decisions')}",
         f"- Legacy repo memory: {coverage.get('legacy_repo_memory')}",
@@ -361,7 +365,7 @@ def _display_status(status: Any) -> str:
 
 
 def _display_claim_status(item: dict[str, Any]) -> str:
-    if item.get("verification_state") == "unassessed":
+    if item.get("verification_state") in {"unassessed", "self_reported"}:
         return "Unassessed"
     return _display_status(item.get("status"))
 

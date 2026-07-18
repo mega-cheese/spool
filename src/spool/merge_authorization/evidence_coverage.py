@@ -14,6 +14,7 @@ class EvidenceCoverage:
     changed_files: str = "missing"
     assignment: str = "missing"
     test_output: str = "not_provided"
+    test_output_source: str = "not_provided"
     ci_checks: str = "not_supported"
     approved_decisions: str = "not_configured"
     legacy_repo_memory: str = "not_configured"
@@ -27,6 +28,7 @@ class EvidenceCoverage:
             "changed_files": self.changed_files,
             "assignment": self.assignment,
             "test_output": self.test_output,
+            "test_output_source": self.test_output_source,
             "ci_checks": self.ci_checks,
             "approved_decisions": self.approved_decisions,
             "legacy_repo_memory": self.legacy_repo_memory,
@@ -42,6 +44,7 @@ def build_evidence_coverage(evidence: PREvidence, changed_files: list[object]) -
         changed_files="available" if changed_files else "missing",
         assignment=_assignment_status(evidence),
         test_output=_test_output_status(evidence),
+        test_output_source=evidence.test_output_source,
         ci_checks=evidence.ci_checks.status,
         approved_decisions=_decision_memory_status(evidence),
         legacy_repo_memory=_legacy_memory_status(evidence),

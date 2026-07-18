@@ -772,11 +772,15 @@ Remaining limitation:
             payload = analyze_pr_trust(evidence).to_dict()
 
         diagnostic = payload["claim_diagnostics"][0]
-        self.assertEqual(diagnostic["status"], "supported")
-        self.assertEqual(diagnostic["evidence_strength"], "corroborated")
-        self.assertEqual(diagnostic["supporting_evidence"][0]["type"], "agent_reported_test")
+        self.assertEqual(diagnostic["status"], "not_applicable")
+        self.assertEqual(diagnostic["verification_state"], "self_reported")
+        self.assertEqual(diagnostic["evidence_strength"], "none")
+        self.assertEqual(diagnostic["evidence_source"], "pr_body_tests_run")
+        self.assertFalse(diagnostic["independent_corroboration"])
+        self.assertEqual(diagnostic["supporting_evidence"][0]["type"], "pr_body_test_result")
         self.assertEqual(diagnostic["supporting_evidence"][0]["path"], "pr_body")
-        self.assertIn("agent reported", diagnostic["supporting_evidence"][0]["explanation"].lower())
+        self.assertIn("PR body reports", diagnostic["supporting_evidence"][0]["explanation"])
+        self.assertEqual(diagnostic["reviewer_action"], "Confirm the test run independently before merge.")
 
     def test_github_check_backed_test_claim_is_direct(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -911,7 +915,10 @@ Remaining limitation:
         self.assertEqual(diagnostics[0]["evidence_strength"], "none")
         self.assertEqual(diagnostics[0]["supporting_evidence"], [])
         self.assertIn("Test output was not provided.", diagnostics[0]["missing_evidence"])
-        self.assertEqual(diagnostics[0]["evidence_checked"], ["agent_summary.md", "checks.json", "test_output.txt"])
+        self.assertEqual(
+            diagnostics[0]["evidence_checked"],
+            ["agent_summary.md", "pr_body.md", "test_output.txt", "checks.json"],
+        )
         self.assertIn("provide the missing evidence", diagnostics[0]["reviewer_action"])
         self.assertIn("## Weak or Missing Evidence", markdown)
         self.assertIn("- Claim: Tests passed.", markdown)
@@ -1217,6 +1224,84 @@ Remaining limitation:
 
         self.assertEqual(report.overall_verdict, "stop")
         self.assertTrue(any(claim.verdict == "contradicted" for claim in report.claims))
+
+        payload = report.to_dict()
+        diagnostic = next(item for item in payload["claim_diagnostics"] if item["claim"] == "Tests passed.")
+        self.assertEqual(payload["summary"]["contradicted_claims_count"], 1)
+        self.assertEqual(diagnostic["evidence_source"], "test_output.txt")
+        self.assertTrue(diagnostic["independent_corroboration"])
+        self.assertIn("1 failure", diagnostic["reason"])
+        self.assertIn("Tests passed.", payload["reviewer_actions"][0])
+        self.assertIn("1 failure", payload["reviewer_actions"][0])
+
+    def test_matching_numeric_test_output_supports_test_claim(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["value = 1"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Full suite: 403 tests passed.",
+                test_output="Ran 403 tests in 2.1s\nOK\n",
+            )
+            payload = analyze_pr_trust(evidence).to_dict()
+
+        diagnostic = next(item for item in payload["claim_diagnostics"] if item["claim"] == "Full suite: 403 tests passed.")
+        self.assertEqual(diagnostic["status"], "supported")
+        self.assertEqual(diagnostic["evidence_source"], "test_output.txt")
+        self.assertTrue(diagnostic["independent_corroboration"])
+
+    def test_incomplete_test_output_is_unassessed_not_contradicted(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["value = 1"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Full suite: 403 tests passed.",
+                test_output="Collected test logs; final status unavailable.\n",
+            )
+            report = analyze_pr_trust(evidence)
+            payload = report.to_dict()
+
+        diagnostic = next(item for item in payload["claim_diagnostics"] if item["claim"] == "Full suite: 403 tests passed.")
+        self.assertNotEqual(report.overall_verdict, "stop")
+        self.assertEqual(diagnostic["status"], "not_applicable")
+        self.assertEqual(diagnostic["verification_state"], "unassessed")
+        self.assertFalse(diagnostic["affects_verdict"])
+        self.assertEqual(payload["summary"]["unassessed_claims_count"], 1)
+        self.assertEqual(payload["summary"]["contradicted_claims_count"], 0)
+
+    def test_empty_test_output_is_missing_evidence_not_contradicted(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["value = 1"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Tests passed.",
+                test_output="",
+            )
+            report = analyze_pr_trust(evidence)
+            payload = report.to_dict()
+
+        diagnostic = next(item for item in payload["claim_diagnostics"] if item["claim"] == "Tests passed.")
+        self.assertNotEqual(report.overall_verdict, "stop")
+        self.assertEqual(diagnostic["status"], "missing_evidence")
+        self.assertEqual(payload["summary"]["contradicted_claims_count"], 0)
+
+    def test_mismatched_numeric_test_total_contradicts_claim(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            evidence = self._evidence_from_text(
+                temp_dir,
+                diff=self._simple_diff("src/review_actions.py", ["value = 1"]),
+                task="Allowed files:\n- `src/review_actions.py`\n",
+                summary="Full suite: 403 tests passed.",
+                test_output="402 passed in 2.1s\n",
+            )
+            payload = analyze_pr_trust(evidence).to_dict()
+
+        diagnostic = next(item for item in payload["claim_diagnostics"] if item["claim"] == "Full suite: 403 tests passed.")
+        self.assertEqual(diagnostic["status"], "contradicted")
+        self.assertIn("402", diagnostic["reason"])
+        self.assertIn("403", diagnostic["reason"])
 
     def test_missing_test_output_claim_requires_human_review(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

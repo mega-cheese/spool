@@ -92,7 +92,7 @@ class SpoolCommentPRTest(unittest.TestCase):
         self.assertIn("## Spool Merge Authorization", comment)
         self.assertIn("**Verdict:** Ready to continue (`continue`)", comment)
         self.assertIn("**Scope:** within_allowed_scope", comment)
-        self.assertIn("**Agent claims:** 1 supported, 0 unsupported", comment)
+        self.assertIn("**Agent claims:** 1 supported, 0 unassessed, 0 unsupported, 0 contradicted", comment)
         self.assertIn("**Test evidence:** PR body tests available; GitHub checks unavailable", comment)
         self.assertIn("**Decision memory:** not_configured", comment)
         self.assertIn("### Claim summary", comment)
@@ -161,6 +161,51 @@ class SpoolCommentPRTest(unittest.TestCase):
         self.assertIn("- Tests passed. (`missing_evidence`, none) - The agent says tests passed, but no test output was provided.", comment)
         self.assertIn("Action: Ask the agent to provide the missing evidence or revise this claim.", comment)
 
+    def test_contradicted_claim_is_counted_and_suppresses_no_unsupported_message(self) -> None:
+        payload = self._report_payload(
+            overall_verdict="stop",
+            summary={
+                "allowed_scope_status": "within_allowed_scope",
+                "supported_claims_count": 4,
+                "unassessed_claims_count": 5,
+                "unsupported_claims_count": 0,
+                "contradicted_claims_count": 1,
+                "test_evidence_status": "contradicted",
+                "decision_memory_status": "not_configured",
+            },
+            claim_diagnostics=[
+                {
+                    "claim": "Full suite: 403 tests passed.",
+                    "source": "agent_summary",
+                    "status": "contradicted",
+                    "claim_type": "test_result_claim",
+                    "claim_role": "test_result_claim",
+                    "verification_state": "assessed",
+                    "affects_verdict": True,
+                    "reason": "The PR body says 403 tests passed, but captured output reports 2 failures.",
+                    "evidence_strength": "direct",
+                    "supporting_evidence": [
+                        {
+                            "type": "test_output",
+                            "path": "test_output.txt",
+                            "quote": "FAILED (failures=2)",
+                            "explanation": "Captured test output reports 2 failures.",
+                        }
+                    ],
+                    "missing_evidence": [],
+                    "reviewer_action": "Stop: “Full suite: 403 tests passed.” conflicts with captured output reporting 2 failures.",
+                }
+            ],
+            reviewer_actions=["Stop: “Full suite: 403 tests passed.” conflicts with captured output reporting 2 failures."],
+        )
+
+        comment = render_pr_comment(payload)
+
+        self.assertIn("**Agent claims:** 4 supported, 5 unassessed, 0 unsupported, 1 contradicted", comment)
+        self.assertIn("One agent test-result claim conflicts with the available evidence.", comment)
+        self.assertNotIn("No unsupported agent claims were found.", comment)
+        self.assertIn("Stop: “Full suite: 403 tests passed.” conflicts with captured output reporting 2 failures.", comment)
+
     def test_renders_unsupported_claim_details_in_comment(self) -> None:
         payload = self._report_payload(
             overall_verdict="repair",
@@ -200,7 +245,7 @@ class SpoolCommentPRTest(unittest.TestCase):
 
         comment = render_pr_comment(payload)
 
-        self.assertIn("**Agent claims:** 1 supported, 2 unsupported", comment)
+        self.assertIn("**Agent claims:** 1 supported, 0 unassessed, 2 unsupported, 0 contradicted", comment)
         self.assertIn("### Claim summary", comment)
         self.assertIn("- Added `src/missing_a.py`. (`unsupported`, none) - src/missing_a.py does not appear in the PR diff.", comment)
         self.assertIn("Action: Ask the agent to point to the supporting diff or revise/remove this claim.", comment)
@@ -525,7 +570,7 @@ class SpoolCommentPRTest(unittest.TestCase):
 
         self.assertIn("**Verdict:** Ready to continue (`continue`)", comment)
         self.assertIn("**Scope:** unknown", comment)
-        self.assertIn("**Agent claims:** 0 supported, 0 unsupported", comment)
+        self.assertIn("**Agent claims:** 0 supported, 0 unassessed, 0 unsupported, 0 contradicted", comment)
         self.assertIn("**Test evidence:** unknown", comment)
         self.assertIn("**Decision memory:** unknown", comment)
 

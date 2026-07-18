@@ -150,10 +150,40 @@ None.
             payload = json.loads((out_dir / "trust_report.json").read_text(encoding="utf-8"))
 
         test_diagnostic = next(item for item in payload["claim_diagnostics"] if item["claim"] == "Tests passed.")
-        self.assertEqual(test_diagnostic["status"], "supported")
-        self.assertEqual(test_diagnostic["evidence_strength"], "corroborated")
-        self.assertEqual(test_diagnostic["supporting_evidence"][0]["type"], "agent_reported_test")
+        self.assertEqual(test_diagnostic["status"], "not_applicable")
+        self.assertEqual(test_diagnostic["verification_state"], "self_reported")
+        self.assertEqual(test_diagnostic["evidence_strength"], "none")
+        self.assertEqual(test_diagnostic["evidence_source"], "pr_body_tests_run")
+        self.assertFalse(test_diagnostic["independent_corroboration"])
+        self.assertEqual(test_diagnostic["supporting_evidence"][0]["type"], "pr_body_test_result")
         self.assertEqual(test_diagnostic["supporting_evidence"][0]["path"], "pr_body")
+
+    def test_dogfood_numeric_pr_body_result_is_self_reported_not_contradicted(self) -> None:
+        body = self._sectioned_body_with_test_claim().replace(
+            "Tests passed.",
+            "Full suite: 403 tests passed.",
+        ).replace("\nOK\n", "\nResult: 403 tests passed.\n")
+        with tempfile.TemporaryDirectory() as temp_dir:
+            out_dir = Path(temp_dir) / "spool-pr-123"
+            with mock.patch("subprocess.run", self._mock_gh(body=body, checks=[])):
+                result = run_pr_check("123", out_dir=out_dir)
+
+            payload = json.loads((out_dir / "trust_report.json").read_text(encoding="utf-8"))
+            markdown = (out_dir / "trust_report.md").read_text(encoding="utf-8")
+
+        diagnostic = next(
+            item for item in payload["claim_diagnostics"] if item["claim"] == "Full suite: 403 tests passed."
+        )
+        self.assertNotEqual(result.report.overall_verdict, "stop")
+        self.assertEqual(diagnostic["status"], "not_applicable")
+        self.assertEqual(diagnostic["verification_state"], "self_reported")
+        self.assertEqual(diagnostic["evidence_source"], "pr_body_tests_run")
+        self.assertIn("403 tests passed", diagnostic["evidence_quote"])
+        self.assertFalse(diagnostic["independent_corroboration"])
+        self.assertIn("- **Status:** Unassessed", markdown)
+        self.assertIn("- **Evidence source:** pr_body_tests_run", markdown)
+        self.assertIn("- **Independent corroboration:** No", markdown)
+        self.assertNotIn("- **Status:** Not applicable", markdown)
 
     def test_task_is_optional_and_repo_memory_can_be_passed(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -454,11 +484,12 @@ index 1111111..2222222 100644
         self.assertEqual(result.report.overall_verdict, "continue")
         self.assertEqual(payload["evidence_coverage"]["ci_checks"], "empty")
         test_claims = [claim for claim in payload["agent_claims"] if claim["claim_type"] == "test_result_claim"]
-        self.assertEqual(test_claims[0]["verdict"], "supported")
+        self.assertEqual(test_claims[0]["verdict"], "not_applicable")
+        self.assertEqual(test_claims[0]["verification_state"], "self_reported")
         self.assertEqual(test_claims[0]["evidence_target"], "pr_body_tests_run")
         test_diagnostic = next(item for item in payload["claim_diagnostics"] if item["claim"] == "Tests passed.")
-        self.assertEqual(test_diagnostic["evidence_strength"], "corroborated")
-        self.assertEqual(test_diagnostic["supporting_evidence"][0]["type"], "agent_reported_test")
+        self.assertEqual(test_diagnostic["evidence_strength"], "none")
+        self.assertEqual(test_diagnostic["supporting_evidence"][0]["type"], "pr_body_test_result")
 
     def test_checks_fetch_failure_writes_unavailable_evidence_and_continues(self) -> None:
         checks_error = subprocess.CalledProcessError(
@@ -482,11 +513,12 @@ index 1111111..2222222 100644
         self.assertEqual(payload["ci_checks"]["status"], "unavailable")
         self.assertIn("checks are not available", checks_payload["error"])
         test_claims = [claim for claim in payload["agent_claims"] if claim["claim_type"] == "test_result_claim"]
-        self.assertEqual(test_claims[0]["verdict"], "supported")
+        self.assertEqual(test_claims[0]["verdict"], "not_applicable")
+        self.assertEqual(test_claims[0]["verification_state"], "self_reported")
         self.assertEqual(test_claims[0]["evidence_target"], "pr_body_tests_run")
         test_diagnostic = next(item for item in payload["claim_diagnostics"] if item["claim"] == "Tests passed.")
-        self.assertEqual(test_diagnostic["evidence_strength"], "corroborated")
-        self.assertEqual(test_diagnostic["supporting_evidence"][0]["type"], "agent_reported_test")
+        self.assertEqual(test_diagnostic["evidence_strength"], "none")
+        self.assertEqual(test_diagnostic["supporting_evidence"][0]["type"], "pr_body_test_result")
 
     def test_missing_gh_has_clear_error(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

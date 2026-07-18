@@ -49,7 +49,9 @@ def render_pr_comment(payload: dict[str, Any]) -> str:
     risks = list(payload.get("risks") or [])
 
     supported_claims = _int_value(summary.get("supported_claims_count"))
+    unassessed_claims = _int_value(summary.get("unassessed_claims_count"))
     unsupported_claims = _int_value(summary.get("unsupported_claims_count"))
+    contradicted_claims = _int_value(summary.get("contradicted_claims_count"))
     weak_count = len(weak_or_missing)
     allowed_scope_status = str(summary.get("allowed_scope_status") or "unknown")
     decision_memory_status = _display_decision_memory_status(
@@ -66,7 +68,10 @@ def render_pr_comment(payload: dict[str, Any]) -> str:
         "",
         f"**Verdict:** {VERDICT_LABELS.get(verdict, 'Unknown')} (`{verdict}`)  ",
         f"**Scope:** {allowed_scope_status}  ",
-        f"**Agent claims:** {supported_claims} supported, {unsupported_claims} unsupported  ",
+        (
+            f"**Agent claims:** {supported_claims} supported, {unassessed_claims} unassessed, "
+            f"{unsupported_claims} unsupported, {contradicted_claims} contradicted  "
+        ),
     ]
     if weak_count:
         lines.append(f"**Weak/missing evidence:** {weak_count}  ")
@@ -262,6 +267,7 @@ def _inline_code_join(items: list[str]) -> str:
 def _test_evidence_line(evidence: dict[str, Any], checks: dict[str, Any]) -> str:
     checks_status = str(checks.get("status") or evidence.get("ci_checks") or "unknown")
     test_output_status = str(evidence.get("test_output") or "unknown")
+    test_output_source = str(evidence.get("test_output_source") or "")
     failed_checks = [str(item) for item in checks.get("failed_checks") or [] if item]
     pending_checks = [str(item) for item in checks.get("pending_checks") or [] if item]
 
@@ -272,13 +278,16 @@ def _test_evidence_line(evidence: dict[str, Any], checks: dict[str, Any]) -> str
             return "GitHub checks pending"
         return "GitHub checks available and passing"
     if test_output_status == "available":
+        evidence_label = "PR body self-report" if test_output_source == "pr_body_tests_run" else "Captured test output"
+        if not test_output_source:
+            evidence_label = "PR body tests"
         if checks_status == "unavailable":
-            return "PR body tests available; GitHub checks unavailable"
+            return f"{evidence_label} available; GitHub checks unavailable"
         if checks_status == "empty":
-            return "PR body tests available; GitHub checks empty"
+            return f"{evidence_label} available; GitHub checks empty"
         if checks_status == "not_supported":
-            return "PR body tests available; GitHub checks not supported"
-        return "PR body tests available"
+            return f"{evidence_label} available; GitHub checks not supported"
+        return f"{evidence_label} available"
     if test_output_status in {"not_provided", "empty"} and checks_status == "unavailable":
         return "No PR body tests available; GitHub checks unavailable"
     return "unknown"
@@ -353,7 +362,7 @@ def _ordered_claim_diagnostics(diagnostics: list[dict[str, Any]]) -> list[dict[s
 
 
 def _comment_status_rank(item: dict[str, Any]) -> int:
-    if item.get("verification_state") == "unassessed":
+    if item.get("verification_state") in {"unassessed", "self_reported"}:
         return 3
     status = str(item.get("status") or "")
     order = {
@@ -413,7 +422,7 @@ def _metadata_claim_needs_attention(item: dict[str, Any]) -> bool:
 
 
 def _diagnostic_display_status(item: dict[str, Any]) -> str:
-    if item.get("verification_state") == "unassessed":
+    if item.get("verification_state") in {"unassessed", "self_reported"}:
         return "unassessed"
     return str(item.get("status") or "unknown")
 
@@ -460,11 +469,26 @@ def _why_bullets(payload: dict[str, Any]) -> list[str]:
     verdict = str(payload.get("overall_verdict") or "unknown")
     supported_claims = _int_value(summary.get("supported_claims_count"))
     unsupported_claims = _int_value(summary.get("unsupported_claims_count"))
+    contradicted_claims = _int_value(summary.get("contradicted_claims_count"))
+    claim_diagnostics = [item for item in payload.get("claim_diagnostics") or [] if isinstance(item, dict)]
     allowed_scope_status = str(summary.get("allowed_scope_status") or "unknown")
     scope_violations = [str(item) for item in scope.get("scope_violations") or [] if item]
     failed_checks = [str(item) for item in checks.get("failed_checks") or [] if item]
     pending_checks = [str(item) for item in checks.get("pending_checks") or [] if item]
     bullets: list[str] = []
+
+    contradicted_test_claims = [
+        item
+        for item in claim_diagnostics
+        if item.get("status") == "contradicted" and item.get("claim_type") == "test_result_claim"
+    ]
+    verdict_affecting_claims = [item for item in claim_diagnostics if item.get("affects_verdict")]
+    if contradicted_test_claims:
+        count = len(contradicted_test_claims)
+        if count == 1:
+            bullets.append("One agent test-result claim conflicts with the available evidence.")
+        else:
+            bullets.append(f"{count} agent test-result claims conflict with the available evidence.")
 
     if verdict in {"repair", "stop"} and scope_violations:
         bullets.append(f"Scope violations were found: {_inline_code_join(scope_violations)}.")
@@ -485,13 +509,14 @@ def _why_bullets(payload: dict[str, Any]) -> list[str]:
     elif allowed_scope_status == "outside_allowed_scope" and not scope_violations:
         bullets.append("Some changed files appear to be outside the allowed files/areas.")
 
-    if unsupported_claims == 0 and supported_claims > 0:
+    if unsupported_claims == 0 and supported_claims > 0 and contradicted_claims == 0 and not verdict_affecting_claims:
         bullets.append("No unsupported agent claims were found.")
     elif unsupported_claims > 0:
         bullets.append(f"Spool found {unsupported_claims} unsupported agent claim{'s' if unsupported_claims != 1 else ''}.")
 
     checks_status = str(checks.get("status") or evidence.get("ci_checks") or "unknown")
     test_output_status = str(evidence.get("test_output") or "unknown")
+    test_output_source = str(evidence.get("test_output_source") or "")
     if checks_status == "available" and failed_checks:
         bullets.append(f"GitHub checks include failures: {_inline_code_join(failed_checks)}.")
     elif checks_status == "available" and pending_checks:
@@ -500,7 +525,10 @@ def _why_bullets(payload: dict[str, Any]) -> list[str]:
         bullets.append("GitHub checks are available and passing.")
     elif checks_status in {"unavailable", "empty"} and test_output_status == "available":
         qualifier = "unavailable" if checks_status == "unavailable" else "not reported"
-        bullets.append(f"GitHub checks were {qualifier} for this PR, so Spool used PR body test evidence.")
+        source = "PR body self-report" if test_output_source == "pr_body_tests_run" else "captured test output"
+        if not test_output_source:
+            source = "PR body test evidence"
+        bullets.append(f"GitHub checks were {qualifier} for this PR, so Spool used {source}.")
 
     if not bullets:
         bullets.append("Spool rendered this summary from the available merge authorization report fields.")
